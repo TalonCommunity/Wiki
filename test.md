@@ -1,3 +1,3 @@
 ## Another test
 
-Staging before an edit.
+Staging before another, new edit.
