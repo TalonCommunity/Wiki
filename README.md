@@ -1,4 +1,4 @@
-# git-wiki-skeleton
+# Talon Wiki
 
 NOTE: it's fully supported by github platform, you don't need to install anything locally
 
