@@ -86,12 +86,12 @@ defaults:
       type: "pages"
     values:
       layout: "git-wiki-default"
- -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "git-wiki-post"
+ # -
+ #    scope:
+ #      path: ""
+ #      type: "posts"
+ #    values:
+ #      layout: "git-wiki-post"
  -
     scope:
       path: blog
