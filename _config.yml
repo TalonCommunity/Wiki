@@ -25,7 +25,7 @@ permalink: /blog/posts/:year/:month/:day/:title:output_ext
 show_downloads: true
 repository: TalonCommunity/Wiki
 # (string) Specify branch rendered by gitpages allowing wiki tool buttons to work
-git_branch: "git-wiki-theme"
+git_branch: "gh-pages"
 # (string) Url of logo image, it can be full, absolute or relative.
 logo_url: 
 # (string) The UA-XXXXX-Y code from google analytic to enable GA on your wiki
