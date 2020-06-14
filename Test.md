@@ -1,3 +1,5 @@
-## A New Post
+## Bold New Beginning
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+> hunned thou for the cheapest ring on the lil finger
+
+**word**
