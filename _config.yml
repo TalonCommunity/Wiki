@@ -1,12 +1,12 @@
 remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
-title: "git-wiki-skeleton"
+title: "Talon Wiki"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
 # with your folder name, otherwise leave it empty
 url: "https://talon.wiki" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
 # (string) Description of your wiki
-description: 
+description: "Wiki for the beta version of Talon."
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
