@@ -71,7 +71,7 @@ kramdown:
 
 prose:
   metadata:
-    pages:
+    _pages:
       - name: "published"
         field:
           value: true
