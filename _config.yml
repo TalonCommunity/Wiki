@@ -71,7 +71,7 @@ kramdown:
 
 prose:
   metadata:
-    _pages:
+    _posts:
       - name: "title"
         field:
           element: "text"
