@@ -69,6 +69,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+prose:
+  metadata:
+    _pages:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+
 defaults:
 #  -
 #     scope:
