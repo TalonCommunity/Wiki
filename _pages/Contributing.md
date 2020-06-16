@@ -1,3 +1,6 @@
+---
+published: true
+---
 # Contributing
 ## How this Wiki is Built
 ### Github Pages
@@ -6,4 +9,4 @@
 ### Prose
 ## Adding Content
 ### Pull Request
-### Prose 
+### Prose
