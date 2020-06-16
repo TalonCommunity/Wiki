@@ -20,7 +20,7 @@ show_wiki_posts_limit: 10
 # from jekyll (read jekyll doc)
 paginate: 5
 paginate_path: "/blog/page:num"
-permalink: /:title:output_ext
+permalink: pretty
 # (boolean) Enable/disable download buttons in sidebar
 show_downloads: true
 repository: TalonCommunity/Wiki
