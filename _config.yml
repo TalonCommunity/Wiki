@@ -76,6 +76,11 @@ prose:
         field:
           element: "text"
           label: "title"
+    _pages:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
 
 defaults:
 #  -
