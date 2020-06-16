@@ -69,24 +69,6 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-prose:
-  metadata:
-    _posts:
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-    _pages:
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-    wiki:
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-
 defaults:
 #  -
 #     scope:
