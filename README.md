@@ -1,3 +1,11 @@
-## This is a Talon wiki
+# Contributing
+This is a wiki for the beta version of [Talon](https://talonvoice.com/), a hands-free input replacement for using a computer.
 
-Version: 1.0.7
+## How this Wiki is Built
+### Github Pages
+### Jekyll
+### Gitwiki Theme
+### Prose
+## Adding Content
+### Pull Request
+### Prose
