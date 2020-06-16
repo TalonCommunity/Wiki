@@ -4,7 +4,7 @@ title: "Talon Wiki"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
 # with your folder name, otherwise leave it empty
 url: "https://talon.wiki" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "wiki"
+baseurl: ""
 # (string) Description of your wiki
 description: "Wiki for the beta version of Talon."
 # (boolean) Enable/disable wiki page list in sidebar
@@ -31,7 +31,7 @@ logo_url:
 # (string) The UA-XXXXX-Y code from google analytic to enable GA on your wiki
 google_analytics: 
 # (string) folder where wiki pages are stored, it's needed for tool buttons
-wiki_folder: ""
+wiki_folder: "wiki"
 # (boolean) if you're using github wiki as submodule then this config
 # must be enabled to allow tool buttons to work properly
 use_github_wiki: false
