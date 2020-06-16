@@ -4,7 +4,7 @@ title: "Talon Wiki"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
 # with your folder name, otherwise leave it empty
 url: "https://talon.wiki" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
+baseurl: "wiki"
 # (string) Description of your wiki
 description: "Wiki for the beta version of Talon."
 # (boolean) Enable/disable wiki page list in sidebar
@@ -77,6 +77,11 @@ prose:
           element: "text"
           label: "title"
     _pages:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+    wiki:
       - name: "title"
         field:
           element: "text"
