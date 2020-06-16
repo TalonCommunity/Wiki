@@ -69,6 +69,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+prose:
+  metadata:
+    _pages:
+      - name: "published"
+        field:
+          value: true
+
+
 defaults:
 #  -
 #     scope:
