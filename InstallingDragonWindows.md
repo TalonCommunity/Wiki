@@ -1,3 +1,5 @@
+# Installing Dragon for Windows
+
 ### Go to [the Nuance website and buy Dragon Dictate Home edition.](https://shop.nuance.com/store/nuanceus/en_US/Content/pbPage.dragon-home?currency=USD&pgmid=4990660600&cid=7010W000002GDURQA4&utm_source=bing&utm_medium=cpc&utm_campaign=DHK-AO-2020-DragonPC_Ecom_PPC_Productterms&adid=77240817013120&matchtype=e&addisttype=s&msclkid=fd1061d99cea1e176e313f7c71fb00c2)
 
 This will cost $150, plus tax depending on what country   you're in.
