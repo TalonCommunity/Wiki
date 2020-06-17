@@ -20,15 +20,11 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
 ## Images
-Images can be uploaded to the `assets` directory.
+Images can be uploaded to the `assets` directory and included in markdown, e.g. `![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)`. Images can be uploaded using Prose:
 ![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)
-
 
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site. If editing using Prose, please don't use the default filename including the date `2020-06-16-your-filename.md` and instead name it like `your-filename.md` with the `.md` file extension. Files without `.md` will not be rendered by jekyll.
-
-### Images
-
 
 ## Previewing Changes Locally
 Follow the instructions in the [Quickstart jekyll docs](https://jekyllrb.com/docs/) to setup a Ruby environment and install bundler.  To build the site and make it available to a local server, run:
