@@ -20,7 +20,13 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
 ## Images
-Images can be uploaded to the `assets` directory and included in markdown, e.g. `![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)`. Images can be uploaded using Prose:
+Images can be uploaded to the `assets` directory and included in markdown, e.g.
+
+```
+![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)`
+```
+
+. Images can be uploaded using Prose:
 ![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)
 
 ## Prose
