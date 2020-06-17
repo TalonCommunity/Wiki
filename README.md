@@ -17,7 +17,9 @@ This wiki belongs to the Talon Community, and contributions are welcome from any
 Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
 
 ## New Pages
-New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
+New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered. For every new page, make sure to add a link to it in the `sidebar.html`:
+
+![sidebar_edit_button.png]({{site.baseurl}}/assets/sidebar_edit_button.png)
 
 ## Images
 Images can be uploaded to the `assets` directory and included in markdown, e.g.
