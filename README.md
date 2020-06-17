@@ -11,8 +11,7 @@ This wiki is built using:
 - [git-wiki-theme](https://github.com/Drassil/git-wiki-theme), a wiki theme for jekyll
 - [prose.io](https://github.com/prose/prose), a content editor for GitHub
 
-# Adding Content
-## Who can Contribute
+### Who can Contribute
 This wiki belongs to the Talon Community, and contributions are welcome from anyone. Anyone can make pull requests, and any member of the TalonCommunity GitHub organization can merge that pull request. Talon Community members can push directly to `gh-pages` branch.
 
 Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
@@ -21,10 +20,13 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
 ## Images
-Images can be uploaded to the `assets` directory.
+Images can be uploaded to the `assets` directory via git, GitHub, or Prose.io.
 
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site. If editing using Prose, please don't use the default filename including the date `2020-06-16-your-filename.md` and instead name it like `your-filename.md` with the `.md` file extension. Files without `.md` will not be rendered by jekyll.
+
+### Images
+
 
 ## Previewing Changes Locally
 Follow the instructions in the [Quickstart jekyll docs](https://jekyllrb.com/docs/) to setup a Ruby environment and install bundler.  To build the site and make it available to a local server, run:
