@@ -70,11 +70,13 @@ kramdown:
   syntax_highlighter: rouge
 
 prose:
+  media: "assets"
   metadata:
     _pages:
       - name: "published"
         field:
           value: true
+          placeholder: true
 
 
 defaults:
