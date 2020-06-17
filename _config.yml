@@ -71,6 +71,16 @@ kramdown:
 
 prose:
   media: "assets"
+  ignore:
+    - _config.yml
+    - docker-compose.yml
+    - /_includes
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - .env-files
+    - .gitignore
+    - CODE_OF_CONDUCT.md
   metadata:
     _pages:
       - name: "published"
