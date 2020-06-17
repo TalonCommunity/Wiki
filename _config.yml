@@ -20,7 +20,7 @@ show_wiki_posts_limit: 10
 # from jekyll (read jekyll doc)
 paginate: 5
 paginate_path: "/blog/page:num"
-permalink: "/:title"
+permalink: pretty
 # (boolean) Enable/disable download buttons in sidebar
 show_downloads: true
 repository: TalonCommunity/Wiki
@@ -31,7 +31,7 @@ logo_url:
 # (string) The UA-XXXXX-Y code from google analytic to enable GA on your wiki
 google_analytics: 
 # (string) folder where wiki pages are stored, it's needed for tool buttons
-wiki_folder: "pages"
+wiki_folder: ""
 # (boolean) if you're using github wiki as submodule then this config
 # must be enabled to allow tool buttons to work properly
 use_github_wiki: false
