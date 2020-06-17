@@ -35,7 +35,8 @@ and find a channel for your language to see how it's going.
 
 ## How can I make talon recognise me better?
 
-https://speech.talonvoice.com/ will help train the data set
+https://speech.talonvoice.com/ will help train the voice data set
+https://noise.talonvoice.com/ will help train the dataset for noises such as pop/hiss as commands.
 
 Use USB3 if you have a USB mic.
 
