@@ -10,11 +10,11 @@ This will cost $150, plus tax depending on what country   you're in.
 
 ### When it is done, it will be in your downloads folder. ![image showing dragon dictate download manager](https://user-images.githubusercontent.com/1163925/80319391-5faffa00-87ff-11ea-97a7-90861d90b1c0.png)
 
-Choose where you want to download dragon
+### Choose where you want to download dragon
 
 ![Choose where you want to download dragon](https://user-images.githubusercontent.com/1163925/80319467-d51bca80-87ff-11ea-89ef-be044794e895.png)
 
-Dragon Will Download itself and start installing.
+### Dragon Will Download itself and start installing.
 
 ![Dragon Dictate Downloading And Installing](https://user-images.githubusercontent.com/1163925/80319547-57a48a00-8800-11ea-9f22-ef579fb0cc67.png)
 
@@ -48,13 +48,11 @@ Eventually, the installation will complete.
 
 ![Activate The Product](https://user-images.githubusercontent.com/1163925/80361743-12577b00-8847-11ea-9f2f-2e8847d91a0a.png)
 
-It will take you to a screen with your serial number.  Click next to activate.  You will see a thank you for activation screen.
+### It will take you to a screen with your serial number.  Click next to activate.  You will see a thank you for activation screen.
 
 ![Product Activation Thank You Screen](https://user-images.githubusercontent.com/1163925/80361818-2b602c00-8847-11ea-8570-940fd41ad8e3.png)
 
-Press launch.
-
-### It will take you into the new profile screen.  Press next.
+### Press launch. It will take you into the new profile screen.  Press next.
 
 ![Welcome To Dragon Setup Wizard](https://user-images.githubusercontent.com/1163925/80394267-3e8af000-8877-11ea-94b4-6f41c85c2b10.png)
 
@@ -62,39 +60,39 @@ Press launch.
 
 ![Name Dragon Dictate Profile](https://user-images.githubusercontent.com/1163925/80394483-89a50300-8877-11ea-9172-5e92775f32f6.png)
 
-Choose your regional accent.
+### Choose your regional accent.
 
 ![Choose your regional accent](https://user-images.githubusercontent.com/1163925/80394740-e7394f80-8877-11ea-9a27-240ed42bbd7b.png)
 
-Choose your microphone.  The built-in microphone most computers have is enough to get started with, but the better micropohone you have the better your experience will be.
+### Choose your microphone.  The built-in microphone most computers have is enough to get started with, but the better micropohone you have the better your experience will be.
 
 ![Choose your microphone](https://user-images.githubusercontent.com/1163925/80395011-4303d880-8878-11ea-9b83-9dcf2b32dc92.png)
 
-Adjust your microphone so that either a headset microphone is at the corner of your mouth or a regular microphone is two feet straight in front of you.
+### Adjust your microphone so that either a headset microphone is at the corner of your mouth or a regular microphone is two feet straight in front of you.
 
 ![adjust your microphone](https://user-images.githubusercontent.com/1163925/80395134-662e8800-8878-11ea-9b1c-305a182e9f5d.png)
 
-Now we train a Dragon Dictate profile to understand you by reading text so it can analyze an accent.
+### Now we train a Dragon Dictate profile to understand you by reading text so it can analyze an accent.
 
 ![Train Dragon Dictate Profile to understand you by reading text so it can analyze your accent](https://user-images.githubusercontent.com/1163925/80395321-a1c95200-8878-11ea-9f09-ec213bd10ecc.png)
 
-And now the configuration is complete.
+### And now the configuration is complete.
 
 ![Configuration Complete](https://user-images.githubusercontent.com/1163925/80395508-ec4ace80-8878-11ea-8a50-d32b837c3429.png)
 
-Dragon is customizing itself
+### Dragon is customizing itself
 
 ![Dragon spends some time customizing itself. ](https://user-images.githubusercontent.com/1163925/80395596-0f757e00-8879-11ea-84c4-a5256d93893d.png)
 
-Dragon wants to collect what you say.  I like my privacy, so I tell them they can't use my transcripts as training tools.
+### Dragon wants to collect what you say.  I like my privacy, so I tell them they can't use my transcripts as training tools.
 
 ![Dragon wants to collect what you say.  I like my privacy, so I tell them they can't use my transcripts as training tools](https://user-images.githubusercontent.com/1163925/80395746-477cc100-8879-11ea-97b9-143d3bf9763e.png)
 
-Dragon is now ready to use.  as soon as you click next, it will open a series of tutorials.
+### Dragon is now ready to use. As soon as you click next, it will open a series of tutorials.
 
 ![Dragon i](https://user-images.githubusercontent.com/1163925/80395977-96c2f180-8879-11ea-9ae2-039a38ef9aeb.png)
 
-it is useful to follow the tutorials, but it is more useful to know two things.
+### It is useful to follow the tutorials, but it is more useful to know two things:
 
 First, the command "what can I say" shows you what command options you have in a particular window.
 
