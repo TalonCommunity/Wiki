@@ -1,7 +1,7 @@
 # Contributing
 This is a wiki for the beta version of [Talon](https://talonvoice.com/), a hands-free input replacement for using a computer.
 
-Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. The beta version is currently only available to Talon Beta tier Patreon supporters. If you want to try out the beta, consider donating to the [Patreon](https://www.patreon.com/lunixbochs). Links to download the beta version can be found in the @beta channel.
+Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. The beta version is currently only available to Talon Beta tier Patreon supporters. If you want to try out the beta, consider donating to the [Patreon](https://www.patreon.com/lunixbochs). Links to download the beta version can be found in the `@beta` channel.
 
 ## How this Wiki is Built
 
