@@ -11,7 +11,7 @@ This wiki is built using:
 - [git-wiki-theme](https://github.com/Drassil/git-wiki-theme), a wiki theme for jekyll
 - [prose.io](https://github.com/prose/prose), a content editor for GitHub
 
-### Who can Contribute
+## Who can Contribute
 This wiki belongs to the Talon Community, and contributions are welcome from anyone. Anyone can make pull requests, and any member of the TalonCommunity GitHub organization can merge that pull request. Talon Community members can push directly to `gh-pages` branch.
 
 Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf).
