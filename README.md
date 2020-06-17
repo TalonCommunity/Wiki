@@ -20,6 +20,9 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 ## New Pages
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
+## Images
+Images can be uploaded to the `assets` directory.
+
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site. If editing using Prose, please don't use the default filename including the date `2020-06-16-your-filename.md` and instead name it like `your-filename.md` with the `.md` file extension. Files without `.md` will not be rendered by jekyll.
 
