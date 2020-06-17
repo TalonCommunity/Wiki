@@ -46,7 +46,7 @@ While Talon is closed source, there's plenty you can do to help:
 
 * https://speech.talonvoice.com/ Train the data set
 * Publish your talon commands on Github for others to use like 
-    https://github.com/knausj85/knausj_talon or https://github.com/lunixbochs/talon_starter_pack
+    https://github.com/knausj85/knausj_talon
 * Report issues in the beta https://github.com/talonvoice/beta
 * Add more to these docs :)
 
@@ -69,7 +69,7 @@ Check your speech engine has initialised by looking at the log e.g.
 If your on Linux or Mac (without dragon), you'll need w2l setup.
 
 Check you have some valid commands in ~/.talon/user. If it's empty
-clone https://github.com/lunixbochs/talon_starter_pack and try saying the alphabet
+clone https://github.com/knausj85/knausj_talon and try saying the alphabet
 "air bat cap drum".
 
 ## Talon crashes a lot
