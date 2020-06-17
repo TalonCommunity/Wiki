@@ -20,7 +20,9 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
 ## Images
-Images can be uploaded to the `assets` directory via git, GitHub, or Prose.io.
+Images can be uploaded to the `assets` directory.
+![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)
+
 
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site. If editing using Prose, please don't use the default filename including the date `2020-06-16-your-filename.md` and instead name it like `your-filename.md` with the `.md` file extension. Files without `.md` will not be rendered by jekyll.
@@ -41,5 +43,3 @@ Some functionality, such as the editing with prose, cannot be easily tested loca
 
 ## Deploying the Changes
 All changes merged to `gh-pages` branch will be automatically deployed using GitHub pages to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a few minutes.
-
-
