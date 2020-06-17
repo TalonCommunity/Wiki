@@ -80,11 +80,6 @@ prose:
 
 
 defaults:
-#  -
-#     scope:
-#       path: ""
-#     values:
-#       permalink: /:basename
  -
     scope:
       path: "" # an empty string here means all files in the project
@@ -96,17 +91,7 @@ defaults:
       type: "pages"
     values:
       layout: "git-wiki-default"
- # -
- #    scope:
- #      path: ""
- #      type: "posts"
- #    values:
- #      layout: "git-wiki-post"
- -
-    scope:
-      path: blog
-    values:
-      layout: "git-wiki-blog"
+
 sass:
     style: compressed
 plugins:
