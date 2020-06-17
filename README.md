@@ -21,7 +21,7 @@ New pages can be added to the root directory - no need to add to any subfolder. 
 
 ## Images
 Images can be uploaded to the `assets` directory and included in markdown, e.g. `![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)`. Images can be uploaded using Prose:
-![prose_image_upload.png]({{site.baseurl}}/assets/prose_image_upload.png)
+![prose_image_upload.png](assets/prose_image_upload.png)
 
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site in the top right corner:
