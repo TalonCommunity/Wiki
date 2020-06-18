@@ -8,9 +8,9 @@ runs cross platform (in beta) and is easily configurable
 ## Beta instructions
 First, sign up for the beta ($15 USD) at https://www.patreon.com/join/lunixbochs (create a patreon account if you don't already have one)
 
-Next, join the Slack workspace talonvoice.slack.com. Then, send a direct message to @aegis to let him know you've signed up for the beta program. He'll add you to the beta channel.
+Next, join the Talon Voice Slack https://talonvoice.slack.com and send a direct message to @aegis to let him know you've signed up for the beta program. He'll add you to the beta channel.
 
-Check the pinned messages for the latest download for your OS (mac, linux, windows). For mac, download the dmg file, then double click to run it, you'll be prompted to copy it into your Applications folder. From there, you can run the program, after which you'll have a new directory called .talon (hidden) in your user's home directory.
+In the #beta channel, check the pinned messages for the latest download for your OS (mac, linux, windows). For mac, download the dmg file, then double click to run it, you'll be prompted to copy it into your Applications folder. From there, you can run the program, after which you'll have a new directory called .talon (hidden) in your user's home directory.
 
 You will need a copy of the https://github.com/knausj85/knausj_talon repo. Git clone (or just download and unzip) into your user directory. If you've done this step correctly, you will see the users/yourusername/.talon/user folder and the knausj_talon within it (there will be subfolders like apps, code, lang, misc, etc).
 
@@ -58,7 +58,8 @@ and find a channel for your language to see how it's going.
 
 ## How can I make talon recognise me better?
 
-https://speech.talonvoice.com/ will help train the voice data set
+https://speech.talonvoice.com/ will help train the voice data set  
+
 https://noise.talonvoice.com/ will help train the dataset for noises such as pop/hiss as commands.
 
 Use USB3 if you have a USB mic.
