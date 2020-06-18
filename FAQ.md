@@ -20,7 +20,8 @@ Next, look again in the pinned files of the beta channel, find the instructions 
 ~/.talon/user/w2l.py
 
 ## What does Talon hear?
-If you'd like a notification to show you what Talon is hearing you say, add this notify.py in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) https://github.com/emmakat/knausj_talon/blob/devbranch/emmakat/notify.py (or create a .py file with the contents:
+If you'd like a notification to show you what Talon is hearing you say, add this notify.py in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) https://github.com/emmakat/knausj_talon/blob/devbranch/emmakat/notify.py (or create a .py file with the contents:  
+
     #This file will add a notification to tell you what Talon heard you say
     from talon import app, speech_system
     def on_phrase(j):
