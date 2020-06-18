@@ -7,6 +7,8 @@
 
 [Ryan's Eye Tracking Demo](https://youtu.be/VMNsU7rrjRI)
 
+[Ryan's Python Demo](https://youtu.be/ddFI63dgpaI)
+
 [2Shea's Mojolicious Perl App using Talon](https://youtu.be/X6rsA0Svh2M)
 
 [2Shea's Emoji Searching Demo](https://youtu.be/RA0idiJkZOg)
