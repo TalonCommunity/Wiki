@@ -96,12 +96,8 @@ Check your speech engine has initialised by looking at the log e.g.
 
 If your on Linux or Mac (without dragon), you'll need w2l setup.
 
-Check you have some valid commands in ~/.talon/user. If it's empty
-<<<<<<< HEAD
-clone https://github.com/lunixbochs/talon_starter_pack and try saying the alphabet
-=======
-clone https://github.com/knausj85/knausj_talon and try saying the alphabet
->>>>>>> e6311b3dd96603d67ad036709117a9aaafba3033
+Check you have some valid commands in ~/.talon/user. If it's empty clone https://github.com/knausj85/knausj_talon and try saying the alphabet
+
 "air bat cap drum".
 
 ## Talon crashes a lot
