@@ -22,7 +22,7 @@ Clicking these links should drop you into a content editor in your browser:
 
 There's a preview button to see your changes rendered in markdown:
 
-![screenshot prose preview]({{site.baseurl}}/media/prose_preview.png)
+![screenshot prose preview](media/prose_preview.png)
 
 #### Images
 Images can be uploaded either by dragging and dropping the image into the prose editor or by clicking the image button in the markdown editor bar. These photos will be uploaded to the `media` directory and you should see some markdown generated for you:
@@ -39,6 +39,9 @@ Click the save button, which will commit your changes. If you are a member of Ta
 
 ### Using GitHub UI
 There are links in the top right corner of the site to edit the content in GitHub. Clicking `Add new`, for example, will drop you into a GiHub UI for adding a new file:
+
+![screenshot github editor](media/github_editor.png)
+
 
 The GitHub UI provides an option to either commit directly to `gh-pages` branch (if you are a member of Talon Community) or make a new branch and submit a pull request, which can be merged from a member of TalonCommunity.
 
