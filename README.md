@@ -18,7 +18,11 @@ Links to edit content using `Prose.io` are embedded into the site in the top rig
 
 Clicking these links should drop you into a content editor in your browser:
 
+![screenshot prose editor](media/prose_editor.png)
+
 There's a preview button to see your changes rendered in markdown:
+
+![screenshot prose preview]({{site.baseurl}}/media/prose_preview.png)
 
 ##### Images
 Images can be uploaded either by dragging and dropping the image into the prose editor or by clicking the image button in the markdown editor bar. These photos will be uploaded to the `media` directory and you should see some markdown generated for you:
