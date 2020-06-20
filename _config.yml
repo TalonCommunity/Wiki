@@ -1,4 +1,4 @@
-remote_theme: Drassil/git-wiki-theme@master
+# remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: "Talon Wiki"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
@@ -82,6 +82,9 @@ prose:
     - .env-files
     - .gitignore
     - CODE_OF_CONDUCT.md
+    - assets
+    - /_layouts
+    - /_sass
   metadata:
     _pages:
       - name: "published"
