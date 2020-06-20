@@ -70,7 +70,7 @@ kramdown:
   syntax_highlighter: rouge
 
 prose:
-  media: "assets"
+  media: "media"
   ignore:
     - index.md
     - _config.yml

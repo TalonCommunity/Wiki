@@ -21,22 +21,22 @@ Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guid
 ## New Pages
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered. For every new page, make sure to add a link to it in the `sidebar.html`:
 
-![sidebar_edit_button.png]({{site.baseurl}}/assets/sidebar_edit_button.png)
+![sidebar_edit_button.png]({{site.baseurl}}/media/sidebar_edit_button.png)
 
 ## Images
-Images can be uploaded to the `assets` directory and included in markdown, e.g.
+Images can be uploaded to the `media` directory and included in markdown, e.g.
 
 ```
-![prose_image_upload.png](assets/prose_image_upload.png)
+![prose_image_upload.png](media/prose_image_upload.png)
 ```
 
 Images can be uploaded using Prose:
-![prose_image_upload.png](assets/prose_image_upload.png)
+![prose_image_upload.png](media/prose_image_upload.png)
 
 ## Prose
 As an alternative to editing wiki content with git or the GitHub UI, links to edit content using `Prose.io` are embedded into the site in the top right corner:
 
-![screenshot of prose links](assets/prose_links.png)
+![screenshot of prose links](media/prose_links.png)
 
 If editing using Prose, please don't use the default filename including the date `2020-06-16-your-filename.md` and instead name it like `your-filename.md` with the `.md` file extension. Files without `.md` will not be rendered by jekyll.
 
