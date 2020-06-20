@@ -24,17 +24,17 @@ There's a preview button to see your changes rendered in markdown:
 
 ![screenshot prose preview]({{site.baseurl}}/media/prose_preview.png)
 
-##### Images
+#### Images
 Images can be uploaded either by dragging and dropping the image into the prose editor or by clicking the image button in the markdown editor bar. These photos will be uploaded to the `media` directory and you should see some markdown generated for you:
 
 ```
 ![prose_image_upload.png](media/prose_image_upload.png)
 ```
 
-##### New Pages
+#### New Pages
 Prose by default suggests a filename with a date, and there isn't a way currently to turn of this behavior. Please remove the date from the suggested filename, for example don't use `2020-06-16-your-filename.md` and instead name it without a date like `your-filename.md`. Remember to use the `.md` file extension. Files without the extension will not be rendered by jekyll.
 
-##### Saving Changes
+#### Saving Changes
 Click the save button, which will commit your changes. If you are a member of Talon Community, your changes will be committed directly to the deploy branch `gh-pages` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `@beta` or `#talon-docs` channels of the Talon Slack.
 
 ### Using GitHub UI
@@ -44,10 +44,10 @@ The GitHub UI provides an option to either commit directly to `gh-pages` branch 
 
 ### Using git
 
-##### New Pages
+#### New Pages
 New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered. For every new page, make sure to add a link to it in the sidebar `_includes/sidebar.html`:
 
-##### Images
+#### Images
 Add images to the `media` directory and include in markdown using the syntax:
 
 ```
