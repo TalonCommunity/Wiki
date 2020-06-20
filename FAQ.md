@@ -44,7 +44,7 @@ expensive but highly recommend for full time use
 
 ### Eye Tracking
 
-Tobii 4C is required. Nothing else will work
+Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.  Ask in `#eye-tracking` channel if you want to know if your device can be supported.
 
 ## I have X accent, will it work for me? 
 
