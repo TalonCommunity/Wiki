@@ -23,7 +23,7 @@
 
 4. Ensure that your voice is not tired, which will lead to poorer pronunciation.
 
-    a. Make sure to drink plenty of water throughout the day: warm water and tea are also helpful.
+    a. Make sure to drink plenty of liquids throughout the day: warm water and tea are especially helpful.
 
     b. Try to speak in a natural tone as if you are talking with someone else. At first this will feel a little weird, but speaking in an unatural voice will tire you out quicker.
 
