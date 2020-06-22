@@ -61,7 +61,7 @@ Add images to the `media` directory and include in markdown using the syntax:
 All changes merged to `gh-pages` branch will be automatically deployed using GitHub pages to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a few minutes. If you are a member of TalonCommunity, you have write access and can merge your own changes. If
 
 # Advanced
-**If you are only looking to add content to the wiki, you should not need to do any of the following setup. This is only relevant if you want to make changes to the wiki site itself or you want to preview locally instea of using prose or GitHub UI.**
+**If you are only looking to add content to the wiki, you should not need to do any of the following setup. This is only relevant if you want to make changes to the wiki site itself or you want to preview locally instead of using prose or GitHub UI.**
 
 ## How this Wiki is Built
 
