@@ -15,14 +15,14 @@ The remainder of this page describes various important settings that you might w
 
 ### insert_wait
 
-This will add a delay between keys pressed in `insert()` actions. The default is 0.
+This will add a delay in ms between keys pressed in `insert()` actions. The default is 0.
 
 ### key_wait
 
 This is a multiplier that changes how long Talon waits between sending keypresses to the operating system. I believe the default is 1.
 
 ### speech.debug
-Enabling this (setting `speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises.
+Enabling this (`speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises. The default value is 0.
 
 ### speech.engine
 
