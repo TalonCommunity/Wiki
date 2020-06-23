@@ -15,9 +15,9 @@ The remainder of this page describes various important settings that you might w
 
 ### speech.timeout
 
-This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a command. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
+This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
 
-It is measured in milliseconds; the default is 0.150.
+It is measured in seconds; the default is 0.150, i.e. 150 milliseconds.
 
 ### key_wait
 
