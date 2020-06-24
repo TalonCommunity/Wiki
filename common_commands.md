@@ -31,11 +31,10 @@ play previous
 control mouse (say "control mouse" to toggle on/off Tobii moving the mouse)  
 run calibration (say "run calibration" to start Tobii calibration)  
 
-### Working with text  
+### Working with text (misc/standard.talon) 
 copy that  
 cut that  
-~paste that~ (the default is "paste that" but I've commented out the command in misc/standard.talon)  
-paste it (the default is "paste match" but I've modified to "paste it" in misc/standard.talon)  
+paste that  
 
 ### Working with the mouse and scrolling 
 dubclick (to double left click)  
