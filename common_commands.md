@@ -27,7 +27,7 @@ play next
 play previous   
 (play | pause)  
 
-### Working with the Tobii eye tracker (works with Talon beta only)  
+### Working with the Tobii eye tracker  
 control mouse (say "control mouse" to toggle on/off Tobii moving the mouse)  
 run calibration (say "run calibration" to start Tobii calibration)  
 
