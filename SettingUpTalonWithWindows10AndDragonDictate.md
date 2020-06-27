@@ -1,3 +1,5 @@
+# Setting Up Talon With Windows 10 And Dragon Dictate
+
 This is a tutorial describing how make your computer obey your voice commands.  
 
 This is a tutorial about how to set up Talon on a Windows 10 machine, using Dragon Dictate.  Talon does NOT need Dragon Dictate, but this tutorial assumes you will be using Dragon Dictate because that is the setup that I, Tara, the tutorial writer, am using.  If you need help [installing dragon dictate, see this other tutorial I wrote. ](https://gist.github.com/tararoys/41514be609c953139294b8a674b25dc9).  Talon is voice control software made by programmers for programmers, and is very powerful and very much a work in progress.  
