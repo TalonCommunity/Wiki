@@ -1,0 +1,26 @@
+{%- comment -%}
+Includes content with a table of contents right before the second header.
+{%- endcomment -%}
+{%- assign html_headers = '<h1,<h2,<h3,<h4,<h5,<h6' | split: ',' -%}
+{%- assign final_index = include.content.size -%}
+{%- assign seen_first_header = false -%}
+{%- for i in (0..final_index) -%}
+    {%- assign next_three_characters = include.content | slice: i, 3 -%}
+    {%- if html_headers contains next_three_characters -%}
+        {%- if seen_first_header -%}
+            {{ include.content | slice: 0, i }}
+            {%- include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" id="git-wiki-toc" h_min=2 h_max=3 ordered=1 -%}
+            {{ include.content | slice: i, final_index }}
+            {%- break -%}
+        {%- else -%}
+            {%- assign seen_first_header = true -%}
+        {%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} If we get to the end of the loop without ever finding
+    two headers, this article is pretty small, and it probably doesn't
+    need a table of contents. {%- endcomment -%}
+    {%- if forloop.last -%}
+        {{ include.content }}
+    {%- endif -%}
+{%- endfor -%}

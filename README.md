@@ -60,10 +60,10 @@ Add images to the `media` directory and include in markdown using the syntax:
 ## Deploying Changes
 All changes merged to `gh-pages` branch will be automatically deployed using GitHub pages to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a few minutes. If you are a member of TalonCommunity, you have write access and can merge your own changes. If
 
-# Advanced
+## Advanced
 **If you are only looking to add content to the wiki, you should not need to do any of the following setup. This is only relevant if you want to make changes to the wiki site itself or you want to preview locally instead of using prose or GitHub UI.**
 
-## How this Wiki is Built
+### How this Wiki is Built
 
 This wiki is built using:
 - [jekyll](https://jekyllrb.com/docs/), a static site generator
@@ -73,10 +73,10 @@ This wiki is built using:
 
 The theme is built directly into the repository so we could patch any changes as needed.
 
-## Making Custom Style Changes
+### Making Custom Style Changes
 This wiki is built using a custom theme, but it is possible to override any of the style in `overrides/css/custom.css`.
 
-## Previewing Changes Locally
+### Previewing Changes Locally
 Follow the instructions in the [Quickstart jekyll docs](https://jekyllrb.com/docs/) to setup a Ruby environment and install bundler.  To build the site and make it available to a local server, run:
 
 ```

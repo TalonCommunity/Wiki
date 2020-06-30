@@ -9,9 +9,7 @@
     {% include {{ site.inc_before_content }} %}
     {% endif %}
 
-    <div id="git-wiki-content">
-      {{ content }}
-    </div>
+    {% include content_with_toc.html content=content %}
 
     {% if site.inc_after_content %}
     {% include {{ site.inc_after_content }} %}
