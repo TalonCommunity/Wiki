@@ -23,7 +23,7 @@ Next, look again in the pinned files of the beta channel, find the instructions 
 Checkout the [common commands](https://github.com/TalonCommunity/Wiki/blob/gh-pages/common_commands.md) to get started using Talon
 
 ## What does Talon hear?
-If you'd like a notification to show you what Talon is hearing you say, add this notify.py in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py (or create your own notify.py file with the contents:  
+If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
 
     #This file will add a notification to tell you what Talon heard you say
     from talon import app, speech_system
