@@ -37,6 +37,8 @@ cut that
 paste that  
 
 ### Working with the mouse and scrolling 
+[enable pop to click](https://github.com/TalonCommunity/Wiki/blob/gh-pages/poptoclick.md) without requiring Tobii control mouse
+
 dubclick (to double left click)  
 righty (to right click)  
 (page | scroll) up  
