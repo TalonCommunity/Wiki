@@ -80,7 +80,7 @@ This wiki is built using a custom theme, but it is possible to override any of t
 Follow the instructions in the [Quickstart jekyll docs](https://jekyllrb.com/docs/) to setup a Ruby environment and install bundler.  To build the site and make it available to a local server, run:
 
 ```
-bundle exec serve jekyll
+bundle exec jekyll serve
 ```
 
 and open `http://localhost:4000` in a browser.
