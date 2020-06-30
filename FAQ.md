@@ -20,7 +20,7 @@ Next, look again in the pinned files of the beta channel, find the instructions 
 ~/.talon/user/w2l.py
 
 ## What can I say?  
-Checkout the (common commands)[https://github.com/TalonCommunity/Wiki/blob/gh-pages/common_commands.md] to get started using Talon
+Checkout the [common commands](https://github.com/TalonCommunity/Wiki/blob/gh-pages/common_commands.md) to get started using Talon
 
 ## What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this notify.py in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py (or create your own notify.py file with the contents:  
