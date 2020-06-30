@@ -9,6 +9,6 @@ Here are a list of speech recognition engines available for use with Talon.
 | sconv2                      | Beta         | Windows/macOS/Linux | Slow decode times. Better dictation mode than default Talon.         | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1590953241451100?thread_ts=1590953241.451100) |
 | sconv3                      | Beta         | Windows/macOS/Linux | Faster decode times than sconv2. Spuriously recognizes numbers.      | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1592537896169500?thread_ts=1592537896.169500) |
 | sconv4                      | Beta         | Windows/macOS/Linux | Spuriously recognizes numbers less often than sconv3.                | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1593080845371600?thread_ts=1593080845.371600) |
-| wav2letter                  | Beta         | macOS/Linux         |                                                                      | n/a                                                                                           |
+| wav2letter                  | Beta         | macOS/Linux         | Included with beta Talon by default.                                 | n/a                                                                                           |
 | web2letter                  | Beta         | Windows/macOS/Linux | Uses hosted speech recognition.                                      | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1592322134388800)                             |
 
