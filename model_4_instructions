@@ -1,0 +1,10 @@
+Beta users only: If you'd like to try out the new voice model, here are the steps to follow:  
+Update to latest Talon
+Download the tarball (url in beta channel)
+Extract tarball to ~/.talon
+See new folder w2l/en_US-sconv-beta4
+Copy lm-ngram.bin from existing w2l/en_US directory into en_US-sconv-beta4
+Edit user/w2l.py, comment out the existing engine, add a new line, as seen below:  
+
+#engine = W2lEngine(language='en_US', debug=True)
+engine = W2lEngine(language='en_US-sconv-beta4', debug=True)
