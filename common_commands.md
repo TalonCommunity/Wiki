@@ -36,6 +36,10 @@ copy that
 cut that  
 paste that  
 
+## Switch between dictation and command mode  
+Say "dictation mode"
+Say "command mode"
+
 ### Working with the mouse and scrolling 
 [enable pop to click](https://github.com/TalonCommunity/Wiki/blob/gh-pages/poptoclick.md) without requiring Tobii control mouse
 
