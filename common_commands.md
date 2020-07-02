@@ -1,3 +1,7 @@
+---
+order: -100
+---
+
 ## List of common commands to get started with Talon  
 
 ### Open and switch between windows in apps such as Chrome (these are controlled in misc/window_management.talon)  
