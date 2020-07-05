@@ -1,4 +1,4 @@
-# Talon files
+# Talon Files
 
 The primary way to extend talon is using `.talon` files placed in `~/.talon/user/` or its subdirectories. A talon file comes in two parts: a header defining the [context](https://talon.wiki/talon-concepts/#contexts) in which it is active, and a body that implements various behaviors within that context. The body of talon file can:
 
