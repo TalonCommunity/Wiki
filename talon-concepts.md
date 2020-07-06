@@ -49,7 +49,7 @@ TODO: document `@ctx.action_class('win')` & similar.
 
 ## Lists
 
-A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. for example, if you wanted to say "launch <name of application>" in order to launch one of several applications, you could do it using a list, like so (assuming you have a module `mod` and a context `ctx`):
+A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. for example, if you wanted to say "launch APPNAME" in order to launch one of several applications, you could do it using a list, like so (assuming you have a module `mod` and a context `ctx`):
 
 ```python
 mod.list('launch', desc='Launchable applications')
