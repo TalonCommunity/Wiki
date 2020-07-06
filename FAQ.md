@@ -23,6 +23,8 @@ Next, look again in the pinned files of the beta channel, find the instructions 
 ~/.talon/w2l/en_US
 ~/.talon/user/w2l.py
 
+This is the default experience with Talon, but please checkout the other [speech engines](https://github.com/TalonCommunity/Wiki/blob/gh-pages/SpeechRecognitionEngines.md) available, especially the latest [sconv4](https://github.com/TalonCommunity/Wiki/blob/gh-pages/model_4_instructions.md).
+
 ## What can I say?  
 Checkout the [common commands](https://github.com/TalonCommunity/Wiki/blob/gh-pages/common_commands.md) to get started using Talon
 
