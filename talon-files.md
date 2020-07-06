@@ -45,6 +45,10 @@ settings():
     key_wait = 1.5
 ```
 
+## Context header
+
+TODO: explain the syntax and meaning of the context header.
+
 ## Voice commands
 
 A voice command has the format `RULE: BODY`, where `RULE` determines what words activate the command, and `BODY` defines what the command does when activated:
@@ -64,16 +68,18 @@ Rules have a quite versatile syntax, similar to [EBNF](https://en.wikipedia.org/
 | `[foo]` | Optional | “foo” or “” (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
-| `foo|bar` | Choice | “foo”, “bar” |
+| `foo\|bar` | Choice | “foo”, “bar” |
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](https://talon.wiki/talon-concepts/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](https://talon.wiki/talon-concepts/#captures) | Depends on the capture. |
+
+NB. If you see a backslash in the syntax example for choice, `foo\|bar`, ignore it; a quirk of Github's markdown parsing makes it necessary.
 
 TODO: Document the body syntax.
 
 ## Implementing actions
 
-In place of an ordinary rule, you can also implement an [action](/talon-concepts/#actions). In this case the rule has the form `action(NAME_OF_ACTION)`. The body syntax is the same. For example:
+In place of an ordinary rule, you can also implement an [action](https://talon.wiki/talon-concepts/#actions). In this case the rule has the form `action(NAME_OF_ACTION)`. The body syntax is the same. For example:
 
 ```
 action(app.tab_next): key(ctrl-tab)
@@ -83,7 +89,31 @@ This means whenever this file's context applies and the action `app.tab_next` is
 
 ## Tags
 
-TODO: describe how tags work
+Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+
+Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `tabs` tag. Here's how that would look. In `tabs.talon`:
+
+```
+# This selects for the tag 'tabs'.
+tag: tabs
+-
+(open | new) tab: app.tab_open()
+last tab: app.tab_previous()
+next tab: app.tab_next()
+close tab: app.tab_close()
+reopen tab: app.tab_reopen()
+```
+
+And then, in `firefox.talon`:
+
+```
+app: Firefox
+-
+# This activates the tag 'tabs'.
+tag(): tabs
+```
+
+Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](https://talon.wiki/talon-concepts/#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in `firefox.talon`. Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
 ## Settings
 
@@ -93,7 +123,7 @@ Talon files can also adjust settings; for more on this see [Talon Settings](http
 
 Although Talon files are the primary way of extending Talon, there are some things that they can't do. In particular, they can't:
 
-1. Declare [actions](https://talon.wiki/talon-concepts/#actions), although they can implement them.
+1. Declare [actions](https://talon.wiki/talon-concepts/#actions), although they can implement and invoke them.
 2. Declare or override [lists](https://talon.wiki/talon-concepts/#lists), although they can use them in rules.
 3. Declare or implement [captures](https://talon.wiki/talon-concepts/#captures), although they can use them in rules.
 4. Run arbitrary Python code.
