@@ -66,7 +66,7 @@ This sets up a list that recognizes the words "firefox", "terminal", and "emacs"
 launch {user.launch}: user.system_command(user.launch)
 ```
 
-We refer to our new list as `{user.launch}`; curly quotes are the syntax for using lists, and all user-defined lists are named `user.WHATEVER`. The value that our list produced, in this case, the command for our application, is available in the body of the command as `user.launch`, or just as `launch`.
+We refer to our new list as `{user.launch}`; curly braces are the syntax for using lists, and all user-defined lists are named `user.WHATEVER`. The value that our list produced, in this case, the command for our application, is available in the body of the command as `user.launch`, or just as `launch`.
 
 TODO: explain in more detail how variable binding works here. What if we had done `{user.launch}+` instead? or `({user.launch} | foo)`?
 
