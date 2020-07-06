@@ -7,6 +7,8 @@ The primary way to extend talon is using `.talon` files placed in `~/.talon/user
 3. Adjust [settings](/talon-settings).
 4. Activate [tags](#tags).
 
+## Example file
+
 An example talon file might look like this:
 
 ```
@@ -16,8 +18,10 @@ os: linux
 app: Slack
 app: slack.exe
 app: Teams
+# Anything above this dash is part of the header.
 -
 # Anything below the dash is part of the body.
+# If there is no dash, then the body starts immediately.
 
 # These define voice commands.
 ([channel] unread next | goneck): key(alt-shift-down)
@@ -29,14 +33,17 @@ insert code fragment:
     key(shift-enter)
     key(up)
 
-# This says how to implement the action app.tab_next within this context.
+# This says how to implement the actions app.tab_next and app.tab_previous.
 action(app.tab_next): key(ctrl-tab)
+action(app.tab_previous): key(shift-ctrl-tab)
 
 # This activates the tag 'tabs'.
 tag(): tabs
-```
 
-TODO: example of adjusting `settings()`.
+# This adjusts settings (within this file's context).
+settings():
+    key_wait = 1.5
+```
 
 ## Voice commands
 
@@ -57,8 +64,8 @@ Rules have a quite versatile syntax, similar to [EBNF](https://en.wikipedia.org/
 | `[foo]` | Optional | “foo” or “” (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
-| `foo\|bar` | Choice | “foo”, “bar” |
-| `(foo)` | Grouping/precedence | “foo” |
+| `foo|bar` | Choice | “foo”, “bar” |
+| `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](https://talon.wiki/talon-concepts/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](https://talon.wiki/talon-concepts/#captures) | Depends on the capture. |
 
@@ -72,7 +79,7 @@ In place of an ordinary rule, you can also implement an [action](/talon-concepts
 action(app.tab_next): key(ctrl-tab)
 ```
 
-This means that whenever this file's context applies and the action `app.tab_next` is invoked, e.g. by being called by a Talon voice command, it will press the shortcut ctrl-tab. Unless, of course, the action is overridden in another, more specific, context.
+This means whenever this file's context applies and the action `app.tab_next` is invoked by a Talon voice command, it will press the shortcut ctrl-tab -- unless that action is overridden in some more specific context.
 
 ## Tags
 
@@ -80,7 +87,7 @@ TODO: describe how tags work
 
 ## Settings
 
-TODO: describe how settings work
+Talon files can also adjust settings; for more on this see [Talon Settings](https://talon.wiki/talon-settings/).
 
 ## Talon files vs Python files
 
