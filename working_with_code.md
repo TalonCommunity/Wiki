@@ -7,13 +7,24 @@ If talon is scripted to support your language, activating language support is as
 If for some reason you are not in a file with the correct extension, you can manually activate the language with the commands defined in **modes/modes.talon**. For example, to activate TypeScript support say the command `force type script`. This will activate the correct mode for as long as you want until you say the command `clear language modes`.
 
 ### Where are my languages defined?
-There are some commands that are defined at a high level for all programming languages. These commands are defined in **code/programming.talon**. The functionality for these is implemented in each language script, for example TypeScript functionality is defined in **code/typescript.talon**.
+There are some commands that are defined at a high level for all programming languages. 
 
-Some language-specific functionality is defined in the specific language script, for example **code/typescript.talon**.
+Common language commands are defined as below: 
+
+|File|Purpose|
+|---|---|
+|lang/programming.talon|Commands for functions, loops and other common control structures |
+|lang/operators.talon|Commands for logical, bitwise and other common operators|
+|lang/comment.talon|Commands for comments|
+
+
+The functionality for the common commands is implemented in each language-specific script, for example TypeScript support is defined in **lang/typescript.talon**.
+
+Any language-specific commands are also defined in the language-specific script, for example **lang/typescript.talon**.
 
 ### Some command examples
 
-Some examples of high-level programming concepts that are implemented in TypeScript are given below. See **code/programming.talon** and **code/typescript.talon** for more high-level commands.
+Some examples of high-level programming concepts that are implemented in TypeScript are given below. See **lang/programming.talon** and **lang/typescript.talon** for more high-level commands.
 
 |Command|Output (TypeScript, as example)|
 |---|---|
