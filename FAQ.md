@@ -26,10 +26,10 @@ runs cross platform (in beta) and is easily configurable
   * Wav2letter is the default speech recognition in Talon, but please checkout the other [speech engines](https://github.com/TalonCommunity/Wiki/blob/gh-pages/SpeechRecognitionEngines.md) available, especially the latest [sconv4](https://github.com/TalonCommunity/Wiki/blob/gh-pages/model_4_instructions.md).
 
 ### What can I say?  
-Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon
+Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon.
 
 ### Coding with Talon
-Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/)
+Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/).
 
 ### What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
@@ -55,7 +55,7 @@ and find a channel for your language to see how it's going.
 
 ### How can I make talon recognise me better?
 
-https://speech.talonvoice.com/ will help train the voice data set  
+https://speech.talonvoice.com/ will help train the voice data set.  
 
 https://noise.talonvoice.com/ will help train the dataset for noises such as pop/hiss as commands.
 
