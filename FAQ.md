@@ -26,7 +26,7 @@ Next, look again in the pinned files of the beta channel, find the instructions 
 This is the default experience with Talon, but please checkout the other [speech engines](https://github.com/TalonCommunity/Wiki/blob/gh-pages/SpeechRecognitionEngines.md) available, especially the latest [sconv4](https://github.com/TalonCommunity/Wiki/blob/gh-pages/model_4_instructions.md).
 
 ## What can I say?  
-Checkout the [common commands](https://github.com/TalonCommunity/Wiki/blob/gh-pages/common_commands.md) to get started using Talon
+Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon
 
 ## What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
