@@ -13,8 +13,8 @@ Common language commands are defined as below:
 
 |File|Purpose|
 |---|---|
-|lang/programming.talon|Commands for functions, loops and other common control structures |
-|lang/operators.talon|Commands for logical, bitwise and other common operators|
+|lang/programming.talon|Commands for functions, loops, and other common control structures |
+|lang/operators.talon|Commands for logical, bitwise, and other common operators|
 |lang/comment.talon|Commands for comments|
 
 
