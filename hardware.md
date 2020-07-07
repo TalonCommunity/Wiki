@@ -1,7 +1,7 @@
 ## Hardware
 
 ### Microphones
-Check out the `#hardware` channel in Slack
+Check out the `#hardware` channel in Slack  
 Speech recognition works better the better the microphone you have. Some recommendations are:
 
   * Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. Can be attached to an arm for increased recognition. Useful if you're trying out speech recognition for the first time and don't want to spend a lot
@@ -9,6 +9,6 @@ Speech recognition works better the better the microphone you have. Some recomme
   * Stenomask - useful for open plan offices as it covers your mouth
 
 ### Eye Trackers
-Check out the `#eye-tracking` channel in Slack
+Check out the `#eye-tracking` channel in Slack  
   * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added. 
   * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) support coming soon.
