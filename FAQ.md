@@ -41,22 +41,7 @@ If you'd like a notification to show you what Talon is hearing you say, add this
     speech_system.register('phrase', on_phrase)
 
 ## What hardware should I have?
-
-### Microphone
-
-Speech recognition works better the better the microphone you have.
-Some recommendations are:
-
-* Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. 
-Can be attached to an arm for increased recognition. Useful if you're 
-trying out speech recognition for the first time and don't want to spend a lot
-* DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - 
-expensive but highly recommend for full time use
-* Stenomask - useful for open plan offices as it covers your mouth
-
-### Eye Tracking
-
-Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.  Ask in `#eye-tracking` channel if you want to know if your device can be supported.
+Check out the [hardware](https://talon.wiki/hardware/) page for microphone and eye tracker recommendations.  
 
 ## I have X accent, will it work for me? 
 
