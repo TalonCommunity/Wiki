@@ -28,6 +28,9 @@ This is the default experience with Talon, but please checkout the other [speech
 ## What can I say?  
 Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon
 
+## Coding with Talon
+Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/)
+
 ## What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
 
