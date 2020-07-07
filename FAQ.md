@@ -4,12 +4,12 @@ order: -100
 
 # FAQ
 
-## What is Talon?
+### What is Talon?
 
 Voice recognition and eye tracking software written by @lunixbochs that
 runs cross platform (in beta) and is easily configurable
 
-## Beta instructions
+### Beta instructions
 1. Sign up for the beta ($15 USD) at https://www.patreon.com/join/lunixbochs (create a patreon account if you don't already have one).  
 
 2. Join the Talon Voice Slack https://talonvoice.slack.com and send a direct message to @aegis to let him know you've signed up for the beta program. He'll add you to the beta channel.
@@ -25,13 +25,13 @@ runs cross platform (in beta) and is easily configurable
 
   * Wav2letter is the default speech recognition in Talon, but please checkout the other [speech engines](https://github.com/TalonCommunity/Wiki/blob/gh-pages/SpeechRecognitionEngines.md) available, especially the latest [sconv4](https://github.com/TalonCommunity/Wiki/blob/gh-pages/model_4_instructions.md).
 
-## What can I say?  
+### What can I say?  
 Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon
 
-## Coding with Talon
+### Coding with Talon
 Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/)
 
-## What does Talon hear?
+### What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
 
     #This file will add a notification to tell you what Talon heard you say
@@ -40,20 +40,20 @@ If you'd like a notification to show you what Talon is hearing you say, add this
         app.notify('' ''.join(j['phrase']))
     speech_system.register('phrase', on_phrase)
 
-## What hardware should I have?
+### What hardware should I have?
 Check out the [hardware](https://talon.wiki/hardware/) page for microphone and eye tracker recommendations.  
 
-## I have X accent, will it work for me? 
+### I have X accent, will it work for me? 
 
 Probably! Only one way to know, the dataset is trained mostly
 on American accents but others work.
 
-## Are languages other than English supported?
+### Are languages other than English supported?
 
 They're being worked on, join talonvoice.slack.com 
 and find a channel for your language to see how it's going.
 
-## How can I make talon recognise me better?
+### How can I make talon recognise me better?
 
 https://speech.talonvoice.com/ will help train the voice data set  
 
@@ -61,7 +61,7 @@ https://noise.talonvoice.com/ will help train the dataset for noises such as pop
 
 Use USB3 if you have a USB mic.
 
-## How can I contribute?
+### How can I contribute?
 
 While Talon is closed source, there's plenty you can do to help:
 
@@ -75,5 +75,5 @@ While Talon is closed source, there's plenty you can do to help:
 * Report issues in the beta https://github.com/talonvoice/beta
 * Add more to these docs :)
 
-## Troubleshooting
+### Troubleshooting
 Checkout the [troubleshooting](https://talon.wiki/troubleshooting/) for solutions to common problems.
