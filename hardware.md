@@ -2,7 +2,7 @@
 
 ### Microphones
 Check out the `#hardware` channel in Slack  
-Speech recognition will be drastically improved with a better microphone. Some recommendations are:
+Speech recognition will be vastly improved with a better microphone. Some recommendations are:
 
   * Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. Can be attached to an arm for increased recognition. Useful if you're trying out speech recognition for the first time and don't want to spend a lot
   * DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - expensive but highly recommend for full time use
