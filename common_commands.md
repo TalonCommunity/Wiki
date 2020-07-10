@@ -45,7 +45,7 @@ Say "dictation mode"
 Say "command mode"
 
 ### Working with the mouse and scrolling 
-[enable pop to click](https://github.com/TalonCommunity/Wiki/blob/gh-pages/poptoclick.md) without requiring Tobii control mouse
+[enable pop to click](https://talon.wiki/poptoclick/) without requiring Tobii control mouse
 
 dubclick (to double left click)  
 righty (to right click)  
