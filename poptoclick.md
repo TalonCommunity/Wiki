@@ -13,3 +13,5 @@ def on_pop(active):
             ctrl.mouse_click(button=0, hold=16000)
 ```
 Previously, pop to click would continue to work when Talon was asleep, but a [recent PR](https://github.com/knausj85/knausj_talon/pull/164) changed the behavior to turn off pop to click when Talon is asleep.
+
+### If you use knausj, please be sure to not also use noise.py from another place like the talon examples repo!
