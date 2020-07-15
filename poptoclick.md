@@ -1,7 +1,7 @@
 # Pop to click
 
 By default, the knausj repo allows using the 'pop' sound to enact a mouse click only while Tobii eyetracking's control mouse is active.
-To enable pop to click with or without Tobii, modify code/mouse.py and modify lines 190-194 to the following:
+To enable pop to click with or without Tobii, edit code/mouse.py and modify lines 190-194 to the following:
 
 ```python
 def on_pop(active):
