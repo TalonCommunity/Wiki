@@ -127,6 +127,9 @@ plugins:
   - jemoji
   - jekyll-gitlab-metadata
 
+include:
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
 
 #
 # INCLUDING HOOKS
