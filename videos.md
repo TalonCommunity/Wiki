@@ -19,5 +19,4 @@
 
 [talon on rpi (cloud w2l)](https://youtu.be/OVTfCK9JOAE)
 
-## Microphones
-[DPA Microphone comparison - d:fine™ Headset mic - voice isolation](https://youtu.be/35GvWlRirxI)
+
