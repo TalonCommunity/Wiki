@@ -1,6 +1,5 @@
-# Videos
+# Video Demos
 
-## Demos
 [Ryan's Odin Speech Rec First Take](https://youtu.be/Kjab4fxkkXA)
 
 [Ryan's Street Fighter Demo](https://youtu.be/pf-jkbIPovs)
