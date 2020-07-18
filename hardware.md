@@ -7,7 +7,8 @@ Speech recognition will be vastly improved with a better microphone. In all case
 Some recommendations:
 
   * Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. Can be attached to an arm for increased recognition. Useful if you're trying out speech recognition for the first time and don't want to spend a lot
-  * DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - expensive but highly recommend for full time use
+  * DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - expensive but highly recommend for full time use  
+[DPA Microphone comparison - d:fine™ Headset mic - voice isolation](https://youtu.be/35GvWlRirxI)
   * Stenomask - useful for open plan offices as it covers your mouth
 
 ### Eye Trackers
