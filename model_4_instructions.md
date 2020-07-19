@@ -1,4 +1,4 @@
-## New sconv4 model
+## New sconv-b4 model
 
 If you would like to test out the new voice model and are in the beta program, here are the instructions.
 This works for macOS and Linux only, and this does NOT work with web2letter:  
