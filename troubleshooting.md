@@ -20,9 +20,9 @@ If it's the wrong one, use the menu in the app tray to change it.
   * Check your speech engine has initialised by looking at the log e.g.
 `2020-03-04 15:28:05  INFO (SpeechSystem) Activating speech engine: W2lEngine(en_US)`
 
-If you're on Linux or Mac (without dragon), make sure you have set up [w2l](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T). 
+If you're on Linux or Mac (without dragon), make sure you have set up [w2l](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T).
 
-Check you have some valid commands in ~/.talon/user. If it's empty clone https://github.com/knausj85/knausj_talon and try saying the alphabet
+Check you have some valid commands in `~/.talon/user`. If it's empty clone https://github.com/knausj85/knausj_talon and try saying the alphabet
 
 "air bat cap drum".
 

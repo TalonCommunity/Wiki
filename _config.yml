@@ -68,6 +68,7 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  hard_wrap: true
 
 prose:
   media: "media"
