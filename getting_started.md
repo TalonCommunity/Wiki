@@ -87,7 +87,7 @@ Check out the `#eye-tracking` channel in Slack
 
 ## Basic Usage
 
-### What does Talon hear?
+#### What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
 
     #This file will add a notification to tell you what Talon heard you say
