@@ -24,7 +24,7 @@ runs cross platform (in beta) and is easily configurable
 ~/.talon/w2l/en_US
 ~/.talon/user/w2l.py
 
-  * Wav2letter is the default speech recognition in Talon, but please checkout the other [speech engines](https://talon.wiki/SpeechRecognitionEngines/) available, especially the latest [sconv4](https://talon.wiki/model_4_instructions/).
+  * Wav2letter is the default speech recognition in Talon, but please checkout the other [speech engines](https://talon.wiki/SpeechRecognitionEngines/) available, especially the latest [sconv-b4](https://talon.wiki/model_4_instructions/).
 
 ### What can I say?  
 Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon.
