@@ -7,7 +7,7 @@ order: 1
 
 ## Beta vs. Public
 
-There are currently two different versions of Talon, the public release and the beta. The public release is free and has been used by many Talon users, but it is not likely to undergo significant development as users are transitioning to the beta version of Talon (the "new API"). The beta version has many new features and a different syntax. It supports more operating systems and has integration with the new wav2letter voice engine that will eventually replace Dragon, since [Dragon was discontinued for Mac](https://www.nuance.com/dragon/support/professional-individual-for-mac-eol.html#). The beta requires donation to the beta tier of the Talon Patreon. The content in this wiki is mostly for the beta version.
+There are currently two different versions of Talon, the public release and the beta. The public release is free and has been used by many Talon users, but it is not likely to undergo significant development as users are transitioning to the beta version of Talon (the "new API"). The beta version has many new features and a different syntax. It supports more operating systems and has integration with the new wav2letter voice engine that will eventually replace Dragon, since [Dragon was discontinued for Mac](https://www.nuance.com/dragon/support/professional-individual-for-mac-eol.html#). The beta requires donation to the beta tier of the [Talon Patreon](https://www.patreon.com/lunixbochs). The content in this wiki is mostly for the beta version.
 
 **The public release of Talon is only available for Mac.**
 **The beta release of Talon is available for Mac, Windows, and Linux.**
