@@ -5,11 +5,6 @@ order: 5
 
 # FAQ
 
-### What is Talon?
-
-Voice recognition and eye tracking software written by @lunixbochs that
-runs cross platform (in beta) and is easily configurable
-
 ### Beta instructions
 1. Sign up for the beta ($15 USD) at https://www.patreon.com/join/lunixbochs (create a patreon account if you don't already have one).  
 
