@@ -163,7 +163,7 @@ Say "command mode"
 
 #### Working with the mouse and scrolling
 
-[Enable-pop-to-click](/scripting_and_configuration#pop-to-click) without requiring Tobii control mouse
+[How to click with the pop sound](/scripting_and_configuration#pop-to-click)
 
 ```
 dubclick (to double left click)
