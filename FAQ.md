@@ -42,7 +42,7 @@ If you'd like a notification to show you what Talon is hearing you say, add this
     speech_system.register('phrase', on_phrase)
 
 ### What hardware should I have?
-Check out the [hardware](https://talon.wiki/hardware/) page for microphone and eye tracker recommendations.  
+Check out the [hardware](https://talon.wiki/getting_started/#hardware) page for microphone and eye tracker recommendations.  
 
 ### I have X accent, will it work for me? 
 
