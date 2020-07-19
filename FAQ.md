@@ -5,17 +5,6 @@ order: 5
 
 # FAQ
 
-### Beta instructions
-1. Sign up for the beta at https://www.patreon.com/join/lunixbochs.  
-
-2. Join the [Talon Voice Slack](https://talonvoice.slack.com) message @aegis for access to the beta channel.
-
-3. In the #beta channel pinned messages, find the download for your OS (mac, linux, windows). After installation you'll have a new directory called .talon (hidden) in your home directory.  
-
-4. Download some [command sets](https://talon.wiki/getting_started/#configuration-setup).
-
-5. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine)
-
 ### What can I say?  
 Checkout the [common commands](https://talon.wiki/getting_started/#list-of-common-commands-to-get-started-with-talon) to get started using Talon.
 
