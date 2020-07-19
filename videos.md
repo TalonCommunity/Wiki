@@ -1,3 +1,8 @@
+---
+sidebar: true
+order: 6
+---
+
 # Video Demos
 
 [Ryan's Odin Speech Rec First Take](https://youtu.be/Kjab4fxkkXA)

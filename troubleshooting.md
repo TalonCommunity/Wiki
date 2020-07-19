@@ -1,4 +1,8 @@
-# Troubleshooting Talon Issues
+---
+sidebar: true
+order: 4
+---
+# Troubleshooting
 
 ## Talon is slow, why?
 

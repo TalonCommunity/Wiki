@@ -1,5 +1,6 @@
 ---
-order: -100
+sidebar: true
+order: 5
 ---
 
 # FAQ

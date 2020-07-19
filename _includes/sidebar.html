@@ -4,10 +4,12 @@ Menu (<a href="{{ site.github.repository_url }}/edit/{{site.git_branch | escape}
   {%- comment -%} The position of each page in the sidebar is determined
   by the "order" in their frontmatter: higher values of "order" come
   later. Pages without orders go last. {%- endcomment -%}
-  {%- assign pages_by_order = site.pages | sort: "order", "last" -%}
+  {%- assign pages_by_order = site.pages | where:"sidebar","true" | sort: "order", "last" -%}
   {%- for page in pages_by_order -%}
     {%- if page.title -%}
     <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
     {%- endif -%}
   {%- endfor -%}
+  <li><a href="/CONTRIBUTING">Contributing to this Wiki</a></li>
+  <li><a href="/CODE_OF_CONDUCT">Code of Conduct</a></li>
 </ul>
