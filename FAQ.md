@@ -27,7 +27,7 @@ runs cross platform (in beta) and is easily configurable
   * Wav2letter is the default speech recognition in Talon, but please checkout the other [speech engines](https://talon.wiki/SpeechRecognitionEngines/) available, especially the latest [sconv-b4](https://talon.wiki/model_4_instructions/).
 
 ### What can I say?  
-Checkout the [common commands](https://talon.wiki/common_commands/) to get started using Talon.
+Checkout the [common commands](https://talon.wiki/getting_started/#list-of-common-commands-to-get-started-with-talon)to get started using Talon.
 
 ### Coding with Talon
 Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/).
