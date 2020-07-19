@@ -89,14 +89,13 @@ Check out the `#eye-tracking` channel in Slack
 
 #### What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) or create your own notify.py file with the contents:  
-
-    ```
+```    
     #This file will add a notification to tell you what Talon heard you say
     from talon import app, speech_system
     def on_phrase(j):
         app.notify('' ''.join(j['phrase']))
     speech_system.register('phrase', on_phrase)
-    ```
+``` 
 
 ### List of common commands to get started with Talon
 
