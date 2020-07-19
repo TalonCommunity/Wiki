@@ -87,10 +87,6 @@ Check out the `#eye-tracking` channel in Slack
 
 ## Basic Usage
 
-### List of common commands to get started with Talon
-
-These examples are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration-setup)). These commands may vary depending on your individual setup.
-
 ### What does Talon hear?
 If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) (or create your own notify.py file with the contents:  
 
@@ -99,6 +95,10 @@ If you'd like a notification to show you what Talon is hearing you say, add this
     def on_phrase(j):
         app.notify('' ''.join(j['phrase']))
     speech_system.register('phrase', on_phrase)
+
+### List of common commands to get started with Talon
+
+The examples below are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration-setup)). These commands may vary depending on your individual setup.
 
 #### Open and switch between windows in apps such as Chrome (these are controlled in misc/window_management.talon)
 
