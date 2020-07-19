@@ -7,7 +7,7 @@
 Talon is free to use and ongoing development is made possible by [donations on Patreon](https://www.patreon.com/lunixbochs).
 
 ## Goal of this Wiki
-The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created. This wiki is maintained by the members of the Talon community (i.e., anyone who uses Talon). Contributions are welcomed and appreciated. See the [Contributing](/Contributing) documentation. Please keep in mind our [Code of Conduct](/CODE_OF_CONDUCT).
+The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created. This wiki is maintained by the members of the Talon community (i.e., anyone who uses Talon). Contributions are welcomed and appreciated. See the [Contributing](/CONTRIBUTING) documentation. Please keep in mind our [Code of Conduct](/CODE_OF_CONDUCT).
 
 ## Wiki Navigation
 
@@ -17,7 +17,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | (unofficial) documentation of Talon's features | [Unofficial Talon Documentation](/unofficial_talon_docs) |
 | help with customizing your configuration or writing Talon plugins | [Scripting and Configuration](/scripting_and_configuration) |
 | troubleshooting help | [Troubleshooting](/troubleshooting) |
-| help with deciding on a microphone or eye tracker | [Hardware](/hardware) |
+| help with deciding on a microphone or eye tracker | [Hardware](/getting_started#hardware) |
 | videos of Talon in use | [Video Demos](/videos) |
 | answers to frequently asked questions | [FAQ](/FAQ) |
 
