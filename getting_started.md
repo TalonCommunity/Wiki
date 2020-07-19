@@ -25,6 +25,20 @@ There are currently two different versions of Talon, the public release and the 
 4. Download a [configuration set](https://talon.wiki/getting_started/#configuration-setup).
 5. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine)
 
+## Configuration Setup
+
+Talon does not come with voice commands or eye tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory. You can start from scratch and write all your own configuration, but we strongly recommend that you start with an existing configuration set. Here are some recommended configuration sets to start from (pick one):
+
+| Talon Release | GitHub Repository | Description |
+|-|-|
+| Beta | [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) | The go-to repository for beta users |
+| Beta | [Fidgetingbit's Talon Config](https://github.com/fidgetingbits/knausj_talon) | Fork of Knausj's config with VimSpeak support |
+| Beta | [mrob95's Talon Config](https://github.com/mrob95/MR-talon) | Mark Robert's Talon config with support for Windows dev tools (Windows Terminal, Mintty, Windows Workspaces) |
+| Public | [lunixbochs's talon_starter_pack](https://github.com/lunixbochs/talon_starter_pack) | The go-to lite version of the talon_community repository containing only the essentials |
+| Public | [dwiel's talon_community](https://github.com/dwiel/talon_community) | A larger configuration set with more niche modules |
+
+**Only clone one repository - they should not be mixed.**
+
 ### Speech Recognition Engine
 
 Behind Talon, there is a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. Here is a list of speech recognition engines available for use with Talon:
@@ -40,8 +54,7 @@ Behind Talon, there is a speech recognition engine that translates voice audio t
 
 #### New sconv-b4 model
 
-If you would like to test out the new voice model and are in the beta program, here are the instructions.
-This works for macOS and Linux only, and this does NOT work with web2letter:
+If you're on wav2letter now and would like to test out the new voice model, here are the instructions for macOS and Linux only. This does NOT work with web2letter:
 
 1. Update to latest Talon (at least v1328)
 2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1593080845371600?thread_ts=1593080845.371600)
@@ -56,16 +69,14 @@ engine = W2lEngine(language='en_US-sconv-beta4', debug=True)
 
 ## Hardware
 
-### Microphone
+### Microphone Recommendations
 
 Check out the `#hardware` channel in Slack
 Speech recognition will be vastly improved with a better microphone. In all cases, USB is strongly recommended.
 
-Some recommendations:
-
   * Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. Can be attached to an arm for increased recognition. Useful if you're trying out speech recognition for the first time and don't want to spend a lot
   * DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - expensive but highly recommend for full time use
-[DPA Microphone comparison - d:fine™ Headset mic - voice isolation](https://youtu.be/35GvWlRirxI)
+[DPA d:fine™ Headset mic voice isolation comparison video](https://youtu.be/35GvWlRirxI)
   * Stenomask - useful for open plan offices as it covers your mouth
 
 ### Eye Tracker
@@ -73,20 +84,6 @@ Some recommendations:
 Check out the `#eye-tracking` channel in Slack
   * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
   * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) support coming soon.
-
-## Configuration Setup
-
-Talon does not come with voice commands or eye tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory. You can start from scratch and write all your own configuration, but we strongly recommend that you start with an existing configuration set. Here are some recommended configuration sets to start from (pick one):
-
-| Talon Release | GitHub Repository | Description |
-|-|-|
-| Beta | [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) | The go-to repository for beta users |
-| Beta | [Fidgetingbit's Talon Config](https://github.com/fidgetingbits/knausj_talon) | Fork of Knausj's config with VimSpeak support |
-| Beta | [mrob95's Talon Config](https://github.com/mrob95/MR-talon) | Mark Robert's Talon config with support for Windows dev tools (Windows Terminal, Mintty, Windows Workspaces) |
-| Public | [lunixbochs's talon_starter_pack](https://github.com/lunixbochs/talon_starter_pack) | The go-to lite version of the talon_community repository containing only the essentials |
-| Public | [dwiel's talon_community](https://github.com/dwiel/talon_community) | A larger configuration set with more niche modules |
-
-**Only clone one repository - they should not be mixed.**
 
 ## Basic Usage
 
