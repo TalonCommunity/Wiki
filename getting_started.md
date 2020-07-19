@@ -18,6 +18,13 @@ There are currently two different versions of Talon, the public release and the 
 - [Installing Dragon](/InstallingDragonWindows)
 - [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon)
 
+### Beta instructions
+1. Sign up for the beta at https://www.patreon.com/join/lunixbochs.  
+2. Join the [Talon Voice Slack](https://talonvoice.slack.com) message @aegis for access to the beta channel.
+3. In the #beta channel pinned messages, find the download for your OS (mac, linux, windows). After installation you'll have a new directory called .talon (hidden) in your home directory.  
+4. Download a [configuration set](https://talon.wiki/getting_started/#configuration-setup).
+5. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine)
+
 ### Speech Recognition Engine
 
 Behind Talon, there is a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. Here is a list of speech recognition engines available for use with Talon:
