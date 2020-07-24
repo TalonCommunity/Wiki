@@ -47,26 +47,26 @@ Behind Talon, there is a speech recognition engine that translates voice audio t
 |-----------------------------|--------------|---------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Builtin macOS (10.11-10.14) | Normal       | macOS               | (Note that 10.15's speech recognition engine does NOT work.) | n/a                                                                                           |
 | Dragon Dictate 6            | Normal/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon)    |
-|(new!) sconv-b5                      | Beta         | Windows/macOS/Linux | Another beta model. Better at recognizing faster speech and higher accuracy than sconv-b4.                | [link](/#new-sconv-b5-model) |
-| sconv-b4                      | Beta         | Windows/macOS/Linux | Has notably better dictation than the default Talon model, but some issues. For example, it occasionally recongizes numbers spuriously.                | [link](/#new-sconv-b4-model) |
+|(new!) sconv-b5                      | Beta         | Windows/macOS/Linux | Another beta model. Better dictation than the default Talon model, but potentially has some issues. Better at recognizing faster speech and higher accuracy than sconv-b4.                | [link](/#new-sconv-b5-model) |
 | wav2letter                  | Beta         | macOS/Linux         | Included with beta Talon by default.                                 | n/a                                                                                           |
 | web2letter                  | Beta         | Windows/macOS/Linux | Ping `@aegis` in Slack for instructions                                     | n/a                             |
 | webspeech                  | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                 | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1591830066339600) |
 
-#### New sconv-b4 model
+#### New sconv-b5 model
 
 If you're on wav2letter now and would like to test out the new voice model, here are the instructions for macOS and Linux only. This does NOT work with web2letter:
 
-1. Update to latest Talon (at least v1328)
-2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1593080845371600?thread_ts=1593080845.371600)
-3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta4/`
-4. Copy `lm-ngram.bin` from your existing `w2l/en_US` directory into `en_US-sconv-beta4`.
-5. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
+1. Update to latest Talon (at least v1419)
+2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400)
+3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta5/`
+4. Copy `lm-ngram.bin` from your existing `w2l/en_US` directory into `en_US-sconv-beta5`.
+5. Copy `lexicon.txt` from your existing `w2l/en_US` directory into `en_US-sconv-beta5`.
+6. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
 ```
 #engine = W2lEngine(language='en_US', debug=True)
-engine = W2lEngine(language='en_US-sconv-beta4', debug=True)
+engine = W2lEngine(language='en_US-sconv-beta5', debug=True)
 ```
-6. Restart Talon.
+7. Restart Talon.
 
 ## Hardware
 
