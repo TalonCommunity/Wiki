@@ -158,9 +158,13 @@ paste that
 ### Switch between dictation and command mode
 
 ```
-Say "dictation mode"
-Say "command mode"
+dictation mode
+command mode
 ```
+
+Dictation mode makes it easier to transcribe plain text by allowing you to use keywords like "comma" and "question", similar to traditional speech recognition systems.
+
+Note that there are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
 #### Working with the mouse and scrolling
 
