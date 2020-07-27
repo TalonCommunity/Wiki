@@ -30,8 +30,6 @@ https://speech.talonvoice.com/ will help train the voice data set.
 
 https://noise.talonvoice.com/ will help train the dataset for noises such as pop/hiss as commands.
 
-Use USB3 if you have a USB mic.
-
 ### How can I contribute?
 
 While Talon is closed source, there's plenty you can do to help:
