@@ -13,12 +13,6 @@ Checkout the [introductory guide to coding with Talon](https://talon.wiki/workin
 
 ### What hardware should I have?
 Check out the [hardware](https://talon.wiki/getting_started/#hardware) page for microphone and eye tracker recommendations.  
-
-### I have X accent, will it work for me? 
-
-Probably! Only one way to know, the dataset is trained mostly
-on American accents but others work.
-
 ### Are languages other than English supported?
 
 They're being worked on, join talonvoice.slack.com 
