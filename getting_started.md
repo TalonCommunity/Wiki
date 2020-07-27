@@ -59,9 +59,7 @@ If you're on wav2letter now and would like to test out the new voice model, here
 1. Update to latest Talon (at least v1419)
 2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400)
 3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta5/`
-4. Copy `lm-ngram.bin` from your existing `w2l/en_US` directory into `en_US-sconv-beta5`.
-5. Copy `lexicon.txt` from your existing `w2l/en_US` directory into `en_US-sconv-beta5`.
-6. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
+4. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
 ```
 #engine = W2lEngine(language='en_US', debug=True)
 engine = W2lEngine(language='en_US-sconv-beta5', debug=True)
