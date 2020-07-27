@@ -4,12 +4,6 @@ order: 4
 ---
 # Troubleshooting
 
-## Talon is slow, why?
-
-If you get slow recognition times and lots of pipes in your output
-try lowering your input level on your mic, any small background noise
-will make Talon wait before it starts processing
-
 ## Talon does nothing when I speak
 
   * Check the microphone Talon selected, it's at the start of the log
@@ -26,7 +20,7 @@ Check you have some valid commands in `~/.talon/user`. If it's empty clone https
 
 "air bat cap drum".
 
-## Talon crashes a lot
+## Talon crashes during use
 
 Report it! Talon should recover from most errors itself
 but if it crashes report it in Slack with the output log.
