@@ -84,7 +84,7 @@ Speech recognition will be vastly improved with a better microphone. In all case
 
 Check out the `#eye-tracking` channel in Slack
   * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
-  * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) support coming soon.
+  * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) works, but expect improvements in the coming weeks and months.
 
 ## Basic Usage
 
