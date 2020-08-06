@@ -1,6 +1,7 @@
 ---
 sidebar: true
 order: 1
+published: true
 ---
 
 # Getting Started
@@ -160,7 +161,7 @@ dictation mode
 command mode
 ```
 
-Dictation mode makes it easier to transcribe plain text by allowing you to use keywords like "comma" and "question", similar to traditional speech recognition systems.
+In command mode, your speech will be interpreted as commands by default; in dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems.
 
 Note that there are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
