@@ -17,13 +17,13 @@ The primary way to extend talon is using `.talon` files placed in `~/.talon/user
 An example talon file might look like this:
 
 ```
-# This header defines the context in which this file applies.
+# context header: This part defines under which circumstances this file applies.
 os: windows
 os: linux
 app: Slack
 app: slack.exe
 app: Teams
-# Anything above this dash is part of the header.
+# Anything above this (single!) dash is part of the header.
 -
 # Anything below the dash is part of the body.
 # If there is no dash, then the body starts immediately.
@@ -52,7 +52,41 @@ settings():
 
 ### Context header
 
-TODO: explain the syntax and meaning of the context header.
+The context header specifies when the body of the file will be activated.
+That is, only when the requirements of the header are met, the settings, tags, actions and commands in the body will be available.
+This enables you to specify commands that are only available for specific windows, applications, etc.
+
+Following requirements can be set:
+
+* `os`: require specific operating systems; currently either `linux`, `mac`, `windows`
+* `tag`: require a specific tag
+* `mode`: only active for specific talon modes (like `command`, `dictation`, et al.)
+* `app`: match applications by name
+* `title`: match a window title
+
+Additionally, you can create user `scope`s.
+TODO: add a reference for user scopes
+
+`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`),
+whereas `app` and `title` can also be match using regular expressions (like `title: /- Visual Studio Code/`).
+The regular expressions require only that it matches some part of the text (it is unanchored), it does not require a total match.
+That is, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
+
+Each kind of requirement can be listed several times.
+Entries of the same kind of requirement are `OR`'d together, and of different kinds are `AND`'d.
+Example:
+
+```
+os: linux
+os: windows
+app: Code
+app: notepad++
+```
+
+This reads: "If OS is either linux or windows, for any app with the name of either Code or notepad++".
+Code on windows would match, notepad++ on windows would match, etc., but Code on mac or Sublime on windows would _not_ match.
+
+TODO: there is some support for more estensive boolean expression using `and` and `not`.  Test and describe that.
 
 ### Voice commands
 
@@ -169,7 +203,12 @@ from talon import Context
 ctx = Context()
 ```
 
-When initially constructed, a context has no conditions attached, and so it is always active. TODO: how do you add conditions in python?
+When initially constructed, a context has no conditions attached, and so it is always active.
+You can make this context conditional by setting `matches`:
+
+```
+ctx.matches = "mode: command"
+```
 
 ### Actions
 
