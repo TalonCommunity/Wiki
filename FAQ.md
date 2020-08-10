@@ -12,7 +12,7 @@ Checkout the [common commands](https://talon.wiki/getting_started/#list-of-commo
 Checkout the [introductory guide to coding with Talon](https://talon.wiki/working_with_code/).
 
 ### What hardware should I have?
-Check out the [hardware](https://talon.wiki/getting_started/#hardware) page for microphone and eye tracker recommendations.  
+Check out the [hardware](/hardware) page for microphone and eye tracker recommendations.  
 ### Are languages other than English supported?
 
 They're being worked on, join talonvoice.slack.com 
