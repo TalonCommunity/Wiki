@@ -9,7 +9,7 @@ published: true
 Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the beta version of Talon, you need to follow a few steps:
 
 1. Sign up for the beta at https://www.patreon.com/join/lunixbochs.
-2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message @aegis for access to the #beta channel.
+2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
 3. In the #beta channel's pinned messages, find the download for your OS (mac, linux, windows), and download and install it on your computer.
 4. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
 5. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
@@ -29,7 +29,7 @@ The content in this wiki is for the beta version.
 
 ## Getting Access
 
-After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to @aegis requesting access to the #beta channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new version of Talon are announced, and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
+After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the #beta channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new version of Talon are announced, and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
 
 
 ## Installation

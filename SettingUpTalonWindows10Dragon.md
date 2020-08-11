@@ -22,7 +22,7 @@ This tutorial him assumes you already have Dragon Dictate installed, and will te
 
 Many people who suffer from artheritis, RSI, amputation, chronic pain, or any of the many, many medical or mental conditions that make using a computer difficult or impossible also suffer from varying levels of extreme poverty, so if the $15 per month fee is too steep it can be waived.  This is also the only option available if you are unbanked and don't have a credit or debit card that can be used on the internet. 
 
-You do have to work up the courage to ask, and the place to make a request is in the chat link, and the person to ask is @aegis:  [![chat link](https://user-images.githubusercontent.com/1163925/80401039-4e0f3680-8881-11ea-8adf-857fedf6da2e.png)](https://app.slack.com/client/T7FPSMV8F/C7ENXA7C4/thread/G9YTMSZ2T-1586396820.149800)
+You do have to work up the courage to ask, and the place to make a request is in the chat link, and the person to ask is `@aegis`:  [![chat link](https://user-images.githubusercontent.com/1163925/80401039-4e0f3680-8881-11ea-8adf-857fedf6da2e.png)](https://app.slack.com/client/T7FPSMV8F/C7ENXA7C4/thread/G9YTMSZ2T-1586396820.149800)
 
 ![help section of talon slack channel](https://user-images.githubusercontent.com/1163925/80401375-dc83b800-8881-11ea-98cb-af13fbe362a2.png)
 
@@ -37,9 +37,9 @@ Go through the Patreon checkout process. When you have managed to pay patreon so
 
 ![Beta Tier Privileges notice](https://user-images.githubusercontent.com/1163925/80403676-97618500-8885-11ea-9794-f5562027eefe.png)
 
-Thanks so much! Make sure to join the Talon Slack (if you're interested in using or talking about voice/eye/other computer input systems) and talk about the projects and features you find exciting. If your Patreon tier has Talon-related rewards, such as beta or #vip access, message me at @aegis on the Talon Slack to receive them.
+Thanks so much! Make sure to join the Talon Slack (if you're interested in using or talking about voice/eye/other computer input systems) and talk about the projects and features you find exciting. If your Patreon tier has Talon-related rewards, such as `#beta` or `#vip` access, message me at `@aegis` for the Talon Slack to receive them.
 
-3.  At the time when this tutorial was written, when you go into the Talon Slack channel and message @aegis, @aegis will send you a private message with the download links for Talon.  @aegis also gives access to the @beta channel, which is an excellent place to talk about everything talon beta-related.  (If you need the download links again for some reason, they are in the pinned messages in the beta channel)  
+3.  At the time when this tutorial was written, when you go into the Talon Slack channel and message `@aegis`; he will send you a private message with the download links for Talon.  `@aegis` also gives access to the `#beta` channel, which is an excellent place to talk about everything talon beta-related.  (If you need the download links again for some reason, they are in the pinned messages in the beta channel)  
 
 ![pinned download links for latest operating systems](https://user-images.githubusercontent.com/1163925/80405507-5323b400-8888-11ea-8cd9-367c5fd17e3f.png)
 
