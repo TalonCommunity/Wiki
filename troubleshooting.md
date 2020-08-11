@@ -2,7 +2,9 @@
 sidebar: true
 order: 5
 ---
+
 # Troubleshooting
+
 
 ## Talon does nothing when I speak
 
@@ -20,9 +22,18 @@ Check you have some valid commands in `~/.talon/user`. If it's empty clone https
 
 "air bat cap drum".
 
+
 ## Talon crashes during use
 
 Report it! Talon should recover from most errors itself
 but if it crashes report it in Slack with the output log.
 
 Originally published by @hbk619 https://github.com/hbk619/talon-docs/blob/master/faq.md.
+
+
+## Talon seems to do the wrong thing all the time
+
+Make sure that you are in the correct mode. `knausj_talon` has two modes: command mode and dictation mode.
+
+    a. Use dictation mode for free-form speech dictation, like writing an email. (Switch by saying "dictation mode".)
+    b. Use command mode for everything else, including dictating individual letters or writing code. (Switch by saying "command mode".)

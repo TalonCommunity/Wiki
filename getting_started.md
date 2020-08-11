@@ -219,45 +219,9 @@ drag
 
 
 
-# Tips
+## Next Steps
 
-Once the basics somewhat work for you, you'll likely want to improve your experience using Talon.
+Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 
-
-## Non-US Accents
-
-Dictating and controlling your computer with voice can be frustrating if your accent isn't a US one, and especially so if it is not even Anglophone. This page aims to collate tips and resources for such speakers.
-
-### If you're looking for resources to sound more like someone from the US ...
-
-* [https://rachelsenglish.com/](https://rachelsenglish.com/) is an excellent resource. Features detailed videos and discussion of the mechanics behind the various sounds. (At the risk of saying the obvious: you shouldn't try to change your accent if you don't want to. This is meant only as a tip for those who want to do so.)
-
-### Alternatives to the default alphabet
-
-* Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change `air` from the alphabet; e.g., someone from the UK on the Slack uses `arch` instead.
-* I (ym) have personally found that `met` works well as a replacement for `made`.
-* And if you struggle with `whale`, there's also `whip` --- though it may not be the best idea to make that change if you plan to use Talon in public.
-
-
-## Improve Speech Recognition Accuracy
-
-1. Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](/hardware) for recommendations and correct setup.
-
-2. Make sure that you are in the correct mode. `knausj_talon` has two modes: command mode and dictation mode.
-
-    a. Use dictation mode for free-form speech dictation, like writing an email. (Switch by saying "dictation mode".)
-    b. Use command mode for everything else, including dictating individual letters or writing code. (Switch by saying "command mode".)
-
-3. Some people have problems with similar words such as "four" and "fourth" being misrecognized.
-
-    a. One easy solution is too simply switch one of the words to be less phonetically similar: grep the `.talon` files for the similar word and change to a less common one.
-    b. Enunciation guides are also available on the internet, which may help if you are not correctly enunciating all syllables.
-
-4. Ensure that your voice is not tired, which will lead to poorer pronunciation.
-
-    a. Make sure to drink plenty of liquids throughout the day: warm water and tea are especially helpful.
-    b. Try to speak in a natural tone as if you are talking with someone else. At first this will feel a little weird, but speaking in an unatural voice will tire you out quicker.
-    c. Try to keep your speaking volume consistent and low, quality microphones can easily pick up any volume you talk at. Speaking with low volume should help keep you from getting tired out.
-
-
-
+* [Improve Recognition Accuracy](/improving_recognitino_accuracy): Better accuracy never hurts. Many people have to tweak something.
+* [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure talon to your liking.
