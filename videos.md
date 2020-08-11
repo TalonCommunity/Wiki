@@ -1,6 +1,7 @@
 ---
 sidebar: true
 order: 6
+published: true
 ---
 
 # Video Demos
@@ -14,3 +15,4 @@ order: 6
 [talon + iSH](https://youtu.be/cN82vn3-ico)
 [talon rpi ether local w2l](https://youtu.be/PK6G1foW2Ao)
 [talon on rpi (cloud w2l)](https://youtu.be/OVTfCK9JOAE)
+[Talon Eye Tracking + Optikey Mouse](https://www.youtube.com/watch?v=PQkJE-rtn-g&feature=youtu.be)

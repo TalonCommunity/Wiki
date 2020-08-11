@@ -79,6 +79,20 @@ Again, in case you want to know your options:
 
 Builtin macOS and Dragon support work automatically when available and active, for wav2letter please follow the instructions at the links.
 
+### New wav2letter model sconv-b5
+
+If you're on wav2letter now and would like to test out the new voice model, here are the instructions for macOS and Linux only. This does NOT work with web2letter:
+
+1. Update to latest Talon (at least v1419)
+2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400)
+3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta5/`
+4. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
+```
+#engine = W2lEngine(language='en_US', debug=True)
+engine = W2lEngine(language='en_US-sconv-beta5', debug=True)
+```
+7. Restart Talon.
+
 
 ## Testing out the basics
 
@@ -246,16 +260,4 @@ Dictating and controlling your computer with voice can be frustrating if your ac
     c. Try to keep your speaking volume consistent and low, quality microphones can easily pick up any volume you talk at. Speaking with low volume should help keep you from getting tired out.
 
 
-## New wav2letter model sconv-b5
 
-If you're on wav2letter now and would like to test out the new voice model, here are the instructions for macOS and Linux only. This does NOT work with web2letter:
-
-1. Update to latest Talon (at least v1419)
-2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400)
-3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta5/`
-4. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
-```
-#engine = W2lEngine(language='en_US', debug=True)
-engine = W2lEngine(language='en_US-sconv-beta5', debug=True)
-```
-7. Restart Talon.
