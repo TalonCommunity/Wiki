@@ -29,7 +29,7 @@ The content in this wiki is for the beta version.
 
 ## Getting Access
 
-After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the #beta channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new version of Talon are announced, and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
+After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the `#beta` channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new versions of Talon are announced and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
 
 
 ## Installation
@@ -47,56 +47,29 @@ We are not done yet!
 
 ## Configuration
 
-Talon does not come with voice commands or eye tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory (that is `C:\Users\<username>\AppData\Roaming\talon\user` on Windows). To start out, we strongly recommend that you use an existing configuration set.
+Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory (that is `C:\Users\<username>\AppData\Roaming\talon\user` on Windows). To start out, we strongly recommend that you use [knausj85's knausj_talon](https://github.com/knausj85/knausj_talon). The whole wiki assumes this repository is used, if not otherwise noted.
 
-If you do not have anything specific in mind, start out using [knausj_talon](https://github.com/knausj85/knausj_talon), which has become the most shared Talon beta configuration.  Of course there are alternatives, but **only use one repository - they should not be mixed.**
-
-| Talon Release | GitHub Repository | Description |
-|-|-|
-| Beta | [knausj85's knausj_talon](https://github.com/knausj85/knausj_talon) | The go-to repository for beta users |
-| Beta | [Fidgetingbit's Talon Config](https://github.com/fidgetingbits/knausj_talon) | Fork of Knausj's config with VimSpeak support |
-| Beta | [mrob95's Talon Config](https://github.com/mrob95/MR-talon) | Mark Robert's Talon config with support for Windows dev tools (Windows Terminal, Mintty, Windows Workspaces) |
-| Public | [lunixbochs's talon_starter_pack](https://github.com/lunixbochs/talon_starter_pack) | The go-to lite version of the talon_community repository containing only the essentials |
-| Public | [dwiel's talon_community](https://github.com/dwiel/talon_community) | A larger configuration set with more niche modules |
+```
+mkdir -p ~/.talon/user
+cd ~/.talon/user
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
 
 One final step before we can test out Talon.
 
 
 ## Speech Recognition Engine
 
-Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** If you are on Windows or already use Dragon, you be likely want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is recommended.
+Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** If you are on Windows or already use Dragon, you be likely want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is strongly recommended.
 
-Again, in case you want to know your options:
+**Dragon set-up**: If you have Dragon installed, ensure that it is running, and is actively listening to your microphone.  Talon will automatically recognize Dragon and use it.
 
-| Name                        | Availability | Operating Systems   | Description                                                          | Link                                                              |
-|-----------------------------|--------------|---------------------|----------------------------------------------------------------------|-------------------------------------------------------------------|
-| Builtin macOS (10.11-10.14) | Normal       | macOS               | (Note that 10.15's speech recognition engine does NOT work.)         | n/a                                                               |
-| Dragon Dictate 6            | Normal/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
-| wav2letter                  | Beta         | macOS/Linux         | Included with Talon beta tier, separate download!                    | [wav2letter](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T)                                                               |
-| wav2letter sconv-b5         | Beta         | Windows/macOS/Linux | Newer beta model. Better dictation than the default Talon model, but potentially has some issues.  | [link](#new-sconv-b5-model) |
-| web2letter                  | Beta         | Windows/macOS/Linux | Ping `@aegis` in Slack for instructions                              | n/a                             |
-| webspeech                   | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                       | [link](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1591830066339600) |
-
-Builtin macOS and Dragon support work automatically when available and active, for wav2letter please follow the instructions at the links.
-
-### New wav2letter model sconv-b5
-
-If you're on wav2letter now and would like to test out the new voice model, here are the instructions for macOS and Linux only. This does NOT work with web2letter:
-
-1. Update to latest Talon (at least v1419)
-2. Download tarball: [link to URL in beta channel](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400)
-3. Extract tarball to `~/.talon/`. It will create `w2l/en_US-sconv-beta5/`
-4. Edit your existing `user/w2l.py` by commenting out the other model and add a new line):
-```
-#engine = W2lEngine(language='en_US', debug=True)
-engine = W2lEngine(language='en_US-sconv-beta5', debug=True)
-```
-7. Restart Talon.
+**Wav2Letter set-up**: (Linux and MacOS only) Follow the [description in Slack](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T): download and extract a file, then everything is ready to go.
 
 
 ## Testing out the basics
 
-Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the quicktray area.  (If not, recheck the installation, and if all seems in order, ask for help on #beta).
+Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the tray area.  (If not, recheck the installation, and if all seems in order, ask for help on #beta).
 Then say "help alphabet" and "close help". That should open and close a window showing you Talon's spelling alphabet.
 Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
 
@@ -112,22 +85,27 @@ TODO: per OS guide plus dragon specifics on how to check for correct microphone.
 
 ## Basic Usage
 
-### What does Talon hear?
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup. 
 
-If you'd like a notification to show you what Talon is hearing you say, add this [notify.py](https://github.com/TalonCommunity/Wiki/tree/gh-pages/extras/notify.py) in users/yourusername/.talon/user (anywhere in the .talon/user folder is fine) or create your own notify.py file with the contents:  
-```    
-    #This file will add a notification to tell you what Talon heard you say
-    from talon import app, speech_system
-    def on_phrase(j):
-        app.notify('' ''.join(j['phrase']))
-    speech_system.register('phrase', on_phrase)
-```
 
-### List of common commands to get started with Talon (if using the knausj repo)
+### Command History
 
-The examples below are just a small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away. These are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup. 
+* `show command history`: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
+* `hide command history`: close the command history window again
 
-#### Open and switch between windows in apps such as Chrome (these are controlled in misc/window_management.talon)
+
+### Show available comands
+
+`knausj_talon` has an integrated help.  It can show you a list of all defined commands, or just all commands that are available now.
+
+* `help alphabet`: show the spelling alphabet for pressing individual keys
+* `help context`: show all defined commands
+* `help active`: show all currently available commands
+* `help next`, `help previous`: go to the next or previous page of help items if there are a lot
+* `help close`: hide any open help window again
+
+
+### Open and switch between windows in apps such as Chrome
 
 ```
 new window
@@ -136,7 +114,7 @@ last window
 close window
 ```
 
-#### Working with applications
+### Working with applications
 
 ```
 focus "app name"     (say "focus chrome" for example, to switch active window to chrome)
@@ -145,18 +123,18 @@ hide running    (say "hide running" to close the list of active applications)
 (open | new)
 ```
 
-#### Working with tabs (these are controlled in misc/tabs.talon)
+### Working with tabs
 
 ```
-last tab
-next tab
-close tab
-reopen tab
+tab last
+tab next
+tab close
+tab reopen
 (page | scroll) up
 (page | scroll) [down]
 ```
 
-#### Working with media
+### Working with media
 
 ```
 mute
@@ -165,14 +143,14 @@ play previous
 (play | pause)
 ```
 
-#### Working with the Tobii eye tracker
+### Working with the Tobii eye tracker
 
 ```
 control mouse (say "control mouse" to toggle on/off Tobii moving the mouse)
 run calibration (say "run calibration" to start Tobii calibration)
 ```
 
-#### Working with text (misc/standard.talon)
+### Working with text
 
 ```
 copy that
@@ -191,7 +169,7 @@ In command mode, your speech will be interpreted as commands by default; in dict
 
 Note that there are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
-#### Working with the mouse and scrolling
+### Working with the mouse and scrolling
 
 [How to click with the pop sound](/scripting_and_configuration#pop-to-click)
 
@@ -218,10 +196,10 @@ drag
 ```
 
 
-
 ## Next Steps
 
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 
-* [Improve Recognition Accuracy](/improving_recognitino_accuracy): Better accuracy never hurts. Many people have to tweak something.
+* [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
+* Check the [advanced talon collection](/advanced_talon) for alternative speech recognition engines, configurations, and other stuff.
 * [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure talon to your liking.
