@@ -123,9 +123,9 @@ If you'd like a notification to show you what Talon is hearing you say, add this
     speech_system.register('phrase', on_phrase)
 ```
 
-### List of common commands to get started with Talon
+### List of common commands to get started with Talon (if using the knausj repo)
 
-The examples below are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup.
+The examples below are just a small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away. These are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup. 
 
 #### Open and switch between windows in apps such as Chrome (these are controlled in misc/window_management.talon)
 
