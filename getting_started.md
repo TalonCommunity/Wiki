@@ -241,12 +241,7 @@ Dictating and controlling your computer with voice can be frustrating if your ac
 
 ## Improve Speech Recognition Accuracy
 
-1. Make sure that you have a good microphone and sound card. Speech recognition software requires better hardware than is commonly built in to computers.
-[Selection guides](https://www.speechrecsolutions.com/MicGuide.htm) are available to choose the best microphones at each price point.
-
-    a. Good hardware will not only improve accuracy, but also latency: bad hardware may pick up background noise, which makes it harder for Talon to determine when you are done speaking so it can begin executing commands.
-    b. Ensure that the microphone is placed a consistent distance away from your mouth. For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face. For table microphones, somewhere between six and twelve inches works best.
-    c. Increase the input volume of your microphone all the way up in your operating system settings.
+1. Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](/hardware) for recommendations and correct setup.
 
 2. Make sure that you are in the correct mode. `knausj_talon` has two modes: command mode and dictation mode.
 
@@ -265,20 +260,4 @@ Dictating and controlling your computer with voice can be frustrating if your ac
     c. Try to keep your speaking volume consistent and low, quality microphones can easily pick up any volume you talk at. Speaking with low volume should help keep you from getting tired out.
 
 
-## Microphone Recommendations
-
-Check out the `#hardware` channel in Slack
-Speech recognition will be vastly improved with a better microphone. In all cases, USB is strongly recommended.
-
-  * Blue Yeti Nano (USB 3) - desktop, affordable and pretty good recognition. Can be attached to an arm for increased recognition. Useful if you're trying out speech recognition for the first time and don't want to spend a lot
-  * DPA d:fine 4188 or 4288 (nearly equivalent) with a DPA d:vice interface - expensive but highly recommend for full time use
-[DPA d:fine™ Headset mic voice isolation comparison video](https://youtu.be/35GvWlRirxI)
-  * Stenomask - useful for open plan offices as it covers your mouth
-
-
-## Eye Tracker
-
-Check out the `#eye-tracking` channel in Slack
-  * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
-  * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) works, but expect improvements in the coming weeks and months.
 
