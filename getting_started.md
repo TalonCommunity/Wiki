@@ -36,11 +36,11 @@ After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talo
 
 In the #beta channel's pinned messages, find the latest download for your OS (mac, linux, windows).
 
-For **Windows**, follow the instruction on
-- [Installing Dragon](/InstallingDragonWindows)
-- [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon)
-On **Mac**, open the `.dmg` and drag&drop it to your Applications.
-For **Linux**, extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
+- For **Windows**, follow the instruction on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
+
+- On **Mac**, open the `.dmg` and drag&drop it to your Applications.
+
+- For **Linux**, extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
 
 We are not done yet!
 
