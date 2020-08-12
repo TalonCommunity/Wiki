@@ -69,18 +69,16 @@ Talon uses a speech recognition engine that translates voice audio to text. Ther
 
 ## Testing out the basics
 
-Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the tray area.  (If not, recheck the installation, and if all seems in order, ask for help on #beta).
-Then say "help alphabet" and "close help". That should open and close a window showing you Talon's spelling alphabet.
-Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
+Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the tray area.  (If not, recheck the installation, and if all seems in order, ask for help on #beta). Then say "help alphabet" and "help close". That should open and close a window showing you Talon's spelling alphabet. Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
 
-- "enter" (press Enter)
-- "air bat cap" (type `abc`)
+- "enter" (which presses Enter)
+- "air bat cap" (which types `abc`)
 
 If the voice commands do nothing, the culprit could be the microphone setting.  A right click on Talon's icon will open a menu; check in "Microphone" that the correct mic is selected.  Make sure the microphone is not muted, and that the gain (or volume slider) of the mic is not too low.
 
 Should that not help, check out [Troubleshooting](/troubleshooting), and ask for help in #beta.
 
-TODO: per OS guide plus dragon specifics on how to check for correct microphone.
+TODO: per-OS guide plus dragon specifics on how to check for correct microphone.
 
 
 ## Basic Usage
@@ -90,8 +88,8 @@ The examples below are just a very small selection of common commands for workin
 
 ### Command History
 
-* `show command history`: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
-* `hide command history`: close the command history window again
+* `command history show`: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
+* `command history hide`: close the command history window again
 
 
 ### Show available comands
@@ -108,19 +106,18 @@ The examples below are just a very small selection of common commands for workin
 ### Open and switch between windows in apps such as Chrome
 
 ```
-new window
-next window
-last window
-close window
+window new
+window next
+window last
+window close
 ```
 
 ### Working with applications
 
 ```
 focus "app name"     (say "focus chrome" for example, to switch active window to chrome)
-list running    (say "list running" to see all active applications)
-hide running    (say "hide running" to close the list of active applications)
-(open | new)
+running list         (see all active applications)
+running hide         (close the list of active applications)
 ```
 
 ### Working with tabs
@@ -167,7 +164,7 @@ command mode
 
 In command mode, your speech will be interpreted as commands by default; in dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems.
 
-Note that there are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
+There are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
 ### Working with the mouse and scrolling
 
