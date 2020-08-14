@@ -100,35 +100,52 @@ The examples below are just a very small selection of common commands for workin
 
 ### Command history
 
-* `command history show`: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
-* `command history hide`: close the command history window again
+`command history show`
+: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
+
+`command history hide`
+: close the command history window again
 
 
 ### Show available comands
 
 `knausj_talon` has an integrated help.  It can show you a list of all defined commands, or just all commands that are available now.
 
-* `help alphabet`: show the spelling alphabet for pressing individual keys
-* `help context`: show all defined commands
-* `help active`: show all currently available commands
-* `help next`, `help previous`: go to the next or previous page of help items if there are a lot
-* `help close`: hide any open help window again
+`help alphabet`
+: show the spelling alphabet for pressing individual keys
+
+`help context`
+: show all defined commands
+
+`help active`
+: show all currently available commands
+
+`help next`, `help previous`
+: go to the next or previous page of help items if there are a lot
+
+`help close`
+: hide any open help window again
 
 
 ### Switch between modes
 
-```
-dictation mode    -- switch to dictation mode
-command mode      -- switch to command mode
-talon sleep       -- go to sleep, stop processing commands
-talon wake        -- wake up and return to previous mode
-```
-
 Talon has three basic modes by default: command, dictation, and sleep.
 
-In command mode, your speech will be interpreted as commands by default. In dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems. In sleep mode, Talon will do nothing until it hears a commands that wakes it up.
+In **command mode**, your speech will be interpreted as commands by default. In **dictation mode**, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems. In **sleep mode**, Talon will do nothing until it hears a commands that wakes it up.
 
 There are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
+
+`dictation mode`
+: switch to dictation mode
+
+`command mode`
+: switch to command mode
+
+`talon sleep`
+: go to sleep, stop processing commands
+
+`talon wake`
+: wake up and return to previous mode
 
 
 ### Open and switch between windows in apps such as Chrome
