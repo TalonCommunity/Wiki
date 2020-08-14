@@ -8,7 +8,7 @@ published: true
 
 Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the beta version of Talon, you need to follow a few steps:
 
-1. Sign up for the beta at https://www.patreon.com/join/lunixbochs.
+1. Sign up for the [beta tier at lunixboch's patreon](https://www.patreon.com/join/lunixbochs).
 2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
 3. In the #beta channel's pinned messages, find the download for your OS (mac, linux, windows), and download and install it on your computer.
 4. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
