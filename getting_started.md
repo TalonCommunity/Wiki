@@ -36,35 +36,47 @@ After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talo
 
 In the #beta channel's pinned messages, find the latest download for your OS (mac, linux, windows).
 
-- For **Windows**, follow the instruction on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
+- For **Windows**, extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
 
 - On **Mac**, open the `.dmg` and drag&drop it to your Applications.
 
 - For **Linux**, extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
 
-We are not done yet!
+We still need to set-up a speech recognition engine and a talon configuration before are ready to go!
 
 
 ## Configuration
 
 Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory (that is `C:\Users\<username>\AppData\Roaming\talon\user` on Windows). To start out, we strongly recommend that you use [knausj85's knausj_talon](https://github.com/knausj85/knausj_talon). The whole wiki assumes this repository is used, if not otherwise noted.
 
+On Linux/Mac:
 ```
 mkdir -p ~/.talon/user
 cd ~/.talon/user
 git clone https://github.com/knausj85/knausj_talon.git knausj_talon
 ```
 
+On Windows:
+```
+md "%APPDATA%\Talon\user"
+cd "%APPDATA%\Talon\user"
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
+
+If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
+
 One final step before we can test out Talon.
 
 
 ## Speech Recognition Engine
 
-Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** If you are on Windows or already use Dragon, you be likely want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is strongly recommended.
+Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** Only if you are already using Dragon, you might want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is recommended.
 
 **Dragon set-up**: If you have Dragon installed, ensure that it is running, and is actively listening to your microphone.  Talon will automatically recognize Dragon and use it.
 
-**Wav2Letter set-up**: (Linux and MacOS only) Follow the [description in Slack](https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T): download and extract a file, then everything is ready to go.
+**Wav2Letter set-up**: Follow the [description in Slack][wav2letter-gen2.1]: download and extract a file, then everything is ready to go.
+
+[wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 
 
 ## Testing out the basics
