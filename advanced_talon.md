@@ -7,23 +7,21 @@ order: 9
 
 ## Speech Recognition Engines
 
-Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** If you are on Windows or already use Dragon, you be likely want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is recommended.
+Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** Only if you are already using Dragon, you might want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is recommended.
 
 Again, in case you want to know your options:
 
-| Name                        | Availability | Operating Systems   | Description                                                          | Link                                                              |
+| Name                        | Availability | Operating Systems   | Description                                                          | Link                            |
 |-----------------------------|--------------|---------------------|----------------------------------------------------------------------|---------------------------------|
 | Builtin macOS (10.11-10.14) | Stable/Beta  | macOS               | (Note that 10.15's speech recognition engine does NOT work.)         | |
 | Dragon Dictate 6            | Stable/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
-| wav2letter                  | Beta         | macOS/Linux         | Included with Talon beta tier, separate download!                    | [Install instructions][wav2letter-gen2] |
-| wav2letter gen 2.1          | Beta         | macOS/Linux         | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-gen2.1] |
-| wav2letter large-b2         | Beta         | macOS/Linux         | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-large-b2] |
-| wav2letter sconv-b5         | Beta         | macOS/Linux         | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-b5] |
-| web2letter                  | Beta         | Windows/macOS/Linux | Remote access to a server running wav2letter gen2                    | Ask `@aegis` in Slack for instructions |
+| **wav2letter**              | Beta         | Windows/macOS/Linux | Included with Talon beta tier, separate download!                    | [Install instructions][wav2letter-gen2.1] |
+| wav2letter large-b2         | Beta         | Windows/macOS/Linux | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-large-b2] |
+| wav2letter sconv-b5         | Beta         | Windows/macOS/Linux | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-b5] |
+| web2letter (deprecated)     | Beta         | Windows/macOS/Linux | Remote access to a server running outdated wav2letter gen2           | Ask `@aegis` in Slack for instructions |
 | webspeech                   | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                       | [Setup instructions][webspeech] |
 
-[wav2letter-gen2]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1589476668035000?thread_ts=1589476639.034500&cid=G9YTMSZ2T "Wav2Letter"
-[wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595618948400200 "Wav2Letter Gen2.1"
+[wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 [wav2letter-large-b2]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595567914289200 "Wav2Letter Large Beta-2"
 [wav2letter-b5]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400 "Wav2Letter Beta-5"
 [webspeech]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1591830066339600 "Webspeech Instructions"
