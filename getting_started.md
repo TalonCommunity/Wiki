@@ -98,7 +98,7 @@ TODO: per-OS guide plus dragon specifics on how to check for correct microphone.
 The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on [knausj85's knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup. 
 
 
-### Command History
+### Command history
 
 * `command history show`: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
 * `command history hide`: close the command history window again
@@ -113,6 +113,22 @@ The examples below are just a very small selection of common commands for workin
 * `help active`: show all currently available commands
 * `help next`, `help previous`: go to the next or previous page of help items if there are a lot
 * `help close`: hide any open help window again
+
+
+### Switch between modes
+
+```
+dictation mode    -- switch to dictation mode
+command mode      -- switch to command mode
+talon sleep       -- go to sleep, stop processing commands
+talon wake        -- wake up and return to previous mode
+```
+
+Talon has three basic modes by default: command, dictation, and sleep.
+
+In command mode, your speech will be interpreted as commands by default. In dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems. In sleep mode, Talon will do nothing until you wake it up.
+
+There are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
 
 ### Open and switch between windows in apps such as Chrome
@@ -166,17 +182,6 @@ copy that
 cut that
 paste that
 ```
-
-### Switch between dictation and command mode
-
-```
-dictation mode
-command mode
-```
-
-In command mode, your speech will be interpreted as commands by default; in dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems.
-
-There are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
 ### Working with the mouse and scrolling
 
