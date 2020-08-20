@@ -126,7 +126,7 @@ talon wake        -- wake up and return to previous mode
 
 Talon has three basic modes by default: command, dictation, and sleep.
 
-In command mode, your speech will be interpreted as commands by default. In dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems. In sleep mode, Talon will do nothing until you wake it up.
+In command mode, your speech will be interpreted as commands by default. In dictation mode, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc for punctuation), similar to traditional speech recognition systems. In sleep mode, Talon will do nothing until it hears a commands that wakes it up.
 
 There are currently no visual cues about the current mode. You can tell which mode you're in by running commands and seeing if they are transcribed literally.
 
