@@ -16,8 +16,8 @@ Again, in case you want to know your options:
 | Builtin macOS (10.11-10.14) | Stable/Beta  | macOS               | (Note that 10.15's speech recognition engine does NOT work.)         | |
 | Dragon Dictate 6            | Stable/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
 | **wav2letter**              | Beta         | Windows/macOS/Linux | Included with Talon beta tier, separate download!                    | [Install instructions][wav2letter-gen2.1] |
-| wav2letter large-b2         | Beta         | Windows/macOS/Linux | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-large-b2] |
-| wav2letter sconv-b5         | Beta         | Windows/macOS/Linux | Newer experimental wav2letter model                                  | [Install instructions][wav2letter-b5] |
+| wav2letter large-b2         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-large-b2] |
+| wav2letter sconv-b5         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-b5] |
 | web2letter (deprecated)     | Beta         | Windows/macOS/Linux | Remote access to a server running outdated wav2letter gen2           | Ask `@aegis` in Slack for instructions |
 | webspeech                   | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                       | [Setup instructions][webspeech] |
 
