@@ -57,11 +57,20 @@ The context header specifies when the body of the file will be activated. That i
 
 The following requirements can be set:
 
-* `os`: require specific operating systems; currently either `linux`, `mac`, `windows`
-* `tag`: require a specific tag
-* `mode`: only active for specific talon modes (like `command`, `dictation`, et al.)
-* `app`: match applications by name
-* `title`: match a window title
+`os`
+: require specific operating systems; currently either `linux`, `mac`, `windows`
+
+`tag`
+: require a specific tag
+
+`mode`
+: only active for specific talon modes (like `command`, `dictation`, et al.)
+
+`app`
+: match applications by name
+
+`title`
+: match a window title
 
 Additionally, you can create user `scope`s. TODO: add a reference for user scopes
 
@@ -270,25 +279,19 @@ will set the `key_wait` setting to 1.5 whenever the current application is emacs
 
 The remainder of this page describes various important settings that you might want to meddle with.
 
-### insert_wait
+`insert_wait`
+: This will add a delay in ms between keys pressed in `insert()` actions. The default is 0.
 
-This will add a delay in ms between keys pressed in `insert()` actions. The default is 0.
+`key_wait`
+: This is a multiplier that changes how long Talon waits between sending keypresses to the operating system. I believe the default is 1.
 
-### key_wait
+`speech.debug`
+: Enabling this (`speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises. The default value is 0.
 
-This is a multiplier that changes how long Talon waits between sending keypresses to the operating system. I believe the default is 1.
+`speech.engine`
+: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. This really needs a page explaining it all to itself.
 
-### speech.debug
-Enabling this (`speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises. The default value is 0.
+`speech.timeout`
+: This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
 
-### speech.engine
-
-Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. This really needs a page explaining it all to itself.
-
-### speech.timeout
-
-This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
-
-It is measured in seconds; the default is 0.150, i.e. 150 milliseconds.
-
-Note: It has been mentioned in the Beta before that this setting may not always be available as it was offered as a quick fix in Talon 1283 for Talon 1274 cutting input off too soon sometimes.
+  It is measured in seconds; the default is 0.150, i.e. 150 milliseconds. It has been mentioned in #beta that this setting may not always be available as it was offered as a quick fix in Talon 1283 for Talon 1274 cutting input off too soon sometimes.
