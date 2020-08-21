@@ -196,8 +196,8 @@ Of course, the commands we defined in `tabs.talon` just invoke corresponding [ac
 Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
 
 
-Register and identify the app via Python - **`fancyedit.py`:**
-```
+Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
+```python
 from talon import Module
 mod = Module()
 # to reduce typing, you can reference the app registry through a local variable
@@ -227,6 +227,18 @@ os: linux
 app.exe: /opt/ecorp/fancyed
 -
 app(): fancyedit
+```
+
+Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
+```python
+from talon import Context
+ctx = Context()
+ctx.matches = '''
+os: linux
+app: Xfce4-terminal
+title: /fancyed - tmux/
+'''
+ctx.apps = ['fancyedit']
 ```
 
 
