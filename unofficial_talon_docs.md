@@ -4,25 +4,28 @@ order: 2
 published: true
 ---
 # Unofficial Talon Docs
+
 ## Talon Files
 
 The primary way to extend talon is using `.talon` files placed in `~/.talon/user/` or its subdirectories. A talon file comes in two parts: a header defining the [context](/unofficial_talon_docs#contexts) in which it is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
-1. Define voice commands.
-2. Implement/override the behavior of [actions](/unofficial_talon_docs#actions).
-3. Adjust [settings](/unofficial_talon_docs#talon-settings).
-4. Activate [tags](/unofficial_talon_docs#tags).
+* Define voice commands.
+* Implement/override the behavior of [actions](/unofficial_talon_docs#actions).
+* Adjust [settings](/unofficial_talon_docs#talon-settings).
+* Activate registered [tags](/unofficial_talon_docs#tags).
+* Activate registered [apps](/unofficial_talon_docs#apps)
 
 ### Example file
 
 An example talon file might look like this:
 
 ```
+# Comments start with a # sign, and they must always be on their own line.
+#
 # This part, the context header, defines under which circumstances this file applies.
 os: windows
 os: linux
 app: Slack
-app: slack.exe
 app: Teams
 # Anything above this (single!) dash is part of the header.
 -
@@ -43,8 +46,8 @@ insert code fragment:
 action(app.tab_next): key(ctrl-tab)
 action(app.tab_previous): key(shift-ctrl-tab)
 
-# This activates the tag 'tabs'.
-tag(): tabs
+# This activates the tag 'user.tabs'.
+tag(): user.tabs
 
 # This adjusts settings (within this file's context).
 settings():
@@ -64,17 +67,29 @@ The following requirements can be set:
 : require a specific tag
 
 `mode`
-: only active for specific talon modes (like `command`, `dictation`, et al.)
+: only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)
 
 `app`
-: match applications by name
+: match applications by explicitly declared, well-known name
+
+`app.name`
+: match applications by name (TODO where does Talon read this out?)
+
+`app.exe`
+: match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`
+
+`app.bundle`
+: match applications by their MacOS bundle, like `com.mozilla.Firefox`
 
 `title`
 : match a window title
 
+`code.language`
+: specify a currently active programming language
+
 Additionally, you can create user `scope`s. TODO: add a reference for user scopes
 
-`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas `app` and `title` can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
+`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas `app.exe`, `title` etc. can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
 
 Each kind of requirement can be listed several times. Entries of the same kind of requirement are `OR`'d together, and of different kinds are `AND`'d. For example:
 
@@ -85,9 +100,17 @@ app: Code
 app: notepad++
 ```
 
-This reads: "If OS is either linux or windows, for any app with the name of either Code or notepad++". Code on windows would match, notepad++ on windows would match, and so on; but Code on mac or Sublime on windows would not.
+This reads: "If OS is either linux or windows, for an app that has a well-known identifier of either Code or notepad++". Code on windows would match, notepad++ on windows would match, and so on; but Code on mac or Sublime on windows would not.
 
-TODO: there is some support for more extensive boolean expression using `and` and `not`. Test and describe that.
+```
+mode: user.talon
+mode: command
+and code.language: talon
+```
+
+This one reads "If either mode is user.talon, or else if mode is command at the same time as code.language is talon".
+
+TODO: there is some support for more complex boolean expressions using `and` and `not`. Test and describe that.
 
 ### Voice commands
 
@@ -129,13 +152,26 @@ This means whenever this file's context applies and the action `app.tab_next` is
 
 ### Tags
 
-Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `user.tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
 
-Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `tabs` tag. Here's how that would look. In `tabs.talon`:
+Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `user.tabs` tag.
 
+To make a tag available, it first must be declared in a module:
+
+**`generic_application_features.py`:**
+```python
+from talon import Module
+
+mod = Module()
+# this declares a tag in the user namespace
+mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
 ```
-# This selects for the tag 'tabs'.
-tag: tabs
+
+
+**`tabs.talon`:**
+```
+# This selects for the tag 'user.tabs'.
+tag: user.tabs
 -
 (open | new) tab: app.tab_open()
 last tab: app.tab_previous()
@@ -144,16 +180,55 @@ close tab: app.tab_close()
 reopen tab: app.tab_reopen()
 ```
 
-And then, in `firefox.talon`:
-
+**`firefox.talon`:**
 ```
 app: Firefox
 -
-# This activates the tag 'tabs'.
-tag(): tabs
+# This activates the tag 'user.tabs'.
+tag(): user.tabs
 ```
 
 Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in `firefox.talon`. Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
+
+
+### Apps
+
+Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
+
+
+Register and identify the app via Python - **`fancyedit.py`:**
+```
+from talon import Module
+mod = Module()
+# to reduce typing, you can reference the app registry through a local variable
+apps = mod.apps
+apps.fancyedit = '''
+os: mac
+and app.bundle: com.example.fancyedit
+os: windows
+and app.exe: fancyed.exe
+'''
+apps.terminal = 'app.bundle: com.apple.Terminal'
+# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
+apps.firefox = 'app.bundle: com.mozilla.Firefox'
+apps.firefox = 'app.exe: firefox.exe'
+```
+
+Use the well-known app - **`fancyedit.talon`:**
+```
+app: fancyed
+-
+action(edit.find): key(ctrl-alt-shift-y)
+```
+
+Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
+```
+os: linux
+app.exe: /opt/ecorp/fancyed
+-
+app(): fancyedit
+```
+
 
 ### Settings
 
@@ -184,7 +259,7 @@ In order to script Talon, it is useful to understand some of its basic concepts:
 
 ### Modules
 
-A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), and [captures](/unofficial_talon_docs#captures). In Python, you can construct a module like so:
+A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), and [captures](/unofficial_talon_docs#captures), scopes, tags and well-known applications. In Python, you can construct a module like so:
 
 ```
 from talon import Module
@@ -195,7 +270,7 @@ TODO: are there any interesting arguments to Module?
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can depend on include your OS, the name of the current application, the title of the current window, and the currently activated [tags](/unofficial_talon_docs#tags). (TODO: is this everything?) Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](https://talon.wiki/talon-settings/), and activate [tags](/unofficial_talon_docs#tags).
+A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](https://talon.wiki/talon-settings/), and activate [tags](/unofficial_talon_docs#tags).
 
 In Python, you can construct a context like so:
 
@@ -256,6 +331,7 @@ We refer to our new list as `{user.launch}`; curly braces are the syntax for usi
 TODO: explain in more detail how variable binding works here. What if we had done `{user.launch}+` instead? or `({user.launch} | foo)`?
 
 Like actions, lists are declared by modules and can be overridden within specific contexts. TODO: explain why this would be useful.
+
 
 ### Captures
 
