@@ -69,3 +69,8 @@ Check out the `#eye-tracking` channel in Slack.
 
 * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
 * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) works, but expect improvements in the coming weeks and months. This one might require a one-time initialization on a Windows PC with the Tobii software installed.
+
+
+### Windows Login plus Talon
+
+Talon and Tobii software clash a bit. But you can keep the Tobii driver installed, and only disable the Tobii service, you can keep using the Tobii as a Windows Hello device (login via facial recognition), even while having the Tobii available for Talon.
