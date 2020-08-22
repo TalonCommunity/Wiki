@@ -383,3 +383,6 @@ The remainder of this page describes various important settings that you might w
 : This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
 
   It is measured in seconds; the default is 0.150, i.e. 150 milliseconds. It has been mentioned in #beta that this setting may not always be available as it was offered as a quick fix in Talon 1283 for Talon 1274 cutting input off too soon sometimes.
+
+`speech.record_all`
+: If set to 1, all phrases Talon hears will be stored in a `.flac` file on your computer.  You can use this to analyze microphone issues, or it might be useful to analyze speech engine issues. The default value is 0.
