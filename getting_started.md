@@ -36,11 +36,14 @@ After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talo
 
 In the #beta channel's pinned messages, find the latest download for your OS (mac, linux, windows).
 
-- For **Windows**, extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
+**Windows**
+: Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
 
-- On **Mac**, open the `.dmg` and drag&drop it to your Applications.
+**Mac**
+: Open the `.dmg` and drag&drop it to your Applications.
 
-- For **Linux**, extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
+**Linux**
+: Extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
 
 We still need to set-up a speech recognition engine and a talon configuration before are ready to go!
 
@@ -49,14 +52,14 @@ We still need to set-up a speech recognition engine and a talon configuration be
 
 Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory (that is `C:\Users\<username>\AppData\Roaming\talon\user` on Windows). To start out, we strongly recommend that you use [knausj85's knausj_talon](https://github.com/knausj85/knausj_talon). The whole wiki assumes this repository is used, if not otherwise noted.
 
-On Linux/Mac:
+On **Linux/Mac**:
 ```
 mkdir -p ~/.talon/user
 cd ~/.talon/user
 git clone https://github.com/knausj85/knausj_talon.git knausj_talon
 ```
 
-On Windows:
+On **Windows**:
 ```
 md "%APPDATA%\Talon\user"
 cd "%APPDATA%\Talon\user"
@@ -100,11 +103,8 @@ The examples below are just a very small selection of common commands for workin
 
 ### Command history
 
-`command history show`
-: show the last few commands as Talon understood them; if you are not sure what Talon is doing, if it understood you correctly, this is how to check it.
-
-`command history hide`
-: close the command history window again
+`command history`
+: Toggles the command history display, which shows the last few commands as Talon understood them; if you're not sure what Talon is doing, or if it understood you correctly, this is how to check it.
 
 
 ### Show available comands
