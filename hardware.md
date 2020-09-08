@@ -55,10 +55,10 @@ Some people do report success with much cheaper microphones, but many also do no
 2. Ensure that the microphone is pointed at the mouth: This points the axis of maximum sensitivity towards your mouth for best voice isolation (reducing background noise).  Some microphones require a much more careful placement than others.  Be sure to find the sweet spot!
 3. Place it a consistent distance away from your mouth.  For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic).  A proper placement eliminates wind noises from breathing and loud sounds.
 4. Your loudest speech voice must neither clip nor be distorted, but should be recorded as loudly as possible.  To get your mic gain into the right ballpark:
-  1. Install and start _Audacity_,
-  2. set the correct microphone, and
-  3. press _Record_, utter an upbeat "Hello there!", and stop the recording.
-  4. Listen to the playback: Your voice should sound clear and as loud as a Gaming Youtube channel (i.e. obnoxiously loud).  If it's too low, increase the gain, if it's distorted, reduce it.
+   1. Install and start _Audacity_,
+   2. set the correct microphone, and
+   3. press _Record_, utter an upbeat "Hello there!", and stop the recording.
+   4. Listen to the playback: Your voice should sound clear and as loud as a Gaming Youtube channel (i.e. obnoxiously loud).  If it's too low, increase the gain, if it's distorted, reduce it.
 5. If Talon triggers too eagerly, try reducing the gain a bit.
 6. If Talon cuts you off mid-sentence or mid-word, try increasing the gain a bit.
 
