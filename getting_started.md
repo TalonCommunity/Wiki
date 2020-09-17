@@ -165,7 +165,7 @@ running list         (see all active applications)
 running hide         (close the list of active applications)
 ```
 
-If you are on Ubuntu or another Gnome-based distribution, `focus` might not work consistently across different workspaces, popping up a notification rather than actually switching focus. The following extension may fix this:
+If you are on Ubuntu or another Gnome-based distribution, `focus` might not work consistently across different workspaces, popping up a notification rather than actually switching focus. [This extension](https://extensions.gnome.org/extension/1005/focus-my-window/) may help.
 
 ### Working with tabs
 
