@@ -6,44 +6,46 @@ published: true
 
 # Getting Started
 
-Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the beta version of Talon, you need to follow a few steps:
+Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the public version of Talon, you need to follow a few steps:
+
+1. Download Talon from [talonvoice.com](https://talonvoice.com/).
+2. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
+3. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
+4. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com), where you can ask for help, tips, and chat with other Talon users.
+
+If you would rather use the beta version, which comes with earlier access to new features and higher priority support, then instead do the following:
 
 1. Sign up for the [beta tier at lunixboch's patreon](https://www.patreon.com/join/lunixbochs).
 2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
 3. In the #beta channel's pinned messages, find the download for your OS (mac, linux, windows), and download and install it on your computer.
-4. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
-5. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
 
-We describe below: Why the beta, and what exactly is going on at each step?
+We describe below: what's the difference between public and beta, and what exactly is going on at each step?
 
 
-## Beta vs. Public
+## Public vs. Beta vs. Legacy
 
-There are currently two different versions of Talon, the public release and the beta. The public release is free and has been used by many Talon users, but it is not likely to undergo significant development as users are transitioning to the beta version of Talon (the "new API"). The beta version has many new features and a new configuration syntax. It supports more operating systems and has integration with the new wav2letter voice engine, an alternative to Dragon, created because [Dragon was discontinued for Mac](https://www.nuance.com/dragon/support/professional-individual-for-mac-eol.html#). The beta requires donation to the beta tier of the [Talon Patreon](https://www.patreon.com/lunixbochs).
+Talon has two mostly compatible current versions: public and beta. The public release is free, while the beta version requires a $25/month subscription to the [developer's patreon](https://www.patreon.com/join/lunixbochs). The beta version has earlier access to new features and higher priority support. For example, as of September 2020, the beta version supports `sconv-b5`, a more powerful speech recognition model based on neural nets; and `webspeech`, the option to use your browser's speech recognition engine for dictation.
 
-**The public release of Talon is only available for Mac.**
-**The beta release of Talon is available for Mac, Windows, and Linux.**
-
-The content in this wiki is for the beta version.
+There is also a legacy version of Talon for Mac only that is no longer actively developed, but still functioning. For those considering upgrading from legacy, the new version has a new configuration syntax, supports more operating systems, and has integration with the new wav2letter voice engine, an alternative to Dragon created because [Dragon was discontinued for Mac](https://www.nuance.com/dragon/support/professional-individual-for-mac-eol.html#). However, the new API is not backwards-compatible, so you will have to change your configuration files.
 
 
-## Getting Access
+## Getting Access to the Beta
 
 After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the `#beta` channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new versions of Talon are announced and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
 
 
 ## Installation
 
-In the #beta channel's pinned messages, find the latest download for your OS (mac, linux, windows).
-
-**Windows**
-: Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon).
+Click the appropriate download link for your OS on talonvoice.com. (For the beta, find the latest download for your OS in the #beta channel's pinned messages.) Once the download finishes:
 
 **Mac**
 : Open the `.dmg` and drag&drop it to your Applications.
 
 **Linux**
 : Extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
+
+**Windows**
+: Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon). (TODO: This doesn't seem to be up to date with the public version, where the default download is just a single executable.)
 
 We still need to set-up a speech recognition engine and a talon configuration before are ready to go!
 
@@ -77,21 +79,21 @@ Talon uses a speech recognition engine that translates voice audio to text. Ther
 
 **Dragon set-up**: If you have Dragon installed, ensure that it is running, and is actively listening to your microphone.  Talon will automatically recognize Dragon and use it.
 
-**Wav2Letter set-up**: Follow the [description in Slack][wav2letter-gen2.1]: download and extract a file, then everything is ready to go.
+**Wav2Letter set-up**: Follow the [description in Slack][wav2letter-gen2.1]: download and extract a file, then everything is ready to go. TODO: this links to #beta, which isn't useful for users of the public release.
 
 [wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 
 
 ## Testing out the basics
 
-Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the tray area.  (If not, recheck the installation, and if all seems in order, ask for help on #beta). Then say "help alphabet" and "help close". That should open and close a window showing you Talon's spelling alphabet. Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
+Now start/restart Talon. Talon's icon (TODO: show how it looks like) should show up in the tray area.  (If not, recheck the installation, and if all seems in order, ask for help in #help). Then say "help alphabet" and "help close". That should open and close a window showing you Talon's spelling alphabet. Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
 
 - "enter" (which presses Enter)
 - "air bat cap" (which types `abc`)
 
 If the voice commands do nothing, the culprit could be the microphone setting.  A right click on Talon's icon will open a menu; check in "Microphone" that the correct mic is selected.  Make sure the microphone is not muted, and that the gain (or volume slider) of the mic is not too low.
 
-Should that not help, check out [Troubleshooting](/troubleshooting), and ask for help in #beta.
+Should that not help, check out [Troubleshooting](/troubleshooting), and ask for help in #help.
 
 TODO: per-OS guide plus dragon specifics on how to check for correct microphone.
 
