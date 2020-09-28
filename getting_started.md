@@ -8,7 +8,7 @@ published: true
 
 Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the public version of Talon, you need to follow a few steps:
 
-1. Download Talon from [talonvoice.com](https://talonvoice.com/).
+1. Download Talon from [talonvoice.com](https://talonvoice.com/). There are downloads for Mac, Linux, and Windows.
 2. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
 3. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
 4. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com), where you can ask for help, tips, and chat with other Talon users.
@@ -17,7 +17,7 @@ If you would rather use the beta version, which comes with earlier access to new
 
 1. Sign up for the [beta tier at lunixboch's patreon](https://www.patreon.com/join/lunixbochs).
 2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
-3. In the #beta channel's pinned messages, find the download for your OS (mac, linux, windows), and download and install it on your computer.
+3. In the #beta channel's pinned messages, find the download for your OS, and download and install it on your computer.
 4. Perform steps 2-3 from the above list.
 
 We describe below: what's the difference between public and beta, and what exactly is going on at each step?
