@@ -1,6 +1,7 @@
 ---
 sidebar: true
 order: 3
+published: true
 ---
 # Scripting and Configuration
 ## Pop to click
@@ -21,11 +22,11 @@ Previously, pop to click would continue to work when Talon was asleep, but a [re
 
 *NOTE* If you use knausj, please be sure to not also use noise.py from another place like the talon examples repo!
 
-## Activating your language
+## Activating your programming language
 
-If talon is scripted to support your language, activating language support is as easy as focusing a file with the correct extension. For example, opening a file with the extension `.ts` will enable TypeScript support.
+If talon is scripted to support your programming language, activating language support is as easy as focusing a file with the correct extension. For example, opening a file with the extension `.ts` will enable TypeScript support.
 
-If for some reason you are not in a file with the correct extension, you can manually activate the language with the commands defined in **modes/modes.talon**. For example, to activate TypeScript support say the command `force type script`. This will activate the correct mode for as long as you want until you say the command `clear language modes`.
+If for some reason you are not in a file with the correct extension, you can manually activate the language mode with the commands defined in **modes/modes.talon**. For example, to activate TypeScript support say the command `force type script`. This will activate the correct mode for as long as you want until you say the command `clear language modes`.
 
 ### Where are my languages defined?
 There are some commands that are defined at a high level for all programming languages. 
