@@ -18,6 +18,7 @@ If you would rather use the beta version, which comes with earlier access to new
 1. Sign up for the [beta tier at lunixboch's patreon](https://www.patreon.com/join/lunixbochs).
 2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
 3. In the #beta channel's pinned messages, find the download for your OS (mac, linux, windows), and download and install it on your computer.
+4. Perform steps 2-3 from the above list.
 
 We describe below: what's the difference between public and beta, and what exactly is going on at each step?
 
@@ -29,9 +30,7 @@ Talon has two mostly compatible current versions: public and beta. The public re
 There is also a legacy version of Talon for Mac only that is no longer actively developed, but still functioning. For those considering upgrading from legacy, the new version has a new configuration syntax, supports more operating systems, and has integration with the new wav2letter voice engine, an alternative to Dragon created because [Dragon was discontinued for Mac](https://www.nuance.com/dragon/support/professional-individual-for-mac-eol.html#). However, the new API is not backwards-compatible, so you will have to change your configuration files.
 
 
-## Getting Access to the Beta
-
-After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the `#beta` channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new versions of Talon are announced and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
+**To get access to the beta:** After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the `#beta` channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.  The #beta channel is the place where all new versions of Talon are announced and linked for download.  It is also the channel where you can ask for help if you get stuck with the beta version.
 
 
 ## Installation
