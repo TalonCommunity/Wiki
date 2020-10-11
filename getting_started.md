@@ -78,9 +78,7 @@ Talon uses a speech recognition engine that translates voice audio to text. Ther
 
 **Dragon set-up**: If you have Dragon installed, ensure that it is running, and is actively listening to your microphone.  Talon will automatically recognize Dragon and use it.
 
-**Wav2Letter set-up**: Follow the [description in Slack][wav2letter-gen2.1]: download and extract a file, then everything is ready to go. TODO: this links to #beta, which isn't useful for users of the public release.
-
-[wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
+**Wav2Letter set-up**: Follow the [wav2letter instructions in the the Talon docs](https://talonvoice.com/docs/#wav2letter-setup): download and extract the contents of [this zip file](https://talonvoice.com/dl/talon-w2l-small3-dslm-en_US.zip) into your talon directory, then everything is ready to go.
 
 
 ## Testing out the basics
