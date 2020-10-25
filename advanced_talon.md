@@ -23,7 +23,7 @@ Again, in case you want to know your options:
 
 [wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 [wav2letter-large-b2]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595567914289200 "Wav2Letter Large Beta-2"
-[wav2letter-b5]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1602339473085300 "Wav2Letter Beta-6"
+[wav2letter-b6]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1602339473085300 "Wav2Letter Beta-6"
 [webspeech]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1591830066339600 "Webspeech Instructions"
 
 Builtin macOS and Dragon support work automatically when available and active, for wav2letter please follow the instructions at the links.
