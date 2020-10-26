@@ -17,13 +17,13 @@ Again, in case you want to know your options:
 | Dragon Dictate 6            | Stable/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
 | **wav2letter**              | Beta         | Windows/macOS/Linux | Included with Talon beta tier, separate download!                    | [Install instructions][wav2letter-gen2.1] |
 | wav2letter large-b2         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-large-b2] |
-| wav2letter sconv-b5         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-b5] |
+| wav2letter sconv-b6         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-b6] |
 | web2letter (deprecated)     | Beta         | Windows/macOS/Linux | Remote access to a server running outdated wav2letter gen2           | Ask `@aegis` in Slack for instructions |
 | webspeech                   | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                       | [Setup instructions][webspeech] |
 
 [wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 [wav2letter-large-b2]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595567914289200 "Wav2Letter Large Beta-2"
-[wav2letter-b5]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595566865283400 "Wav2Letter Beta-5"
+[wav2letter-b6]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1602339473085300 "Wav2Letter Beta-6"
 [webspeech]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1591830066339600 "Webspeech Instructions"
 
 Builtin macOS and Dragon support work automatically when available and active, for wav2letter please follow the instructions at the links.
