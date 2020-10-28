@@ -70,7 +70,7 @@ Each mic, and each mic pre-amp, will have a different personality.  Because of t
 Check out the `#eye-tracking` channel in Slack, and the [Tobii 4c Tips](/tobii_4c_tips) page.
 
 * Tobii 4C is the most commonly used and recommended eye tracker. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
-* [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) works, but expect improvements in the coming weeks and months. This one might require a one-time initialization on a Windows PC with the Tobii software installed.
+* [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) works, but expect improvements in the coming weeks and months. This one might require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](/tobii_5.md).
 
 
 ### Windows Login plus Talon
