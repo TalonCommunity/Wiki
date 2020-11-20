@@ -13,13 +13,13 @@ Again, in case you want to know your options:
 
 | Name                        | Availability | Operating Systems   | Description                                                          | Link                            |
 |-----------------------------|--------------|---------------------|----------------------------------------------------------------------|---------------------------------|
-| Builtin macOS (10.11-10.14) | Stable/Beta  | macOS               | (Note that 10.15's speech recognition engine does NOT work.)         | |
-| Dragon Dictate 6            | Stable/Beta  | Windows/macOS       | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
-| **wav2letter**              | Beta         | Windows/macOS/Linux | Included with Talon beta tier, separate download!                    | [Install instructions][wav2letter-gen2.1] |
-| wav2letter large-b2         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-large-b2] |
-| wav2letter sconv-b6         | Beta         | macOS/Linux         | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-b6] |
-| web2letter (deprecated)     | Beta         | Windows/macOS/Linux | Remote access to a server running outdated wav2letter gen2           | Ask `@aegis` in Slack for instructions |
-| webspeech                   | Beta         | Windows/macOS/Linux | Uses chrome or firefox for speech recognition.                       | [Setup instructions][webspeech] |
+| Builtin macOS (10.11-10.14) | Public       | macOS                   | (Note that 10.15's speech recognition engine does NOT work.)         | |
+| Dragon Dictate 6            | Public       | Windows/macOS           | Must purchase separately.                                            | [Windows](/SettingUpTalonWindows10Dragon) |
+| **wav2letter**              | **Public**   | **Windows/macOS/Linux** | **Currently recommended engine for general use**                     | [Install instructions][wav2letter-gen2.1] |
+| wav2letter large-b2         | Beta         | macOS/Linux             | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-large-b2] |
+| wav2letter sconv-b6         | Beta         | macOS/Linux             | Newer experimental wav2letter model, not yet available for Windows   | [Install instructions][wav2letter-b6] |
+| web2letter (deprecated)     | Beta         | Windows/macOS/Linux     | Remote access to a server running outdated wav2letter gen2           | Ask `@aegis` in Slack for instructions |
+| webspeech                   | Beta         | Windows/macOS/Linux     | Uses chrome or firefox for speech recognition.                       | [Setup instructions][webspeech] |
 
 [wav2letter-gen2.1]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1597793361100700?thread_ts=1597793171.100600&cid=G9YTMSZ2T "Wav2Letter Gen2.1"
 [wav2letter-large-b2]: https://talonvoice.slack.com/archives/G9YTMSZ2T/p1595567914289200 "Wav2Letter Large Beta-2"
@@ -48,16 +48,13 @@ engine = W2lEngine(model='en_US-MODELNAME', debug=True)
 
 ## Alternative User Configurations
 
-If you do not have anything specific in mind, start out using [knausj_talon](https://github.com/knausj85/knausj_talon), which has become the most shared Talon beta configuration.  Of course there are alternatives, but **only use one repository - they should not be mixed.**
+If you do not have anything specific in mind, start out using [knausj_talon](https://github.com/knausj85/knausj_talon), which has become the most shared Talon configuration.  Of course there are alternatives, but **only use one repository - they should not be mixed.**
 
 | Talon Release | GitHub Repository | Description |
 |-|-|
-| Beta | [knausj85's knausj_talon](https://github.com/knausj85/knausj_talon) | The go-to repository for beta users |
-| Beta | [Fidgetingbit's Talon Config](https://github.com/fidgetingbits/knausj_talon) | Fork of Knausj's config with VimSpeak support |
-| Beta | [mrob95's Talon Config](https://github.com/mrob95/MR-talon) | Mark Robert's Talon config with support for Windows dev tools (Windows Terminal, Mintty, Windows Workspaces) |
-| Public | [lunixbochs's talon_starter_pack](https://github.com/lunixbochs/talon_starter_pack) | The go-to lite version of the talon_community repository containing only the essentials |
-| Public | [dwiel's talon_community](https://github.com/dwiel/talon_community) | A larger configuration set with more niche modules |
-
+| **Public** | **[knausj85's knausj_talon](https://github.com/knausj85/knausj_talon)** | **The currently recommended go-to repository for general use** |
+| Public | [Fidgetingbit's Talon Config](https://github.com/fidgetingbits/knausj_talon) | Fork of Knausj's config with VimSpeak support |
+| Public | [mrob95's Talon Config](https://github.com/mrob95/MR-talon) | Mark Robert's Talon config with support for Windows dev tools (Windows Terminal, Mintty, Windows Workspaces) |
 
 ## Mouse Grid
 

@@ -38,7 +38,7 @@ Controlling your computer by voice can be frustrating if your accent isn't recog
 
 If only a few specific commands give you trouble, change those command words!  Commands are almost exclusively mapped in `.talon` files: search for all occurrences of those words, and replace them with a word of your choosing: select one that is easy to pronounce, is not too similar to anything else, and is recognized well for you.
 
-Some important commands are specified in `.py` files, like the alphabet.  Changing it works the same way, but you need to be more careful about what you modify.  If you are not a programmer, ask on `#beta` for help if you are unsure!
+Some important commands are specified in `.py` files, like the alphabet.  Changing it works the same way, but you need to be more careful about what you modify.  If you are not a programmer, ask in the Talon Slack `#help` channel if you are unsure!
 
 _Example:_  If the `close` in `tab close` does not work for you (but `tab open` etc. do), try out `tab wipe` or `tab quit` instead.
 
@@ -57,7 +57,7 @@ Talon only waits a short amount of time before trying to interpret your command.
       # (unstable) minimum silence time (in seconds) before speech is cut off, default 0.150
       speech.timeout = 0.200
   ```
-  Start with the value of 0.2, just slightly higher than the default, and increase only if necessary (I use 0.4).  Beware that this setting is explicitly not public API, and might be modified or removed in future versions.  Report it in `#beta` so that we are aware that some people are still having issues with this.
+  Start with the value of 0.2, just slightly higher than the default, and increase only if necessary.  Beware that this setting uses a private API, and might be modified or removed in future versions.  Report your issue in `#help` so that we are aware that some people are still having issues with being cut off mid-command/mid-sentence.
 
 
 ## Many commands work badly

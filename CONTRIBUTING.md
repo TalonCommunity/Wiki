@@ -1,9 +1,9 @@
 # Contributing to this Wiki
-This is a wiki for the beta version of [Talon](https://talonvoice.com/), a hands-free input replacement for using a computer. These docs are rendered and deployed to:
+This is a wiki for [Talon](https://talonvoice.com/), a hands-free input replacement for using a computer. These docs are rendered and deployed to:
 
 [https://talon.wiki/](https://talon.wiki)
 
-Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. The beta version is currently only available to Talon Beta tier Patreon supporters. If you want to try out the beta, consider donating to the [Patreon](https://www.patreon.com/lunixbochs). Links to download the beta version can be found in the `@beta` channel.
+Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. If you want to support the project, consider donating to the [Patreon](https://www.patreon.com/lunixbochs).
 
 ## Who can Contribute
 This wiki belongs to the Talon Community, and contributions are welcome from anyone. Anyone can make pull requests, and any member of the TalonCommunity GitHub organization can merge that pull request. Talon Community members can push directly to `gh-pages` branch.
@@ -35,7 +35,7 @@ Images can be uploaded either by dragging and dropping the image into the prose 
 Prose by default suggests a filename with a date, and there isn't a way currently to turn of this behavior. Please remove the date from the suggested filename, for example don't use `2020-06-16-your-filename.md` and instead name it without a date like `your-filename.md`. Remember to use the `.md` file extension. Files without the extension will not be rendered by jekyll.
 
 #### Saving Changes
-Click the save button, which will commit your changes. If you are a member of Talon Community, your changes will be committed directly to the deploy branch `gh-pages` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `@beta` or `#talon-docs` channels of the Talon Slack.
+Click the save button, which will commit your changes. If you are a member of the Talon Community github organization, your changes will be committed directly to the deploy branch `gh-pages` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `#talon-docs` channels of the Talon Slack.
 
 ### Using GitHub UI
 There are links in the top right corner of the site to edit the content in GitHub. Clicking `Add new`, for example, will drop you into a GiHub UI for adding a new file:

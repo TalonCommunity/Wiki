@@ -28,7 +28,7 @@ While Talon is closed source, there's plenty you can do to help:
 
 * https://speech.talonvoice.com/ Extend the voice data set used for speech recognition training.
 * Publish your talon commands on Github for others to use like https://github.com/knausj85/knausj_talon or https://github.com/lunixbochs/talon_starter_pack.
-* Report issues in the beta https://github.com/talonvoice/beta
+* Report issues in the beta https://github.com/talonvoice/beta/issues
 * Add more to these docs :)
 
 ### How do I enable verbose talon debugging?

@@ -6,7 +6,7 @@ title: "Talon Wiki"
 url: "https://talon.wiki" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
 # (string) Description of your wiki
-description: "Wiki for the beta version of Talon."
+description: "Wiki for Talon https://talonvoice.com/."
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
