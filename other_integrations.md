@@ -1,3 +1,5 @@
+# Integrating Talon With Other Software
+
 This page documents helpful third party software and integrations that play nice with Talon. Things that let you navigate without a mouse or integrate key presses into complex apps should be added here :)
 
 ## Navigation Software
