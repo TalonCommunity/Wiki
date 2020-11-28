@@ -13,6 +13,13 @@ Currently the Tobii 5 has limited support. It currently runs at 33hz refresh rat
 - Disconnect the tracker from the Windows machine and connect to your Ubuntu machine.
 - Start up Talon. It should recognize your new hardware.
 
+#### Mac OS
+
+- Connect Your Tobii 5c to a windows computer. you may hear some USB disconnection noises as the auto installation takes place.
+- Download and run the [offline installer](https://help.tobii.com/hc/en-us/articles/360009325857-Installation-or-setup-issues-for-Tobii-Eye-Tracker-5), this should update the Tobii firmware
+- Now connect it to your mac and enable eye tracking in the talon menu 
+- Run the calibration in talon.
+
 ### Also see
 
 - [Tobii 4c tips](/tobii_4c_tips.md)
