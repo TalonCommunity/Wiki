@@ -58,7 +58,7 @@ If you do not have anything specific in mind, start out using [knausj_talon](htt
 
 ## Mouse Grid
 
-A mouse grid can be used to control the mouse cursor with neither hands nor eye-tracking.  An implementation for Talon is available from a community member at [github.com/timo/talon_scripts](https://github.com/timo/talon_scripts/tree/master/mousegrid).
+A mouse grid can be used to control the mouse cursor with neither hands nor eye-tracking.  An implementation for Talon is included in the knausj_talon repository. There is a `settings.talon` file inside the knausj repository where you need to turn the mouse grid on if you want to use it.
 
 
 ## Notification for what Talon understands
