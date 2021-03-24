@@ -47,17 +47,19 @@ _Example:_ Your `zip` (letter Z) is always understood as `sit` (lette I), change
 
 ## Talon cuts me off mid-command or mid-sentence
 
-Talon only waits a short amount of time before trying to interpret your command.  If you pause even a wee bit longer, Talon will split your utterance into separate phrases.
+Talon lets you configure how long it will wait after you stop speaking before trying to interpret your command. As of March 2021, the default is 0.3 seconds; earlier versions had a default of 0.15 seconds. If you find that Talon is frequently cutting you off mid-command, you may want to try one or more of the following:
 
 * Prepare your command in full before voicing it.  This will help you speak fluently.
-* Speak faster, especially after stops.  In utterances like "stop it", there is a natural pause between "stop" and "it".  Some people have just slightly longer stops than others, but can avoid it when preparing to talk fluently.
-* Increase Talon's wait time.  This comes with the distinct disadvantage of making all commands react slightly slower, but it _can_ eliminate the cutoffs.  Do this by adding a `settings.talon` file to your user directory with the following content:
+
+* Speak faster, especially after consonants like "p" that involve stopping airflow. In utterances like "stop it", there is a natural pause between "stop" and "it".  Some people have just slightly longer stops than others, but can avoid it when preparing to talk fluently.
+
+* Increase Talon's wait time. This has the disadvantage of making all commands react slower, but it _can_ eliminate the cutoffs. Do this by adding a `settings.talon` file to your user directory with the following content:
   ```
   settings():
-      # (unstable) minimum silence time (in seconds) before speech is cut off, default 0.150
-      speech.timeout = 0.200
+      # minimum silence time (in seconds) before speech is cut off, default 0.3
+      speech.timeout = 0.4
   ```
-  Start with the value of 0.2, just slightly higher than the default, and increase only if necessary.  Beware that this setting uses a private API, and might be modified or removed in future versions.  Report your issue in `#help` so that we are aware that some people are still having issues with being cut off mid-command/mid-sentence.
+  Start with the value of 0.4, just slightly higher than the default, and increase only if necessary.
 
 
 ## Many commands work badly
