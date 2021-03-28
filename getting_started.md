@@ -6,39 +6,36 @@ published: true
 
 # Getting Started
 
-Our first goal is that you have a working Talon installation and configuration, such that when you say out loud "phrase hello world", Talon will literally type "hello world" into the currently open window.  To get to that using the public version of Talon, you need to follow a few steps:
+## Overview
+To get a working Talon Setup:
 
-1. Download Talon from [talonvoice.com](https://talonvoice.com/). There are downloads for Mac, Linux, and Windows.
-2. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
-3. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
-4. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com), where you can ask for help, tips, and chat with other Talon users.
+1. Install Talon.
+1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
+1. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
+1. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com) for help, tips, and connecting with other Talon users.
 
-If you would rather use the beta version, which comes with earlier access to new features and higher priority support, then instead do the following:
+## Install Talon
 
-1. Sign up for the [beta tier at lunixboch's patreon](https://www.patreon.com/join/lunixbochs).
-2. Join the [Talon Voice Slack](https://talonvoice.slack.com), and message `@aegis` for access to the #beta channel.
-3. In the #beta channel's pinned messages, find the download for your OS, and download and install it on your computer.
-4. Perform steps 2-3 from the above list.
+Talon has two mostly compatible current versions: public and beta. Both versions have support for Mac, Linux, and Windows.
 
-We describe below: what's the difference between public and beta, and what exactly is going on at each step?
+### Public Version (free)
 
+Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
 
-## Public vs. Beta vs. Legacy
+### Beta Version (requires Patreon support)
 
-Talon has two mostly compatible current versions: public and beta. The public release is free, while the beta version requires a $25/month subscription to the [developer's patreon](https://www.patreon.com/join/lunixbochs). The beta version has earlier access to new features and higher priority support. For example, as of September 2020, the beta version supports `sconv-b5`, a more powerful speech recognition model based on neural nets; and `webspeech`, the option to use your browser's speech recognition engine for dictation.
+The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
-There is also a legacy version of Talon for Mac only that is no longer actively developed, but still functioning. For those considering upgrading from legacy, the new version has a new configuration syntax, supports more operating systems, and has integration with the new wav2letter voice engine, an alternative to Dragon created because [Dragon was discontinued for Mac](http://nuance.custhelp.com/app/answers/detail/a_id/27843/~/dragon-professional-for-mac-6%3A-end-of-life%2C-end-of-support-dates). However, the new API is not backwards-compatible, so you will have to change your configuration files.
+### Legacy
 
+There is also a legacy version of Talon for Mac only that is no longer actively developed, but still functioning. For users considering upgrading from legacy, the new version has a new configuration syntax, supports more operating systems, and has integration with the new wav2letter voice engine, an alternative to Dragon created because [Dragon was discontinued for Mac](http://nuance.custhelp.com/app/answers/detail/a_id/27843/~/dragon-professional-for-mac-6%3A-end-of-life%2C-end-of-support-dates). However, the new API is not backwards-compatible, so you will have to change your configuration files.
 
-**To get access to the beta:** After [joining the beta tier](https://www.patreon.com/join/lunixbochs) and [Talon Voice Slack](https://talonvoice.slack.com), write a message to `@aegis` requesting access to the `#beta` channel.  He is the developer of Talon, and will grant you access as soon as he's back at work on Talon.
+## OS Specific Installation
 
-
-## Installation
-
-Click the appropriate download link for your OS on talonvoice.com. (For the beta, find the latest download for your OS in the #beta channel's pinned messages.) Once the download finishes:
+Once the Talon package is downloaded:
 
 **Mac**
-: Open the `.dmg` and drag&drop it to your Applications.
+: Open the `.dmg` and move it to your Applications.
 
 **Linux**
 : Extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
@@ -46,12 +43,9 @@ Click the appropriate download link for your OS on talonvoice.com. (For the beta
 **Windows**
 : Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows). (TODO: This doesn't seem to be up to date with the public version, where the default download is just a single executable.)
 
-We still need to set-up a speech recognition engine and a talon configuration before are ready to go!
-
-
 ## Configuration
 
-Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts into your `~/.talon/user` directory (that is `C:\Users\<username>\AppData\Roaming\talon\user` on Windows). To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
+Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
 
 On **Linux/Mac**:
 ```
@@ -69,16 +63,24 @@ git clone https://github.com/knausj85/knausj_talon.git knausj_talon
 
 If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
 
-One final step before we can test out Talon.
-
 
 ## Speech Recognition Engine
 
-Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** Only if you are already using Dragon, you might want to start out with Dragon. Otherwise, Talon's own engine _wav2letter_ is recommended.
+Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** You can use Dragon as your speech engine with Talon if you have it already. Otherwise, wav2letter (w2l) is recommended.
 
-**Dragon set-up**: If you have Dragon installed, ensure that it is running, and is actively listening to your microphone.  Talon will automatically recognize Dragon and use it.
+w2l gen2 | Win/Mac/Linux | The default. Very fast. Decent command accuracy. Dictation accuracy is lacking. | [Talon Docs](https://talonvoice.com/docs/#wav2letter-setup) | Free
+w2l conformer | Win/Mac/Linux | Best (paid) option. Extremely good accuracy. Very new. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
+Dragon | Win | Good accuracy for both commands and dictation. Has quirks which can't be fixed by us. Professional version is recommended. | [Purchase here](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html) | [$300-$500](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html)
+Dragon remote | Win/Mac/Linux | Talon supports using Windows Dragon from another machine over the network. | See pinned messages in #beta on Slack |  [$300-$500](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html)
 
-**Wav2Letter set-up**: Follow the [wav2letter instructions in the the Talon docs](https://talonvoice.com/docs/#wav2letter-setup): download and extract the contents of [this zip file](https://talonvoice.com/dl/talon-w2l-small3-dslm-en_US.zip) into your talon directory, then everything is ready to go.
+**Note:** The Professional version of Dragon for Windows is recommended (but not strictly required) because it can be run in [Command Mode](https://www.nuance.com/products/help/dragon/dragon-for-mac6/enx/Content/Introduction/RecognitionModes.html).
+
+**Note:** The Mac Voice Control engine is technically supported in beta, but it's not recommended over conformer.
+
+### Dictation Engines for Additional Language Support
+
+| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine. Supports many non-English languages. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
+| vosk | Win/Mac/Linux |  Supported languages: [https://alphacephei.com/vosk/.](https://alphacephei.com/vosk/) | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
 
 
 ## Testing out the basics
