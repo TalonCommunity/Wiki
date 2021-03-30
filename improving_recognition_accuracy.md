@@ -62,17 +62,6 @@ Talon lets you configure how long it will wait after you stop speaking before tr
   Start with the value of 0.4, just slightly higher than the default, and increase only if necessary.
 
 
-## Many commands work badly
-
-If all the above isn't enough, a few more heavyweight changes are still available:
-
-* Remove all unused commands: Talon does a great job making use of the limited vocabulary to improve recognition.
-* Remove unused aliases for commands: Some commands and keys have several names.  Remove those you don't use.
-* Liberally use prefixes: To speed up typing with Talon, keys and formatters etc. are always directly available, without any command word. By using prefixed command words (like `spell <user.key>+` instead of just `<user.key>`) you again reduce the number of words to recognize, giving Talon more chance to guide recognition.
-
-Finally:
-
-
 ## Help improving the Talon recognition engine
 
 This will not help you today, but instead help to improve the talon engine for all of us in the future.  You can do this by providing speech (and noise) samples:
