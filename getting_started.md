@@ -44,7 +44,7 @@ Click the appropriate download link for your OS on talonvoice.com. (For the beta
 : Extract the `.tar.xz` file to a directory of your choosing, for instance `~/bin/`.  This will make Talon available for starting via `~/bin/talon/run.sh`.
 
 **Windows**
-: Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows) and [Setup Talon on Windows 10 with Dragon](/SettingUpTalonWindows10Dragon). (TODO: This doesn't seem to be up to date with the public version, where the default download is just a single executable.)
+: Extract the `.zip` file to `C:\Program Files\Talon`; you can start Talon via `C:\Program Files\Talon\talon.exe`.  Alternatively, if you want to use Dragon (or continue to use it), follow the instructions on [Installing Dragon](/InstallingDragonWindows). (TODO: This doesn't seem to be up to date with the public version, where the default download is just a single executable.)
 
 We still need to set-up a speech recognition engine and a talon configuration before are ready to go!
 
