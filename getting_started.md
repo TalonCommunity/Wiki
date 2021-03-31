@@ -50,21 +50,27 @@ If you don't have `git` available, and do not want to install it, download the [
 
 ## Speech Recognition Engine
 
-Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** You can use Dragon as your speech engine with Talon if you have it already. Otherwise, wav2letter (w2l) is recommended.
+Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** unless you already have Dragon, wav2letter (w2l) is recommended.
 
+Engine | OS | Description | Installation | Price
+--- | --- | --- | --- | ---
 w2l gen2 | Win/Mac/Linux | The default. Very fast. Decent command accuracy. Dictation accuracy is lacking. | [Talon Docs](https://talonvoice.com/docs/#wav2letter-setup) | Free
-w2l conformer | Win/Mac/Linux | Best (paid) option. Extremely good accuracy. Very new. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
+w2l conformer | Win/Mac/Linux | Best paid option. Extremely good accuracy. Very new. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
 Dragon | Win | Good accuracy for both commands and dictation. Has quirks which can't be fixed by us. Professional version is recommended. | [Purchase here](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html) | [$300-$500](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html)
 Dragon remote | Win/Mac/Linux | Talon supports using Windows Dragon from another machine over the network. | See pinned messages in #beta on Slack |  [$300-$500](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html)
 
 **Note:** The Professional version of Dragon for Windows is recommended (but not strictly required) because it can be run in [Command Mode](https://www.nuance.com/products/help/dragon/dragon-for-mac6/enx/Content/Introduction/RecognitionModes.html).
 
-**Note:** The Mac Voice Control engine is technically supported in beta, but it's not recommended over conformer.
-
 ### Dictation Engines for Additional Language Support
 
-| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine. Supports many non-English languages. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
+As of March 2021, w2l only supports English. If you need to dictate text in another language, the Talon beta supports the following options:
+
+| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
 | vosk | Win/Mac/Linux |  Supported languages: [https://alphacephei.com/vosk/.](https://alphacephei.com/vosk/) | See pinned messages in #beta on Slack | Needs [Talon Beta](/getting_started#beta-version-requires-patreon-support)
+
+Note that you cannot use webspeech or vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
+
+**Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
 
 
 ## Testing out the basics
