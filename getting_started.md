@@ -27,10 +27,6 @@ Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started)
 
 The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links and installation instructions can be found in the #beta channel's pinned messages.
 
-### Legacy
-
-There is also a legacy version of Talon for Mac only that is no longer actively developed, but still functioning. For users considering upgrading from legacy, the new version has a new configuration syntax, supports Windows and Linux, and has integration with the new wav2letter voice engine, an alternative to Dragon created because [Dragon was discontinued for Mac](http://nuance.custhelp.com/app/answers/detail/a_id/27843/~/dragon-professional-for-mac-6%3A-end-of-life%2C-end-of-support-dates). However, the new API is not backwards-compatible, so you will have to change your configuration files.
-
 ## Configuration
 
 Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
