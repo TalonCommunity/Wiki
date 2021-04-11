@@ -38,3 +38,20 @@ Make sure that you are in the correct mode. `knausj_talon` has two modes: comman
 
 * Use dictation mode for free-form speech dictation, like writing an email. (Switch by saying "dictation mode".)
 * Use command mode for everything else, including dictating individual letters or writing code. (Switch by saying "command mode".)
+
+## Talon has to be restarted for changes in configuration to take effect
+
+Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink. On Linux, this can be fixed by replacing the symlink by a [bind mount][bind-mount-stackexchange]:
+
+```sh
+rm ~/.talon; mkdir ~/.talon  # or whichever part is a symlink
+sudo mount --bind /path/to/dot/dir ~/.talon
+```
+
+[bind-mount-stackexchange]: https://unix.stackexchange.com/questions/198590/what-is-a-bind-mount
+
+This can be made permanent by adding the following line to `/etc/fstab`:
+
+```
+/path/to/dot/dir	/home/<user>/.talon	none	bind
+```
