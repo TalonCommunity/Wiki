@@ -1,6 +1,11 @@
-# Integrating Talon With Other Software
+---
+sidebar: true
+order: 6
+---
 
-This page documents helpful third party software and integrations that play nice with Talon. Things that let you navigate without a mouse or integrate key presses into complex apps should be added here :)
+# Software that Pairs Well with Talon
+
+This page documents third party software that pair well with Talon.
 
 ## Navigation Software
 
@@ -17,4 +22,4 @@ This page documents helpful third party software and integrations that play nice
 | [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/) | Free | Firefox/Chrome | More vim style control in browser |
 
 ## Linux Accessibility Notes
-Once Talon can interface with Linux's accessibility tools the only terminal emulators that provide interfaces are VTE-based ones like Termite (e.g. Kitty & Alacritty don't expose any information)
+Once Talon can interface with Linux's accessibility tools, the only terminal emulators that provide interfaces are VTE-based ones like Termite (e.g. Kitty & Alacritty don't expose any information).
