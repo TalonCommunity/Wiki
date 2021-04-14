@@ -13,4 +13,22 @@ code, pre {
   font-size: .9em;
   color: inherit;
 }
+
 table {max-width: 70rem;}
+
+details {
+  padding: .5em;
+  margin: 1.25em;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  background-color: #eeeeee;
+}
+
+details > summary {
+  cursor: pointer;
+}
+
+details > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

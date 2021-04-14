@@ -73,41 +73,6 @@ Note that you cannot use webspeech or vosk standalone; they don't handle command
 **Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
 
 
-## Testing out the basics
-
-Now start/restart Talon. If you are on a Mac, Talon's icon should show up in the menu bar in the upper right corner of your screen:
-
-![screenshot desktop mac with talon icon](media/talon_icon_menubar.png)
-
-If it's not there, recheck the installation, and if all seems in order, ask for help in #help.
-
-Try a few basic commands, like "help alphabet" and "help close". That should open and close a window showing you Talon's spelling alphabet. Or open any text editor of your liking, and say "phrase hello world". Talon should type `hello world` into the text editor.  You can also try saying
-
-- "enter" (which presses Enter)
-- "air bat cap" (which types `abc`)
-
-If the voice commands do nothing, the culprit could be the microphone setting.  A click on the Talon icon will open a menu where you can check that the "Microphone" selected is the correct mic. This is what that menu looks like on Mac:
-
-![screenshot desktop mac with talon icon](media/talon_menu_microphone.png)
-
-Make sure your microphone is not muted, and that the gain (or volume slider) of the mic is not too low. Confirm that your computer is getting microphone input and the volume isn't too low.
-
-**Mac:**
-
-Open System Preferences > Sound > Input. Watch the Input level as you speak in to the microphone. If you see the level rising and falling as you speak, your microphone is working properly.
-
-![screenshot desktop mac with talon icon](media/sound_input_mac.gif)
-
-**Windows:**
-
-Select Start > Settings > System > Sound. In Sound settings, go to Input > Test your microphone and look for a blue bar that rises and falls as you speak into your microphone. If the bar is moving, your microphone is working properly.
-
-
-Should that not help, check out [Troubleshooting](/troubleshooting), and ask for help in #help.
-
-TODO: per-OS guide plus dragon specifics on how to check for correct microphone.
-
-
 ## Basic Usage
 
 The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup.
