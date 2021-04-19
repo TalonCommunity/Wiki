@@ -246,5 +246,4 @@ drag
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 
 * [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
-* Check the [advanced talon collection](/advanced_talon) for alternative speech recognition engines, configurations, and other stuff.
 * [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure talon to your liking.
