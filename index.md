@@ -18,7 +18,6 @@ The goal of this wiki is to provide information and documentation for the users 
 | help with customizing your configuration or writing Talon plugins | [Scripting and Configuration](/scripting_and_configuration) |
 | troubleshooting help | [Troubleshooting](/troubleshooting) |
 | help with deciding on a microphone or eye tracker | [Hardware](/hardware) |
-| alternative configurations and speech models | [Advanced Talon](/advanced_talon) |
 | videos of Talon in use | [Video Demos](/videos) |
 | answers to frequently asked questions | [FAQ](/FAQ) |
 
