@@ -72,8 +72,14 @@ This will not help you today, but instead help to improve the talon engine for a
 
 ## Collected alternatives to the default alphabet
 
-TODO: review and extend
+Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack.
 
-* Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change `air` from the alphabet; e.g., someone from the UK on the Slack uses `arch` instead.
-* I (ym) have personally found that `met` works well as a replacement for `made`.
-* And if you struggle with `whale`, there's also `whip`.
+knausj alphabet | alternative
+--- | ---
+air | arch
+each | birch
+jury | jail
+jury | judge
+jury | jane
+made | met
+whale | whip
