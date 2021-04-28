@@ -216,8 +216,6 @@ paste that
 
 ### Working with the mouse and scrolling
 
-[How to click with the pop sound](/scripting_and_configuration#pop-to-click)
-
 ```
 dubclick (to double left click)
 righty (to right click)
