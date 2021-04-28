@@ -78,8 +78,10 @@ knausj alphabet | alternative
 --- | ---
 air | arch
 each | birch
+sit | ivy
 jury | jail
 jury | judge
 jury | jane
 made | met
 whale | whip
+zip | zone
