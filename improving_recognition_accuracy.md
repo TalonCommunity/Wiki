@@ -78,6 +78,7 @@ knausj alphabet | alternative
 --- | ---
 air | arch
 each | birch
+odd | oink
 sit | ivy
 jury | jail
 jury | judge
