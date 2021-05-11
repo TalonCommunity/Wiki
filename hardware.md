@@ -48,6 +48,8 @@ Many microphones used by studio professionals and ambitious podcasters will like
 
 Some people do report success with much cheaper microphones, but many also do not.  If you already have one, just try it out, but if not, think twice before buying cheap.
 
+### Windows & Bluetooth Headsets
+Windows default drivers have a limitation and that they _cannot_ record and play stereo sound simultaneously. See [this stackoverflow answer](https://superuser.com/questions/978089/simultaneous-use-of-a2dp-and-hfp-bluetooth-profiles) for more details. For this reason, if you want to hear audio while dictating, you _must_ use a wired (or plug in your) headset on Windows. OSX does not have this limitation.
 
 ### Correctly setting up a microphone
 
