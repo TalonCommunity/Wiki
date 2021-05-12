@@ -80,6 +80,7 @@ air | arch
 each | birch
 odd | oink
 sit | ivy
+sit | ice
 jury | jail
 jury | judge
 jury | jane
