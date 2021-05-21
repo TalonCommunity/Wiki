@@ -77,6 +77,7 @@ Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an
 knausj alphabet | alternative
 --- | ---
 air | arch
+bat | batch
 each | birch
 odd | oink
 sit | ivy
