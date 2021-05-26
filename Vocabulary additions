@@ -1,0 +1,21 @@
+# Vocabulary additions
+
+You can modify the vocabulary to allow Talon to recognize additional words, or change how recognition of a specific word is interpreted.
+
+## Adding new words
+as [can be seen](https://github.com/knausj85/knausj_talon/blob/master/code/vocabulary.py#L82) in the talon scripts, you can define new vocabulary in a CSV file.
+this file `additional_words.csv` is placed in the `settings/` subdirectory of knausj_talon.
+
+the file looks like this:
+```csv
+Word(s), Spoken Form (If Different)
+N map, nmap
+```
+
+## Defining word replacements
+similarly, you can define word replacements in `words_to_replace.csv`:
+
+```csv
+Replacement,Original
+cache,cash
+```
