@@ -123,7 +123,7 @@ A voice command has the format `RULE: BODY`, where `RULE` determines what words 
 
 This command, for example, will press the shortcut alt-shift-down whenever you say either “channel unread next”, “unread next”, or “goneck”.
 
-Rules have a quite versatile syntax, similar to [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form), or regular expressions (but word- rather than character-oriented):
+Rules have a versatile syntax that is like a word based regex:
 
 | Syntax | Description | Matches |
 | --- | --- | --- |
