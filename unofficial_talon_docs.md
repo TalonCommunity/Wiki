@@ -131,14 +131,10 @@ Rules have a versatile syntax that is like a word based regex:
 | `[foo]` | Optional | “foo” or “” (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
-| `foo\|bar` | Choice | “foo”, “bar” |
+| `foo|bar` | Choice | “foo”, “bar” |
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
-
-NB. If you see a backslash in the syntax example for choice, `foo\|bar`, ignore it; a quirk of Github's markdown parsing makes it necessary.
-
-TODO: Document the body syntax.
 
 ### Implementing actions
 
