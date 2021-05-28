@@ -363,11 +363,16 @@ will set the `key_wait` setting to 1.5 whenever the current application is emacs
 
 The remainder of this page describes various important settings that you might want to meddle with.
 
+The following three settings, `insert_wait`, `key_hold`, and `key_wait`, can be used to slow down keypresses when dealing with applications that are behaving unreliably (e.g., key presses seem to be jumbled or dropped).
+
 `insert_wait`
-: This will add a delay in ms between keys pressed in `insert()` actions. The default is 0.
+: Increase this if characters seem to be jumbled in a specific app when typing whole sentences. Default is 0.
+
+`key_hold`
+: Increase this if you're playing a game and some keys aren't registering at all. You should probably increase it in 16ms increments, e.g. set it to 16ms or 32ms.
 
 `key_wait`
-: This is a multiplier that changes how long Talon waits between sending keypresses to the operating system. I believe the default is 1.
+: Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the the slowest overall keypress rate. Default is 1.0 in milliseconds.
 
 `speech.debug`
 : Enabling this (`speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises. The default value is 0.
