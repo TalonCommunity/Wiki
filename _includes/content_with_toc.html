@@ -9,7 +9,6 @@ Includes content with a table of contents right before the second header.
     {%- if html_headers contains next_three_characters -%}
         {%- if seen_first_header -%}
             {{ include.content | slice: 0, i }}
-            {%- include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" id="git-wiki-toc" h_min=2 h_max=3 ordered=1 -%}
             {{ include.content | slice: i, final_index }}
             {%- break -%}
         {%- else -%}
