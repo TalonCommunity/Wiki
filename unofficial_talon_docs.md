@@ -87,9 +87,9 @@ The following requirements can be set:
 `code.language`
 : specify a currently active programming language
 
-Additionally, you can create user `scope`s. TODO: add a reference for user scopes
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack.workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace. See [the scope concept section](/unofficial_talon_docs#scopes) below for more information.
 
-`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas `app.exe`, `title` etc. can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
+`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas some like `app.exe`, `title`, and user scopes can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
 
 Each kind of requirement can be listed several times. Entries of the same kind of requirement are `OR`'d together, and of different kinds are `AND`'d. For example:
 
@@ -263,11 +263,11 @@ This sets you up with a module `mod` for declaring actions, lists, and captures;
 
 ## Talon Concepts
 
-In order to script Talon, it is useful to understand some of its basic concepts: modules, contexts, actions, lists, and captures.
+In order to script Talon, it is useful to understand some of its basic concepts: modules, contexts, actions, lists, and captures. Much less commonly, you may also want to use scopes.
 
 ### Modules
 
-A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), and [captures](/unofficial_talon_docs#captures), scopes, tags and well-known applications. In Python, you can construct a module like so:
+A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), tags and well-known applications. In Python, you can construct a module like so:
 
 ```
 from talon import Module
@@ -347,6 +347,39 @@ Captures parse some user-spoken words and run arbitrary Python code to produce a
 
 TODO: give an example
 
+
+### Scopes
+
+Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in.
+
+You need to write custom Python code to keep your scope information up to date. The following example implements a scope that makes the current time available as a matcher property.
+
+`test.py`
+```
+import datetime
+from talon import Module, cron
+
+mod = Module()
+
+@mod.scope
+def my_scope_updater():
+    # Sets the user.current_time scope to something like "04:12 PM"
+    return {"current_time": datetime.datetime.now().strftime("%I:%M %p")}
+
+# Re-run the above code every minute to update the scope. You can run
+# <scope function>.update() from anywhere you like to trigger an update.
+cron.interval("1m", my_scope_updater.update)
+```
+
+`test.talon`
+```
+# This matcher can either be a plain string or a regex
+user.current_time: /AM$/
+-
+is it morning: "yes it is!"
+```
+
+`scopes` are 'global' in the sense that you can't override them for particular contexts in the same way as actions. Any file can simply overwrite a particular scope's value by implementing some python code like the above.
 
 ## Talon Settings
 
