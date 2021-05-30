@@ -5,6 +5,10 @@
 
     {% include git-wiki/components/action_btn/page_actions.html %}
 
+    {% if site.show_downloads %}
+    {% include git-wiki/components/action_btn/downloads.html %}
+    {% endif %}
+
     {% include git-wiki/components/search/index.html %}
 
     {% if site.inc_after_tools %}

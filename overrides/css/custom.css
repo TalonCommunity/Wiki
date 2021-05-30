@@ -36,3 +36,46 @@ details > img {
 #git-wiki-toc li ol {
   margin:  0px;
 }
+
+ul.list-reset li {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style: none;
+}
+
+ul.list-reset {
+   margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: none;
+   list-style: none;
+}
+
+.sidebar {
+  float: left;
+  width: 280px;
+}
+
+#git-wiki-sidebar {
+  float: none;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main-navigation ul {
+  display: flex;
+}
+
+.main-navigation ul li {
+ padding-right: 20px;
+}
+
+.git-wiki-downloads li {
+  list-style: none;
+  list-style-type: none;
+  font-size: 14px;
+  display: block;
+  color:#222
+}

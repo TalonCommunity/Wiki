@@ -748,7 +748,7 @@ a {
     display: none !important;
   }
   .w3-sidebar.w3-collapse {
-    display: block !important;
+    display: flex !important;
   }
 }
 @media (max-width: 992px) and (min-width: 601px) {

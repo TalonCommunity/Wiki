@@ -139,14 +139,12 @@ img {
 }
 
 #git-wiki-sidebar {
-  width: 280px !important;
   float: left;
   position: relative !important;
   -webkit-font-smoothing: subpixel-antialiased;
   /*overflow-y: auto;
   overflow-x: auto;*/
   max-height: 100%;
-  padding-bottom: 55px !important;
 }
 
 @media print,
