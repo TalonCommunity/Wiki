@@ -210,3 +210,4 @@ Once the basics somewhat work for you, you'll likely want to improve your experi
 
 * [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
 * [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure talon to your liking.
+* [Software that Pairs Well with Talon](/other_integrations): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)
