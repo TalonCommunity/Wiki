@@ -32,3 +32,7 @@ details > img {
   margin-left: auto;
   margin-right: auto;
 }
+
+#git-wiki-toc li ol {
+  margin:  0px;
+}

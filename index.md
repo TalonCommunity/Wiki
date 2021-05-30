@@ -7,7 +7,8 @@
 Talon is free to use and ongoing development is made possible by [donations on Patreon](https://www.patreon.com/lunixbochs).
 
 ## Goal of this Wiki
-The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created. This wiki is maintained by the members of the Talon community (i.e., anyone who uses Talon). Contributions are welcomed and appreciated. See the [Contributing](/CONTRIBUTING) documentation. Please keep in mind our [Code of Conduct](/CODE_OF_CONDUCT).
+
+The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created.
 
 ## Wiki Navigation
 
@@ -29,3 +30,7 @@ A few notable channels:
 - `#health`: chat with others about computer health issues, share knowledge, find other folks who might be going through similar things
 - `#talon-docs`: chat about Talon documentation such as this wiki
 - `#hardware`: chat about hardware, e.g., microphones
+
+# Contributing
+
+This wiki is maintained by the members of the Talon community (i.e., anyone who uses Talon). Contributions are welcomed and appreciated. See the [Contributing](/CONTRIBUTING) documentation. Please keep in mind our [Code of Conduct](/CODE_OF_CONDUCT).

@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 6
----
-
 # Software that Pairs Well with Talon
 
 This page documents third party software that pair well with Talon.
