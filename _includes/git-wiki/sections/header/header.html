@@ -8,12 +8,10 @@
   </a>
 </div>
 <header class="w3-sidebar w3-bar-block w3-collapse" id="git-wiki-sidebar">
-  <div>
     <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="sidebar_toggle()">Close &times;</button>
     {% if site.inc_before_header %}
     {% include {{ site.inc_before_header }} %}
     {% endif %}
-
     <div class="w3-hide-medium w3-hide-small">
       {% if site.logo_url %}
       {% include git-wiki/components/logo/logo.html %}
@@ -42,7 +40,6 @@
     {% if site.inc_after_header %}
     {% include {{ site.inc_after_header }} %}
     {% endif %}
-  </div>
 </header>
 <script>
   function sidebar_toggle() {

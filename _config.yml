@@ -37,7 +37,8 @@ wiki_folder: ""
 use_github_wiki: false
 # (boolean) Enable "Edit with Prose.io" button in tools, it's a 3rd party
 # service to edit github markdown pages easily
-use_prose_io: true
+use_git_wiki_tools: false
+use_prose_io: false
 # Select search_engine component from:
 # - js: it uses a built in javascript component that uses generated js object
 # - js_rss: it uses a built in javascript component that uses generated  sitemap_full.xml to search inside your wiki with lunr library (slow and experimental)
@@ -159,7 +160,7 @@ inc_after_tail :
 inc_before_tools : 
 inc_after_tools : 
 
-inc_before_page_list : sidebar.html
+inc_before_page_list : nav-links.html
 inc_after_page_list :
 inc_before_post_list :
 inc_after_post_list :

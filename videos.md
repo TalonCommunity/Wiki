@@ -1,5 +1,5 @@
 ---
-sidebar: true
+navbar: true
 order: 5
 published: true
 ---
