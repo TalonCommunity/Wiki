@@ -147,12 +147,13 @@ If you are on Ubuntu or another Gnome-based Linux distribution, `focus` might no
 ### Working with tabs
 
 ```
+tab (open | new)
 tab last
 tab next
 tab close
-tab reopen
-(page | scroll) up
-(page | scroll) [down]
+tab (reopen|restore)
+go tab <number>
+go tab final
 ```
 
 ### Working with media
@@ -177,6 +178,8 @@ run calibration (say "run calibration" to start Tobii calibration)
 copy that
 cut that
 paste that
+undo that
+redo that
 ```
 
 ### Working with the mouse and scrolling
