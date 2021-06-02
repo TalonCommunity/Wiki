@@ -37,7 +37,7 @@ Some important commands are specified in `.py` files, like the alphabet.  Changi
 
 _Example:_  If the `close` in `tab close` does not work for you (but `tab open` etc. do), try out `tab wipe` or `tab quit` instead.
 
-_Example:_ Your `zip` (letter Z) is always understood as `sit` (lette I), change `sit` to `ivy`, or alternatively change `zip` to `zone`.
+_Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`.
 
 
 ## Talon cuts me off mid-command or mid-sentence
