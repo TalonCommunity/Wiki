@@ -24,7 +24,11 @@ permalink: pretty
 # (boolean) Enable/disable download buttons in sidebar
 show_downloads: true
 repository: TalonCommunity/Wiki
-# (string) Specify branch rendered by gitpages allowing wiki tool buttons to work
+# (string) Specify github metadata allowing wiki tool buttons to work
+git_hostname: "github.com"
+git_owner_url: "https://github.com/TalonCommunity"
+git_owner_name: "TalonCommunity"
+repository_url: "https://github.com/TalonCommunity/Wiki"
 git_branch: "main"
 # (string) Url of logo image, it can be full, absolute or relative.
 logo_url: 
