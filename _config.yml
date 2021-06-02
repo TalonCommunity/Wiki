@@ -29,6 +29,7 @@ git_hostname: "github.com"
 git_owner_url: "https://github.com/TalonCommunity"
 git_owner_name: "TalonCommunity"
 repository_url: "https://github.com/TalonCommunity/Wiki"
+git_repository_nwo: "TalonCommunity/Wiki"
 git_branch: "main"
 # (string) Url of logo image, it can be full, absolute or relative.
 logo_url: 
