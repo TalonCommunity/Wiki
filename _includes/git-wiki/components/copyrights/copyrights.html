@@ -1,11 +1,5 @@
-{% if site.github.is_project_page %}
 <div class="git-wiki-copyrights">
-    <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-    {% endif %}
-    <p><small>Hosted on GitHub Pages &mdash; Powered by <a href="https://github.com/Drassil/git-wiki-theme">Git-Wiki v{{
-                version }}</a> </p>
+    <p>This project is maintained by <a href="{{ site.git_owner_url }}">{{ site.git_owner_name }}</a></p>
 
-    {% if site.github.is_project_page %}
-    <p class="view"><a href="{{ site.github.repository_url }}">View the Project on {% if site.github.hostname == "gitlab.com" %} Gitlab {% else %} Github {% endif %} <small>{{ github_name }}</small></a></p>
+    <p class="view"><a href="{{ site.repository_url }}">View the Project on Github<small>{{ github_name }}</small></a></p>
 </div>
-{% endif %}
