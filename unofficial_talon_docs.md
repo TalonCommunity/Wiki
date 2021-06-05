@@ -246,20 +246,20 @@ Talon files can also adjust settings; for more on this see [Talon Settings](/uno
 
 Although Talon files are the primary way of extending Talon, there are some things that they can't do. In particular, they can't:
 
-1. Declare [actions](/unofficial_talon_docs#actions), although they can implement and invoke them.
+1. Declare [actions](/unofficial_talon_docs#actions), although they can invoke them. They can also currently implement them, but this is deprecated.
 2. Declare or override [lists](/unofficial_talon_docs#lists), although they can use them in rules.
 3. Declare or implement [captures](/unofficial_talon_docs#captures), although they can use them in rules.
 4. Run arbitrary Python code.
 
 For those things you need Python files, which may also be placed in `~/.talon/user/` or its subdirectories. A good way to start most Talon Python files is:
 
-```
+```python
 from talon import Module, Context
 mod = Module()
 ctx = Context()
 ```
 
-This sets you up with a module `mod` for declaring actions, lists, and captures; and a context `ctx` for implementing or overriding actions, lists, and captures, and otherwise doing whatever you could do in a Talon file. For more documentation on this, see [Talon Concepts](/unofficial_talon_docs#talon-concepts/).
+This sets you up with a module `mod` for declaring actions, lists, and captures; and a context `ctx` for implementing or overriding actions, lists, and captures. For more documentation on this, see [Talon Concepts](/unofficial_talon_docs#talon-concepts/).
 
 ## Talon Concepts
 
@@ -278,11 +278,11 @@ TODO: are there any interesting arguments to Module?
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags).
+A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 In Python, you can construct a context like so:
 
-```
+```python
 from talon import Context
 ctx = Context()
 ```
@@ -290,7 +290,7 @@ ctx = Context()
 When initially constructed, a context has no conditions attached, and so it is always active.
 You can make this context conditional by setting `matches`:
 
-```
+```python
 ctx.matches = "mode: command"
 ```
 
