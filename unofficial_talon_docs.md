@@ -43,6 +43,7 @@ insert code fragment:
     key(up)
 
 # This says how to implement the actions app.tab_next and app.tab_previous.
+# Note that implementing actions in .talon files is deprecated. See the Actions section below for the supported syntax.
 action(app.tab_next): key(ctrl-tab)
 action(app.tab_previous): key(shift-ctrl-tab)
 
@@ -135,16 +136,6 @@ Rules have a versatile syntax that is like a word based regex:
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
-
-### Implementing actions
-
-In place of an ordinary rule, you can also implement an [action](/unofficial_talon_docs#actions). In this case the rule has the form `action(NAME_OF_ACTION)`. The body syntax is the same. For example:
-
-```
-action(app.tab_next): key(ctrl-tab)
-```
-
-This means whenever this file's context applies and the action `app.tab_next` is invoked by a Talon voice command, it will press the shortcut ctrl-tab -- unless that action is overridden in some more specific context.
 
 ### Tags
 
@@ -385,7 +376,7 @@ Scopes allow you to supply additional properties that can be matched in the head
 You need to write custom Python code to keep your scope information up to date. The following example implements a scope that makes the current time available as a matcher property.
 
 `test.py`
-```
+```python
 import datetime
 from talon import Module, cron
 
