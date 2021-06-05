@@ -294,13 +294,19 @@ You can make this context conditional by setting `matches`:
 ctx.matches = "mode: command"
 ```
 
+See examples in the Actions, Lists, and Captures sections below for information about using Contexts with those features.
+
 ### Actions
 
 An action is a function that can be called by Talon voice commands, whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
 
-Some actions, like `edit.save`, are built into Talon. But you can also declare your own actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
+Some actions, like `edit.save`, are defined by Talon (but not implemented). You can also declare your own custom actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
 
 ```python
+from talon import Module
+
+mod = Module()
+
 @mod.action_class
 class Actions:
     def find_reverse(): "Begins a reverse search."
@@ -311,9 +317,33 @@ class Actions:
 
 This declares the actions `user.find_reverse` and `user.mangle` (all user-defined actions are prefixed with `user.`). It also gives a default implementation for `user.mangle` that simply prepends `__` to the input. As in this example, all actions must come with a docstring and type annotations for their arguments and return value.
 
-TODO: how can you override actions in a python file using a context?
+As mentioned earlier it's pretty common to want to overwrite actions for a particular application (or other context). Taking the example of Emacs mentioned earlier let's say we want to override the edit.save action and also implement/override the two actions we declared above. The following example shows two equivalent ways of doing that.
 
-TODO: document `@ctx.action_class('win')` & similar.
+```python
+from talon import Context, actions
+
+ctx = Context()
+ctx.matches = "app: Emacs"
+
+# Note we don't have to specify type annotations or a docblock when
+# overriding actions since those are inherited from the definition.
+
+# Override a single action within the given Context
+@ctx.action("edit.save")
+def emacs_save():
+    actions.key("ctrl-x ctrl-s")
+
+# Override multiple "user." actions within the given context. The names of the class functions correspond to the actions we're overriding.
+@ctx.action_class("user")
+class MyEmacsActions:
+    def find_reverse():
+        actions.key("ctrl-r")
+
+    def mangle(s):
+        return "emacs__" + s
+```
+
+So now when we use the `user.mangle("some string")` action in a `.talon` file or `actions.user.mangle("some string")` in a `.py` file then by default we'll get `"__some string"`, but if our "app: Emacs" context matches then we'll get `"emacs__some string"`.
 
 ### Lists
 
