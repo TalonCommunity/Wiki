@@ -129,13 +129,57 @@ Rules have a versatile syntax that is like a word based regex:
 | Syntax | Description | Matches |
 | --- | --- | --- |
 | `foo` | Words | “foo” |
-| `[foo]` | Optional | “foo” or “” (nothing) |
+| `[foo]` | Optional | “foo” or null (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
 | `foo|bar` | Choice | “foo”, “bar” |
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
+
+The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
+
+```
+-
+# The following lists and captures are implemented in the knausj_talon repo
+# {user.letter} is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
+# {user.number} is a list mapping words like 'five' to number strings like '5'
+# <digits> is a capture that maps a variable length phrase like
+#   "one two three" onto an integer 123
+
+# Saying "double letter plex" presses ctrl+a then inserts "x." then "x"
+double letter {user.letter}:
+    modified = letter + "."
+    key(ctrl-a)
+    insert(modified)
+    insert(letter)
+
+# Saying "defaultable plex" inserts "x", saying "defaultable" inserts "default"
+defaultable [{user.letter}]:
+    insert(letter or "default")
+
+# Saying "choose plex" inserts "x", saying "choose five" inserts "5"
+choose ({user.letter}|{user.number}):
+    insert(letter or number)
+
+# Saying "join plex and gust" or "join plex gust" inserts "xg"
+join {user.letter} [and] {user.letter}:
+    insert(letter_1 + letter_2)
+
+# Saying "add one two three and four five six" inserts "579"
+add <digits> and <digits>:
+    insert(digits_1 + digits_2)
+
+# Saying "insert lots plex gust plex" inserts "['x', 'g', 'x']"
+insert lots {user.letter}+:
+    insert(letter_list)
+```
+
+In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding _1, _2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the _list suffix. Individual items from the multiple match can be referred to with the _1, _2 suffixe as well.
+
+In terms of the Talonscript itself, it only has quite basic operations. We have variable assignment, invocation of actions, arithmetic, some boolean operators, and concatenation of strings.
+
+TODO: What are the full capabilities of Talonscript?
 
 ### Tags
 
