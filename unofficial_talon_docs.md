@@ -10,7 +10,7 @@ published: true
 The primary way to extend talon is using `.talon` files placed in `~/.talon/user/` or its subdirectories. A talon file comes in two parts: a header defining the [context](/unofficial_talon_docs#contexts) in which it is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
 * Define voice commands.
-* Implement/override the behavior of [actions](/unofficial_talon_docs#actions).
+* Implement/override the behavior of [actions](/unofficial_talon_docs#actions) **Warning: soon to be deprecated. Implement actions in python instead.**
 * Adjust [settings](/unofficial_talon_docs#talon-settings).
 * Activate registered [tags](/unofficial_talon_docs#tags).
 * Activate registered [apps](/unofficial_talon_docs#apps)
@@ -42,6 +42,7 @@ insert code fragment:
     key(shift-enter:2)
     key(up)
 
+### WARNING: actions implemented in Talon files will soon be deprecated. ###
 # This says how to implement the actions app.tab_next and app.tab_previous.
 # Note that implementing actions in .talon files is deprecated. See the Actions section below for the supported syntax.
 action(app.tab_next): key(ctrl-tab)
@@ -219,7 +220,7 @@ app: Firefox
 tag(): user.tabs
 ```
 
-Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in `firefox.talon`. Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
+Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in `firefox.talon` (**WARNING: implementing actions in talon files will soon be deprecated and need to be implemented in python instead**). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
 
 ### Apps
@@ -249,6 +250,7 @@ Use the well-known app - **`fancyedit.talon`:**
 ```
 app: fancyed
 -
+# WARNING: actions implemented in .talon files will be deprecated soon.
 action(edit.find): key(ctrl-alt-shift-y)
 ```
 
@@ -285,6 +287,7 @@ Although Talon files are the primary way of extending Talon, there are some thin
 2. Declare or override [lists](/unofficial_talon_docs#lists), although they can use them in rules.
 3. Declare or implement [captures](/unofficial_talon_docs#captures), although they can use them in rules.
 4. Run arbitrary Python code.
+5. Soon, they will no longer be able to implement [actions](/unofficial_talon_docs#actions), which will instead need to be implemented in Python.
 
 For those things you need Python files, which may also be placed in `~/.talon/user/` or its subdirectories. A good way to start most Talon Python files is:
 
@@ -314,6 +317,7 @@ TODO: are there any interesting arguments to Module?
 ### Contexts
 
 A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+
 
 In Python, you can construct a context like so:
 
