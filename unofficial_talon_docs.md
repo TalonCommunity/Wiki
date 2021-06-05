@@ -283,7 +283,7 @@ TODO: are there any interesting arguments to Module?
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, adjust [settings](https://talon.wiki/talon-settings/), and activate [tags](/unofficial_talon_docs#tags).
+A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags).
 
 In Python, you can construct a context like so:
 
