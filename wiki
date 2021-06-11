@@ -45,8 +45,8 @@
 
 [Search every fork of knausj]( https://search.talonvoice.com/search/)  This search engine helps you find scripts people have written to customize talon for themselves. Most people start with the basic knausj script set and customize it. If the way they coped the knausj script was by forking it on github, their customizations are public and you can search to see if someone has already made voice commands for your favorite programs!
 
-Programs that Pair Well With Talon
+### Programs that Pair Well With Talon
 
-[Vimium for chrome](https://vimium.github.io/) The most important thing Vimium does is put a little pair of letters beside every link when you press the 'f' key.  When combined with Talon, that allows you to stay the Talon work for 'f,' (AKA fine) and, when the letters appear, use other talon letter commands to very quickly click on links.  Makes hands-free browing very fast!
+[Vimium for Chrome](https://vimium.github.io/) The most important thing Vimium does is put a little pair of letters beside every link when you press the 'f' key.  When combined with Talon, that allows you to stay the Talon work for 'f,' (AKA fine) and, when the letters appear, use other talon letter commands to very quickly click on links.  Makes hands-free browing very fast!
 
-[Vimium for firefox](https://addons.mozilla.org/en-GB/firefox/addon/vimium-ff/) Vimium for firefox. Does the same as vimium for chrome.  Essential for heavy internet users. 
+[Vimium for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/vimium-ff/) Vimium for firefox. Does the same as vimium for chrome.  Essential for heavy internet users. 
