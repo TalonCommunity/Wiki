@@ -23,7 +23,7 @@ Talon has two mostly compatible current versions: public and beta. Both versions
 * **Public Version (free):** Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
 * **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links and installation instructions can be found in the #beta channel's pinned messages.
 
-## Speech Recognition Engine
+## Configure a Speech Recognition Engine
 
 Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** unless you already have Dragon, wav2letter (w2l) is recommended.
 
@@ -48,7 +48,7 @@ Note that you cannot use webspeech or vosk standalone; they don't handle command
 **Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
 
 
-## Configuration
+## Install a Talon Configuration Set
 
 Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
 
