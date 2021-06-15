@@ -11,8 +11,8 @@ published: true
 The official installation and getting started instructions are available at [talonvoice.com/docs](https://talonvoice.com/docs/). We strongly recommend you follow the instructions there; this page contains additional advice only. The basic installation flow is as follows:
 
 1. Install Talon.
-1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
-1. Install a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
+1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#configure-a-speech-recognition-engine).
+1. Install a [configuration set](https://talon.wiki/getting_started/#install-a-talon-configuration-set), to make some commands available.
 1. Try some [basic commands](/getting_started#basic-usage)
 1. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com) for help, tips, and connecting with other Talon users.
 
@@ -71,7 +71,7 @@ If you don't have `git` available, and do not want to install it, download the [
 
 ## Basic Usage
 
-The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup.
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#install-a-talon-configuration-set)). These commands may vary depending on your individual setup.
 
 
 ### Command history
