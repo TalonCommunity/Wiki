@@ -27,27 +27,6 @@ Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started)
 
 The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links and installation instructions can be found in the #beta channel's pinned messages.
 
-## Configuration
-
-Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
-
-On **Linux/Mac**:
-```
-mkdir -p ~/.talon/user
-cd ~/.talon/user
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
-
-On **Windows**:
-```
-md "%APPDATA%\Talon\user"
-cd "%APPDATA%\Talon\user"
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
-
-If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
-
-
 ## Speech Recognition Engine
 
 Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** unless you already have Dragon, wav2letter (w2l) is recommended.
@@ -71,6 +50,27 @@ As of March 2021, w2l only supports English. If you need to dictate text in anot
 Note that you cannot use webspeech or vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
 
 **Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
+
+
+## Configuration
+
+Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
+
+On **Linux/Mac**:
+```
+mkdir -p ~/.talon/user
+cd ~/.talon/user
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
+
+On **Windows**:
+```
+md "%APPDATA%\Talon\user"
+cd "%APPDATA%\Talon\user"
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
+
+If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
 
 
 ## Basic Usage
