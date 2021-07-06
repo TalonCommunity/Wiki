@@ -316,6 +316,8 @@ class Actions:
 
 This declares the actions `user.find_reverse` and `user.mangle` (all user-defined actions are prefixed with `user.`). It also gives a default implementation for `user.mangle` that simply prepends `__` to the input. As in this example, all actions must come with a docstring and type annotations for their arguments and return value.
 
+Actions are self-documenting. A list of all loaded actions can be accessed via the Talon Console with `actions.list()`.
+
 TODO: how can you override actions in a python file using a context?
 
 TODO: document `@ctx.action_class('win')` & similar.
