@@ -31,6 +31,7 @@ details > img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding:  3px;
 }
 
 #git-wiki-toc li ol {

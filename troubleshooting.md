@@ -52,10 +52,30 @@ After you have started the Talon application, look for the Talon icon in the men
 <p>
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
-<img src="/media/talon_icon_menubar.png"
+<img src="/media/talon_menubar_awake.png"
      alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
  />
 </details>
+
+### Check that Talon is Awake
+
+When Talon is running, it will be in one of a few different [modes](/getting_started#switch-between-modes). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
+
+If you are trying to use Talon commands and Talon is not responding, make sure Talon is not in sleep mode. The Talon icon in the menubar provides some visual cue as to what mode Talon is in:
+
+<details>
+<summary role="button">Mac</summary>
+<img src="/media/talon_menubar_awake.png"
+     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+ />
+<img src="/media/talon_menubar_asleep.png"
+     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+ />
+</details>
+
+**Note:** Depending on your version of Talon, this icon may use color to indicate awake/asleep (green=awake, red=asleep) instead of the slash as pictured above. The slash is used in newer versions.
+
+You can also check the mode by clicking the icon and looking for which mode is set under `Speech Recognition`.
 
 
 ### Check that Talon is using the Correct Microphone
