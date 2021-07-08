@@ -11,44 +11,19 @@ published: true
 The official installation and getting started instructions are available at [talonvoice.com/docs](https://talonvoice.com/docs/). We strongly recommend you follow the instructions there; this page contains additional advice only. The basic installation flow is as follows:
 
 1. Install Talon.
-1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#speech-recognition-engine).
-1. Download a [configuration set](https://talon.wiki/getting_started/#configuration), to make some commands available.
+1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#configure-a-speech-recognition-engine).
+1. Install a [configuration set](https://talon.wiki/getting_started/#install-a-talon-configuration-set), to make some commands available.
+1. Try some [basic commands](/getting_started#basic-usage)
 1. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com) for help, tips, and connecting with other Talon users.
 
 ## Install Talon
 
 Talon has two mostly compatible current versions: public and beta. Both versions have support for Mac, Linux, and Windows.
 
-### Public Version (free)
+* **Public Version (free):** Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
+* **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links and installation instructions can be found in the #beta channel's pinned messages.
 
-Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
-
-### Beta Version (requires Patreon support)
-
-The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links and installation instructions can be found in the #beta channel's pinned messages.
-
-## Configuration
-
-Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
-
-On **Linux/Mac**:
-```
-mkdir -p ~/.talon/user
-cd ~/.talon/user
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
-
-On **Windows**:
-```
-md "%APPDATA%\Talon\user"
-cd "%APPDATA%\Talon\user"
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
-
-If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
-
-
-## Speech Recognition Engine
+## Configure a Speech Recognition Engine
 
 Talon uses a speech recognition engine that translates voice audio to text. There are multiple options for speech engines, and you will need to choose one. **Starting out:** unless you already have Dragon, wav2letter (w2l) is recommended.
 
@@ -73,9 +48,30 @@ Note that you cannot use webspeech or vosk standalone; they don't handle command
 **Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
 
 
+## Install a Talon Configuration Set
+
+Talon does not come with voice commands or eye-tracking out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
+
+On **Linux/Mac**:
+```
+mkdir -p ~/.talon/user
+cd ~/.talon/user
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
+
+On **Windows**:
+```
+md "%APPDATA%\Talon\user"
+cd "%APPDATA%\Talon\user"
+git clone https://github.com/knausj85/knausj_talon.git knausj_talon
+```
+
+If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
+
+
 ## Basic Usage
 
-The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#configuration)). These commands may vary depending on your individual setup.
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#install-a-talon-configuration-set)). These commands may vary depending on your individual setup.
 
 
 ### Command history
