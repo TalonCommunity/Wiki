@@ -44,6 +44,7 @@ insert code fragment:
 
 ### WARNING: actions implemented in Talon files will soon be deprecated. ###
 # This says how to implement the actions app.tab_next and app.tab_previous.
+# Note that implementing actions in .talon files is deprecated. See the Actions section below for the supported syntax.
 action(app.tab_next): key(ctrl-tab)
 action(app.tab_previous): key(shift-ctrl-tab)
 
@@ -129,7 +130,7 @@ Rules have a versatile syntax that is like a word based regex:
 | Syntax | Description | Matches |
 | --- | --- | --- |
 | `foo` | Words | “foo” |
-| `[foo]` | Optional | “foo” or “” (nothing) |
+| `[foo]` | Optional | “foo” or null (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
 | `foo|bar` | Choice | “foo”, “bar” |
@@ -137,17 +138,49 @@ Rules have a versatile syntax that is like a word based regex:
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
 
-### Implementing actions
-
-**WARNING: Implementing actions in Talon files will soon be deprecated. Instead, they should be implemented in python.**
-
-In place of an ordinary rule, you can also implement an [action](/unofficial_talon_docs#actions). In this case the rule has the form `action(NAME_OF_ACTION)`. The body syntax is the same. For example:
+The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
 
 ```
-action(app.tab_next): key(ctrl-tab)
+-
+# The following lists and captures are implemented in the knausj_talon repo
+# {user.letter} is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
+# {user.number} is a list mapping words like 'five' to number strings like '5'
+# <digits> is a capture that maps a variable length phrase like
+#   "one two three" onto an integer 123
+
+# Saying "double letter plex" presses ctrl+a then inserts "x." then "x"
+double letter {user.letter}:
+    modified = letter + "."
+    key(ctrl-a)
+    insert(modified)
+    insert(letter)
+
+# Saying "defaultable plex" inserts "x", saying "defaultable" inserts "default"
+defaultable [{user.letter}]:
+    insert(letter or "default")
+
+# Saying "choose plex" inserts "x", saying "choose five" inserts "5"
+choose ({user.letter}|{user.number}):
+    insert(letter or number)
+
+# Saying "join plex and gust" or "join plex gust" inserts "xg"
+join {user.letter} [and] {user.letter}:
+    insert(letter_1 + letter_2)
+
+# Saying "add one two three and four five six" inserts "579"
+add <digits> and <digits>:
+    insert(digits_1 + digits_2)
+
+# Saying "insert lots plex gust plex" inserts "['x', 'g', 'x']"
+insert lots {user.letter}+:
+    insert(letter_list)
 ```
 
-This means whenever this file's context applies and the action `app.tab_next` is invoked by a Talon voice command, it will press the shortcut ctrl-tab -- unless that action is overridden in some more specific context.
+In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding _1, _2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the _list suffix. Individual items from the multiple match can be referred to with the _1, _2 suffixe as well.
+
+In terms of the Talonscript itself, it only has quite basic operations. We have variable assignment, invocation of actions, arithmetic, some boolean operators, and concatenation of strings.
+
+TODO: What are the full capabilities of Talonscript?
 
 ### Tags
 
@@ -250,7 +283,7 @@ Talon files can also adjust settings; for more on this see [Talon Settings](/uno
 
 Although Talon files are the primary way of extending Talon, there are some things that they can't do. In particular, they can't:
 
-1. Declare [actions](/unofficial_talon_docs#actions), although they can implement and invoke them.
+1. Declare [actions](/unofficial_talon_docs#actions), although they can invoke them. They can also currently implement them, but this is deprecated.
 2. Declare or override [lists](/unofficial_talon_docs#lists), although they can use them in rules.
 3. Declare or implement [captures](/unofficial_talon_docs#captures), although they can use them in rules.
 4. Run arbitrary Python code.
@@ -258,13 +291,13 @@ Although Talon files are the primary way of extending Talon, there are some thin
 
 For those things you need Python files, which may also be placed in `~/.talon/user/` or its subdirectories. A good way to start most Talon Python files is:
 
-```
+```python
 from talon import Module, Context
 mod = Module()
 ctx = Context()
 ```
 
-This sets you up with a module `mod` for declaring actions, lists, and captures; and a context `ctx` for implementing or overriding actions, lists, and captures, and otherwise doing whatever you could do in a Talon file. For more documentation on this, see [Talon Concepts](/unofficial_talon_docs#talon-concepts/).
+This sets you up with a module `mod` for declaring actions, lists, and captures; and a context `ctx` for implementing or overriding actions, lists, and captures. For more documentation on this, see [Talon Concepts](/unofficial_talon_docs#talon-concepts/).
 
 ## Talon Concepts
 
@@ -283,11 +316,12 @@ TODO: are there any interesting arguments to Module?
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can do everything you can do in a `.talon` file: define voice commands, adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags).
+A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+
 
 In Python, you can construct a context like so:
 
-```
+```python
 from talon import Context
 ctx = Context()
 ```
@@ -295,17 +329,23 @@ ctx = Context()
 When initially constructed, a context has no conditions attached, and so it is always active.
 You can make this context conditional by setting `matches`:
 
-```
+```python
 ctx.matches = "mode: command"
 ```
+
+See examples in the Actions, Lists, and Captures sections below for information about using Contexts with those features.
 
 ### Actions
 
 An action is a function that can be called by Talon voice commands, whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
 
-Some actions, like `edit.save`, are built into Talon. But you can also declare your own actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
+Some actions, like `edit.save`, are defined by Talon (but not implemented). You can also declare your own custom actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
 
 ```python
+from talon import Module
+
+mod = Module()
+
 @mod.action_class
 class Actions:
     def find_reverse(): "Begins a reverse search."
@@ -316,11 +356,35 @@ class Actions:
 
 This declares the actions `user.find_reverse` and `user.mangle` (all user-defined actions are prefixed with `user.`). It also gives a default implementation for `user.mangle` that simply prepends `__` to the input. As in this example, all actions must come with a docstring and type annotations for their arguments and return value.
 
+As mentioned earlier it's pretty common to want to overwrite actions for a particular application (or other context). Taking the example of Emacs mentioned earlier let's say we want to override the edit.save action and also implement/override the two actions we declared above. The following example shows two equivalent ways of doing that.
+
+```python
+from talon import Context, actions
+
+ctx = Context()
+ctx.matches = "app: Emacs"
+
+# Note we don't have to specify type annotations or a docblock when
+# overriding actions since those are inherited from the definition.
+
+# Override a single action within the given Context
+@ctx.action("edit.save")
+def emacs_save():
+    actions.key("ctrl-x ctrl-s")
+
+# Override multiple "user." actions within the given context. The names of the class functions correspond to the actions we're overriding.
+@ctx.action_class("user")
+class MyEmacsActions:
+    def find_reverse():
+        actions.key("ctrl-r")
+
+    def mangle(s):
+        return "emacs__" + s
+```
+
+So now when we use the `user.mangle("some string")` action in a `.talon` file or `actions.user.mangle("some string")` in a `.py` file then by default we'll get `"__some string"`, but if our "app: Emacs" context matches then we'll get `"emacs__some string"`.
+
 Actions are self-documenting. A list of all loaded actions can be accessed via the Talon Console with `actions.list()`.
-
-TODO: how can you override actions in a python file using a context?
-
-TODO: document `@ctx.action_class('win')` & similar.
 
 ### Lists
 
@@ -362,7 +426,7 @@ Scopes allow you to supply additional properties that can be matched in the head
 You need to write custom Python code to keep your scope information up to date. The following example implements a scope that makes the current time available as a matcher property.
 
 `test.py`
-```
+```python
 import datetime
 from talon import Module, cron
 
