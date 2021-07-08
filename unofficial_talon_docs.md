@@ -384,6 +384,8 @@ class MyEmacsActions:
 
 So now when we use the `user.mangle("some string")` action in a `.talon` file or `actions.user.mangle("some string")` in a `.py` file then by default we'll get `"__some string"`, but if our "app: Emacs" context matches then we'll get `"emacs__some string"`.
 
+Actions are self-documenting. A list of all loaded actions can be accessed via the Talon Console with `actions.list()`.
+
 ### Lists
 
 A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. for example, if you wanted to say "launch APPNAME" in order to launch one of several applications, you could do it using a list, like so (assuming you have a module `mod` and a context `ctx`):
@@ -480,7 +482,7 @@ The following three settings, `insert_wait`, `key_hold`, and `key_wait`, can be 
 : Enabling this (`speech.debug = 1`) will display the VAD in console. This is useful for determining when Talon is picking up your voice or other background noises. The default value is 0.
 
 `speech.engine`
-: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. See [speech recognition engines](/getting_started/#speech-recognition-engine).
+: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. See [speech recognition engines](/getting_started/#configure-a-speech-recognition-engine).
 
 `speech.timeout`
 : This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
