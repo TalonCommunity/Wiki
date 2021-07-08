@@ -39,7 +39,7 @@
 
 [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)  A basic script for writing subtitles for a screencapture. 
 
-[Talon Heads Up Display](https://github.com/chaosparrot/talon_hud) This heads up display is awesome because it shows things like when Talent is awake, asleep, what language mode active, prints a pretty history, And a whole bunch of other things that right now you have to memorize.
+[Talon Heads Up Display](https://github.com/chaosparrot/talon_hud) This heads up display is awesome because it shows things like when Talon is awake, asleep, what language mode active, prints a pretty history, And a whole bunch of other things that right now you have to memorize.
 
 [Add url to Firefox really title](https://github.com/erichgoldman/add-url-to-window-title) By putting the url in the window bar of firefox, this allows you match the website name and make custom commands for very specific websites.  
 
