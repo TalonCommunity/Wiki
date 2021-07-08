@@ -43,6 +43,6 @@
 
 [Add url to Firefox really title](https://github.com/erichgoldman/add-url-to-window-title) By putting the url in the window bar of firefox, this allows you match the website name and make custom commands for very specific websites.  
 
-[Search every fork of knausj]( https://search.talonvoice.com/search/)  This search engine helps you find scripts people have written to customize talon for themselves. Most people start with the basic knausj script set and customize it. If the way they coped the knausj script was by forking it on github, their customizations are public and you can search to see if someone has already made voice commands for your favorite programs!
+[Search every fork of knausj]( https://search.talonvoice.com/search/)  This search engine helps you find scripts people have written to customize talon for themselves. Most people start with the basic knausj script set and customize it. If the way they copied the knausj script was by forking it on github, their customizations are public and you can search to see if someone has already made voice commands for your favorite programs!
 
 [Software that pairs well with Talon](/other_integrations#software-that-pairs-well-with-talon)
