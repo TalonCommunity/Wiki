@@ -1,11 +1,10 @@
-# List Of Talon And Talon-Related Resources
+# Talon-Related Resources
 
 
-
-## Cool Demos
-
+## Demos
 
 [I had to learn to code by voice by the Programming Piglet](https://www.youtube.com/watch?v=FOJ6OvPf_nM) Demonstraton of a beginner coding with Talon
+
 
 ## Educational resources
 
@@ -28,12 +27,13 @@
 
 [Hissing Mouse](https://gist.github.com/tararoys/cdabc3bab686abd8d9b585afd7c481da) Created by Tara Roys. A mouse that operates soley by hissing, and uses the idea that if you make a left turn you can get anywhere on the screen by 'circling the block.'  Simplest possible no-words, no-hands, no need to memorize commands mouse.
 
+
 ## Keyboard Replacements
 
 [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.  
 
 
-## Useful Resources:
+## Other Resources:
 
 [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
 
@@ -45,8 +45,4 @@
 
 [Search every fork of knausj]( https://search.talonvoice.com/search/)  This search engine helps you find scripts people have written to customize talon for themselves. Most people start with the basic knausj script set and customize it. If the way they coped the knausj script was by forking it on github, their customizations are public and you can search to see if someone has already made voice commands for your favorite programs!
 
-### Programs that Pair Well With Talon
-
-[Vimium for Chrome](https://vimium.github.io/) The most important thing Vimium does is put a little pair of letters beside every link when you press the 'f' key.  When combined with Talon, that allows you to stay the Talon work for 'f,' (AKA fine) and, when the letters appear, use other talon letter commands to very quickly click on links.  Makes hands-free browing very fast!
-
-[Vimium for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/vimium-ff/) Vimium for firefox. Does the same as vimium for chrome.  Essential for heavy internet users. 
+[Software that pairs well with Talon](/other_integrations#software-that-pairs-well-with-talon)
