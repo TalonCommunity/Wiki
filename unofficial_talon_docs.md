@@ -52,7 +52,7 @@ settings():
 
 ### Context header
 
-The context header specifies when the body of the file will be activated. That is, only when the requirements of the header are met, the settings, tags, actions and commands in the body will be available. This enables you to specify commands that are only available for specific windows, applications, etc.
+The context header specifies when the body of the file will be activated. That is, only when the requirements of the header are met, the settings, tags, and commands in the body will be available. This enables you to specify commands that are only available for specific windows, applications, etc.
 
 The following requirements can be set:
 
@@ -214,7 +214,7 @@ app: Firefox
 tag(): user.tabs
 ```
 
-Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in `firefox.talon` (**WARNING: implementing actions in talon files will soon be deprecated and need to be implemented in python instead**). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
+Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
 
 ### Apps
@@ -244,8 +244,7 @@ Use the well-known app - **`fancyedit.talon`:**
 ```
 app: fancyed
 -
-# WARNING: actions implemented in .talon files will be deprecated soon.
-action(edit.find): key(ctrl-alt-shift-y)
+my fancy editor command: key(ctrl-alt-shift-y)
 ```
 
 Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
@@ -281,7 +280,6 @@ Although Talon files are the primary way of extending Talon, there are some thin
 2. Declare or override [lists](/unofficial_talon_docs#lists), although they can use them in rules.
 3. Declare or implement [captures](/unofficial_talon_docs#captures), although they can use them in rules.
 4. Run arbitrary Python code.
-5. Soon, they will no longer be able to implement [actions](/unofficial_talon_docs#actions), which will instead need to be implemented in Python.
 
 For those things you need Python files, which may also be placed in `~/.talon/user/` or its subdirectories. A good way to start most Talon Python files is:
 
