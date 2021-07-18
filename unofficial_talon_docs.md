@@ -10,10 +10,10 @@ published: true
 The primary way to extend talon is using `.talon` files placed in `~/.talon/user/` or its subdirectories. A talon file comes in two parts: a header defining the [context](/unofficial_talon_docs#contexts) in which it is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
 * Define voice commands.
-* Implement/override the behavior of [actions](/unofficial_talon_docs#actions) **Warning: soon to be deprecated. Implement actions in python instead.**
 * Adjust [settings](/unofficial_talon_docs#talon-settings).
 * Activate registered [tags](/unofficial_talon_docs#tags).
-* Activate registered [apps](/unofficial_talon_docs#apps)
+* Activate registered [apps](/unofficial_talon_docs#apps).
+* Implement/override the behavior of [actions](/unofficial_talon_docs#actions). However, this is **deprecated**; you should implement actions in Python files instead.
 
 ### Example file
 
@@ -41,12 +41,6 @@ insert code fragment:
     # the number of times the key should be pressed can be specified after a colon
     key(shift-enter:2)
     key(up)
-
-### WARNING: actions implemented in Talon files will soon be deprecated. ###
-# This says how to implement the actions app.tab_next and app.tab_previous.
-# Note that implementing actions in .talon files is deprecated. See the Actions section below for the supported syntax.
-action(app.tab_next): key(ctrl-tab)
-action(app.tab_previous): key(shift-ctrl-tab)
 
 # This activates the tag 'user.tabs'.
 tag(): user.tabs
