@@ -393,29 +393,49 @@ Actions are self-documenting. A list of all loaded actions can be accessed via t
 
 ### Lists
 
-A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. for example, if you wanted to say "launch APPNAME" in order to launch one of several applications, you could do it using a list, like so (assuming you have a module `mod` and a context `ctx`):
+A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. For example, imagine you wanted to say "exception EXCEPTION" and have Talon type in a programming language appropriate exception class name. You could do that using a list as follows:
 
+**`exceptions.py`:**
 ```python
-mod.list('launch', desc='Launchable applications')
-ctx.lists['self.launch'] = {
-    "firefox": "firefox",
-    "terminal": "gnome-terminal",
-    "emacs": "emacsclient -nc",
+from talon import Module, Context
+
+mod = Module()
+mod.list("exception_class", desc="Exception classes")
+
+ctx_default = Context()
+ctx_default.lists["user.exception_class"] = {
+    "generic exception": "Exception"
+}
+
+ctx_python = Context()
+# code.language is a Talon defined scope which can be set to indicate
+# the programming language you're currently editing
+ctx_python.matches = "code.language: python"
+ctx_python.lists["user.exception_class"] = {
+    "runtime": "RuntimeError",
+    "value": "ValueError",
+}
+
+ctx_java = Context()
+ctx_java.matches = "code.language: java"
+ctx_java.lists["user.exception_class"] = {
+    "null pointer": "NullPointerException",
+    "illegal argument": "IllegalArgumentException",
 }
 ```
 
-This sets up a list that recognizes the words "firefox", "terminal", and "emacs", and maps them to the corresponding commands. We can use this list in a talon file to define the desired voice command:
+This sets up a list which matches a list of standard exceptions for the target programming language. Note that we can have a different set of item keys in the list for different contexts. Note also that our list (like user defined actions) is prefixed with `user.` to identify it as custom code.
 
+One other fact of interest is that there's no merging of lists if multiple contexts match. This would mean that if the "code.language: java" selector was active, then our list would not contain the "generic exception" item (it would only have "null pointer" and "illegal argument").
+
+**`exceptions.talon`:**
 ```
-launch {user.launch}: user.system_command(user.launch)
+exception {user.exception_class}: insert(user.exception_class)
 ```
 
-We refer to our new list as `{user.launch}`; curly braces are the syntax for using lists, and all user-defined lists are named `user.WHATEVER`. The value that our list produced, in this case, the command for our application, is available in the body of the command as `user.launch`, or just as `launch`.
+We make use of our list in the above .talon file by referring to it with the curly brace syntax. See the [voice commands](#voice-commands) section for more details about using lists in .talon files.
 
-TODO: explain in more detail how variable binding works here. What if we had done `{user.launch}+` instead? or `({user.launch} | foo)`?
-
-Like actions, lists are declared by modules and can be overridden within specific contexts. TODO: explain why this would be useful.
-
+Given the above files, if we said "exception null pointer" when the "code.language: java" selector was active we'd get the string "NullPointerException" typed in. Saying "exception generic exception" would do nothing in this context, and nor would "exception value".
 
 ### Captures
 
