@@ -304,8 +304,6 @@ from talon import Module
 mod = Module()
 ```
 
-TODO: are there any interesting arguments to Module?
-
 ### Contexts
 
 A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
@@ -319,7 +317,7 @@ ctx = Context()
 ```
 
 When initially constructed, a context has no conditions attached, and so it is always active.
-You can make this context conditional by setting `matches`:
+You can make this context conditional by setting the `matches` property:
 
 ```python
 ctx.matches = "mode: command"
