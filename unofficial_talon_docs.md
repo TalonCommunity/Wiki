@@ -193,6 +193,7 @@ mod = Module()
 mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
 ```
 
+Next let's define a set of generic voice commands we think will apply to all applications with tabs:
 
 **`tabs.talon`:**
 ```
@@ -206,6 +207,8 @@ close tab: app.tab_close()
 reopen tab: app.tab_reopen()
 ```
 
+Finally, let's activate these voice commands for the firefox application:
+
 **`firefox.talon`:**
 ```
 app: Firefox
@@ -216,6 +219,18 @@ tag(): user.tabs
 
 Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
+There's also the option of enabling tags from within Python. This lets you define more complicated rules for enabling voice commands. For example the Talon draft window enables a tag when the window is visible so it can be controlled even if it doesn't have focus. To enable tags from Python you can use a Context instance like this:
+
+```python
+from talon import Context
+
+ctx = Context()
+ctx.matches = "app: Firefox"
+# You can alter the set of tags whenever you like within your Python
+# code. The tags will only be applied if they are included in the
+# set and the ctx.matches selector is active also.
+ctx.tags.add("user.tabs")
+```
 
 ### Apps
 
@@ -323,7 +338,7 @@ You can make this context conditional by setting the `matches` property:
 ctx.matches = "mode: command"
 ```
 
-See examples in the Actions, Lists, and Captures sections below for information about using Contexts with those features.
+See examples in the [Actions](#actions), [Lists](#lists), [Captures](#captures), and [Tags](#tags) sections for information about using Contexts with those features.
 
 ### Actions
 
