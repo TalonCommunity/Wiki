@@ -10,7 +10,7 @@ published: true
 Checkout the [common commands](/getting_started/#basic-usage) to get started using Talon.
 
 ### How can I code in different languages with Talon
-Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout the section on [Programming Languages](/unofficial_talon_docs#talon-settings) in the knausj repository README for more information on how to use different language modes included in knausj.
+Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout the section on [Programming Languages](https://github.com/knausj85/knausj_talon/#programming-languages) in the knausj repository README for more information on how to use different language modes included in knausj.
 
 ### What hardware should I have?
 Check out the [hardware](/hardware) page for microphone and eye tracker recommendations.  
