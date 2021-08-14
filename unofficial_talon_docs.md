@@ -195,16 +195,28 @@ TODO: Explain how you can make hotkeys on Mac
 
 ## Talon Concepts
 
-In order to script Talon, it is useful to understand some of its basic concepts: modules, contexts, actions, lists, and captures. Much less commonly, you may also want to use scopes.
+In order to script Talon it is useful to understand the abstractions it uses. Let's start by giving you a brief overview of how they fit together.
+
+As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags), [Apps](/unofficial_talon_docs#apps), [Modes](/unofficial_talon_docs#modes), and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
+
+One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists](/unofficial_talon_docs#lists) and [Captures](/unofficial_talon_docs#captures).
+
+The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Talon comes with some built in actions, but most are defined and implemented in user scripts.
+
+In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
+
+Talon is a modular framework as far as user scripting is concerned. The intention is for user scripts to exist as packages defining and implementing behaviour which can then be used and overridden by end users. In order to define the 'source' of particular Actions, Captures etc. we have the idea of the [Module](/unofficial_talon_docs#modules).
 
 ### Modules
 
-A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), tags and well-known applications. In Python, you can construct a module like so:
+A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), [tags](/unofficial_talon_docs#tags), [modes](/unofficial_talon_docs#modes), [settings](/unofficial_talon_docs#settings) and well-known [applications](/unofficial_talon_docs#apps). In Python, you can construct a module like so:
 
 ```
 from talon import Module
 mod = Module()
 ```
+
+All Actions, Lists etc. must first be declared via a Module before they can be referenced in `.talon` or `.py` files.
 
 ### Contexts
 
