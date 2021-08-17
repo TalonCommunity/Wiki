@@ -5,19 +5,28 @@ published: true
 ---
 # Unofficial Talon Docs
 
-## Talon Files
+This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. The page assumes you have successfully [configured Talon](/getting_started) to respond to voice commands.
 
-The primary way to extend talon is using `.talon` files placed in `~/.talon/user/` or its subdirectories. A talon file comes in two parts: a header defining the [context](/unofficial_talon_docs#contexts) in which it is active, and a body that implements various behaviors within that context. The body of a talon file can:
+## Overview of Talon framework
 
-* Define voice commands.
-* Adjust [settings](/unofficial_talon_docs#talon-settings).
-* Activate registered [tags](/unofficial_talon_docs#tags).
-* Activate registered [apps](/unofficial_talon_docs#apps).
+Talon is an accessibility platform that provides a scripting layer to connect a range of input hardware/methods to a cross-platform API for interacting with desktop applications. Let's start by talking about where your configuration/scripting files are stored.
+
+When setting up Talon to respond to voice commands you would have installed some existing scripts (e.g. `knausj_talon`) in to your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.
+
+Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon packages (e.g. `knausj_talon`) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](/unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
+
+So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Originally all Talon configuration/scripting was done using Python, but over time it was decided that the addition of a framework specific file type would be beneficial. To a first approximation `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by .talon files.
+
+## .talon Files
+
+The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](/unofficial_talon_docs#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
+
+* Define [voice commands](/unofficial_talon_docs#voice-commands).
+* Define [keyboard shortcuts](/unofficial_talon_docs#other-capabilities).
+* [Activate registered tags or apps and change settings](/unofficial_talon_docs#tags-apps-and-settings).
 * Implement/override the behavior of [actions](/unofficial_talon_docs#actions). However, this is **deprecated**; you should implement actions in Python files instead.
 
-### Example file
-
-An example talon file might look like this:
+An example `.talon` file might look like this:
 
 ```
 # Comments start with a # sign, and they must always be on their own line.
@@ -27,7 +36,7 @@ os: windows
 os: linux
 app: Slack
 app: Teams
-# Anything above this (single!) dash is part of the header.
+# Anything above this (single!) dash is part of the context header.
 -
 # Anything below the dash is part of the body.
 # If there is no dash, then the body starts immediately.
@@ -52,7 +61,7 @@ settings():
 
 ### Context header
 
-The context header specifies when the body of the file will be activated. That is, only when the requirements of the header are met, the settings, tags, and commands in the body will be available. This enables you to specify commands that are only available for specific windows, applications, etc.
+The context header specifies when the body of the file will be activated. That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
 
 The following requirements can be set:
 
@@ -176,148 +185,38 @@ In terms of the Talonscript itself, it only has quite basic operations. We have 
 
 TODO: What are the full capabilities of Talonscript?
 
-### Tags
+### Tags, apps, and settings
 
-Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `user.tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+TODO: Explain how you can override tags and settings in .talon files
 
-Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `user.tabs` tag.
+### Other capabilities
 
-To make a tag available, it first must be declared in a module:
-
-**`generic_application_features.py`:**
-```python
-from talon import Module
-
-mod = Module()
-# this declares a tag in the user namespace
-mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
-```
-
-Next let's define a set of generic voice commands we think will apply to all applications with tabs:
-
-**`tabs.talon`:**
-```
-# This selects for the tag 'user.tabs'.
-tag: user.tabs
--
-(open | new) tab: app.tab_open()
-last tab: app.tab_previous()
-next tab: app.tab_next()
-close tab: app.tab_close()
-reopen tab: app.tab_reopen()
-```
-
-Finally, let's activate these voice commands for the firefox application:
-
-**`firefox.talon`:**
-```
-app: Firefox
--
-# This activates the tag 'user.tabs'.
-tag(): user.tabs
-```
-
-Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
-
-There's also the option of enabling tags from within Python. This lets you define more complicated rules for enabling voice commands. For example the Talon draft window enables a tag when the window is visible so it can be controlled even if it doesn't have focus. To enable tags from Python you can use a Context instance like this:
-
-```python
-from talon import Context
-
-ctx = Context()
-ctx.matches = "app: Firefox"
-# You can alter the set of tags whenever you like within your Python
-# code. The tags will only be applied if they are included in the
-# set and the ctx.matches selector is active also.
-ctx.tags.add("user.tabs")
-```
-
-### Apps
-
-Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
-
-
-Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
-```python
-from talon import Module
-mod = Module()
-# to reduce typing, you can reference the app registry through a local variable
-apps = mod.apps
-apps.fancyedit = '''
-os: mac
-and app.bundle: com.example.fancyedit
-os: windows
-and app.exe: fancyed.exe
-'''
-apps.terminal = 'app.bundle: com.apple.Terminal'
-# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
-apps.firefox = 'app.bundle: com.mozilla.Firefox'
-apps.firefox = 'app.exe: firefox.exe'
-```
-
-Use the well-known app - **`fancyedit.talon`:**
-```
-app: fancyed
--
-my fancy editor command: key(ctrl-alt-shift-y)
-```
-
-Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
-```
-os: linux
-app.exe: /opt/ecorp/fancyed
--
-app(): fancyedit
-```
-
-Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
-```python
-from talon import Context
-ctx = Context()
-ctx.matches = '''
-os: linux
-app: Xfce4-terminal
-title: /fancyed - tmux/
-'''
-ctx.apps = ['fancyedit']
-```
-
-
-### Settings
-
-Talon files can also adjust settings; for more on this see [Talon Settings](/unofficial_talon_docs#talon-settings).
-
-### Talon files vs Python files
-
-Although Talon files are the primary way of extending Talon, there are some things that they can't do. In particular, they can't:
-
-1. Declare [actions](/unofficial_talon_docs#actions), although they can invoke them. They can also currently implement them, but this is deprecated.
-2. Declare or override [lists](/unofficial_talon_docs#lists), although they can use them in rules.
-3. Declare or implement [captures](/unofficial_talon_docs#captures), although they can use them in rules.
-4. Run arbitrary Python code.
-
-For those things you need Python files, which may also be placed in `~/.talon/user/` or its subdirectories. A good way to start most Talon Python files is:
-
-```python
-from talon import Module, Context
-mod = Module()
-ctx = Context()
-```
-
-This sets you up with a module `mod` for declaring actions, lists, and captures; and a context `ctx` for implementing or overriding actions, lists, and captures. For more documentation on this, see [Talon Concepts](/unofficial_talon_docs#talon-concepts/).
+TODO: Explain how you can make hotkeys on Mac
 
 ## Talon Concepts
 
-In order to script Talon, it is useful to understand some of its basic concepts: modules, contexts, actions, lists, and captures. Much less commonly, you may also want to use scopes.
+In order to script Talon it is useful to understand the abstractions it uses. Let's start by giving you a brief overview of how they fit together.
+
+As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags), [Apps](/unofficial_talon_docs#apps), [Modes](/unofficial_talon_docs#modes), and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
+
+One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists](/unofficial_talon_docs#lists) and [Captures](/unofficial_talon_docs#captures).
+
+The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Talon comes with some built in actions, but most are defined and implemented in user scripts.
+
+In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
+
+Talon is a modular framework as far as user scripting is concerned. The intention is for user scripts to exist as packages defining and implementing behaviour which can then be used and overridden by end users. In order to define the 'source' of particular Actions, Captures etc. we have the idea of the [Module](/unofficial_talon_docs#modules).
 
 ### Modules
 
-A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), tags and well-known applications. In Python, you can construct a module like so:
+A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), [tags](/unofficial_talon_docs#tags), [modes](/unofficial_talon_docs#modes), [settings](/unofficial_talon_docs#settings) and well-known [applications](/unofficial_talon_docs#apps). In Python, you can construct a module like so:
 
 ```
 from talon import Module
 mod = Module()
 ```
+
+All Actions, Lists etc. must first be declared via a Module before they can be referenced in `.talon` or `.py` files.
 
 ### Contexts
 
@@ -510,6 +409,116 @@ The above .talon file uses the angle bracket syntax to indicate we want to use t
 
 In this example we have only set up a simple capture. The 'rule' parameter in the `@mod.capture` annotation actually has the same capabilities as the rule component of a .talon file command. The type of the 'm' parameter passed to your capture method behaves similarly to the body in a .talon file. You can use syntax like `m.my_list_2` to access the second usage of `user.my_list` in your rule expression for example. Note that you don't have to supply the 'user.' prefix. See the [voice commands](#voice-commands) section for a complete listing of the available syntax.
 
+### Tags
+
+Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `user.tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+
+Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `user.tabs` tag.
+
+To make a tag available, it first must be declared in a module:
+
+**`generic_application_features.py`:**
+```python
+from talon import Module
+
+mod = Module()
+# this declares a tag in the user namespace
+mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
+```
+
+Next let's define a set of generic voice commands we think will apply to all applications with tabs:
+
+**`tabs.talon`:**
+```
+# This selects for the tag 'user.tabs'.
+tag: user.tabs
+-
+(open | new) tab: app.tab_open()
+last tab: app.tab_previous()
+next tab: app.tab_next()
+close tab: app.tab_close()
+reopen tab: app.tab_reopen()
+```
+
+Finally, let's activate these voice commands for the firefox application:
+
+**`firefox.talon`:**
+```
+app: Firefox
+-
+# This activates the tag 'user.tabs'.
+tag(): user.tabs
+```
+
+Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
+
+There's also the option of enabling tags from within Python. This lets you define more complicated rules for enabling voice commands. For example the Talon draft window enables a tag when the window is visible so it can be controlled even if it doesn't have focus. To enable tags from Python you can use a Context instance like this:
+
+```python
+from talon import Context
+
+ctx = Context()
+ctx.matches = "app: Firefox"
+# You can alter the set of tags whenever you like within your Python
+# code. The tags will only be applied if they are included in the
+# set and the ctx.matches selector is active also.
+ctx.tags.add("user.tabs")
+```
+
+### Modes
+
+TODO: Describe what modes are, what they're good for, and how to set them up
+
+### Apps
+
+Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
+
+
+Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
+```python
+from talon import Module
+mod = Module()
+# to reduce typing, you can reference the app registry through a local variable
+apps = mod.apps
+apps.fancyedit = '''
+os: mac
+and app.bundle: com.example.fancyedit
+os: windows
+and app.exe: fancyed.exe
+'''
+apps.terminal = 'app.bundle: com.apple.Terminal'
+# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
+apps.firefox = 'app.bundle: com.mozilla.Firefox'
+apps.firefox = 'app.exe: firefox.exe'
+```
+
+Use the well-known app - **`fancyedit.talon`:**
+```
+app: fancyed
+-
+my fancy editor command: key(ctrl-alt-shift-y)
+```
+
+Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
+```
+os: linux
+app.exe: /opt/ecorp/fancyed
+-
+app(): fancyedit
+```
+
+Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
+```python
+from talon import Context
+ctx = Context()
+ctx.matches = '''
+os: linux
+app: Xfce4-terminal
+title: /fancyed - tmux/
+'''
+ctx.apps = ['fancyedit']
+```
+
 ### Scopes
 
 Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in.
@@ -543,7 +552,29 @@ is it morning: "yes it is!"
 
 `scopes` are 'global' in the sense that you can't override them for particular contexts in the same way as actions. Any file can simply overwrite a particular scope's value by implementing some python code like the above.
 
-## Talon Settings
+### Settings
+
+TODO: Describe how to make custom settings
+
+## Tips and tricks
+
+This section contains some additional miscellaneous information which may be useful for developing and debugging Talon scripts.
+
+### REPL and logging
+
+TODO: What is the REPL, how do you get and use logging?
+
+### Introspection functions
+
+This section lists some built in methods which are useful for developing or debugging Talon behaviour. See also the `speech.debug` and `speech.record_all` settings described in the [Built in Talon settings](#) section.
+
+
+`actions.find('user.my_action')`
+`actions.list()`
+`sim('tab close')`
+`mimic('say hello world')`
+
+### Built in Talon settings
 
 In a `.talon` file, a `settings()` block can be used to alter settings, both for Talon and for user modules. For example:
 
