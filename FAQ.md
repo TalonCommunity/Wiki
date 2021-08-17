@@ -28,7 +28,7 @@ See the page [Improving Recognition Accuracy](/improving_recognition_accuracy).
 While Talon is closed source, there's plenty you can do to help:
 
 * https://speech.talonvoice.com/ Extend the voice data set used for speech recognition training.
-* Publish your talon commands on Github for others to use like https://github.com/knausj85/knausj_talon.
+* Publish your talon commands on Github for others to use like https://github.com/knausj85/knausj_talon. You can [search every fork of knausj using this search engine](https://search.talonvoice.com/search/). 
 * Report issues at https://github.com/talonvoice/talon/issues
 * Add more to these docs :)
 
