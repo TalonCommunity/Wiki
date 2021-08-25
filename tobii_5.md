@@ -4,19 +4,14 @@
 
 ### Setup
 
-#### Ubuntu 18.04
+Regardless of which OS you will be using when you use your eye tracker, the initial setup requres that the eye tracker be connected to a Windows machine with internet access to complete the setup installation. After the initial setup, the eye tracker can be used on Windows, Mac, or Linux.
 
-- Connect your new Tobii 5c eye tracker via USB to a Windows computer that's connected to the internet. (Note: tested on Windows 10)
-- Wndows should bring up the "Tobii Experience" configuration software automatically. This SW should recognize your Tobii 5 hardware and prompt you to start a setup process. You don't actually need to do this.
-- Disconnect the tracker from the Windows machine and connect to your Ubuntu machine.
+- Connect your new Tobii 5c eye tracker via USB to a Windows computer with an internet connection.
+- Wndows should bring up the "Tobii Experience" configuration software automatically. This software should recognize your Tobii 5 hardware and prompt you to start a setup process. You don't actually need to do this.
+- **If you are using Mac or Linux:** Disconnect the tracker from the Windows machine and connect to your Mac or Linux machine.
 - Start up Talon. It should recognize your new hardware.
-
-#### Mac OS
-
-- Connect Your Tobii 5c to a windows computer. you may hear some USB disconnection noises as the auto installation takes place.
-- Download and run the [offline installer](https://help.tobii.com/hc/en-us/articles/360009325857-Installation-or-setup-issues-for-Tobii-Eye-Tracker-5), this should update the Tobii firmware
-- Now connect it to your mac and enable eye tracking in the talon menu 
-- Run the calibration in talon.
+- Enable eye tracking in the Talon menu.
+- Run the calibration in Talon.
 
 ### Also see
 
