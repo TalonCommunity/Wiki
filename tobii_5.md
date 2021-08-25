@@ -2,8 +2,6 @@
 
 ![Tobii 5 hardware](/media/tobii_5_hardware.png) <!-- .element height="50%" width="50%" -->
 
-Currently the Tobii 5 has limited support. It currently runs at 33hz refresh rate instead of the 133hz it should have. You may experience the tracking as wobbly because of this. The zoom mouse in knausj may help with this.
-
 ### Setup
 
 #### Ubuntu 18.04
@@ -23,3 +21,5 @@ Currently the Tobii 5 has limited support. It currently runs at 33hz refresh rat
 ### Also see
 
 - [Tobii 4c tips](/tobii_4c_tips.md)
+
+If you find the control mouse is not accurate enough, try the zoom mouse in the knausj repository.
