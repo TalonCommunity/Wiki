@@ -1,6 +1,6 @@
 ---
 sidebar: true
-order: 2
+order: 3
 published: true
 ---
 # Unofficial Talon Docs
