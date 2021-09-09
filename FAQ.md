@@ -1,6 +1,6 @@
 ---
 sidebar: true
-order: 6
+order: 7
 published: true
 ---
 
