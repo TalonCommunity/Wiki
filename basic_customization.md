@@ -30,7 +30,7 @@ Given this flexibility there are two ways you could approach customizing your Ta
 
 Option A can be easier to begin with, but makes it somewhat harder to keep your knausj\_talon up to date. This is because you need to work out what you modified and how to re-apply it to the knausj package every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
 
-The screenshot below shows my talon user directory. You can see that I have an engines.py and a knausj\_talon folder in the same way that you would. The rest of the folders are other 'packages' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
+The screenshot below shows my talon user directory. You can see that I have a knausj\_talon folder in the same way that you would. The rest of the folders are other 'packages' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
 
 ![Screen shot of Talon user directory](/media/basic_customization_folders.png)
 
@@ -149,7 +149,7 @@ In this example our context header says that the file is only active when the wo
 
 The body can have several kinds of content. Most often you'll be defining voice commands, so that's all we'll talk about here.
 
-Voice commands start with the actual words you want to speak followed by a ':' character. If you only want to perform a single action as a result of that spoken command then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
+Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
 
 A more complete guide to .talon files is included in the [unofficial docs](/unofficial_talon_docs).
 
@@ -215,6 +215,8 @@ A reasonably common problem that comes up when using Talon with computer games i
 Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](/unofficial_talon_docs/#context-header) for a full list of available matchers.
 
 #### Settings
+
+`key_hold` isn't the only or necessarily the best setting for your keyboard issue. There are also many other settings for configuring other aspects of Talon's behaviour.
 
 settings() blocks can be put in any `.talon` file and are used to change the value of settings given a matching context header. You can have multiple settings by putting each on its own indented line underneath the "settings():" line. You can include voice commands in the same file as a settings block.
 
