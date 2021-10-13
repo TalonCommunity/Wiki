@@ -32,14 +32,6 @@ While Talon is closed source, there's plenty you can do to help:
 * Report issues at https://github.com/talonvoice/talon/issues
 * Add more to these docs :)
 
-### How do I enable verbose talon debugging?
-
-Open your talon user directory, for example `~/.talon/user` on Linux. Open the `engines.py` file in an editor and change the line containing `W2lEngine()` to include the parameter `debug=True`. If a `debug=False` parameter already exists, in the `False` should be changed to `True`.
-
-For example:
-```
-w2l = W2lEngine(model="en_US", debug=True)
-```
-
 ### Troubleshooting
+
 Checkout the [troubleshooting](/troubleshooting) for solutions to common problems.

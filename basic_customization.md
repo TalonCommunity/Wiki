@@ -30,7 +30,7 @@ Given this flexibility there are two ways you could approach customizing your Ta
 
 Option A can be easier to begin with, but makes it somewhat harder to keep your knausj\_talon up to date. This is because you need to work out what you modified and how to re-apply it to the knausj package every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
 
-The screenshot below shows my talon user directory. You can see that I have an engines.py and a knausj\_talon folder in the same way that you would. The rest of the folders are other 'packages' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
+The screenshot below shows my talon user directory. You can see that I have a knausj\_talon folder in the same way that you would. The rest of the folders are other 'packages' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
 
 ![Screen shot of Talon user directory](/media/basic_customization_folders.png)
 
