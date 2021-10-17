@@ -7,6 +7,6 @@
 5. Lighting matters quite a bit. The Tobii 4c works better in a lit room. You also don’t want e.g. sunlight directly beating down on the device
 6. Some folks feel the largest useable monitor is 24”, though Tobii claims 27”.
 7. Try both the "control mouse" and "zoom mouse" modes out to see which works best for you. [Demo here](https://www.youtube.com/watch?v=PQkJE-rtn-g&feature=youtu.be)
-8. For the zoom mouse, tinker with the zoom level of zoom mouse for comfort & less scanning.
-[See an example of how to adjust these here](https://github.com/knausj85/knausj_talon/blob/master/eye_tracking_settings.py)
-
+8. For the zoom mouse, tinker with the zoom level of zoom mouse for comfort & less scanning. [See an example of how to adjust these here](https://github.com/knausj85/knausj_talon/blob/master/eye_tracking_settings.py)
+9. Check the Talon Voice logs for errors. 
+    1. "talon.track.tobii.EyeCmdErr: Eye Tracker command 0x42e raised error 0x20000502" means Talon Voice cant determine the location of your head or gaze.  It could be a problem with tracker position, head position, monitor size, or multiple screens (dont use extended or mirrored screens with Talon).
