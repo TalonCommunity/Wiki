@@ -563,8 +563,7 @@ TODO: Describe what modes are, what they're good for, and how to set them up
 
 ### Apps
 
-Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
-
+Talon can activate a context based on which application is active.  It's not unlikely that important apps are used in several .talon files. It is convenient to reuse any matcher logic that is needed to identify such applications.
 
 Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
 ```python
@@ -572,13 +571,14 @@ from talon import Module
 mod = Module()
 # to reduce typing, you can reference the app registry through a local variable
 apps = mod.apps
-apps.fancyedit = '''
+# This will match on different properties depending
+apps.fancyedit = """
 os: mac
 and app.bundle: com.example.fancyedit
 os: windows
 and app.exe: fancyed.exe
-'''
-apps.terminal = 'app.bundle: com.apple.Terminal'
+"""
+
 # you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
 apps.firefox = 'app.bundle: com.mozilla.Firefox'
 apps.firefox = 'app.exe: firefox.exe'
@@ -586,28 +586,21 @@ apps.firefox = 'app.exe: firefox.exe'
 
 Use the well-known app - **`fancyedit.talon`:**
 ```
-app: fancyed
+app: fancyedit
 -
 my fancy editor command: key(ctrl-alt-shift-y)
-```
-
-Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
-```
-os: linux
-app.exe: /opt/ecorp/fancyed
--
-app(): fancyedit
 ```
 
 Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
 ```python
 from talon import Context
 ctx = Context()
-ctx.matches = '''
+ctx.matches = """
 os: linux
 app: Xfce4-terminal
 title: /fancyed - tmux/
-'''
+"""
+
 ctx.apps = ['fancyedit']
 ```
 
