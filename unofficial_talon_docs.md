@@ -233,13 +233,45 @@ some [{user.optional_list}] command:
     user.grid_activate()
 ```
 
-### Tags, apps, and settings
+### Tags, settings, and other capabilities
 
-TODO: Explain how you can override tags and settings in .talon files
+.talon files can do a few other things aside from defining voice commands.
 
-### Other capabilities
+The next most commonly used feature is to adjust [settings](/unofficial_talon_docs#settings). The following changes the given setting values when the context header matches:
 
-TODO: Explain how you can make hotkeys on Mac
+```
+title: /my app/
+-
+settings():
+    some.setting = 123
+
+    another.setting = 432
+```
+
+You can also activate [tags](/unofficial_talon_docs#tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
+
+```
+title: /my app/
+-
+tag(): user.my_tag
+```
+
+Another feature currently available in the public version is the ability to bind keyboard shortcuts.
+
+```
+title: /my app/
+-
+# Show notification saying the key was pressed and prevent other apps from receiving the key event
+key(f8): app.notify("f8 key pressed")
+
+# One or more modifiers can be used with the matcher
+key(ctrl-shift-alt-cmd-super-f8): app.notify("Lots of modifiers and the f8 key pressed")
+
+# Passive mode doesn't work on Windows currently
+key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
+```
+
+Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
 
 ## Talon Concepts
 
