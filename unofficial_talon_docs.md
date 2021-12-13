@@ -178,11 +178,60 @@ insert lots {user.letter}+:
     insert(letter_list)
 ```
 
-In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding _1, _2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the _list suffix. Individual items from the multiple match can be referred to with the _1, _2 suffixe as well.
+In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
 
-In terms of the Talonscript itself, it only has quite basic operations. We have variable assignment, invocation of actions, arithmetic, some boolean operators, and concatenation of strings.
+In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates every feature available. See the inline comments for what everything does:
 
-TODO: What are the full capabilities of Talonscript?
+```
+# Comments must be on their own line (optionally preceeded by whitespace)
+some [{user.optional_list}] command:
+    # Local variable assignment
+    a = 2.2
+    b = "foo"
+    c = """
+    multiline string
+    """
+    # Only a single mathematical operation per line
+    d = 2
+    a = a + d
+    a = a - d
+    a = a * d
+    a = a / d
+    a = a % d
+
+    # or operator is used to deal with optional or alternative command parts, it's not the same
+    # as boolean or
+    e = optional_list or "default"
+
+    # Sleep is a built in function and takes arguments of the (<float>|<integer><suffix>) form.
+    # Float allows specifying (fractions) of a second. The integer+suffix form can be '1m', '5s', '500ms', '1000000us' etc.
+    # Be aware sleeping in this way will cause Talon to not process voice commands until the
+    # sleep is over
+    sleep(2s)
+
+    # Repeats the previous action or built in command the given number of times,
+    # so in this case we'd sleep for a further 4 seconds
+    repeat(2)
+
+    # Allows pressing, holding, and repeating individual key presses. This example holds down
+    # ctrl-alt-a then presses e 5 times, then releases ctrl-alt-a. Look at the basic
+    # customisation page recipes section for a more complete description of the syntax.
+    key("ctrl-alt-a:down e:5 f12 ctrl-alt-a:up")
+
+    insert("type in this string")
+    # This is equivalent to insert("type in this string")
+    "type in this string"
+
+    """
+    type in this
+    multiline
+    string
+    """
+
+    # Call built in or user defined actions
+    app.notify("show this in a notification balloon")
+    user.grid_activate()
+```
 
 ### Tags, apps, and settings
 
