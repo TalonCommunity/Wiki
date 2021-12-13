@@ -127,6 +127,8 @@ A voice command has the format `RULE: BODY`, where `RULE` determines what words 
 
 This command, for example, will press the shortcut alt-shift-down whenever you say either “channel unread next”, “unread next”, or “goneck”.
 
+#### Rules
+
 Rules have a versatile syntax that is like a word based regex:
 
 | Syntax | Description | Matches |
@@ -139,6 +141,16 @@ Rules have a versatile syntax that is like a word based regex:
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
+| `^foo` | Start anchor | See below |
+| `foo$` | End anchor | See below |
+
+Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking and uses it to break up microphone input into a sequence of 'utterance blocks'. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
+
+For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Note that because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+
+In general you shouldn't anchor rules since it reduces the flexibility with which they can be used (you can't chain them together as easily). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
+
+#### Talonscript Body
 
 The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
 
