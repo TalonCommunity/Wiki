@@ -36,7 +36,8 @@ os: windows
 os: linux
 app: Slack
 app: Teams
-# Anything above this (single!) dash is part of the context header.
+# Anything above this dash is part of the context header. One or more dashes is permitted, but a
+# single dash is customary.
 -
 # Anything below the dash is part of the body.
 # If there is no dash, then the body starts immediately.
@@ -66,7 +67,7 @@ The context header specifies when the body of the file will be activated. That i
 The following requirements can be set:
 
 `os`
-: require specific operating systems; currently either `linux`, `mac`, `windows`
+: require specific operating systems; currently either `linux`, `mac`, or `windows`
 
 `tag`
 : require a specific tag
@@ -92,30 +93,28 @@ The following requirements can be set:
 `code.language`
 : specify a currently active programming language
 
-Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack.workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace. See [the scope concept section](/unofficial_talon_docs#scopes) below for more information.
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack\_workspace\_name: Talon' in the header. See [the scope concept section](/unofficial_talon_docs#scopes) below for more information.
 
-`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas some like `app.exe`, `title`, and user scopes can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
+Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 
-Each kind of requirement can be listed several times. Entries of the same kind of requirement are `OR`'d together, and of different kinds are `AND`'d. For example:
+We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo') or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirements that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
 
-```
-os: linux
-os: windows
-app: Code
-app: notepad++
-```
-
-This reads: "If OS is either linux or windows, for an app that has a well-known identifier of either Code or notepad++". Code on windows would match, notepad++ on windows would match, and so on; but Code on mac or Sublime on windows would not.
+The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you build these together as a composite matcher following specific rules. Those rules will be discussed with reference to this unrealistically complicated example:
 
 ```
-mode: user.talon
-mode: command
-and code.language: talon
+tag: T1
+tag: T2
+os: O1
+and tag: T3
+tag: T4
+and tag: T5
 ```
 
-This one reads "If either mode is user.talon, or else if mode is command at the same time as code.language is talon".
+If we use T1 etc. to indicate the true/value result of attempting to match the literal string 'T1' against the list of active tags then this translates to the following boolean expression `(T1 or T2 or (T4 and T5)) and O1 and T3`.
 
-TODO: there is some support for more complex boolean expressions using `and` and `not`. Test and describe that.
+So without modifiers, requirements of the same type (e.g. two tags) are OR-ed together. Requirements of different types (e.g. a 'tag' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and if it's of the same type then it merges with it to make a compound expession (`(T4 and T5)` in our example). If it's a different type then it just adds itself as a top level AND condition (`T3` in the example). The 'not' modifier wasn't included, but it just does what you expect; the line evaluates to 'true' if the string literal or regex does *not* match.
+
+So that's a deep dive into the requirement matching behaviour and how to combine multiple requirements together. In reality you'll probably only have one or two lines and they'll be of different types so you won't really have to worry much about the details of how lines are combined.
 
 ### Voice commands
 
