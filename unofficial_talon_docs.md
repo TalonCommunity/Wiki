@@ -110,11 +110,11 @@ tag: T4
 and tag: T5
 ```
 
-If we use T1 etc. to indicate the true/value result of attempting to match the literal string 'T1' against the list of active tags then this translates to the following boolean expression `(T1 or T2 or (T4 and T5)) and O1 and T3`.
+If we use T1 etc. to indicate the true/value result of attempting to match the literal string 'T1' against the list of active tags then this translates to the following boolean expression `(T1 or T2 or (T4 and T5)) and (O1 and T3)`.
 
-So without modifiers, requirements of the same type (e.g. two tags) are OR-ed together. Requirements of different types (e.g. a 'tag' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and if it's of the same type then it merges with it to make a compound expession (`(T4 and T5)` in our example). If it's a different type then it just adds itself as a top level AND condition (`T3` in the example). The 'not' modifier wasn't included, but it just does what you expect; the line evaluates to 'true' if the string literal or regex does *not* match.
+So without modifiers, requirements of the same type (e.g. two tags) are OR-ed together. Requirements of different types (e.g. a 'tag' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession (`(T4 and T5)` or `(O1 and T3)` in our example). The 'not' modifier wasn't in the example, but it just does what you expect; the line evaluates to 'true' if the string literal or regex does *not* match.
 
-So that's a deep dive into the requirement matching behaviour and how to combine multiple requirements together. In reality you'll probably only have one or two lines and they'll be of different types so you won't really have to worry much about the details of how lines are combined.
+So that's a deep dive into the requirement matching behaviour and how to combine multiple requirements together. In reality you'll probably only have one or two lines and they'll be of different types, so it won't be hard to figure it out.
 
 ### Voice commands
 
