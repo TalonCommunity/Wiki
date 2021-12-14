@@ -97,7 +97,7 @@ Additionally, you can create user `scope`s. `scope`s allow matching on additiona
 
 Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 
-We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo') or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirements that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
+We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo'), or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
 
 The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you build these together as a composite matcher following specific rules. Those rules will be discussed with reference to this unrealistically complicated example:
 
@@ -110,7 +110,7 @@ tag: T4
 and tag: T5
 ```
 
-If we use T1 etc. to indicate the true/value result of attempting to match the literal string 'T1' against the list of active tags then this translates to the following boolean expression `(T1 or T2 or (T4 and T5)) and (O1 and T3)`.
+If we use T1 etc. to indicate the true/value result of attempting to match the literal string 'T1' against the list of active tags (and similar for os) then this translates to the following boolean expression `(T1 or T2 or (T4 and T5)) and (O1 and T3)`.
 
 So without modifiers, requirements of the same type (e.g. two tags) are OR-ed together. Requirements of different types (e.g. a 'tag' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession (`(T4 and T5)` or `(O1 and T3)` in our example). The 'not' modifier wasn't in the example, but it just does what you expect; the line evaluates to 'true' if the string literal or regex does *not* match.
 
@@ -144,11 +144,11 @@ Rules have a versatile syntax that is like a word based regex:
 | `^foo` | Start anchor | See below |
 | `foo$` | End anchor | See below |
 
-Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking and uses it to break up microphone input into a sequence of 'utterance blocks'. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
+Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
-For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Note that because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second"; because the command matched and had the $ suffix, the rest of your utterance was thrown away.
 
-In general you shouldn't anchor rules since it reduces the flexibility with which they can be used (you can't chain them together as easily). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
+In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
 
 #### Talonscript Body
 
@@ -192,11 +192,11 @@ insert lots {user.letter}+:
 
 In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
 
-In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates every feature available. See the inline comments for what everything does:
+In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates all available syntax. See the inline comments for what everything does:
 
 ```
 # Comments must be on their own line (optionally preceeded by whitespace)
-some [{user.optional_list}] command:
+some [{user.letter}] command:
     # Local variable assignment
     a = 2.2
     b = "foo"
@@ -212,12 +212,12 @@ some [{user.optional_list}] command:
     a = a % d
 
     # or operator is used to deal with optional or alternative command parts, it's not the same
-    # as boolean or
-    e = optional_list or "default"
+    # as boolean or. See also the previous code block.
+    e = letter or "default"
 
     # Sleep is a built in function and takes arguments of the (<float>|<integer><suffix>) form.
     # Float allows specifying (fractions) of a second. The integer+suffix form can be '1m', '5s', '500ms', '1000000us' etc.
-    # Be aware sleeping in this way will cause Talon to not process voice commands until the
+    # Be aware sleeping in this way will prevent Talon from processing voice commands until the
     # sleep is over
     sleep(2s)
 
@@ -268,7 +268,7 @@ title: /my app/
 tag(): user.my_tag
 ```
 
-Another feature currently available in the public version is the ability to bind keyboard shortcuts.
+Another feature is the ability to bind keyboard shortcuts.
 
 ```
 title: /my app/
@@ -569,10 +569,7 @@ Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
 ```python
 from talon import Module
 mod = Module()
-# to reduce typing, you can reference the app registry through a local variable
-apps = mod.apps
-# This will match on different properties depending
-apps.fancyedit = """
+mod.apps.fancyedit = """
 os: mac
 and app.bundle: com.example.fancyedit
 os: windows
@@ -580,8 +577,8 @@ and app.exe: fancyed.exe
 """
 
 # you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
-apps.firefox = 'app.bundle: com.mozilla.Firefox'
-apps.firefox = 'app.exe: firefox.exe'
+mod.apps.firefox = 'app.bundle: com.mozilla.Firefox'
+mod.apps.firefox = 'app.exe: firefox.exe'
 ```
 
 Use the well-known app - **`fancyedit.talon`:**
@@ -591,7 +588,7 @@ app: fancyedit
 my fancy editor command: key(ctrl-alt-shift-y)
 ```
 
-Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
+Add another possible matcher for the app defined in the fancyedit.py Module  - **`fancyedit_custom.py`:**
 ```python
 from talon import Context
 ctx = Context()
