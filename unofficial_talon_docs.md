@@ -66,7 +66,7 @@ The context header specifies when the body of the file will be activated. That i
 The following requirements can be set:
 
 `os`
-: require specific operating systems; currently either `linux`, `mac`, `windows`
+: require specific operating systems; currently either `linux`, `mac`, or `windows`
 
 `tag`
 : require a specific tag
@@ -92,30 +92,41 @@ The following requirements can be set:
 `code.language`
 : specify a currently active programming language
 
-Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack.workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace. See [the scope concept section](/unofficial_talon_docs#scopes) below for more information.
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack\_workspace\_name: Talon' in the header. See [the scope concept section](/unofficial_talon_docs#scopes) below for more information.
 
-`os`, `tag`, and `mode` are (usually? necessarily?) matched literally (like `os: windows`), whereas some like `app.exe`, `title`, and user scopes can also be matched by regular expression, like `title: /- Visual Studio Code/`. The regular expression only needs to match some part of the text, it does not require a total match. For example, the title `firefox.talon - Visual Studio Code` is matched by the regex `/Visual Studio Code/`.
+Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 
-Each kind of requirement can be listed several times. Entries of the same kind of requirement are `OR`'d together, and of different kinds are `AND`'d. For example:
+We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo'), or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
+
+The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you combine these together as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` must is active or the operating system is `windows` and the app `notepad_app` is not active.
 
 ```
-os: linux
+# paint_app or notepad_app
+app: paint_app
+app: notepad_app
+```
+
+```
+# (paint_app or notepad_app) and windows
+app: paint_app
 os: windows
-app: Code
-app: notepad++
+app: notepad_app
 ```
 
-This reads: "If OS is either linux or windows, for an app that has a well-known identifier of either Code or notepad++". Code on windows would match, notepad++ on windows would match, and so on; but Code on mac or Sublime on windows would not.
+```
+# (paint_app and windows) or notepad_app
+app: paint_app
+and os: windows
+app: notepad_app
+```
 
 ```
-mode: user.talon
-mode: command
-and code.language: talon
+# paint_app and not windows
+app: paint_app
+not os: windows
 ```
 
-This one reads "If either mode is user.talon, or else if mode is command at the same time as code.language is talon".
-
-TODO: there is some support for more complex boolean expressions using `and` and `not`. Test and describe that.
+So without modifiers, requirements of the same type (e.g. two apps) are OR-ed together. Requirements of different types (e.g. 'app' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession. The 'not' modifier just negates the condition.
 
 ### Voice commands
 
@@ -127,6 +138,8 @@ A voice command has the format `RULE: BODY`, where `RULE` determines what words 
 ```
 
 This command, for example, will press the shortcut alt-shift-down whenever you say either “channel unread next”, “unread next”, or “goneck”.
+
+#### Rules
 
 Rules have a versatile syntax that is like a word based regex:
 
@@ -140,6 +153,16 @@ Rules have a versatile syntax that is like a word based regex:
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
+| `^foo` | Start anchor | See below |
+| `foo$` | End anchor | See below |
+
+Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
+
+For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+
+In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
+
+#### Talonscript Body
 
 The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
 
@@ -179,19 +202,104 @@ insert lots {user.letter}+:
     insert(letter_list)
 ```
 
-In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding _1, _2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the _list suffix. Individual items from the multiple match can be referred to with the _1, _2 suffixe as well.
+In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
 
-In terms of the Talonscript itself, it only has quite basic operations. We have variable assignment, invocation of actions, arithmetic, some boolean operators, and concatenation of strings.
+In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates all available syntax. See the inline comments for what everything does:
 
-TODO: What are the full capabilities of Talonscript?
+```
+# Comments must be on their own line (optionally preceeded by whitespace)
+some [{user.letter}] command:
+    # Local variable assignment
+    a = 2.2
+    b = "foo"
+    c = "interpolate the {letter} and {b} variables into the string"
+    c = """
+    multiline string
+    """
+    # Only a single mathematical operation per line
+    d = 2
+    a = a + d
+    a = a - d
+    a = a * d
+    a = a / d
+    a = a % d
 
-### Tags, apps, and settings
+    # or operator is used to deal with optional or alternative command parts. It works as the null
+    # coalescing operator, not like boolean or.
+    e = letter or "default"
 
-TODO: Explain how you can override tags and settings in .talon files
+    # Sleep is a built in function and takes arguments of the (<float>|<integer><suffix>) form.
+    # Float allows specifying (fractions) of a second. The <integer><suffix> form can be '1m', '5s', '500ms', '1000000us' etc.
+    # Be aware sleeping in this way will prevent Talon from processing voice commands until the
+    # sleep is over
+    sleep(2s)
 
-### Other capabilities
+    # Repeats the previous line the given number of times, so in this case we'd sleep for a further 4 seconds
+    repeat(2)
 
-TODO: Explain how you can make hotkeys on Mac
+    # Allows pressing, holding, and repeating individual key presses. This example holds down
+    # ctrl-alt-a then presses f12 5 times, then the letter e, then releases ctrl-alt-a.
+    # Note that the argument can be formatted without quotation marks unless you want to do
+    # string interpolation or press the parentheses keys.
+    key(ctrl-alt-a:down f12:5 e ctrl-alt-a:up)
+
+    insert("type in this literal string")
+    auto_insert("process this string with the auto_format action, then type it in with insert()")
+
+    # Stylistically we only recommend the following shorthand if it is the only action being
+    # performed by the command.
+    "type in this string using auto_insert()"
+    """
+    type in this
+    multiline
+    string using auto_insert()
+    """
+
+    # Call built in or user defined actions
+    app.notify("show this in a notification balloon")
+    user.grid_activate()
+```
+
+### Tags, settings, and other capabilities
+
+.talon files can do a few other things aside from defining voice commands.
+
+The most common usage after voice commands is to adjust [settings](/unofficial_talon_docs#settings). The following changes the given setting values when the context header matches:
+
+```
+title: /my app/
+-
+settings():
+    some.setting = 123
+
+    another.setting = 432
+```
+
+You can also activate [tags](/unofficial_talon_docs#tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
+
+```
+title: /my app/
+-
+tag(): user.my_tag
+```
+
+Another feature is the ability to bind keyboard shortcuts. Note that there are still a few operating system specific quirks as of writing.
+
+```
+title: /my app/
+-
+# Show notification saying the key was pressed and prevent other apps from receiving the key event
+key(f8): app.notify("f8 key pressed")
+
+# One or more modifiers can be used with the matcher
+key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key pressed. Note super is the same as cmd.")
+
+# :passive and :up don't work on Windows currently
+key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
+key(f9:up): app.notify("show this balloon when the f9 key is released")
+```
+
+Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
 
 ## Talon Concepts
 
@@ -199,9 +307,9 @@ In order to script Talon it is useful to understand the abstractions it uses. Le
 
 As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags), [Apps](/unofficial_talon_docs#apps), [Modes](/unofficial_talon_docs#modes), and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
 
-One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists](/unofficial_talon_docs#lists) and [Captures](/unofficial_talon_docs#captures).
+The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Two examples are moving the mouse cursor and pasting the contents of the clipboard. Talon comes with some built in actions, but most are defined and implemented in user scripts.
 
-The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Talon comes with some built in actions, but most are defined and implemented in user scripts.
+One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists](/unofficial_talon_docs#lists) and [Captures](/unofficial_talon_docs#captures).
 
 In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
 
@@ -220,7 +328,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. The conditions a context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A *context* specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](/unofficial_talon_docs#context-header) like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), activate [tags](/unofficial_talon_docs#tags), and redefine [lists](#lists) and [captures](#captures). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 
 In Python, you can construct a context like so:
@@ -234,14 +342,17 @@ When initially constructed, a context has no conditions attached, and so it is a
 You can make this context conditional by setting the `matches` property:
 
 ```python
-ctx.matches = "mode: command"
+ctx.matches = """
+app: notepad_app
+os: windows
+"""
 ```
 
 See examples in the [Actions](#actions), [Lists](#lists), [Captures](#captures), and [Tags](#tags) sections for information about using Contexts with those features.
 
 ### Actions
 
-An action is a function that can be called by Talon voice commands, whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
+An action is a function that can be called by Talon voice commands and whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
 
 Some actions, like `edit.save`, are defined by Talon (but not implemented). You can also declare your own custom actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
 
@@ -260,7 +371,7 @@ class Actions:
 
 This declares the actions `user.find_reverse` and `user.mangle` (all user-defined actions are prefixed with `user.`). It also gives a default implementation for `user.mangle` that simply prepends `__` to the input. As in this example, all actions must come with a docstring and type annotations for their arguments and return value.
 
-As mentioned earlier it's pretty common to want to overwrite actions for a particular application (or other context). Taking the example of Emacs mentioned earlier let's say we want to override the edit.save action and also implement/override the two actions we declared above. The following example shows two equivalent ways of doing that.
+It's pretty common to want to overwrite actions for a particular application (or other context). Taking the example of Emacs mentioned earlier let's say we want to override the edit.save action and also implement/override the two actions we declared above. The following example shows two equivalent ways of doing that.
 
 ```python
 from talon import Context, actions
@@ -471,52 +582,41 @@ TODO: Describe what modes are, what they're good for, and how to set them up
 
 ### Apps
 
-Talon can activate a context based on which application is active.  It's not unlikely that important apps are part of several .talon files.  Because one and the same app may need to be identified in several different ways (based on platform or app version), Talon allows to register well-known apps, and specify the detailed logic of how to match an app only once.  In all the other places, only the well-known name needs to be used.
+Talon allows you to give a 'well-known' name to an app. This lets you decouple the app matcher logic from the places it is used.
 
-
-Register and identify the app via a Talon Module in Python - **`fancyedit.py`:**
+Register and identify the 'fancyedit' app via a Talon Module in Python - **`fancyedit.py`:**
 ```python
 from talon import Module
 mod = Module()
-# to reduce typing, you can reference the app registry through a local variable
-apps = mod.apps
-apps.fancyedit = '''
+mod.apps.fancyedit = """
 os: mac
 and app.bundle: com.example.fancyedit
+"""
+# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
+mod.apps.fancyedit = """
 os: windows
 and app.exe: fancyed.exe
-'''
-apps.terminal = 'app.bundle: com.apple.Terminal'
-# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
-apps.firefox = 'app.bundle: com.mozilla.Firefox'
-apps.firefox = 'app.exe: firefox.exe'
+"""
+```
+
+Add another possible matcher for fancyedit in a different file than the one the well-known name was defined in - **`fancyedit_custom.py`:**
+```python
+from talon import Context
+ctx = Context()
+ctx.matches = """
+os: linux
+app: Xfce4-terminal
+title: /fancyed - tmux/
+"""
+
+ctx.apps = ['fancyedit']
 ```
 
 Use the well-known app - **`fancyedit.talon`:**
 ```
-app: fancyed
+app: fancyedit
 -
 my fancy editor command: key(ctrl-alt-shift-y)
-```
-
-Identify the already registered app via a .talon file - **`fancyedit_linux.talon`:**
-```
-os: linux
-app.exe: /opt/ecorp/fancyed
--
-app(): fancyedit
-```
-
-Identify the already registered app via a Talon Context in Python  - **`fancyedit_custom.py`:**
-```python
-from talon import Context
-ctx = Context()
-ctx.matches = '''
-os: linux
-app: Xfce4-terminal
-title: /fancyed - tmux/
-'''
-ctx.apps = ['fancyedit']
 ```
 
 ### Scopes
