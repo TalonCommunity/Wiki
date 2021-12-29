@@ -98,7 +98,7 @@ Each individual header line has the format `[and] [not] <requirement or scope na
 
 We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo'), or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
 
-The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you combine these together as a composite matcher following specific rules. In the following examples the comment contains and expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression means that to match, the app `paint_app` must be active or the operating system is `windows` and the app `notepad_app` is not active.
+The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you combine these together as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` must is active or the operating system is `windows` and the app `notepad_app` is not active.
 
 ```
 # paint_app or notepad_app
@@ -126,7 +126,7 @@ app: paint_app
 not os: windows
 ```
 
-So without modifiers, requirements of the same type (e.g. two apps) are OR-ed together. Requirements of different types (e.g. 'app' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession.
+So without modifiers, requirements of the same type (e.g. two apps) are OR-ed together. Requirements of different types (e.g. 'app' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession. The 'not' modifier just negates the condition.
 
 ### Voice commands
 
@@ -158,7 +158,7 @@ Rules have a versatile syntax that is like a word based regex:
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
-For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second"; because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
 
 In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
 
@@ -212,7 +212,7 @@ some [{user.letter}] command:
     # Local variable assignment
     a = 2.2
     b = "foo"
-    c = "interpolate {letter} and {b} into the string"
+    c = "interpolate the {letter} and {b} variables into the string"
     c = """
     multiline string
     """
@@ -224,8 +224,8 @@ some [{user.letter}] command:
     a = a / d
     a = a % d
 
-    # or operator is used to deal with optional or alternative command parts. It works like the null 
-    # coalescing operator not like boolean or.
+    # or operator is used to deal with optional or alternative command parts. It works as the null
+    # coalescing operator, not like boolean or.
     e = letter or "default"
 
     # Sleep is a built in function and takes arguments of the (<float>|<integer><suffix>) form.
@@ -238,9 +238,8 @@ some [{user.letter}] command:
     repeat(2)
 
     # Allows pressing, holding, and repeating individual key presses. This example holds down
-    # ctrl-alt-a then presses f12 5 times, then the letter e, then releases ctrl-alt-a. Look at the basic
-    # customisation page recipes section for a more complete description of the syntax.
-    # Note that the argument can be formatted without the "s unless you want to do
+    # ctrl-alt-a then presses f12 5 times, then the letter e, then releases ctrl-alt-a.
+    # Note that the argument can be formatted without quotation marks unless you want to do
     # string interpolation or press the parentheses keys.
     key(ctrl-alt-a:down f12:5 e ctrl-alt-a:up)
 
@@ -265,7 +264,7 @@ some [{user.letter}] command:
 
 .talon files can do a few other things aside from defining voice commands.
 
-The next most commonly used feature is to adjust [settings](/unofficial_talon_docs#settings). The following changes the given setting values when the context header matches:
+The most common usage after voice commands is to adjust [settings](/unofficial_talon_docs#settings). The following changes the given setting values when the context header matches:
 
 ```
 title: /my app/
@@ -284,7 +283,7 @@ title: /my app/
 tag(): user.my_tag
 ```
 
-Another feature is the ability to bind keyboard shortcuts. Note that there are still a few operating system specific quirks.
+Another feature is the ability to bind keyboard shortcuts. Note that there are still a few operating system specific quirks as of writing.
 
 ```
 title: /my app/
@@ -329,7 +328,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](/unofficial_talon_docs#context-header), like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), and activate [tags](/unofficial_talon_docs#tags). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A *context* specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](/unofficial_talon_docs#context-header) like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), activate [tags](/unofficial_talon_docs#tags), and redefine [lists](#lists) and [captures](#captures). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 
 In Python, you can construct a context like so:
@@ -353,7 +352,7 @@ See examples in the [Actions](#actions), [Lists](#lists), [Captures](#captures),
 
 ### Actions
 
-An action is a function that can be called by Talon voice commands, and whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
+An action is a function that can be called by Talon voice commands and whose behavior can be overridden within different contexts. This is useful when the same operation has different keybindings in different applications. For example, the built-in Talon action `edit.save` is intended to perform the "save file" operation. In most applications this is performed via `ctrl-s`, but in Emacs it's `ctrl-x ctrl-s`.
 
 Some actions, like `edit.save`, are defined by Talon (but not implemented). You can also declare your own custom actions from Python. Given a module `mod`, you can use `mod.action_class` to declare several actions:
 
@@ -600,7 +599,7 @@ and app.exe: fancyed.exe
 """
 ```
 
-Add another possible matcher for fancyedit in a different file than the one it is defined in - **`fancyedit_custom.py`:**
+Add another possible matcher for fancyedit in a different file than the one the well-known name was defined in - **`fancyedit_custom.py`:**
 ```python
 from talon import Context
 ctx = Context()
