@@ -14,7 +14,7 @@ The official installation and getting started instructions are available at [tal
 1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#configure-a-speech-recognition-engine).
 1. Install a [configuration set](https://talon.wiki/getting_started/#install-a-talon-configuration-set), to make some commands available.
 1. Try some [basic commands](/getting_started#basic-usage)
-1. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com) for help, tips, and connecting with other Talon users.
+1. Optionally, join the [Talon Voice Slack](https://talonvoice.com/chat) for help, tips, and connecting with other Talon users.
 
 ## Install Talon
 
