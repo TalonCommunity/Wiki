@@ -14,14 +14,14 @@ The official installation and getting started instructions are available at [tal
 1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#configure-a-speech-recognition-engine).
 1. Install a [configuration set](https://talon.wiki/getting_started/#install-a-talon-configuration-set), to make some commands available.
 1. Try some [basic commands](/getting_started#basic-usage)
-1. Optionally, join the [Talon Voice Slack](https://talonvoice.slack.com) for help, tips, and connecting with other Talon users.
+1. Optionally, join the [Talon Voice Slack](https://talonvoice.com/chat) for help, tips, and connecting with other Talon users.
 
 ## Install Talon
 
 Talon has two mostly compatible current versions: public and beta. Both versions have support for Mac, Linux, and Windows.
 
 * **Public Version (free):** Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
-* **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.slack.com) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
+* **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
 ### Notes on Linux
 

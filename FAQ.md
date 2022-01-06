@@ -17,7 +17,7 @@ Check out the [hardware](/hardware) page for microphone and eye tracker recommen
 
 ### Are languages other than English supported?
 
-They're being worked on, join talonvoice.slack.com and find a channel for your language to see how it's going. If you are in the beta program, you can configure the WebSpeech API for dictation in other languages.
+They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and find a channel for your language to see how it's going. If you are in the beta program, you can configure the WebSpeech API for dictation in other languages.
 
 ### How can I make talon recognise me better?
 
