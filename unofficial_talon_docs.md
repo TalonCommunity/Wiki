@@ -394,7 +394,13 @@ class MyEmacsActions:
         actions.key("ctrl-r")
 
     def mangle(s):
-        return "emacs__" + s
+        if s == "special":
+            return "emacs__" + s
+        else:
+            # This will call the next most specific action implementation (in our case the
+            # default one specified on the module). This can be used to just override
+            # actiion behaviour in certain circumstances.
+            return actions.next(s)
 ```
 
 So now when we use the `user.mangle("some string")` action in a `.talon` file or `actions.user.mangle("some string")` in a `.py` file then by default we'll get `"__some string"`, but if our "app: Emacs" context matches then we'll get `"emacs__some string"`.
