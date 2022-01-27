@@ -305,7 +305,7 @@ Aside from these, additional extra capabilities may be added from time to time. 
 
 In order to script Talon it is useful to understand the abstractions it uses. Let's start by giving you a brief overview of how they fit together.
 
-As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags), [Apps](/unofficial_talon_docs#apps), [Modes](/unofficial_talon_docs#modes), and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
+As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags) and [Apps](/unofficial_talon_docs#apps), and less commonly [Modes](/unofficial_talon_docs#modes) and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
 
 The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Two examples are moving the mouse cursor and pasting the contents of the clipboard. Talon comes with some built in actions, but most are defined and implemented in user scripts.
 
@@ -522,18 +522,19 @@ In this example we have only set up a simple capture. The 'rule' parameter in th
 
 ### Tags
 
-Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `user.tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags have a couple of main uses:
 
-Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `user.tabs` tag.
+1. Tags can be used to activate additional voice commands within a particular context. For example `knausj_talon` has some tab management commands (e.g. tab new) that apply to many applications. Application specific contexts or `.talon` files can simply enable the tag (and potentially implement the relevant actions) to activate those voice commands.
+2. Tags can be enabled from Python to activate a set of voice commands given certain conditions. For example the mouse grid activates a tag when it is visible. This tag enables the 'grid off' and 'grid reset' commands.
 
-To make a tag available, it first must be declared in a module:
+To make a tag available, it must first be declared in a module:
 
 **`generic_application_features.py`:**
 ```python
 from talon import Module
 
 mod = Module()
-# this declares a tag in the user namespace
+# this declares a tag in the user namespace (i.e. 'user.tabs')
 mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
 ```
 
@@ -563,7 +564,7 @@ tag(): user.tabs
 
 Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
-There's also the option of enabling tags from within Python. This lets you define more complicated rules for enabling voice commands. For example the Talon draft window enables a tag when the window is visible so it can be controlled even if it doesn't have focus. To enable tags from Python you can use a Context instance like this:
+There's also the option of enabling tags from within Python. To do that you can use a Context instance like this:
 
 ```python
 from talon import Context
@@ -572,16 +573,58 @@ ctx = Context()
 ctx.matches = "app: Firefox"
 # You can alter the set of tags whenever you like within your Python
 # code. The tags will only be applied if your Context is currently active
-# and they are included in the tags variable. Note you must replace the entire
+# and they are included in the tags property. Note that you must replace the entire
 # set of tags at once, you can't individually add and delete them
 ctx.tags = ["user.tabs"]
 ```
+
+Tags are a commonly used part of the Talon framework. Related but less commonly used are [modes](#modes) and [scopes](#scopes).
+
+### Apps
+
+Talon allows you to give a 'well-known' name to an app. This lets you decouple the app matcher logic from the places it is used.
+
+Register and identify the 'fancyedit' app via a Talon Module in Python - **`fancyedit.py`:**
+```python
+from talon import Module
+mod = Module()
+mod.apps.fancyedit = """
+os: mac
+and app.bundle: com.example.fancyedit
+"""
+# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
+mod.apps.fancyedit = """
+os: windows
+and app.exe: fancyed.exe
+"""
+```
+
+Add another possible matcher for fancyedit in a different file than the one the well-known name was defined in - **`fancyedit_custom.py`:**
+```python
+from talon import Context
+ctx = Context()
+ctx.matches = """
+os: linux
+app: Xfce4-terminal
+title: /fancyed - tmux/
+"""
+
+ctx.apps = ['fancyedit']
+```
+
+Use the well-known app - **`fancyedit.talon`:**
+```
+app: fancyedit
+-
+my fancy editor command: key(ctrl-alt-shift-y)
+```
+
 
 ### Modes
 
 Modes are property you can match in your `.talon` file context header. They are intended for switching on and off large sets of Talon functionality. For example Talon includes the 'command', 'dictation', and 'sleep' modes by default along with a few others. Multiple modes can be active at once.
 
-The built in 'command' mode is special in that it is an implicit requirement in all `.talon` files that haven't explicitly specificed a mode. So this `.talon` file would be active in command mode:
+The built in 'command' mode is special in that it is an implicit requirement in all `.talon` files that haven't explicitly specified a mode. So this `.talon` file would be active in command mode:
 
 ```
 -
@@ -636,48 +679,9 @@ title: /My Game/
 attack: key(enter)
 ```
 
-### Apps
-
-Talon allows you to give a 'well-known' name to an app. This lets you decouple the app matcher logic from the places it is used.
-
-Register and identify the 'fancyedit' app via a Talon Module in Python - **`fancyedit.py`:**
-```python
-from talon import Module
-mod = Module()
-mod.apps.fancyedit = """
-os: mac
-and app.bundle: com.example.fancyedit
-"""
-# you can specify the same app several times; this is the same as specifying several match statements that are OR'd together
-mod.apps.fancyedit = """
-os: windows
-and app.exe: fancyed.exe
-"""
-```
-
-Add another possible matcher for fancyedit in a different file than the one the well-known name was defined in - **`fancyedit_custom.py`:**
-```python
-from talon import Context
-ctx = Context()
-ctx.matches = """
-os: linux
-app: Xfce4-terminal
-title: /fancyed - tmux/
-"""
-
-ctx.apps = ['fancyedit']
-```
-
-Use the well-known app - **`fancyedit.talon`:**
-```
-app: fancyedit
--
-my fancy editor command: key(ctrl-alt-shift-y)
-```
-
 ### Scopes
 
-Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in.
+Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in. In practise they are not used very often.
 
 You need to write custom Python code to keep your scope information up to date. The following example implements a scope that makes the current time available as a matcher property.
 
@@ -707,6 +711,8 @@ is it morning: "yes it is!"
 ```
 
 `scopes` are 'global' in the sense that you can't override them for particular contexts in the same way as actions. Any file can simply overwrite a particular scope's value by implementing some python code like the above.
+
+You may have noticed that scopes can emulate the behaviour of [tags](#tags), except you have to manage any context switches yourself. In practise tags are used far more often than scopes as they're both simpler to use, and are also self documenting. This leads to the recommendation that if you are able to use a tag for your use-case, then generally you would do that. If you need the string matching behaviour of scopes then you might consider those.
 
 ### Settings
 
