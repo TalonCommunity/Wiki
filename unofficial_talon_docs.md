@@ -305,7 +305,7 @@ Aside from these, additional extra capabilities may be added from time to time. 
 
 In order to script Talon it is useful to understand the abstractions it uses. Let's start by giving you a brief overview of how they fit together.
 
-As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags), [Apps](/unofficial_talon_docs#apps), [Modes](/unofficial_talon_docs#modes), and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
+As we have already seen, the [Context](/unofficial_talon_docs#contexts) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](/unofficial_talon_docs#tags) and [Apps](/unofficial_talon_docs#apps), and less commonly [Modes](/unofficial_talon_docs#modes) and [Scopes](/unofficial_talon_docs#scopes) are all ways of providing information to match against in a Context.
 
 The next key component is the implementation of behaviour via [Actions](/unofficial_talon_docs#actions). Two examples are moving the mouse cursor and pasting the contents of the clipboard. Talon comes with some built in actions, but most are defined and implemented in user scripts.
 
@@ -394,7 +394,13 @@ class MyEmacsActions:
         actions.key("ctrl-r")
 
     def mangle(s):
-        return "emacs__" + s
+        if s == "special":
+            return "emacs__" + s
+        else:
+            # This will call the next most specific action implementation (in our case the
+            # default one specified on the module). This can be used to just override
+            # actiion behaviour in certain circumstances.
+            return actions.next(s)
 ```
 
 So now when we use the `user.mangle("some string")` action in a `.talon` file or `actions.user.mangle("some string")` in a `.py` file then by default we'll get `"__some string"`, but if our "app: Emacs" context matches then we'll get `"emacs__some string"`.
@@ -522,18 +528,19 @@ In this example we have only set up a simple capture. The 'rule' parameter in th
 
 ### Tags
 
-Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags can represent features many different applications may have, enough that it would be difficult to list all such applications in advance. For example, the tag `user.tabs` indicates the presence of tabs. Browsers have tabs, but so do some text editors, chat applications, terminals, etc.
+Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags have a couple of main uses:
 
-Using tags, we can define a set of tab-related voice commands in one Talon file, and other application-specific Talon files can opt in to these commands by providing the `user.tabs` tag.
+1. Tags can be used to activate additional voice commands within a particular context. For example `knausj_talon` has some tab management commands (e.g. tab new) that apply to many applications. Application specific contexts or `.talon` files can simply enable the tag (and potentially implement the relevant actions) to activate those voice commands.
+2. Tags can be enabled from Python to activate a set of voice commands given certain conditions. For example the mouse grid activates a tag when it is visible. This tag enables the 'grid off' and 'grid reset' commands.
 
-To make a tag available, it first must be declared in a module:
+To make a tag available, it must first be declared in a module:
 
 **`generic_application_features.py`:**
 ```python
 from talon import Module
 
 mod = Module()
-# this declares a tag in the user namespace
+# this declares a tag in the user namespace (i.e. 'user.tabs')
 mod.tag("tabs", desc="basic commands for working with tabs within a window are available")
 ```
 
@@ -563,7 +570,7 @@ tag(): user.tabs
 
 Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](/unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to *implement* them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
-There's also the option of enabling tags from within Python. This lets you define more complicated rules for enabling voice commands. For example the Talon draft window enables a tag when the window is visible so it can be controlled even if it doesn't have focus. To enable tags from Python you can use a Context instance like this:
+There's also the option of enabling tags from within Python. To do that you can use a Context instance like this:
 
 ```python
 from talon import Context
@@ -571,14 +578,13 @@ from talon import Context
 ctx = Context()
 ctx.matches = "app: Firefox"
 # You can alter the set of tags whenever you like within your Python
-# code. The tags will only be applied if they are included in the
-# set and the ctx.matches selector is active also.
-ctx.tags.add("user.tabs")
+# code. The tags will only be applied if your Context is currently active
+# and they are included in the tags property. Note that you must replace the entire
+# set of tags at once, you can't individually add and delete them
+ctx.tags = ["user.tabs"]
 ```
 
-### Modes
-
-TODO: Describe what modes are, what they're good for, and how to set them up
+Tags are a commonly used part of the Talon framework. Related but less commonly used are [modes](#modes) and [scopes](#scopes).
 
 ### Apps
 
@@ -619,9 +625,69 @@ app: fancyedit
 my fancy editor command: key(ctrl-alt-shift-y)
 ```
 
+
+### Modes
+
+Modes are property you can match in your `.talon` file context header. They are intended for switching on and off large sets of Talon functionality. For example Talon includes the 'command', 'dictation', and 'sleep' modes by default along with a few others. Multiple modes can be active at once.
+
+The built in 'command' mode is special in that it is an implicit requirement in all `.talon` files that haven't explicitly specified a mode. So this `.talon` file would be active in command mode:
+
+```
+-
+insert test: "command mode active"
+```
+
+Whereas this one would only be active in dictation mode:
+
+```
+mode: dictation
+-
+insert mode: "dictation mode active"
+```
+
+You can create custom modes but this is uncommon as [Tags](#tags) are better suited for most purposes. Like tags, multiple modes can be active at once. Unlike Tags, modes cannot be scoped to a particular context; modes always apply globally. The intent is that there should be a small enough number of them that they could be toggled using a short popup menu.
+
+So why might you add a custom mode? The main reason is because you want to disable all normal voice commands so only the ones in your mode are active. An example might be where you were using a full screen computer game, and wanted to eliminate potential conflicts with commands outside the game context.
+
+First you would declare the new mode in Python:
+
+```python
+from talon import Module
+
+mod = Module()
+mod.mode("single_application", desc="Non-multitasking mode (e.g. computer games)")
+```
+
+Then you might make a couple of generic 'mode entry' and 'mode exit' commands:
+
+```
+^single application mode$:
+    mode.enable("user.single_application")
+    mode.disable("command")
+```
+
+```
+mode: user.single_application
+-
+^command mode$:
+    mode.disable("user.single_application")
+    mode.enable("command")
+```
+
+Note that I've shadowed the existing `command mode` command from `knausj_talon` so that it does the right thing when our mode is active.
+
+After that we could define a set of commands which would be available in our game:
+
+```
+mode: user.single_application
+title: /My Game/
+-
+attack: key(enter)
+```
+
 ### Scopes
 
-Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in.
+Scopes allow you to supply additional properties that can be matched in the header of `.talon` files or by the `Context.matches` string in Python. This could be used to make the window title from your current virtual machine window available to Talon for example. Another might be to tell Talon which mode your full-screen computer game is in. In practise they are not used very often.
 
 You need to write custom Python code to keep your scope information up to date. The following example implements a scope that makes the current time available as a matcher property.
 
@@ -652,6 +718,8 @@ is it morning: "yes it is!"
 
 `scopes` are 'global' in the sense that you can't override them for particular contexts in the same way as actions. Any file can simply overwrite a particular scope's value by implementing some python code like the above.
 
+You may have noticed that scopes can emulate the behaviour of [tags](#tags), except you have to manage any context switches yourself. In practise tags are used far more often than scopes as they're both simpler to use, and are also self documenting. This leads to the recommendation that if you are able to use a tag for your use-case, then generally you would do that. If you need the string matching behaviour of scopes then you might consider those.
+
 ### Settings
 
 TODO: Describe how to make custom settings
@@ -676,6 +744,7 @@ This section lists some built in methods which are useful for developing or debu
 * `mimic("say hello world")` - Executes the given voice command like you spoke it in to the microphone. Can be useful to re-run voice commands while editing them so you don't have to keep saying the same thing.
 * `actions.find("string")` - Searches the name, documentation, and code implementing an action for the given substring. Prints out a list of matches.
 * `actions.list("edit")` - Prints out all registered actions matching the given prefix. If no argument is supplied then lists all actions. See the [basic customisation page](/basic_customization/#actions-in-talon-files) for a trick to copy this output into your clipboard.
+* `events.tail()` - If you're not getting enough information about what Talon is doing from the log file you can take a look at this method. It prints out Talon internal events, user actions called, scope changes etc. to the REPL. For even more logging try the `events.tail(noisy=True)` flag. You can also print out historical events and filter the events, run `help(events.tail)` to see the options.
 
 ### API functions
 
