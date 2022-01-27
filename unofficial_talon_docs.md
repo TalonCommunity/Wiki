@@ -571,9 +571,10 @@ from talon import Context
 ctx = Context()
 ctx.matches = "app: Firefox"
 # You can alter the set of tags whenever you like within your Python
-# code. The tags will only be applied if they are included in the
-# set and the ctx.matches selector is active also.
-ctx.tags.add("user.tabs")
+# code. The tags will only be applied if your Context is currently active
+# and they are included in the tags variable. Note you must replace the entire
+# set of tags at once, you can't individually add and delete them
+ctx.tags = ["user.tabs"]
 ```
 
 ### Modes
