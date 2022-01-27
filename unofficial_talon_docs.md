@@ -738,6 +738,7 @@ This section lists some built in methods which are useful for developing or debu
 * `mimic("say hello world")` - Executes the given voice command like you spoke it in to the microphone. Can be useful to re-run voice commands while editing them so you don't have to keep saying the same thing.
 * `actions.find("string")` - Searches the name, documentation, and code implementing an action for the given substring. Prints out a list of matches.
 * `actions.list("edit")` - Prints out all registered actions matching the given prefix. If no argument is supplied then lists all actions. See the [basic customisation page](/basic_customization/#actions-in-talon-files) for a trick to copy this output into your clipboard.
+* `events.tail()` - If you're not getting enough information about what Talon is doing from the log file you can take a look at this method. It prints out Talon internal events, user actions called, scope changes etc. to the REPL. For even more logging try the `events.tail(noisy=True)` flag. You can also print out historical events and filter the events, run `help(events.tail)` to see the options.
 
 ### API functions
 
