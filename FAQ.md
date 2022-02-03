@@ -35,3 +35,17 @@ While Talon is closed source, there's plenty you can do to help:
 ### Troubleshooting
 
 Checkout the [troubleshooting](/troubleshooting) for solutions to common problems.
+
+## Common Websites
+
+### Gmail
+
+https://ataraxy.consulting/write-a-gmail-with-talon/
+
+### Stack Overflow
+
+Text selection and navigation
+* https://support.google.com/chrome/answer/10129654?hl=en
+* https://github.com/nathaniel-robertson/nat-talon-configs/blob/main/text-navigation-and-editing.talon
+* https://github.com/nathaniel-robertson/nat-talon-configs/blob/main/chrome.talon
+
