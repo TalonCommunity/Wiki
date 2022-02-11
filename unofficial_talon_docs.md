@@ -149,7 +149,7 @@ Rules have a versatile syntax that is like a word based regex:
 | `[foo]` | Optional | “foo” or null (nothing) |
 | `foo*` | Zero or more | “”, “foo”, “foo foo”, ... |
 | `foo+` | One or more | “foo”, “foo foo”, ... |
-| `foo|bar` | Choice | “foo”, “bar” |
+| <code>foo&#124;bar</code> | Choice | “foo”, “bar” |
 | `(foo)` | Precedence/grouping | “foo” |
 | `{some_list}` | [List](/unofficial_talon_docs/#lists) | Depends on the list. |
 | `<some_capture>` | [Capture](/unofficial_talon_docs/#captures) | Depends on the capture. |
