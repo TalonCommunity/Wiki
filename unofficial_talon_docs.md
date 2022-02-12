@@ -168,29 +168,34 @@ The BODY part of a command is implemented in Talonscript, a simple statically ty
 
 ```
 -
-# The following lists and captures are implemented in the knausj_talon repo
-# {user.letter} is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
-# {user.number} is a list mapping words like 'five' to number strings like '5'
+# The following captures are implemented in the knausj_talon repo:
+#
+# <user.letter> is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
+# <user.number_string> is a capture mapping words like 'five' to number strings like '5'
 # <digits> is a capture that maps a variable length phrase like
 #   "one two three" onto an integer 123
+#
+# The following list does not exist (it's made up for this example):
+#
+# {user.address_book} maps the names 'sally', 'frank' etc. to their email addresses (sally@example.com, frank@example.com)
 
 # Saying "double letter plex" presses ctrl+a then inserts "x." then "x"
-double letter {user.letter}:
+double letter <user.letter>:
     modified = letter + "."
     key(ctrl-a)
     insert(modified)
     insert(letter)
 
 # Saying "defaultable plex" inserts "x", saying "defaultable" inserts "default"
-defaultable [{user.letter}]:
+defaultable [<user.letter>]:
     insert(letter or "default")
 
 # Saying "choose plex" inserts "x", saying "choose five" inserts "5"
-choose ({user.letter}|{user.number}):
-    insert(letter or number)
+choose (<user.letter>|<user.number_string>):
+    insert(letter or number_string)
 
 # Saying "join plex and gust" or "join plex gust" inserts "xg"
-join {user.letter} [and] {user.letter}:
+join <user.letter> [and] <user.letter>:
     insert(letter_1 + letter_2)
 
 # Saying "add one two three and four five six" inserts "579"
@@ -198,8 +203,13 @@ add <digits> and <digits>:
     insert(digits_1 + digits_2)
 
 # Saying "insert lots plex gust plex" inserts "['x', 'g', 'x']"
-insert lots {user.letter}+:
+insert lots <user.letter>+:
     insert(letter_list)
+
+# Saying "type email sally" inserts "sally@example.com"
+# Lists can be used in exactly the same way as captures
+type email {user.address_book}:
+    insert(address_book)
 ```
 
 In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
@@ -208,11 +218,15 @@ In terms of the Talonscript itself, the syntax can be thought of as a very limit
 
 ```
 # Comments must be on their own line (optionally preceeded by whitespace)
-some [{user.letter}] command:
+some [<user.letter>] command:
+    # or operator is used to deal with optional or alternative command parts. It works as the null
+    # coalescing operator, not like boolean or.
+    letter_defaulted = letter or "default"
+
     # Local variable assignment
     a = 2.2
     b = "foo"
-    c = "interpolate the {letter} and {b} variables into the string"
+    c = "interpolate the {letter_defaulted} and {b} variables into the string"
     c = """
     multiline string
     """
@@ -223,10 +237,6 @@ some [{user.letter}] command:
     a = a * d
     a = a / d
     a = a % d
-
-    # or operator is used to deal with optional or alternative command parts. It works as the null
-    # coalescing operator, not like boolean or.
-    e = letter or "default"
 
     # Sleep is a built in function and takes arguments of the (<float>|<integer><suffix>) form.
     # Float allows specifying (fractions) of a second. The <integer><suffix> form can be '1m', '5s', '500ms', '1000000us' etc.
