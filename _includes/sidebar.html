@@ -1,13 +1,27 @@
+{%- comment -%}See _data/navigation.yml to edit items and change ordering.{%- endcomment -%}
 <nav>
   <ul>
-    {%- comment -%} The position of each page in the sidebar is determined
-    by the "order" in their frontmatter: higher values of "order" come
-    later. Pages without orders go last. {%- endcomment -%}
-    {%- assign pages_by_order = site.pages | where:"sidebar","true" | sort: "order", "last" -%}
-    {%- for page in pages_by_order -%}
-      {%- if page.title -%}
-      <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-      {%- endif -%}
+    {%- for parent in site.data.navigation.pages -%}
+      {%- assign parent_url = "/" | append: parent.slug | append: "/" -%}
+      {%- assign parent_page = site.pages | where: "url",parent_url | first -%}
+      <li>
+        {%- if parent_page.title -%}
+          <a href="{{ parent_page.url | relative_url }}">{{ parent_page.title }}</a>
+          {%- if parent.children -%}
+          <ul>
+            {%- for child in parent.children -%}
+            {%- assign child_url = "/" | append: parent.slug | append: "/" | append: child.slug | append: "/" -%}
+            {%- assign child_page = site.pages | where: "url",child_url | first -%}
+            {%- if child_page.title -%}
+              <li>
+                <a href="{{ child_page.url | relative_url }}">{{ child_page.title }}</a>
+              </li>
+            {%- endif -%}
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        {%- endif -%}
+      </li>
     {%- endfor -%}
   </ul>
 </nav>

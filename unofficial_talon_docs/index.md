@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 3
-published: true
----
 # Unofficial Talon Docs
 
 This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. The page assumes you have successfully [configured Talon](/getting_started) to respond to voice commands.

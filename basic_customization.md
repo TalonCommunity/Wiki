@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 2
-published: true
----
 # Basic customization
 
 Once you have successfully [set up Talon](/getting_started) you may find that you would like to change some of how it behaves. This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](/unofficial_talon_docs).

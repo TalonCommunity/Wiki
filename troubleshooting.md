@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 4
----
-
 # Troubleshooting
 
 

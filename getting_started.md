@@ -1,9 +1,3 @@
----
-sidebar: true
-order: 1
-published: true
----
-
 # Getting Started
 
 ## Overview
