@@ -242,11 +242,9 @@ some [<user.letter>] command:
     # Repeats the previous line the given number of times, so in this case we'd sleep for a further 4 seconds
     repeat(2)
 
-    # Allows pressing, holding, and repeating individual key presses. This example holds down
-    # ctrl-alt-a then presses f12 5 times, then the letter e, then releases ctrl-alt-a.
-    # Note that the argument can be formatted without quotation marks unless you want to do
-    # string interpolation or press the parentheses keys.
-    key(ctrl-alt-a:down f12:5 e ctrl-alt-a:up)
+    # The key() action. Allows pressing, holding, and repeating individual key presses.
+    # See the "key() action" wiki page for more details
+    key(ctrl-f)
 
     insert("type in this literal string")
     auto_insert("process this string with the auto_format action, then type it in with insert()")
@@ -303,6 +301,8 @@ key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key press
 key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
+
+The list of available keys you can listen too isn't well defined, but it is likely a subset of the names on the [key() action](/unofficial_talon_docs/key_action) wiki page.
 
 Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
 
