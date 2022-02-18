@@ -2,8 +2,7 @@ pages:
   - slug: getting_started
   - slug: basic_customization
   - slug: unofficial_talon_docs
-    children:
-      - slug: key_action
+  - slug: key_action
   - slug: troubleshooting
   - slug: hardware
   - slug: videos
