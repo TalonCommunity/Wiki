@@ -9,6 +9,7 @@ Regardless of which OS you will be using when you use your eye tracker, the init
 - Connect your new Tobii 5c eye tracker via USB to a Windows computer with an internet connection.
 - Wndows should bring up the "Tobii Experience" configuration software automatically. This software should recognize your Tobii 5 hardware and prompt you to start a setup process. You don't actually need to do this.
 - **If you are using Mac or Linux:** Disconnect the tracker from the Windows machine and connect to your Mac or Linux machine.
+- **If you are using Windows:** Tobii runs three services by default that you will need to disable. Find the Services app by typing "services" in the start menu. Next scroll down until you find the three services that start with the word 'Tobii'. For each of these right click to view Properties and then change "Startup type" to "Disabled". If you'd want to use the Tobii app you can re-enable these at any time.
 - Start up Talon. It should recognize your new hardware.
 - Enable eye tracking in the Talon menu.
 - Run the calibration in Talon.
