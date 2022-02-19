@@ -6,10 +6,10 @@ This is a wiki for [Talon](https://talonvoice.com/), a hands-free input replacem
 Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. If you want to support the project, consider donating to the [Patreon](https://www.patreon.com/lunixbochs).
 
 ## Who can Contribute
-This wiki belongs to the Talon Community, and contributions are welcome from anyone. Anyone can make pull requests, and any member of the TalonCommunity GitHub organization can merge that pull request. Talon Community members can push directly to `gh-pages` branch.
+This wiki belongs to the Talon Community, and contributions are welcome from anyone. Any member of the TalonCommunity GitHub organization can merge pull requests. Talon Community members can push directly to the `main` branch, which is the deployed branch.
 
 ## How to Contribute
-Content is formatted using Markdown syntax. Check out this [Markdown Syntax Guide](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf). There are multiple ways to contribute content:
+Content is formatted using [markdown syntax](https://www.markdownguide.org/basic-syntax/). There are multiple ways to contribute content:
 
 ### Using Prose.io, a GitHub content editor
 Links to edit content using `Prose.io` are embedded into the site in the top right corner:
@@ -35,7 +35,7 @@ Images can be uploaded either by dragging and dropping the image into the prose 
 Prose by default suggests a filename with a date, and there isn't a way currently to turn of this behavior. Please remove the date from the suggested filename, for example don't use `2020-06-16-your-filename.md` and instead name it without a date like `your-filename.md`. Remember to use the `.md` file extension. Files without the extension will not be rendered by jekyll.
 
 #### Saving Changes
-Click the save button, which will commit your changes. If you are a member of the Talon Community github organization, your changes will be committed directly to the deploy branch `gh-pages` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `#talon-docs` channels of the Talon Slack.
+Click the save button, which will commit your changes. If you are a member of the Talon Community github organization, your changes will be committed directly to the deploy branch `main` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `#talon-docs` channels of the Talon Slack.
 
 ### Using GitHub UI
 There are links in the top right corner of the site to edit the content in GitHub. Clicking `Add new`, for example, will drop you into a GiHub UI for adding a new file:
@@ -43,12 +43,12 @@ There are links in the top right corner of the site to edit the content in GitHu
 ![screenshot github editor](media/github_editor.png)
 
 
-The GitHub UI provides an option to either commit directly to `gh-pages` branch (if you are a member of Talon Community) or make a new branch and submit a pull request, which can be merged from a member of TalonCommunity.
+The GitHub UI provides an option to either commit directly to `main` branch (if you are a member of Talon Community) or make a new branch and submit a pull request, which can be merged from a member of TalonCommunity.
 
 ### Using git
 
 #### New Pages
-New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered. For every new page, make sure to add a link to it in the sidebar `_includes/sidebar.html`:
+New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
 
 #### Images
 Add images to the `media` directory and include in markdown using the syntax:
@@ -58,7 +58,7 @@ Add images to the `media` directory and include in markdown using the syntax:
 ```
 
 ## Deploying Changes
-All changes merged to `gh-pages` branch will be automatically deployed using GitHub pages to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a few minutes. If you are a member of TalonCommunity, you have write access and can merge your own changes. If
+All changes merged to `main` branch will be automatically deployed using Netlify to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a minute or two. If you are a member of TalonCommunity, you have write access and can merge your own changes.
 
 ## Advanced
 **If you are only looking to add content to the wiki, you should not need to do any of the following setup. This is only relevant if you want to make changes to the wiki site itself or you want to preview locally instead of using prose or GitHub UI.**
@@ -67,7 +67,7 @@ All changes merged to `gh-pages` branch will be automatically deployed using Git
 
 This wiki is built using:
 - [jekyll](https://jekyllrb.com/docs/), a static site generator
-- [GitHub Pages](https://jekyllrb.com/docs/github-pages/), to host the site
+- [Netlify](https://www.netlify.com), to host the site
 - [git-wiki-theme](https://github.com/Drassil/git-wiki-theme), a wiki theme for jekyll
 - [prose.io](https://github.com/prose/prose), a content editor for GitHub
 
