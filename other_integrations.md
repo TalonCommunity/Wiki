@@ -7,6 +7,7 @@ This page documents third party software that pair well with Talon.
 | Software | Cost | Platform | Description |
 | --- | --- | --- | --- |
 | [Shortcat](https://shortcatapp.com/) | Free | Mac | Allows selecting native UI elements by searching related strings. Like vimium for OSX |
+| [Hunt and Peck](https://github.com/zsims/hunt-and-peck) | Free | Windows | Like Vimium for Windows. Paints a two letter label on each button etc. which you can type to select. |
 | [Rectangle](https://github.com/rxhanson/Rectangle) | Free | Mac | Keyboard control window placement and management |
 
 ## Browser navigation
@@ -18,4 +19,5 @@ This page documents third party software that pair well with Talon.
 | [Vimari](https://github.com/televator-apps/vimari) | Free | Safari | A port of Vimium for Safari. |
 
 ## Linux Accessibility Notes
+
 Once Talon can interface with Linux's accessibility tools, the only terminal emulators that provide interfaces are VTE-based ones like Termite (e.g. Kitty & Alacritty don't expose any information).
