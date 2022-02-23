@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 5
----
-
 # Hardware
 
 

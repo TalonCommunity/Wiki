@@ -1,9 +1,3 @@
----
-sidebar: true
-order: 7
-published: true
----
-
 # FAQ
 
 ### What can I say?  

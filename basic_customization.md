@@ -1,8 +1,3 @@
----
-sidebar: true
-order: 2
-published: true
----
 # Basic customization
 
 Once you have successfully [set up Talon](/getting_started) you may find that you would like to change some of how it behaves. This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](/unofficial_talon_docs).
@@ -192,16 +187,7 @@ Often you will want to add a new voice command to press an application specific 
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
-Keyboard shortcuts will almost always make use of the key() action. Here's some of the syntax you can use with that:
-
-* key("f") - Presses the f key.
-* key("ctrl-t") - Presses and holds down the control key, then presses t, then releases everything.
-* key("\\"") - Presses the " key.
-* key("ctrl-shift-alt-cmd-super-t") - Presses and holds down the control, shift, alt, super (windows key), and command keys, then presses t, then releases everything. Note how you can apply multiple modifiers by connecting them with hyphens.
-* key("left delete") - Presses the left arrow key, then the delete key.
-* key("ctrl:down") - Presses and holds the control key. You can use "ctrl:up" to release the key in a subsequent key() call.
-* key("tab:3") - Presses the tab key three times.
-* There isn't a full list of key names available unfortunately, but some useful or non-obvious ones are: enter, left/right/up/down, escape, pageup/pagedown, backspace, space, tab, delete, f12
+Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](/unofficial_talon_docs/key_action/).
 
 ### Slow down key presses
 

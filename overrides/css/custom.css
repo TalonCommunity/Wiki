@@ -36,3 +36,10 @@ details > img {
 #git-wiki-toc li ol {
   margin:  0px;
 }
+
+/* Page navigation overrides */
+
+.git-wiki-page-list ul ul {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
