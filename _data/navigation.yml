@@ -5,5 +5,6 @@ pages:
   - slug: key_action
   - slug: troubleshooting
   - slug: hardware
-  - slug: videos
+  - slug: talon_packages
+  - slug: talon_related_resources
   - slug: FAQ
