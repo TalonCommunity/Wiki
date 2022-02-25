@@ -727,7 +727,34 @@ You may have noticed that scopes can emulate the behaviour of [tags](#tags), exc
 
 ### Settings
 
-TODO: Describe how to make custom settings
+Settings allow you to control some of the parameters of your python files by changing their value in a .talon file. This can be used to make a Talon user file set easier to customize for end users, such as exposing the background color of a UI element. It can also be useful to have certain settings change depending on the context, by setting them to different values in different .talon files.
+
+Settings are defined on Modules. Each setting has a name, type, default, and description. The following example shows how to define a setting in python, and save its value in a variable.
+
+`setting.py`
+```
+from talon import Module
+
+mod = Module()
+
+horizontal_position = mod.setting(
+    "my_package_horizontal_position",
+    type=int,
+    default=0
+    desc="Set the horizontal display position of some UI element",
+)
+```
+
+Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_package". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
+
+The following example shows how you would change the value for that setting in a .talon file.
+
+`setting.talon`
+```
+-
+settings():
+    user.my_package_horizontal_position = 50
+```
 
 ## Tips and tricks
 
