@@ -727,9 +727,9 @@ You may have noticed that scopes can emulate the behaviour of [tags](#tags), exc
 
 ### Settings
 
-Settings allow you to control some of the parameters of your python files by changing their value in a .talon file. This can be used to make a Talon user file set easier to customize for end users, such as exposing the background color of a UI element. It can also be useful to have certain settings change depending on the context, by setting them to different values in different .talon files.
+Settings allow you to control some of the parameters of your python files by changing their value in a .talon file. This can be used to make a Talon user file set easier to customize for end users, such as exposing the background color of a UI element. It can also be useful to have certain settings change when the context changes, by setting them to different values in different .talon files.
 
-Settings are defined on Modules. Each setting has a name, type, default, and description. The following example shows how to define a setting in python, and save its value in a variable.
+Settings are defined on Modules. Each setting has a name, type, default value, and description. The following example shows how to define a setting in python, and save its value in a variable.
 
 `setting.py`
 ```
