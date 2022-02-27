@@ -756,6 +756,16 @@ settings():
     user.my_package_horizontal_position = 50
 ```
 
+It is also possible to register a callback function to be called whenever a setting changes. This is done by calling settings.register() with a setting name and a function to call. If the name string is blank (like in the example below) then the callback function will be called whenever any setting is changed. When the name is not blank the function will only be called when a setting with a matching name is changed.
+
+`listener.py`
+```
+def settings_change_handler(*args):
+    print("A setting has changed")
+
+settings.register("", settings_change_handler)
+```
+
 ## Tips and tricks
 
 This section contains some additional miscellaneous information which may be useful for developing and debugging Talon scripts.
