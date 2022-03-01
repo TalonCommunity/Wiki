@@ -740,7 +740,7 @@ mod = Module()
 horizontal_position = mod.setting(
     "my_package_horizontal_position",
     type=int,
-    default=0
+    default=0,
     desc="Set the horizontal display position of some UI element",
 )
 
@@ -749,13 +749,14 @@ print("The current value of the setting is " + horizontal_position.get())
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_package". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
 
-The following example shows how you would change the value for that setting in a .talon file.
+The following example shows how you would change the value for that setting in a .talon file. Any number of settings can be defined in a single settings block, but any invalid syntax will prevent the entire block from applying.
 
 `setting.talon`
 ```
 -
 settings():
     user.my_package_horizontal_position = 50
+    # Any number of other settings could be defined here
 ```
 
 It is also possible to register a callback function to be called whenever a setting changes. This is done by calling settings.register() with a setting name and a function to call. If the name string is blank (like in the example below) then the callback function will be called whenever any setting is changed. When the name is not blank the function will only be called when a setting with a matching name is changed.
