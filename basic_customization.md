@@ -2,13 +2,13 @@
 
 Once you have successfully [set up Talon](/getting_started) you may find that you would like to change some of how it behaves. This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](/unofficial_talon_docs).
 
-This page assumes that Talon is responding to your voice and you are using the knausj\_talon package.
+This page assumes that Talon is responding to your voice and you are using the knausj\_talon Talon user file set.
 
 If you are having trouble with anything here or in Talon more generally, the best way to get help is on the [Talon Slack](/).
 
 ## Customization overview
 
-All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the knausj\_talon package/directory ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
+All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the knausj\_talon Talon user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Roughly speaking `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by `.talon` files. `.py` files are written in the [Python programming language](https://www.python.org/) (one of the most popular programming languages in the world). `.talon` files are written in a language that is only used by Talon.
 
@@ -20,16 +20,16 @@ Talon is built to be a flexible and customizable system. This means that in addi
 
 Given this flexibility there are two ways you could approach customizing your Talon setup:
 
-* Option A: Edit the `.talon` and `.py` files within the knausj\_talon package/directory directly.
+* Option A: Edit the `.talon` and `.py` files within the knausj\_talon directory.
 * Option B: Maintain your own separate directory with your customizations.
 
-Option A can be easier to begin with, but makes it somewhat harder to keep your knausj\_talon up to date. This is because you need to work out what you modified and how to re-apply it to the knausj package every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
+Option A can be easier to begin with, but makes it somewhat harder to keep your knausj\_talon up to date. This is because you need to work out what you modified and how to re-apply it to the knausj Talon user file set every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
 
-The screenshot below shows my talon user directory. You can see that I have a knausj\_talon folder in the same way that you would. The rest of the folders are other 'packages' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
+The screenshot below shows my Talon user directory. You can see that I have a knausj\_talon folder in the same way that you would. The rest of the folders are other 'Talon user file sets' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
 
 ![Screen shot of Talon user directory](/media/basic_customization_folders.png)
 
-Let's speak about versioning your configuration for a minute. You will probably want to update your knausj\_talon configuration occasionally in order to pick up new features and bug fixes. Unfortunately changing knausj\_talon may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. If you're confident with the `git` program this is straightforward. If you're not, then just making a backup of the whole user directory prior to making a potentially significant change doesn't hurt.
+Let's speak about versioning your configuration for a minute. You will probably want to update your knausj\_talon Talon user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing knausj\_talon may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. If you're confident with the `git` program this is straightforward. If you're not, then just making a backup of the whole Talon user directory prior to making a potentially significant change doesn't hurt.
 
 With that out of the way we're going to work through a simple `.talon` file example to give you an idea of how to create them.
 
@@ -51,7 +51,7 @@ If you're on Windows or Linux you can use this instead:
     select everything:
       key(ctrl-a)
 
-You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](/) in the #help channel.
+You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](/) in the #help channel.
 
 Your command should now be defined, so if you focus your text editor and say "select everything" it should indeed select everything.
 
@@ -220,7 +220,7 @@ You could replace speech.toggle() with the same types of things that you would u
 
 One thing that may not be immediately obvious is that re-using voice commands is perfectly acceptable. You can just create a new `.talon` file with a new context header and redefine the command.
 
-This also provides a simple way of overriding the behaviour of existing voice commands from the knausj\_talon repository. Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
+This also provides a simple way of overriding the behaviour of existing voice commands from the knausj\_talon Talon user file set. Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
 
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 

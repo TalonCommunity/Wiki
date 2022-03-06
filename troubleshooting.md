@@ -102,7 +102,7 @@ Each microphone and piece of ancillary microphone equipment (audio interface, pr
 
 ### Check that Talon is in the correct mode
 
-Talon configuration sets can be configured to have multiple modes, which will have a different set of functionality. Most commonly, like in the `knausj_talon` repository, there will be two modes: command mode and dictation mode. In command mode, your speech will be mapped to the commands you have configured in your configuration set. In dictation mode, your speech will be typed out literally, which is useful if you want to dictate text, like in an email or document.
+Talon user file sets can be configured to have multiple modes, which will have a different set of functionality. Most commonly, like in the `knausj_talon` Talon user file set, there will be two modes: command mode and dictation mode. In command mode, your speech will be mapped to the commands you have configured in your user file set. In dictation mode, your speech will be typed out literally, which is useful if you want to dictate text, like in an email or document.
 
 * Use dictation mode for free-form speech dictation, like writing an email. (Switch by saying "dictation mode".)
 * Use command mode for everything else, including dictating individual letters using the alphabet or writing code. (Switch by saying "command mode".)
@@ -116,9 +116,9 @@ Check that your speech engine has been initialized by looking in the [talon log 
 2020-03-04 15:28:05  INFO (SpeechSystem) Activating speech engine: W2lEngine(en_US)
 ```
 
-### Check your Talon Configuration Set
+### Check your Talon user file sets
 
-Check you have some valid commands in `~/.talon/user`. If it's empty clone https://github.com/knausj85/knausj_talon and test with some [basic commands](/getting_started#basic-usage). Clone the entire repository, not just individual files. Do not combine this repository with other configuration sets. Pick one and customize it as needed.
+Check you have some valid commands in `~/.talon/user`. If it's empty clone https://github.com/knausj85/knausj_talon and test with some [basic commands](/getting_started#basic-usage). Clone the entire repository, not just individual files. Do not combine this repository with other Talon user file sets. Pick one and customize it as needed.
 
 Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink.
 
@@ -144,7 +144,7 @@ If commands are intermittently working, check out these tips for [improving accu
 
 ### Check the Talon Logs
 
-Talon emits debug information to a log file in your Talon user directory, Windows: `%APPDATA%\Talon` Mac: `~/.talon`. Look for a file with the `.log` extension, probably named `talon.log`. The logs will contain useful debug information, like the Talon version or which microphone Talon is using. Syntax errors will also show up in these logs, which make them useful for debugging your configuration set.
+Talon emits debug information to a log file in your Talon home directory, Windows: `%APPDATA%\Talon` Mac: `~/.talon`. Look for a file with the `.log` extension, probably named `talon.log`. The logs will contain useful debug information, like the Talon version or which microphone Talon is using. Syntax errors will also show up in these logs, which make them useful for debugging your Talon user file sets.
 
 ```
 2021-04-10 17:56:28  INFO Activating Microphone: "d:vice MMA-A"

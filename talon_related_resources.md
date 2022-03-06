@@ -6,7 +6,7 @@ This page links out to educational resources and demonstration videos.
 
 ### Educational
 
-These videos/channels teach you how to use Talon or particular packages/functionality.
+These videos/channels teach you how to use Talon or particular Talon user file sets.
 
 [Tara's Talon Youtube Channel](http://www.youtube.com/tararoys) A channel containing many demos from past Talon Screenshare sessions. Also installation videos for Windows, MacOSX, and Linux.
 [Cursorless channel](https://www.youtube.com/channel/UCML02pamUSxtbwAcrUdVmXg) Youtube channel for the powerfull 'cursorless' Talon plugin for VSCode (see Talon plugins section).
