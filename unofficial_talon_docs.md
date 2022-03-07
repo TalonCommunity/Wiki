@@ -6,9 +6,9 @@ This page provides community documentation of the central concepts used for the 
 
 Talon is an accessibility platform that provides a scripting layer to connect a range of input hardware/methods to a cross-platform API for interacting with desktop applications. Let's start by talking about where your configuration/scripting files are stored.
 
-When setting up Talon to respond to voice commands you would have installed some existing scripts (e.g. `knausj_talon`) in to your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.
+When setting up Talon to respond to voice commands you would have installed some existing user file sets (probably `knausj_talon`) in to your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.
 
-Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon packages (e.g. `knausj_talon`) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](/unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
+Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon user file sets (e.g. `knausj_talon`) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](/unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Originally all Talon configuration/scripting was done using Python, but over time it was decided that the addition of a framework specific file type would be beneficial. To a first approximation `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by .talon files.
 
@@ -153,7 +153,7 @@ Rules have a versatile syntax that is like a word based regex:
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
-For example if the following command were added to the knausj repo `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+For example if the following command were added to the knausj Talon user file set `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
 
 In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
 
@@ -163,7 +163,7 @@ The BODY part of a command is implemented in Talonscript, a simple statically ty
 
 ```
 -
-# The following captures are implemented in the knausj_talon repo:
+# The following captures are implemented in the knausj_talon Talon user file set:
 #
 # <user.letter> is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
 # <user.number_string> is a capture mapping words like 'five' to number strings like '5'
@@ -318,7 +318,7 @@ One of the primary modes of input to Talon is through voice commands defined in 
 
 In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
 
-Talon is a modular framework as far as user scripting is concerned. The intention is for user scripts to exist as packages defining and implementing behaviour which can then be used and overridden by end users. In order to define the 'source' of particular Actions, Captures etc. we have the idea of the [Module](/unofficial_talon_docs#modules).
+Talon is a modular framework as far as user scripting is concerned. The intention is for collections of user scripts to exist as 'Talon user file sets' (like `knausj_talon`) defining and implementing behaviour which can then be used and overridden by end users. In order to define the 'source' of particular Actions, Captures etc. we have the idea of the [Module](/unofficial_talon_docs#modules).
 
 ### Modules
 
@@ -738,7 +738,7 @@ from talon import Module
 mod = Module()
 
 horizontal_position = mod.setting(
-    "my_package_horizontal_position",
+    "my_user_file_set_horizontal_position",
     type=int,
     default=0,
     desc="Set the horizontal display position of some UI element",
@@ -747,7 +747,7 @@ horizontal_position = mod.setting(
 print("The current value of the setting is " + horizontal_position.get())
 ```
 
-Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_package". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
+Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
 
 The following example shows how you would change the value for that setting in a .talon file. Any number of settings can be defined in a single settings block, but any invalid syntax will prevent the entire block from applying.
 
@@ -755,7 +755,7 @@ The following example shows how you would change the value for that setting in a
 ```
 -
 settings():
-    user.my_package_horizontal_position = 50
+    user.my_user_file_set_horizontal_position = 50
     # Any number of other settings could be defined here
 ```
 

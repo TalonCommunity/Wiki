@@ -5,9 +5,9 @@
 The official installation and getting started instructions are available at [talonvoice.com/docs](https://talonvoice.com/docs/). We strongly recommend you follow the instructions there; this page contains additional advice only. The basic installation flow is as follows:
 
 1. Install Talon.
-1. Choose a [speech recognition engine](https://talon.wiki/getting_started/#configure-a-speech-recognition-engine).
-1. Install a [configuration set](https://talon.wiki/getting_started/#install-a-talon-configuration-set), to make some commands available.
-1. Try some [basic commands](/getting_started#basic-usage)
+1. Choose a [speech recognition engine](#configure-a-speech-recognition-engine).
+1. Install a [Talon user file set](#install-a-talon-user-file-set), to make some commands available.
+1. Try some [basic commands](#basic-usage)
 1. Optionally, join the [Talon Voice Slack](https://talonvoice.com/chat) for help, tips, and connecting with other Talon users.
 
 ## Install Talon
@@ -59,9 +59,9 @@ Note that you cannot use webspeech or vosk standalone; they don't handle command
 **Note:** The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over conformer.
 
 
-## Install a Talon Configuration Set
+## Install a Talon user file set
 
-Talon does not come with voice commands out of the box - you must install some configuration scripts. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) repository. The whole wiki assumes this repository is used, if not otherwise noted.
+Talon does not come with voice commands out of the box - you must install some additional files. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) Talon user file set. The whole wiki assumes this repository is used, if not otherwise noted.
 
 On **Linux/Mac**:
 ```
@@ -82,7 +82,7 @@ If you don't have `git` available, and do not want to install it, download the [
 
 ## Basic Usage
 
-The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) repository (see [Configuration Setup](/getting_started#install-a-talon-configuration-set)). These commands may vary depending on your individual setup.
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) Talon user file set (see [the earlier section](#install-a-talon-user-file-set)). These commands may vary depending on your individual setup.
 
 
 ### Command history
@@ -219,6 +219,6 @@ drag
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 
 * [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
-* [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure talon to your liking.
+* [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure Talon to your liking.
 * [Talon-Related Resources](/talon_related_resources): a varied list of resources for Talon uses.
 * [Software that Pairs Well with Talon](/other_integrations): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)
