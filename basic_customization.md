@@ -187,7 +187,7 @@ Often you will want to add a new voice command to press an application specific 
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
-Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](/unofficial_talon_docs/key_action/).
+Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](/key_action/).
 
 ### Slow down key presses
 
