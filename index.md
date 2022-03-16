@@ -18,7 +18,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | (unofficial) documentation of Talon's features | [Unofficial Talon Documentation](/unofficial_talon_docs) |
 | troubleshooting help | [Troubleshooting](/troubleshooting) |
 | help with deciding on a microphone or eye tracker | [Hardware](/hardware) |
-| videos of Talon in use | [Video Demos](/videos) |
+| videos of Talon in use | [Video Demos](/talon_related_resources) |
 | answers to frequently asked questions | [FAQ](/FAQ) |
 
 ## Talon Slack
