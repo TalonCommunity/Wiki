@@ -791,7 +791,7 @@ horizontal_position = mod.setting(
     desc="Set the horizontal display position of some UI element",
 )
 
-print("The current value of the setting is " + horizontal_position.get())
+print("The current value of the setting is " + str(horizontal_position.get()))
 ```
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
