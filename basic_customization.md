@@ -156,7 +156,9 @@ You might have noticed that we've been using the key() and insert() actions in t
 2. Type `actions.list()` and press enter. This will list out all the available actions.
 3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the terminal window and press enter:
 
-```import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old ```
+```
+import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old
+```
 
 Some of the more useful actions are:
 
