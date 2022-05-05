@@ -318,7 +318,7 @@ One of the primary modes of input to Talon is through voice commands defined in 
 
 In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
 
-Talon is a modular framework as far as user scripting is concerned. The intention is for collections of user scripts to exist as 'Talon user file sets' (like `knausj_talon`) defining and implementing behaviour which can then be used and overridden by end users. In order to define the 'source' of particular Actions, Captures etc. we have the idea of the [Module](/unofficial_talon_docs#modules).
+
 
 ### Modules
 
