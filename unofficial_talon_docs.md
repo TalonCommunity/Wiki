@@ -318,18 +318,18 @@ One of the primary modes of input to Talon is through voice commands defined in 
 
 In addition to the above we also have the concept of [Settings](/unofficial_talon_docs#settings). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
 
-
+The final concept is the Module. This is used to register particular instances of the above concepts with Talon, and to give them unique names.
 
 ### Modules
 
-A *module* is a collection of related declarations. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), [tags](/unofficial_talon_docs#tags), [modes](/unofficial_talon_docs#modes), [settings](/unofficial_talon_docs#settings) and well-known [applications](/unofficial_talon_docs#apps). In Python, you can construct a module like so:
+A Module is a place for giving things names. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), [tags](/unofficial_talon_docs#tags), [modes](/unofficial_talon_docs#modes), [settings](/unofficial_talon_docs#settings) and well-known [applications](/unofficial_talon_docs#apps). In Python, you can construct a module like so:
 
 ```
 from talon import Module
 mod = Module()
 ```
 
-All Actions, Lists etc. must first be declared via a Module before they can be referenced in `.talon` or `.py` files.
+All Actions, Lists etc. must first be declared via a Module before they can be referenced in `.talon` or `.py` files. See the concept sections linked above for how to do this in each case.
 
 ### Contexts
 
