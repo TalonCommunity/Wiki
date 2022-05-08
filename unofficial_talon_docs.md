@@ -809,6 +809,17 @@ settings():
     # Any number of other settings could be defined here
 ```
 
+You can also set the value of a setting from Python:
+
+`myfile.py`
+```
+from talon import Context
+
+ctx = Context()
+
+ctx.settings["user.my_user_file_set_horizontal_position"] = 50
+```
+
 It is also possible to register a callback function to be called whenever a setting changes. This is done by calling settings.register() with a setting name and a function to call. If the name string is blank (like in the example below) then the callback function will be called whenever any setting is changed. When the name is not blank the function will only be called when a setting with a matching name is changed.
 
 `listener.py`
