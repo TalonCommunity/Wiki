@@ -3,7 +3,6 @@
 ## Install Talon
 1. Download and install [Talon](https://talonvoice.com) for your operating system. **Note:** For users who want earlier access to new features, priority support, and access to additional [speech engines](/speech_engines.md), install the [beta version](/beta_talon.md).
 1. Run the Talon app.
-1. Open the Talon Home directory. This is `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux. **Note:** For those who are not friendly with the command line, Talon has a menu in the system tray near the clock. You can use `Scripting -> Open ~/.talon` in this menu as a shortcut to open the Talon Home folder.
 
 **Note:** There are installation and getting started instructions available at [talonvoice.com/docs](https://talonvoice.com/docs/) which are maintained by the developer of Talon. This wiki is community maintained and aims to provide richer detail for a wider set of users, but may not always be as freshly updated with changes.
 
@@ -26,6 +25,12 @@ Talon uses a speech recognition engine that translates voice audio to text. To i
 
 Talon does not come with voice commands out of the box - you must install some additional files. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) Talon user file set. The whole wiki assumes this repository is used, if not otherwise noted.
 
+Install the [Talon user file set](https://github.com/knausj85/knausj_talon) in the `user` folder of the Talon Home directory, which can be opened using the Talon menu in the system tray (near the clock) using the shortcut `Scripting -> Open ~/.talon`. The Talon Home directory is located on the filesystem at `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux.
+
+### Install using a ZIP File
+On the [GitHub page for knausj_talon](https://github.com/knausj85/knausj_talon), click the `Code` button towards the upper right of the screen. From there click on `Download ZIP` and extract the files (If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful). Place these extracted files inside the `user` folder of the Talon Home directory.
+
+### Install using the Command Line
 On **Linux/Mac**:
 ```
 mkdir -p ~/.talon/user
