@@ -28,7 +28,7 @@ Talon does not come with voice commands out of the box - you must install some a
 Install the [Talon user file set](https://github.com/knausj85/knausj_talon) in the `user` folder of the Talon Home directory, which can be opened using the Talon menu in the system tray (near the clock) using the shortcut `Scripting -> Open ~/.talon`. The Talon Home directory is located on the filesystem at `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux.
 
 ### Install using a ZIP File
-On the [GitHub page for knausj_talon](https://github.com/knausj85/knausj_talon), click the `Code` button towards the upper right of the screen. From there click on `Download ZIP` and extract the files (If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful). Place these extracted files inside the `user` folder of the Talon Home directory.
+ Download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract the files. (If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful). Place these extracted files inside the `user` folder of the Talon Home directory.
 
 ### Install using the Command Line
 On **Linux/Mac**:
@@ -44,8 +44,6 @@ md "%APPDATA%\Talon\user"
 cd "%APPDATA%\Talon\user"
 git clone https://github.com/knausj85/knausj_talon.git knausj_talon
 ```
-
-If you don't have `git` available, and do not want to install it, download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract it to the correct folder.
 
 ## Test your Talon Setup
 Test your Talon setup with a few [basic commands](/basic_usage.md).
