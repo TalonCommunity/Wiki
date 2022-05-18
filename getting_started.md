@@ -20,18 +20,11 @@ For priority features, install the beta version. The beta version has support fo
 
 * **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
-### Notes on Linux
-
-#### Eye tracking
-
-When first running `run.sh`, Talon does some setup work related to permissions for the eye tracking device. You need to replug the eye tracking device and restart Talon (or of course reboot).
-
+### Notes on Linux Installation
 #### Gnome
-
 If you use gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
 
 #### Wayland
-
 You might encounter the following error:
 ```
 ERROR cannot get _NET_CURRENT_DESKTOP
