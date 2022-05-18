@@ -17,9 +17,9 @@ In which case it is necessary to switch to Xorg. (Your disdribution might suppor
 
 ## Configure a Speech Recognition Engine
 
-Talon uses a speech recognition engine that translates voice audio to text. To install your speech engine, select the `Conformer` option under the `Speech Recognition` section in the Talon menu.
+Talon uses a speech recognition engine that translates voice audio to text. To install your speech engine, open the Talon menu and select `Speech Recognition -> Conformer`.
 
-**Note:** There are multiple speech engines that can be used with Talon. The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon and want to use Talon with Dragon. There are also speech engines which support additional languages other than English. For information about additional speech engines, see the [speech engine page](/speech_engines.md).
+**Note:** The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon or need an engine with support additional languages other than English. For information about additional speech engines, see the [speech engine page](/speech_engines.md).
 
 ## Install a Talon user file set
 
