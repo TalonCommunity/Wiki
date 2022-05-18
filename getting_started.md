@@ -1,3 +1,5 @@
+# DEMO MAKE SOME CHANGES
+
 # Getting Started
 
 ## Overview
@@ -12,7 +14,7 @@ The official installation and getting started instructions are available at [tal
 
 ## Install Talon
 
-Talon has two mostly compatible current versions: public and beta. Both versions have support for Mac, Linux, and Windows.
+Talon has two mostly compatible current versions: public and beta. Both versions have support for Mac, Linux, and Windows. TEST FIX TYPO
 
 * **Public Version (free):** Follow [Getting Started](https://talonvoice.com/docs/index.html#getting-started) instructions in the Talon documentation.
 * **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
