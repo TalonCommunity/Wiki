@@ -1,33 +1,23 @@
 # Getting Started
 
-The setup flow:
-
-1. Install Talon.
-1. Choose a [speech recognition engine](#configure-a-speech-recognition-engine).
-1. Install a [Talon user file set](#install-a-talon-user-file-set), to make some commands available.
-1. Try some [basic commands](#basic-usage)
-1. If at any point you need help, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the #help channel.
-
-**Note:** There are installation and getting started instructions available at [talonvoice.com/docs](https://talonvoice.com/docs/) which are maintained by the primary (and only) Talon engineer. This wiki is community maintained and aims to provide richer detail for a wider set of users, but may not always be as freshly updated with changes.
-
 ## Install Talon
 1. Download and install [Talon](https://talonvoice.com) for your operating system.
 1. Run the Talon app.
 1. Open the Talon Home directory. This is `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux. **Note:** For those who are not friendly with the command line, Talon has a menu in the system tray near the clock. You can use `Scripting -> Open ~/.talon` in this menu as a shortcut to open the Talon Home folder.
 
-### Beta Version
-The beta version of Talon has earlier access to new features, higher priority support, and is required for access to some speech engines. It is available for Windows, Mac, and Linux, and requires [Patreon support](https://www.patreon.com/join/lunixbochs). To install the beta version, first become a [beta tier Patreon](https://www.patreon.com/join/lunixbochs). Then join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
+**Note:** There are installation and getting started instructions available at [talonvoice.com/docs](https://talonvoice.com/docs/) which are maintained by the developer of Talon. This wiki is community maintained and aims to provide richer detail for a wider set of users, but may not always be as freshly updated with changes.
 
-### Notes on Linux Installation
-#### Gnome
-If you use gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
+**Notes on Linux installation**:
+If you use Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
 
-#### Wayland
-You might encounter the following error:
+If you use Wayland, you might encounter the following error:
 ```
 ERROR cannot get _NET_CURRENT_DESKTOP
 ```
 In which case it is necessary to switch to Xorg. (Your distro might support this through a cog wheel on the login screen.)
+
+### Beta Version
+The beta version of Talon has earlier access to new features, higher priority support, and is required for access to some speech engines. It is available for Windows, Mac, and Linux, and requires [Patreon support](https://www.patreon.com/join/lunixbochs). To install the beta version, first become a [beta tier Patreon](https://www.patreon.com/join/lunixbochs). Then join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
 ## Configure a Speech Recognition Engine
 
@@ -58,8 +48,10 @@ If you don't have `git` available, and do not want to install it, download the [
 ## Test your Talon Setup
 Test your Talon setup with a few [basic commands](/basic_usage.md).
 
-## Next Steps
+## Join the Talon Slack
+If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the #help channel.
 
+## Next Steps
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 * [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
 * [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure Talon to your liking.
