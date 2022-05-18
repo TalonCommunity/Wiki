@@ -1,7 +1,7 @@
 # Getting Started
 
 ## Install Talon
-1. Download and install [Talon](https://talonvoice.com) for your operating system.
+1. Download and install [Talon](https://talonvoice.com) for your operating system. **Note:** For users who want earlier access to new features, priority support, and access to additional [speech engines](/speech_engines.md), install the [beta version](/beta_talon.md).
 1. Run the Talon app.
 1. Open the Talon Home directory. This is `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux. **Note:** For those who are not friendly with the command line, Talon has a menu in the system tray near the clock. You can use `Scripting -> Open ~/.talon` in this menu as a shortcut to open the Talon Home folder.
 
@@ -15,9 +15,6 @@ If you use Wayland, you might encounter the following error:
 ERROR cannot get _NET_CURRENT_DESKTOP
 ```
 In which case it is necessary to switch to Xorg. (Your distro might support this through a cog wheel on the login screen.)
-
-### Beta Version
-The beta version of Talon has earlier access to new features, higher priority support, and is required for access to some speech engines. It is available for Windows, Mac, and Linux, and requires [Patreon support](https://www.patreon.com/join/lunixbochs). To install the beta version, first become a [beta tier Patreon](https://www.patreon.com/join/lunixbochs). Then join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
 ## Configure a Speech Recognition Engine
 
