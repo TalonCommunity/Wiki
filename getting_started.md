@@ -16,9 +16,7 @@ The setup flow:
 1. Open the Talon Home directory. This is `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux. **Note:** For those who are not friendly with the command line, Talon has a menu in the system tray near the clock. You can use `Scripting -> Open ~/.talon` in this menu as a shortcut to open the Talon Home folder.
 
 ### Beta Version
-For priority features, install the beta version. The beta version has support for Mac, Linux, and Windows.
-
-* **Beta Version (requires Patreon support):** The beta version has earlier access to new features and higher priority support. It is required for access to some speech engines. After becoming a [beta tier Patreon](https://www.patreon.com/join/lunixbochs), join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
+The beta version of Talon has earlier access to new features, higher priority support, and is required for access to some speech engines. It is available for Windows, Mac, and Linux, and requires [Patreon support](https://www.patreon.com/join/lunixbochs). To install the beta version, first become a [beta tier Patreon](https://www.patreon.com/join/lunixbochs). Then join the [Talon Voice Slack](https://talonvoice.com/chat) and request access to the `#beta` channel from `@aegis`, the developer of Talon. Download links can be found in the #beta channel's pinned messages.
 
 ### Notes on Linux Installation
 #### Gnome
