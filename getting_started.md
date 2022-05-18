@@ -13,7 +13,7 @@ If you use Wayland, you might encounter the following error:
 ```
 ERROR cannot get _NET_CURRENT_DESKTOP
 ```
-In which case it is necessary to switch to Xorg. (Your distro might support this through a cog wheel on the login screen.)
+In which case it is necessary to switch to Xorg. (Your disdribution might support this through a cog wheel on the login screen.)
 
 ## Configure a Speech Recognition Engine
 
