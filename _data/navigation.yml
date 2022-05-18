@@ -1,5 +1,6 @@
 pages:
   - slug: getting_started
+  - slug: speech_engines
   - slug: basic_usage
   - slug: basic_customization
   - slug: unofficial_talon_docs
