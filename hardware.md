@@ -3,9 +3,9 @@
 
 ## Microphones
 
-In case of doubt: Check out the `#hardware` channel in Slack.
+If in doubt, check out the `#hardware` channel in Slack.
 
-Speech recognition will be vastly improved with a better microphone. Compared to webcams and cheap headsets, a good microphone for speech recognition picks up less background noise (improving your experience whenever you're not alone in a silent room) and record a naturally sounding voice.
+Speech recognition will be vastly improved with a better microphone. Compared to webcams and cheap headsets, a good microphone for speech recognition picks up less background noise (improving your experience whenever you're not alone in a silent room) and will be better at recording a natural-sounding voice.
 
 
 ### Model Recommendations
@@ -14,7 +14,7 @@ These are models that Talon community members regularly recommend:
 
 **Blue Yeti Nano (USB 3)**: desktop, affordable and pretty good recognition. Can be attached to an arm. Useful if you're trying out speech recognition for the first time and don't want to spend a lot.
 
-**DPA d:fine 4188 or 4288** with a **DPA d:vice** interface: expensive, but highly recommended for full time use.  It's likely the best in wearing comfort, audio quality and voice isolation (see this [impressive demo from the manufacturer](https://youtu.be/35GvWlRirxI))
+**DPA d:fine 4188 or 4288**: expensive, but highly recommended for full time use.  It's likely the best in wearing comfort, audio quality and voice isolation (see this [impressive demo from the manufacturer](https://youtu.be/35GvWlRirxI)). The DPA mic can be paired with either (i) a **Shure X2U** + microdot to XLR adapter or (ii) a **DPA d:vice** interface. (i) will be cheaper, but a bit less portable, than the latter; (i) does however have a live monitor (you can plug in headphones and hear the computer audio mixed with your voice), whereas (ii) doesn't. 
 
 **Stenomask**: useful for open plan offices as it covers your mouth.
 
@@ -22,8 +22,8 @@ These are models that Talon community members regularly recommend:
 
 * **AKG C 520** (or the _C 520L_ plus the _AKG MPA VL Male_ adapter); compared to the DPA you have to give up significant amount of voice isolation and some wearing comfort and audio quality (a [demo from a singing drummer](https://www.youtube.com/watch?v=cwCea9SIbNg&t=235s)).
 * **Audio-Technica Pro 8 HEx**; a long-standing recommendation from [2shea's intro post][whalequench-gettingstarted]; even cheaper still, you lose some more audio quality again, but it is perfectly suitable for use with Talon.
-* Suitable audio interfaces are for instance **Sure X2U** (rather compact), **Focusrite Scarlett Solo** (very popular) or the **Behringer U-Phoria UMC22** (a great budget option).
-* There are a ton more of brands and models, and many will work just fine.
+* Suitable audio interfaces are for instance **Shure X2U** (rather compact), **Focusrite Scarlett Solo** (very popular) or the **Behringer U-Phoria UMC22** (a great budget option).
+* There are a ton of other brands and models, and many will work just fine.
 
 [whalequench-gettingstarted]: https://whalequench.club/blog/2019/09/03/learning-to-speak-code.html
 
