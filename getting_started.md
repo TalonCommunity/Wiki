@@ -53,6 +53,7 @@ If at any point you need help with your Talon setup, join the [Talon Voice Slack
 
 ## Next Steps
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
+* For users who want earlier access to new features, priority support, and access to additional [speech engines](/speech_engines.md), install the [beta version](/beta_talon.md).
 * [Improve Recognition Accuracy](/improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
 * [Unofficial Talon Docs](/unofficial_talon_docs): learn about how to configure Talon to your liking.
 * [Talon-Related Resources](/talon_related_resources): a varied list of resources for Talon uses.
