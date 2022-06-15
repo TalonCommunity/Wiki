@@ -1,7 +1,7 @@
 # Getting Started
 
 ## Install Talon
-1. Download and install [Talon](https://talonvoice.com) for your operating system. **Note:** For users who want earlier access to new features, priority support, and access to additional [speech engines](/speech_engines.md), install the [beta version](/beta_talon.md).
+You can install and run Talon by following the [official installation instructions](https://talonvoice.com/docs/). The rest of this page provides some additional information to supplement the information provided there.
 1. Run the Talon app.
 
 **Note:** There are installation and getting started instructions available at [talonvoice.com/docs](https://talonvoice.com/docs/) which are maintained by the developer of Talon. This wiki is community maintained and aims to provide richer detail for a wider set of users, but may not always be as freshly updated with changes.
