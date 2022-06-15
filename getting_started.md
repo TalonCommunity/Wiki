@@ -4,7 +4,6 @@
 You can install and run Talon by following the [official installation instructions](https://talonvoice.com/docs/). The rest of this page provides some additional information to supplement the information provided there.
 1. Run the Talon app.
 
-**Note:** There are installation and getting started instructions available at [talonvoice.com/docs](https://talonvoice.com/docs/) which are maintained by the developer of Talon. This wiki is community maintained and aims to provide richer detail for a wider set of users, but may not always be as freshly updated with changes.
 
 **Notes on Linux installation**:
 If you use Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
