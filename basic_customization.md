@@ -253,3 +253,14 @@ Notice that we've given it a context header. Because this context headar is more
 In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
 This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](/unofficial_talon_docs) for more information.
+
+### Turn off Talon listening on start up
+
+If you'd prefer not to you have Talon enabled when you start the app (and typically your computer), create a python filed in your user directory (e.g. `sleep.py`) and put in the following contents:
+
+    from talon import app, actions
+
+    def disable():
+        actions.speech.disable()
+
+    app.register("ready", disable)
