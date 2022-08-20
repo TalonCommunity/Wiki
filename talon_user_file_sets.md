@@ -17,7 +17,6 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 * [crosshairs mouse guide mouse](https://github.com/tararoys/mouse_guide) Created by Aegis.  Allows you to say very specific mouse coordinates and position the mouse precisely on the screen.
 * [Racecar Mouse (AKA drawing mouse)](https://gist.github.com/timo/d3a8c871aca93aee4cd8b4fc57b15187) A mouse you can use to draw with Talon. It steers like a racecar around the screen. Created by Timotimo.
 * [Hissing Mouse](https://gist.github.com/tararoys/cdabc3bab686abd8d9b585afd7c481da) Created by Tara Roys. A mouse that operates soley by hissing, and uses the idea that if you make a left turn you can get anywhere on the screen by 'circling the block.'  Simplest possible no-words, no-hands, no need to memorize commands mouse.
-* [Talon Telector](https://github.com/splondike/talon_telector) Aims to detect and allow easy selection of text via an overlay.
 
 ## Programming and editor integrations
 
