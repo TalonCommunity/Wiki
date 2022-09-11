@@ -8,5 +8,14 @@
 6. Some folks feel the largest useable monitor is 24”, though Tobii claims 27”.
 7. Try both the "control mouse" and "zoom mouse" modes out to see which works best for you. [Demo here](https://www.youtube.com/watch?v=PQkJE-rtn-g&feature=youtu.be)
 8. For the zoom mouse, tinker with the zoom level of zoom mouse for comfort & less scanning. [See an example of how to adjust these here](https://github.com/knausj85/knausj_talon/blob/master/eye_tracking_settings.py)
-9. Check the Talon Voice logs for errors. 
+9. Check the Talon Voice logs for errors:
     1. "talon.track.tobii.EyeCmdErr: Eye Tracker command 0x42e raised error 0x20000502" means Talon Voice cant determine the location of your head or gaze.  It could be a problem with tracker position, head position, monitor size, or multiple screens (dont use extended or mirrored screens with Talon).
+10. Calibrate your eye tracker in Talon if you change monitors or if your room lighting changes substantially.
+
+### Notes on Control Mouse
+
+The intended use is that you look at the thing you want to click on, then move your head (rotate, tilt, whatever) to put the mouse cursor over the thing, then use some method of clicking (like a voice command or physical button).
+
+Moving your head is an important part of the new Control Mouse - moving your head locks your cursor to the current region until you look to a new part of the screen. This means the cursor will stabilize more when you start moving your head.
+
+The speed at which you move your head has an exponential effect on the speed the mouse moves, so if you move your head very slowly, the mouse will only move a few pixels, but if you move your head very quickly, you can move the mouse by several inches.
