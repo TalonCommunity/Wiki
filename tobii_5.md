@@ -15,8 +15,6 @@ Regardless of which OS you will be using when you use your eye tracker, the init
 - Enable eye tracking in the Talon menu.
 - Run the calibration in Talon.
 
-### Also see
+### Next steps
 
-- [Tobii 4c tips](/tobii_4c_tips.md)
-
-If you find the control mouse is not accurate enough, try the zoom mouse in the knausj repository.
+The [Tobii 4c tips](/tobii_4c_tips.md) page has detailed instructions on how to adjust your environment and behaviour to get a better eye tracking experience.
