@@ -1,9 +1,9 @@
 <div class=" w3-xlarge w3-hide-large" id="git-wiki-mobile-header">
-  <button class="w3-button w3-teal" onclick="sidebar_open()">&#9776;</button>
-  <a href="{{ '/' | relative_url }}">
+  <button class="w3-button w3-teal" id="button-open-sidebar">&#9776;</button>
+  <a href="{{ '/' | relative_url }}"> 
     {% if site.logo_url %}
     <img src="{{ site.logo_url | relative_url }}" width="20px">
-    {% endif %}
+    {% https://github.com/Spiteless/Wiki/tree/patch-4/_includesendif %}
     {{ site.title | escape }}
   </a>
 </div>
@@ -40,15 +40,31 @@
   </div>
 </header>
 <script>
+  const sidebar = document.getElementById("git-wiki-sidebar");
+  const sidebar_open_button = document.getElementById("button-open-sidebar");
+
+  function sidebar_open(event) {
+    //if sidebar is active, allow button click to close sidebar
+    if (!sidebar_open_button.classList.contains("sidebar-open")) {
+      event.stopPropagation(); //prevents bubble effect, stopping sidebar_close() on document event listener
+      sidebar_open_button.classList.add("sidebar-open");
+      sidebar.style.display = "block";
+    }
+  }
+
+  function sidebar_close() {
+    sidebar_open_button.classList.remove("sidebar-open");
+    sidebar.style.display = "none";
+    sidebar.style.position = "inherit";
+  }
+
   document.addEventListener(
     "click",
     function (event) {
-      // If user either clicks Close button OR clicks outside
-      // the sidebar window OR clicks a link, then sidebar_close() 
       if (
-        event.target.matches("#button-close-sidebar") ||
-        !event.target.closest(".w3-sidebar") ||
-        event.target.matches("a")
+        event.target.matches("#button-close-sidebar") || //user clicks close button
+        !event.target.closest(".w3-sidebar") || //user clicks outside sidebar
+        event.target.matches("a") //user clicks a link (for internal page navigation)
       ) {
         sidebar_close();
       }
@@ -62,14 +78,5 @@
     }
   });
 
-  function sidebar_open() {
-    var sidebar = document.getElementById("git-wiki-sidebar");
-    sidebar.style.display = "block";
-  }
-
-  function sidebar_close() {
-    var sidebar = document.getElementById("git-wiki-sidebar");
-    sidebar.style.display = "none";
-    sidebar.style.position = "inherit";
-  }
+  sidebar_open_button.addEventListener("click", sidebar_open, false);
 </script>
