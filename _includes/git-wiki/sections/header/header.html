@@ -44,10 +44,11 @@
     "click",
     function (event) {
       // If user either clicks Close button OR clicks outside
-      // the sidebar, then sidebar_close()
+      // the sidebar window OR clicks a link, then sidebar_close() 
       if (
         event.target.matches("#button-close-sidebar") ||
-        !event.target.closest(".w3-sidebar")
+        !event.target.closest(".w3-sidebar") ||
+        event.target.matches("a")
       ) {
         closeSidebar();
       }
