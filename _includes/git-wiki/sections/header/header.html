@@ -1,5 +1,5 @@
 <div class=" w3-xlarge w3-hide-large" id="git-wiki-mobile-header">
-  <button class="w3-button w3-teal" onclick="openSidebar()">&#9776;</button>
+  <button class="w3-button w3-teal" onclick="sidebar_open()">&#9776;</button>
   <a href="{{ '/' | relative_url }}">
     {% if site.logo_url %}
     <img src="{{ site.logo_url | relative_url }}" width="20px">
@@ -9,7 +9,7 @@
 </div>
 <header class="w3-sidebar w3-bar-block w3-collapse" id="git-wiki-sidebar">
   <div>
-    <button class="w3-bar-item w3-button w3-large w3-hide-large" id="button-close-sidebar" onclick="closeSidebar()">Close &times;</button>
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" id="button-close-sidebar" onclick="sidebar_close()">Close &times;</button>
     {% if site.inc_before_header %}
     {% include {{ site.inc_before_header }} %}
     {% endif %}
@@ -50,7 +50,7 @@
         !event.target.closest(".w3-sidebar") ||
         event.target.matches("a")
       ) {
-        closeSidebar();
+        sidebar_close();
       }
     },
     false
@@ -58,16 +58,16 @@
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      closeSidebar();
+      sidebar_close();
     }
   });
 
-  function openSidebar() {
+  function sidebar_open() {
     var sidebar = document.getElementById("git-wiki-sidebar");
     sidebar.style.display = "block";
   }
 
-  function closeSidebar() {
+  function sidebar_close() {
     var sidebar = document.getElementById("git-wiki-sidebar");
     sidebar.style.display = "none";
     sidebar.style.position = "inherit";
