@@ -14,6 +14,7 @@ This page documents third party software that pair well with Talon.
 
 | Software | Cost | Platform | Description |
 | --- | --- | --- | --- |
+| [Rango](https://github.com/david-tejada/rango) | Free | Firefox/Chrome/Safari/Chromium | Purpose built for the Talon community by a Talon user. Inspired by Vimium but with better voice UX.|
 | [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/) | Free | Firefox/Chrome | Vim style browser controls. Lets you see all links on page and click with 2 letter combos. |
 | [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/) | Free | Firefox/Chrome | More vim style control in browser |
 | [Vimari](https://github.com/televator-apps/vimari) | Free | Safari | A port of Vimium for Safari. |
