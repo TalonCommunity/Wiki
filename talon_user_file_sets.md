@@ -26,6 +26,7 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 ## User Interface
 
 * [Talon Heads Up Display](https://github.com/chaosparrot/talon_hud) This heads up display is awesome because it shows things like when Talon is awake, asleep, what language mode active, prints a pretty history, And a whole bunch of other things that right now you have to memorize.
+* [Talon Deck](https://github.com/AndreasArvidsson/talon-deck) Stream deck inspired interactive dashboard for Talon. Turn your phone/tablet into a Talon control UI.
 
 ## Application specific
 
