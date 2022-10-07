@@ -1,5 +1,5 @@
 <div class=" w3-xlarge w3-hide-large" id="git-wiki-mobile-header">
-  <button class="w3-button w3-teal" onclick="sidebar_toggle()">&#9776;</button>
+  <button class="w3-button w3-teal" id="button-open-sidebar">&#9776;</button>
   <a href="{{ '/' | relative_url }}">
     {% if site.logo_url %}
     <img src="{{ site.logo_url | relative_url }}" width="20px">
@@ -9,7 +9,7 @@
 </div>
 <header class="w3-sidebar w3-bar-block w3-collapse" id="git-wiki-sidebar">
   <div>
-    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="sidebar_toggle()">Close &times;</button>
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="sidebar_close()">Close &times;</button>
     {% if site.inc_before_header %}
     {% include {{ site.inc_before_header }} %}
     {% endif %}
@@ -40,13 +40,43 @@
   </div>
 </header>
 <script>
-  function sidebar_toggle() {
-    var sidebar = document.getElementById("git-wiki-sidebar");
-    if (sidebar.style.display == "block") {
-      sidebar.style.display = "none";
-      sidebar.style.position = "inherit";
-    } else {
-      $(sidebar).attr('style', 'display: block;');
+  const sidebar = document.getElementById("git-wiki-sidebar");
+  const sidebar_open_button = document.getElementById("button-open-sidebar");
+
+  function sidebar_open(event) {
+    //if sidebar is active, allow button click to close sidebar
+    if (!sidebar_open_button.classList.contains("sidebar-active")) {
+      event.stopPropagation(); //prevents bubble effect, stopping sidebar_close() on document event listener
+      sidebar_open_button.classList.add("sidebar-active");
+      sidebar.style.display = "block";
     }
   }
+
+  function sidebar_close() {
+    sidebar_open_button.classList.remove("sidebar-active");
+    sidebar.style.display = "none";
+    sidebar.style.position = "inherit";
+  }
+
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (
+        event.target.matches("#button-close-sidebar") || //user clicks close button
+        !event.target.closest(".w3-sidebar") || //user clicks outside sidebar
+        event.target.matches("a") //user clicks a link (for internal page navigation)
+      ) {
+        sidebar_close();
+      }
+    },
+    false
+  );
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      sidebar_close();
+    }
+  });
+
+  sidebar_open_button.addEventListener("click", sidebar_open, false);
 </script>
