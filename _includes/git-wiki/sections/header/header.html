@@ -8,8 +8,17 @@
   </a>
 </div>
 <header class="w3-sidebar w3-bar-block w3-collapse" id="git-wiki-sidebar">
+  
   <div>
-    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="sidebar_close()">Close &times;</button>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <div class="dark-mode-toggle">Enable Dark Mode!</div>
+    </div>
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="sidebar_toggle()">Close &times;</button>
+    
     {% if site.inc_before_header %}
     {% include {{ site.inc_before_header }} %}
     {% endif %}
@@ -38,6 +47,7 @@
     {% include {{ site.inc_after_header }} %}
     {% endif %}
   </div>
+  <script src="/scripts/dark_mode_switcher.js"></script>
 </header>
 <script>
   const sidebar = document.getElementById("git-wiki-sidebar");

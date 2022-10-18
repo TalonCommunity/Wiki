@@ -1,26 +1,769 @@
-h1 {font-size: 3.125em;}
-h2 {font-size: 2.618em;}
-h3 {font-size: 1.931em;}
-h4 {font-size: 1.618;}
-h5 {font-size: 1.194em;}
-h6 {font-size: 1em;}
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --heading-color-main: #222;
+  --heading-color-second: #393939;
+  --heading-color-third: #494949;
+  /* // color: #222; h1 - h6 */
+  /* // color: #393939; h2 */
+  /* // color: #494949; h3 - h6 */
+  --font-color: #727272;
+  /* // color: #727272; body font color */
+  --bg-color: #fff;
+  --background-color: #fff;
+  --link-color: #39c;
+  /* // color: #39c; a tag */
+  --link-color-hover: #069;
+  /* // color: #069; a:hover */
+
+  --link-color-small: #777;
+  /* // a small */
+  /* // color: #777; */
+
+  /* //blockquote border */
+  /* // border-left: 1px solid #e5e5e5; */
+  --border-color: #e5e5e5;
+
+  --code-font-color: #333;
+  --code-background-color: #f8f8f8;
+  /* //code, pre */
+  /* //color: #333; */
+  /* // border: 1px solid #e5e5e5; */
+  /* // background: #f8f8f8; */
+
+  /* //pre */
+  /* // background: #f8f8f8; */
+  /* // border: 1px solid #e5e5e5; */
+
+  /* //th, td */
+  /* // border-bottom: 1px solid #e5e5e5 */
+
+  --dt-th-color: #444;
+  /* // dt */
+  /* // color: #444; */
+
+  /* // tt */
+  /* // color: #444; */
+
+  /* //#git-wiki-mobile-header */
+  /* // background-color: white; */
+
+  --sidebar-background-color: #f4f4f4;
+  --sidebar-border-color: #e0e0e0;
+  /* // #git-wiki-sidebar .git-wiki-downloads */
+  /* // background: #f4f4f4; */
+  /* // border: 1px solid #e0e0e0; */
+
+  /* // #git-wiki-sidebar .git-wiki-downloads li */
+  /* // border-right: 1px solid #e0e0e0; */
+
+  --sidebar-font-color: #999;
+  /* // #git-wiki-sidebar .git-wiki-downloads a */
+  /* // color: #999; */
+
+  /* // #git-wiki-sidebar .git-wiki-downloads a:hover */
+  /* // color: #999; */
+
+  /* // #git-wiki-sidebar .git-wiki-downloads a:active */
+  --sidebar-background-color-second: #f4f4f4;
+  /* // background-color: #f0f0f0; */
+
+  --font-strong-color: #222;
+  /* // strong */
+  /* // color: #222 */
+
+  /* // #git-wiki-sidebar .git-wiki-downloads a strong */
+  /* // color: #222 */
+
+  --hr-background-color: #e5e5e5;
+  /* // hr */
+  /* // background: #e5e5e5; */
+
+  --tools-element-accent: #00ffff; /* aqua */
+  /* // .tools-element */
+  /* // border-left: #00ffff; */
+
+  /* // .git-wiki-page, footer */
+  /* // border: 1px solid #e5e5e5; */
+
+  /* // @media print body */
+  /* // color: #444; */
+
+  --pagination-span-color: #eee;
+  --pagination-background-color: #ffffff;
+  --pagination-link-hover-color: #333;
+  --pagination-link-background-color: #f1f1f1;
+  /* // .pagination a */
+  /* // background-color: #f1f1f1; */
+  /* // color: #333 */
+
+  --highlight--cm-color: #999988;
+  --highlight--cp-color: #999999;
+  --highlight--c1-color: #999988;
+  --highlight--cs-color: #999999;
+  --highlight--c_--highlight--cd-color: #999988;
+  --highlight--err-color: #a61717;
+  --highlight--err-background-color: #e3d2d2;
+  --highlight--gd-color: #000000;
+  --highlight--gd-background-color: #ffdddd;
+  --highlight--ge-color: #000000;
+  --highlight--gr-color: #aa0000;
+  --highlight--gh-color: #999999;
+  --highlight--gi-color: #000000;
+  --highlight--gi-background-color: #ddffdd;
+  --highlight--go-color: #888888;
+  --highlight--gp-color: #555555;
+  --highlight--gu-color: #aaaaaa;
+  --highlight--gt-color: #aa0000;
+  --highlight--kc-color: #000000;
+  --highlight--kd-color: #000000;
+  --highlight--kn-color: #000000;
+  --highlight--kp-color: #000000;
+  --highlight--kr-color: #000000;
+  --highlight--kt-color: #445588;
+  --highlight--k_--highlight--kv-color: #000000;
+  --highlight--mf-color: #009999;
+  --highlight--mh-color: #009999;
+  --highlight--il-color: #009999;
+  --highlight--mi-color: #009999;
+  --highlight--mo-color: #009999;
+  --highlight--m_--highlight--mb_--highlight--mx-color: #009999;
+  --highlight--sb-color: #d14;
+  --highlight--sc-color: #d14;
+  --highlight--sd-color: #d14;
+  --highlight--s2-color: #d14;
+  --highlight--se-color: #d14;
+  --highlight--sh-color: #d14;
+  --highlight--si-color: #d14;
+  --highlight--sx-color: #d14;
+  --highlight--sr-color: #009926;
+  --highlight--s1-color: #d14;
+  --highlight--ss-color: #990073;
+  --highlight--s-color: #d14;
+  --highlight--na-color: #008080;
+  --highlight--bp-color: #999999;
+  --highlight--nb-color: #0086b3;
+  --highlight--nc-color: #445588;
+  --highlight--no-color: #008080;
+  --highlight--nd-color: #3c5d5d;
+  --highlight--ni-color: #800080;
+  --highlight--ne-color: #990000;
+  --highlight--nf-color: #990000;
+  --highlight--nl-color: #990000;
+  --highlight--nn-color: #555555;
+  --highlight--nt-color: #000080;
+  --highlight--vc-color: #008080;
+  --highlight--vg-color: #008080;
+  --highlight--vi-color: #008080;
+  --highlight--nv-color: #008080;
+  --highlight--ow-color: #000000;
+  --highlight--o-color: #000000;
+  --highlight--w-color: #bbbbbb;
+  --highlight-background-color: #f8f8f8;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+  /*   
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --heading-color-main: #222;
+  --heading-color-second: #393939;
+  --heading-color-third: #494949; */
+
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --heading-color-main: #ddd;
+  --heading-color-second: #d9d9d9;
+  --heading-color-third: #c9c9c9;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --background-color: #161625;
+  --link-color: #39c;
+  --link-color-hover: #069;
+  --link-color-small: #777;
+  --border-color: #e5e5e5;
+  --code-font-color: #ccc; /* */
+  --code-background-color: #020202;
+  --dt-th-color: #bbb; /* */
+  --sidebar-background-color: #242424;
+  --sidebar-border-color: #e0e0e0;
+  --sidebar-font-color: #999;
+  --sidebar-background-color-second: #f4f4f4;
+  --font-strong-color: #ddd; /* */
+  --hr-background-color: #e5e5e5;
+  --tools-element-accent: #00ffff;
+  --pagination-span-color: #eee;
+  --pagination-background-color: #ffffff;
+  --pagination-link-hover-color: #ccc;
+  --pagination-link-background-color: #f1f1f1;
+
+  --highlight--cm-color: #888899; /* */
+  --highlight--cp-color: #888888; /* */
+  --highlight--c1-color: #888899; /* */
+  --highlight--cs-color: #888888; /* */
+  --highlight--c_--highlight--cd-color: #888899; /* */
+  --highlight--err-color: #a6e9e9; /* */
+  --highlight--err-background-color: #1c2d2d; /* */
+  --highlight--gd-color: #ffffff; /* */
+  --highlight--gd-background-color: #002222; /* */
+  --highlight--ge-color: #000000; /* */
+  --highlight--gr-color: #55ffff; /* */
+  --highlight--gh-color: #666666; /* */
+  --highlight--gi-color: #000000; /* */
+  --highlight--gi-background-color: #220022;
+  --highlight--go-color: #777777; /* */
+  --highlight--gp-color: #aaaaaa; /* */
+  --highlight--gu-color: #555555; /* */
+  --highlight--gt-color: #55ffff; /* */
+  --highlight--kc-color: #ffffff; /* */
+  --highlight--kd-color: #ffffff; /* */
+  --highlight--kn-color: #ffffff; /* */
+  --highlight--kp-color: #ffffff; /* */
+  --highlight--kr-color: #ffffff; /* */
+  --highlight--kt-color: #bbaa77; /* */
+  --highlight--k_--highlight--kv-color: #000000; /* */
+  --highlight--mf-color: #ff6666; /* */
+  --highlight--mh-color: #ff6666; /* */
+  --highlight--il-color: #ff6666; /* */
+  --highlight--mi-color: #ff6666; /* */
+  --highlight--mo-color: #ff6666; /* */
+  --highlight--m_--highlight--mb_--highlight--mx-color: #ff6666; /* */
+  --highlight--sb-color: #2eb; /* */
+  --highlight--sc-color: #2eb; /* */
+  --highlight--sd-color: #2eb; /* */
+  --highlight--s2-color: #2eb; /* */
+  --highlight--se-color: #2eb; /* */
+  --highlight--sh-color: #2eb; /* */
+  --highlight--si-color: #2eb; /* */
+  --highlight--sx-color: #2eb; /* */
+  --highlight--sr-color: #ff66d9; /* */
+  --highlight--s1-color: #2eb; /* */
+  --highlight--ss-color: #990073;
+  --highlight--s-color: #2eb; /* */
+  --highlight--na-color: #008080;
+  --highlight--bp-color: #999999;
+  --highlight--nb-color: #0086b3;
+  --highlight--nc-color: #6677aa;
+  --highlight--no-color: #008080;
+  --highlight--nd-color: #3c5d5d;
+  --highlight--ni-color: #800080;
+  --highlight--ne-color: #990000;
+  --highlight--nf-color: #990000;
+  --highlight--nl-color: #990000;
+  --highlight--nn-color: #aaaaaa;
+  --highlight--nt-color: #000080;
+  --highlight--vc-color: #ff7f7f; /* */
+  --highlight--vg-color: #ff7f7f; /* */
+  --highlight--vi-color: #ff7f7f; /* */
+  --highlight--nv-color: #ff7f7f; /* */
+  --highlight--ow-color: #ffffff; /* */
+  --highlight--o-color: #ffffff; /* */
+  --highlight--w-color: #444444; /* */
+  --highlight-background-color: #020202; /* */
+}
 
 body {
-  color: black;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+h6 {
+  color: var(--heading-color-main);
+}
+h1 {
+  color: var(--heading-color-main);
+}
+h2 {
+  color: var(--heading-color-second);
+}
+h3,
+h4,
+h5,
+h6,
+h6 {
+  color: var(--heading-color-third);
+}
+a {
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--link-color-hover);
+}
+a small {
+  color: var(--link-color-small);
+}
+a:hover small {
+  color: var(--link-color-small);
+}
+blockquote {
+  border-left: 1px solid var(--border-color);
+}
+pre {
+  color: var(--code-font-color);
+  border: 1px solid var(--border-color);
+  background: var(--code-background-color);
+}
+pre {
+  background: var(--code-background-color);
+  border: 1px solid var(--border-color);
+}
+
+td {
+  border-bottom: 1px solid var(--border-color);
+}
+dt {
+  color: var(--dt-th-color);
+}
+th {
+  color: var(--dt-th-color);
+}
+#git-wiki-mobile-header {
+  background-color: var(--background-color);
+}
+.w3-sidebar {
+  background: var(--sidebar-background-color) !important;
+}
+#git-wiki-sidebar .git-wiki-downloads,
+#git-wiki-sidebar header .w3-sidebar {
+  background: var(--sidebar-background-color) !important;
+  border: 1px solid var(--sidebar-border-color);
+}
+#git-wiki-sidebar .git-wiki-downloads li {
+  border-right: 1px solid var(--sidebar-border-color);
+}
+#git-wiki-sidebar .git-wiki-downloads a {
+  color: var(--sidebar-font-color);
+}
+#git-wiki-sidebar .git-wiki-downloads a:hover {
+  color: var(--sidebar-font-color);
+}
+#git-wiki-sidebar .git-wiki-downloads a:active {
+  background-color: var(--sidebar-background-color-second);
+}
+strong {
+  color: var(--font-strong-color);
+}
+#git-wiki-sidebar .git-wiki-downloads a strong {
+  color: var(--font-strong-color);
+}
+hr {
+  background: var(--hr-background-color);
+}
+.tools-element {
+  border-left: var(--tools-element-accent);
+  border-left-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media print, screen and (max-width: 992px) {
+  footer {
+    border: 1px solid var(--border-color);
+  }
+}
+@media print {
+  body {
+    color: var(--dt-th-color);
+  }
+}
+.pagination span {
+  border: 1px solid var(--pagination-span-color);
+  background-color: var(--pagination-background-color);
+}
+.pagination a:hover {
+  background-color: var(--pagination-link-background-color);
+  color: var(--pagination-link-hover-color);
+}
+
+.w3-teal {
+  color: var(--heading-color-main);
+  background-color: var(--background-color);
+}
+
+.highlight table td {
+  padding: 5px;
+}
+.highlight table pre {
+  margin: 0;
+}
+.highlight .cm {
+  /* color: #999988; */
+  color: var(--highlight--cm-color);
+  font-style: italic;
+}
+.highlight .cp {
+  /* color: #999999; */
+  color: var(--highlight--cp-color);
+  font-weight: bold;
+}
+.highlight .c1 {
+  /* color: #999988; */
+  color: var(--highlight--c1-color);
+  font-style: italic;
+}
+.highlight .cs {
+  /* color: #999999; */
+  color: var(--highlight--cs-color);
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .c,
+.highlight .cd {
+  /* color: #999988; */
+  color: var(--highlight--c_--highlight--cd-color);
+  font-style: italic;
+}
+.highlight .err {
+  /* color: #a61717; */
+  color: var(--highlight--err-color);
+  /* background-color: #e3d2d2; */
+  background-color: var(--highlight--err-background-color);
+}
+.highlight .gd {
+  /* color: #000000; */
+  color: var(--highlight--gd-color);
+  /* background-color: #ffdddd; */
+  background-color: var(--highlight--gd-background-color);
+}
+.highlight .ge {
+  /* color: #000000; */
+  color: var(--highlight--ge-color);
+  font-style: italic;
+}
+.highlight .gr {
+  /* color: #aa0000; */
+  color: var(--highlight--gr-color);
+}
+.highlight .gh {
+  /* color: #999999; */
+  color: var(--highlight--gh-color);
+}
+.highlight .gi {
+  /* color: #000000; */
+  color: var(--highlight--gi-color);
+  /* background-color: #ddffdd; */
+  background-color: var(--highlight--gi-background-color);
+}
+.highlight .go {
+  /* color: #888888; */
+  color: var(--highlight--go-color);
+}
+.highlight .gp {
+  /* color: #555555; */
+  color: var(--highlight--gp-color);
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  /* color: #aaaaaa; */
+  color: var(--highlight--gu-color);
+}
+.highlight .gt {
+  /* color: #aa0000; */
+  color: var(--highlight--gt-color);
+}
+.highlight .kc {
+  /* color: #000000; */
+  color: var(--highlight--kc-color);
+  font-weight: bold;
+}
+.highlight .kd {
+  /* color: #000000; */
+  color: var(--highlight--kd-color);
+  font-weight: bold;
+}
+.highlight .kn {
+  /* color: #000000; */
+  color: var(--highlight--kn-color);
+  font-weight: bold;
+}
+.highlight .kp {
+  /* color: #000000; */
+  color: var(--highlight--kp-color);
+  font-weight: bold;
+}
+.highlight .kr {
+  /* color: #000000; */
+  color: var(--highlight--kr-color);
+  font-weight: bold;
+}
+.highlight .kt {
+  /* color: #445588; */
+  color: var(--highlight--kt-color);
+  font-weight: bold;
+}
+.highlight .k,
+.highlight .kv {
+  /* color: #000000; */
+  color: var(--highlight--k_--highlight--kv-color);
+  font-weight: bold;
+}
+.highlight .mf {
+  /* color: #009999; */
+  color: var(--highlight--mf-color);
+}
+.highlight .mh {
+  /* color: #009999; */
+  color: var(--highlight--mh-color);
+}
+.highlight .il {
+  /* color: #009999; */
+  color: var(--highlight--il-color);
+}
+.highlight .mi {
+  /* color: #009999; */
+  color: var(--highlight--mi-color);
+}
+.highlight .mo {
+  /* color: #009999; */
+  color: var(--highlight--mo-color);
+}
+.highlight .m,
+.highlight .mb,
+.highlight .mx {
+  /* color: #009999; */
+  color: var(--highlight--m_--highlight--mb_--highlight--mx-color);
+}
+.highlight .sb {
+  /* color: #d14; */
+  color: var(--highlight--sb-color);
+}
+.highlight .sc {
+  /* color: #d14; */
+  color: var(--highlight--sc-color);
+}
+.highlight .sd {
+  /* color: #d14; */
+  color: var(--highlight--sd-color);
+}
+.highlight .s2 {
+  /* color: #d14; */
+  color: var(--highlight--s2-color);
+}
+.highlight .se {
+  /* color: #d14; */
+  color: var(--highlight--se-color);
+}
+.highlight .sh {
+  /* color: #d14; */
+  color: var(--highlight--sh-color);
+}
+.highlight .si {
+  /* color: #d14; */
+  color: var(--highlight--si-color);
+}
+.highlight .sx {
+  /* color: #d14; */
+  color: var(--highlight--sx-color);
+}
+.highlight .sr {
+  /* color: #009926; */
+  color: var(--highlight--sr-color);
+}
+.highlight .s1 {
+  /* color: #d14; */
+  color: var(--highlight--s1-color);
+}
+.highlight .ss {
+  /* color: #990073; */
+  color: var(--highlight--ss-color);
+}
+.highlight .s {
+  /* color: #d14; */
+  color: var(--highlight--s-color);
+}
+.highlight .na {
+  /* color: #008080; */
+  color: var(--highlight--na-color);
+}
+.highlight .bp {
+  /* color: #999999; */
+  color: var(--highlight--bp-color);
+}
+.highlight .nb {
+  /* color: #0086B3; */
+  color: var(--highlight--nb-color);
+}
+.highlight .nc {
+  /* color: #445588; */
+  color: var(--highlight--nc-color);
+  font-weight: bold;
+}
+.highlight .no {
+  /* color: #008080; */
+  color: var(--highlight--no-color);
+}
+.highlight .nd {
+  /* color: #3c5d5d; */
+  color: var(--highlight--nd-color);
+  font-weight: bold;
+}
+.highlight .ni {
+  /* color: #800080; */
+  color: var(--highlight--ni-color);
+}
+.highlight .ne {
+  /* color: #990000; */
+  color: var(--highlight--ne-color);
+  font-weight: bold;
+}
+.highlight .nf {
+  /* color: #990000; */
+  color: var(--highlight--nf-color);
+  font-weight: bold;
+}
+.highlight .nl {
+  /* color: #990000; */
+  color: var(--highlight--nl-color);
+  font-weight: bold;
+}
+.highlight .nn {
+  /* color: #555555; */
+  color: var(--highlight--nn-color);
+}
+.highlight .nt {
+  /* color: #000080; */
+  color: var(--highlight--nt-color);
+}
+.highlight .vc {
+  /* color: #008080; */
+  color: var(--highlight--vc-color);
+}
+.highlight .vg {
+  /* color: #008080; */
+  color: var(--highlight--vg-color);
+}
+.highlight .vi {
+  /* color: #008080; */
+  color: var(--highlight--vi-color);
+}
+.highlight .nv {
+  /* color: #008080; */
+  color: var(--highlight--nv-color);
+}
+.highlight .ow {
+  /* color: #000000; */
+  color: var(--highlight--ow-color);
+  font-weight: bold;
+}
+.highlight .o {
+  /* color: #000000; */
+  color: var(--highlight--o-color);
+  font-weight: bold;
+}
+.highlight .w {
+  /* color: #bbbbbb; */
+  color: var(--highlight--w-color);
+}
+.highlight {
+  /* background-color: #f8f8f8; */
+  background-color: var(--highlight-background-color);
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  padding-top: 1em;
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper .dark-mode-toggle {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 3.125em;
+}
+h2 {
+  font-size: 2.618em;
+}
+h3 {
+  font-size: 1.931em;
+}
+h4 {
+  font-size: 1.618;
+}
+h5 {
+  font-size: 1.194em;
+}
+h6 {
+  font-size: 1em;
+}
+
+body {
+  /* color: black; */
   font-size: initial;
 }
-code, pre {
-  font-size: .9em;
+code,
+pre {
+  font-size: 0.9em;
   color: inherit;
+  background-color: var(--code-background-color);
 }
 
-table {max-width: 70rem;}
+table {
+  max-width: 70rem;
+}
 
 details {
-  padding: .5em;
+  padding: 0.5em;
   margin: 1.25em;
-  box-shadow: 1px 1px 2px #bbbbbb;
-  background-color: #eeeeee;
+  /* box-shadow: 1px 1px 2px #bbbbbb; */
+  /* background-color: #eeeeee; */
 }
 
 details > summary {
@@ -34,7 +777,7 @@ details > img {
 }
 
 #git-wiki-toc li ol {
-  margin:  0px;
+  margin: 0px;
 }
 
 /* Page navigation overrides */

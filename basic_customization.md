@@ -179,15 +179,17 @@ As always, see the [unofficial docs](/unofficial_talon_docs) page for a much mor
 
 Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
-    title: /YouTube/
-    -
-    toggle play: key("space")
+```js
+title: /YouTube/
+-
+toggle play: key("space")
 
-    search cats:
-        key("/")
-        sleep(100ms)
-        insert("cats")
-        key("enter")
+search cats:
+    key("/")
+    sleep(100ms)
+    insert("cats")
+    key("enter")
+```
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
