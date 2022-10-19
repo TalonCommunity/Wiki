@@ -43,3 +43,9 @@ details > img {
   padding-left: 1rem;
   margin-bottom: 0;
 }
+
+@media print, screen and (max-width: 480px) {
+  #git-wiki-sidebar .git-wiki-downloads {
+    width: 89px;
+  }
+}
