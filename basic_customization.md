@@ -214,11 +214,11 @@ You can paste the following code into the REPL to see a full list of available s
 
 ### Keyboard shortcuts
 
-On MacOS only you have the ability to set keyboard shortcuts in `.talon` files. The following `.talon` file toggles whether Talon is enabled (listening to speech) if you press the cmd + t key combination:
+You have the ability to set keyboard shortcuts in `.talon` files. The following `.talon` file toggles whether Talon is listening to speech when you press the ctrl + t key combination:
 
-    key(cmd-t): speech.toggle()
+    key(ctrl-t): speech.toggle()
 
-You could replace speech.toggle() with the same types of things that you would use in a voice command (e.g. insert() or key()). Since there's no context matcher in this `.talon` file the shortcut would be global.
+The shortcut is global since there's no context matcher in this `.talon` file restricting it to a particular application for example. You could replace speech.toggle() with the same types of things that you would use in a voice command.
 
 ### Overriding existing voice commands
 

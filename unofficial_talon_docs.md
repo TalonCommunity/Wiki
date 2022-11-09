@@ -17,8 +17,8 @@ So why do we have two kinds of configuration/scripting files (`.py` and `.talon`
 The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](/unofficial_talon_docs#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
 * Define [voice commands](/unofficial_talon_docs#voice-commands).
-* Define [keyboard shortcuts](/unofficial_talon_docs#other-capabilities).
-* [Activate registered tags or apps and change settings](/unofficial_talon_docs#tags-apps-and-settings).
+* Define [keyboard shortcuts](/unofficial_talon_docs#tags-settings-and-other-capabilities).
+* [Activate registered tags or apps and change settings](/unofficial_talon_docs#tags-settings-and-other-capabilities).
 * Implement/override the behavior of [actions](/unofficial_talon_docs#actions). However, this is **deprecated**; you should implement actions in Python files instead.
 
 An example `.talon` file might look like this:
@@ -292,7 +292,7 @@ title: /my app/
 tag(): user.my_tag
 ```
 
-Another feature is the ability to bind keyboard shortcuts. Note that Linux and Windows support is only in the beta as of writing (not in stable version v0.2.3). In the beta there are still a few operating system specific quirks.
+Another feature is the ability to bind keyboard shortcuts.
 
 ```
 title: /my app/
@@ -303,7 +303,6 @@ key(f8): app.notify("f8 key pressed")
 # One or more modifiers can be used with the matcher
 key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key pressed. Note super is the same as cmd.")
 
-# :passive and :up don't work on Windows currently
 key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
