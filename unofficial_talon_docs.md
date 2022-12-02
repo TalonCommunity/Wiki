@@ -14,6 +14,8 @@ So why do we have two kinds of configuration/scripting files (`.py` and `.talon`
 
 ## .talon Files
 
+The `.talon` files contain commands that talon executes when you tell it what to do.  You can look through these files either on the [talon github.com repository](https://github.com/knausj85/knausj_talon/tree/master), or in the local copy on your computer in the ~/talon/user directory.  If you look at the files, you'll see that there are commands that apply either pretty much everywhere as well as commands that are specific to certain applications.
+
 The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](/unofficial_talon_docs#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
 * Define [voice commands](/unofficial_talon_docs#voice-commands).
