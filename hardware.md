@@ -35,6 +35,7 @@ These are models that Talon community members regularly recommend:
 
 [The Speechrecsolutions selection guide](https://www.speechrecsolutions.com/MicGuide.htm) lists options at several price-points.  We don't know about each and every model, but you can ask on `#hardware` for some experience report.
 
+**BOYA BY-M1**: cheap ~$15 clip-on lavalier mic useful for getting comfortable with Talon. Much better speech recognition and latency than most bluetooth headphones and webcam mics. Only useable if you're the only speaker in the room, though it does cope well with non-speech background noise (e.g. fans, washing machines). May need an adapter if your device has separate input/output connectors.
 
 ### Can this mic maybe work?
 
