@@ -20,7 +20,7 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 
 ## Programming and editor integrations
 
-* [Cursorless](https://github.com/cursorless-dev/) Structural code editing in VSCode. This with knausj\_talon is the state of the art for voice coding with Talon currently.
+* [Cursorless](https://www.cursorless.org/) Structural code editing in VSCode. This with [`knausj_talon`](https://github.com/knausj85/knausj_talon) is the state of the art for voice coding with Talon currently.
 * [Fidgetingbit's knausj fork](https://github.com/fidgetingbits/knausj_talon) Fork of knausj\_talon most famous for its integration with the (N)Vim code editor.
 
 ## User Interface

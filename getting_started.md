@@ -24,25 +24,13 @@ Talon uses a speech recognition engine that translates voice audio to text. To i
 
 Talon does not come with voice commands out of the box - you must install some additional files. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) Talon user file set. The whole wiki assumes this repository is used, if not otherwise noted.
 
-Install the [Talon user file set](https://github.com/knausj85/knausj_talon) in the `user` folder of the Talon Home directory, which can be opened using the Talon menu in the system tray (near the clock) using the shortcut `Scripting -> Open ~/.talon`. The Talon Home directory is located on the filesystem at `%APPDATA%\Talon` on Windows, and `~/.talon` on macOS/Linux.
+See [knausj_talon](https://github.com/knausj85/knausj_talon/blob/main/README.md#installation) for installation instructions.
 
-### Install using a ZIP File
- Download the [zip archive of knausj_talon](https://github.com/knausj85/knausj_talon/archive/master.zip) and extract the files. (If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful). Place these extracted files inside the `user` folder of the Talon Home directory.
+In addition to `knausj_talon`, you may want to consider installing:
 
-### Install using the Command Line
-On **Linux/Mac**:
-```
-mkdir -p ~/.talon/user
-cd ~/.talon/user
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
-
-On **Windows**:
-```
-md "%APPDATA%\Talon\user"
-cd "%APPDATA%\Talon\user"
-git clone https://github.com/knausj85/knausj_talon.git knausj_talon
-```
+- [Cursorless](https://www.cursorless.org/) for programming and text editing
+- [Rango](https://github.com/david-tejada/rango) for browser navigation
+- [Other user file sets](/talon_user_file_sets)
 
 ## Test your Talon Setup
 Test your Talon setup with a few [basic commands](/basic_usage.md).
