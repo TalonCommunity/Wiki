@@ -2,6 +2,12 @@
 
 This page documents third party software that pair well with Talon.
 
+## Programming and text editing
+
+| Software | Cost | Platform | Description |
+| --- | --- | --- | --- |
+| [Cursorless](https://www.cursorless.org/) | Free | Any | Allows rapid voice coding and text editing.  Currently requires VSCode |
+
 ## Navigation Software
 
 | Software | Cost | Platform | Description |
