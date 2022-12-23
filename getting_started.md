@@ -30,6 +30,8 @@ In addition to `knausj_talon`, you may want to consider installing:
 
 - [Cursorless](https://www.cursorless.org/) for programming and text editing
 - [Rango](https://github.com/david-tejada/rango) for browser navigation
+- [gaze-ocr](https://github.com/wolfmanstout/talon-gaze-ocr) for advanced cursor control using eye tracking and text recognition (OCR)
+- [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
 - [Other user file sets](/talon_user_file_sets)
 
 ## Test your Talon Setup
