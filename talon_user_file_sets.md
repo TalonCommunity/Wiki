@@ -12,6 +12,7 @@ If intended for public consumption, these Talon user file sets are mostly annouc
 
 The easiest way to control your mouse with Talon is to use an eye tracker. But this is fairly expensive hardware. There are several voice/noise only options in addition to the 'mouse grid' built in to knausj\_talon.
 
+* [gaze-ocr](https://github.com/wolfmanstout/talon-gaze-ocr) for advanced cursor control using eye tracking and text recognition (OCR)
 * [Dense Mouse Grid](https://github.com/tararoys/dense-mouse-grid/tree/dense_mouse_grid_2/dense_mouse_grid) Less obtrusive overlay combining a letter and number grid to position the mouse.
 * [Alphabet Soup Mouse](https://github.com/tararoys/modified_full_mouse_grid)  This mouse overlays a very dense grid of letters onto the screen for very precise mouse placement. Created by Aegis, TimoTimo, and TaraRoys.
 * [crosshairs mouse guide mouse](https://github.com/tararoys/mouse_guide) Created by Aegis.  Allows you to say very specific mouse coordinates and position the mouse precisely on the screen.
@@ -42,6 +43,7 @@ Talon user sets that allow you to build voice commands more easily or define com
 
 ## Other
 
+* [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
 * [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 * [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)  A basic script for writing subtitles to a file for a screencapture.
 * [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
