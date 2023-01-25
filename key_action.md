@@ -15,7 +15,7 @@ Here's some of the syntax you can use with the action:
 * `key("f")` - Presses the f key.
 * `key("ctrl-t")` - Presses and holds down the control key, then presses t, then releases everything.
 * `key("\\"")` - Presses the " key.
-* `key("ctrl-shift-alt-option-super-t")` - Presses and holds down the control, shift, alt, super (windows key or cmd key on mac), and option keys, then presses t, then releases everything. Note how you can apply multiple modifiers by connecting them with hyphens.
+* `key("ctrl-shift-alt-super-t")` - Presses and holds down the control, shift, alt (aka option on mac), and super (windows key or cmd key on mac) keys, then presses t, then releases everything. Note how you can apply multiple modifiers by connecting them with hyphens.
 * `key("left delete")` - Presses the left arrow key, then the delete key.
 * `key("ctrl:down")` - Presses and holds the control key. You can use "ctrl:up" to release the key later in the same or a a subsequent key() call. You can use `:up` and `:down` with any key, not just modifiers like control.
 * `key("tab:3")` - Presses the tab key three times.

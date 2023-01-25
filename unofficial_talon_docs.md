@@ -301,7 +301,7 @@ title: /my app/
 key(f8): app.notify("f8 key pressed")
 
 # One or more modifiers can be used with the matcher
-key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key pressed. Note super is the same as cmd.")
+key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key pressed. Note that alt is option on Mac. Use cmd modifier on Mac to use the apple key in a shortcut.")
 
 key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
 key(f9:up): app.notify("show this balloon when the f9 key is released")
