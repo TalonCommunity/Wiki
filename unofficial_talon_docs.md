@@ -1,6 +1,8 @@
 # Unofficial Talon Docs
 
-This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. The page assumes you have successfully [configured Talon](/getting_started) to respond to voice commands.
+This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. You may prefer the [basic usage](basic_usage.md) or [basic customization](basic_customization.md) pages if you are a beginner.
+
+The page assumes you have successfully [configured Talon](/getting_started) to respond to voice commands.
 
 ## Overview of Talon framework
 
