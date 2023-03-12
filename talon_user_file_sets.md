@@ -50,7 +50,6 @@ Talon user sets that allow you to build voice commands more easily or define com
 ## Other
 
 * [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
-* [Gaze OCR](https://github.com/wolfmanstout/talon-gaze-ocr) Uses the Tobii eye tracker and OCR to let you select text by naming it.
 * [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 * [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)  A basic script for writing subtitles to a file for a screencapture.
 * [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
