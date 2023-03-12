@@ -42,6 +42,11 @@ Talon user sets that allow you to build voice commands more easily or define com
 * [Talon UI helper](https://github.com/splondike/talon_ui_helper) Command wizard that lets you build TalonScript commands which work with the screen as an image. For example it lets you easily build a command to click an icon, or show an overlay for clicking items in a list.
 * [Screen spots](https://github.com/AndrewDant/screen-spots) Lets you quickly save mouse positions on the screen and then click them with a short voice command. Useful for games with fixed UI element position.
 
+## Clipboard helpers
+
+* [Multidimensional clipboard](https://github.com/FireChickenProductivity/Talon-Voice-multidimensional-clipboard) Lets you store and retrieve multiple text snippets from a Talon maintained clipboard.
+* [Indexed clipboard](https://github.com/rntz/indexed_clipboard) Lets you store and retrieve multiple text snippets from a Talon maintained clipboard.
+
 ## Other
 
 * [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
@@ -51,4 +56,5 @@ Talon user sets that allow you to build voice commands more easily or define com
 * [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) Another cheatsheet generator which can output HTML or PDF.
 * [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
 * [Window Tweak](https://github.com/codecat555/talon-window-tweak) A Talon module for moving and resizing windows using voice commands.
+* [Talon WM](https://github.com/lunixbochs/talon_wm) Basic tiling window manager implementation in Talon.
 * [Software that pairs well with Talon](/other_integrations#software-that-pairs-well-with-talon) Not a Talon user file set per-se, but other things you might find useful.
