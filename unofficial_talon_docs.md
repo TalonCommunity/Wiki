@@ -340,7 +340,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ### Contexts
 
-A *context* specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](/unofficial_talon_docs#context-header) like your OS, the name of the current application, etc.  Within a particular context, you can define voice commands, implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), activate [tags](/unofficial_talon_docs#tags), and redefine [lists](#lists) and [captures](#captures). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A *context* specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](/unofficial_talon_docs#context-header) like your OS, the name of the current application, etc.  Within a particular context you can implement/override the behavior of [actions](/unofficial_talon_docs#actions), adjust [settings](/unofficial_talon_docs#talon-settings), activate [tags](/unofficial_talon_docs#tags), and redefine [lists](#lists) and [captures](#captures). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 
 In Python, you can construct a context like so:
@@ -357,6 +357,19 @@ You can make this context conditional by setting the `matches` property:
 ctx.matches = """
 app: notepad_app
 os: windows
+"""
+```
+
+Multiple contexts can be active at any one time, we might have the one mentioned above as well as one with `ctx.matches = "os: windows"`. Since contexts can override behavior, Talon has a set of heuristics to work out which context should 'win' in the event that two or more override the same behavior. A useful approximation of these heuristics is that contexts with more matching rules will win. This concept can be used to make sure your overrides are used in preference to those implemented elsewhere (e.g. in `knausj_talon`). For example if we wanted a more specific matcher than the one above we might add in a `language: en` requirement:
+
+```python
+from talon import Context
+more_specific_ctx = Context()
+
+more_specific_ctx.matches = """
+app: notepad_app
+os: windows
+language: en
 """
 ```
 
