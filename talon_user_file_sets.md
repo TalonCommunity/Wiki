@@ -42,13 +42,20 @@ Talon user sets that allow you to build voice commands more easily or define com
 * [Talon UI helper](https://github.com/splondike/talon_ui_helper) Command wizard that lets you build TalonScript commands which work with the screen as an image. For example it lets you easily build a command to click an icon, or show an overlay for clicking items in a list.
 * [Screen spots](https://github.com/AndrewDant/screen-spots) Lets you quickly save mouse positions on the screen and then click them with a short voice command. Useful for games with fixed UI element position.
 
+## Clipboard helpers
+
+* [Multidimensional clipboard](https://github.com/FireChickenProductivity/Talon-Voice-multidimensional-clipboard) Lets you store and retrieve multiple text snippets from a Talon maintained clipboard.
+* [Indexed clipboard](https://github.com/rntz/indexed_clipboard) Lets you store and retrieve multiple text snippets from a Talon maintained clipboard.
+
 ## Other
 
 * [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
+* [Gaze OCR](https://github.com/wolfmanstout/talon-gaze-ocr) Uses the Tobii eye tracker and OCR to let you select text by naming it.
 * [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 * [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)  A basic script for writing subtitles to a file for a screencapture.
 * [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
 * [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) Another cheatsheet generator which can output HTML or PDF.
 * [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
 * [Window Tweak](https://github.com/codecat555/talon-window-tweak) A Talon module for moving and resizing windows using voice commands.
+* [Talon WM](https://github.com/lunixbochs/talon_wm) Basic tiling window manager implementation in Talon.
 * [Software that pairs well with Talon](/other_integrations#software-that-pairs-well-with-talon) Not a Talon user file set per-se, but other things you might find useful.
