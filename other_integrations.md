@@ -12,7 +12,8 @@ This page documents third party software that pair well with Talon.
 
 | Software | Cost | Platform | Description |
 | --- | --- | --- | --- |
-| [Shortcat](https://shortcatapp.com/) | Free | Mac | Allows selecting native UI elements by searching related strings. Like vimium for OSX |
+| [Shortcat](https://shortcatapp.com/) | Free | Mac | Allows selecting native UI elements by searching related strings. Like vimium for OSX. |
+| [Homerow](https://www.homerow.app) | Paid | Mac | Another Vimium for OSX alternative. |
 | [Hunt and Peck](https://github.com/zsims/hunt-and-peck) | Free | Windows | Like Vimium for Windows. Paints a two letter label on each button etc. which you can type to select. |
 | [Rectangle](https://github.com/rxhanson/Rectangle) | Free | Mac | Keyboard control window placement and management |
 
