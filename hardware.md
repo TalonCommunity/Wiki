@@ -51,13 +51,22 @@ Some people do report success with much cheaper microphones, but many also do no
 ### Windows & Bluetooth Headsets
 Windows default drivers have a limitation and that they _cannot_ record and play stereo sound simultaneously. See [this stackoverflow answer](https://superuser.com/questions/978089/simultaneous-use-of-a2dp-and-hfp-bluetooth-profiles) for more details. For this reason, if you want to hear audio while dictating, you _must_ use a wired (or plug in your) headset on Windows. OSX does not have this limitation.
 
-## Eye Tracker
+## Eye Trackers
 
 Check out the `#eye-tracking` channel in Slack, and the [Tobii 4c Tips](/tobii_4c_tips) page.
 
 * Tobii 4C is a commonly used and recommended eye tracker, but it is slowly being superceded as the default as more folks are starting to use the Tobii 5. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
 * [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) is the newer model and may be easier to find than the 4C. This one does require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](/tobii_5.md).
 
+## Foot Pedals
+
+Foot pedals provide another alternative input method, though they often require intensive customization. The use cases for foot pedals varies and can be unique to a specific workflow, but there are few that are more common: scrolling, muting, and mouse replacement.
+
+The customization for foot pedals is more involved than editing Talon files, and it helps to be familiar with the ctx python api especially for more complex use cases. There are some limitations as well. For example, the foot pedal needs to bind to a key that is not otherwise being used, e.g., some users have used `keypad_divide`, `keypad_multiply`, or `keypad_minus`. Also, some actions don't work well with Talon hotkeys, and `user.vscode` Knausj commands have timeout issues if read asynchronously. To bind pressing two pedals at once, some users have needed to use cron and asyncronous reading of a state dictionary.
+
+* [Olympus RS31H](https://dictation.omsystem.com/product/rs-31h-footswitch/) is used by a few Talon Community members. It has 4 buttons (whereas other options only have 3). Check out this [video demo](https://youtu.be/eysWOhPldFQ) and [blog post](https://liannaee.blogspot.com/.2023/03/olympus-rs31h-hardware-with-talon-voice.html)
+* [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
+* [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mchanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
 ### Windows Login plus Talon
 
