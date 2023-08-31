@@ -68,6 +68,12 @@ The customization for foot pedals is more involved than editing Talon files, and
 * [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
 * [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mchanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
+With the talon beta the elegato foot pedal can be used as follows:
+```
+deck(pedal_left): print("left pedal")
+deck(pedal_middle): print("middle pedal")
+deck(pedal_right): print("right pedal")
+```
 ### Windows Login plus Talon
 
 Talon and Tobii software clash a bit. But you can keep the Tobii driver installed, and only disable the Tobii service, you can keep using the Tobii as a Windows Hello device (login via facial recognition), even while having the Tobii available for Talon.
