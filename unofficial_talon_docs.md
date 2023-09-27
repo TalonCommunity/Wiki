@@ -933,3 +933,28 @@ The following three settings, `insert_wait`, `key_hold`, and `key_wait`, can be 
 : This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
 
   It is measured in seconds; the default is 0.150, i.e. 150 milliseconds. It has been mentioned in #beta that this setting may not always be available as it was offered as a quick fix in Talon 1283 for Talon 1274 cutting input off too soon sometimes.
+
+
+## `.talon-list` files
+
+`.talon-list` files are a special type of `.talon` file. They are used solely to define lists of strings that can be used in voice commands or your Talon Python scripts. They can do exactly the same things as a Python Context with only a matches property and a single list on it. They are primarily intended for reducing verbosity and making list configuration easier for end users. If you are looking to configure settings it is better to use a `settings()` block in a `.talon` file as a settings block more clearly communicates that it is an internal setting and not part of a capture rule (like a `.talon-list` file would likely be).
+
+A `.talon-list` doesn't require a `:` if the key is the same as the value. The right hand side of the key value pair is a string with or without quotes. It uses the same parser as `.talon` files and the syntax is a strict subset of the `.talon` file syntax, except for the ability to skip the colon and just have a word by itself. You can use tags and scopes in `.talon-list` files just like normal `.talon` files. In the context header, you should declare the name by which the list will be referred to in voice commands or Python by typing `list:` followed by the name within the `user` namespace. Everything declared in a particular `.talon-list` ends up in a single list.
+
+The following example shows a `.talon-list` file that defines a few special characters. Note how the string doesn't need to be wrapped in quotations and can either be just itself or a mapping to a different string.
+
+```
+list: user.key_special
+-
+enter
+tab
+delete
+page up:                    pageup
+page down:                  pagedown
+```
+
+We could then use this list in a `.talon` file like so:
+
+```
+{user.key_special}:              key(symbol)
+```
