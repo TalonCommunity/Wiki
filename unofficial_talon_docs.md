@@ -953,6 +953,16 @@ page up:                    pageup
 page down:                  pagedown
 ```
 
+We then need to initialize the list within a Talon module object. This is important for giving the list an associated comment.  This is done within a Python file in our user directory.  As one can see, it is a similar process to declaring a normal context list except for the fact that all the context matching is now done within the  `.talon-list` file and we no longer need to do our context matching within Python.
+
+```
+from talon import Module
+
+mod = Module()
+
+mod.list("key_special", "The list of special keys we can input through voice commands")
+```
+
 We could then use this list in a `.talon` file like so:
 
 ```
