@@ -804,22 +804,29 @@ You may have noticed that scopes can emulate the behaviour of [tags](#tags), exc
 
 Settings allow you to control some of the parameters of your python files by changing their value in a .talon file. This can be used to make a Talon user file set easier to customize for end users, such as exposing the background color of a UI element. It can also be useful to have certain settings change when the context changes, by setting them to different values in different .talon files.
 
-Settings are defined on Modules. Each setting has a name, type, default value, and description. The following example shows how to define a setting in python, and save its value in a variable. You can call .get() on the variable to access the current value of the setting.
+Settings are defined on Modules. Each setting has a name, type, default value, and description. The following example shows how to define a setting in python and get its contextually dependent value.
 
 `setting.py`
 ```
-from talon import Module
+from talon import Module, settings
 
 mod = Module()
 
-horizontal_position = mod.setting(
+my_setting = mod.setting(
     "my_user_file_set_horizontal_position",
     type=int,
     default=0,
     desc="Set the horizontal display position of some UI element",
 )
 
-print("The current value of the setting is " + str(horizontal_position.get()))
+# You can get the value from the settings.get() method across files
+value = str(settings.get("user.my_user_file_set_horizontal_position"))
+
+# Or by using the reference within a file
+value_from_ref = str(my_setting.get())
+
+print("The current value of the setting is " + value)
+print(value == value_from_ref)
 ```
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
