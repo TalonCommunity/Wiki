@@ -812,21 +812,15 @@ from talon import Module, settings
 
 mod = Module()
 
-my_setting = mod.setting(
+mod.setting(
     "my_user_file_set_horizontal_position",
     type=int,
     default=0,
     desc="Set the horizontal display position of some UI element",
 )
 
-# You can get the value from the settings.get() method across files
-value = str(settings.get("user.my_user_file_set_horizontal_position"))
-
-# Or by using the reference within a file
-value_from_ref = str(my_setting.get())
-
+value = settings.get("user.my_user_file_set_horizontal_position")
 print("The current value of the setting is " + value)
-print(value == value_from_ref)
 ```
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
