@@ -44,10 +44,10 @@ There are currently no visual cues about the current mode. You can tell which mo
 : switch to command mode
 
 `go to sleep`
-: go to sleep, stop processing commands (you can also use `talon sleep` when using Dragon)
+: go to sleep, stop processing commands (you can also use `talon sleep` to disambiguate when using Dragon)
 
 `talon wake`
-: wake up and return to previous mode (you can also use `talon wake` when using Dragon)
+: wake up and return to previous mode (you can also use `talon wake` to disambiguate when using Dragon)
 
 
 ### Open and switch between windows in apps such as Chrome
