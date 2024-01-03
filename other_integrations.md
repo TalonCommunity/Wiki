@@ -7,6 +7,8 @@ This page documents third party software that pair well with Talon.
 | Software | Cost | Platform | Description |
 | --- | --- | --- | --- |
 | [Cursorless](https://www.cursorless.org/) | Free | Any | Allows rapid voice coding and text editing.  Currently requires VSCode |
+| [Jump Codes in CodeRush for Visual Studio](https://community.devexpress.com/blogs/markmiller/archive/2023/06/21/jump-codes-in-coderush-for-visual-studio.aspx) | Free | Windows | Helps with navigation in Visual Studio.   See [this video](https://www.youtube.com/watch?v=EVJOEQp9_cw) for an example. Also [drop/collect/swap marker](https://www.youtube.com/watch?v=_awmO-WZ_vw&list=PL8h4jt35t1wgawacCN9wmxq1EN36CNUGk&index=23) functionality which is useful for Voice Coding. |
+ 
 
 ## Navigation Software
 

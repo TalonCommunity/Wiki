@@ -24,8 +24,6 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 
 * [Cursorless](https://www.cursorless.org/) Structural code editing in VSCode. This with [`knausj_talon`](https://github.com/knausj85/knausj_talon) is the state of the art for voice coding with Talon currently.
 * [Fidgetingbit's knausj fork](https://github.com/fidgetingbits/knausj_talon) Fork of knausj\_talon most famous for its integration with the (N)Vim code editor.
-* [Jump Codes in CodeRush for Visual Studio](https://community.devexpress.com/blogs/markmiller/archive/2023/06/21/jump-codes-in-coderush-for-visual-studio.aspx) see [this video](https://www.youtube.com/watch?v=EVJOEQp9_cw) for an example.
- A plugin for the CodeRush Visual Studio extension that lets you jump to any code location with a voice command. This product is now free. CodeRush also has many other useful features including [drop/collect marker](https://www.youtube.com/watch?v=_awmO-WZ_vw&list=PL8h4jt35t1wgawacCN9wmxq1EN36CNUGk&index=23) functionality which is useful for Voice Coding. 
  
 ## User Interface
 
