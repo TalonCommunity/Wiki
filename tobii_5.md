@@ -17,7 +17,7 @@ Regardless of which OS you will be using when you use your eye tracker, the init
 
 ### Calibration Issues
 
-- If you're displays are set up as duplicate (e.g. laptop with monitor plugged in), the calibration will be wonky as it will work off your laptop's original screen rather than your monitor. Swap to "show only on monitor" temporarily for calibration.
+- If your displays are set up as duplicate (e.g. laptop with monitor plugged in), the calibration will be wonky as it will work off of your laptop's original screen rather than your monitor. Swap to "show only on monitor" temporarily for calibration.
 
 ### Next steps
 
