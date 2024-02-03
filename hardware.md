@@ -74,7 +74,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 * [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mechanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
 With the talon beta, the elegato foot pedal can be used as follows:
-```
+```python
 deck(pedal_left): print("left pedal")
 deck(pedal_middle): print("middle pedal")
 deck(pedal_right): print("right pedal")
@@ -85,7 +85,7 @@ deck(pedal_right): print("right pedal")
 With gamepad support in Talon you can recieve input from gamepads and/or joysticks. To check if your gamepad works with Talon, view the log after startup and look for a message after all the user scripts are read in. It should display something like `INFO Gamepad Attach: $CONTROLLER_ID ($CONTROLLER_NAME)` Gamepad input is particularly useful since it doesn't require you to use a hotkey (Pressing a different key from a Talon hotkey is often error prone, since the key is still held down while the other is pressed). Additionally, gamepads like the [Logitech Adaptive Gaming Kit and the Xbox Adaptive Controller](https://www.logitechg.com/en-us/products/gamepads/adaptive-gaming-kit-accessories) are useful ways to add physical buttons to your setup that don't require fine motor control. 
 
 Gamepad presses can be captured in .talon files similar to key presses
-```
+```python
 gamepad(dpad_up):           print("dpad_up")
 gamepad(dpad_down):         print("dpad_down")
 gamepad(east):              print("east/B")

@@ -13,7 +13,7 @@ Running Linux or Mac Talon against Windows Dragon:  This allows you to use a cop
 3. Right click on the Talon icon by the clock, go to Scripting, then “Open ~/talon”. Find draconity.toml in this directory and open it in a text editor.
 
 4. Add this text at the end of draconity.toml:
-```
+```python
 [[socket]]
 host = "0.0.0.0"
 port = 38065
@@ -22,7 +22,7 @@ port = 38065
 5. Copy the authentication key at the top of draconity.toml, you will need to have it to configure your other computer. Also note down the IP address of your Windows computer.
 
 6. Install Talon on your non-Windows computer, open draconity.toml in the same way, edit the authentication key to match the Windows computer, and add this text at the end:
-```
+```python
 [[remote]]
 host = "WINDOWS_IP_HERE"
 port = 38065

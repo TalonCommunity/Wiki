@@ -24,7 +24,7 @@ The primary way to extend talon is using `.talon` files placed in the `user` dir
 
 An example `.talon` file might look like this:
 
-```
+```python
 # Comments start with a # sign, and they must always be on their own line.
 #
 # This part, the context header, defines under which circumstances this file applies.
@@ -102,27 +102,27 @@ We've already indicated what requirements and scopes are, so lets move on to the
 
 The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you combine these together as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` is active or the operating system is `windows` and the app `notepad_app` is not active.
 
-```
+```python
 # paint_app or notepad_app
 app: paint_app
 app: notepad_app
 ```
 
-```
+```python
 # (paint_app or notepad_app) and windows
 app: paint_app
 os: windows
 app: notepad_app
 ```
 
-```
+```python
 # (paint_app and windows) or notepad_app
 app: paint_app
 and os: windows
 app: notepad_app
 ```
 
-```
+```python
 # paint_app and not windows
 app: paint_app
 not os: windows
@@ -134,7 +134,7 @@ So without modifiers, requirements of the same type (e.g. two apps) are OR-ed to
 
 A voice command has the format `RULE: BODY`, where `RULE` determines what words activate the command, and `BODY` defines what the command does when activated:
 
-```
+```python
 # -------- RULE ----------------  ------ BODY -------
 ([channel] unread next | goneck): key(alt-shift-down)
 ```
@@ -168,8 +168,7 @@ In general you shouldn't anchor rules since it prevents the user from chaining t
 
 The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
 
-```
--
+```python
 # The following captures are implemented in the [Talon Community](https://github.com/talonhub/community) user file set:
 #
 # <user.letter> is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
@@ -218,7 +217,7 @@ In the above we can see that the lists and captures in the rule part are bound t
 
 In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates all available syntax. See the inline comments for what everything does:
 
-```
+```python
 # Comments must be on their own line (optionally preceeded by whitespace)
 some [<user.letter>] command:
     # or operator is used to deal with optional or alternative command parts. It works as the null
@@ -276,7 +275,7 @@ some [<user.letter>] command:
 
 The most common usage after voice commands is to adjust [settings](/unofficial_talon_docs#settings). The following changes the given setting values when the context header matches:
 
-```
+```python
 title: /my app/
 -
 settings():
@@ -287,7 +286,7 @@ settings():
 
 You can also activate [tags](/unofficial_talon_docs#tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
 
-```
+```python
 title: /my app/
 -
 tag(): user.my_tag
@@ -295,7 +294,7 @@ tag(): user.my_tag
 
 Another feature is the ability to bind keyboard shortcuts.
 
-```
+```python
 title: /my app/
 -
 # Show notification saying the key was pressed and prevent other apps from receiving the key event
@@ -330,7 +329,7 @@ The final concept is the Module. This is used to register particular instances o
 
 A Module is a place for giving things names. In particular, it can declare [actions](/unofficial_talon_docs#actions), [lists](/unofficial_talon_docs#lists), [captures](/unofficial_talon_docs#captures), [scopes](/unofficial_talon_docs#scopes), [tags](/unofficial_talon_docs#tags), [modes](/unofficial_talon_docs#modes), [settings](/unofficial_talon_docs#settings) and well-known [applications](/unofficial_talon_docs#apps). In Python, you can construct a module like so:
 
-```
+```python
 from talon import Module
 mod = Module()
 ```
@@ -378,7 +377,7 @@ See examples in the [Actions](#actions), [Lists](#lists), [Captures](#captures),
 
 An action is a specially registered Python function that can be called by Talon voice commands. The code in `.talon` files ends up using built in or user defined actions for all its behavior. Consider this example:
 
-```talon
+```python
 my command:
     text = "hello"
     mangled_text = user.mangle(text)
@@ -475,7 +474,7 @@ ctx_java.lists["user.exception_class"] = {
 This sets up a list which matches a list of standard exceptions for the target programming language. Note that we can have a different set of item keys in the list for different contexts. Note also that our list (like user defined actions) is prefixed with `user.` to identify it as custom code.
 
 **`exceptions.talon`:**
-```
+```python
 exception {user.exception_class}: insert(user.exception_class)
 ```
 
@@ -551,7 +550,7 @@ class GameActions:
 This code first implements a new capture which matches on any of the compass directions, parses that and returns a data structure describing which directions were indicated. There is also a set of actions included which take this data structure and use it to press the appropriate keys.
 
 **`game_one.talon`**:
-```
+```python
 move <user.dpad_input>: user.dpad_move(user.dpad_input)
 attack <user.dpad_input>: user.dpad_attack(user.dpad_input)
 ```
@@ -626,7 +625,7 @@ mod.tag("tabs", desc="basic commands for working with tabs within a window are a
 Next let's define a set of generic voice commands we think will apply to all applications with tabs:
 
 **`tabs.talon`:**
-```
+```python
 # This selects for the tag 'user.tabs'.
 tag: user.tabs
 -
@@ -640,7 +639,7 @@ reopen tab: app.tab_reopen()
 Finally, let's activate these voice commands for the firefox application:
 
 **`firefox.talon`:**
-```
+```python
 app: Firefox
 -
 # This activates the tag 'user.tabs'.
@@ -698,7 +697,7 @@ ctx.apps = ['fancyedit']
 ```
 
 Use the well-known app - **`fancyedit.talon`:**
-```
+```python
 app: fancyedit
 -
 my fancy editor command: key(ctrl-alt-shift-y)
@@ -711,14 +710,14 @@ Modes are property you can match in your `.talon` file context header. They are 
 
 The built in 'command' mode is special in that it is an implicit requirement in all `.talon` files that haven't explicitly specified a mode. So this `.talon` file would be active in command mode:
 
-```
+```python
 -
 insert test: "command mode active"
 ```
 
 Whereas this one would only be active in dictation mode:
 
-```
+```python
 mode: dictation
 -
 insert mode: "dictation mode active"
@@ -739,13 +738,13 @@ mod.mode("single_application", desc="Non-multitasking mode (e.g. computer games)
 
 Then you might make a couple of generic 'mode entry' and 'mode exit' commands:
 
-```
+```python
 ^single application mode$:
     mode.enable("user.single_application")
     mode.disable("command")
 ```
 
-```
+```python
 mode: user.single_application
 -
 ^command mode$:
@@ -757,7 +756,7 @@ Note that I've shadowed the existing `command mode` command from [Talon Communit
 
 After that we could define a set of commands which would be available in our game:
 
-```
+```python
 mode: user.single_application
 title: /My Game/
 -
@@ -788,7 +787,7 @@ cron.interval("1m", my_scope_updater.update)
 ```
 
 `test.talon`
-```
+```python
 # This matcher can either be a plain string or a regex
 user.current_time: /AM$/
 -
@@ -806,7 +805,7 @@ Settings allow you to control some of the parameters of your python files by cha
 Settings are defined on Modules. Each setting has a name, type, default value, and description. The following example shows how to define a setting in python and get its contextually dependent value.
 
 `setting.py`
-```
+```python
 from talon import Module, settings
 
 mod = Module()
@@ -827,7 +826,7 @@ Note that the name of the setting (the first argument to mod.setting) in the exa
 The following example shows how you would change the value for that setting in a .talon file. Any number of settings can be defined in a single settings block, but any invalid syntax will prevent the entire block from applying.
 
 `setting.talon`
-```
+```python
 -
 settings():
     user.my_user_file_set_horizontal_position = 50
@@ -837,7 +836,7 @@ settings():
 You can also set the value of a setting from Python:
 
 `myfile.py`
-```
+```python
 from talon import Context
 
 ctx = Context()
@@ -848,7 +847,7 @@ ctx.settings["user.my_user_file_set_horizontal_position"] = 50
 It is also possible to register a callback function to be called whenever a setting changes. This is done by calling settings.register() with a setting name and a function to call. If the name string is blank (like in the example below) then the callback function will be called whenever any setting is changed. When the name is not blank the function will only be called when a setting with a matching name is changed.
 
 `listener.py`
-```
+```python
 def settings_change_handler(*args):
     print("A setting has changed")
 
@@ -904,7 +903,7 @@ An escape hatch for this kind of thing is the `.venv` folder in your Talon home 
 
 In a `.talon` file, a `settings()` block can be used to alter settings, both for Talon and for user modules. For example:
 
-```
+```python
 app: Emacs
 -
 settings():
@@ -943,7 +942,7 @@ A `.talon-list` doesn't require a `:` if the key is the same as the value. The r
 
 The following example shows a `.talon-list` file that defines a few special characters. Note how the string doesn't need to be wrapped in quotations and can either be just itself or a mapping to a different string.
 
-```
+```python
 list: user.key_special
 -
 enter
@@ -955,7 +954,7 @@ page down:                  pagedown
 
 We then need to initialize the list within a Talon module object. This is important for giving the list an associated comment.  This is done within a Python file in our user directory.  As one can see, it is a similar process to declaring a normal context list except for the fact that all the context matching is now done within the  `.talon-list` file and we no longer need to do our context matching within Python.
 
-```
+```python
 from talon import Module
 
 mod = Module()
@@ -965,6 +964,6 @@ mod.list("key_special", "The list of special keys we can input through voice com
 
 We could then use this list in a `.talon` file like so:
 
-```
+```python
 {user.key_special}:              key(symbol)
 ```
