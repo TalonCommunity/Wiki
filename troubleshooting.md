@@ -122,7 +122,7 @@ Each microphone and piece of ancillary microphone equipment (audio interface, pr
 
 ### Check that Talon is in the correct mode
 
-Talon user file sets can be configured to have multiple modes, which will have a different set of functionality. Most commonly, like in the `knausj_talon` Talon user file set, there will be two modes: command mode and dictation mode. In command mode, your speech will be mapped to the commands you have configured in your user file set. In dictation mode, your speech will be typed out literally, which is useful if you want to dictate text, like in an email or document.
+Talon user file sets can be configured to have multiple modes, which will have a different set of functionality. Most commonly, like in the [Talon Community](https://github.com/talonhub/community) user file set, there will be two modes: command mode and dictation mode. In command mode, your speech will be mapped to the commands you have configured in your user file set. In dictation mode, your speech will be typed out literally, which is useful if you want to dictate text, like in an email or document.
 
 * Use dictation mode for free-form speech dictation, like writing an email. (Switch by saying "dictation mode".)
 * Use command mode for everything else, including dictating individual letters using the alphabet or writing code. (Switch by saying "command mode".)
@@ -138,7 +138,7 @@ Check that your speech engine has been initialized by looking in the [talon log 
 
 ### Check your Talon user file sets
 
-Check you have some valid commands in `~/.talon/user`. If it's empty clone https://github.com/knausj85/knausj_talon and test with some [basic commands](/getting_started#basic-usage). Clone the entire repository, not just individual files. Do not combine this repository with other Talon user file sets. Pick one and customize it as needed.
+Check you have some valid commands in `~/.talon/user`. If it's empty, install the [Talon Community](https://github.com/talonhub/community) user file set and test with some [basic commands](/getting_started#basic-usage). Install the entire repository, not just individual files. This user file set can be combined with other Talon user file sets, though it is common that most of the functionality will be provided by [Talon Community](https://github.com/talonhub/community). Additional file sets are commonly used to customize the default behavior provided by [Talon Community](https://github.com/talonhub/community) or add additional features not already included.
 
 Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink.
 

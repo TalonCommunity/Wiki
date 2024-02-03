@@ -31,4 +31,4 @@ These videos/channels demonstrate some of the possibilities of Talon without rea
 - [Guenther Schmitz's Wiki of Talon configuations, issues, and solutions.](https://wiki.gpunktschmitz.com/index.php/Talon)  This list contains a grab-bag of various configurations, answers to questioms, and solutions.  Well worth looking at.
 - [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands. 
 - [Xevs web-based Talon Cheatsheet](https://talon-knausj-cheatsheet.netlify.app/) An online way to look up commands.
-- [Stolen Sugar](https://www.stolensugar.com/) Explore alternative keywords for knausj commands.
+- [Stolen Sugar](https://www.stolensugar.com/) Explore alternative keywords for commands in the [Talon Community](https://github.com/talonhub/community) user file set.

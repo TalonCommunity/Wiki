@@ -8,9 +8,9 @@ The page assumes you have successfully [configured Talon](/getting_started) to r
 
 Talon is an accessibility platform that provides a scripting layer to connect a range of input hardware/methods to a cross-platform API for interacting with desktop applications. Let's start by talking about where your configuration/scripting files are stored.
 
-When setting up Talon to respond to voice commands you would have installed some existing user file sets (probably `knausj_talon`) in to your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.
+When setting up Talon to respond to voice commands, you should have installed a set of files in your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). For example, the [Talon Community](https://github.com/talonhub/community) user file set is the most common starting point. All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.
 
-Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon user file sets (e.g. `knausj_talon`) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](/unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
+Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon user file sets (e.g. [Talon Community](https://github.com/talonhub/community)) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](/unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Originally all Talon configuration/scripting was done using Python, but over time it was decided that the addition of a framework specific file type would be beneficial. To a first approximation `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by .talon files.
 
@@ -161,7 +161,7 @@ Rules have a versatile syntax that is like a word based regex:
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
-For example if the following command were added to the knausj Talon user file set `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
+For example if the following command were added to the [Talon Community](https://github.com/talonhub/community) user file set `^my command: "first"` and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. If `other command$: "second"` were defined and you said "air bat cap other command" you'd get "abcsecond". If you said "other command air bat cap" you'd just get "second". Because the command matched and had the $ suffix, the rest of your utterance was thrown away.
 
 In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), or you really want to prevent the command from being called by accident.
 
@@ -171,7 +171,7 @@ The BODY part of a command is implemented in Talonscript, a simple statically ty
 
 ```
 -
-# The following captures are implemented in the knausj_talon Talon user file set:
+# The following captures are implemented in the [Talon Community](https://github.com/talonhub/community) user file set:
 #
 # <user.letter> is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
 # <user.number_string> is a capture mapping words like 'five' to number strings like '5'
@@ -360,7 +360,7 @@ os: windows
 """
 ```
 
-Multiple contexts can be active at any one time, we might have the one mentioned above as well as one with `ctx.matches = "os: windows"`. Since contexts can override behavior, Talon has a set of heuristics to work out which context should 'win' in the event that two or more override the same behavior. A useful approximation of these heuristics is that contexts with more matching rules will win. This concept can be used to make sure your overrides are used in preference to those implemented elsewhere (e.g. in `knausj_talon`). For example if we wanted a more specific matcher than the one above we might add in a `language: en` requirement:
+Multiple contexts can be active at any one time, we might have the one mentioned above as well as one with `ctx.matches = "os: windows"`. Since contexts can override behavior, Talon has a set of heuristics to work out which context should 'win' in the event that two or more override the same behavior. A useful approximation of these heuristics is that contexts with more matching rules will win. This concept can be used to make sure your overrides are used in preference to those implemented elsewhere (e.g. in [Talon Community](https://github.com/talonhub/community)). For example if we wanted a more specific matcher than the one above we might add in a `language: en` requirement:
 
 ```python
 from talon import Context
@@ -563,7 +563,7 @@ In this example we have only set up a simple capture. The 'rule' parameter in th
 
 #### Captures vs lists in voice commands
 
-It was mentioned earlier that using captures in the voice commands of your public Talon user file sets is a better option than lists. To see why, consider the `<user.symbol_key>` capture from `knausj_talon`. This capture is used in a voice command that lets you press a key by just saying its name (e.g. saying "dot" produces "."). A partial implementation of that capture is included below:
+It was mentioned earlier that using captures in the voice commands of your public Talon user file sets is a better option than lists. To see why, consider the `<user.symbol_key>` capture from [Talon Community](https://github.com/talonhub/community). This capture is used in a voice command that lets you press a key by just saying its name (e.g. saying "dot" produces "."). A partial implementation of that capture is included below:
 
 ```python
 from talon import Module, Context, actions, app
@@ -610,7 +610,7 @@ Note that all I needed to do was implement the capture with a new rule parameter
 
 Besides concrete features like an application's name or a window's title, a context can also select for *tags*. Tags have a couple of main uses:
 
-1. Tags can be used to activate additional voice commands within a particular context. For example `knausj_talon` has some tab management commands (e.g. tab new) that apply to many applications. Application specific contexts or `.talon` files can simply enable the tag (and potentially implement the relevant actions) to activate those voice commands.
+1. Tags can be used to activate additional voice commands within a particular context. For example [Talon Community](https://github.com/talonhub/community) has some tab management commands (e.g. tab new) that apply to many applications. Application specific contexts or `.talon` files can simply enable the tag (and potentially implement the relevant actions) to activate those voice commands.
 2. Tags can be enabled from Python to activate a set of voice commands given certain conditions. For example the mouse grid activates a tag when it is visible. This tag enables the 'grid off' and 'grid reset' commands.
 
 To make a tag available, it must first be declared in a module:
@@ -754,7 +754,7 @@ mode: user.single_application
     mode.enable("command")
 ```
 
-Note that I've shadowed the existing `command mode` command from `knausj_talon` so that it does the right thing when our mode is active.
+Note that I've shadowed the existing `command mode` command from [Talon Community](https://github.com/talonhub/community) so that it does the right thing when our mode is active.
 
 After that we could define a set of commands which would be available in our game:
 
