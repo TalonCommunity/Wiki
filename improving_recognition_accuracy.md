@@ -69,7 +69,7 @@ This will not help you today, but instead help to improve the talon engine for a
 
 Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack.
 
-knausj alphabet | alternative
+[Talon Community](https://github.com/talonhub/community) | alternative
 --- | ---
 air | arch
 bat | batch

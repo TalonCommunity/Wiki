@@ -1,6 +1,6 @@
 ## Basic Usage
 
-The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [knaus_talon](https://github.com/knausj85/knausj_talon) Talon user file set (see [the earlier section](#install-a-talon-user-file-set)). These commands may vary depending on your individual setup.
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [Talon Community](https://github.com/talonhub/community) user file set (see [the earlier section](#install-a-talon-user-file-set)). These commands may vary depending on your individual setup.
 
 
 ### Command history
@@ -11,7 +11,7 @@ The examples below are just a very small selection of common commands for workin
 
 ### Show available comands
 
-`knausj_talon` has an integrated help.  It can show you a list of all defined commands, or just all commands that are available now.
+[Talon Community](https://github.com/talonhub/community) user file set has an integrated help.  It can show you a list of all defined commands, or just all commands that are available now.
 
 `help alphabet`
 : show the spelling alphabet for pressing individual keys
