@@ -32,7 +32,6 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 
 ## Application specific
 
-* [Chess board integration](https://github.com/brollin/chess_grid/) Integration with computer based chess. Lets you play chess on Lichess.org for example.
 * [Rango](https://github.com/david-tejada/rango) Allows you to easily click active elements in the browser using your voice. An alternative to Vimium with better Talon integration.
 
 ## Command builders and macros
