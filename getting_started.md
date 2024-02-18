@@ -18,11 +18,11 @@ Talon uses a speech recognition engine that translates voice audio to text. To i
 
 ## Install a Talon user file set
 
-Talon does not come with voice commands out of the box - you must install some additional files. To start out, we strongly recommend that you use the [knausj_talon](https://github.com/knausj85/knausj_talon) Talon user file set. The whole wiki assumes this repository is used, if not otherwise noted.
+Talon does not come with voice commands out of the box - you must install some additional files. To start out, we strongly recommend that you use the [Talon Community](https://github.com/talonhub/community) user file set. The whole wiki assumes this repository is used if not otherwise noted.
 
-See [knausj_talon](https://github.com/knausj85/knausj_talon/blob/main/README.md#installation) for installation instructions.
+See the [Talon Community README](https://github.com/talonhub/community?tab=readme-ov-file#installation) for installation instructions.
 
-In addition to `knausj_talon`, you may want to consider installing:
+In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing:
 
 - [Cursorless](https://www.cursorless.org/) for programming and text editing
 - [Rango](https://github.com/david-tejada/rango) for browser navigation

@@ -4,7 +4,7 @@
 Checkout the [common commands](/getting_started/#basic-usage) to get started using Talon.
 
 ### How can I code in different languages with Talon
-Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout the section on [Programming Languages](https://github.com/knausj85/knausj_talon/#programming-languages) in the knausj Talon user file set README for more information on how to use different language modes included in knausj.
+Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout the section on [Programming Languages](https://github.com/talonhub/community#programming-languages) in the Community Talon user file set README for more information on how to use different language modes.
 
 ### What hardware should I have?
 Check out the [hardware](/hardware) page for microphone and eye tracker recommendations.  
@@ -22,7 +22,7 @@ See the page [Improving Recognition Accuracy](/improving_recognition_accuracy).
 While Talon is closed source, there's plenty you can do to help:
 
 * https://speech.talonvoice.com/ Extend the voice data set used for speech recognition training.
-* Publish your talon commands on Github for others to use like https://github.com/knausj85/knausj_talon. You can [search every fork of knausj using this search engine](https://search.talonvoice.com/search/). 
+* Publish your talon commands on Github for others to share. Consider contributing back to the [Talon Community](https://github.com/talonhub/community) user file set. Publicly shared file sets are [searchable using this search engine](https://search.talonvoice.com/search/).
 * Report issues at https://github.com/talonvoice/talon/issues
 * Add more to these docs :)
 

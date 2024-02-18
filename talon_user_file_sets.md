@@ -1,6 +1,6 @@
 # Talon user file set list
 
-The main Talon user file set for Talon is of course knausj\_talon, but people have created several others. These range from 'base' user file sets that contain their whole Talon setup through to sets which build on top of knausj\_talon functionality.
+The main Talon user file set for Talon is [Talon Community](https://github.com/talonhub/community), but there are several others. These range from 'base' user file sets that contain their whole Talon setup through to sets which build on top of the [Talon Community](https://github.com/talonhub/community) user file set functionality.
 
 If intended for public consumption, these Talon user file sets are mostly annouced via the [Slack channel](/). Aside from that there are a few ways you can discover them:
 
@@ -10,7 +10,7 @@ If intended for public consumption, these Talon user file sets are mostly annouc
 
 ## Voice controlled hands free mouse replacements
 
-The easiest way to control your mouse with Talon is to use an eye tracker. But this is fairly expensive hardware. There are several voice/noise only options in addition to the 'mouse grid' built in to knausj\_talon.
+The easiest way to control your mouse with Talon is to use an eye tracker. But this is fairly expensive hardware. There are several voice/noise only options in addition to the 'mouse grid' built in to [Talon Community](https://github.com/talonhub/community).
 
 * [gaze-ocr](https://github.com/wolfmanstout/talon-gaze-ocr) for advanced cursor control using eye tracking and text recognition (OCR)
 * [Dense Mouse Grid](https://github.com/tararoys/dense-mouse-grid/tree/dense_mouse_grid_2/dense_mouse_grid) Less obtrusive overlay combining a letter and number grid to position the mouse.
@@ -22,9 +22,9 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 
 ## Programming and editor integrations
 
-* [Cursorless](https://www.cursorless.org/) Structural code editing in VSCode. This with [`knausj_talon`](https://github.com/knausj85/knausj_talon) is the state of the art for voice coding with Talon currently.
-* [Fidgetingbit's knausj fork](https://github.com/fidgetingbits/knausj_talon) Fork of knausj\_talon most famous for its integration with the (N)Vim code editor.
- 
+* [Cursorless](https://www.cursorless.org/) Structural code editing in VSCode. This with [Talon Community](https://github.com/talonhub/community) is the state of the art for voice coding with Talon currently.
+* [Fidgetingbit's Talon Community fork](https://github.com/fidgetingbits/fidgetingbits-talon) Fork of [Talon Community](https://github.com/talonhub/community) most famous for its integration with the (N)Vim code editor.
+
 ## User Interface
 
 * [Talon Heads Up Display](https://github.com/chaosparrot/talon_hud) This heads up display is awesome because it shows things like when Talon is awake, asleep, what language mode active, prints a pretty history, And a whole bunch of other things that right now you have to memorize.
@@ -32,12 +32,11 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 
 ## Application specific
 
-* [Chess board integration](https://github.com/brollin/chess_grid/) Integration with computer based chess. Lets you play chess on Lichess.org for example.
 * [Rango](https://github.com/david-tejada/rango) Allows you to easily click active elements in the browser using your voice. An alternative to Vimium with better Talon integration.
 
 ## Command builders and macros
 
-Talon user sets that allow you to build voice commands more easily or define commands in a quick ad-hoc way. knausj\_talon has an ephemeral macro system built in, but these user file sets extend that further.
+Talon user sets that allow you to build voice commands more easily or define commands in a quick ad-hoc way. The [Talon Community](https://github.com/talonhub/community) has an ephemeral macro system built in, but these user file sets extend that further.
 
 * [Talon UI helper](https://github.com/splondike/talon_ui_helper) Command wizard that lets you build TalonScript commands which work with the screen as an image. For example it lets you easily build a command to click an icon, or show an overlay for clicking items in a list.
 * [Screen spots](https://github.com/AndrewDant/screen-spots) Lets you quickly save mouse positions on the screen and then click them with a short voice command. Useful for games with fixed UI element position.
@@ -50,6 +49,7 @@ Talon user sets that allow you to build voice commands more easily or define com
 ## Other
 
 * [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
+* [Talon AI Tools](https://github.com/C-Loftus/talon-ai-tools): integrate the OpenAI API (ChatGPT) & GitHub Copilot to fix dictation errors or speed up your workflow
 * [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 * [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)  A basic script for writing subtitles to a file for a screencapture.
 * [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository

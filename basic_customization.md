@@ -2,13 +2,13 @@
 
 Once you have successfully [set up Talon](/getting_started) you may find that you would like to change some of how it behaves. This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](/unofficial_talon_docs).
 
-This page assumes that Talon is responding to your voice and you are using the knausj\_talon Talon user file set.
+This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub user file set.
 
 If you are having trouble with anything here or in Talon more generally, the best way to get help is on the [Talon Slack](/).
 
 ## Customization overview
 
-All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the knausj\_talon Talon user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
+All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Roughly speaking `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by `.talon` files. `.py` files are written in the [Python programming language](https://www.python.org/) (one of the most popular programming languages in the world). `.talon` files are written in a language that is only used by Talon.
 
@@ -20,22 +20,22 @@ Talon is built to be a flexible and customizable system. This means that in addi
 
 Given this flexibility there are two ways you could approach customizing your Talon setup:
 
-* Option A: Edit the `.talon` and `.py` files within the knausj\_talon directory.
-* Option B: Maintain your own separate directory with your customizations.
+* Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
+* Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community).
 
-Option A can be easier to begin with, but makes it somewhat harder to keep your knausj\_talon up to date. This is because you need to work out what you modified and how to re-apply it to the knausj Talon user file set every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
+Option A can be easier to begin with, but may be difficult to keep up-to-date with upstream. This is because you need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
 
-The screenshot below shows my Talon user directory. You can see that I have a knausj\_talon folder in the same way that you would. The rest of the folders are other 'Talon user file sets' I'm using. All my personal customizations are in the 'mystuff' folder; knausj\_talon is completely unchanged from what I downloaded from github.
+The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the  [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set. For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
 
-![Screen shot of Talon user directory](/media/basic_customization_folders.png)
+![Screen shot of Talon user directory](/media/talon_user_folders.png)
 
-Let's speak about versioning your configuration for a minute. You will probably want to update your knausj\_talon Talon user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing knausj\_talon may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. If you're confident with the `git` program this is straightforward. If you're not, then just making a backup of the whole Talon user directory prior to making a potentially significant change doesn't hurt.
+You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. If you're confident with the `git` program this is straightforward. If you're not, then just making a backup of the whole Talon user directory prior to making a potentially significant change doesn't hurt.
 
 With that out of the way we're going to work through a simple `.talon` file example to give you an idea of how to create them.
 
 ## A simple .talon file
 
-Let's make a new voice command that presses the key combination cmd+a or control+a when you say "select everything". This will work in a similar way to the 'select all' command built in to knausj\_talon.
+Let's make a new voice command that presses the key combination cmd+a or control+a when you say "select everything". This will work in a similar way to the 'select all' command built in to [Talon Community](https://github.com/talonhub/community).
 
 First let's get you an appropriate plain text editor. We're looking for something like Notepad in windows that just saves unformatted text files (so not Libreoffice or Microsoft Word). We can do much better than Notepad however. A simple editor which you can use on Windows, MacOS, or Linux is [Geany](https://www.geany.org/download/releases/).
 
@@ -210,7 +210,7 @@ Note the use of app.exe as the context matcher to match the filename of the acti
 
 settings() blocks can be put in any `.talon` file and are used to change the value of settings given a matching context header. You can have multiple settings by putting each on its own indented line underneath the "settings():" line. You can include voice commands in the same file as a settings block.
 
-You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](/unofficial_talon_docs#built-in-talon-settings). knausj\_talon also has a list of some extra settings it defines in the `settings.talon` file.
+You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](/unofficial_talon_docs#built-in-talon-settings). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
 
 ### Keyboard shortcuts
 
@@ -224,7 +224,7 @@ The shortcut is global since there's no context matcher in this `.talon` file re
 
 One thing that may not be immediately obvious is that re-using voice commands is perfectly acceptable. You can just create a new `.talon` file with a new context header and redefine the command.
 
-This also provides a simple way of overriding the behaviour of existing voice commands from the knausj\_talon Talon user file set. Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
+This also provides a simple way of overriding the behaviour of existing voice commands from the [Talon Community](https://github.com/talonhub/community) user file set. Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
 
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 
