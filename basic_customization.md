@@ -43,13 +43,17 @@ Open up your editor and save an empty file called `simple_test.talon` somewhere 
 
 OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
 
+```config
     select everything:
       key(cmd-a)
+```
 
 If you're on Windows or Linux you can use this instead:
 
+```config
     select everything:
       key(ctrl-a)
+```
 
 You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](/) in the #help channel.
 
@@ -120,6 +124,7 @@ OK, we're finished with this file now so you can delete it.
 
 Talon files look something like this:
 
+```config
     title: /Gmail/
     -
     find on page: key(ctrl-f)
@@ -131,6 +136,7 @@ Talon files look something like this:
       key(ctrl-b)
       insert("type in this text (it will be bolded)")
       key(ctrl-b)
+```
 
 The part above the '-' line is called the "context header" and the part below is the "body". The context header decides under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
 
@@ -156,7 +162,7 @@ You might have noticed that we've been using the key() and insert() actions in t
 2. Type `actions.list()` and press enter. This will list out all the available actions.
 3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the terminal window and press enter:
 
-```
+```python
 import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old
 ```
 
@@ -179,6 +185,7 @@ As always, see the [unofficial docs](/unofficial_talon_docs) page for a much mor
 
 Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
+```config
     title: /YouTube/
     -
     toggle play: key("space")
@@ -188,6 +195,7 @@ Often you will want to add a new voice command to press an application specific 
         sleep(100ms)
         insert("cats")
         key("enter")
+```
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
@@ -197,10 +205,12 @@ Keyboard shortcuts will almost always make use of the key() action. For more inf
 
 A reasonably common problem that comes up when using Talon with computer games is that the application only recognizes key presses intermittently or not at all. This can be because Talon presses and releases the keys too quickly. The following `.talon` file makes Talon hold down each key for 32 milliseconds before releasing it. You could try increasing the key\_hold value incrementally to find the smallest length of time you need to hold for the key to be recognized reliably:
 
+```config
     app.exe: my_game.exe
     -
     settings():
         key_hold = 32
+```
 
 Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](/unofficial_talon_docs/#context-header) for a full list of available matchers.
 
@@ -228,25 +238,29 @@ This also provides a simple way of overriding the behaviour of existing voice co
 
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 
+```config
     touch: 
         mouse_click(0)
         # close the mouse grid if open
         user.grid_close()
-            # End any open drags
+        # End any open drags
         # Touch automatically ends left drags so this is for right drags specifically
         user.mouse_drag_end()
+```
 
 We can see the `user.grid_close()` action is called to close the grid after clicking the mouse. Also note the lines starting with '#' characters are called comments. They are just there for documentation and will not be otherwise processed by Talon.
 
 If we wanted to stop the `user.grid_close()` behaviour we could just create a new `.talon` file and put in the following contents:
 
+```config
     os: mac
     -
     touch: 
         mouse_click(0)
-            # End any open drags
+        # End any open drags
         # Touch automatically ends left drags so this is for right drags specifically
         user.mouse_drag_end()
+```
 
 Notice that we've given it a context header. Because this context headar is more specific (i.e. it has more rules in it) this implementation of "touch" will take precedence over the original. The implementation just has the `user.grid_close()` line and associated comment removed.
 
@@ -258,9 +272,11 @@ This is a simple way of overriding voice commands using `.talon` files. Many oth
 
 If you'd prefer not to you have Talon enabled when you start the app (and typically your computer), create a python filed in your user directory (e.g. `sleep.py`) and put in the following contents:
 
+```python
     from talon import app, actions
 
     def disable():
         actions.speech.disable()
 
     app.register("ready", disable)
+```
