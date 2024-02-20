@@ -43,14 +43,14 @@ Open up your editor and save an empty file called `simple_test.talon` somewhere 
 
 OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
 
-```python
+```config
     select everything:
       key(cmd-a)
 ```
 
 If you're on Windows or Linux you can use this instead:
 
-```python
+```config
     select everything:
       key(ctrl-a)
 ```
@@ -124,7 +124,7 @@ OK, we're finished with this file now so you can delete it.
 
 Talon files look something like this:
 
-```python
+```config
     title: /Gmail/
     -
     find on page: key(ctrl-f)
@@ -185,7 +185,7 @@ As always, see the [unofficial docs](/unofficial_talon_docs) page for a much mor
 
 Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
-```python
+```config
     title: /YouTube/
     -
     toggle play: key("space")
@@ -205,7 +205,7 @@ Keyboard shortcuts will almost always make use of the key() action. For more inf
 
 A reasonably common problem that comes up when using Talon with computer games is that the application only recognizes key presses intermittently or not at all. This can be because Talon presses and releases the keys too quickly. The following `.talon` file makes Talon hold down each key for 32 milliseconds before releasing it. You could try increasing the key\_hold value incrementally to find the smallest length of time you need to hold for the key to be recognized reliably:
 
-```python
+```config
     app.exe: my_game.exe
     -
     settings():
@@ -238,7 +238,7 @@ This also provides a simple way of overriding the behaviour of existing voice co
 
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 
-```python
+```config
     touch: 
         mouse_click(0)
         # close the mouse grid if open
@@ -252,7 +252,7 @@ We can see the `user.grid_close()` action is called to close the grid after clic
 
 If we wanted to stop the `user.grid_close()` behaviour we could just create a new `.talon` file and put in the following contents:
 
-```python
+```config
     os: mac
     -
     touch: 
