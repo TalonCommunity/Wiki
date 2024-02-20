@@ -21,7 +21,6 @@ The primary way to extend talon is using `.talon` files placed in the `user` dir
 * Define [voice commands](/unofficial_talon_docs#voice-commands).
 * Define [keyboard shortcuts](/unofficial_talon_docs#tags-settings-and-other-capabilities).
 * [Activate registered tags or apps and change settings](/unofficial_talon_docs#tags-settings-and-other-capabilities).
-* Implement/override the behavior of [actions](/unofficial_talon_docs#actions). However, this is **deprecated**; you should implement actions in Python files instead.
 
 An example `.talon` file might look like this:
 
