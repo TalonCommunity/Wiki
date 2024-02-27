@@ -967,3 +967,62 @@ We could then use this list in a `.talon` file like so:
 ```config
 {user.key_special}:              key(symbol)
 ```
+ 
+## Advanced Talon Concepts
+
+### Dynamic Lists
+
+Dynamic lists are an advanced Talon feature that as of Talon 0.4 are currently **beta-only**. They are used for generating lists of items for voice commands at runtime. For example, you can use dynamic lists to create voice commands specific to the names of elements currently on the screen. Without dynamic lists you would otherwise have to poll and constantly update a normal talon list. Dynamic lists can also return [selection lists](#selection-lists) to dynamically match voice commands to substrings.
+
+If you do not need the list to be constructed during the voice command, you should use a regular Talon list instead.
+
+The following code creates a dynamic list such that if the user says `test hello` it will insert `world`. While this example is trivial, dynamic lists can call any function during the process of generating the list, and can thus be quite powerful.
+
+```talon
+test {user.dynamic}: insert(dynamic)
+```
+
+```python
+mod.list("dynamic")
+
+# This function is called generates the list whenever used in a voice command
+@ctx.dynamic_list("user.dynamic")
+def dynamic() -> dict[str, str]:
+    # Any function that returns a dictionary can be used here
+    return {"hello": "world"}
+```
+
+The code above is equivalent to the following non-dynamic context list below.
+
+```python
+ctx.lists["user.dynamic"] = {"hello": "world"}
+```
+
+### Selection Lists
+
+Selection lists are another feature that as of Talon 0.4 are currently **beta-only**. They are used for matching substrings instead of a key value mapping like a normal talon list. For instance:
+
+```python
+ctx.selections["user.sample_selection"] = """
+the dog is brown and fast
+"""
+```
+
+```talon
+test {user.sample_selection}: insert(sample_selection)
+```
+
+This code would allow you to say `test the`, `test the dog`, `test brown and fast`, or any other substring of the original text and have it insert `the`, `the dog`, or `brown and fast` respectively. If you did not match a substring, the command would not work.
+
+Selection lists can include multiple strings from which to select from. To use this feature, each line of should be separated by two newline characters (\n\n). For example:
+
+```python
+ctx.selections["user.sample_selection"] = """
+the dog is brown and fast
+the cat is black and slow
+"""
+```
+
+That would match on phrases from both lines, such as `brown and fast` or `cat is black`, among other substrings. (However, it would not match on phrases like `fast the cat` that span multiple separate lines.) Since the selection returns what was said and not the original text, you should search the original text to find which line was matched, if you need this info.
+
+Selection lists pair well with dynamic lists. To return a selection list instead of a dynamic list, simply return the multiline string instead of the dictionary mapping, and change the function signature to return a `str` instead of a `dict[str,str]`. As an example, you could use a dynamic list to dynamically construct a list of all the elements on the screen, using a selection list to match on any substring of the element you want to interact with. (i.e. if the element names are too verbose or contain special characters that are hard to say).
