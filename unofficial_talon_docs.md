@@ -1019,6 +1019,8 @@ Selection lists can include multiple strings from which to select from. To use t
 ```python
 ctx.selections["user.sample_selection"] = """
 the dog is brown and fast
+
+
 the cat is black and slow
 """
 ```
