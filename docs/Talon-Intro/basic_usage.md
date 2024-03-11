@@ -1,17 +1,15 @@
-## Basic Usage
+# Basic Usage
 
-The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away.  These are based on the [Talon Community](https://github.com/talonhub/community) user file set (see [the earlier section](#install-a-talon-user-file-set)). These commands may vary depending on your individual setup.
+The examples below are just a very small selection of common commands for working with apps, tabs, media, mouse, etc that should help you be productive with Talon right away. These are based on the [Talon Community](https://github.com/talonhub/community) user file set. These commands may vary depending on your individual setup.
 
-
-### Command history
+## Command history
 
 `command history`
 : Toggles the command history display, which shows the last few commands as Talon understood them; if you're not sure what Talon is doing, or if it understood you correctly, this is how to check it.
 
+## Show available comands
 
-### Show available comands
-
-[Talon Community](https://github.com/talonhub/community) user file set has an integrated help.  It can show you a list of all defined commands, or just all commands that are available now.
+[Talon Community](https://github.com/talonhub/community) user file set has an integrated help. It can show you a list of all defined commands, or just all commands that are available now.
 
 `help alphabet`
 : show the spelling alphabet for pressing individual keys
@@ -28,8 +26,7 @@ The examples below are just a very small selection of common commands for workin
 `help close`
 : hide any open help window again
 
-
-### Switch between modes
+## Switch between modes
 
 Talon has three basic modes by default: command, dictation, and sleep.
 
@@ -49,8 +46,7 @@ There are currently no visual cues about the current mode. You can tell which mo
 `wake up`
 : wake up and return to previous mode (you can also use `talon wake` to disambiguate when using Dragon)
 
-
-### Open and switch between windows in apps such as Chrome
+## Open and switch between windows in apps such as Chrome
 
 ```
 window new
@@ -59,7 +55,7 @@ window last
 window close
 ```
 
-### Working with applications
+## Working with applications
 
 ```
 focus "app name"     (say "focus chrome" for example, to switch active window to chrome)
@@ -69,7 +65,7 @@ running hide         (close the list of active applications)
 
 If you are on Ubuntu or another Gnome-based Linux distribution, `focus` might not work consistently across different workspaces, popping up a notification rather than actually switching focus. [This extension](https://extensions.gnome.org/extension/1005/focus-my-window/) may help.
 
-### Working with tabs
+## Working with tabs
 
 ```
 tab (open | new)
@@ -81,7 +77,7 @@ go tab <number>
 go tab final
 ```
 
-### Working with media
+## Working with media
 
 ```
 mute
@@ -90,14 +86,14 @@ play previous
 (play | pause)
 ```
 
-### Working with the Tobii eye tracker
+## Working with the Tobii eye tracker
 
 ```
 control mouse (say "control mouse" to toggle on/off Tobii moving the mouse)
 run calibration (say "run calibration" to start Tobii calibration)
 ```
 
-### Working with text
+## Working with text
 
 ```
 copy that
@@ -107,7 +103,7 @@ undo that
 redo that
 ```
 
-### Working with the mouse and scrolling
+## Working with the mouse and scrolling
 
 ```
 dubclick (to double left click)

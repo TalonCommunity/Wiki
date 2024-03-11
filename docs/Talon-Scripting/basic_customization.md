@@ -211,7 +211,7 @@ A reasonably common problem that comes up when using Talon with computer games i
         key_hold = 32
 ```
 
-Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Talon-Scripting/unofficial_talon_docs/#context-header) for a full list of available matchers.
+Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Talon-Scripting/unofficial_talon_docs.md#context-header) for a full list of available matchers.
 
 #### Settings
 

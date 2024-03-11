@@ -12,14 +12,14 @@ The goal of this wiki is to provide information and documentation for the users 
 
 ## Wiki Navigation
 
-| If you are looking for:                                      | See:                                                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| information on getting started with Talon                    | [Getting Started](./Talon-Intro/getting_started)                          |
-| (./Talon-Intro/unofficial) documentation of Talon's features | [Unofficial Talon Documentation](./Talon-Scripting/unofficial_talon_docs) |
-| troubleshooting help                                         | [Troubleshooting](./Talon-Intro/troubleshooting)                          |
-| help with deciding on a microphone or eye tracker            | [Hardware](./Talon-Intro/Hardware/hardware.md)                            |
-| videos of Talon in use                                       | [Video Demos](./Integrations/talon_related_resources.md)                  |
-| answers to frequently asked questions                        | [FAQ](./Talon-Intro/FAQ)                                                  |
+| If you are looking for:                           | See:                                                                      |
+| ------------------------------------------------- | ------------------------------------------------------------------------- |
+| information on getting started with Talon         | [Getting Started](./Talon-Intro/getting_started)                          |
+| documentation of Talon's features                 | [Unofficial Talon Documentation](./Talon-Scripting/unofficial_talon_docs) |
+| troubleshooting help                              | [Troubleshooting](./Talon-Intro/troubleshooting)                          |
+| help with deciding on a microphone or eye tracker | [Hardware](./Talon-Intro/Hardware/hardware.md)                            |
+| videos of Talon in use                            | [Video Demos](./Integrations/talon_related_resources.md)                  |
+| answers to frequently asked questions             | [FAQ](./Talon-Intro/FAQ)                                                  |
 
 ## Talon Slack
 

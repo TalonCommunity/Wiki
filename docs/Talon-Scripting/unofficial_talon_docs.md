@@ -153,8 +153,8 @@ Rules have a versatile syntax that is like a word based regex:
 | `foo+`           | One or more                                | “foo”, “foo foo”, ...     |
 | `foo             | bar`                                       | Choice                    | “foo”, “bar” |
 | `(foo)`          | Precedence/grouping                        | “foo”                     |
-| `{some_list}`    | [List](unofficial_talon_docs/#lists)       | Depends on the list.      |
-| `<some_capture>` | [Capture](unofficial_talon_docs/#captures) | Depends on the capture.   |
+| `{some_list}`    | [List](#lists)       | Depends on the list.      |
+| `<some_capture>` | [Capture](#captures) | Depends on the capture.   |
 | `^foo`           | Start anchor                               | See below                 |
 | `foo$`           | End anchor                                 | See below                 |
 

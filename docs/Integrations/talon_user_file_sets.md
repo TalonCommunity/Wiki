@@ -57,4 +57,4 @@ Talon user sets that allow you to build voice commands more easily or define com
 - [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
 - [Window Tweak](https://github.com/codecat555/talon-window-tweak) A Talon module for moving and resizing windows using voice commands.
 - [Talon WM](https://github.com/lunixbochs/talon_wm) Basic tiling window manager implementation in Talon.
-- [Software that pairs well with Talon](other_integrations#software-that-pairs-well-with-talon) Not a Talon user file set per-se, but other things you might find useful.
+- [Software that pairs well with Talon](./other_integrations) Not a Talon user file set per-se, but other things you might find useful.

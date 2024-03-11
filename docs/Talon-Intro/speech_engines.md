@@ -14,8 +14,8 @@ Talon uses a speech recognition engine that translates voice audio to text. The 
 
 As of March 2021, W2L only supports English. If you need to dictate text in another language, the Talon beta supports the following options:
 
-| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on Slack | Needs [Talon Beta](getting_started#beta-version-requires-patreon-support)
-| vosk | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/.](https://alphacephei.com/vosk/) | See [Github Project](https://github.com/mqnc/talon_german) | Needs [Talon Beta](getting_started#beta-version-requires-patreon-support)
+| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on Slack | Needs [Talon Beta](beta_talon.md)
+| vosk | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/.](https://alphacephei.com/vosk/) | See [Github Project](https://github.com/mqnc/talon_german) | Needs [Talon Beta](beta_talon.md)
 
 Note that you cannot use webspeech or vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
 
