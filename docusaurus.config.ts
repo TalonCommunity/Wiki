@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
-  favicon: "img/favicon.ico",
+  favicon: "img/talon_logo.png",
 
   // Set the production url of your site here
   url: "https://talon.wiki",
@@ -117,7 +117,7 @@ const config: Config = {
               href: "https://github.com/TalonCommunity/Wiki/",
             },
             {
-              label: "Donate",
+              label: "Donations/Beta Access",
               href: "https://www.patreon.com/join/lunixbochs",
             },
           ],

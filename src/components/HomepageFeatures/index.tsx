@@ -10,29 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Powerful and Customizable',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Talon is designed to be the most powerful and customizable voice control system
+        Control your entire computer with customizable voice commands
       </>
     ),
   },
   {
-    title: 'TODO',
+    title: 'Multi-modal Input',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        TODO
+        Control your computer with eye tracking, noises, pedals, and more
       </>
     ),
   },
   {
-    title: 'TODO',
+    title: 'Community Driven',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        TODO
+        Supported by Patrons and the Talon Community
       </>
     ),
   },
