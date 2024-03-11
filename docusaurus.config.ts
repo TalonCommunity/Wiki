@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Talon Community", // Usually your GitHub org/user name.
-  projectName: "Talo Community Wiki", // Usually your repo name.
+  projectName: "Talon Community Wiki", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -45,7 +45,7 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        blog: false, // Optiona
+        blog: false,
       } satisfies Preset.Options,
     ],
   ],
@@ -87,17 +87,17 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
+        // {
+        //   title: "Docs",
+        //   items: [
+        //     {
+        //       label: "Docs",
+        //       to: "/docs/",
+        //     },
+        //   ],
+        // },
         {
-          title: "Docs",
-          items: [
-            {
-              label: "Docs",
-              to: "/docs/",
-            },
-          ],
-        },
-        {
-          title: "Community",
+          title: "Talon Links",
           items: [
             {
               label: "Official Website",
