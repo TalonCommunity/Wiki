@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Talon Community Wiki",
+  title: "Talon Community Wiki 🎤",
   tagline: "Documentation for using Talon Voice",
   favicon: "img/talon_logo.png",
 
