@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Community Wiki for Talon Voice">
+      description="Community Wiki for Talon Voice 🎤">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
