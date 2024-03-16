@@ -33,7 +33,7 @@ In addition to [Talon Community](https://github.com/talonhub/community), you may
 
 ## Test your Talon Setup
 
-Test your Talon setup with a few [basic commands](basic_usage.md).
+Test your Talon setup with a few [basic commands](../Basic%20Usage/basic_usage.md).
 
 ## Join the Talon Slack
 
@@ -45,6 +45,6 @@ Once the basics somewhat work for you, you'll likely want to improve your experi
 
 - For users who want earlier access to new features, priority support, and access to additional [speech engines](speech_engines.md), install the [beta version](beta_talon.md).
 - [Improve Recognition Accuracy](improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
-- [Unofficial Talon Docs](../Talon-Scripting/unofficial_talon_docs): learn about how to configure Talon to your liking.
+- [Unofficial Talon Docs](../Customization/unofficial_talon_docs): learn about how to configure Talon to your liking.
 - [Talon-Related Resources](../Integrations/talon_related_resources): a varied list of resources for Talon uses.
 - [Software that Pairs Well with Talon](../Integrations/other_integrations): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)

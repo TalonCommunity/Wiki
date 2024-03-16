@@ -61,19 +61,25 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "IntroSidebar",
+          sidebarId: "QuickstartSidebar",
           position: "left",
-          label: "Talon-Intro",
+          label: "Quickstart",
         },
         {
           type: "docSidebar",
-          sidebarId: "ScriptingSidebar",
+          sidebarId: "BasicUsageSidebar",
           position: "left",
-          label: "Talon-Scripting",
+          label: "Basic Usage",
         },
         {
           type: "docSidebar",
-          sidebarId: "IntegrationSidebar",
+          sidebarId: "CustomizationSidebar",
+          position: "left",
+          label: "Customization",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "IntegrationsSidebar",
           position: "left",
           label: "Integrations",
         },
