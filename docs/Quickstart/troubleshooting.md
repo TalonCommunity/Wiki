@@ -133,21 +133,6 @@ Check you have some valid commands in `~/.talon/user`. If it's empty, install th
 
 Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink.
 
-On Linux, this can be fixed by replacing the symlink by a [bind mount][bind-mount-stackexchange]:
-
-```sh
-rm ~/.talon; mkdir ~/.talon  # or whichever part is a symlink
-sudo mount --bind /path/to/dot/dir ~/.talon
-```
-
-[bind-mount-stackexchange]: https://unix.stackexchange.com/questions/198590/what-is-a-bind-mount
-
-This can be made permanent by adding the following line to `/etc/fstab`:
-
-```
-/path/to/dot/dir	/home/<user>/.talon	none	bind
-```
-
 ### Check out Tips for Improving Accuracy
 
 If commands are intermittently working, check out these tips for [improving accuracy](improving_recognition_accuracy).
