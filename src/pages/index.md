@@ -17,8 +17,8 @@ The goal of this wiki is to provide information and documentation for the users 
 | Information on getting started with Talon         | [Getting Started](/Quickstart/getting_started)                          |
 | Documentation of Talon's features                 | [Unofficial Talon Documentation](/Customization/unofficial_talon_docs) |
 | Troubleshooting help                              | [Troubleshooting](/Quickstart/troubleshooting)                          |
-| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware/hardware.md)                            |
-| Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources.md)                  |
+| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware)                            |
+| Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)                  |
 | Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                                  |
 
 ## Talon Slack
