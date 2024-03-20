@@ -1,4 +1,4 @@
-## Tobii 4c Eye Tracker Tips and Tricks
+# Tobii 4c Eye Tracker Tips and Tricks
 
 1. If you glance down at Tobii 4c, you should be able to clearly see all the visible red lights:  left, center, and right. If you can’t, the Tobii can’t see you very well either!
 2. It can be somewhat useful to temporarily load the official Tobii software on Windows, if that’s an option for you. The Tobii software can give you a good feel for proper positioning with the Tobii 4c. 

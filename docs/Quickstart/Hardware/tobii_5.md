@@ -1,4 +1,4 @@
-## Tobii 5 Eye Tracker
+# Tobii 5 Eye Tracker
 
 ![Tobii 5 hardware](/img/tobii_5_hardware.png) <!-- .element height="50%" width="50%" -->
 
