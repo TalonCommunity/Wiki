@@ -2,7 +2,7 @@
 
 ### What can I say?
 
-Checkout the [common commands](basic_usage) to get started using Talon.
+Checkout the [common commands](../Basic%20Usage/basic_usage) to get started using Talon.
 
 ### How can I code in different languages with Talon
 

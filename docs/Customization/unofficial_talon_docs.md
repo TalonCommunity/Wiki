@@ -1,8 +1,8 @@
 # Unofficial Talon Docs
 
-This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. You may prefer the [basic usage](../Talon-Intro/basic_usage.md) or [basic customization](basic_customization.md) pages if you are a beginner.
+This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. You may prefer the [basic usage](../Basic%20Usage/basic_usage.md) or [basic customization](basic_customization.md) pages if you are a beginner.
 
-The page assumes you have successfully [configured Talon](../Talon-Intro/getting_started) to respond to voice commands.
+The page assumes you have successfully [configured Talon](../Quickstart/getting_started) to respond to voice commands.
 
 ## Overview of Talon framework
 
@@ -145,18 +145,18 @@ This command, for example, will press the shortcut alt-shift-down whenever you s
 
 Rules have a versatile syntax that is like a word based regex:
 
-| Syntax           | Description                                | Matches                   |
-| ---------------- | ------------------------------------------ | ------------------------- | ------------ |
-| `foo`            | Words                                      | “foo”                     |
-| `[foo]`          | Optional                                   | “foo” or null (nothing)   |
-| `foo*`           | Zero or more                               | “”, “foo”, “foo foo”, ... |
-| `foo+`           | One or more                                | “foo”, “foo foo”, ...     |
-| `foo             | bar`                                       | Choice                    | “foo”, “bar” |
-| `(foo)`          | Precedence/grouping                        | “foo”                     |
+| Syntax           | Description          | Matches                   |
+| ---------------- | -------------------- | ------------------------- | ------------ |
+| `foo`            | Words                | “foo”                     |
+| `[foo]`          | Optional             | “foo” or null (nothing)   |
+| `foo*`           | Zero or more         | “”, “foo”, “foo foo”, ... |
+| `foo+`           | One or more          | “foo”, “foo foo”, ...     |
+| `foo             | bar`                 | Choice                    | “foo”, “bar” |
+| `(foo)`          | Precedence/grouping  | “foo”                     |
 | `{some_list}`    | [List](#lists)       | Depends on the list.      |
 | `<some_capture>` | [Capture](#captures) | Depends on the capture.   |
-| `^foo`           | Start anchor                               | See below                 |
-| `foo$`           | End anchor                                 | See below                 |
+| `^foo`           | Start anchor         | See below                 |
+| `foo$`           | End anchor           | See below                 |
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
@@ -940,7 +940,7 @@ The following three settings, `insert_wait`, `key_hold`, and `key_wait`, can be 
 : Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the the slowest overall keypress rate. Default is 1.0 in milliseconds.
 
 `speech.engine`
-: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. See [speech recognition engines](../Talon-Intro/speech_engines.md).
+: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. See [speech recognition engines](../Quickstart/speech_engines.md).
 
 `speech.timeout`
 : This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.

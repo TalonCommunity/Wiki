@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
-  favicon: "img/talon_logo.png",
+  favicon: "img/talon-community-logo.png",
 
   // Set the production url of your site here
   url: "https://talon.wiki",
@@ -56,24 +56,30 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "My Site Logo",
-        src: "img/talon.png",
+        src: "img/talon-community-logo.png",
       },
       items: [
         {
           type: "docSidebar",
-          sidebarId: "IntroSidebar",
+          sidebarId: "QuickstartSidebar",
           position: "left",
-          label: "Talon-Intro",
+          label: "Quickstart",
         },
         {
           type: "docSidebar",
-          sidebarId: "ScriptingSidebar",
+          sidebarId: "BasicUsageSidebar",
           position: "left",
-          label: "Talon-Scripting",
+          label: "Basic Usage",
         },
         {
           type: "docSidebar",
-          sidebarId: "IntegrationSidebar",
+          sidebarId: "CustomizationSidebar",
+          position: "left",
+          label: "Customization",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "IntegrationsSidebar",
           position: "left",
           label: "Integrations",
         },
