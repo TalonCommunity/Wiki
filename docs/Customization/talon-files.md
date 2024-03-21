@@ -7,7 +7,8 @@ sidebar_position: 2
 The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
 
 - Define [voice commands](#voice-commands).
-- Define macros
+- Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
+- 
 - [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
 
 An example `.talon` file might look like this:
@@ -280,6 +281,7 @@ title: /my app/
 tag(): user.my_tag
 ```
 
+#### Keyboard Shortcuts 
 Another feature is the ability to bind keyboard shortcuts.
 
 ```config
