@@ -1,4 +1,8 @@
-# `.talon-list` files
+---
+sidebar_position: 3
+---
+
+# `.talon-list` Files
 
 `.talon-list` files are a special type of `.talon` file. They are used solely to define lists of strings that can be used in voice commands or your Talon Python scripts. They can do exactly the same things as a Python Context with only a matches property and a single list on it. They are primarily intended for reducing verbosity and making list configuration easier for end users. If you are looking to configure settings it is better to use a `settings()` block in a `.talon` file as a settings block more clearly communicates that it is an internal setting and not part of a capture rule (like a `.talon-list` file would likely be).
 
