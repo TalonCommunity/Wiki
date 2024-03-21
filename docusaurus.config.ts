@@ -55,7 +55,7 @@ const config: Config = {
     docs: {
       sidebar: {
         hideable: true,
-      }
+      },
     },
 
     navbar: {
