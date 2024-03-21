@@ -14,8 +14,9 @@ You can install and run Talon by following the [official installation instructio
 If you use Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
 
 **Talon, like many tools for automation or accessibility, does not support Wayland.**
--  You will have to select an X11 session from your login manager. 
--  This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
+
+- You will have to select an X11 session from your login manager.
+- This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
 
 ## Configure a Speech Recognition Engine
 

@@ -57,4 +57,3 @@ def settings_change_handler(*args):
 
 settings.register("", settings_change_handler)
 ```
-

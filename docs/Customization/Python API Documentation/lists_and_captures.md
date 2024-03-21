@@ -42,7 +42,7 @@ This sets up a list which matches a list of standard exceptions for the target p
 exception {user.exception_class}: insert(user.exception_class)
 ```
 
-We make use of our list in the above .talon file by referring to it with the curly brace syntax. 
+We make use of our list in the above .talon file by referring to it with the curly brace syntax.
 
 Given the above files, if we said "exception null pointer" when the "code.language: java" selector was active we'd get the string "NullPointerException" typed in. Saying "exception generic exception" would do nothing in this context, and nor would "exception value".
 

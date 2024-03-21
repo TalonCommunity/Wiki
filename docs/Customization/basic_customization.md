@@ -4,8 +4,9 @@ sidebar_position: 1
 
 # Basic customization
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves. 
-- This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. 
+Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves.
+
+- This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers.
 - A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./Python%20API%20Documentation/talon-api-overview.md).
 
 This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub) user file set.
@@ -18,7 +19,7 @@ All customization consists of files with `.talon` or `.py` file extensions place
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Roughly speaking `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by `.talon` files. `.py` files are written in the [Python programming language](https://www.python.org/) (one of the most popular programming languages in the world). `.talon` files are written in a language that is only used by Talon.
 
-If you're not a programmer it may seem a little intimidating to be working with programming languages. The `.py` files may indeed be a little difficult to work with in the beginning, however `.talon` files are designed to be simple and to provide good feedback if you make mistakes. We'll provide some explanation for working with `.talon` files on this page. 
+If you're not a programmer it may seem a little intimidating to be working with programming languages. The `.py` files may indeed be a little difficult to work with in the beginning, however `.talon` files are designed to be simple and to provide good feedback if you make mistakes. We'll provide some explanation for working with `.talon` files on this page.
 
 ## Managing your customizations
 
@@ -157,7 +158,6 @@ The body can have several kinds of content. Most often you'll be defining voice 
 
 Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
 
-
 ### Actions in .talon files
 
 You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. To get a complete list of defined actions you can do the following:
@@ -181,7 +181,7 @@ Some of the more useful actions are:
 
 ## Recipes
 
-If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. This section contains a recipe list of some common/instructive customizations you might like to make. 
+If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. This section contains a recipe list of some common/instructive customizations you might like to make.
 
 ### Add new keyboard shortcuts
 
