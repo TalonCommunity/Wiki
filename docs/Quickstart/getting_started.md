@@ -13,7 +13,10 @@ You can install and run Talon by following the [official installation instructio
 **Notes on Linux installation**:
 If you use Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
 
-Talon, like many tools for automation or accessibility, does not support Wayland. You will have to select an X11 session from your login manager. This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
+**Talon, like many tools for automation or accessibility, does not support Wayland.**
+
+- You will have to select an X11 session from your login manager.
+- This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
 
 ## Configure a Speech Recognition Engine
 
@@ -49,6 +52,6 @@ Once the basics somewhat work for you, you'll likely want to improve your experi
 
 - For users who want earlier access to new features, priority support, and access to additional [speech engines](speech_engines.md), install the [beta version](beta_talon.md).
 - [Improve Recognition Accuracy](improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
-- [Unofficial Talon Docs](../Customization/unofficial_talon_docs): learn about how to configure Talon to your liking.
+- [Customize Talon](../Customization/basic_customization.md): learn about how to configure Talon to your liking.
 - [Talon-Related Resources](../Integrations/talon_related_resources): a varied list of resources for Talon uses.
 - [Software that Pairs Well with Talon](../Integrations/other_integrations): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)

@@ -1,18 +1,25 @@
+---
+sidebar_position: 1
+---
+
 # Basic customization
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves. This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers. A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](../Customization/unofficial_talon_docs).
+Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves.
 
-This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub user file set.
+- This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers.
+- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./Python%20API%20Documentation/talon-api-overview.md).
+
+This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub) user file set.
 
 If you are having trouble with anything here or in Talon more generally, the best way to get help is on the [Talon Slack](https://talonvoice.com/chat).
 
 ## Customization overview
 
-All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
+All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub) user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Roughly speaking `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by `.talon` files. `.py` files are written in the [Python programming language](https://www.python.org/) (one of the most popular programming languages in the world). `.talon` files are written in a language that is only used by Talon.
 
-If you're not a programmer it may seem a little intimidating to be working with programming languages. The `.py` files may indeed be a little difficult to work with in the beginning, however `.talon` files are designed to be simple and to provide good feedback if you make mistakes. We'll provide some explanation for working with `.talon` files on this page. More extensive documentation about both `.talon` and `.py` files can be found at [unofficial talon docs](../Customization/unofficial_talon_docs).
+If you're not a programmer it may seem a little intimidating to be working with programming languages. The `.py` files may indeed be a little difficult to work with in the beginning, however `.talon` files are designed to be simple and to provide good feedback if you make mistakes. We'll provide some explanation for working with `.talon` files on this page.
 
 ## Managing your customizations
 
@@ -151,8 +158,6 @@ The body can have several kinds of content. Most often you'll be defining voice 
 
 Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
 
-A more complete guide to .talon files is included in the [unofficial docs](../Customization/unofficial_talon_docs).
-
 ### Actions in .talon files
 
 You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. To get a complete list of defined actions you can do the following:
@@ -176,9 +181,7 @@ Some of the more useful actions are:
 
 ## Recipes
 
-If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. This section contains a recipe list of some common/instructive customizations you might like to make. The list isn't intended to be complete of course, we're trying to strike a balance between page length and usefulness.
-
-As always, see the [unofficial docs](../Customization/unofficial_talon_docs) page for a much more complete understanding and for more advanced/powerful concepts.
+If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. This section contains a recipe list of some common/instructive customizations you might like to make.
 
 ### Add new keyboard shortcuts
 
@@ -198,7 +201,7 @@ Often you will want to add a new voice command to press an application specific 
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
-Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/key_action/).
+Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/Python%20API%20Documentation/key_action.md).
 
 ### Slow down key presses
 
@@ -211,7 +214,7 @@ A reasonably common problem that comes up when using Talon with computer games i
         key_hold = 32
 ```
 
-Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Customization/unofficial_talon_docs.md#context-header) for a full list of available matchers.
+Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Customization/talon-files.md#context-header) for a full list of available matchers.
 
 #### Settings
 
@@ -219,7 +222,7 @@ Note the use of app.exe as the context matcher to match the filename of the acti
 
 settings() blocks can be put in any `.talon` file and are used to change the value of settings given a matching context header. You can have multiple settings by putting each on its own indented line underneath the "settings():" line. You can include voice commands in the same file as a settings block.
 
-You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](../Customization/unofficial_talon_docs#built-in-talon-settings). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
+You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](../Customization/talon-files.md#tags-settings-and-other-capabilities). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
 
 ### Keyboard shortcuts
 
@@ -265,7 +268,7 @@ Notice that we've given it a context header. Because this context headar is more
 
 In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
-This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/unofficial_talon_docs) for more information.
+This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/Python%20API%20Documentation/talon-api-overview.md) for more information.
 
 ### Turn off Talon listening on start up
 
