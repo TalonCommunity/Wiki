@@ -2,7 +2,6 @@
 sidebar_position: 2
 ---
 
-
 # `.talon` Files
 
 The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](unofficial_talon_docs#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
