@@ -169,4 +169,3 @@ def symbol_key(m):
 ```
 
 Note that all I needed to do was implement the capture with a new rule parameter to have the extra 'semi' option be available to the command in the context of `app: my_app`.
-

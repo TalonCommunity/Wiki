@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-
 # Talon API Overview
 
 This page provides community documentation of the central concepts used for the customization of Talon behaviour. If you want to implement more complicated functionality in Talon or work out how some existing scripts work, then this is the right page. You may prefer the [basic usage](../Basic%20Usage/basic_usage.md) or [basic customization](basic_customization.md) pages if you are a beginner.
@@ -18,9 +17,6 @@ When setting up Talon to respond to voice commands, you should have installed a 
 Talon doesn't care what names you give your `.py` or `.talon` files, or what folders you put them into; it will automatically try to load everything inside your `user` folder when it starts up. Any folders or file names you see in Talon user file sets (e.g. [Talon Community](https://github.com/talonhub/community)) were chosen by the authors of that package. Talon also monitors files in the `user` directory, and will automatically reload them if they're changed (printing a [log message](unofficial_talon_docs#repl-and-logging)). This reloading is convenient when working on scripts/configuration as you generally don't have to restart Talon for it to pick up changes.
 
 So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Originally all Talon configuration/scripting was done using Python, but over time it was decided that the addition of a framework specific file type would be beneficial. To a first approximation `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by .talon files.
-
-
-
 
 # Talon Concepts
 
