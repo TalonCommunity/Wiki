@@ -28,7 +28,6 @@ The code above is equivalent to the following non-dynamic context list below.
 ctx.lists["user.dynamic"] = {"hello": "world"}
 ```
 
-
 ## Selection Lists
 
 Selection lists are another feature that as of Talon 0.4 are currently **beta-only**. They are used for matching substrings instead of a key value mapping like a normal talon list. For instance:

@@ -60,4 +60,3 @@ ctx.tags = ["user.tabs"]
 ```
 
 Tags are a commonly used part of the Talon framework. Related but less commonly used are [modes](#modes) and [scopes](#scopes).
-

@@ -2,8 +2,7 @@
 sidebar_position: 2
 ---
 
-
-# Modules and Contexts 
+# Modules and Contexts
 
 ## Modules
 
