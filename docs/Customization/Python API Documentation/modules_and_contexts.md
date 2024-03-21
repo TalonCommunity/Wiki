@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Modules
 
-A Module is a place for giving things names. In particular, it can declare [actions](unofficial_talon_docs#actions), [lists](unofficial_talon_docs#lists), [captures](unofficial_talon_docs#captures), [scopes](unofficial_talon_docs#scopes), [tags](unofficial_talon_docs#tags), [modes](unofficial_talon_docs#modes), [settings](unofficial_talon_docs#settings) and well-known [applications](unofficial_talon_docs#apps). In Python, you can construct a module like so:
+A Module is a place for giving things names. In particular, it can declare [actions](actions.md), [lists and captures](lists_and_captures.md), [scopes](scopes.md), [tags](tags.md), [modes](modes.md), [settings](settings.md) and well-known [applications](apps.md). In Python, you can construct a module like so:
 
 ```python
 from talon import Module
@@ -17,7 +17,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ## Contexts
 
-A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for [several properties](unofficial_talon_docs#context-header) like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](unofficial_talon_docs#actions), adjust [settings](unofficial_talon_docs#settings), activate [tags](unofficial_talon_docs#tags), and redefine [lists](#lists) and [captures](#captures). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for several properties like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](/Customization/Python%20API%20Documentation/actions), adjust [settings](/Customization/Python%20API%20Documentation/settings), activate [tags](/Customization/Python%20API%20Documentation/tags), and redefine [lists and captures](lists_and_captures.md). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 In Python, you can construct a context like so:
 
@@ -49,4 +49,4 @@ language: en
 """
 ```
 
-See examples in the [Actions](#actions), [Lists](#lists), [Captures](#captures), and [Tags](#tags) sections for information about using Contexts with those features.
+See examples in the [Actions](actions), [Lists, captures](./lists_and_captures.md), and [Tags](tags) sections for information about using Contexts with those features.

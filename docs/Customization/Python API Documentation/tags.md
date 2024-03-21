@@ -43,7 +43,7 @@ app: Firefox
 tag(): user.tabs
 ```
 
-Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](unofficial_talon_docs#actions), so unless the default behavior of those actions is what we want, we'd also need to _implement_ them in a Python file (see [Actions](#actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
+Of course, the commands we defined in `tabs.talon` just invoke corresponding [actions](actions), so unless the default behavior of those actions is what we want, we'd also need to _implement_ them in a Python file (see [Actions](actions)). Happily, in this case the default behavior suffices. Tags and actions often go together in this way.
 
 There's also the option of enabling tags from within Python. To do that you can use a Context instance like this:
 
@@ -59,4 +59,4 @@ ctx.matches = "app: Firefox"
 ctx.tags = ["user.tabs"]
 ```
 
-Tags are a commonly used part of the Talon framework. Related but less commonly used are [modes](#modes) and [scopes](#scopes).
+Tags are a commonly used part of the Talon framework. Related but less commonly used are [modes](modes) and [scopes](scopes).
