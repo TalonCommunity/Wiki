@@ -37,7 +37,6 @@ const config: Config = {
           routeBasePath: "/", // Serve the docs at the site's root
 
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/TalonCommunity/Wiki",
         },
@@ -51,7 +50,14 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/talon-community-logo.png",
+
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
+    },
+
     navbar: {
       logo: {
         alt: "My Site Logo",
