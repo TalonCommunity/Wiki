@@ -133,18 +133,18 @@ This command, for example, will press the shortcut alt-shift-down whenever you s
 
 Rules have a versatile syntax that is like a word based regex:
 
-| Syntax           | Description                                                     | Matches                   |              |
-| ---------------- | --------------------------------------------------------------- | ------------------------- | ------------ |
-| `foo`            | Words                                                           | “foo”                     ||
-| `[foo]`          | Optional                                                        | “foo” or null (nothing)   ||
-| `foo*`           | Zero or more                                                    | “”, “foo”, “foo foo”, ... ||
-| `foo+`           | One or more                                                     | “foo”, “foo foo”, ...     ||
-| `foo             \| bar`                                                            | Choice                    | “foo”, “bar” |
-| `(foo)`          | Precedence/grouping                                             | “foo”                     ||
-| `{some_list}`    | [List](./Python%20API%20Documentation/lists_and_captures.md)    | Depends on the list.      ||
-| `<some_capture>` | [Capture](./Python%20API%20Documentation/lists_and_captures.md) | Depends on the capture.   ||
-| `^foo`           | Start anchor                                                    | See below                 ||
-| `foo$`           | End anchor                                                      | See below                 ||
+| Syntax                   | Description                                                     | Matches                   |     |
+| ------------------------ | --------------------------------------------------------------- | ------------------------- | --- |
+| `foo`                    | Words                                                           | “foo”                     |     |
+| `[foo]`                  | Optional                                                        | “foo” or null (nothing)   |     |
+| `foo*`                   | Zero or more                                                    | “”, “foo”, “foo foo”, ... |     |
+| `foo+`                   | One or more                                                     | “foo”, “foo foo”, ...     |     |
+| `foo             \| bar` | Choice                                                          | “foo”, “bar”              |
+| `(foo)`                  | Precedence/grouping                                             | “foo”                     |     |
+| `{some_list}`            | [List](./Python%20API%20Documentation/lists_and_captures.md)    | Depends on the list.      |     |
+| `<some_capture>`         | [Capture](./Python%20API%20Documentation/lists_and_captures.md) | Depends on the capture.   |     |
+| `^foo`                   | Start anchor                                                    | See below                 |     |
+| `foo$`                   | End anchor                                                      | See below                 |     |
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
@@ -280,7 +280,8 @@ title: /my app/
 tag(): user.my_tag
 ```
 
-#### Keyboard Shortcuts 
+#### Keyboard Shortcuts
+
 Another feature is the ability to bind keyboard shortcuts.
 
 ```config
