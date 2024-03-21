@@ -69,7 +69,7 @@ Your command should now be defined, so if you focus your text editor and say "se
 ### Error messages
 
 OK, let's now deliberately introduce an error so we can see how Talon tells us about that. Edit your file and remove the final ')' character so the last line is " key(cmd-a" or " key(ctrl-a". Save the file and look at your Talon log. For me, Talon writes out the following:
-
+```
     2021-09-02 17:46:02 DEBUG [-] /home/normal/.talon/user/simple_test.talon
     2021-09-02 17:46:02 DEBUG [+] /home/normal/.talon/user/simple_test.talon
     2021-09-02 17:46:02 ERROR     8:                         talon/scripting/talon_script.py:705|
@@ -112,16 +112,16 @@ OK, let's now deliberately introduce an error so we can see how Talon tells us a
       Expected: )
      in script at /home/normal/.talon/user/simple_test.talon:2:
       key(ctrl-a
-
+```
 So that's quite a lot of output. The useful bit is at the bottom:
-
+```
     talon.scripting.talon_script.CompileError:   Line: 1, Column: 5 - unexpected token
           key(ctrl-a
               ^
       Expected: )
      in script at /home/normal/.talon/user/simple_test.talon:2:
       key(ctrl-a
-
+```
 You can see it has the "in script at /home/normal/.talon/user/simple_test.talon:2:" line. This tells us the file the problem occurred in, and also the (maybe approximate) line number the problem was on, '2' in our case. There is also some suggestive text indicating that Talon was expecting a ')' character. The error message you get will depend on the problem with what you've written, but it should always tell you which file has the problem in it, and also the approximate line the problem was on.
 
 OK, we're finished with this file now so you can delete it.
