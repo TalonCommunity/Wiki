@@ -8,7 +8,6 @@ The primary way to extend talon is using `.talon` files placed in the `user` dir
 
 - Define [voice commands](#voice-commands).
 - Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
-- 
 - [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
 
 An example `.talon` file might look like this:
