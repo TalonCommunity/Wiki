@@ -7,7 +7,7 @@ sidebar_position: 1
 Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves.
 
 - This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers.
-- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./Python%20API%20Documentation/talon-api-overview.md).
+- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./talon-api-overview.md).
 
 This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub) user file set.
 
@@ -69,6 +69,7 @@ Your command should now be defined, so if you focus your text editor and say "se
 ### Error messages
 
 OK, let's now deliberately introduce an error so we can see how Talon tells us about that. Edit your file and remove the final ')' character so the last line is " key(cmd-a" or " key(ctrl-a". Save the file and look at your Talon log. For me, Talon writes out the following:
+
 ```
     2021-09-02 17:46:02 DEBUG [-] /home/normal/.talon/user/simple_test.talon
     2021-09-02 17:46:02 DEBUG [+] /home/normal/.talon/user/simple_test.talon
@@ -113,7 +114,9 @@ OK, let's now deliberately introduce an error so we can see how Talon tells us a
      in script at /home/normal/.talon/user/simple_test.talon:2:
       key(ctrl-a
 ```
+
 So that's quite a lot of output. The useful bit is at the bottom:
+
 ```
     talon.scripting.talon_script.CompileError:   Line: 1, Column: 5 - unexpected token
           key(ctrl-a
@@ -122,6 +125,7 @@ So that's quite a lot of output. The useful bit is at the bottom:
      in script at /home/normal/.talon/user/simple_test.talon:2:
       key(ctrl-a
 ```
+
 You can see it has the "in script at /home/normal/.talon/user/simple_test.talon:2:" line. This tells us the file the problem occurred in, and also the (maybe approximate) line number the problem was on, '2' in our case. There is also some suggestive text indicating that Talon was expecting a ')' character. The error message you get will depend on the problem with what you've written, but it should always tell you which file has the problem in it, and also the approximate line the problem was on.
 
 OK, we're finished with this file now so you can delete it.
@@ -201,7 +205,7 @@ Often you will want to add a new voice command to press an application specific 
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
-Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/Python%20API%20Documentation/key_action.md).
+Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/key_action.md).
 
 ### Slow down key presses
 
@@ -268,7 +272,7 @@ Notice that we've given it a context header. Because this context headar is more
 
 In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
-This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/Python%20API%20Documentation/talon-api-overview.md) for more information.
+This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/talon-api-overview.md) for more information.
 
 ### Turn off Talon listening on start up
 

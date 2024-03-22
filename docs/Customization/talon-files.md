@@ -82,7 +82,7 @@ The following requirements can be set:
 `hostname`
 : match the 'hostname' of your machine (from the `hostname` CLI command on Linux/Mac). Useful if you want to have a single set of custom config but have some machine-specific parts.
 
-Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](/Customization/Python%20API%20Documentation/scopes) below for more information.
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](/Customization/scopes) below for more information.
 
 Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 
@@ -133,18 +133,18 @@ This command, for example, will press the shortcut alt-shift-down whenever you s
 
 Rules have a versatile syntax that is like a word based regex:
 
-| Syntax                   | Description                                                     | Matches                   |     |
-| ------------------------ | --------------------------------------------------------------- | ------------------------- | --- |
-| `foo`                    | Words                                                           | “foo”                     |     |
-| `[foo]`                  | Optional                                                        | “foo” or null (nothing)   |     |
-| `foo*`                   | Zero or more                                                    | “”, “foo”, “foo foo”, ... |     |
-| `foo+`                   | One or more                                                     | “foo”, “foo foo”, ...     |     |
-| `foo             \| bar` | Choice                                                          | “foo”, “bar”              |
-| `(foo)`                  | Precedence/grouping                                             | “foo”                     |     |
-| `{some_list}`            | [List](./Python%20API%20Documentation/lists_and_captures.md)    | Depends on the list.      |     |
-| `<some_capture>`         | [Capture](./Python%20API%20Documentation/lists_and_captures.md) | Depends on the capture.   |     |
-| `^foo`                   | Start anchor                                                    | See below                 |     |
-| `foo$`                   | End anchor                                                      | See below                 |     |
+| Syntax                   | Description                        | Matches                   |     |
+| ------------------------ | ---------------------------------- | ------------------------- | --- |
+| `foo`                    | Words                              | “foo”                     |     |
+| `[foo]`                  | Optional                           | “foo” or null (nothing)   |     |
+| `foo*`                   | Zero or more                       | “”, “foo”, “foo foo”, ... |     |
+| `foo+`                   | One or more                        | “foo”, “foo foo”, ...     |     |
+| `foo             \| bar` | Choice                             | “foo”, “bar”              |
+| `(foo)`                  | Precedence/grouping                | “foo”                     |     |
+| `{some_list}`            | [List](./lists_and_captures.md)    | Depends on the list.      |     |
+| `<some_capture>`         | [Capture](./lists_and_captures.md) | Depends on the capture.   |     |
+| `^foo`                   | Start anchor                       | See below                 |     |
+| `foo$`                   | End anchor                         | See below                 |     |
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
@@ -261,7 +261,7 @@ some [<user.letter>] command:
 
 .talon files can do a few other things aside from defining voice commands.
 
-The most common usage after voice commands is to adjust [settings](/Customization/Python%20API%20Documentation/settings). The following changes the given setting values when the context header matches:
+The most common usage after voice commands is to adjust [settings](/Customization/settings). The following changes the given setting values when the context header matches:
 
 ```config
 title: /my app/
@@ -272,7 +272,7 @@ settings():
     another.setting = 432
 ```
 
-You can also activate [tags](/Customization/Python%20API%20Documentation/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
+You can also activate [tags](/Customization/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
 
 ```config
 title: /my app/
@@ -297,7 +297,7 @@ key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from r
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
 
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](./Python%20API%20Documentation/key_action.md) wiki page.
+The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](./key_action.md) wiki page.
 
 Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
 
