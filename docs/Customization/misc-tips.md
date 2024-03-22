@@ -1,4 +1,3 @@
-
 # Tips and tricks
 
 This section contains some additional miscellaneous information which may be useful for developing and debugging Talon scripts.

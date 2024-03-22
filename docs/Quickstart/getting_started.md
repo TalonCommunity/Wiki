@@ -10,13 +10,9 @@ You can install and run Talon by following the [official installation instructio
 
 :::
 
-
-
-
-1. [Download Talon](https://talonvoice.com/)  
+1. [Download Talon](https://talonvoice.com/)
 2. [Install a speech recognition engine](#configure-a-speech-recognition-engine)
 3. [Install a Talon user file set](#install-a-talon-user-file-set)
-
 
 <details>
   <summary>Notes for Linux Installation</summary>
@@ -24,11 +20,8 @@ You can install and run Talon by following the [official installation instructio
      - You will have to select an X11 session from your login manager.
   - This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
 * If you use Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) in order to be able to see Talon's tray icon - which is the only way of configuring it without speech/code.
-  
+
 </details>
-
-
-
 
 ## Configure a Speech Recognition Engine
 
@@ -39,8 +32,6 @@ Talon uses a speech recognition engine that translates voice audio to text. To i
 The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon or need an engine with support additional languages other than English. For information about additional speech engines, see the [speech engine page](speech_engines.md).
 
 :::
-
-
 
 ## Install a Talon user file set
 
