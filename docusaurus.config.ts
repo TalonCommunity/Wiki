@@ -38,7 +38,7 @@ const config: Config = {
 
           sidebarPath: "./sidebars.ts",
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/TalonCommunity/Wiki/edit/main/docs",
+          editUrl: "https://github.com/TalonCommunity/Wiki/edit/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -63,6 +63,7 @@ const config: Config = {
         alt: "My Site Logo",
         src: "img/talon-community-logo.png",
       },
+      hideOnScroll: true,
       items: [
         {
           type: "docSidebar",

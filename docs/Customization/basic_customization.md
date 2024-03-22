@@ -7,7 +7,7 @@ sidebar_position: 1
 Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves.
 
 - This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers.
-- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./Python%20API%20Documentation/talon-api-overview.md).
+- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./talon-api-overview.md).
 
 This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub) user file set.
 
@@ -201,7 +201,7 @@ Often you will want to add a new voice command to press an application specific 
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
 
-Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/Python%20API%20Documentation/key_action.md).
+Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/key_action.md).
 
 ### Slow down key presses
 
@@ -268,7 +268,7 @@ Notice that we've given it a context header. Because this context headar is more
 
 In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
-This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/Python%20API%20Documentation/talon-api-overview.md) for more information.
+This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/talon-api-overview.md) for more information.
 
 ### Turn off Talon listening on start up
 

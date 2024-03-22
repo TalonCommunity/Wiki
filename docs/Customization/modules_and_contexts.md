@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 8
 ---
 
 # Modules and Contexts
@@ -17,7 +17,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ## Contexts
 
-A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for several properties like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](/Customization/Python%20API%20Documentation/actions), adjust [settings](/Customization/Python%20API%20Documentation/settings), activate [tags](/Customization/Python%20API%20Documentation/tags), and redefine [lists and captures](lists_and_captures.md). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for several properties like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](/Customization/actions), adjust [settings](/Customization/settings), activate [tags](/Customization/tags), and redefine [lists and captures](lists_and_captures.md). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 In Python, you can construct a context like so:
 
