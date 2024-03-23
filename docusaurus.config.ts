@@ -59,7 +59,7 @@ const config: Config = {
     },
     announcementBar: {
       content:
-        '<b> You are viewing the new refactor of the Talon community wiki! </b> ✨',
+        "<b> You are viewing the new refactor of the Talon community wiki! </b> ✨",
       isCloseable: true,
     },
 
