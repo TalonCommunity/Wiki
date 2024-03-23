@@ -57,6 +57,11 @@ const config: Config = {
         hideable: true,
       },
     },
+    announcementBar: {
+      content:
+        '<b> You are viewing the new refactor of the Talon community wiki! </b> ✨',
+      isCloseable: true,
+    },
 
     navbar: {
       logo: {
