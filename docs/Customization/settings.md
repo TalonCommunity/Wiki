@@ -57,3 +57,37 @@ def settings_change_handler(*args):
 
 settings.register("", settings_change_handler)
 ```
+
+## Built in Talon settings
+
+In a `.talon` file, a `settings()` block can be used to alter settings, both for Talon and for user modules. For example:
+
+```config
+app: Emacs
+-
+settings():
+    key_wait = 1.5
+```
+
+will set the `key_wait` setting to 1.5 whenever the current application is emacs.
+
+The remainder of this page describes various important settings that you might want to meddle with.
+
+The following three settings, `insert_wait`, `key_hold`, and `key_wait`, can be used to slow down keypresses when dealing with applications that are behaving unreliably (e.g., key presses seem to be jumbled or dropped).
+
+`insert_wait`
+: Increase this if characters seem to be jumbled in a specific app when typing whole sentences. Default is 0.
+
+`key_hold`
+: Increase this if you're playing a game and some keys aren't registering at all. You should probably increase it in 16ms increments, e.g. set it to 16ms or 32ms.
+
+`key_wait`
+: Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the the slowest overall keypress rate. Default is 1.0 in milliseconds.
+
+`speech.engine`
+: Determines which speech engine talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'. See [speech recognition engines](../Quickstart/speech_engines.md).
+
+`speech.timeout`
+: This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the the amount of time you can pause between saying 'phrase' and the following phrase.
+
+It is measured in seconds; the default is 0.150, i.e. 150 milliseconds. It has been mentioned in #beta that this setting may not always be available as it was offered as a quick fix in Talon 1283 for Talon 1274 cutting input off too soon sometimes.
