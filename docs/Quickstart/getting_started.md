@@ -63,4 +63,4 @@ Once the basics somewhat work for you, you'll likely want to improve your experi
 - [Improve Recognition Accuracy](improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
 - [Customize Talon](../Customization/basic_customization.md): learn about how to configure Talon to your liking.
 - [Talon-Related Resources](../Integrations/talon_related_resources): a varied list of resources for Talon uses.
-- [Software that Pairs Well with Talon](../Integrations/other_integrations): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)
+- [Software that Pairs Well with Talon](../Integrations/essential-tools.md): Many users augment their Talon setup with other software (e.g., Vimium, aka vim for the browser)
