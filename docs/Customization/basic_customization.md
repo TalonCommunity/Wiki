@@ -4,22 +4,18 @@ sidebar_position: 1
 
 # Basic customization
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves.
-
-- This page aims to be a pragmatic guide for performing some common modifications and is aimed at a beginner audience, including non-programmers.
-- A more complete treatment of Talon's capabilities can be found in the [unofficial Talon docs](./talon-api-overview.md).
-
-This page assumes that Talon is responding to your voice and you are using the [Talon Community](https://github.com/talonhub) user file set.
-
-If you are having trouble with anything here or in Talon more generally, the best way to get help is on the [Talon Slack](https://talonvoice.com/chat).
+Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves at a basic level.
 
 ## Customization overview
 
-All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub) user file set ("~/.talon/user/" on MacOS/Linux, "%APPDATA%\Talon\user" on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
+All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub) user file set (`~/.talon/user/` on MacOS/Linux, `%APPDATA%\Talon\user` on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
-So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)? Roughly speaking `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.py` files on the other hand provide the implementation of behaviour and other functionality used by `.talon` files. `.py` files are written in the [Python programming language](https://www.python.org/) (one of the most popular programming languages in the world). `.talon` files are written in a language that is only used by Talon.
+So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)?
 
-If you're not a programmer it may seem a little intimidating to be working with programming languages. The `.py` files may indeed be a little difficult to work with in the beginning, however `.talon` files are designed to be simple and to provide good feedback if you make mistakes. We'll provide some explanation for working with `.talon` files on this page.
+- `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.talon` files are written in a language that is only used by Talon.
+  - `.talon` files are designed to be simple and to provide good feedback if you make mistakes.
+- `.py` files are Python scripts which provide the implementation of behaviour and other functionality used by `.talon` files.
+  - You do not need to customize Python or know how to code to use Talon
 
 ## Managing your customizations
 
@@ -28,25 +24,23 @@ Talon is built to be a flexible and customizable system. This means that in addi
 Given this flexibility there are two ways you could approach customizing your Talon setup:
 
 - Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
-- Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community).
-
-Option A can be easier to begin with, but may be difficult to keep up-to-date with upstream. This is because you need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it. We recommend using Option B with separate directories as much as possible, only resorting to direct editing when you have to.
-
-The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set. For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
+  - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
+  - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
+- Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
+  - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
+  - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
 
 ![Screen shot of Talon user directory](/img/talon_user_folders.png)
 
-You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. If you're confident with the `git` program this is straightforward. If you're not, then just making a backup of the whole Talon user directory prior to making a potentially significant change doesn't hurt.
+### Backups
 
-With that out of the way we're going to work through a simple `.talon` file example to give you an idea of how to create them.
+You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
 
 ## A simple .talon file
 
-Let's make a new voice command that presses the key combination cmd+a or control+a when you say "select everything". This will work in a similar way to the 'select all' command built in to [Talon Community](https://github.com/talonhub/community).
+Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
 
-First let's get you an appropriate plain text editor. We're looking for something like Notepad in windows that just saves unformatted text files (so not Libreoffice or Microsoft Word). We can do much better than Notepad however. A simple editor which you can use on Windows, MacOS, or Linux is [Geany](https://www.geany.org/download/releases/).
-
-Open up your editor and save an empty file called `simple_test.talon` somewhere in your Talon user directory. Next, right click on the Talon icon in your status bar, choose scripting, and then 'View log'. This will show a list of log messages from Talon, and in particular will be where Talon tells us if there's a problem with what we write in `simple_test.talon`.
+Open up a text editor and save an empty file called `simple_test.talon` somewhere in your Talon user directory. Next, right click on the Talon icon in your status bar, choose scripting, and then 'View log'. This will show a list of log messages from Talon, and in particular will be where Talon tells us if there's a problem with what we write in `simple_test.talon`.
 
 OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
 
@@ -135,17 +129,17 @@ OK, we're finished with this file now so you can delete it.
 Talon files look something like this:
 
 ```config
-    title: /Gmail/
-    -
-    find on page: key(ctrl-f)
+title: /Gmail/
+-
+find on page: key(ctrl-f)
 
-    reload page:
-        key(ctrl-r)
+reload page:
+    key(ctrl-r)
 
-    insert bold text:
-      key(ctrl-b)
-      insert("type in this text (it will be bolded)")
-      key(ctrl-b)
+insert bold text:
+    key(ctrl-b)
+    insert("type in this text (it will be bolded)")
+    key(ctrl-b)
 ```
 
 The part above the '-' line is called the "context header" and the part below is the "body". The context header decides under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
@@ -192,30 +186,28 @@ If you've read the above you should have some idea of how to make customizations
 Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
 ```config
-    title: /YouTube/
-    -
-    toggle play: key("space")
+title: /YouTube/
+-
+toggle play: key("space")
 
-    search cats:
-        key("/")
-        sleep(100ms)
-        insert("cats")
-        key("enter")
+search cats:
+    key("/")
+    sleep(100ms)
+    insert("cats")
+    key("enter")
 ```
 
 These commands only apply when the window title has "YouTube" in it. "search cats" first presses the "/" key to focus the YouTube search box, then waits 100 milliseconds to make sure it has been focussed, then types in "cats" and presses enter.
-
-Keyboard shortcuts will almost always make use of the key() action. For more information on how to use that see [the key() action page](../Customization/key_action.md).
 
 ### Slow down key presses
 
 A reasonably common problem that comes up when using Talon with computer games is that the application only recognizes key presses intermittently or not at all. This can be because Talon presses and releases the keys too quickly. The following `.talon` file makes Talon hold down each key for 32 milliseconds before releasing it. You could try increasing the key_hold value incrementally to find the smallest length of time you need to hold for the key to be recognized reliably:
 
 ```config
-    app.exe: my_game.exe
-    -
-    settings():
-        key_hold = 32
+app.exe: my_game.exe
+-
+settings():
+    key_hold = 32
 ```
 
 Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Customization/talon-files.md#context-header) for a full list of available matchers.
@@ -245,13 +237,13 @@ This also provides a simple way of overriding the behaviour of existing voice co
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 
 ```config
-    touch:
-        mouse_click(0)
-        # close the mouse grid if open
-        user.grid_close()
-        # End any open drags
-        # Touch automatically ends left drags so this is for right drags specifically
-        user.mouse_drag_end()
+touch:
+    mouse_click(0)
+    # close the mouse grid if open
+    user.grid_close()
+    # End any open drags
+    # Touch automatically ends left drags so this is for right drags specifically
+    user.mouse_drag_end()
 ```
 
 We can see the `user.grid_close()` action is called to close the grid after clicking the mouse. Also note the lines starting with '#' characters are called comments. They are just there for documentation and will not be otherwise processed by Talon.
@@ -259,30 +251,17 @@ We can see the `user.grid_close()` action is called to close the grid after clic
 If we wanted to stop the `user.grid_close()` behaviour we could just create a new `.talon` file and put in the following contents:
 
 ```config
-    os: mac
-    -
-    touch:
-        mouse_click(0)
-        # End any open drags
-        # Touch automatically ends left drags so this is for right drags specifically
-        user.mouse_drag_end()
+os: mac
+-
+touch:
+    mouse_click(0)
+    # End any open drags
+    # Touch automatically ends left drags so this is for right drags specifically
+    user.mouse_drag_end()
 ```
 
 Notice that we've given it a context header. Because this context headar is more specific (i.e. it has more rules in it) this implementation of "touch" will take precedence over the original. The implementation just has the `user.grid_close()` line and associated comment removed.
 
 In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
-This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files. See the [unofficial docs](../Customization/talon-api-overview.md) for more information.
-
-### Turn off Talon listening on start up
-
-If you'd prefer not to you have Talon enabled when you start the app (and typically your computer), create a python filed in your user directory (e.g. `sleep.py`) and put in the following contents:
-
-```python
-    from talon import app, actions
-
-    def disable():
-        actions.speech.disable()
-
-    app.register("ready", disable)
-```
+This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
