@@ -1,6 +1,61 @@
-# Advanced Scripting Features
+---
+sidebar_position: 3
+---
 
-## Dynamic Lists
+# Lists
+
+A list associates sequences of spoken words with strings that can be used in voice commands. This is useful for commands that permit a choice from a list of options. For example, imagine you wanted to say "exception EXCEPTION" and have Talon type in a programming language appropriate exception class name. You could do that using a list as follows:
+
+**`exceptions.py`:**
+
+```python
+from talon import Module, Context
+
+mod = Module()
+mod.list("exception_class", desc="Exception classes")
+
+ctx_default = Context()
+ctx_default.lists["user.exception_class"] = {
+    "generic exception": "Exception"
+}
+
+ctx_python = Context()
+# code.language is a Talon defined scope which can be set to indicate
+# the programming language you're currently editing
+ctx_python.matches = "code.language: python"
+ctx_python.lists["user.exception_class"] = {
+    "runtime": "RuntimeError",
+    "value": "ValueError",
+}
+
+ctx_java = Context()
+ctx_java.matches = "code.language: java"
+ctx_java.lists["user.exception_class"] = {
+    "null pointer": "NullPointerException",
+    "illegal argument": "IllegalArgumentException",
+}
+```
+
+This sets up a list which matches a list of standard exceptions for the target programming language. Note that we can have a different set of item keys in the list for different contexts. Note also that our list (like user defined actions) is prefixed with `user.` to identify it as custom code.
+
+**`exceptions.talon`:**
+
+```config
+exception {user.exception_class}: insert(user.exception_class)
+```
+
+We make use of our list in the above .talon file by referring to it with the curly brace syntax.
+
+Given the above files, if we said "exception null pointer" when the "code.language: java" selector was active we'd get the string "NullPointerException" typed in. Saying "exception generic exception" would do nothing in this context, and nor would "exception value".
+
+One other fact of interest is that there's no merging of lists if multiple contexts match. This would mean that if the "code.language: java" selector was active, then our list would not contain the "generic exception" item (it would only have "null pointer" and "illegal argument").
+
+Because list contents can only be replaced in their entirety, end users can have a harder time overriding the list if they want to add one or two more entries. They would need to copy paste the contents of the source list and then add their entries to the end. See the captures section below for a pattern you can use to make this use case easier.
+
+
+## Advanced List Features
+
+### Dynamic Lists
 
 Dynamic lists are an advanced Talon feature that as of Talon 0.4 are currently **beta-only**. They are used for generating lists of items for voice commands at runtime. For example, you can use dynamic lists to create voice commands specific to the names of elements currently on the screen. Without dynamic lists you would otherwise have to poll and constantly update a normal talon list. Dynamic lists can also return [selection lists](#selection-lists) to dynamically match voice commands to substrings.
 
@@ -28,7 +83,7 @@ The code above is equivalent to the following non-dynamic context list below.
 ctx.lists["user.dynamic"] = {"hello": "world"}
 ```
 
-## Selection Lists
+### Selection Lists
 
 Selection lists are another feature that as of Talon 0.4 are currently **beta-only**. They are used for matching substrings instead of a key value mapping like a normal talon list. For instance:
 

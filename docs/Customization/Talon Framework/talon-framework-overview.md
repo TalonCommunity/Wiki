@@ -1,14 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
 
-# Talon API Overview
-
-This page provides community documentation of the central concepts used for customizing Talon. You may prefer the [basic usage](../Basic%20Usage/basic_usage.md) or [basic customization](basic_customization.md) pages if you are a beginner.
-
-The page assumes you have successfully [configured Talon](../Quickstart/getting_started.md) to respond to voice commands.
-
-## Overview of Talon framework
+# Overview of Talon framework
 
 Talon is an accessibility platform that provides a scripting layer to connect a range of input hardware/methods to a cross-platform API for interacting with desktop applications. Let's start by talking about where your configuration/scripting files are stored.
 
@@ -22,12 +16,13 @@ So why do we have two kinds of configuration/scripting files (`.py` and `.talon`
 
 In order to script Talon it is useful to understand the abstractions it uses. Let's start by giving you a brief overview of how they fit together.
 
-The [Context](./modules_and_contexts.md) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](tags.md) and [Apps](./apps.md), and less commonly [Modes](./modes.md) and [Scopes](./scopes.md) are all ways of providing information to match against in a Context.
+The first concept is the [Module](./modules_and_contexts.md). This is used to group behavior like settings, actions, or tags.
 
-The next key component is the implementation of behaviour via [Actions](./actions.md). Two examples are moving the mouse cursor and pasting the contents of the clipboard. Talon comes with some built in actions, but most are defined and implemented in user scripts.
+The [Context](modules_and_contexts.md) is a central feature of the Talon framework. A context is the circumstances under which a set of behaviour applies. For example we might only activate some voice commands when the title of the currently focussed window matches a given pattern. The concepts of [Tags](tags.md) and [Apps](apps.md), and less commonly [Modes](modes.md) and [Scopes](scopes.md) are all ways of providing information to match against in a Context.
 
-One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists and captures](./lists_and_captures.md)
+The next key component is the implementation of behaviour via [Actions](actions.md). Two examples are moving the mouse cursor and pasting the contents of the clipboard. Talon comes with some built in actions, but most are defined and implemented in user scripts.
 
-In addition to the above we also have the concept of [Settings](./settings.md). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
+One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists and captures](lists.md)
 
-The final concept is the Module. This is used to register particular instances of the above concepts with Talon, and to give them unique names.
+In addition to the above we also have the concept of [Settings](settings.md). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
+

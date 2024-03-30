@@ -1,12 +1,12 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
 ---
 
 # Modules and Contexts
 
 ## Modules
 
-A Module is a place for giving things names. In particular, it can declare [actions](actions.md), [lists and captures](lists_and_captures.md), [scopes](scopes.md), [tags](tags.md), [modes](modes.md), [settings](settings.md) and well-known [applications](apps.md). In Python, you can construct a module like so:
+A Module is a place for giving things names. In particular, it can declare [actions](actions.md), [lists and captures](lists.md), [scopes](scopes.md), [tags](./tags.md), [modes](modes.md), [settings](settings.md) and [applications](apps.md). In Python, you can construct a module like so:
 
 ```python
 from talon import Module
@@ -17,7 +17,7 @@ All Actions, Lists etc. must first be declared via a Module before they can be r
 
 ## Contexts
 
-A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for several properties like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](/Customization/actions), adjust [settings](/Customization/settings), activate [tags](/Customization/tags), and redefine [lists and captures](lists_and_captures.md). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
+A _context_ specifies conditions under which to add new behavior or override existing behavior. A context can check for several properties like your OS, the name of the current application, etc. Within a particular context you can implement/override the behavior of [actions](./actions), adjust [settings](./settings), activate [tags](./tags), and redefine [lists](./lists.md). Note that you cannot define new voice commands in Python, that can only be done in `.talon` files.
 
 In Python, you can construct a context like so:
 
@@ -49,4 +49,4 @@ language: en
 """
 ```
 
-See examples in the [Actions](actions), [Lists, captures](./lists_and_captures.md), and [Tags](tags) sections for information about using Contexts with those features.
+See examples in the [Actions](actions.md), [lists](./lists.md), and [Tags](./tags.md) sections for information about using Contexts with those features.

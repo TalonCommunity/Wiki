@@ -1,10 +1,6 @@
-# Other Resources
-
-This page links out to educational resources and demonstration videos.
+# Educational Resources
 
 ## Videos
-
-### Educational
 
 These videos/channels teach you how to use Talon or particular Talon user file sets.
 

@@ -4,11 +4,13 @@ sidebar_position: 2
 
 # `.talon` Files
 
-The primary way to extend talon is using `.talon` files placed in the `user` directory. A talon file comes in two parts: a [context header](#context-header) defining the circumstances in which the file is active, and a body that implements various behaviors within that context. The body of a talon file can:
+The primary way to extend talon is using `.talon` files placed anywherein the `user` directory. A talon file comes in two parts
 
-- Define [voice commands](#voice-commands).
-- Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
-- [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
+- A [context header](#context-header) defining the circumstances in which the file is active
+- A body that implements various behaviors within that context which can:
+  - Define [voice commands](#voice-commands).
+  - Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
+  - [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
 
 An example `.talon` file might look like this:
 
@@ -26,7 +28,7 @@ app: Teams
 # If there is no dash, then the body starts immediately.
 
 # These define voice commands.
-([channel] unread next | goneck): key(alt-shift-down)
+([channel] unread next | goneck): key(alt-shift-down)T
 insert code fragment:
     # A single command can perform a sequence of actions.
     insert("``````")
@@ -49,46 +51,27 @@ The context header specifies when the body of the file will be activated. That i
 
 The following requirements can be set:
 
-`os`
-: require specific operating systems; currently either `linux`, `mac`, or `windows`
+| Matcher         | Description                                                                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `os`            | require specific operating systems; currently either `linux`, `mac`, or `windows`                                                                                                   |
+| `tag`           | require a specific tag                                                                                                                                                              |
+| `mode`          | only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
+| `app`           | match applications by explicitly declared, well-known name                                                                                                                          |
+| `app.name`      | match applications by name (TODO where does Talon read this out?)                                                                                                                   |
+| `app.exe`       | match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`                                                                                                  |
+| `app.bundle`    | match applications by their MacOS bundle, like `com.mozilla.Firefox`                                                                                                                |
+| `title`         | match a window title                                                                                                                                                                |
+| `code.language` | specify a currently active programming language                                                                                                                                     |
+| `language`      | specify the particular human language (e.g. `pt_BR`, `en`) for the file. Defaults to `en` if not specified. Currently only needed for multilingual webspeech.                       |
+| `hostname`      | match the 'hostname' of your machine (from the `hostname` CLI command on Linux/Mac). Useful if you want to have a single set of custom config but have some machine-specific parts. |
 
-`tag`
-: require a specific tag
-
-`mode`
-: only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)
-
-`app`
-: match applications by explicitly declared, well-known name
-
-`app.name`
-: match applications by name (TODO where does Talon read this out?)
-
-`app.exe`
-: match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`
-
-`app.bundle`
-: match applications by their MacOS bundle, like `com.mozilla.Firefox`
-
-`title`
-: match a window title
-
-`code.language`
-: specify a currently active programming language
-
-`language`
-: specify the particular human language (e.g. `pt_BR`, `en`) for the file. Defaults to `en` if not specified. Currently only needed for multilingual webspeech.
-
-`hostname`
-: match the 'hostname' of your machine (from the `hostname` CLI command on Linux/Mac). Useful if you want to have a single set of custom config but have some machine-specific parts.
-
-Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](/Customization/scopes) below for more information.
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](./Talon%20Framework/scopes) below for more information.
 
 Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 
 We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo'), or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
 
-The next thing to talk about is what happens when we have multiple lines in the context header. Talon lets you combine these together as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` is active or the operating system is `windows` and the app `notepad_app` is not active.
+Talon lets you combine multiple lines in the context header. This acts as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` is active or the operating system is `windows` and the app `notepad_app` is not active.
 
 ```config
 # paint_app or notepad_app
@@ -133,18 +116,18 @@ This command, for example, will press the shortcut alt-shift-down whenever you s
 
 Rules have a versatile syntax that is like a word based regex:
 
-| Syntax                   | Description                        | Matches                   |     |
-| ------------------------ | ---------------------------------- | ------------------------- | --- |
-| `foo`                    | Words                              | “foo”                     |     |
-| `[foo]`                  | Optional                           | “foo” or null (nothing)   |     |
-| `foo*`                   | Zero or more                       | “”, “foo”, “foo foo”, ... |     |
-| `foo+`                   | One or more                        | “foo”, “foo foo”, ...     |     |
-| `foo             \| bar` | Choice                             | “foo”, “bar”              |
-| `(foo)`                  | Precedence/grouping                | “foo”                     |     |
-| `{some_list}`            | [List](./lists_and_captures.md)    | Depends on the list.      |     |
-| `<some_capture>`         | [Capture](./lists_and_captures.md) | Depends on the capture.   |     |
-| `^foo`                   | Start anchor                       | See below                 |     |
-| `foo$`                   | End anchor                         | See below                 |     |
+| Syntax                   | Description                         | Matches                   |     
+| ------------------------ | ----------------------------------- | ------------------------- |     
+| `foo`                    | Words                               | “foo”                     |     
+| `[foo]`                  | Optional                            | “foo” or null (nothing)   |     
+| `foo*`                   | Zero or more                        | “”, “foo”, “foo foo”, ... |     
+| `foo+`                   | One or more                         | “foo”, “foo foo”, ...     |     
+| `foo             \| bar` | Choice                              | “foo”, “bar”              |    
+| `(foo)`                  | Precedence/grouping                 | “foo”                     |     
+| `{some_list}`            | [List](Talon%20Framework/lists.md)    | Depends on the list.      |     
+| `<some_capture>`         | [Capture](Talon%20Framework/lists.md) | Depends on the capture.   |     
+| `^foo`                   | Start anchor                        | See below                 |     
+| `foo$`                   | End anchor                          | See below                 |     
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 
@@ -261,7 +244,7 @@ some [<user.letter>] command:
 
 .talon files can do a few other things aside from defining voice commands.
 
-The most common usage after voice commands is to adjust [settings](/Customization/settings). The following changes the given setting values when the context header matches:
+The most common usage after voice commands is to adjust [settings](./Talon%20Framework/settings). The following changes the given setting values when the context header matches:
 
 ```config
 title: /my app/
@@ -272,7 +255,7 @@ settings():
     another.setting = 432
 ```
 
-You can also activate [tags](/Customization/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
+You can also activate [tags](./Talon%20Framework/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
 
 ```config
 title: /my app/
@@ -297,6 +280,6 @@ key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from r
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
 
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](./key_action.md) wiki page.
+The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](Talon Library Reference/key_action.md) wiki page.
 
 Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.

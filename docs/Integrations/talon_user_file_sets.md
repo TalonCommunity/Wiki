@@ -12,7 +12,6 @@ If intended for public consumption, these Talon user file sets are mostly annouc
 
 The easiest way to control your mouse with Talon is to use an eye tracker. But this is fairly expensive hardware. There are several voice/noise only options in addition to the 'mouse grid' built in to [Talon Community](https://github.com/talonhub/community).
 
-- [gaze-ocr](https://github.com/wolfmanstout/talon-gaze-ocr) for advanced cursor control using eye tracking and text recognition (OCR)
 - [Dense Mouse Grid](https://github.com/tararoys/dense-mouse-grid/tree/dense_mouse_grid_2/dense_mouse_grid) Less obtrusive overlay combining a letter and number grid to position the mouse.
 - [Flex Mouse Grid](https://github.com/brollin/flex-mouse-grid) Flex Mouse Grid extends the functionality of Dense Mouse Grid.
 - [Alphabet Soup Mouse](https://github.com/tararoys/modified_full_mouse_grid) This mouse overlays a very dense grid of letters onto the screen for very precise mouse placement. Created by Aegis, TimoTimo, and TaraRoys.
@@ -48,8 +47,7 @@ Talon user sets that allow you to build voice commands more easily or define com
 
 ## Other
 
-- [AXKit](https://github.com/phillco/talon-axkit) (macOS only) to enhance Talon with native OS accessibility integrations
-- [Talon AI Tools](https://github.com/C-Loftus/talon-ai-tools): integrate the OpenAI API (ChatGPT) & GitHub Copilot to fix dictation errors or speed up your workflow
+
 - [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 - [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4) A basic script for writing subtitles to a file for a screencapture.
 - [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
@@ -57,4 +55,3 @@ Talon user sets that allow you to build voice commands more easily or define com
 - [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
 - [Window Tweak](https://github.com/codecat555/talon-window-tweak) A Talon module for moving and resizing windows using voice commands.
 - [Talon WM](https://github.com/lunixbochs/talon_wm) Basic tiling window manager implementation in Talon.
-- [Software that pairs well with Talon](./other_integrations) Not a Talon user file set per-se, but other things you might find useful.
