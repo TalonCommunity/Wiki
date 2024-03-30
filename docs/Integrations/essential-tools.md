@@ -8,4 +8,4 @@
 | [Parrot](https://github.com/chaosparrot/parrot.py)           | Control Talon with noises and clicks (requires Talon beta)                                                                  |
 | [Talon-ai-tools](https://github.com/c-loftus/talon-ai-tools) | Use LLMs to fix dictation errors, manipulate text, and speed up your workflow                                               |
 | [AXKit](https://github.com/phillco/talon-axkit)              | Enhance Talon with native OS accessibility integrations (macOS only)                                                        |
-| [Talon-HUD](https://github.com/chaosparrot/talon_hud)        | Show visual information about your current state of Talon.                                                                 |
+| [Talon-HUD](https://github.com/chaosparrot/talon_hud)        | Show visual information about your current state of Talon.                                                                  |
