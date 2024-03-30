@@ -13,6 +13,7 @@ This wiki belongs to the Talon Community, and contributions are welcome from any
 ## Build and view changes locally
 
 Install `npm` then run the following
+
 ```
 npm i
 npm start

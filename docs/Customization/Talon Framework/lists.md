@@ -52,7 +52,6 @@ One other fact of interest is that there's no merging of lists if multiple conte
 
 Because list contents can only be replaced in their entirety, end users can have a harder time overriding the list if they want to add one or two more entries. They would need to copy paste the contents of the source list and then add their entries to the end. See the captures section below for a pattern you can use to make this use case easier.
 
-
 ## Advanced List Features
 
 ### Dynamic Lists

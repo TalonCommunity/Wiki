@@ -25,4 +25,3 @@ The next key component is the implementation of behaviour via [Actions](actions.
 One of the primary modes of input to Talon is through voice commands defined in `.talon` files. To implement commands containing dynamic 'variables' (e.g. 'allcaps some arbitrary words') you can utilize [Lists and captures](lists.md)
 
 In addition to the above we also have the concept of [Settings](settings.md). Built-in and custom settings are used by actions to configure their behaviour (e.g. to change the delay between key presses in the `insert()` action).
-
