@@ -4,14 +4,14 @@ Modes are property you can match in your `.talon` file context header. They are 
 
 The built in 'command' mode is special in that it is an implicit requirement in all `.talon` files that haven't explicitly specified a mode. So this `.talon` file would be active in command mode:
 
-```config
+```talon
 -
 insert test: "command mode active"
 ```
 
 Whereas this one would only be active in dictation mode:
 
-```config
+```talon
 mode: dictation
 -
 insert mode: "dictation mode active"
@@ -32,13 +32,13 @@ mod.mode("single_application", desc="Non-multitasking mode (e.g. computer games)
 
 Then you might make a couple of generic 'mode entry' and 'mode exit' commands:
 
-```config
+```talon
 ^single application mode$:
     mode.enable("user.single_application")
     mode.disable("command")
 ```
 
-```config
+```talon
 mode: user.single_application
 -
 ^command mode$:
@@ -50,7 +50,7 @@ Note that I've shadowed the existing `command mode` command from [Talon Communit
 
 After that we could define a set of commands which would be available in our game:
 
-```config
+```talon
 mode: user.single_application
 title: /My Game/
 -

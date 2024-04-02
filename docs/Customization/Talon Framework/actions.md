@@ -2,7 +2,7 @@
 
 An action is a specially registered Python function that can be called by Talon voice commands. The code in `.talon` files ends up using built in or user defined actions for all its behavior. Consider this example:
 
-```config
+```talon
 my command:
     text = "hello"
     mangled_text = user.mangle(text)

@@ -73,7 +73,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 
 With the talon beta, the elegato foot pedal can be used as follows:
 
-```config
+```talon
 deck(pedal_left): print("left pedal")
 deck(pedal_middle): print("middle pedal")
 deck(pedal_right): print("right pedal")
@@ -85,7 +85,7 @@ With gamepad support in Talon you can recieve input from gamepads and/or joystic
 
 Gamepad presses can be captured in .talon files similar to key presses
 
-```config
+```talon
 gamepad(dpad_up):           print("dpad_up")
 gamepad(dpad_down):         print("dpad_down")
 gamepad(east):              print("east/B")

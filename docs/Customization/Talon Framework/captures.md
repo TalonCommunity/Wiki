@@ -68,7 +68,7 @@ This code first implements a new capture which matches on any of the compass dir
 
 **`game_one.talon`**:
 
-```config
+```talon
 move <user.dpad_input>: user.dpad_move(user.dpad_input)
 attack <user.dpad_input>: user.dpad_attack(user.dpad_input)
 ```

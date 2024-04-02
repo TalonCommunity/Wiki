@@ -14,7 +14,7 @@ The primary way to extend talon is using `.talon` files placed anywherein the `u
 
 An example `.talon` file might look like this:
 
-```````config
+```````talon
 # Comments start with a # sign, and they must always be on their own line.
 #
 # This part, the context header, defines under which circumstances this file applies.
@@ -73,27 +73,27 @@ We've already indicated what requirements and scopes are, so lets move on to the
 
 Talon lets you combine multiple lines in the context header. This acts as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` is active or the operating system is `windows` and the app `notepad_app` is not active.
 
-```config
+```talon
 # paint_app or notepad_app
 app: paint_app
 app: notepad_app
 ```
 
-```config
+```talon
 # (paint_app or notepad_app) and windows
 app: paint_app
 os: windows
 app: notepad_app
 ```
 
-```config
+```talon
 # (paint_app and windows) or notepad_app
 app: paint_app
 and os: windows
 app: notepad_app
 ```
 
-```config
+```talon
 # paint_app and not windows
 app: paint_app
 not os: windows
@@ -105,7 +105,7 @@ So without modifiers, requirements of the same type (e.g. two apps) are OR-ed to
 
 A voice command has the format `RULE: BODY`, where `RULE` determines what words activate the command, and `BODY` defines what the command does when activated:
 
-```config
+```talon
 # -------- RULE ----------------  ------ BODY -------
 ([channel] unread next | goneck): key(alt-shift-down)
 ```
@@ -139,7 +139,7 @@ In general you shouldn't anchor rules since it prevents the user from chaining t
 
 The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
 
-```config
+```talon
 # The following captures are implemented in the https://github.com/talonhub/community user file set:
 #
 # <user.letter> is a list mapping words like 'plex' or 'gust' to latin letters like 'x' or 'g'
@@ -188,7 +188,7 @@ In the above we can see that the lists and captures in the rule part are bound t
 
 In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates all available syntax. See the inline comments for what everything does:
 
-```config
+```talon
 # Comments must be on their own line (optionally preceeded by whitespace)
 some [<user.letter>] command:
     # or operator is used to deal with optional or alternative command parts. It works as the null
@@ -246,7 +246,7 @@ some [<user.letter>] command:
 
 The most common usage after voice commands is to adjust [settings](./Talon%20Framework/settings). The following changes the given setting values when the context header matches:
 
-```config
+```talon
 title: /my app/
 -
 settings():
@@ -257,7 +257,7 @@ settings():
 
 You can also activate [tags](./Talon%20Framework/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
 
-```config
+```talon
 title: /my app/
 -
 tag(): user.my_tag
@@ -267,7 +267,7 @@ tag(): user.my_tag
 
 Another feature is the ability to bind keyboard shortcuts.
 
-```config
+```talon
 title: /my app/
 -
 # Show notification saying the key was pressed and prevent other apps from receiving the key event

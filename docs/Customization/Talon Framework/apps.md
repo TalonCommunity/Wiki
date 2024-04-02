@@ -34,7 +34,7 @@ ctx.apps = ['fancyedit']
 
 Use the well-known app - **`fancyedit.talon`:**
 
-```config
+```talon
 app: fancyedit
 -
 my fancy editor command: key(ctrl-alt-shift-y)
