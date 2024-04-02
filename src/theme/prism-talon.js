@@ -7,4 +7,3 @@ Prism.languages.talon = {
     greedy: true,
   },
 };
-
