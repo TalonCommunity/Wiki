@@ -44,14 +44,14 @@ Open up a text editor and save an empty file called `simple_test.talon` somewher
 
 OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
 
-```config
+```talon
     select everything:
       key(cmd-a)
 ```
 
 If you're on Windows or Linux you can use this instead:
 
-```config
+```talon
     select everything:
       key(ctrl-a)
 ```
