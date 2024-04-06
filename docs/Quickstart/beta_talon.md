@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Talon Beta Version
 
 The beta version of Talon is available for Windows, Mac, and Linux, and provides:
