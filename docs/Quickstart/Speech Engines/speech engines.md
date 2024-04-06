@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Speech Engines
 
 Talon uses a speech recognition engine that translates voice audio to text. The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon and want to use Talon with Dragon or need a speech engine with language support other than English.
@@ -16,16 +20,17 @@ The Professional version of Dragon for Windows is recommended (but not strictly 
 
 ### Dictation Engines for Additional Language Support
 
-As of March 2021, W2L only supports English. If you need to dictate text in another language, the Talon beta supports the following options:
+As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, the [Talon Beta](../beta_talon) supports the following options:
 
-| Engine    | Platform      | Description                                                                                                                                       | Requirements                                               |
-| --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------- |
-| webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on Slack                      | Needs [Talon Beta](beta_talon.md) |
-| vosk      | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/.](https://alphacephei.com/vosk/)                                                              | See [Github Project](https://github.com/mqnc/talon_german) | Needs [Talon Beta](beta_talon.md) |
+| Engine    | Platform      | Description                                                                                                                                       | Requirements                                     |
+| --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on [Slack](https://talonvoice.com/chat)            |
+| Vosk      | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/](https://alphacephei.com/vosk/)                                                          | See [Github Project](https://github.com/mqnc/talon_german) |
+
 
 :::note
 
-You cannot use webspeech or vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
+You cannot use Webspeech or Vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
 
 The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over Conformer.
 
