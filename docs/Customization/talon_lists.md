@@ -10,7 +10,7 @@ A `.talon-list` doesn't require a `:` if the key is the same as the value. The r
 
 The following example shows a `.talon-list` file that defines a few special characters. Note how the string doesn't need to be wrapped in quotations and can either be just itself or a mapping to a different string.
 
-```config
+```talon
 list: user.key_special
 -
 enter
@@ -32,6 +32,6 @@ mod.list("key_special", "The list of special keys we can input through voice com
 
 We could then use this list in a `.talon` file like so:
 
-```config
+```talon
 {user.key_special}:              key(symbol)
 ```

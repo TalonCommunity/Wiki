@@ -43,7 +43,7 @@ Talon lets you configure how long it will wait after you stop speaking before tr
 - Speak faster, especially after consonants like "p" that involve stopping airflow. In utterances like "stop it", there is a natural pause between "stop" and "it". Some people have just slightly longer stops than others, but can avoid it when preparing to talk fluently.
 
 - Increase Talon's wait time. This has the disadvantage of making all commands react slower, but it _can_ eliminate the cutoffs. Do this by adding a `settings.talon` file to your user directory with the following content:
-  ```config
+  ```talon
   settings():
       # minimum silence time (in seconds) before speech is cut off, default 0.3
       speech.timeout = 0.4

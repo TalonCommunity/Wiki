@@ -40,7 +40,7 @@ This sets up a list which matches a list of standard exceptions for the target p
 
 **`exceptions.talon`:**
 
-```config
+```talon
 exception {user.exception_class}: insert(user.exception_class)
 ```
 

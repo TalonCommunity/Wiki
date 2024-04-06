@@ -51,7 +51,7 @@ Talon's icon should show up in the menu bar in the upper right corner of your sc
 
 ### Check that Talon is Awake
 
-When Talon is running, it will be in one of a few different [modes](../Basic%20Usage/basic_usage#switch-between-modes). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
+When Talon is running, it will be in one of a few different [modes](../Basic%20Usage/basic_usage). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
 
 If you are trying to use Talon commands and Talon is not responding, make sure Talon is not in sleep mode. The Talon icon in the menubar provides some visual cue as to what mode Talon is in:
 

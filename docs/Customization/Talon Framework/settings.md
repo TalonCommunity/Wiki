@@ -28,7 +28,7 @@ The following example shows how you would change the value for that setting in a
 
 `setting.talon`
 
-```config
+```talon
 -
 settings():
     user.my_user_file_set_horizontal_position = 50
@@ -62,7 +62,7 @@ settings.register("", settings_change_handler)
 
 In a `.talon` file, a `settings()` block can be used to alter settings, both for Talon and for user modules. For example:
 
-```config
+```talon
 app: Emacs
 -
 settings():

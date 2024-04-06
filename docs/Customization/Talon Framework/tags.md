@@ -21,7 +21,7 @@ Next let's define a set of generic voice commands we think will apply to all app
 
 **`tabs.talon`:**
 
-```config
+```talon
 # This selects for the tag 'user.tabs'.
 tag: user.tabs
 -
@@ -36,7 +36,7 @@ Finally, let's activate these voice commands for the firefox application:
 
 **`firefox.talon`:**
 
-```config
+```talon
 app: Firefox
 -
 # This activates the tag 'user.tabs'.

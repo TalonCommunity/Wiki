@@ -24,7 +24,7 @@ cron.interval("1m", my_scope_updater.update)
 
 `test.talon`
 
-```config
+```talon
 # This matcher can either be a plain string or a regex
 user.current_time: /AM$/
 -
