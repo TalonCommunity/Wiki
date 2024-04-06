@@ -19,7 +19,6 @@ Talon has three basic modes by default:
 | `dictation mode` | Switch to dictation mode.   |
 | `command mode`   | Switch to command mode.     |
 
-
 ## Help Commands
 
 | Command                      | Description                                                      |
