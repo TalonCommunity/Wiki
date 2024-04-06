@@ -22,11 +22,10 @@ The Professional version of Dragon for Windows is recommended (but not strictly 
 
 As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, the [Talon Beta](../beta_talon) supports the following options:
 
-| Engine    | Platform      | Description                                                                                                                                       | Requirements                                     |
-| --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| Webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on [Slack](https://talonvoice.com/chat)            |
-| Vosk      | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/](https://alphacephei.com/vosk/)                                                          | See [Github Project](https://github.com/mqnc/talon_german) |
-
+| Engine    | Platform      | Description                                                                                                                                       | Requirements                                                         |
+| --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Webspeech | Win/Mac/Linux | Excellent accuracy, but added latency. Uses your browser as a voice engine; requires an internet connection. Supports many non-English languages. | See pinned messages in #beta on [Slack](https://talonvoice.com/chat) |
+| Vosk      | Win/Mac/Linux | Supported languages: [https://alphacephei.com/vosk/](https://alphacephei.com/vosk/)                                                               | See [Github Project](https://github.com/mqnc/talon_german)           |
 
 :::note
 

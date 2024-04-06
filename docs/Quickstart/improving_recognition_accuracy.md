@@ -2,7 +2,6 @@
 sidebar_position: 6
 ---
 
-
 # Improving Recognition Accuracy
 
 Improving recognition accuracy never hurts. Many people even have to tweak something to get a good experience. Here we show you what you can do.
