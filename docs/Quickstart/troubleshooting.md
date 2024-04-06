@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # Troubleshooting
 
 ## Nothing Happens When I Speak

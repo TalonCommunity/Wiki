@@ -29,7 +29,7 @@ Talon uses a speech recognition engine that translates voice audio to text. To i
 
 :::note
 
-The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon or need an engine with support additional languages other than English. For information about additional speech engines, see the [speech engine page](speech_engines.md).
+The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon or need an engine with support additional languages other than English. For information about additional speech engines, see the [speech engine page](Speech Engines/speech engines.md).
 
 :::
 
@@ -59,7 +59,7 @@ If at any point you need help with your Talon setup, join the [Talon Voice Slack
 
 Once the basics somewhat work for you, you'll likely want to improve your experience using Talon:
 
-- For users who want earlier access to new features, priority support, and access to additional [speech engines](speech_engines.md), install the [beta version](beta_talon.md).
+- For users who want earlier access to new features, priority support, and access to additional [speech engines](Speech Engines/speech engines.md), install the [beta version](beta_talon.md).
 - [Improve Recognition Accuracy](improving_recognition_accuracy): Better accuracy never hurts. Many people have to tweak something.
 - [Customize Talon](../Customization/basic_customization.md): learn about how to configure Talon to your liking.
 - [Talon-Related Resources](../Integrations/talon_related_resources): a varied list of resources for Talon uses.
