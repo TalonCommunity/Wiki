@@ -28,7 +28,7 @@ app: Teams
 # If there is no dash, then the body starts immediately.
 
 # These define voice commands.
-([channel] unread next | goneck): key(alt-shift-down)T
+([channel] unread next | goneck): key(alt-shift-down)
 insert code fragment:
     # A single command can perform a sequence of actions.
     insert("``````")
