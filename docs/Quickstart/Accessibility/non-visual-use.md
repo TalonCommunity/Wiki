@@ -6,7 +6,7 @@ Please note that Talon is in rapid development and is largely community supporte
 
 ## How to get started
 
-- Setup Talon according to the standrd [quickstart](../getting_started.md)
+- Setup Talon according to the standard [quickstart](../getting_started.md)
   - Install Talon
   - Install a speech recognition engine
   - Install the [community user file set](https://github.com/talonhub/community)
