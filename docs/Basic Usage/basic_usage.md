@@ -10,6 +10,8 @@ Talon has three basic modes by default:
 - In **dictation mode**, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems.
 - In **sleep mode**, Talon will do nothing until it hears a commands that wakes it up.
 
+To keep track of what mode you are in with a visual icon, enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
+
 | Command          | Description                 |
 | ---------------- | --------------------------- |
 | `wake up`        | Enable speech recognition.  |
