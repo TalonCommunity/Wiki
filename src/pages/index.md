@@ -12,14 +12,14 @@ The goal of this wiki is to provide information and documentation for the users 
 
 ## Wiki Navigation
 
-| If you are looking for:                           | See:                                                                 |
-| ------------------------------------------------- | -------------------------------------------------------------------- |
-| Information on getting started with Talon         | [Getting Started](/Quickstart/getting_started)                       |
-| How to customize Talon                 | [Basic Customization](/Customization/basic_customization) |
-| Troubleshooting help                              | [Troubleshooting](/Quickstart/troubleshooting)                       |
-| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware)                                     |
-| Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)                 |
-| Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                               |
+| If you are looking for:                           | See:                                                      |
+| ------------------------------------------------- | --------------------------------------------------------- |
+| Information on getting started with Talon         | [Getting Started](/Quickstart/getting_started)            |
+| How to customize Talon                            | [Basic Customization](/Customization/basic_customization) |
+| Troubleshooting help                              | [Troubleshooting](/Quickstart/troubleshooting)            |
+| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware)                          |
+| Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)      |
+| Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                    |
 
 ## Talon Slack
 
