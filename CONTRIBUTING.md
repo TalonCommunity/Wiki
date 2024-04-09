@@ -1,4 +1,5 @@
 # Contributing to this Wiki
+
 This is a wiki for [Talon](https://talonvoice.com/), a hands-free input replacement for using a computer. These docs are rendered and deployed to:
 
 [https://talon.wiki/](https://talon.wiki)
@@ -6,83 +7,19 @@ This is a wiki for [Talon](https://talonvoice.com/), a hands-free input replacem
 Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interested in or using Talon. If you want to support the project, consider donating to the [Patreon](https://www.patreon.com/lunixbochs).
 
 ## Who can Contribute
-This wiki belongs to the Talon Community, and contributions are welcome from anyone. Any member of the TalonCommunity GitHub organization can merge pull requests. Talon Community members can push directly to the `main` branch, which is the deployed branch.
 
-## How to Contribute
-Content is formatted using [markdown syntax](https://www.markdownguide.org/basic-syntax/). There are multiple ways to contribute content:
+This wiki belongs to the Talon Community, and contributions are welcome from anyone.
 
-### Using Prose.io, a GitHub content editor
-Links to edit content using `Prose.io` are embedded into the site in the top right corner:
+## Build and view changes locally
 
-![screenshot of prose links](media/prose_links.png)
-
-Clicking these links should drop you into a content editor in your browser:
-
-![screenshot prose editor](media/prose_editor.png)
-
-There's a preview button to see your changes rendered in markdown:
-
-![screenshot prose preview](media/prose_preview.png)
-
-#### Images
-Images can be uploaded either by dragging and dropping the image into the prose editor or by clicking the image button in the markdown editor bar. These photos will be uploaded to the `media` directory and you should see some markdown generated for you:
+Install `npm` then run the following
 
 ```
-![prose_image_upload.png](media/prose_image_upload.png)
+npm i
+npm start
 ```
 
-#### New Pages
-Prose by default suggests a filename with a date, and there isn't a way currently to turn of this behavior. Please remove the date from the suggested filename, for example don't use `2020-06-16-your-filename.md` and instead name it without a date like `your-filename.md`. Remember to use the `.md` file extension. Files without the extension will not be rendered by jekyll.
+## Checklist
 
-#### Saving Changes
-Click the save button, which will commit your changes. If you are a member of the Talon Community github organization, your changes will be committed directly to the deploy branch `main` and will show up https://talon.wiki once the site is rebuilt. If you are not a member of Talon Community, saving your changes will create a Pull Request on Github. Any member of Talon Community can merge the changes. Please ping someone on your pull request or find someone in the `#talon-docs` channels of the Talon Slack.
-
-### Using GitHub UI
-There are links in the top right corner of the site to edit the content in GitHub. Clicking `Add new`, for example, will drop you into a GiHub UI for adding a new file:
-
-![screenshot github editor](media/github_editor.png)
-
-
-The GitHub UI provides an option to either commit directly to `main` branch (if you are a member of Talon Community) or make a new branch and submit a pull request, which can be merged from a member of TalonCommunity.
-
-### Using git
-
-#### New Pages
-New pages can be added to the root directory - no need to add to any subfolder. Pages should include the `.md` file extension or they will not be rendered.
-
-#### Images
-Add images to the `media` directory and include in markdown using the syntax:
-
-```
-![prose_image_upload.png](media/prose_image_upload.png)
-```
-
-## Deploying Changes
-All changes merged to `main` branch will be automatically deployed using Netlify to the domain `talon.wiki`. There is some delay between merge and when site is refreshed with the new content, so expect changes to take a minute or two. If you are a member of TalonCommunity, you have write access and can merge your own changes.
-
-## Advanced
-**If you are only looking to add content to the wiki, you should not need to do any of the following setup. This is only relevant if you want to make changes to the wiki site itself or you want to preview locally instead of using prose or GitHub UI.**
-
-### How this Wiki is Built
-
-This wiki is built using:
-- [jekyll](https://jekyllrb.com/docs/), a static site generator
-- [Netlify](https://www.netlify.com), to host the site
-- [git-wiki-theme](https://github.com/Drassil/git-wiki-theme), a wiki theme for jekyll
-- [prose.io](https://github.com/prose/prose), a content editor for GitHub
-
-The theme is built directly into the repository so we could patch any changes as needed.
-
-### Making Custom Style Changes
-This wiki is built using a custom theme, but it is possible to override any of the style in `overrides/css/custom.css`.
-
-### Previewing Changes Locally
-Follow the instructions in the [Quickstart jekyll docs](https://jekyllrb.com/docs/) to setup a Ruby environment and install bundler.  To build the site and make it available to a local server, run:
-
-```
-bundle exec jekyll serve
-```
-
-and open `http://localhost:4000` in a browser.
-
-Some functionality, such as the editing with prose, cannot be easily tested locally.
+- Use relative markdown links
+- run `npm run build` and make sure the build was successful (i.e. you didn't break any links)
