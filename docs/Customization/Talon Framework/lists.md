@@ -41,7 +41,7 @@ This sets up a list which matches a list of standard exceptions for the target p
 **`exceptions.talon`:**
 
 ```talon
-exception {user.exception_class}: insert(user.exception_class)
+exception {user.exception_class}: insert(exception_class)
 ```
 
 We make use of our list in the above .talon file by referring to it with the curly brace syntax.
