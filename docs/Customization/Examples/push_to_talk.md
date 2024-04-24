@@ -9,3 +9,11 @@ key(f9:down):
 key(f9:up):
     speech.disable()
 ```
+
+To toggle Talon on one key press, instead of holding it down:
+
+```talon
+key(f9):
+    speech.toggle()
+
+```
