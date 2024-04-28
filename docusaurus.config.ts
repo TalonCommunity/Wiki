@@ -50,7 +50,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/talon-community-logo.png",
+    image: "img/talon-community-logo-social.png",
 
     docs: {
       sidebar: {
