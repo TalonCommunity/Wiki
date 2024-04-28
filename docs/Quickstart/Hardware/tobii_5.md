@@ -18,6 +18,7 @@ Regardless of which OS you will be using when you use your eye tracker, the init
 ### Calibration Issues
 
 - If your displays are set up as duplicate (e.g. laptop with monitor plugged in), the calibration will be wonky as it will work off of your laptop's original screen rather than your monitor. Swap to "show only on monitor" temporarily for calibration.
+- If the dots show up further away from the top left and right corners of your screen, then Talon is using a smaller part of the screen just above the tracker because your screen is too big for the tracker to reliably calibrate with.
 
 ### Next steps
 
