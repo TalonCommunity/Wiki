@@ -8,7 +8,7 @@ The code below creates a transparent canvas over the entire screen and paints a 
 from talon.canvas import Canvas
 from talon.types import Rect
 from talon import ui
-from talon.skia.canvas import Canvas as SkiaCanvas 
+from talon.skia.canvas import Canvas as SkiaCanvas
 
 def on_draw(c: SkiaCanvas):
     c.paint.color = "FF0000"
@@ -25,7 +25,7 @@ canvas.focused = False
 canvas.cursor_visible = True
 
 # Add a callback to specify how the canvas should be drawn
-canvas.register("draw", on_draw) 
+canvas.register("draw", on_draw)
 
 # Freeze the canvas so it doesn't repeatedly refresh
 canvas.freeze()
