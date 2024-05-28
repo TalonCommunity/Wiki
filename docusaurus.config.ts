@@ -52,6 +52,18 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/talon-community-logo-social.png",
 
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'H33NOZZCSH',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'dffe48cba92d4417efcc8f3cf8f40c49',
+
+      indexName: 'talon',
+
+    },
+
+
     docs: {
       sidebar: {
         hideable: true,
