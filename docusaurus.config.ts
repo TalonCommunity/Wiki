@@ -47,20 +47,40 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  themes: [
+    
+    [
+      // https://github.com/easyops-cn/docusaurus-search-local
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        docsRouteBasePath   : "/",
+        indexDocs           : true,
+        removeDefaultStemmer: true
+      }),
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: "img/talon-community-logo-social.png",
 
-    algolia: {
-      // The application ID provided by Algolia
-      appId: "H33NOZZCSH",
+    /* 
+    algolia is not working; we instead use local search. 
+    The local api key is here for reference if someone tries to get it working
+    */
+    // algolia: {
+    //   // The application ID provided by Algolia
+    //   appId: 'H33NOZZCSH',
 
-      // Public API key: it is safe to commit it
-      apiKey: "dffe48cba92d4417efcc8f3cf8f40c49",
+    //   // Public API key: it is safe to commit it
+    //   apiKey: 'dffe48cba92d4417efcc8f3cf8f40c49',
 
-      indexName: "talon",
-    },
+    //   indexName: 'talon',
+
+    // },
 
     docs: {
       sidebar: {
@@ -72,6 +92,8 @@ const config: Config = {
         '<b> You are viewing the new refactor of the Talon community wiki! The previous site can still be accessed via <a href="https://old.talon.wiki">https://old.talon.wiki</a></b> ✨',
       isCloseable: true,
     },
+
+   
 
     navbar: {
       logo: {
