@@ -6,6 +6,16 @@ sidebar_position: 10
 
 This section contains some additional miscellaneous information which may be useful for developing and debugging Talon scripts.
 
+## Dark mode help menus
+
+Talon has a dark mode feature for its menus. To enable it, add the following to your `settings.talon()` file:
+
+```py
+settings():
+    # Enables dark mode help menus
+    imgui.dark_mode = true
+```
+
 ## REPL and logging
 
 Talon comes with a Python Read Eval Print Loop (REPL) which can be accessed from the Scripting menu. This lets you try out actions and use the introspection functions mentioned below.
