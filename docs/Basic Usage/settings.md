@@ -1,6 +1,6 @@
 # Settings
 
-Talon and the community repository both contain many settings for customization. A setting can be set within a `.talon` file by placing it within a `settings():` block.
+Talon's behavior can be changed by changing the value of settings within a `.talon` file inside a `settings():` block.
 
 ```talon
 # Example talon file
