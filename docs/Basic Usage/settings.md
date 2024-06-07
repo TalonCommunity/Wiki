@@ -17,7 +17,7 @@ Talon settings can be applied from any `.talon` file in the user directory, rega
 
 :::important
 
-If the same setting is defined multiple times, Talon will use the setting value in the `.talon` file with the most specific context match. 
+If the same setting is defined multiple times, Talon will use the setting value in the `.talon` file with the most specific context match.
 
 :::
 
@@ -53,7 +53,7 @@ If the same setting is defined multiple times, Talon will use the setting value 
 | insert_wait     | 0             | Increase this if characters seem to be jumbled in a specific app when typing whole sentences. Default is 0.                                                                                                                                                                                                                                                                                   |
 | key_hold        | 16            | Increase this if you're playing a game and some keys aren't registering at all. You should probably increase it in 16ms increments, e.g. set it to 16ms or 32ms.                                                                                                                                                                                                                              |
 | key_wait        | 1             | Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the slowest overall keypress rate. Default is 1.0 in milliseconds.                                                                                                     |
-| speech.engine   |               | Determines which [speech engine](../Quickstart/Speech%20Engines/speech%20engines.md) talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'.                                                                                                                               |
+| speech.engine   |               | Determines which [speech engine](../Quickstart/Speech%20Engines/speech%20engines.md) talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'.                                                                                                                                                                 |
 | speech.timeout  |               | This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the amount of time you can pause between saying 'phrase' and the following phrase. It is measured in seconds; the default is 0.300, i.e. 300 milliseconds. |
 
 To add your own additional custom settings for changing Talon behavior, see [the settings customization page](../Customization/Talon%20Framework/settings.md)
