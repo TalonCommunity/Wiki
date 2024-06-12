@@ -86,11 +86,11 @@ const config: Config = {
         hideable: true,
       },
     },
-    announcementBar: {
-      content:
-        '<b> You are viewing the new refactor of the Talon community wiki! The previous site can still be accessed via <a href="https://old.talon.wiki">https://old.talon.wiki</a></b> ✨',
-      isCloseable: true,
-    },
+    // announcementBar: {
+    //   content:
+    //     '<b> You are viewing the new refactor of the Talon community wiki! The previous site can still be accessed via <a href="https://old.talon.wiki">https://old.talon.wiki</a></b> ✨',
+    //   isCloseable: true,
+    // },
 
     navbar: {
       logo: {
