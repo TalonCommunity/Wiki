@@ -38,7 +38,7 @@ In addition to [Talon Community](https://github.com/talonhub/community), you may
 ## 4: Test your Talon Setup
 
 - Try a few [basic commands](../Basic%20Usage/basic_usage.md).
-- If needed, try ways to [improve recognition accuracy](improving_recognition_accuracy)
+- If needed, try ways to [improve recognition accuracy](improving_recognition_accuracy.md)
 - [Customize Talon](../Customization/basic_customization.md): learn about how to configure Talon to your liking.
 - For earlier access to new features, priority support, and access to additional [speech engines](./Speech%20Engines/speech%20engines.md), install the [beta version](beta_talon.md).
 
