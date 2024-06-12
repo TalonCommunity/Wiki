@@ -19,7 +19,7 @@ You can also install and run Talon by following the [official installation instr
     - This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
 -  To install the speech engine, you must use Talon's tray icon:
    * If you use stock Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) to see it
-   * If you use i3 or a system tray that doesn't support the `StatusNotifierItem` protocol, install [snixembed](https://git.sr.ht/~steef/snixembed) to add support. 
+   * If you use i3 or a system tray that doesn't support the `StatusNotifierItem` protocol, install [snixembed](https://git.sr.ht/~steef/snixembed) to add support.
 
 </details>
 
