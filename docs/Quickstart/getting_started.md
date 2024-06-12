@@ -12,7 +12,6 @@ You can also install and run Talon by following the [official installation instr
 
 ## 1: [Download Talon](https://talonvoice.com/)
 
-
 <details>
   <summary>Notes for Linux Users</summary>
   - Talon, like many tools for automation or accessibility, __does not support Wayland__
@@ -27,7 +26,6 @@ You can also install and run Talon by following the [official installation instr
 ## 2: Install a speech recognition engine
 
 Talon uses a local speech recognition engine that translates voice audio to text. To install your speech engine, click the Talon tray icon and select `Speech Recognition → Conformer D`. For other engine options, see the [speech engine page](./Speech%20Engines/speech%20engines.md)
-
 
 ## 3: Install a Talon user file set
 
@@ -47,5 +45,3 @@ In addition to [Talon Community](https://github.com/talonhub/community), you may
 ## Join the Talon Slack
 
 If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
-
-
