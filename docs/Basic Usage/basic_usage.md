@@ -88,7 +88,7 @@ These commands will open up a csv in your default text editor that you can edit 
 | `play previous` |
 | `play`          |
 
-## Controller the Tobii eye tracker
+## Controlling the Tobii eye tracker
 
 | Commands          | Description                          |
 | ----------------- | ------------------------------------ |
