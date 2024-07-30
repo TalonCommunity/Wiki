@@ -33,5 +33,5 @@ mod.list("key_special", "The list of special keys we can input through voice com
 We could then use this list in a `.talon` file like so:
 
 ```talon
-{user.key_special}:              key(symbol)
+{user.key_special}:              key(key_special)
 ```
