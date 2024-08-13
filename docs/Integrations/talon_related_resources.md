@@ -6,6 +6,7 @@ These videos/channels teach you how to use Talon or particular Talon user file s
 
 - [Tara's Talon Youtube Channel](http://www.youtube.com/tararoys) A channel containing many demos from past Talon Screenshare sessions. Also installation videos for Windows, MacOSX, and Linux.
 - [Pokey's YouTube channel](https://www.youtube.com/@PokeyRuleJams/) containing voice coding demos leveraging Talon and [Cursorless](https://www.cursorless.org/)
+- [Andreas's YouTube channel](https://www.youtube.com/@andreas_arvidsson) A channel containing voice coding demos. Using Talon, eye tracking and [Cursorless](https://www.cursorless.org/)
 - [Talon Eye Tracking + Optikey Mouse](https://www.youtube.com/watch?v=PQkJE-rtn-g&feature=youtu.be) Cursor control with eye and head tracking
 - [Talon Eye Tracking Explained - Control Mouse gen2](https://www.youtube.com/watch?v=_jfeHqUb3_0) An overview of how eye tracking works for new users, using Control Mouse 2.
 
