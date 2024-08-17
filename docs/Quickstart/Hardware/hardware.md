@@ -79,6 +79,13 @@ deck(pedal_middle): print("middle pedal")
 deck(pedal_right): print("right pedal")
 ```
 
+**Linux**: you'll need to give access to the usb devices to the current user, otherwise the stream deck will not be detected:
+```bash
+``` bash
+sudo sh -c 'echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"0fd9\", TAG+=\"uaccess\"" > /etc/udev/rules.d/70-streamdeck.rules'
+sudo udevadm trigger
+```  
+
 ## Gamepads & Joysticks
 
 With gamepad support in Talon you can recieve input from gamepads and/or joysticks. To check if your gamepad works with Talon, view the log after startup and look for a message after all the user scripts are read in. It should display something like `INFO Gamepad Attach: $CONTROLLER_ID ($CONTROLLER_NAME)` Gamepad input is particularly useful since it doesn't require you to use a hotkey (Pressing a different key from a Talon hotkey is often error prone, since the key is still held down while the other is pressed). Additionally, gamepads like the [Logitech Adaptive Gaming Kit and the Xbox Adaptive Controller](https://www.logitechg.com/en-us/products/gamepads/adaptive-gaming-kit-accessories) are useful ways to add physical buttons to your setup that don't require fine motor control.
