@@ -82,7 +82,6 @@ deck(pedal_right): print("right pedal")
 **Linux**: you'll need to give access to the usb devices to the current user, otherwise the stream deck will not be detected:
 
 ````bash
-``` bash
 sudo sh -c 'echo "SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"0fd9\", TAG+=\"uaccess\"" > /etc/udev/rules.d/70-streamdeck.rules'
 sudo udevadm trigger
 ````
