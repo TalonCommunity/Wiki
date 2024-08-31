@@ -49,7 +49,7 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 ## Customize Talon
 
-These commands will open up a csv in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
+These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
 
 | Command                      | Description                                       |
 | ---------------------------- | ------------------------------------------------- |
