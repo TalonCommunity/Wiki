@@ -63,7 +63,7 @@ This will not help you today, but instead help to improve the talon engine for a
 
 ## Collected alternatives to the default alphabet
 
-Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack.  Say `customize alphabet` to edit spoken forms for the alphabet.
+Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack. Say `customize alphabet` to edit spoken forms for the alphabet.
 
 | [Talon Community](https://github.com/talonhub/community) | alternative |
 | -------------------------------------------------------- | ----------- |
@@ -90,6 +90,7 @@ Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an
 | zip                                                      | zoo         |
 
 ## Collected alternatives for modifier keys
+
 The default words for some modifier keys are designed to match the labels on the keys themselves, but are not always efficient to say or can be misrecognized depending on your dialect/speech pattern. The following is a list of alternatives other Talon users have used. Note that community contains one `modifier_key.talon-list` file for Windows/Linux and one for Mac, since the modifier key names differ.
 
 | [Talon Community](https://github.com/talonhub/community) | alternative |
