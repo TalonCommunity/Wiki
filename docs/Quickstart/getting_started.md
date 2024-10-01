@@ -15,7 +15,6 @@ Talon has various [system requirements](Hardware/hardware.md), covering the comp
   <summary>Linux Users</summary>
   - Download [Talon for Linux](https://talonvoice.com/dl/latest/talon-linux.tar.xz)
   - Install by **To be completed**
-
 :::note
 - Talon, like many tools for automation or accessibility, __does not support Wayland__
      - You will have to select an X11 session from your login manager.
@@ -24,27 +23,22 @@ Talon has various [system requirements](Hardware/hardware.md), covering the comp
    * If you use stock Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) to see it
    * If you use i3 or a system tray that doesn't support the `StatusNotifierItem` protocol, install [snixembed](https://git.sr.ht/~steef/snixembed) to add support.
 :::
-
 </details>
 
 <details>
   <summary>Mac Users</summary>
   - Download [Talon for Mac](https://talonvoice.com/dl/latest/talon-mac.dmg)
   - Install by **To be completed**
-
 </details>
 
 <details>
   <summary>Windows Users</summary>
   - Download [Talon for Windows](https://talonvoice.com/dl/latest/talon-windows.exe)
   - Install Talon by running `talon-windows.exe`
-
 :::note
 It is recommended that Talon is installed as described above. 
 However, please note that the application is also available as a [portable zip file](https://talonvoice.com/dl/latest/talon-windows.zip)
 :::
-
-
 </details>
 
 
