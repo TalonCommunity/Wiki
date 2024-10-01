@@ -49,7 +49,7 @@ After you have started the Talon application, look for the Talon icon in the men
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
 <img src="/img/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showing the talon icon in the top right menubar"
  />
 </details>
 
