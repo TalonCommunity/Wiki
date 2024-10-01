@@ -8,7 +8,6 @@ sidebar_position: 1
 
 Talon has various [system requirements](Hardware/hardware.md), covering the computer hardware, operating system and microphone hardware.
 
-
 ## 2: Download & Install Talon
 
 <details>
@@ -36,20 +35,19 @@ Talon has various [system requirements](Hardware/hardware.md), covering the comp
   - Download [Talon for Windows](https://talonvoice.com/dl/latest/talon-windows.exe)
   - Install Talon by running `talon-windows.exe`
 :::note
-It is recommended that Talon is installed as described above. 
+It is recommended that Talon is installed as described above.
 However, please note that the application is also available as a [portable zip file](https://talonvoice.com/dl/latest/talon-windows.zip)
 :::
 </details>
-
-
 
 ## 3: Install a speech recognition engine
 
 Talon uses a local speech recognition engine that translates voice audio to text.
 
 One recognition engine that comes with Talon is known as `Conformer D`. To install it:
+
 - Run the Talon app
-- Click the Talon tray icon and select `Speech Recognition → Conformer D`. 
+- Click the Talon tray icon and select `Speech Recognition → Conformer D`.
 
 <details>
   <summary>Screenshot</summary>
@@ -58,7 +56,7 @@ One recognition engine that comes with Talon is known as `Conformer D`. To insta
  />
 </details>
 
-:::note 
+:::note
 For other engine options, see the [speech engine page](./Speech%20Engines/speech%20engines.md)
 :::
 
@@ -69,15 +67,12 @@ Talon does not come with voice commands out of the box. So at this point in the 
 Talon can not do anything useful.
 
 It requires a `user file set` and
-for beginners, we strongly recommend that you use the [Talon Community](https://github.com/talonhub/community) user file set. 
+for beginners, we strongly recommend that you use the [Talon Community](https://github.com/talonhub/community) user file set.
 
 The whole wiki assumes this repository is used if not otherwise noted.
 :::
 
-
 See the [Talon Community README](https://github.com/talonhub/community?tab=readme-ov-file#installation) for installation instructions.
-
-
 
 ## 5: Test your Talon Setup
 
@@ -90,5 +85,3 @@ See the [Talon Community README](https://github.com/talonhub/community?tab=readm
 - In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the [essential Talon integrations](../Integrations/essential-tools.md)
 - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
 - For earlier access to new features, priority support, and access to additional [speech engines](./Speech%20Engines/speech%20engines.md), install the [beta version](beta_talon.md).
-
-
