@@ -124,6 +124,12 @@ const config: Config = {
           label: "Integrations",
         },
         {
+          type: "doc",
+          docId: "FAQ",
+          position: "left",
+          label: "FAQ",
+        },
+        {
           href: "https://github.com/TalonCommunity/Wiki/",
           label: "GitHub",
           position: "right",

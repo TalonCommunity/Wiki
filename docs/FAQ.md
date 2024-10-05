@@ -1,12 +1,12 @@
 ---
-sidebar_position: 2
+docId: DocFAQ
 ---
 
 # FAQ
 
 ### What can I say?
 
-Checkout the [common commands](../Basic%20Usage/basic_usage) to get started using Talon.
+Checkout the [common commands](./Basic%20Usage/basic_usage) to get started using Talon.
 
 ### How can I code in different languages with Talon
 
@@ -14,7 +14,7 @@ Talon does not require special configuration for different programming languages
 
 ### What hardware should I have?
 
-Check out the [hardware](./Hardware/hardware.md) page for microphone and eye tracker recommendations.
+Check out the [hardware](./Quickstart/Hardware/hardware.md) page for microphone and eye tracker recommendations.
 
 ### Are languages other than English supported?
 
