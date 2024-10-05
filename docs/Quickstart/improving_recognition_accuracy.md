@@ -32,7 +32,7 @@ Controlling your computer by voice can be frustrating if your accent isn't recog
 
 If only a few specific commands give you trouble, change those command words! Commands are almost exclusively mapped in `.talon` files: search for all occurrences of those words, and replace them with a word of your choosing: select one that is easy to pronounce, is not too similar to anything else, and is recognized well for you.
 
-Some important commands are specified in `.py` files, like the alphabet. Changing it works the same way, but you need to be more careful about what you modify. If you are not a programmer, ask in the Talon Slack `#help` channel if you are unsure!
+Some important commands are specified in `.talon-list` files, like the alphabet.
 
 _Example:_ If the `close` in `tab close` does not work for you (but `tab open` etc. do), try out `tab wipe` or `tab quit` instead.
 
@@ -71,7 +71,7 @@ This will not help you today, but instead help to improve the talon engine for a
 
 ## Collected alternatives to the default alphabet
 
-Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack.
+Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack. Say `customize alphabet` to edit spoken forms for the alphabet.
 
 | [Talon Community](https://github.com/talonhub/community) | alternative |
 | -------------------------------------------------------- | ----------- |
@@ -96,3 +96,15 @@ Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an
 | whale                                                    | whip        |
 | zip                                                      | zone        |
 | zip                                                      | zoo         |
+
+## Collected alternatives for modifier keys
+
+The default words for some modifier keys are designed to match the labels on the keys themselves, but are not always efficient to say or can be misrecognized depending on your dialect/speech pattern. The following is a list of alternatives other Talon users have used. Note that community contains one `modifier_key.talon-list` file for Windows/Linux and one for Mac, since the modifier key names differ.
+
+| [Talon Community](https://github.com/talonhub/community) | alternative |
+| -------------------------------------------------------- | ----------- |
+| alt                                                      | alter       |
+| control                                                  | troll       |
+| shift                                                    | sky         |
+| super (Windows key)                                      | win         |
+| command                                                  | man         |
