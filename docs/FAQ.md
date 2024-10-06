@@ -1,7 +1,3 @@
----
-docId: DocFAQ
----
-
 # FAQ
 
 ### What can I say?

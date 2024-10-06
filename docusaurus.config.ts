@@ -124,6 +124,12 @@ const config: Config = {
           label: "Integrations",
         },
         {
+          type: "docSidebar",
+          sidebarId: "HelpSidebar",
+          position: "left",
+          label: "Help",
+        },
+        {
           type: "doc",
           docId: "FAQ",
           position: "left",
