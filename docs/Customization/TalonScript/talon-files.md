@@ -1,16 +1,53 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# `.talon` Files
+# TalonScript
 
-The primary way to extend talon is using `.talon` files placed anywherein the `user` directory. A talon file comes in two parts
+The primary way to extend talon is using `.talon` files placed anywhere in the [Talon user directory](/docs/Help/terminology.md#talon-user-directory). A talon file comes in two parts
 
-- A [context header](#context-header) defining the circumstances in which the file is active
-- A body that implements various behaviors within that context which can:
+
+1. A [context header](./context-header.md) defining the circumstances in which the file is active.
+  - If there is no context header present, then Talon treats the file as being active at all times.
+  (all operating systems, within all applications etc). This was the case with the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example).
+
+
+2. A body that implements various behaviors within that context which can:
   - Define [voice commands](#voice-commands).
   - Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
   - [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
+
+## Operating System Specific Files
+
+In the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example) two files were defined,
+one for MacOS and the other for Windows and Linux.
+
+This is not ideal when needing to support multiple users on different operating systems.
+Each user would need to copied the correct file depending on their own OS.
+
+Instead, a context header can be included with each file, and Talon would use the correct file depending on the
+operating system that was running.
+
+The example can be modified to highlight this, by having both of the following files:
+
+File `simple_test_mac.talon`
+
+```talon
+os: mac
+-
+select everything:
+    key(cmd-a)
+```
+
+File `simple_test_win.talon`
+
+```talon
+os: windows
+os: linux
+-
+select everything:
+    key(ctrl-a)
+```
 
 An example `.talon` file might look like this:
 
@@ -47,23 +84,7 @@ settings():
 
 ## Context header
 
-The context header specifies when the body of the file will be activated. That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
 
-The following requirements can be set:
-
-| Matcher         | Description                                                                                                                                                                         |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `os`            | require specific operating systems; currently either `linux`, `mac`, or `windows`                                                                                                   |
-| `tag`           | require a specific tag                                                                                                                                                              |
-| `mode`          | only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
-| `app`           | match applications by explicitly declared, well-known name                                                                                                                          |
-| `app.name`      | match applications by name (TODO where does Talon read this out?)                                                                                                                   |
-| `app.exe`       | match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`                                                                                                  |
-| `app.bundle`    | match applications by their MacOS bundle, like `com.mozilla.Firefox`                                                                                                                |
-| `title`         | match a window title                                                                                                                                                                |
-| `code.language` | specify a currently active programming language                                                                                                                                     |
-| `language`      | specify the particular human language (e.g. `pt_BR`, `en`) for the file. Defaults to `en` if not specified. Currently only needed for multilingual webspeech.                       |
-| `hostname`      | match the 'hostname' of your machine (from the `hostname` CLI command on Linux/Mac). Useful if you want to have a single set of custom config but have some machine-specific parts. |
 
 Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](./Talon%20Framework/scopes) below for more information.
 
@@ -71,35 +92,7 @@ Each individual header line has the format `[and] [not] <requirement or scope na
 
 We've already indicated what requirements and scopes are, so lets move on to the matcher part (on the right of the ':'). This can either be a literal string match like `title: foo` (matching a window whose entire title is 'foo'), or a regular expression. The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. So for the `title: /foo/i` example we'd match any window whose title had the string 'foo' in it in a case insensitive manner (due to the 'i' flag). For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
 
-Talon lets you combine multiple lines in the context header. This acts as a composite matcher following specific rules. In the following examples the comment contains an expression describing what the rule will match, e.g. `paint_app or (windows and not notepad_app)`. In this case the expression would match the when the app `paint_app` is active or the operating system is `windows` and the app `notepad_app` is not active.
 
-```talon
-# paint_app or notepad_app
-app: paint_app
-app: notepad_app
-```
-
-```talon
-# (paint_app or notepad_app) and windows
-app: paint_app
-os: windows
-app: notepad_app
-```
-
-```talon
-# (paint_app and windows) or notepad_app
-app: paint_app
-and os: windows
-app: notepad_app
-```
-
-```talon
-# paint_app and not windows
-app: paint_app
-not os: windows
-```
-
-So without modifiers, requirements of the same type (e.g. two apps) are OR-ed together. Requirements of different types (e.g. 'app' and 'os') are AND-ed together. The 'and' modifier looks at the previous requirement and merges with it to make a compound expession. The 'not' modifier just negates the condition.
 
 ## Voice commands
 
@@ -124,8 +117,8 @@ Rules have a versatile syntax that is like a word based regex:
 | `foo+`                   | One or more                           | “foo”, “foo foo”, ...     |
 | `foo             \| bar` | Choice                                | “foo”, “bar”              |
 | `(foo)`                  | Precedence/grouping                   | “foo”                     |
-| `{some_list}`            | [List](Talon%20Framework/lists.md)    | Depends on the list.      |
-| `<some_capture>`         | [Capture](Talon%20Framework/lists.md) | Depends on the capture.   |
+| `{some_list}`            | [List](../Talon%20Framework/lists.md)    | Depends on the list.      |
+| `<some_capture>`         | [Capture](../Talon%20Framework/lists.md) | Depends on the capture.   |
 | `^foo`                   | Start anchor                          | See below                 |
 | `foo$`                   | End anchor                            | See below                 |
 
@@ -280,6 +273,6 @@ key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from r
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
 
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](Talon Library Reference/key_action.md) wiki page.
+The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](../Talon Library Reference/key_action.md) wiki page.
 
 Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.

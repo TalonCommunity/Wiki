@@ -1,48 +1,27 @@
 ---
 sidebar_position: 1
 ---
+# TalonScript
 
-# Basic customization
+TalonScript is used to create new [Voice Commands](/docs/Help/terminology.md#voice-commands) for [Talon Actions](/docs/Help/terminology.md#talon-actions), or modify existing voice commands.
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves at a basic level.
+TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
 
-## Customization overview
+In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. 
 
-All customization consists of files with `.talon` or `.py` file extensions placed in the Talon user directory. The Talon user directory is where you put the [Talon Community](https://github.com/talonhub) user file set (`~/.talon/user/` on MacOS/Linux, `%APPDATA%\Talon\user` on Windows). Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
-
-So why do we have two kinds of configuration/scripting files (`.py` and `.talon`)?
-
-- `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.talon` files are written in a language that is only used by Talon.
-  - `.talon` files are designed to be simple and to provide good feedback if you make mistakes.
-- `.py` files are Python scripts which provide the implementation of behaviour and other functionality used by `.talon` files.
-  - You do not need to customize Python or know how to code to use Talon
-
-## Managing your customizations
-
-Talon is built to be a flexible and customizable system. This means that in addition to being able to add new voice commands you can also override the behavior of existing commands reasonably easily.
-
-Given this flexibility there are two ways you could approach customizing your Talon setup:
-
-- Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
-  - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
-  - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
-- Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
-  - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
-  - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
-
-![Screen shot of Talon user directory](/img/talon_user_folders.png)
-
-### Backups
-
-You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
-
-## A simple .talon file
+## A simple TalonScript example
 
 Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
 
-Open up a text editor and save an empty file called `simple_test.talon` somewhere in your Talon user directory. Next, right click on the Talon icon in your status bar, choose scripting, and then 'View log'. This will show a list of log messages from Talon, and in particular will be where Talon tells us if there's a problem with what we write in `simple_test.talon`.
+Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
 
-OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
+OK, let's get to defining the command. 
+
+:::note Spacing is Important
+Spacing is important in TalonScript. For example, ensure you have the spaces at the start of the 'key' line.
+:::
+
+If you're running MacOS, copy/paste the following into your editor and save the file.
 
 ```talon
 select everything:
@@ -56,73 +35,13 @@ select everything:
     key(ctrl-a)
 ```
 
-You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](https://talonvoice.com/chat) in the #help channel.
-
 Your command should now be defined, so if you focus your text editor and say "select everything" it should indeed select everything.
 
-### Error messages
+:::tip The Talon Log File
 
-OK, let's now deliberately introduce an error so we can see how Talon tells us about that. Edit your file and remove the final ')' character so the last line is " key(cmd-a" or " key(ctrl-a". Save the file and look at your Talon log. For me, Talon writes out the following:
-
-```
-    2021-09-02 17:46:02 DEBUG [-] /home/normal/.talon/user/simple_test.talon
-    2021-09-02 17:46:02 DEBUG [+] /home/normal/.talon/user/simple_test.talon
-    2021-09-02 17:46:02 ERROR     8:                         talon/scripting/talon_script.py:705|
-        7:                lib/python3.9/site-packages/lark/lark.py:561|
-        6:    lib/python3.9/site-packages/lark/parser_frontends.py:107|
-        5: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:41 |
-        4: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:171|
-        3: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:188|
-        2: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:182|
-        1: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:129|
-    lark.exceptions.UnexpectedToken: Unexpected token Token('$END', '') at line 1, column 5.
-    Expected one of:
-        * RPAR
-
-
-        1: lib/python3.9/site-packages/lark/parsers/lalr_parser.py:126|
-    KeyError: '$END'
-
-    [The below error was raised while handling the above exception(s)]
-    2021-09-02 17:46:02 ERROR Failed to parse TalonScript in "user.simple_test.talon" for "select everything"
-       16:      lib/python3.9/threading.py:912* # cron thread
-       15:      lib/python3.9/threading.py:954*
-       14:      lib/python3.9/threading.py:892*
-       13:                   talon/cron.py:155|
-       12:                   talon/cron.py:106|
-       11:                     talon/fs.py:64 |
-       10:                     talon/fs.py:57 |
-        9:         talon/scripting/rctx.py:233| # 'fs' main:on_change()
-        8:         app/resources/loader.py:689|
-        7:         app/resources/loader.py:639|
-        6:         app/resources/loader.py:517|
-        5:         app/resources/loader.py:501|
-        4:      talon/scripting/context.py:520|
-        3:      talon/scripting/context.py:436| # [stack splice]
-        2: talon/scripting/talon_script.py:719|
-        1: talon/scripting/talon_script.py:713|
-    talon.scripting.talon_script.CompileError:   Line: 1, Column: 5 - unexpected token
-          key(ctrl-a
-              ^
-      Expected: )
-     in script at /home/normal/.talon/user/simple_test.talon:2:
-      key(ctrl-a
-```
-
-So that's quite a lot of output. The useful bit is at the bottom:
-
-```
-    talon.scripting.talon_script.CompileError:   Line: 1, Column: 5 - unexpected token
-          key(ctrl-a
-              ^
-      Expected: )
-     in script at /home/normal/.talon/user/simple_test.talon:2:
-      key(ctrl-a
-```
-
-You can see it has the "in script at /home/normal/.talon/user/simple_test.talon:2:" line. This tells us the file the problem occurred in, and also the (maybe approximate) line number the problem was on, '2' in our case. There is also some suggestive text indicating that Talon was expecting a ')' character. The error message you get will depend on the problem with what you've written, but it should always tell you which file has the problem in it, and also the approximate line the problem was on.
-
-OK, we're finished with this file now so you can delete it.
+The [Talon log file](./talon-log-file.md) contains information helpful to troubleshoot issues in `.talon` files.
+You may wish to become familiar with the log file now that the most basic TalonScript file has been created.
+:::
 
 ## .talon file syntax
 
@@ -212,7 +131,7 @@ settings():
     key_hold = 32
 ```
 
-Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](../Customization/talon-files.md#context-header) for a full list of available matchers.
+Note the use of app.exe as the context matcher to match the filename of the active program. See the [unofficial docs](./talon-files.md#context-header) for a full list of available matchers.
 
 #### Settings
 
@@ -220,7 +139,7 @@ Note the use of app.exe as the context matcher to match the filename of the acti
 
 settings() blocks can be put in any `.talon` file and are used to change the value of settings given a matching context header. You can have multiple settings by putting each on its own indented line underneath the "settings():" line. You can include voice commands in the same file as a settings block.
 
-You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](../Customization/talon-files.md#tags-settings-and-other-capabilities). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
+You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](./talon-files.md#tags-settings-and-other-capabilities). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
 
 ### Keyboard shortcuts
 
