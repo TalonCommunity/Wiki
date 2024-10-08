@@ -1,6 +1,6 @@
 # Netlify Redirects file
 /blog/ /
-/key_action/ /Customization/Talon%20Library%20Reference/key_action
+/key_action/ /Customization/Talon%20Library%20Reference/Actions/key_action
 /CODE_OF_CONDUCT/ https://github.com/TalonCommunity/Wiki/blob/main/CODE_OF_CONDUCT.md 200
 /CONTRIBUTING/ https://github.com/TalonCommunity/Wiki/blob/staging/CONTRIBUTING.md 200
 /FAQ/ /Quickstart/FAQ

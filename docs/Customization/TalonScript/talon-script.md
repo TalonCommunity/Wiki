@@ -3,45 +3,16 @@ sidebar_position: 1
 ---
 # TalonScript
 
-TalonScript is used to create new [Voice Commands](/docs/Help/terminology.md#voice-commands) for [Talon Actions](/docs/Help/terminology.md#talon-actions), or modify existing voice commands.
+| Area | Description | 
+| ---------------- | ---------------------- |
+| [Voice Commands](/docs/Help/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Help/terminology.md#voice-commands) for existing [Talon Actions](/docs/Help/terminology.md#talon-actions), or modify existing voice commands. | 
+| [Settings](./settings.md) | Change [settings](./settings.md) such as whether Talon should display help info using the dark mode theme. | 
+| [Tags](tag-activation.md)     | Activate [tags](tag-activation.md) |
+| [keyboard shortcuts](customize-kbd-shortcut.md) | Customize [keyboard shortcuts](customize-kbd-shortcut.md) |
 
 TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
 
 In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. 
-
-## A simple TalonScript example
-
-Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
-
-Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
-
-OK, let's get to defining the command. 
-
-:::note Spacing is Important
-Spacing is important in TalonScript. For example, ensure you have the spaces at the start of the 'key' line.
-:::
-
-If you're running MacOS, copy/paste the following into your editor and save the file.
-
-```talon
-select everything:
-    key(cmd-a)
-```
-
-If you're on Windows or Linux you can use this instead:
-
-```talon
-select everything:
-    key(ctrl-a)
-```
-
-Your command should now be defined, so if you focus your text editor and say "select everything" it should indeed select everything.
-
-:::tip The Talon Log File
-
-The [Talon log file](./talon-log-file.md) contains information helpful to troubleshoot issues in `.talon` files.
-You may wish to become familiar with the log file now that the most basic TalonScript file has been created.
-:::
 
 ## .talon file syntax
 
@@ -79,15 +50,7 @@ Voice commands start with the actual words you want to speak followed by a ':' c
 
 ### Actions in .talon files
 
-You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. To get a complete list of defined actions you can do the following:
-
-1. Right click on the Talon icon in your status bar, choose scripting, and then 'Console (REPL)'. This will open a terminal window where you type Python commands and the result of those commands are printed out.
-2. Type `actions.list()` and press enter. This will list out all the available actions.
-3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the terminal window and press enter:
-
-```python
-import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old
-```
+You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. 
 
 Some of the more useful actions are:
 
@@ -97,6 +60,10 @@ Some of the more useful actions are:
 - `mouse_move(100, 200)` - Moves the mouse to screen coordinates 100 pixels from the left and 200 from the top.
 - `mouse_scroll(0, -10)` - Scrolls the mouse 10 'units' to the left. `mouse_scroll(10)` would scroll the mouse 10 'units' down. Note that the arguments are y, x rather than x, y.
 - `mouse_click(0)` - Clicks the left mouse button at the cursor. `mouse_click(1)` right clicks.
+
+:::note
+See [complete action list](/docs/Customization/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
+:::
 
 ## Recipes
 

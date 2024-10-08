@@ -177,7 +177,7 @@ type email {user.address_book}:
     insert(address_book)
 ```
 
-In the above we can see that the lists and captures in the rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
+In the above we can see that the lists and captures in ofthe rule part are bound to variables in the Talonscript based on the name of the list/capture. If we use the same lists/capture in a rule multiple times then each use gets a corresponding \_1, \_2 suffix. If we make a list/capture optional then we have to handle the case where it isn't included using "or". Similarly if we have a choice of matches we have to handle the cases where the alternative was picked. Finally, if we match multiple captures/lists (e.g. with '+'), then we can refer to the lot of them with the \_list suffix. Individual items from the multiple match can be referred to with the \_1, \_2 suffix as well.
 
 In terms of the Talonscript itself, the syntax can be thought of as a very limited subset of Python. Consider the following file which (as of writing) demonstrates all available syntax. See the inline comments for what everything does:
 
@@ -248,31 +248,6 @@ settings():
     another.setting = 432
 ```
 
-You can also activate [tags](./Talon%20Framework/tags). This snippet activates the `user.my_tag` tag when the context header matches. This is used reasonably often to enable extra sets of voice commands for the given context.
 
-```talon
-title: /my app/
--
-tag(): user.my_tag
-```
 
-#### Keyboard Shortcuts
 
-Another feature is the ability to bind keyboard shortcuts.
-
-```talon
-title: /my app/
--
-# Show notification saying the key was pressed and prevent other apps from receiving the key event
-key(f8): app.notify("f8 key pressed")
-
-# One or more modifiers can be used with the matcher
-key(ctrl-shift-alt-super-f8): app.notify("Lots of modifiers and the f8 key pressed. Note that alt is option on Mac. Use cmd modifier on Mac to use the apple key in a shortcut.")
-
-key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from receiving the key")
-key(f9:up): app.notify("show this balloon when the f9 key is released")
-```
-
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](../Talon Library Reference/key_action.md) wiki page.
-
-Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
