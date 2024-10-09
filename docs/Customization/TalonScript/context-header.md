@@ -54,3 +54,37 @@ The `not` modifier just negates the condition.
 app: paint_app
 not os: windows
 ```
+
+## Examples
+
+### Operating System Specific Files
+
+In the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example) two files were defined,
+one for MacOS and the other for Windows and Linux.
+
+This is not ideal when needing to support multiple users on different operating systems.
+Each user would need to copy the correct file depending on their own OS.
+
+Instead, a context header can be included with each file, and Talon would use the correct file depending on the
+operating system that was running.
+
+The example can be modified to highlight this, by having both of the following files:
+
+File `simple_test_mac.talon`
+
+```talon
+os: mac
+-
+select everything:
+    key(cmd-a)
+```
+
+File `simple_test_win.talon`
+
+```talon
+os: windows
+os: linux
+-
+select everything:
+    key(ctrl-a)
+```

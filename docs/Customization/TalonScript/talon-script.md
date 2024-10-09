@@ -34,7 +34,7 @@ insert bold text:
     key(ctrl-b)
 ```
 
-The part above the '-' line is called the "context header" and the part below is the "body". The context header decides under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
+The part above the '-' line is called the [context header](./context-header.md) and the part below is the [body](./)). The context header specifies under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
 
 ### Context header
 
@@ -48,22 +48,7 @@ The body can have several kinds of content. Most often you'll be defining voice 
 
 Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
 
-### Actions in .talon files
 
-You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. 
-
-Some of the more useful actions are:
-
-- `key(ctrl-a)` - Presses the keys within the parentheses. See the 'Add new keyboard shortcuts' recipe below for some more info about using this action.
-- `insert("my text")` - Types in the text "my text"
-- `sleep(100ms)` - Waits for 100 milliseconds. This can be useful if you need to wait for your target application to do something. Don't make the sleep too long because Talon will not respond to voice commands while sleeping.
-- `mouse_move(100, 200)` - Moves the mouse to screen coordinates 100 pixels from the left and 200 from the top.
-- `mouse_scroll(0, -10)` - Scrolls the mouse 10 'units' to the left. `mouse_scroll(10)` would scroll the mouse 10 'units' down. Note that the arguments are y, x rather than x, y.
-- `mouse_click(0)` - Clicks the left mouse button at the cursor. `mouse_click(1)` right clicks.
-
-:::note
-See [complete action list](/docs/Customization/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
-:::
 
 ## Recipes
 
