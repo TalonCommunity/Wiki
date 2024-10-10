@@ -13,6 +13,8 @@
 
 This is the
 
+_(Originally called `knausj_talon`, after [its original creator :superhero:](https://github.com/knausj85))_
+
 ## Talon Log
 
 ## Talon User Directory
@@ -42,3 +44,4 @@ Talon doesn't care how you organize your files within this directory, any subdir
 
 ## Voice Commands
 
+## Voice Command Sets

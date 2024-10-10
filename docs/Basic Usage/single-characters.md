@@ -1,5 +1,24 @@
-# Symbols
+# Letters, Numbers & Symbols
 
+## Talon Alphabet
+
+Talon has its own alphabet, a set of words that you say instead of individual letters.
+
+For example, instead of saying `p` one would say the word `pit`.
+
+The Talon alphabet can be displayed at any time by saying `help alphabet`.
+
+<img src="/img/help_alphabet.png/"
+     alt="screenshot of the talon alphabet, as shown by the `help alphabet` command"
+ />
+
+:::note Uppercase Letters
+For uppercase letters, you say the word `shift` before the word for the letter. For example, to get an uppercase `Z` you would say `shift zip`.
+:::
+
+## Numbers
+
+## Symbols
 Talon has a set of names for each of the punctuation and other symbols on the keyboard.
 
 This can be shown at any time by saying `help symbols`.
@@ -9,10 +28,10 @@ This can be shown at any time by saying `help symbols`.
      alt="screenshot of the talon symbols, as shown by the `help symbols` command"
  />
 
-## Alternate Forms
+### Alternate Forms
 As shown above, for some characters, there are multiple ways the character can be said. For example, you can say either `hash sign` or `number sign` for the character `#`
 
-## Example
+### Example
 
 For example, to write `(?![a-z])` you would say:
 
@@ -35,6 +54,8 @@ There is no need to say all of that in one breath. You can also say it as:
 - `air dash zip`
 - `r square r paren`
 :::
+
+
 
 ## Learning Tools
 
