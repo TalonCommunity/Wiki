@@ -35,3 +35,8 @@ There are the following ways to keep track of what mode you are in with a visual
 1. Enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
 
 2. Install the [Talon HUD](/docs/Integrations/Details/talon-hud.md) 
+
+:::warning
+Fix all references to `(https://github.com/talonhub/community/tree`
+:::
+
