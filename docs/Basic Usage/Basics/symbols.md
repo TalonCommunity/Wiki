@@ -16,11 +16,17 @@ As shown above, for some characters, there are multiple ways the character can b
 
 For example, to write `(?![a-z])` you would say:
 
-`left paren question mark exclamation mark left square air dash zip right square right paren`
+```
+(          ?             !                [           a   -    z   ]            )
+left paren question mark exclamation mark left square air dash zip right square right paren
+```
 
 Or slightly shorter:
 
-`paren question mark exclamation mark l square air dash zip r square r paren`
+```
+(     ?             !                [        a   -    z   ]        )
+paren question mark exclamation mark l square air dash zip r square r paren
+```
 
 :::tip It's Okay to Pause
 There is no need to say all of that in one breath. You can also say it as:

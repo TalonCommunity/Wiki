@@ -84,7 +84,7 @@ and has been modeled after a common concept in the programming world of `regex`:
 | `foo             \| bar` | Choice                                | “foo”, “bar”              |
 | `(foo)`                  | Precedence/grouping                   | “foo”                     |
 | `type email {user.address_book}`            | [List](#lists)    | email sally               |
-| `<some_capture>`         | [Capture](../Talon%20Framework/lists.md) | See below                 |
+| `double letter <user.letter>`         | [Capture](#captures) | double letter plex                 |
 | `^foo`                   | Start anchor                          | See below                 |
 | `foo$`                   | End anchor                            | See below                 |
 
@@ -93,7 +93,41 @@ and has been modeled after a common concept in the programming world of `regex`:
 Using Talon's "list" functionality, it is possible to separate out simple tables of strings away from 
 the voice commands in `.talon` files, and into separate [.talon-list](../talon_lists.md) files.
 
+:::
+Check if talon list files can be standalone or if they need the accompanying python file.
+:::
+
 Information for python programmers is available [here](/docs/Customization/Talon%20Framework/lists.md).
+
+### Captures
+
+
+:::note Terminology
+The term `capture` comes from the programming world of `regex`.
+It could be thought of as a "subrule".
+:::
+
+Similar to lists, `captures` also enable the defining of reusable components that can be used
+in voice commands. Also similar to lists, `captures` provide a mapping between a spoken form and a written form.
+
+Here is a simple example that makes use of the `<user.letter>` capture.
+
+```talon
+double letter <user.letter>:
+    insert(letter)
+    insert(".")
+    insert(letter)
+```
+
+Saying `double letter plex` will cause `x.x` to be inserted by Talon. Where `plex` is the spoken form of `<user.letter>`
+and `x` is the written form.
+
+Here are some community defined captures:
+
+| Name                  | Description |
+| ------------------------ | ------------------------------------- |
+| `<user.letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/Basics/alphabet.md)   |
+| `<user.number_string>` | Entering [numbers](/docs/Basic%20Usage/Basics/numbers.md) | 
 
 ### Anchoring
 
@@ -117,9 +151,8 @@ For example, using the start anchor symbol `^` with the voice command:
 | Spoken                  | Action |
 | ------------------------ | -------------------------------------|
 | `my command air bat cap`                    | Talon inserts `firstabc`  |
-| `air bat cap my command`                    | Talon only inserts `abc` and not `abcfirst` <br/> (as the words `my command` weren't spoken at the start of the utterance)  |
+| `air bat cap my command`                    | Talon ignores `my command` as it didn't appear at the start of the utterance  |
 
-and you said "my command air bat cap" then Talon would insert "firstabc". "air bat cap my command" on the other hand would only produce "abc" (and maybe a misrecognition) because 'my command' was not at the start of your utterance. 
 
 #### End Anchor
 
@@ -131,7 +164,7 @@ other command$: "second"
 | Spoken                  | Action |
 | ------------------------ | -------------------------------------|
 | `air bat cap other command`                    | Talon inserts `abcsecond`  |
-| `other command air bat cap`                    | Talon only inserts `second` and not `secondabc` <br/> (the command matched and had the $ suffix, the rest of your utterance was thrown away)  |
+| `other command air bat cap`                    | Talon ignores `other command` as it didn't appear at the end of the utterance  |
 
 #### Guideline
 

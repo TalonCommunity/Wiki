@@ -48,12 +48,21 @@ list: user.name_of_my_list
 
 The identifier that follows `user.` is the name by which the list will be referred to in voice commands or Python.
 
-The separator line consisting of the single `-` is followed by a list of "key value pair" entries on separate lines.
+The separator line consisting of the single `-` is followed by a list of entries on separate lines. Each entry having the format:
 ```talon
 key: value
 ```
+:::tip Terminology
+This can be thought of as `spoken form: written form`
+:::
 
-It doesn't require a `:` if the key is the same as the value, the line could simply be:
+The `key` is the word (or words) that must be spoken for the entry in the list to be matched. And the `value` is the string that is
+available to the voice command body. Referring back to the email address example above, and the entry `sally: "sally@example.com"`.
+
+You must say `type email sally` for that entry to match the rule `type email {user.address_book}`, with `sally` being the key.
+And the value of `"sally@example.com"` is referenced in the TalonScript body `insert(address_book)`.
+
+Note that entries don't require a `:` if the key is the same as the value, and a line could simply be:
 ```talon
 key
 ```
