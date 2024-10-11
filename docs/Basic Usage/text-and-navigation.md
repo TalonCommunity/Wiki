@@ -1,6 +1,6 @@
 #  Text and Navigation
 
-# Zoom
+## Zoom
 
 Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
 
@@ -10,7 +10,7 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `zoom out`   | zoom out                          |
 | `zoom reset` | reset magnification level to 100% |
 
-# Searching
+## Searching
 
 
 
@@ -20,18 +20,36 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `next one` | select the next occurrence that matches the search criteria |
 
 
-# Navigation
+## Navigation
 
 
 
 | Command                                  | Description                                                                                            |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `go left`, `go right` | move the insertion point one character left or right                                              |
+| `go up`, `go down` | move the insertion point one line up or down                                             |
 | `go line start`, `go way left` or `head` | move the insertion point to the start of the current line                                              |
 | `go line end`, `go way right` or `tail`  | move the insertion point to the end of the current line                                                |
 | `go top` or `go way up`                  | move the insertion point to the beginning of the document                                              |
 | `go bottom` or `go way down`             | move the insertion point to the end of the document                                                    |
 | `go page up`                             | scroll the document up by one page; here are some other ways of [scrolling](./pc-control.md#scrolling) |
 | `go page down`                           | scroll the document down by one page                                                                   |
+
+As with all commands, the `go` commands can be [chained or repeated](./command_mode.md#chaining-and-repeating-commands).
+
+| Command                                 | Description                  |
+| --------------------------------------- | ------------------------------------------- |
+| `go top go down`           | move to the second line from the top of the document (an example of standard chaining) |
+| `go up five times`           | an example of standard command repetition|
+
+Additionally, the `go` command supports its own more compact syntax.
+
+| Command                                 | Description                  |
+| --------------------------------------- | ------------------------------------------- |
+| `go down down right`           | move down two lines and then right one character |
+| `go two words left`           |  |
+| `go two down five words right`           |  |
+
 
 <details>
   <summary>In some applications, 'go way left' can behave slightly differently to  'go line start' and 'head'.</summary>
@@ -46,7 +64,7 @@ Within certain applications, such as `vscode`, document zooming can be controlle
     whilst saying 'go way left' will move it to (1)</p>
 </details>
 
-# Selecting
+## Selecting
 
 
 
@@ -60,7 +78,7 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `select way up`                         | to the start of the document                |
 | `select way down`                       | to the end of the document                  |
 
-# Cut, Copy and Paste
+## Cut, Copy and Paste
 
 
 | Command                             | Description                                                                                                    |
@@ -74,7 +92,7 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `paste match`                       | (in supported applications) paste the contents of the clipboard matching the text style at the insertion point |
 
 
-# Deleting and Duplicating Text
+## Deleting and Duplicating Text
 
 
 
@@ -91,7 +109,7 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `clone line`                          | replaces the current line with two copies of it                             |
 
 
-# Miscellaneous Text Functions
+## Miscellaneous Text Functions
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
@@ -102,15 +120,14 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `indent` or `indent more`             | indents the current line                                                    |
 | `out dent` or `indent less`           | outdents the current line                                                   |
 
-# Undo/Redo
+## Undo/Redo
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
 | `undo that`                      | performs an undo                                   |
 | `redo that`            | performs a redo |
 
-```
-# go left, go left left down, go 5 left 2 down
-# go word left, go 2 words right
-go <user.navigation_step>+: user.perform_navigation_steps(navigation_step_list)
+
+
+
 

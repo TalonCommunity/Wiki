@@ -20,19 +20,7 @@ See [Mode Switching](./basic_usage.md#mode-switching) for info about switching m
 | `command history`            | show the command history                                         |
 | `talon open log`             | open the talon log for debugging                                 |
 
-## Dictating Text
 
-Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in command mode
-
-| Formatter         | Description                             |
-| ----------------- | --------------------------------------- |
-| `say`             | no special formatting is applied        |
-| `sentence`        | the first word is capitalized           |
-| `title`           | every word starts with a capital letter |
-| `all down`        | every word is all lower case            |
-| `smash`           | no spaces between words                 |
-| `kebab`           | dashes instead of spaces                |
-| `help formatters` | show all available formatters           |
 
 ## Customize Talon
 
@@ -84,43 +72,40 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `zoom mouse`      | Toggle Control Mouse (Zoom).         |
 | `control off`     | Turn the eye tracker off             |
 
-## Working with text
+## Chaining and Repeating Commands
 
-| Command        | Description                                                               |
-| -------------- | ------------------------------------------------------------------------- |
-| `copy that`    |                                                                           |
-| `control cap`  | copy via the keyboard shortcut using the talon alphabet (`cap` for `c`)   |
-| `paste that`   |                                                                           |
-| `control vest` | paste via the keyboard shortcut using the talon alphabet (`vest` for `v`) |
-| `cut that`     |                                                                           |
-| `undo that`    |                                                                           |
-| `redo that`    |                                                                           |
-| `scratch that` | undo Talon dictation                                                      |
+With only a few specific exceptions, commands can be chained.
+This means that multiple commands can be said as a single utterance without a pause between them.
 
-## Mouse Commands
+For example, instead of saying (with a pause at the end of each line):
+```
+go address (within a browser window moves to the address bar)
+copy that
+focus code (makes the VSCode application active)
+paste that
+```
 
-| Command      | Description                             |
-| ------------ | --------------------------------------- |
-| `touch`      | single click                            |
-| `duke`       | double click                            |
-| `trip click` | triple click                            |
-| `drag`       | hold down the mouse. Repeat to release  |
-| `curse yes`  | hides the mouse cursor for eye tracking |
-| `curse no`   | shows the mouse cursor                  |
-| `righty`     | right click                             |
+It could all be said as a single utterance:
+```
+go address copy that focus code paste that
+```
 
-## Scrolling
+Commands can also be easily repeated, by saying the following after the command to be repeated.
 
-| Command        | Description                            |
-| -------------- | -------------------------------------- |
-| `page down`    | press the page down key                |
-| `page up`      | press the page up key                  |
-| `scroll down`  | scroll down                            |
-| `scroll up`    | scroll up                              |
-| `wheel down`   | scroll down                            |
-| `wheel up`     | scroll up                              |
-| `wheel left`   | scroll left                            |
-| `wheel gaze`   | scroll according to the mouse position |
-| `wheel upper`  | continually scroll up                  |
-| `wheel downer` | continually scroll down                |
-| `wheel stop`   | stop scrolling                         |
+| Commands                              | Repeats the Previous Command  |
+| ------------------------------------- | ----------------------------- |
+| `<ordinals>`                          | the specified number of times |
+| `<numbers_small> times`               | the specified number of times |
+| `repeat that` or `twice`              | once                          |
+| `repeat that <numbers_small> [times]` | the specified number of times |
+
+:::note
+Anything that can be said in command mode, is considered a "command".
+For example, even though one would not typically consider a letter or symbol as a "command", in Talon, they are.
+
+And therefore they can be repeated - `asterisk ten times` produces `**********`.
+:::
+
+You might find the syntax that uses `<numbers_small>` more natural than the one that uses  `<ordinals>`.
+Although slightly quicker to say, `asterisk tenth` takes more practice than the equivalent `asterisk ten times`
+

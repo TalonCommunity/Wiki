@@ -126,8 +126,10 @@ Here are some community defined captures:
 
 | Name                  | Description |
 | ------------------------ | ------------------------------------- |
-| `<user.letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/Basics/alphabet.md)   |
-| `<user.number_string>` | Entering [numbers](/docs/Basic%20Usage/Basics/numbers.md) | 
+| `<letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/single-characters.md)   |
+| `<ordinal>`                    | `first`, `second`, `third`, ..., `twentieth` |
+| `<number_string>` | Entering [numbers](/docs/Basic%20Usage/single-characters.md) | 
+| `<numbers_small>` | A small number |
 
 ### Anchoring
 

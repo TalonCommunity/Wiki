@@ -29,3 +29,8 @@ Here is some information
     - Here is the first list item
     - Here is the second list item
         - And here is a sub list item
+
+---
+
+Remove user. from user level documentation...is any disadvantage in doing that?
+For example, will it make it more difficult for users to understand what is displayed in help popups
