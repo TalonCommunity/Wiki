@@ -66,7 +66,7 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 
 :::question
-Should the `camera overlay` command be mentioned? It calls `tracking.control_debug_toggle()`
+Should the `camera overlay` command be mentioned here? It calls `tracking.control_debug_toggle()`
 :::
 
 ## Working with text
@@ -164,3 +164,7 @@ These commands are available when the mouse grid is showing:
 | `grid reset`    | positions the grid to fill the entire screen                |
 | `grid back`    | repositions the grid to how it was prior to the last narrowing               |
 
+
+# Save
+file save: edit.save()
+file save all: edit.save_all()

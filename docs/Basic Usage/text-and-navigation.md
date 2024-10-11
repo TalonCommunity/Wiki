@@ -1,0 +1,132 @@
+#  Text and Navigation
+
+# Compound of action(select, clear, copy, cut, paste, etc.) and modifier(word, line, etc.) commands for editing text.
+# eg: "select line", "clear all"
+`<user.edit_action> <user.edit_modifier>: user.edit_command(edit_action, edit_modifier)`
+
+# Zoom
+
+Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
+
+| Command      | Description                       |
+| ------------ | --------------------------------- |
+| `zoom in`    | zoom in                           |
+| `zoom out`   | zoom out                          |
+| `zoom reset` | reset magnification level to 100% |
+
+# Searching
+
+
+
+| Command    | Description                                                 |
+| ---------- | ----------------------------------------------------------- |
+| `find it`  | bring up the application's find dialog box                  |
+| `next one` | select the next occurrence that matches the search criteria |
+
+
+# Navigation
+
+
+
+| Command                                  | Description                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `go line start`, `go way left` or `head` | move the insertion point to the start of the current line                                              |
+| `go line end`, `go way right` or `tail`  | move the insertion point to the end of the current line                                                |
+| `go top` or `go way up`                  | move the insertion point to the beginning of the document                                              |
+| `go bottom` or `go way down`             | move the insertion point to the end of the document                                                    |
+| `go page up`                             | scroll the document up by one page; here are some other ways of [scrolling](./pc-control.md#scrolling) |
+| `go page down`                           | scroll the document down by one page                                                                   |
+
+:::note
+In some applications, `go way left` can behave slightly differently to  `go line start` and `head`.
+
+For example in `vscode`, with the following text:
+
+<img src="/img/insertion_points_on_line.png/"
+     alt="screenshot of text within VSCode"
+/>
+
+If the insertion point is at (3), saying `go line start` will move the insertion point to (2), 
+whilst saying `go way left` will move it to (1)
+:::
+
+
+# Selecting
+
+
+
+| Command                                 | Extend the Text Selection                   |
+| --------------------------------------- | ------------------------------------------- |
+| `select left`, `select right`           | by one character in the specified direction |
+| `select up`, `select down`              | by one line in the specified direction      |
+| `select word left`, `select word right` | by one word in the specified direction      |
+| `select way left`                       | to the start of the current line            |
+| `select way right`                      | to the end of the current line              |
+| `select way up`                         | to the start of the document                |
+| `select way down`                       | to the end of the document                  |
+
+# Cut, Copy and Paste
+
+
+| Command                             | Description                                                                                                    |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `copy that`                         | copies the currently selected text to the clipboard                                                            |
+| `copy word left`, `copy word right` | copies the word to the left/right of the insertion point                                                       |
+| `cut that`                          | cuts the currently selected text to the clipboard                                                              |
+| `cut word left`, `cut word right`   | cuts the word to the left/right of the insertion point                                                         |
+| `paste that` or `pace that`         | paste the contents of the clipboard                                                                            |
+| `paste enter`                       | paste the contents of the clipboard, and press the enter key                                                   |
+| `paste match`                       | (in supported applications) paste the contents of the clipboard matching the text style at the insertion point |
+
+
+# Deleting and Duplicating Text
+
+
+
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `clear left`, `clear right`           | deletes the character to the left or right of the insertion point           |
+| `clear up`, `clear down`              | deletes the characters from the insertion point, either up or down one line |
+| `clear word left`, `clear word right` | delete the word to the left/right of the insertion point                    |
+| `clear way left`                      | deletes from the current position to the start of the current line          |
+| `clear way right`                     | deletes from the current position to the end of the current line            |
+| `clear way up`                        | deletes from the current position to the start of the document              |
+| `clear way down`                      | deletes from the current position to the end of the document                |
+| `clone that`                          | replaces the currently selected text with two copies of it                  |
+| `clone line`                          | replaces the current line with two copies of it                             |
+
+
+# Miscellaneous Text Functions
+
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `new line above`                      | inserts a new line above the current one                                    |
+| `new line below` or `slap`            | inserts a new line below the current one                                    |
+| `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
+| (`pad` or `padding`) <symbol_key>+    | inserts the specified symbol keys, with a space character before and after  |
+| `indent` or `indent more`             | indents the current line                                                    |
+| `out dent` or `indent less`           | outdents the current line                                                   |
+
+# Miscellaneous Text Functions
+
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `new line above`                      | inserts a new line above the current one                                    |
+| `new line below` or `slap`            | inserts a new line below the current one                                    |
+| `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
+| (`pad` or `padding`) <symbol_key>+    | inserts the specified symbol keys, with a space character before and after  |
+| `indent` or `indent more`             | indents the current line                                                    |
+| `out dent` or `indent less`           | outdents the current line                                                   |
+
+# Undo/Redo
+
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `undo that`                      | performs an undo                                   |
+| `redo that`            | performs a redo |
+
+```
+# go left, go left left down, go 5 left 2 down
+# go word left, go 2 words right
+go <user.navigation_step>+: user.perform_navigation_steps(navigation_step_list)
+
