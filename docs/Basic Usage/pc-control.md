@@ -144,3 +144,23 @@ There are two words that can be used to modify the behavior of some of the `whee
 | -------------- | -------------------------------------- | - |
 | `tiny`    | scrolls by a small amount | `wheel tiny left`             |
 | `here` | move the mouse cursor to the center of the currently active window | `wheel stop here` |
+
+## Mouse Grid
+
+| Command        | Description                            |
+| -------------- | -------------------------------------- |
+| `mouse grid`    | displays the mouse grid over the entire screen (screen one)                |
+| `grid win`    | displays the mouse grid over the currently active window                |
+| `grid <number_key>+`    | displays the mouse grid, and sets its initial position according to the specified numbers                |
+| `grid screen <number>`    | displays the mouse grid on the specified screen                |
+
+These commands are available when the mouse grid is showing:
+
+
+| Command        | Description                            |
+| -------------- | -------------------------------------- |
+| `<number_key>`    | narrows the mouse grid within the cell specified by the spoken number                |
+| `grid off`, `grid close` or `grid hide`    | closes the mouse grid                |
+| `grid reset`    | positions the grid to fill the entire screen                |
+| `grid back`    | repositions the grid to how it was prior to the last narrowing               |
+
