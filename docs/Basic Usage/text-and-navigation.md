@@ -1,9 +1,5 @@
 #  Text and Navigation
 
-# Compound of action(select, clear, copy, cut, paste, etc.) and modifier(word, line, etc.) commands for editing text.
-# eg: "select line", "clear all"
-`<user.edit_action> <user.edit_modifier>: user.edit_command(edit_action, edit_modifier)`
-
 # Zoom
 
 Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
@@ -37,19 +33,18 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | `go page up`                             | scroll the document up by one page; here are some other ways of [scrolling](./pc-control.md#scrolling) |
 | `go page down`                           | scroll the document down by one page                                                                   |
 
-:::note
-In some applications, `go way left` can behave slightly differently to  `go line start` and `head`.
+<details>
+  <summary>In some applications, 'go way left' can behave slightly differently to  'go line start' and 'head'.</summary>
+    <p>In some applications, 'go way left' can behave slightly differently to  'go line start' and 'head'.</p>
+    <p>For example in 'vscode', with the following text:</p>
 
-For example in `vscode`, with the following text:
+    <img src="/img/insertion_points_on_line.png/"
+        alt="screenshot of text within VSCode"
+    />
 
-<img src="/img/insertion_points_on_line.png/"
-     alt="screenshot of text within VSCode"
-/>
-
-If the insertion point is at (3), saying `go line start` will move the insertion point to (2), 
-whilst saying `go way left` will move it to (1)
-:::
-
+    <p>If the insertion point is at (3), saying 'go line start' will move the insertion point to (2), 
+    whilst saying 'go way left' will move it to (1)</p>
+</details>
 
 # Selecting
 
@@ -103,18 +98,7 @@ whilst saying `go way left` will move it to (1)
 | `new line above`                      | inserts a new line above the current one                                    |
 | `new line below` or `slap`            | inserts a new line below the current one                                    |
 | `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
-| (`pad` or `padding`) <symbol_key>+    | inserts the specified symbol keys, with a space character before and after  |
-| `indent` or `indent more`             | indents the current line                                                    |
-| `out dent` or `indent less`           | outdents the current line                                                   |
-
-# Miscellaneous Text Functions
-
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `new line above`                      | inserts a new line above the current one                                    |
-| `new line below` or `slap`            | inserts a new line below the current one                                    |
-| `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
-| (`pad` or `padding`) <symbol_key>+    | inserts the specified symbol keys, with a space character before and after  |
+| (`pad` or `padding`) `<symbol_key>+`    | inserts the specified symbol keys, with a space character before and after  |
 | `indent` or `indent more`             | indents the current line                                                    |
 | `out dent` or `indent less`           | outdents the current line                                                   |
 
