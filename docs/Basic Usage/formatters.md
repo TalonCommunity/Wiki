@@ -46,7 +46,7 @@ There are also formatters to simplify string entry:
 | `dub string` | Normal                                                             | `"one two three"` |
 | `string`     | Normal                                                             | `'one two three'` |
 
-Multiple formatters can be chained together — for example, `dubstring snake hello world` inserts "hello_world".
+Multiple formatters can be chained together — for example, `dubstring snake hello world` inserts "hello_world".
 
 
 
