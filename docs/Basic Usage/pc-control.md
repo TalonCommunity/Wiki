@@ -30,26 +30,45 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | Command             | Description                                                       |
 | ------------------- | ----------------------------------------------------------------- |
 | `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome |
-| `running list`      | see all active applications                                       |
-| `launch "app name"` | say "launch chrome" for example, to open chrome                   |
+| `running list`      | see all active applications, and the and the spoken form of them                                    |
+| `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
 | `window close`      | closes the currently active window                                |
 
+Sample output from the `running list` command:
 <img src="/img/running_list.png/"
      alt="screenshot of the output of the running list command"
  />
 
+:::info Application Spoken Form Customization
+To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
+:::
 
 
-### Window management
+## Screenshot commands
 
-Global window managment commands are defined in [window_management.talon](core/windows_and_tabs/window_management.talon).
+Screenshots are either saved to a file or copied to the clipboard (`grab` commands that end in the word `clip`).
 
-- `running list` toggles a window displaying words you can say to switch to running applications. To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
-- `launch music` will launch the music application. Note this is currently only implemented on macOS.
+Files are stored in the directory specified by the `screenshot_folder` setting. If the setting is not specified, then
+the default folder is operating system dependent. For example, `OneDrive\Pictures` on windows (if present) or the
+`Pictures` subdirectory of the user document directory.
 
-### Screenshot commands
+:::note
+On windows, the standard `snip` application is invoked for `grab selection`.
+It's options will determine where screenshots are saved.
+:::
 
-See [screenshot.talon](plugin/screenshot/screenshot.talon).
+| Command                           | Destination |
+| --------------------------------- | ----------- |
+| `grab screen`                     | file            |
+| `grab screen <number_small>`      | file            |
+| `grab window`                     | file            |
+| `grab selection`                  | file (but may be application dependent)            |
+| `grab screen clip`                | clipboard            |
+| `grab screen <number_small> clip` | clipboard            |
+| `grab window clip`                | clipboard            |
+| `grab selection clip`             | clipboard            |
+| `grab settings`                   | Mac only            |
+
 
 
 ## Working with tabs
@@ -83,7 +102,7 @@ See [screenshot.talon](plugin/screenshot/screenshot.talon).
 | `control off`     | Turn the eye tracker off             |
 
 
-:::question
+:::warning
 Should the `camera overlay` command be mentioned here? It calls `tracking.control_debug_toggle()`
 :::
 
