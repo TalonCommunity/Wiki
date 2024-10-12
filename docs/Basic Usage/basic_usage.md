@@ -1,5 +1,9 @@
 # Basic Usage
 
+[applications](/docs/Apps/overview.md)
+:::warning fix wording enter
+:::
+
 ## Talon Modes
 
 Talon has three basic modes by default:
