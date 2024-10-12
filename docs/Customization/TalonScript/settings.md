@@ -15,6 +15,13 @@ Talon settings can be applied from any `.talon` file in the user directory, rega
 
 :::
 
+:::warning
+
+The community user file set read me says something different, that there is a single settings file...
+Several options are configurable via a [single settings file](settings.talon) out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc).
+
+:::
+
 :::important
 
 If the same setting is defined multiple times, Talon will use the setting value in the `.talon` file with the most specific context match.
@@ -48,7 +55,7 @@ If the same setting is defined multiple times, Talon will use the setting value 
 
 | Setting         | Example Value | Description                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| imgui.scale     | 1.5           | Adjust the scale of the imgui windows                                                                                                                                                                                                                                                                                                                                                         |
+| imgui.scale     | 1.5           | Adjust the scale of all imgui-based windows (help, history, etc). This is simply a scale factor, 1.3 = 130%.windows                                                                                                                                                                                                                                                                                                                                                         |
 | imgui.dark_mode | false         | If `true` enable dark mode for talon imgui menus (used for help menus in community)                                                                                                                                                                                                                                                                                                           |
 | insert_wait     | 0             | Increase this if characters seem to be jumbled in a specific app when typing whole sentences. Default is 0.                                                                                                                                                                                                                                                                                   |
 | key_hold        | 16            | Increase this if you're playing a game and some keys aren't registering at all. You should probably increase it in 16ms increments, e.g. set it to 16ms or 32ms.                                                                                                                                                                                                                              |

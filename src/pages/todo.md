@@ -23,21 +23,14 @@ There could be useful information in there, even though I'm hoping that most of 
 Check the original version of that file as I deleted some of those references before thinking that there was useful info in there.
 ```
 
----
 
-Here is some information
-    - Here is the first list item
-    - Here is the second list item
-        - And here is a sub list item
 
----
+### what to do with the "user." terminology in this wiki
 
 Remove user. from user level documentation...is any disadvantage in doing that?
 For example, will it make it more difficult for users to understand what is displayed in help popups
 
----
-
-Is at okay to use mermaid given the vulnerabilities listed during installation:
+### Is at okay to use mermaid given the vulnerabilities listed during installation:
 
 ```
 C:\Users\ronny> C:\Users\ronny\AppData\Roaming\talon\user\talon-scripts\build-kb\Talon community wiki start.ps1
@@ -63,9 +56,7 @@ Run `npm audit` for details.
 D:\github\talon-community-wiki [restructure ≡ +0 ~3 -0 !]> 
 ```
 
----
-
-Get mermaid working?
+### Get mermaid working?
 
 ```mermaid
 stateDiagram-v2
@@ -88,8 +79,13 @@ stateDiagram-v2
 
 ```
 
----
+### zip versus git
 
 The readme discourages users from installing by downloading the zip file and recommends using git instead.
 
 I've changed this to a neutral approach of explaining the advantages and disadvantages of each method.
+
+###  consolidating descriptions between the library read me documentation and that here in the wiki
+
+For example, the library read me has a section called "💡 Tip: Overriding cleanly", and this wiki has
+similar information in a section called "Overriding existing voice commands"
