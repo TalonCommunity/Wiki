@@ -34,6 +34,24 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `launch "app name"` | say "launch chrome" for example, to open chrome                   |
 | `window close`      | closes the currently active window                                |
 
+<img src="/img/running_list.png/"
+     alt="screenshot of the output of the running list command"
+ />
+
+
+
+### Window management
+
+Global window managment commands are defined in [window_management.talon](core/windows_and_tabs/window_management.talon).
+
+- `running list` toggles a window displaying words you can say to switch to running applications. To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
+- `launch music` will launch the music application. Note this is currently only implemented on macOS.
+
+### Screenshot commands
+
+See [screenshot.talon](plugin/screenshot/screenshot.talon).
+
+
 ## Working with tabs
 
 | Command           |

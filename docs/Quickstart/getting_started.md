@@ -60,7 +60,7 @@ One recognition engine that comes with Talon is known as `Conformer D`. To insta
 For other engine options, see the [speech engine page](./Speech%20Engines/speech%20engines.md)
 :::
 
-## 4: Install a Talon user file set
+## 4: Download the Talon user file set
 
 :::important
 Talon does not come with voice commands out of the box. So at this point in the installation process,
@@ -72,7 +72,63 @@ for beginners, we strongly recommend that you use the [Talon Community](https://
 The whole wiki assumes this repository is used if not otherwise noted.
 :::
 
-See the [Talon Community README](https://github.com/talonhub/community?tab=readme-ov-file#installation) for installation instructions.
+A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory - 
+the [talon user directory](/docs/Help/terminology.md).
+
+This can be done one of two ways -  either as a `zip` file or by using `git`
+
+<details>
+  <summary>`zip` versus `git`</summary>
+<p>The background to this choice is that if you use Talon for any period of time,
+you can expect the following:</p>
+<ul>
+  <li>The community will update the `user file set` with bug fixes and new features, and you will want
+to update your local copy of it.</li>
+  <li>You might make your own changes to some of these files.</li>
+</ul> 
+<p>The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime. </p>
+<p>If downloading `zip` files, you will manually need to keep track of any changes you may make to your copy of the files.</p>
+<p>If you are not particularly comfortable using a command terminal, and if you are just wanting to explore the suitability of Talon
+you may wish to use the simpler method of downloading `zip` files. You will always be able to switch to using `git` down the track.</p>
+</details>
+
+<details>
+  <summary>Using the `zip` method</summary>
+<p>If you wish to install `community` by downloading and extracting a zip file, proceed as follows:</p>
+ <ol>
+  <li>Download the [zip archive of community](https://github.com/talonhub/community/archive/refs/heads/main.zip)</li>
+  <li>Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.</li>
+  <li>Place these extracted files inside the `user` folder of the Talon Home directory. You can find this folder by right-clicking the Talon icon in the taskbar (Windows) or clicking the Talon icon in the menu bar (Mac), clicking Scripting > Open ~/talon, and navigating to `user`.</li>
+</ol> 
+</details>
+
+<details>
+  <summary>Using the `git` method</summary>
+<p>If you wish to install `community` by using git, proceed as follows:</p>
+#### Linux & Mac
+
+1. Install [`git`](https://git-scm.com/)
+1. Open a terminal ([Mac](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) / [Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal))
+1. Paste the following into the terminal window then press Enter/Return:
+
+```bash
+cd ~/.talon/user
+git clone https://github.com/talonhub/community community
+```
+
+#### Windows
+
+1. Install [`git`](https://git-scm.com/)
+2. Open a [command prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows)
+3. Paste the following into the command prompt window then press Enter:
+
+```
+cd %AppData%\Talon\user
+git clone https://github.com/talonhub/community community
+```
+</details>
+
+
 
 ## 5: Test your Talon Setup
 
@@ -81,7 +137,7 @@ See the [Talon Community README](https://github.com/talonhub/community?tab=readm
 ## 6: Next steps
 
 - If needed, try ways to [improve recognition accuracy](improving_recognition_accuracy.md)
-- [Customize Talon](../Customization/basic_customization.md): learn about how to configure Talon to your liking.
+- [Customize Talon](../Customization/overview.md): learn about how to configure Talon to your liking.
 - In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the [essential Talon integrations](../Integrations/essential-tools.md)
 - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
 - For earlier access to new features, priority support, and access to additional [speech engines](./Speech%20Engines/speech%20engines.md), install the [beta version](beta_talon.md).

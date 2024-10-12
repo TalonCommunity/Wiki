@@ -78,6 +78,8 @@ Additionally, the `go` command supports its own more compact syntax.
 | `select way up`                         | to the start of the document                |
 | `select way down`                       | to the end of the document                  |
 
+As another example of using command repetition, saying `select up third` will press `shift+up` three times to select several lines of text.
+
 ## Cut, Copy and Paste
 
 
