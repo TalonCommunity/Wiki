@@ -13,7 +13,7 @@ Talon supports three methods for customizing it's functionality.
 
 | Method | User Skill              | Description | 
 | ---------------- | ---------------------- | - | 
-| [TalonScript](./TalonScript/talon-script.md)      | All Users | Create new [Voice Commands](./TalonScript/voice-commands.md), change [settings](./TalonScript/settings.md) and more | 
+| [TalonScript](./TalonScript/talon-script.md)      | All Users | Create new [Voice Commands](./TalonScript/voice-commands.md), change [settings](./settings.md) and more | 
 | [Python](./python.md)          | Programmers | Create new [Talon Actions](/docs/Help/terminology.md#talon-actions) for use within [Voice Commands](/docs/Help/terminology.md#voice-commands) | 
 
 
@@ -51,3 +51,10 @@ Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this
 
 ## Backups
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

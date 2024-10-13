@@ -18,10 +18,11 @@ Talon has three basic modes by default:
 ## Mode Switching
 
 
-<img src="/img/basic-modes.png/"
+<!--- the source is in diagrams\basic_talon_modes.graphml ---> 
+
+<img src="/img/basic_talon_modes.png/"
      alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
  />
-
 
 | Command          | Description                 |
 | ---------------- | --------------------------- |

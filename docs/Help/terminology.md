@@ -9,7 +9,28 @@
 
 ## imgui
 
+## Settings Directory
+
+This is the `settings` subdirectory within the [talon user directory](#talon-community-directory).
+It stores personal lists such as `abbreviations.csv`, `file_extensions.csv` and `words_to_replace.csv`.
+
+## Settings.talon
+
+This file contains the settings described [here](/docs/Customization/settings.md) and is located in the
+[talon user directory](#talon-community-directory).
+
+:::note
+
+Not that this means that the file is not located within the [settings directory](#settings-directory).
+
+:::
+
 ## Talon Actions
+
+## Talon Community Directory
+
+This is the subdirectory inside the [talon user directory](#talon-user-directory) in which you installed the
+[talon community user a file set](#talon-community-user-file-set).
 
 ## Talon Community User File Set
 

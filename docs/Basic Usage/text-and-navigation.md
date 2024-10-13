@@ -111,16 +111,30 @@ As another example of using command repetition, saying `select up third` will pr
 | `clone line`                          | replaces the current line with two copies of it                             |
 
 
-## Miscellaneous Text Functions
+## Miscellaneous Text Commands and Shortcuts
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
 | `new line above`                      | inserts a new line above the current one                                    |
 | `new line below` or `slap`            | inserts a new line below the current one                                    |
 | `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
-| (`pad` or `padding`) `<symbol_key>+`    | inserts the specified symbol keys, with a space character before and after  |
+| (`pad` or `padding`) `<symbol_key>+`  | inserts the specified symbol keys, with a space character before and after, saying `pad colon` inserts ` ` `:` ` `  |
 | `indent` or `indent more`             | indents the current line                                                    |
 | `out dent` or `indent less`           | outdents the current line                                                   |
+| `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik` |
+| `<file_extension_spoke_in_form>`      | inserts the common form of the spoken file extension, saying `dot markdown` will insert `.md`                    |
+
+:::info Personalization File Locations
+
+The personalization files are located within the [settings directory](/docs/Help/terminology.md).
+
+| Item                               | Filename                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| spoken and written forms of abbreviations           | `abbreviation.csv`   |
+| spoken and written forms of file extensions           | `fall_extensions.csv`   |
+
+
+:::
 
 ## Undo/Redo
 

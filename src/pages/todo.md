@@ -89,3 +89,8 @@ I've changed this to a neutral approach of explaining the advantages and disadva
 
 For example, the library read me has a section called "💡 Tip: Overriding cleanly", and this wiki has
 similar information in a section called "Overriding existing voice commands"
+
+### Explain generation of images from graphml files
+
+Using: https://www.yworks.com
+

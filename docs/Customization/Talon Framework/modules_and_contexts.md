@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Modules
 
-A Module is a place for giving things names. In particular, it can declare [actions](actions.md), [lists and captures](lists.md), [scopes](scopes.md), [tags](./tags.md), [modes](modes.md), [settings](settings.md) and [applications](apps.md). In Python, you can construct a module like so:
+A Module is a place for giving things names. In particular, it can declare [actions](actions.md), [lists and captures](lists.md), [scopes](scopes.md), [tags](./tags.md), [modes](modes.md), [settings](./settings.md) and [applications](apps.md). In Python, you can construct a module like so:
 
 ```python
 from talon import Module

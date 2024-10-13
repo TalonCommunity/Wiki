@@ -6,7 +6,7 @@ sidebar_position: 1
 | Area | Description | 
 | ---------------- | ---------------------- |
 | [Voice Commands](/docs/Help/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Help/terminology.md#voice-commands) for existing [Talon Actions](/docs/Help/terminology.md#talon-actions), or modify existing voice commands. | 
-| [Settings](./settings.md) | Change [settings](./settings.md) such as whether Talon should display help info using the dark mode theme. | 
+| [Settings](../settings.md) | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme. | 
 | [Tags](tag-activation.md)     | Activate [tags](tag-activation.md) |
 | [keyboard shortcuts](customize-kbd-shortcut.md) | Customize [keyboard shortcuts](customize-kbd-shortcut.md) |
 
