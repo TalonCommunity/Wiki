@@ -42,7 +42,12 @@ Given this flexibility there are two ways you could approach customizing your Ta
 
 ![Screen shot of Talon user directory](/img/talon_user_folders.png)
 
-## Backups
+## Refreshing Your Local Copy of the Community User File Set
 
-You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
+You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. 
+
+Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
+
+
+## Backups
 
