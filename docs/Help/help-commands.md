@@ -27,17 +27,38 @@ For example, if you have customized the alphabet then saying `help alphabet` wil
 
 ## Help Commands
 
-Apart from the help command shown above, there are the following commands as well:
+Apart from the help commands shown above, there are the following commands as well:
 
 | Command                      | Description                                                      |
 | ---------------------------- | ---------------------------------------------------------------- |
-| `help help`                | show all the help commands available                          |
-| `help active`                | show all currently available commands                            |
-| `help context`               | "help all" (don't worry about the word `context`)  |
+| `help help`                  | show all the help commands available                          |
+| `help active`                | show all currently available commands (available in the frontmost application)                            |
+| `help context`               | shows all commands including context info  |
 | `help context <help_contexts>`  | shows help about the specified contexts - for example, `help context vscode` |
 | `help search <phrase>`       | shows help about all commands related to the specified phrase - for example, `help search tab` displays all tab-related commands  |
+| `help scope`                 | show the currently active modes, tags, and miscellaneous status info                |
 
+### Help Scope
 
+This shows the currently active modes, tags, and miscellaneous status info.
+
+For example, under `Modes` we see that `command` is listed. This shows that we are in [command mode](/docs/Basic%20Usage/command_mode.md),
+and if we were in [dictation mode](/docs/Basic%20Usage/dictation_mode.md) this would show `dictation` instead.
+
+Under Tags we see that [browser](/docs/Apps/App%20Classes/browsers.md) is listed. This shows that Talon has recognized that the active application
+(which we can see from further down is firefox), is [classified](/docs/Apps/overview.md#application-classes) as a browser.
+
+<img src="/img/help_scope.png/"
+     alt="screenshot of the output of the help scope command"
+ />
+
+If running `notepad++` and with the file `something.cs` open, we can note the following in the `help scope` window:
+
+Talon has recognized that the `win.file_ext` is `.cs`, and that the `code.language` is `csharp`.
+
+<img src="/img/help_scope_notepad_csharp.png"
+     alt="screenshot of the output of the help scope command"
+ />
 
 ## Navigating Help Windows
 
@@ -49,16 +70,3 @@ Once say help window is open, the following commands are available:
 | `help close`                 | hide any open help window again                                  |
 | `help <number>`                 | shows detailed help about the numbered item - for example `help eleven` to open the item numbered 11    |
 | `help return`                 | when showing detailed help, this returns to showing the main help page    |
-
-
-
-| `command history`            | show the command history      Page 2                                   |
-| `talon open log`             | open the talon log for debugging                                 |
-
-
-1. `help active` displays commands available in the active (frontmost) application.
-   - Available commands can change by application, or even the window title.
-
-```
-help scope$: user.help_scope_toggle()
-```

@@ -1,18 +1,6 @@
 # General PC Control
 
-## Help Commands
-
-| Command                      | Description                                                      |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `help alphabet`              | show the spelling alphabet for pressing individual keys          |
-| `help context`               | show all defined commands                                        |
-| `help active`                | show all currently available commands                            |
-| `help next`, `help previous` | go to the next or previous page of help items if there are a lot |
-| `help close`                 | hide any open help window again                                  |
-| `command history`            | show the command history                                         |
-| `talon open log`             | open the talon log for debugging                                 |
-
-
+See also [help](/docs/Help/help-commands.md) for displaying help using Talon's inbuilt help system.
 
 ## Customize Talon
 
@@ -34,6 +22,8 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
 | `window close`      | closes the currently active window                                |
 
+
+
 Sample output from the `running list` command:
 <img src="/img/running_list.png/"
      alt="screenshot of the output of the running list command"
@@ -43,6 +33,12 @@ Sample output from the `running list` command:
 To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
 :::
 
+## Miscellaneous Talon Commands
+
+| Command                      | Description                                       |
+| ---------------------------- | ------------------------------------------------- |
+| `command history`            | show the command history           |
+| `talon open log`             | open the talon log for debugging                                 |
 
 ## Screenshot commands
 
