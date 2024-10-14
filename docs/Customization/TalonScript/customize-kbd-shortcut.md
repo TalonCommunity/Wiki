@@ -20,4 +20,4 @@ key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from r
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
 
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](../Talon%20Library%20Reference/Actions/key_action.md) wiki page.
+The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](/docs/Resource%20Hub/Talon%20Library%20Reference/Actions/key_action.md) wiki page.

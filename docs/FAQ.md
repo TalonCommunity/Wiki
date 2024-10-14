@@ -2,7 +2,7 @@
 
 ### What can I say?
 
-Checkout the [common commands](./Basic%20Usage/basic_usage) to get started using Talon.
+Checkout the [common commands](/docs/Basic%20Usage/basic_usage) to get started using Talon.
 
 ### How can I code in different languages with Talon
 
@@ -10,7 +10,7 @@ Talon does not require special configuration for different programming languages
 
 ### What hardware should I have?
 
-Check out the [hardware](./Quickstart/Hardware/hardware.md) page for microphone and eye tracker recommendations.
+Check out the [hardware](/docs/Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
 
 ### Are languages other than English supported?
 
@@ -18,7 +18,7 @@ They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and fin
 
 ### How can I make talon recognise me better?
 
-See the page [Improving Recognition Accuracy](improving_recognition_accuracy).
+See the page [Improving Recognition Accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
 
 ### How can I contribute?
 

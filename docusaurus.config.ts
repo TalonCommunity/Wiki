@@ -125,6 +125,12 @@ const config: Config = {
         },
         {
           type: "docSidebar",
+          sidebarId: "ResourceHubSidebar",
+          position: "left",
+          label: "Resource Hub",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "HelpSidebar",
           position: "left",
           label: "Help",

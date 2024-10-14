@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves at a basic level.
+Once you have successfully [set up Talon](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md) you may find that you would like to change some of how it behaves at a basic level.
 
 ## Customization overview
 

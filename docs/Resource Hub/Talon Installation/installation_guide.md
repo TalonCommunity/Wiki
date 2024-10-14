@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## 1: Check System Requirements
 
-Talon has various [system requirements](Hardware/hardware.md), covering the computer hardware, operating system and microphone hardware.
+Talon has various [system requirements](/docs/Resource%20Hub/Hardware/hardware.md), covering the computer hardware, operating system and microphone hardware.
 
 ## 2: Download & Install Talon
 
@@ -60,7 +60,7 @@ One recognition engine that comes with Talon is known as `Conformer D`. To insta
 </details>
 
 :::note
-For other engine options, see the [speech engine page](./Speech%20Engines/speech%20engines.md)
+For other engine options, see the [speech engine page](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md)
 :::
 
 ## 4: Download the Talon user file set
@@ -135,12 +135,12 @@ git clone https://github.com/talonhub/community community
 
 ## 5: Test your Talon Setup
 
-- Try a few [basic commands](../Basic%20Usage/basic_usage.md).
+- Try a few [basic commands](/docs/Basic%20Usage/basic_usage.md).
 
 ## 6: Next steps
 
-- If needed, try ways to [improve recognition accuracy](improving_recognition_accuracy.md)
-- [Customize Talon](../Customization/overview.md): learn about how to configure Talon to your liking.
-- In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the [essential Talon integrations](../Integrations/essential-tools.md)
+- If needed, try ways to [improve recognition accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md)
+- [Customize Talon](/docs/Customization/overview.md): learn about how to configure Talon to your liking.
+- In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the [essential Talon integrations](/docs/Integrations/essential-tools.md)
 - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
-- For earlier access to new features, priority support, and access to additional [speech engines](./Speech%20Engines/speech%20engines.md), install the [beta version](beta_talon.md).
+- For earlier access to new features, priority support, and access to additional [speech engines](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md), install the [beta version](/docs/Resource%20Hub/beta_talon.md).

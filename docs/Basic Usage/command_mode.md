@@ -3,7 +3,7 @@
 The examples below are just a very small selection of common commands for working with Talon. These are based on the [Talon Community](https://github.com/talonhub/community) user file set.
 
 :::note Switching Modes
-See [Mode Switching](./basic_usage.md#mode-switching) for info about switching modes
+See [Mode Switching](/docs/Basic%20Usage/basic_usage.md#mode-switching) for info about switching modes
 :::
 
 
