@@ -1,5 +1,11 @@
 # Using Talon with Nix
 
+:::note
+
+If you don't know what Nix is, then you don't need to worry, there is no need to read this page
+
+:::
+
 Talon can be installed using the Nix package manager by using the [nix-community/talon-nix](https://github.com/nix-community/talon-nix) flake. It can be installed either as a system package or home manager package.
 
 Because Talon is closed source, your system will need to be configured to accept [unfree packages](https://wiki.nixos.org/wiki/Unfree_software).
