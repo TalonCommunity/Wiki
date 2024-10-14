@@ -1,25 +1,5 @@
 #  Text and Navigation
 
-## Zoom
-
-Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
-
-| Command      | Description                       |
-| ------------ | --------------------------------- |
-| `zoom in`    | zoom in                           |
-| `zoom out`   | zoom out                          |
-| `zoom reset` | reset magnification level to 100% |
-
-## Searching
-
-
-
-| Command    | Description                                                 |
-| ---------- | ----------------------------------------------------------- |
-| `find it`  | bring up the application's find dialog box                  |
-| `next one` | select the next occurrence that matches the search criteria |
-
-
 ## Navigation
 
 
@@ -111,7 +91,25 @@ As another example of using command repetition, saying `select up third` will pr
 | `clone line`                          | replaces the current line with two copies of it                             |
 
 
-## Miscellaneous Text Commands and Shortcuts
+## Undo/Redo
+
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `undo that`                      | performs an undo                                   |
+| `redo that`            | performs a redo |
+
+
+## Searching
+
+
+
+| Command    | Description                                                 |
+| ---------- | ----------------------------------------------------------- |
+| `find it`  | bring up the application's find dialog box                  |
+| `next one` | select the next occurrence that matches the search criteria |
+
+
+## Miscellaneous Text Commands
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
@@ -121,29 +119,88 @@ As another example of using command repetition, saying `select up third` will pr
 | (`pad` or `padding`) `<symbol_key>+`  | inserts the specified symbol keys, with a space character before and after, saying `pad colon` inserts ` ` `:` ` `  |
 | `indent` or `indent more`             | indents the current line                                                    |
 | `out dent` or `indent less`           | outdents the current line                                                   |
-| `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik` |
-| `<file_extension_spoke_in_form>`      | inserts the common form of the spoken file extension, saying `dot markdown` will insert `.md`                    |
+
+Insert a Pair of Delimiters
+
+These commands insert a pair of delimiters and places the insertion point between them.
+
+
+| Command                                                           | Delimiter   |
+| ----------------------------------------------------------------- | ----------- |
+| `empty string`, `inside quotes` or `inside string`                | `'`         |
+| `empty dub string`, `inside double quotes` or `inside dub quotes` | `"`         |
+| `empty escaped string`                                            | `\\'`       |
+| `empty escaped dub string`, `empty escaped dub quotes`            | `\\"`       |
+| `inside graves`, `inside back ticks`                              | `\``        |
+| `inside parens`, `args`                                           | `(` and `)` |
+| `inside squares`, `inside brackets`, `square brackets` or `list`  | `[` and `]` |
+| `inside braces`, `inside curly brackets`                          | `{` and `}` |
+| `inside percent`                                                  | `%`         |
+
+Surround Selected Text With Delimiter
+
+
+| Command                                                | Delimiter   |
+| ------------------------------------------------------ | ----------- |
+| `quote that`                                           | `'`         |
+| `double quote that` or `dub quote that`                | `"`         |
+| `empty escaped string`                                 | `\\'`       |
+| `empty escaped dub string`, `empty escaped dub quotes` | `\\"`       |
+| `grave that`, `back tick that`                         | `\``        |
+| `parens that`, `args that`                             | `(` and `)` |
+| `angle that`                                           | `<` and `>` |
+| `square that`, `bracket that`, `square bracket that`   | `[` and `]` |
+| `braces that`, `curly brackets that`                   | `{` and `}` |
+| `percent that`                                         | `%`         |
+
+
+
+## Abbreviations and Shortcuts
+
+| Command                 | Written Form                                  |
+| ----------------------- | --------------------------------------------- |
+| `double dash`           | `--`                                          |
+| `triple quote`          | `'''`                                         |
+| `dot dot`               | `..`                                          |
+| `ellipsis`              | `...`                                         |
+| `dot dot`               | `..`                                          |
+| `comma and` or `spamma` | `, ` (with a space character after the comma) |
+| `arrow`                 | `->`                                          |
+| `dub arrow`             | `=>`                                          |
+
+
+| Command                            | Description                                                                                   |
+| ---------------------------------- | --------------------------------------------------------------------------------------------- |
+| `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik`     |
+| `<file_extension_spoke_in_form>`   | inserts the common form of the spoken file extension, saying `dot markdown` will insert `.md` |
 
 :::info Personalization File Locations
 
-The personalization files are located within the [settings directory](/docs/Help/terminology.md).
+The following personalization files are located within the [settings directory](/docs/Help/terminology.md).
 
-| Item                               | Filename                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| spoken and written forms of abbreviations           | `abbreviation.csv`   |
-| spoken and written forms of file extensions           | `fall_extensions.csv`   |
+| Item                                        | Filename              |
+| ------------------------------------------- | --------------------- |
+| spoken and written forms of abbreviations   | `abbreviation.csv`    |
+| spoken and written forms of file extensions | `fall_extensions.csv` |
 
+Note that not all csv files are stored in the settings directory.
+For example, the `homophones.csv` file is contained under the core directory.
+:::
+
+## Homophones
+
+:::note To Be Completed
 
 :::
 
-## Undo/Redo
-
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `undo that`                      | performs an undo                                   |
-| `redo that`            | performs a redo |
 
 
+## Zoom
 
+Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
 
-
+| Command      | Description                       |
+| ------------ | --------------------------------- |
+| `zoom in`    | zoom in                           |
+| `zoom out`   | zoom out                          |
+| `zoom reset` | reset magnification level to 100% |

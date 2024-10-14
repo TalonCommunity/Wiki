@@ -7,12 +7,6 @@ or by saying a phrase with the first word being `press`.
 
 For example, one could say either `pit` or `press pit` to enter the `p` character.
 
-
-:::note Dictation Mode
-In dictation mode, saying `press pit` will enter what was dictated - ie  `press pit` and not the `p` character.
-:::
-
-
 | Section          | Example                 |
 | ---------------- | --------------------------- |
 | [Talon Alphabet](#talon-alphabet)        | `air` for `a` |
