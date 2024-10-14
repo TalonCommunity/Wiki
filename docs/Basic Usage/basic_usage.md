@@ -1,8 +1,10 @@
 # Basic Usage
 
-[applications](/docs/Apps/overview.md)
+[applications](/docs/Resource%20Hub/Apps/overview.md)
 :::warning fix wording enter
 :::
+
+
 
 ## Talon Modes
 

@@ -45,8 +45,8 @@ This shows the currently active modes, tags, and miscellaneous status info.
 For example, under `Modes` we see that `command` is listed. This shows that we are in [command mode](/docs/Basic%20Usage/command_mode.md),
 and if we were in [dictation mode](/docs/Basic%20Usage/dictation_mode.md) this would show `dictation` instead.
 
-Under Tags we see that [browser](/docs/Apps/App%20Classes/browsers.md) is listed. This shows that Talon has recognized that the active application
-(which we can see from further down is firefox), is [classified](/docs/Apps/overview.md#application-classes) as a browser.
+Under Tags we see that [browser](/docs/Resource%20Hub/Apps/App%20Classes/browsers.md) is listed. This shows that Talon has recognized that the active application
+(which we can see from further down is firefox), is [classified](/docs/Resource%20Hub/Apps/overview.md#application-classes) as a browser.
 
 <img src="/img/help_scope.png/"
      alt="screenshot of the output of the help scope command"

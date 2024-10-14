@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Getting Started
+# Installation Guide
 
 ## 1: Check System Requirements
 
