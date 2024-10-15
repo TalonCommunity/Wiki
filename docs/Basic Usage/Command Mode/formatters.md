@@ -1,12 +1,22 @@
-# Formatters
+# Saying Phrases
 
-Formatters allow you to insert a word or words with consistent capitalization and punctuation. 
+Whilst in command mode, it's easy to enter a single phrase at a time.
 
-This section refers to inserting text whilst in [command mode](command_mode.md). Dictating whilst in [dictation mode](../dictation_mode.md) is described separately.
+For example, saying `say hello world` will insert the text `hello world`.
 
-To insert some text, say the name of the formatter followed by the text itself.
+The word `say` in the above example is known as the formatter name. To insert some text, say the name of the formatter followed by the text itself.
 
-A simple example uses the `say` formatter. Saying `say hello world` will insert the text `hello world`.
+Formatters allow you to insert a word or words with specific capitalization and punctuation. There are many different formatters as described below,
+some specifically crafted to make the entry of variable names etc more efficient.
+
+
+
+
+:::tip
+
+When needing to dictate more than a few phrases, it might be more efficient to first switch to [dictation mode](../dictation_mode.md) described separately.
+
+:::
 
 ## Formatter Classes
 

@@ -1,49 +1,27 @@
+---
+sidebar_position: 1
+---
+
 # Basic Usage
 
-[applications](/docs/Resource%20Hub/Apps/overview.md)
-:::warning fix wording enter
-:::
+Once you have [completed installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md) and entered a few letters as a test, you are ready for actually using Talon.
 
 
 
-## Talon Modes
+It's recommended to learn the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md) first, then get familiar with the keys, symbols, formatters, mouse, and generic_editor commands.
 
-Talon has three basic modes by default:
+Once you have the basics of text input down, try copying some code from one window to another.
 
-| Mode          | Description                 |
-| ---------------- | --------------------------- |
-| **command mode**        | Your speech will be interpreted as commands by default.  |
-| **dictation mode**        | Your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems.  |
-| **sleep mode** | Talon will do nothing until it hears a commands that wakes it up.|
+After that, explore using ordinal repetition for easily repeating a command without pausing (e.g., saying `go up fifth` will go up five lines), window switching (`focus chrome`), and moving around in your text editor of choice.
 
+If you use vim, just start with the numbers and alphabet, otherwise look at generic_editor.talon as well at jetbrains, vscode, and any other integrations.
 
-## Mode Switching
+## Games
 
+- [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
 
-<!--- the source is in diagrams\basic_talon_modes.graphml ---> 
+## Cheatsheets
 
-<img src="/img/basic_talon_modes.png/"
-     alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
- />
+- [Xevs web-based Talon Cheatsheet](https://talon-knausj-cheatsheet.netlify.app/) An online way to look up commands.
 
-| Command          | Description                 |
-| ---------------- | --------------------------- |
-| `wake up`        | Enable speech recognition.  |
-| `talon wake`     | Enable speech recognition.  |
-| `go to sleep`    | Disable speech recognition. |
-| `talon sleep`    | Disable speech recognition. |
-| `dictation mode` | Switch to dictation mode.   |
-| `command mode`   | Switch to command mode.     |
-
-## Mode indicator
-
-There are the following ways to keep track of what mode you are in with a visual icon:
-
-1. Enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
-
-2. Install the [Talon HUD](/docs/Integrations/Details/talon-hud.md) 
-
-:::warning
-Fix all references to `(https://github.com/talonhub/community/tree`
-:::
 

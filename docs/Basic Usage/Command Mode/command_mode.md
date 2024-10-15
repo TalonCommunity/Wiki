@@ -1,3 +1,7 @@
+---
+sidebar_position: 3.1
+---
+
 # Command Mode
 
 The examples below are just a very small selection of common commands for working with Talon. These are based on the [Talon Community](https://github.com/talonhub/community) user file set.
@@ -12,7 +16,8 @@ The following can be performed in command mode:
 | ------------------------------------- | ----------------------------- |
 | Enter any [single character](./single-characters.md)                         | for `a` say `air`, `$` say `dollar sign`, function key f2 say `f2`, for the home key say `home`  |
 | Enter a [sequence of characters](./single-characters.md#entering-multiple-characters) | for `c3po` say `press cap three pit odd` |
-| Enter a phrase with control over [formatting](./formatters.md) | for `my_variable` say `snake my variable`, for `yourVariable` say `camel your variable` |
+| Enter a [single word](./text-and-navigation.md#saying-individual-words) | for `miscellaneous` say `word miscellaneous` |
+| Enter a [phrase](./formatters.md) with control over formatting | for `my_variable` say `snake my variable`, for `yourVariable` say `camel your variable` |
 | Navigate a [document](./text-and-navigation.md#navigation), [select text](./text-and-navigation.md#selecting) within it | `go left`, `go down five times`, `select word left` |
 | [Clipboard](./text-and-navigation.md#cut-copy-and-paste) commands, [clearing and duplicating text](./text-and-navigation.md#deleting-and-duplicating-text) | `cut that`, `clear word left`, `clone line` |
 | [Controlling applications](./pc-control.md#working-with-applications), [tabs within apps](./pc-control.md#working-with-tabs) | `focus chrome`, `tab new` |

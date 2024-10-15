@@ -1,3 +1,7 @@
+---
+sidebar_position: 3.2
+---
+
 # Letters, Numbers & Symbols
 
 This section describes what needs to be said to enter the various keys on the keyboard.
