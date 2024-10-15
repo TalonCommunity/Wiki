@@ -10,8 +10,13 @@ Doing this means that you can obtain the latest version of the community file se
 This is easy enough for new words and voice commands, and a similar method can also be used for overriding existing voice commands. 
 The difference being that you need to indicate to Talon to make use of your definitions rather than the standard community defined ones.
 
-This is done by taking advantage of the way Talon determines priority - it chooses the implementation that is in the file with the most specific context header
-(i.e. the one with the most rules in it). To make this work you simply need to add an extra rule into the context header of your file.
+## Overriding Cleanly
+
+Start off by copying the community defined file to your [personal talon directory](/docs/Help/terminology.md#personal-talon-directory).
+Note that your personal file will need to be complete and include all entries from the community defined file relevant to you.
+That is, the content of your file will be used by Talon instead of the community defined file, and not as an extension to it.
+
+Apart from making any customizations to the list, you will also need to add an extra rule into the context header.
 
 For example, the community defined `letter.talon-list` has the context header:
 ```talon
@@ -25,6 +30,14 @@ list: user.letter
 language: en
 -
 ```
+
+:::info How This Works
+
+We take advantage of the way Talon determines priority - it chooses the implementation that is in the file with the most specific context header
+(i.e. the one with the most rules in it). 
+
+:::
+
 
 ### Overriding the `Touch` Command
 

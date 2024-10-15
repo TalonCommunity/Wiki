@@ -141,6 +141,6 @@ git clone https://github.com/talonhub/community community
 
 - If needed, try ways to [improve recognition accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md)
 - [Customize Talon](/docs/Customization/overview.md): learn about how to configure Talon to your liking.
-- In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the [essential Talon integrations](/docs/Integrations/essential-tools.md)
+- In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the popular [essential Talon integrations](/docs/Integrations/integrations.md)
 - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
 - For earlier access to new features, priority support, and access to additional [speech engines](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md), install the [beta version](/docs/Resource%20Hub/beta_talon.md).

@@ -180,6 +180,9 @@ These commands are available when the mouse grid is showing:
 | `grid reset`    | positions the grid to fill the entire screen                |
 | `grid back`    | repositions the grid to how it was prior to the last narrowing               |
 
+:::note Mouse Grid Alternatives
+
+There are a few [alternatives](/docs/Integrations/mouse-alternatives.md) to the mouse grid described in this section.
 
 # Save
 file save: edit.save()

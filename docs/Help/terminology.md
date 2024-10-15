@@ -9,6 +9,8 @@
 
 ## imgui
 
+## Personal Talon Directory
+
 ## Settings Directory
 
 This is the `settings` subdirectory within the [talon user directory](#talon-community-directory).
