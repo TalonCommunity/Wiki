@@ -53,7 +53,7 @@ The following commands work on the currently selected text.
 | Command                     | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
 | `formatted <user.format_text>`                 | what does this do?             |
-| `format selection <user.formatters>`                 | formats the selected text with the specified [formatters](/docs/Basic%20Usage/formatters.md), `format selection snake`            |
+| `format selection <user.formatters>`                 | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/formatters.md), `format selection snake`            |
 
 
 ## Special Words

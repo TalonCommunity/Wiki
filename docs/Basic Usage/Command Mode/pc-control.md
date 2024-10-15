@@ -2,17 +2,6 @@
 
 See also [help](/docs/Help/help-commands.md) for displaying help using Talon's inbuilt help system.
 
-## Customize Talon
-
-These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
-
-| Command                      | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
-| `customize additional words` | add additional words that Talon will recognize    |
-| `customize words to replace` | remap or reformat words that Talon will recognize |
-| `customize alphabet`         | change the default Talon alphabet                 |
-| `customize websites`         | add websites that can be opened with Talon        |
-
 ## Working with applications
 
 | Command             | Description                                                       |
@@ -33,12 +22,6 @@ Sample output from the `running list` command:
 To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
 :::
 
-## Miscellaneous Talon Commands
-
-| Command                      | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
-| `command history`            | show the command history           |
-| `talon open log`             | open the talon log for debugging                                 |
 
 ## Screenshot commands
 
@@ -201,3 +184,22 @@ These commands are available when the mouse grid is showing:
 # Save
 file save: edit.save()
 file save all: edit.save_all()
+
+
+## Customize Talon
+
+These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
+
+| Command                      | Description                                       |
+| ---------------------------- | ------------------------------------------------- |
+| `customize additional words` | add additional words that Talon will recognize    |
+| `customize words to replace` | remap or reformat words that Talon will recognize |
+| `customize alphabet`         | change the default Talon alphabet                 |
+| `customize websites`         | add websites that can be opened with Talon        |
+
+## Miscellaneous Talon Commands
+
+| Command                      | Description                                       |
+| ---------------------------- | ------------------------------------------------- |
+| `command history`            | show the command history           |
+| `talon open log`             | open the talon log for debugging                                 |

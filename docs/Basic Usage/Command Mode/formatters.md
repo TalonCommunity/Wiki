@@ -2,7 +2,7 @@
 
 Formatters allow you to insert a word or words with consistent capitalization and punctuation. 
 
-This section refers to inserting text whilst in [command mode](command_mode.md). Dictating whilst in [dictation mode](dictation_mode.md) is described separately.
+This section refers to inserting text whilst in [command mode](command_mode.md). Dictating whilst in [dictation mode](../dictation_mode.md) is described separately.
 
 To insert some text, say the name of the formatter followed by the text itself.
 

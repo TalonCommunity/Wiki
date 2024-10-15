@@ -1,6 +1,6 @@
 # Learning
 
-It's recommended to learn the [alphabet](/docs/Basic%20Usage/single-characters.md) first, then get familiar with the keys, symbols, formatters, mouse, and generic_editor commands.
+It's recommended to learn the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md) first, then get familiar with the keys, symbols, formatters, mouse, and generic_editor commands.
 
 Once you have the basics of text input down, try copying some code from one window to another.
 

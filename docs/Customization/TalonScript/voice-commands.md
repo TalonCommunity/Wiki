@@ -126,9 +126,9 @@ Here are some community defined captures:
 
 | Name                  | Description |
 | ------------------------ | ------------------------------------- |
-| `<letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/single-characters.md)   |
+| `<letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md)   |
 | `<ordinal>`                    | `first`, `second`, `third`, ..., `twentieth` |
-| `<number_string>` | Entering [numbers](/docs/Basic%20Usage/single-characters.md) | 
+| `<number_string>` | Entering [numbers](/docs/Basic%20Usage/Command%20Mode/single-characters.md) | 
 | `<numbers_small>` | A small number |
 
 ### Anchoring
