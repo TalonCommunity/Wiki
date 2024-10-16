@@ -110,3 +110,5 @@ This folder contains `edit_settings.talon`, which has a command to open various 
 - `websites_and_search_engines` has commands for opening websites, following links, and making browser searches
 - `windows_and_tabs` has commands for tab and [window management](https://github.com/talonhub/community?tab=readme-ov-file#window-management), launching and switching between different applications, and snapping application windows to different locations on the screen
 
+
+Commands for enabling languages are defined in [language_modes.talon](core/modes/language_modes.talon).

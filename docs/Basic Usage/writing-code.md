@@ -1,15 +1,60 @@
-# Writing Code
 
 
-### Programming languages
+Although it may be possible to write code only with the features described in command mode,
+there are additional features in Talon community to make this more efficient.
 
-Specific programming languages may be activated by voice commands, or via title tracking.
+When you say the voice command for a programming element such as `state case`, Talon inserts the appropriate characters
+for your current coding language. Saying `state case` whilst in `csharp` mode performs:
 
-Activating languages via commands will enable the commands globally, e.g. they'll work in any application. This will also disable the title tracking method (code.language in .talon files) until the "clear language modes" voice command is used.
+```talon
+    actions.insert("case \nbreak;")
+    actions.edit.up()
+```
 
-Commands for enabling languages are defined in [language_modes.talon](core/modes/language_modes.talon).
+Whilst in ruby mode:
+```talon
+    actions.insert("when ")
+```
+
+This means that Talon must know what is the current programming language.
+see the section below on language activation for details.
+
+Before that, there may be setup required for your development environment, see below for details.
+
+## Language Activation
+
+
+Specific programming languages may be activated by explicit voice commands, or automatically detected using a technique called title tracking.
 
 By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires plugin), and Notepad++.
+
+### Voice Commands
+
+Voice commands will activate the specified language globally across all applications. Simply say `force` prior to the language name, for example
+`force typescript`.
+
+This method might be useful if for example writing documentation in Microsoft Word  and  title tracking cannot be used.
+
+Note that using voice commands to specify the language, disables the title tracking method until the `clear language modes` voice command is used.
+
+There is no special system setup required when using this technique.
+
+### Title Tracking
+
+In title tracking mode, Talon attempts to determine the coding language from the window's title.
+
+### Current Language
+
+The current language is shown in the output of the [help scope](/docs/Help/help-commands.md#help-scope) command.
+
+It can also be optionally shown by the [Talon HUD](/docs/Integrations/Details/talon-hud.md) integration.
+
+<img src="/img/talon_hud_cs.png/"
+     alt="diagram showing the talon hud integration whilst ay sea sharp file is being edited"
+ />
+
+- 
+### Programming languages
 
 To enable title tracking for your application:
 
