@@ -15,23 +15,17 @@ The goal of this wiki is to provide information and documentation for the users 
 | If you are looking for:                           | See:                                                      |
 | ------------------------------------------------- | --------------------------------------------------------- |
 | Information on getting started with Talon         | [Getting Started](/Quickstart/getting_started)            |
-| How to customize Talon                            | [Basic Customization](/Customization/basic_customization) |
-| Troubleshooting help                              | [Troubleshooting](/Quickstart/troubleshooting)            |
-| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware)                          |
+| How to customize Talon                            | [Basic Customization](/Customization/overview) |
+| Troubleshooting help                              | [Troubleshooting](/Resource%20Hub/troubleshooting)            |
+| Help with deciding on a microphone or eye tracker | [Hardware](/Resource%20Hub/Hardware/hardware)                          |
 | Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)      |
 | Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                    |
 
-## Talon Slack
+:::tip Talon Slack
 
-Talon has a Slack community for users to get help, ask questions, and meet one another. If you are starting to use Talon, join the [Talon Slack](https://talonvoice.com/chat). This is the most efficient way to get questions answered if they are not covered in this wiki. There are also a few general channels, like `#health`, for those looking for resources and other folks who might be navigating complex injuries like RSI (Repetitive Strain Injuries) from typing.
+Talon has a [Slack community](/Help/talon-slack) for users to get help, ask questions, and meet one another. This is the most efficient way to get questions answered if they are not covered in this wiki. 
 
-A few notable channels:
-
-- `#help`: get help with Talon setup, usage, or ask questions about Talon
-- `#beta`: find beta download links and ask questions specific to the beta (this is a private channel that requires a patreon donation)
-- `#health`: chat with others about computer health issues, share knowledge, find other folks who might be going through similar things
-- `#talon-docs`: chat about Talon documentation such as this wiki
-- `#hardware`: chat about hardware, e.g., microphones
+:::
 
 # Contributing
 
