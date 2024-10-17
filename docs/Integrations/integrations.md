@@ -1,4 +1,18 @@
+---
+sidebar_position: 1
+---
+
 # Integrations
+
+Integrations are pieces of software not included within the talon community user file set, that provides
+additional functionality that you might find useful.
+
+:::info Terminology
+
+You may be more familiar with the terms plugin, extension or add on rather than integrations.
+It's the same idea. 
+
+:::
 
 ## Popular
 

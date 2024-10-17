@@ -21,6 +21,14 @@ see the section below on language activation for details.
 
 Before that, there may be setup required for your development environment, see below for details.
 
+:::tip Videos and Demonstrations
+
+Here are some [videos and demonstrations](/docs/Resource%20Hub/talon_related_resources.md) of using Talon to write code.
+Don't worry if it appears overwhelming, some were made by very experienced users
+highlighting how efficiently coding using Talon can be.
+
+:::
+
 ## Language Activation
 
 
@@ -54,6 +62,7 @@ It can also be optionally shown by the [Talon HUD](/docs/Integrations/Details/ta
      alt="diagram showing the talon hud integration whilst ay sea sharp file is being edited"
  />
 
+## Video Demonstrations
 ## IDE Setup
 
 ### Programming languages
