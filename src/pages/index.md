@@ -19,7 +19,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | Troubleshooting help                              | [Troubleshooting](/Resource%20Hub/troubleshooting)            |
 | Help with deciding on a microphone or eye tracker | [Hardware](/Resource%20Hub/Hardware/hardware)                          |
 | Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)      |
-| Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                    |
+| Answers to frequently asked questions             | [FAQ](/Help/FAQ)                                    |
 
 :::tip Talon Slack
 

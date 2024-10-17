@@ -182,7 +182,7 @@ These commands are available when the mouse grid is showing:
 
 :::note Mouse Grid Alternatives
 
-There are a few [alternatives](/docs/Integrations/mouse-alternatives.md) to the mouse grid described in this section.
+There are a few [alternatives](/docs/Integrations/integrations.md#mouse-alternatives) to the mouse grid described in this section.
 
 # Save
 file save: edit.save()

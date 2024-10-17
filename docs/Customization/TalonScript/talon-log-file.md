@@ -9,7 +9,7 @@ To open the log file, right click on the Talon icon in your status bar, choose s
 
 ## Information messages
 
-When Talon notices changes to any of the `.talon` or `.py` files under the [Talon user directory](/docs/Help/terminology.md#talon-user-directory), 
+When Talon notices changes to any of the `.talon` or `.py` files under the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory), 
 it automatically reloads then and includes an information message within the log file.
 
 For the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example) the file `simple_test.talon` was written.

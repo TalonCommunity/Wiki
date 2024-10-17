@@ -3,8 +3,8 @@
 ## Voice Commands
 
 A key feature of Talon is its high level of customizability.
-You can add new words and voice commands into new .talon files which can be placed anywhere underneath the [Talon User Directory](/docs/Help/terminology.md#talon-user-directory).
-To simplify file management it is recommended that your files are kept in a separate directory to where you installed the [Talon Community User File Set](/docs/Help/terminology.md#talon-community-user-file-set).
+You can add new words and voice commands into new .talon files which can be placed anywhere underneath the [Talon User Directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
+To simplify file management it is recommended that your files are kept in a separate directory to where you installed the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set).
 Doing this means that you can obtain the latest version of the community file set without worrying about overwriting any of your personal customizations.
 
 This is easy enough for new words and voice commands, and a similar method can also be used for overriding existing voice commands. 
@@ -12,7 +12,7 @@ The difference being that you need to indicate to Talon to make use of your defi
 
 ## Overriding Cleanly
 
-Start off by copying the community defined file to your [personal talon directory](/docs/Help/terminology.md#personal-talon-directory).
+Start off by copying the community defined file to your [personal talon directory](/docs/Resource%20Hub/terminology.md#personal-talon-directory).
 Note that your personal file will need to be complete and include all entries from the community defined file relevant to you.
 That is, the content of your file will be used by Talon instead of the community defined file, and not as an extension to it.
 

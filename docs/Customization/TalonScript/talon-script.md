@@ -5,12 +5,12 @@ sidebar_position: 1
 
 | Area | Description | 
 | ---------------- | ---------------------- |
-| [Voice Commands](/docs/Help/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Help/terminology.md#voice-commands) for existing [Talon Actions](/docs/Help/terminology.md#talon-actions), or modify existing voice commands. | 
+| [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) for existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. | 
 | [Settings](../settings.md) | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme. | 
 | [Tags](tag-activation.md)     | Activate [tags](tag-activation.md) |
 | [keyboard shortcuts](customize-kbd-shortcut.md) | Customize [keyboard shortcuts](customize-kbd-shortcut.md) |
 
-TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
+TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory). 
 
 In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. 
 

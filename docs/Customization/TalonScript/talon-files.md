@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # TalonScript
 
-The primary way to extend talon is using `.talon` files placed anywhere in the [Talon user directory](/docs/Help/terminology.md#talon-user-directory). A talon file comes in two parts
+The primary way to extend talon is using `.talon` files placed anywhere in the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory). A talon file comes in two parts
 
 
 1. A [context header](./context-header.md) defining the circumstances in which the file is active.

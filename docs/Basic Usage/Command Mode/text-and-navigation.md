@@ -187,7 +187,7 @@ Surround Selected Text With Delimiter
 
 :::info Personalization File Locations
 
-The following personalization files are located within the [settings directory](/docs/Help/terminology.md).
+The following personalization files are located within the [settings directory](/docs/Resource%20Hub/terminology.md).
 
 | Item                                        | Filename              |
 | ------------------------------------------- | --------------------- |

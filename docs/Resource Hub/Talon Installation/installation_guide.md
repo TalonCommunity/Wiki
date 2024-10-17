@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 1.1
 ---
 
 # Installation Guide
@@ -76,7 +76,7 @@ The whole wiki assumes this repository is used if not otherwise noted.
 :::
 
 A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory - 
-the [talon user directory](/docs/Help/terminology.md).
+the [talon user directory](/docs/Resource%20Hub/terminology.md).
 
 This can be done one of two ways -  either as a `zip` file or by using `git`
 

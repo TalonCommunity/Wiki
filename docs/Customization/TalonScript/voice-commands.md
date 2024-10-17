@@ -4,7 +4,7 @@
 
 Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
 
-Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Help/terminology.md#talon-user-directory). 
+Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory). 
 
 OK, let's get to defining the command. 
 
@@ -317,6 +317,6 @@ See [complete action list](/docs/Resource%20Hub/Talon%20Library%20Reference/Acti
 :::
 
 :::info
-Some of the actions come with the [Base Talon Installation](/docs/Help/terminology.md#base-talon-installation), 
-and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Help/terminology.md#talon-community-user-file-set). 
+Some of the actions come with the [Base Talon Installation](/docs/Resource%20Hub/terminology.md#base-talon-installation), 
+and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set). 
 :::
