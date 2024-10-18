@@ -100,10 +100,10 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "QuickstartSidebar",
+          type: "doc",
+          docId: "home",
           position: "left",
-          label: "Quickstart",
+          label: "Home",
         },
         {
           type: "docSidebar",
