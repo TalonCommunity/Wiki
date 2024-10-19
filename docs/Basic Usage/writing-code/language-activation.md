@@ -1,4 +1,4 @@
-## Language Activation
+# Language Activation
 
 
 Specific programming languages may be activated by explicit voice commands, or automatically detected using a technique called title tracking.
@@ -20,6 +20,8 @@ There is no special system setup required when using this technique.
 
 In title tracking mode, Talon attempts to determine the coding language from the window's title. This requires that the filename (including extension)
 is included in the window's title.
+
+The extensions recognized by talon are listed for each [programming language](programming-languages.md).
 
 ## Current Language
 

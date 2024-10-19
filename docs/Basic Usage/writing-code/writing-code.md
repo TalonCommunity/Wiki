@@ -3,24 +3,13 @@
 Although it's possible to write code only with the features described in command mode,
 there are additional features in Talon community that can make this more efficient.
 
+This wiki is a starting point, but you will need to look at the community user file set `.talon` files to
+know what commands are available for the programming languages in which you wish to write. These files live under the
+`lang` subdirectory.
 
+There are also some [common language commands](./common-commands.md) for language elements that are common to multiple languages.
 
-When you say the voice command for a programming element such as `state case`, Talon inserts the appropriate characters
-for your current coding language. Saying `state case` whilst in `csharp` mode performs:
-
-```talon
-    actions.insert("case \nbreak;")
-    actions.edit.up()
-```
-
-Whilst in ruby mode:
-```talon
-    actions.insert("when ")
-```
-
-This means that Talon must know what is the current programming language, which is done through [language activation](language-activation.md).
-
-Before that, there may be setup required for your development environment, see below for details.
+To achieve this, Talon must know what is the current programming language, which is done through [language activation](language-activation.md).
 
 :::tip Videos and Demonstrations
 
@@ -30,12 +19,3 @@ highlighting how efficiently coding using Talon can be.
 
 :::
 
-## Video Demonstrations
-## IDE Setup
-
-### Programming languages
-
-To enable title tracking for your application:
-
-1. Ensure the active filename (including extension) is included in the window title.
-2. Implement the required Talon-defined `filename` action to correctly extract the filename from the window title. See the [Visual Studio Code implementation](apps/vscode/vscode.py#L137-L153) for an example.
