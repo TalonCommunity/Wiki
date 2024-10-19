@@ -58,7 +58,7 @@ It can be opened by using the `Open Talon Home` menu item from the `Scripting` m
  />
 
 
-This is the directory in which you put the [Talon Community User File Set](#talon-community-user-file-set) during [installation](/docs/Quickstart/getting_started.md#4-install-a-talon-user-file-set). 
+This is the directory in which you put the [Talon Community User File Set](#talon-community-user-file-set) during [installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md#4-install-a-talon-user-file-set). 
  
 Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
