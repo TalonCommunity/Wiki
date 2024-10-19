@@ -14,8 +14,6 @@ This method might be useful if for example writing documentation in Microsoft Wo
 
 Note that using voice commands to specify the language, disables the title tracking method until the `clear language modes` voice command is used.
 
-There is no special system setup required when using this technique.
-
 ### Title Tracking
 
 In title tracking mode, Talon attempts to determine the coding language from the window's title. This requires that the filename (including extension)

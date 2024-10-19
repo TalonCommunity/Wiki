@@ -2,9 +2,12 @@
 
 :::warning 
 
-rz: I think that the page linked to the talon icon in the menu bar should also be accessible 
+ronzulu: I don't think that everyone would automatically know that there was useful information only accessible
+through that icon.
+
+Therefore I think that there should be I link to that page
 from a named menu item such as home.
 
-As it contains links to the main areas of the wiki there is no need for a separate quick start menu heading.
+As that page contains links to the main areas of the wiki there is no need for a separate quick start menu heading.
 
 :::

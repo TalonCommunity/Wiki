@@ -15,7 +15,7 @@ It's recommended to first learn what can be said in [command mode](./Command%20M
 - mouse, and 
 - [text and navigation](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md) commands.
 
-Once you have the basics of text input down, try copying some code from one window to another.
+Once you have the basics of text input down, try [copying some code](./writing-code/) from one window to another.
 
 After that, explore using ordinal repetition for easily repeating a command without pausing (e.g., saying `go up fifth` will go up five lines), window switching (`focus chrome`), and moving around in your text editor of choice.
 
