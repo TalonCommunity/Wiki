@@ -3,7 +3,7 @@
 :::warning 
 
 ronzulu: I don't think that everyone would automatically know that there was useful information only accessible
-through that icon.
+through the Talon icon.
 
 Therefore I think that there should be I link to that page
 from a named menu item such as home.

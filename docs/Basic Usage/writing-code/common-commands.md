@@ -19,7 +19,7 @@ Whilst in ruby mode:
 
 ## Comments
 
-### Block Comments
+**Block Comments**
 
 
 | Command                                      | Description                                    | Example                     |
@@ -33,7 +33,7 @@ Whilst in ruby mode:
 | `open block comment`                         |                                                | inserts `/* `               |
 | `close block comment`                        |                                                | inserts ` */`               |
 
-### Line Comments
+**Line Comments**
 
 | Command                                | Description        | Example                 |
 | -------------------------------------- | ------------------ | ----------------------- |
@@ -43,7 +43,7 @@ Whilst in ruby mode:
 | `(line \| inline) comment <text> over` |                    |                         |
 | `(line \| inline) comment <text>$`     |                    |                         |
 
-### Documentation
+**Documentation**
 
 
 | Command        | Example                                                              |
@@ -66,41 +66,59 @@ Note that the command may vary between programming languages, eg `dock string` i
 Note that in some commands, for example C#'s `op equals` surrounding space characters are also
 inserted. This can make it more efficient, in this case compared with `space equals space`.
 
+### Math & Bitwise
 
-| Operator Class                      | Command                                                            | Example                                           |
-| ----------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------- |
-| math                                | `op (minus \| subtract)`                                           | typescript's ` - `                                |
-|                                     | `op (plus \| add)`                                                 | typescript's ` + `                                |
-|                                     | `op (times \| multiply)`                                           | typescript's ` * `                                |
-|                                     | `op divide`                                                        | typescript's ` / `                                |
-|                                     | `op mod`                                                           | typescript's ` % `                                |
-|                                     | `(op (power \| exponent) \| to the power [of])`                    | typescript's ` ** `                               |
-| comparison                          | `(op \| is) equal`                                                 | typescript's ` == `                               |
-|                                     | `(op \| is) not equal`                                             | typescript's ` != `                               |
-|                                     | `(op \| is) (greater \| more)`                                     | typescript's ` > `                                |
-|                                     | `(op \| is) (less \| below) [than]`                                | typescript's ` < `                                |
-|                                     | `(op \| is) greater [than] or equal`                               | typescript's ` >= `                               |
-|                                     | `(op \| is) less [than] or equal`                                  | typescript's ` <= `                               |
-|                                     | `is (none \| null)`                                                | typescript's ` === null`                          |
-|                                     | `is not (none \| null)`                                            | typescript's ` !== null`                          |
-| logical                             | `(op \| logical) and`                                              | typescript's ` && `                               |
-|                                     | `(op \| logical) or`                                               | typescript's ` \|\| `                             |
-| set                                 | `(op \| is) in`                                                    | typescript's ` in `                               |
-|                                     | `(op \| is) not in`                                                | typescript's ` not in `                           |
-| array                               | `op subscript`                                                     | C#'s `[]`                                         |
-| assignment                          | `op (equals \| assign)`                                            | C#'s ` = `                                        |
-|                                     | `op or equals`                                                     |                                                   |
-| combined computation and assignment | `op (minus \| subtract) equals`                                    | C#'s ` -= `                                       |
-|                                     | `op (plus \| add) equals`                                          | `plex op plus equals numb five` for C#'s `x += 5` |
-|                                     | `op (times \| multiply) equals`                                    | C#'s ` *= `                                       |
-|                                     | `op divide equals`                                                 | C#'s ` /= `                                       |
-|                                     | `op mod equals`                                                    | C#'s ` %= `                                       |
-|                                     | `[op] increment`                                                   |                                                   |
-| bitwise                             | `[op] bit [wise] and equals`                                       | c's ` &= `                                        |
-|                                     | `[op] bit [wise] or equals`                                        | c's ` \|= `                                       |
-|                                     | `(op \| logical \| bitwise) (ex \| exclusive) or equals`           | c's ` ^= `                                        |
-|                                     | `[(op \| logical \| bitwise)] (left shift \| shift left) equals`   | c's ` <<= `                                       |
-|                                     | `[(op \| logical \| bitwise)] (right shift \| shift right) equals` | c's ` >>= `                                       |
+| Command                                                            | Example                                           |
+| ------------------------------------------------------------------ | ------------------------------------------------- |
+| `op (minus \| subtract)`                                           | typescript's ` - `                                |
+| `op (plus \| add)`                                                 | typescript's ` + `                                |
+| `op (times \| multiply)`                                           | typescript's ` * `                                |
+| `op divide`                                                        | typescript's ` / `                                |
+| `op mod`                                                           | typescript's ` % `                                |
+| `(op (power \| exponent) \| to the power [of])`                    | typescript's ` ** `                               |
+| `[op] bitwise and`                                                 | C#'s ` & `                                        |
+| `[op] bitwise or`                                                  | C#'s ` | `                                        |
+| `(op \| logical \| bitwise) (ex \| exclusive) or`                  | C#'s ` ^ `                                        |
+| `(op \| logical \| bitwise) (right shift \| shift right)`          | C#'s ` >> `                                       |
+
+### Comparisons
+
+| Command                                                            | Example                                           |
+| ------------------------------------------------------------------ | ------------------------------------------------- |
+| `(op \| is) equal`                                                 | typescript's ` == `                               |
+| `(op \| is) not equal`                                             | typescript's ` != `                               |
+| `(op \| is) (greater \| more)`                                     | typescript's ` > `                                |
+| `(op \| is) (less \| below) [than]`                                | typescript's ` < `                                |
+| `(op \| is) greater [than] or equal`                               | typescript's ` >= `                               |
+| `(op \| is) less [than] or equal`                                  | typescript's ` <= `                               |
+| `is (none \| null)`                                                | typescript's ` === null`                          |
+| `is not (none \| null)`                                            | typescript's ` !== null`                          |
+| `(op \| is) in`                                                    | typescript's ` in `                               |
+| `(op \| is) not in`                                                | typescript's ` not in `                           |
+
+### Assignment
+
+| Command                                                            | Example                                           |
+| ------------------------------------------------------------------ | ------------------------------------------------- |
+| `op (equals \| assign)`                                            | C#'s ` = `                                        |
+| `op or equals`                                                     |                                                   |
+| `op (minus \| subtract) equals`                                    | C#'s ` -= `                                       |
+| `op (plus \| add) equals`                                          | `plex op plus equals numb five` for C#'s `x += 5` |
+| `op (times \| multiply) equals`                                    | C#'s ` *= `                                       |
+| `op divide equals`                                                 | C#'s ` /= `                                       |
+| `op mod equals`                                                    | C#'s ` %= `                                       |
+| `[op] increment`                                                   |                                                   |
+| `[op] bit [wise] and equals`                                       | c's ` &= `                                        |
+| `[op] bit [wise] or equals`                                        | c's ` \|= `                                       |
+| `(op \| logical \| bitwise) (ex \| exclusive) or equals`           | c's ` ^= `                                        |
+| `[(op \| logical \| bitwise)] (left shift \| shift left) equals`   | c's ` <<= `                                       |
+| `[(op \| logical \| bitwise)] (right shift \| shift right) equals` | c's ` >>= `                                       |
+
+### Collections
+
+| Command                                                            | Example                                           |
+| ------------------------------------------------------------------ | ------------------------------------------------- |
+| `op subscript`                                                     | C#'s `[]`                                         |
 
 
 ## Imperative
@@ -133,21 +151,32 @@ inserted. This can make it more efficient, in this case compared with `space equ
 
 ## Anonymous Functions
 
-| Command                                | Example                 |
-| -------------------------------------- | ----------------------- |
-| `op lambda`                       | C#'s `=>`           |
 
-```
+| Command     | Example   |
+| ----------- | --------- |
+| `op lambda` | C#'s `=>` |
 
 
-```
+## Pointers
 
-=>
+| Command          | Example  |
+| ---------------- | -------- |
+| `op dereference` | C's `*`  |
+| `op address of`  | C's `&`  |
+| `op arrow`       | C's `->` |
 
-| Tag                                          | Description                                                  |
-| -------------------------------------------- | ------------------------------------------------------------ |
-| `lang/tags/functions.{talon,py}`             | functions and definitions                                    |
-| `lang/tags/functions_common.{talon,py}`      | common functions (also includes a GUI for picking functions) |
-| `lang/tags/libraries.{talon,py}`             | libraries and imports                                        |
-| `lang/tags/libraries_gui.{talon,py}`         | graphical helper for common libraries                        |
-| `lang/tags/operators_pointer.{talon,py}`     | pointer operators (e.g., C's `&x`)                           |
+## Libraries
+
+| Command          | Example  |
+| ---------------- | -------- |
+| `toggle imports` | displays the panel that lists common import libraries  |
+
+## Functions
+
+| Command                                 | Example |
+| --------------------------------------- | ------- |
+| `toggle funk`                           |         |
+| `funk <user.code_common_function>`      |         |
+| `funk cell <number>`                    |         |
+| `funk wrap <user.code_common_function>` |         |
+| `funk wrap <number>`                    |         |
