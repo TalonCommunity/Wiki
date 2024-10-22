@@ -6,6 +6,13 @@
 
 Talon is free to use and ongoing development is made possible by [donations on Patreon](https://www.patreon.com/lunixbochs).
 
+## Talon Landscape
+
+<img src="/img/talon-elements.png/"
+     alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
+ />
+
+
 ## Goal of this Wiki
 
 The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created.

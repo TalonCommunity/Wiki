@@ -20,12 +20,16 @@ For example, if you want to insert the words `new paragraph` (rather than pressi
 
 Whilst dictating, you might say a  phrase few words, have a little pause, then say  another phrase.
 
-In general, one Wants a space before the words of the second phrase. For example, if you say the quick brown fox pause jumps over the lazy dog,
-you want quick brown fox pause jumps over the lazy dograther than quick brown fox pause jumps over the lazy dog.
+In general, one wants a space before the words of the second phrase. For example, if you say:
+- `the quick brown fox` (pause) `jumps over the lazy dog`,
+you want:
+- `the quick brown fox jumps over the lazy dog`
+rather than:
+- `the quick brown foxjumps over the lazy dog`
 
-To make dictating more efficient  and natural, talon will automatically insert the space character before the second phrase without you having to say spaceBar.
+To make dictating more efficient and natural, talon will automatically insert the space character before the second phrase without you having to say `spacebar`.
 
-Similarly, after saying "full Stop" typically you would want the next  word spoken to be capitalized. And talon will typically do this as well.
+Similarly, after saying `full stop` typically you would want the next  word spoken to be capitalized. And talon will typically do this as well.
 
 ### Prose Modifier Words
 
@@ -60,8 +64,6 @@ The following commands work on the currently selected text.
 
 There are some words that in dictation mode are not inserted literally, but rather insert the following:
 
-
-
 | Command                     | Description                                                  |
 | --------------------------- | ------------------------------------------------------------ |
 | `spacebar`                  | inserts a single space character                             |
@@ -70,22 +72,30 @@ There are some words that in dictation mode are not inserted literally, but rath
 | `open quote`, `close quote` | inserts a double quote character                             |
 | `smiley`, `winky`, `frowny` | inserts the relevant emoji characters `:-)`, `;-)` and `:-(` |
 
+As mentioned above, if you want to literally insert the text `new line` you would say `escape new line`.
+
+
 ## Entering Letters, Numbers and Times
 
 Whilst in dictation mode, saying `six colon forty five` will insert `six: forty five`.  
 To enter `6:45` simply prefix with `numb`, so say `numb six colon forty five`. 
 The following syntax is recognized:
 
+| Command                                                                | Action                  | Spoken Form                                                  |
+| ---------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------ |
+| `^press <user.modifiers>$`                                             | `shift` key pressed     | `press shift`                                                |
+| `^press <user.keys>$`                                                  | insert `r2d2`           | `press red two drum two`                                     |
+|                                                                        | `control+s` key pressed | `press control sun`                                          |
+| `(numb \| numeral) <user.number_string>`                               | insert `463`            | `numb four six three` or `numb four hundred and sixty three` |
+| `(numb \| numeral) <user.number_string> (dot \| point) <digit_string>` | insert `3.1415`         | `numb three point one four one five`                         |
+| `(numb \| numeral) <user.number_string> colon <digit_string>`          | insert `10:25`          | `numb ten colon twenty five`                                 |
 
-| Command                                                                | Example Written Form | Spoken Form                                                  |
-| ---------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------ |
-| `(numb \| numeral) <user.number_string>`                               | `463`                | `numb four six three` or `numb four hundred and sixty three` |
-| `(numb \| numeral) <user.number_string> (dot \| point) <digit_string>` | `3.1415`             | `numb three point one four one five`                         |
-| `(numb \| numeral) <user.number_string> colon <digit_string>`          | `10:25`              | `numb ten colon twenty five`                                 |
 
-The `press` command functions in the same way as in command mode, but in dictation mode the `press` must be at the beginning of the utterance. For example, `press red two drum two` for `r2d2`
+:::note
 
-Modifier keys can also be used with the `press` command, for example on windows `press control sun` we'll press the `control+s` key.
+The `press` command functions in the same way as in command mode, but in dictation mode the `press` must be at the beginning of the utterance. 
+
+:::
 
 ## Navigation Commands
 

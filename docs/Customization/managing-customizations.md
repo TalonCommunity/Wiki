@@ -1,6 +1,27 @@
-# Overriding Existing Voice Commands and Lists
+# Managing Customizations
 
-## Voice Commands
+Talon is built to be a flexible and customizable system. This means that in addition to being able to add new voice commands you can also override the behavior of existing commands reasonably easily.
+
+Given this flexibility there are two ways you could approach customizing your Talon setup:
+
+- Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
+  - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
+  - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
+- Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
+  - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
+  - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
+
+![Screen shot of Talon user directory](/img/talon_user_folders.png)
+
+## Refreshing Your Local Copy of the Community User File Set
+
+You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. 
+
+Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
+
+## Overriding Existing Voice Commands and Lists
+
+### Voice Commands
 
 A key feature of Talon is its high level of customizability.
 You can add new words and voice commands into new .talon files which can be placed anywhere underneath the [Talon User Directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
@@ -10,7 +31,7 @@ Doing this means that you can obtain the latest version of the community file se
 This is easy enough for new words and voice commands, and a similar method can also be used for overriding existing voice commands. 
 The difference being that you need to indicate to Talon to make use of your definitions rather than the standard community defined ones.
 
-## Overriding Cleanly
+### Overriding Cleanly
 
 Start off by copying the community defined file to your [personal talon directory](/docs/Resource%20Hub/terminology.md#personal-talon-directory).
 Note that your personal file will need to be complete and include all entries from the community defined file relevant to you.
@@ -39,7 +60,7 @@ We take advantage of the way Talon determines priority - it chooses the implemen
 :::
 
 
-### Overriding the `Touch` Command
+### Example - Overriding the `Touch` Command
 
 Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
 
@@ -77,7 +98,7 @@ In addition to `language: en` and `os: ` examples, another redundant filter you 
 
 This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
 
-### Overriding the Names of the Modifier Keys
+### Example - Overriding the Names of the Modifier Keys
 
 You can override Talon lists by creating a new `.talon-list` file of your own, rather than changing the existing list in the repository.
 
@@ -100,7 +121,7 @@ shift: shift
 alt: alt
 ```
 
-## Limitations
+### Limitations
 
 The method described above works for both `.talon` and `.talon-list` files, as they both start with a context header.
 
