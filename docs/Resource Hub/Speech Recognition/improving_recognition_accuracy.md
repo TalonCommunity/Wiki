@@ -60,7 +60,7 @@ Talon only processes your speech after its voice activity detector (VAD) detects
 
 This issue is sometimes caused by background noise or non-speech sounds (e.g. breathing) being picked up by your microphone. To confirm this is happening, ensure Speech Recognition > Save Recordings from the Talon menu is checked, then reproduce the problem. Each utterance is saved to a separate FLAC file in the `recordings` folder inside the Talon home folder (Scripting > Open ~/.talon from the Talon menu). If the recordings seem longer than you expect, listen to them carefully or open them in an audio editor to see what is being recorded other than your voice.
 
-If recordings appear to be the correct length, Talon may be stuck due to a long-running voice command or callback. Look in the [Talon log](/docs/Resource%20Hub/Troubleshooting/troubleshooting.md#check-the-talon-logs) (Scripting > View Log from the Talon menu) for lines containing `[watchdog]` and `(stalled)`. If these don't make any sense to you, share your log on the Talon Slack.
+If recordings appear to be the correct length, Talon may be stuck due to a long-running voice command or callback. Look in the [Talon log](/docs/Resource%20Hub/Troubleshooting/basic-issues.md#check-the-talon-logs) (Scripting > View Log from the Talon menu) for lines containing `[watchdog]` and `(stalled)`. If these don't make any sense to you, share your log on the Talon Slack.
 
 ## Help improving the Talon recognition engine
 

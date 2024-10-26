@@ -56,7 +56,7 @@ youtube: https://www.youtube.com/
 ## Customizing the List
 
 Perhaps the cleanest way to customize the list, is to use the method described in 
-[Overriding Existing Voice Commands and Lists](/docs/Customization/overriding_existing_commands.md#overriding-cleanly)
+[Overriding Existing Voice Commands and Lists](/docs/Customization/managing-customizations.md#overriding-cleanly)
 
 ## Setup
 

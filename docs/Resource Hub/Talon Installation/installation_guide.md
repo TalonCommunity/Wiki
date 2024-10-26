@@ -12,7 +12,7 @@ Talon has various [system requirements](/docs/Resource%20Hub/Hardware/hardware.m
 
 <details>
   <summary>Linux Users</summary>
-  - Download [Talon for Linux](https://talonvoice.com/dl/latest/talon-linux.tar.xz)
+  - Download [Talon for Linux](https://talonvoice.com)
   - Install by **To be completed**
 :::note
 
@@ -29,13 +29,13 @@ Talon has various [system requirements](/docs/Resource%20Hub/Hardware/hardware.m
 
 <details>
   <summary>Mac Users</summary>
-  - Download [Talon for Mac](https://talonvoice.com/dl/latest/talon-mac.dmg)
+  - Download [Talon for Mac](https://talonvoice.com)
   - Install by **To be completed**
 </details>
 
 <details>
   <summary>Windows Users</summary>
-  - Download [Talon for Windows](https://talonvoice.com/dl/latest/talon-windows.exe)
+  - Download [Talon for Windows](https://talonvoice.com)
   - Install Talon by running `talon-windows.exe`
 :::note
 It is recommended that Talon is installed as described above.

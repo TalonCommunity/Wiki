@@ -20,7 +20,7 @@ Some of these display information that is readily understandable. These include:
 
 :::note
 
-The information displayed by help commands is personalized.
+The information displayed by help commands is personalized and dynamic.
 For example, if you have customized the alphabet then saying `help alphabet` will show those customizations.
 
 :::
