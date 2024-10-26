@@ -31,4 +31,4 @@ While Talon is closed source, there's plenty you can do to help:
 
 ### Troubleshooting
 
-Checkout the [troubleshooting](troubleshooting) for solutions to common problems.
+Checkout the [troubleshooting](/docs/Resource%20Hub/Troubleshooting/troubleshooting.md) for solutions to common problems.

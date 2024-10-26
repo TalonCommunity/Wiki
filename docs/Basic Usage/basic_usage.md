@@ -4,15 +4,20 @@ sidebar_position: 1
 
 # Basic Usage
 
-Once you have [completed installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md) and entered a few letters as a test, you are ready for actually using Talon.
+:::info Talon Installation
 
-Talon has two main [modes](./talon-modes.md), and when started it launches in command mode.
+There are a number of steps involved in the [installation of Talon](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md).
+Once you have completed that and entered a few letters as a test, you are ready for actually using Talon.
+
+:::
+
+Talon has three main [modes](./talon-modes.md), and when started it launches in command mode.
 
 It's recommended to first learn what can be said in [command mode](./Command%20Mode/command_mode.md):
 - starting with the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md), 
 - then get familiar with the keys, symbols
 - saying words and phrases (and how to format them), 
-- mouse, and 
+- controlling the mouse, and 
 - [text and navigation](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md) commands.
 
 Once you have the basics of text input down, try [copying some code](./writing-code/) from one window to another.

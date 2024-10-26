@@ -38,6 +38,7 @@ send email to {user.address_book}:
     # Implement here...
 ```
 
+
 ## File Format
 
 A `.talon-list` file must start with:
@@ -53,7 +54,9 @@ The separator line consisting of the single `-` is followed by a list of entries
 key: value
 ```
 :::tip Terminology
+
 This can be thought of as `spoken form: written form`
+
 :::
 
 The `key` is the word (or words) that must be spoken for the entry in the list to be matched. And the `value` is the string that is
@@ -70,8 +73,41 @@ key
 The right hand side of the key value pair is a string with or without quotes. 
 
 :::note
+
 You can use tags and scopes in `.talon-list` files just like normal `.talon` files.
+
 :::
+
+## Required Python File
+
+Although no programming is necessary in order to use talon lists, you do need to create a python file for Talon to recognize
+your `.talon-list` file correctly. Simply create a `.py` file based on the template below, and set `name_of_my_list` with the name of your list.
+This must be identical to the list name you specified in the `.talon-list` file itself.
+
+```python
+from talon import Module
+
+mod = Module()
+
+mod.list("name_of_my_list", "Textual description of this list")
+```
+
+## File Naming Bug
+
+:::warning Don't Use the Same Filename for the `.talon` and `.talon-list` Files
+
+:::
+
+There is a bug in the currently released Talon application, whereby it gets confused if there are both
+`.talon` and `.talon-list` files with the same name.
+
+So for example, don't have:
+- `dictation.talon` and `dictation.talon-list` 
+
+Instead you could have:
+- `dictation.talon` and `dictation-list.talon-list`.
+
+Note that this has been fixed in the [beta version](/docs/Resource%20Hub/beta_talon.md).
 
 
 ## Notes for Programmers
@@ -94,13 +130,7 @@ page down:                  pagedown
 
 - We then need to initialize the list within a Talon module object. This is important for giving the list an associated comment. This is done within a Python file in our user directory. As one can see, it is a similar process to declaring a normal context list except for the fact that all the context matching is now done within the `.talon-list` file and we no longer need to do our context matching within Python.
 
-```python
-from talon import Module
 
-mod = Module()
-
-mod.list("key_special", "The list of special keys we can input through voice commands")
-```
 
 We could then use this list in a `.talon` file like so:
 

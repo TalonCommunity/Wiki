@@ -25,7 +25,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | Help with deciding on a microphone or eye tracker | [Hardware](/Resource%20Hub/Hardware)                          |
 | Installing and getting started with Talon         | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Getting Started](/Basic%20Usage/basic_usage)            |
 | How to customize Talon                            | [Basic Customization](/Customization/overview) |
-| Troubleshooting help                              | [Troubleshooting](/Resource%20Hub/troubleshooting)            |
+| Troubleshooting help                              | [Troubleshooting](/Resource%20Hub/Troubleshooting/troubleshooting)            |
 | Answers to frequently asked questions             | [FAQ](/Help/FAQ)                                    |
 
 :::tip Talon Slack
