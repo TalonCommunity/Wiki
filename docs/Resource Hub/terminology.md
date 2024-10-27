@@ -1,3 +1,7 @@
+---
+sidebar_position: 60
+---
+
 # Terminology
 
 ## Base Talon Installation

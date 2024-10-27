@@ -9,7 +9,7 @@ and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_
 
 ## Customization overview
 
-Talon supports three methods for customizing it's functionality.
+Talon supports two methods for customizing it's functionality.
 
 
 | Method | User Skill              | Description | 
@@ -26,6 +26,6 @@ However, there are some guidelines about [managing your customizations](./managi
 
 :::note Additional Capabilities
 
-Aside from these, additional extra capabilities may be added from time to time. For example in the [beta version](/docs/Resource%20Hub/terminology.md#beta-version) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
+Aside from these, additional extra capabilities may be added from time to time. For example in the [beta version](/docs/Resource%20Hub/beta_talon.md) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
 :::
 

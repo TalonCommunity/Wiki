@@ -9,7 +9,7 @@ additional functionality that you might find useful.
 
 :::info Terminology
 
-You may be more familiar with the terms plugin, extension or add on rather than integrations.
+You may be more familiar with the terms plugin, extension or add-on rather than integrations.
 It's the same idea. 
 
 :::

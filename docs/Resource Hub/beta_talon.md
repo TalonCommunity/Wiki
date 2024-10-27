@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 45
 ---
 
 # Talon Beta Version

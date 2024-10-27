@@ -14,3 +14,4 @@ is running.
 | Class                      | Description                                       |
 | ---------------------------- | ------------------------------------------------- |
 | [browser](./App%20Classes/browsers.md) | browsers, such as firefox, chrome, edge, safari  |
+| [file manager](./App%20Classes/file_manager.md) | example windows explorer and the mac finder |

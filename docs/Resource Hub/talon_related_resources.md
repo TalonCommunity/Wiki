@@ -1,3 +1,7 @@
+---
+sidebar_position: 40
+---
+
 # Educational Resources
 
 These resources cover a wide range of skill levels and topics.
