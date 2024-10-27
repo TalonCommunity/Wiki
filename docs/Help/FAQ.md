@@ -2,7 +2,7 @@
 
 ### What can I say?
 
-Checkout the [common commands](/docs/Basic%20Usage/basic_usage) to get started using Talon.
+Checkout the [common commands](/docs/Basic%20Usage/basic_usage.md) to get started using Talon.
 
 ### How can I code in different languages with Talon
 
@@ -18,7 +18,7 @@ They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and fin
 
 ### How can I make talon recognise me better?
 
-See the page [Improving Recognition Accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
+See the page [Improving Recognition Accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md).
 
 ### How can I contribute?
 

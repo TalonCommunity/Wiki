@@ -15,10 +15,10 @@ Talon settings can be applied from any `.talon` file in the user directory, rega
 
 :::
 
-:::warning
+:::warning need to fix
 
 The community user file set read me says something different, that there is a single settings file...
-Several options are configurable via a [single settings file](settings.talon) out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc).
+Several options are configurable via a `single settings file` out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc).
 
 :::
 
@@ -63,4 +63,4 @@ If the same setting is defined multiple times, Talon will use the setting value 
 | speech.engine   |               | Determines which [speech engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'.                                                                                                                                                                 |
 | speech.timeout  |               | This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the amount of time you can pause between saying 'phrase' and the following phrase. It is measured in seconds; the default is 0.300, i.e. 300 milliseconds. |
 
-To add your own additional custom settings for changing Talon behavior, see [the settings customization page](/docs/Customization/Talon%20Framework/settings.md)
+To add your own additional custom settings for changing Talon behavior, see [the settings customization page](../Customization/Talon%20Framework/settings.md)

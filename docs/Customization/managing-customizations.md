@@ -130,7 +130,7 @@ the above technique will not work.
 
 You can customize common Talon list and CSV files with voice commands: say the word `customize` followed by `abbreviations`, `additional words`, `alphabet`, `homophones`, `search engines`, `Unix utilities`, `websites` or `words to replace`. These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
 
-You can also add words to the vocabulary or replacements (words_to_replace) by using the commands in [edit_vocabulary.talon](core/vocabulary/edit_vocabulary.talon).
+You can also add words to the vocabulary or replacements (words_to_replace) by using the commands in `[edit_vocabulary.talon](core/vocabulary/edit_vocabulary.talon)`.
 
 Note however that the `customize` command always modifies your local copy of the talon community user file set files.
 

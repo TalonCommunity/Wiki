@@ -59,7 +59,7 @@ not os: windows
 
 ### Operating System Specific Files
 
-In the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example) two files were defined,
+In the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example) two files were defined,
 one for MacOS and the other for Windows and Linux.
 
 This is not ideal when needing to support multiple users on different operating systems.

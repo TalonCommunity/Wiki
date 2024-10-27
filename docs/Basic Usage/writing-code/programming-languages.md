@@ -67,7 +67,7 @@ Each tag is defined in a `.talon` file named after a `user.code_` tag (e.g., `us
 
 Language-specific implementations of the above features are in files named `lang/{your-language}/{your-language}.py`.
 
-To add support for a new language, ensure appropriate extension is added/uncommented in the [`language_extensions` dictionary in language_modes.py](core/modes/language_modes.py#L9). Then create the following files:
+To add support for a new language, ensure appropriate extension is added/uncommented in the `language_extensions` dictionary in language_modes.py `core/modes/language_modes.py#L9`. Then create the following files:
 
 - `lang/{your-language}/{your-language}.py`
 - `lang/{your-language}/{your-language}.talon`

@@ -283,7 +283,7 @@ some [<user.letter>] command:
 
 .talon files can do a few other things aside from defining voice commands.
 
-The most common usage after voice commands is to adjust [settings](./Talon%20Framework/settings). The following changes the given setting values when the context header matches:
+The most common usage after voice commands is to adjust [settings](../Talon%20Framework/settings). The following changes the given setting values when the context header matches:
 
 ```talon
 title: /my app/

@@ -15,7 +15,7 @@ In the readme file, what should be done with these types of references:
 ```
 C:\Users\ronny\AppData\Roaming\talon\user\talon-community\README.md
 
-Formatter names (snake, dubstring) are defined [here](core/text/formatters.py#L245). Formatter-related commands are defined in [text.talon](core/text/text.talon#L8).
+Formatter names (snake, dubstring) are defined `[here](core/text/formatters.py#L245)`. Formatter-related commands are defined in `[text.talon](core/text/text.talon#L8)`.
 
 There could be useful information in there, even though I'm hoping that most of the content of that read me will be deleted
  as the information the useful information has been included in the wiki and should not be duplicated in the readme.
@@ -111,4 +111,4 @@ This folder contains `edit_settings.talon`, which has a command to open various 
 - `windows_and_tabs` has commands for tab and [window management](https://github.com/talonhub/community?tab=readme-ov-file#window-management), launching and switching between different applications, and snapping application windows to different locations on the screen
 
 
-Commands for enabling languages are defined in [language_modes.talon](core/modes/language_modes.talon).
+Commands for enabling languages are defined in `[language_modes.talon](core/modes/language_modes.talon)`.

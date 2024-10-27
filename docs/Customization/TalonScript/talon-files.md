@@ -9,13 +9,13 @@ The primary way to extend talon is using `.talon` files placed anywhere in the [
 
 1. A [context header](./context-header.md) defining the circumstances in which the file is active.
   - If there is no context header present, then Talon treats the file as being active at all times.
-  (all operating systems, within all applications etc). This was the case with the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example).
+  (all operating systems, within all applications etc). This was the case with the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example).
 
 
 2. A body that implements various behaviors within that context which can:
-  - Define [voice commands](#voice-commands).
-  - Trigger actions on [keyboard shortcuts](#keyboard-shortcuts)
-  - [Activate registered tags or apps and change settings](#tags-settings-and-other-capabilities).
+  - Define [voice commands](./voice-commands.md).
+  - Trigger actions on [keyboard shortcuts](talon-script.md#keyboard-shortcuts)
+  - [Activate registered tags or apps and change settings](./voice-commands.md#tags-settings-and-other-capabilities).
 
 
 
@@ -56,7 +56,7 @@ settings():
 
 
 
-Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](./Talon%20Framework/scopes) below for more information.
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make .talon files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](../Talon%20Framework/scopes) below for more information.
 
 Each individual header line has the format `[and] [not] <requirement or scope name>: (<literal match value> | /<regex match value>/<python regex flags>)` where `[]` indicates an optional token, `(|)` indicates exclusive options, and `<>` a special segment. Some examples of valid lines are `title: foo`, `title: /foo/i`, `and tag: user.bar`, `not tag: /foo/`, and `and not tag: user.foo`.
 

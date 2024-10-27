@@ -34,11 +34,11 @@ insert bold text:
     key(ctrl-b)
 ```
 
-The part above the '-' line is called the [context header](./context-header.md) and the part below is the [body](./)). The context header specifies under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
+The part above the '-' line is called the [context header](./context-header.md) and the part below is the [body](#body). The context header specifies under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
 
 ### Context header
 
-The context header defines when the rest of the file will be active.
+The [context header](./context-header.md) defines when the rest of the file will be active.
 
 In this example our context header says that the file is only active when the word 'Gmail' is in the window title. The context header is optional; if it is not included (as in our simple_test.talon example) then the file is always active.
 

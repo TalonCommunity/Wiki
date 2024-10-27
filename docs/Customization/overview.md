@@ -15,7 +15,7 @@ Talon supports two methods for customizing it's functionality.
 | Method | User Skill              | Description | 
 | ---------------- | ---------------------- | - | 
 | [TalonScript](./TalonScript/talon-script.md)      | All Users | Create new [Voice Commands](./TalonScript/voice-commands.md), change [settings](./settings.md) and more | 
-| [Python](./Python/api-functions.md)          | Programmers | Create new [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions) for use within [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | 
+| [Python](./Python/api-functions.md)          | Programmers | Create new [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions) for use within [Voice Commands](./TalonScript/voice-commands.md) | 
 
 
 

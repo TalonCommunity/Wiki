@@ -22,11 +22,11 @@ The goal of this wiki is to provide information and documentation for the users 
 
 | If you are looking for:                                    | See:                                                                                                                       |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Videos of Talon in use                                     | [Video Demos](/Resource%20Hub/talon_related_resources.md)                                                                  |
+| Videos of Talon in use                                     | [Video Demos](/Resource%20Hub/talon_related_resources)                                                                     |
 | Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                       |
 | Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Getting Started](/Basic%20Usage/basic_usage) |
 | How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/overview), [Integrations](/Integrations)                                              |
-| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Troubleshooting/troubleshooting)                                                         |
+| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Troubleshooting/basic-issues)                                                            |
 | Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                           |
 
 :::tip Talon Slack

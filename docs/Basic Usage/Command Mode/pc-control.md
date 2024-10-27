@@ -19,7 +19,7 @@ Sample output from the `running list` command:
  />
 
 :::info Application Spoken Form Customization
-To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the [core/app_switcher](core/app_switcher) directory.
+To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
 :::
 
 

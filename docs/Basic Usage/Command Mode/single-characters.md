@@ -39,7 +39,7 @@ Try saying `air bat cap` to insert abc.
 
 :::warning Improve Wording
 the alphabet is defined in
-[this Talon list file](core/keys/letter.talon-list).
+[this Talon list file]`core/keys/letter.talon-list`.
 :::
 
 :::note Uppercase Letters

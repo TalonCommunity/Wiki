@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ## Nothing Happens When I Speak
 
-If you are testing your setup with one of the [basic commands](/docs/Basic%20Usage/basic_usage) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.
+If you are testing your setup with one of the [basic commands](/docs/Basic%20Usage/basic_usage.md) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.
 
 ### Check Your Microphone
 
@@ -55,7 +55,7 @@ Talon's icon should show up in the menu bar in the upper right corner of your sc
 
 ### Check that Talon is Awake
 
-When Talon is running, it will be in one of a few different [modes](/docs/Basic%20Usage/basic_usage). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
+When Talon is running, it will be in one of a few different [modes](/docs/Basic%20Usage/basic_usage.md). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
 
 If you are trying to use Talon commands and Talon is not responding, make sure Talon is not in sleep mode. The Talon icon in the menubar provides some visual cue as to what mode Talon is in:
 
@@ -97,7 +97,7 @@ If it's the wrong one, use the menu in the app tray to change it.
 
 ### Check the Quality of the Sound Input
 
-If your computer is receiving sound input, that doesn't necessarily mean the sound is of good quality. To confirm the sound quality, make a recording of yourself saying Talon commands and play it back. There should be no distortion of the sound and it should be at an optimum volume (not too loud, not too quiet). If you hear any distortion or the volume seems too low or high, check the microphone [gain](troubleshooting#check-the-gain).
+If your computer is receiving sound input, that doesn't necessarily mean the sound is of good quality. To confirm the sound quality, make a recording of yourself saying Talon commands and play it back. There should be no distortion of the sound and it should be at an optimum volume (not too loud, not too quiet). If you hear any distortion or the volume seems too low or high, check the microphone [gain](#check-the-gain).
 
 ### Check the Gain
 
@@ -125,7 +125,7 @@ Talon user file sets can be configured to have multiple modes, which will have a
 
 ### Check your Speech Engine
 
-Check that your speech engine has been initialized by looking in the [talon log file](troubleshooting#check-the-talon-logs) You should see a line that looks like this:
+Check that your speech engine has been initialized by looking in the [talon log file](#check-the-talon-logs) You should see a line that looks like this:
 
 ```
 2020-03-04 15:28:05  INFO (SpeechSystem) Activating speech engine: W2lEngine(en_US)
@@ -133,13 +133,13 @@ Check that your speech engine has been initialized by looking in the [talon log 
 
 ### Check your Talon user file sets
 
-Check you have some valid commands in `~/.talon/user`. If it's empty, install the [Talon Community](https://github.com/talonhub/community) user file set and test with some [basic commands](/docs/Basic%20Usage/basic_usage). Install the entire repository, not just individual files. This user file set can be combined with other Talon user file sets, though it is common that most of the functionality will be provided by [Talon Community](https://github.com/talonhub/community). Additional file sets are commonly used to customize the default behavior provided by [Talon Community](https://github.com/talonhub/community) or add additional features not already included.
+Check you have some valid commands in `~/.talon/user`. If it's empty, install the [Talon Community](https://github.com/talonhub/community) user file set and test with some [basic commands](/docs/Basic%20Usage/basic_usage.md). Install the entire repository, not just individual files. This user file set can be combined with other Talon user file sets, though it is common that most of the functionality will be provided by [Talon Community](https://github.com/talonhub/community). Additional file sets are commonly used to customize the default behavior provided by [Talon Community](https://github.com/talonhub/community) or add additional features not already included.
 
 Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink.
 
 ### Check out Tips for Improving Accuracy
 
-If commands are intermittently working, check out these tips for [improving accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
+If commands are intermittently working, check out these tips for [improving accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md).
 
 ### Check the Talon Logs
 

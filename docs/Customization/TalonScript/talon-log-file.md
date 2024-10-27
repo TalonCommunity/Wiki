@@ -12,7 +12,7 @@ To open the log file, right click on the Talon icon in your status bar, choose s
 When Talon notices changes to any of the `.talon` or `.py` files under the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory), 
 it automatically reloads then and includes an information message within the log file.
 
-For the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example) the file `simple_test.talon` was written.
+For the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example) the file `simple_test.talon` was written.
 
 You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. 
 
@@ -23,7 +23,7 @@ If you don't see a line like that, there should be information in the log file t
 
 ## Error messages
 
-Following on from the [simple TalonScript example](./talon-script.md#a-simple-talonscript-example), let's now deliberately introduce an error so we can see how Talon tells us about that. 
+Following on from the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example), let's now deliberately introduce an error so we can see how Talon tells us about that. 
 
 Edit your file and remove the final `)` character so the last line is ` key(cmd-a` or ` key(ctrl-a`. Save the file and look at your Talon log. For me, Talon writes out the following:
 
