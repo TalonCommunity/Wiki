@@ -22,7 +22,7 @@ The following requirements can be set:
 
 Talon supports multiple conditions within the context header of a single file. It supports both AND-ing and OR-ing conditions together.
 
-Without the `and` modifier, requirements of the same type (e.g. two `app`'s) are OR-ed together. 
+Without the `and` modifier, requirements of the same type (e.g. two `app`'s) are OR-ed together.
 
 ```talon
 # paint_app or notepad_app
@@ -30,7 +30,7 @@ app: paint_app
 app: notepad_app
 ```
 
-Requirements of different types (e.g. `app` and `os`) are AND-ed together. 
+Requirements of different types (e.g. `app` and `os`) are AND-ed together.
 
 ```talon
 # (paint_app or notepad_app) and windows
@@ -39,7 +39,7 @@ os: windows
 app: notepad_app
 ```
 
-The `and` modifier looks at the requirement on the previous line and merges with it to make a compound expession. 
+The `and` modifier looks at the requirement on the previous line and merges with it to make a compound expession.
 
 ```talon
 # (paint_app and windows) or notepad_app
@@ -49,6 +49,7 @@ app: notepad_app
 ```
 
 The `not` modifier just negates the condition.
+
 ```talon
 # paint_app and not windows
 app: paint_app

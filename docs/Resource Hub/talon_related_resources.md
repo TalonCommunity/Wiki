@@ -18,14 +18,13 @@ With talon you can start slowly, and improve efficiency with practice and by lea
 ## For Beginners
 
 - [Tara's Talon Youtube Channel](http://www.youtube.com/tararoys) - installation videos for Windows, MacOSX, and Linux
-- [I had to learn to code by voice by the Programming Piglet](https://www.youtube.com/watch?v=FOJ6OvPf_nM)  - Demonstraton of a beginner coding with Talon
+- [I had to learn to code by voice by the Programming Piglet](https://www.youtube.com/watch?v=FOJ6OvPf_nM) - Demonstraton of a beginner coding with Talon
 - [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
 
 ## Customizing Talon
 
 - [Matt's Visual TalonScript Builder](https://visual-talonscript.pages.dev) This is a web application that helps you build custom Talon commands with a visual interface.
 - [Stolen Sugar](https://www.stolensugar.com/) Explore alternative keywords for commands in the [Talon Community](https://github.com/talonhub/community) user file set.
-
 
 ## Writing Code
 

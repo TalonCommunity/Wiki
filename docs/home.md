@@ -1,6 +1,6 @@
 # Home
 
-:::note 
+:::note
 
 ronzulu: I don't think that everyone would automatically know that there was useful information only accessible
 through the Talon icon.

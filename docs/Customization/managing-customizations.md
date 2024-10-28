@@ -15,7 +15,7 @@ Given this flexibility there are two ways you could approach customizing your Ta
 
 ## Refreshing Your Local Copy of the Community User File Set
 
-You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes. 
+You will probably want to update your Talon Community user file set occasionally in order to pick up new features and bug fixes.
 
 Unfortunately changing Talon Commmunity may also sometimes add new bugs! If this happens you might want to go back the older version so you can keep working. Use `git` if you are familiar, and if you're not, then just making a `.zip` backup of the whole Talon user directory prior to making a potentially significant change also works.
 
@@ -28,7 +28,7 @@ You can add new words and voice commands into new .talon files which can be plac
 To simplify file management it is recommended that your files are kept in a separate directory to where you installed the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set).
 Doing this means that you can obtain the latest version of the community file set without worrying about overwriting any of your personal customizations.
 
-This is easy enough for new words and voice commands, and a similar method can also be used for overriding existing voice commands. 
+This is easy enough for new words and voice commands, and a similar method can also be used for overriding existing voice commands.
 The difference being that you need to indicate to Talon to make use of your definitions rather than the standard community defined ones.
 
 ### Overriding Cleanly
@@ -40,12 +40,14 @@ That is, the content of your file will be used by Talon instead of the community
 Apart from making any customizations to the list, you will also need to add an extra rule into the context header.
 
 For example, the community defined `letter.talon-list` has the context header:
+
 ```talon
 list: user.letter
 -
 ```
 
 You could set the context header of your file to:
+
 ```talon
 list: user.letter
 language: en
@@ -55,10 +57,9 @@ language: en
 :::info How This Works
 
 We take advantage of the way Talon determines priority - it chooses the implementation that is in the file with the most specific context header
-(i.e. the one with the most rules in it). 
+(i.e. the one with the most rules in it).
 
 :::
-
 
 ### Example - Overriding the `Touch` Command
 
@@ -89,8 +90,6 @@ touch:
     # Touch automatically ends left drags so this is for right drags specifically
     user.mouse_drag_end()
 ```
-
-
 
 Notice that we've given it a context header. Because this context headar is more specific (i.e. it has more rules in it) this implementation of "touch" will take precedence over the original. The implementation just has the `user.grid_close()` line and associated comment removed.
 

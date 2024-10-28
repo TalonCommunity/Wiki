@@ -9,4 +9,3 @@ To get a complete list of defined actions you can do the following:
 ```python
 import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old
 ```
-

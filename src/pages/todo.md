@@ -3,7 +3,7 @@
 Put references in each of the community library files (talon and python files) to the relevant part of this documentation
 so that developers changing functionality will know where the documentation needs to be changed.
 
-For example, in: 
+For example, in:
 `C:\Users\ronny\AppData\Roaming\talon\user\talon-community\plugin\mouse\mouse.talon`
 
 At a comment to say that the documentation is at:
@@ -12,6 +12,7 @@ At a comment to say that the documentation is at:
 ---
 
 In the readme file, what should be done with these types of references:
+
 ```
 C:\Users\ronny\AppData\Roaming\talon\user\talon-community\README.md
 
@@ -22,8 +23,6 @@ There could be useful information in there, even though I'm hoping that most of 
 
 Check the original version of that file as I deleted some of those references before thinking that there was useful info in there.
 ```
-
-
 
 ### what to do with the "user." terminology in this wiki
 
@@ -53,7 +52,7 @@ a different dependency.
 
 Run `npm audit` for details.
 
-D:\github\talon-community-wiki [restructure ≡ +0 ~3 -0 !]> 
+D:\github\talon-community-wiki [restructure ≡ +0 ~3 -0 !]>
 ```
 
 ### Get mermaid working?
@@ -66,7 +65,7 @@ stateDiagram-v2
         commandMode: Command Mode
         dictationMode: Dictation Mode
         commandMode --> dictationMode : "dictation mode"
-        dictationMode --> commandMode : "command mode"        
+        dictationMode --> commandMode : "command mode"
     }
 
     SpeechRecognitionDisabled: Speech Recognition Disabled
@@ -85,7 +84,7 @@ The readme discourages users from installing by downloading the zip file and rec
 
 I've changed this to a neutral approach of explaining the advantages and disadvantages of each method.
 
-###  consolidating descriptions between the library read me documentation and that here in the wiki
+### consolidating descriptions between the library read me documentation and that here in the wiki
 
 For example, the library read me has a section called "💡 Tip: Overriding cleanly", and this wiki has
 similar information in a section called "Overriding existing voice commands"
@@ -109,6 +108,5 @@ This folder contains `edit_settings.talon`, which has a command to open various 
 - `vocabulary` has commands for adding new words to be recognized and for having certain words automatically by replaced by others
 - `websites_and_search_engines` has commands for opening websites, following links, and making browser searches
 - `windows_and_tabs` has commands for tab and [window management](https://github.com/talonhub/community?tab=readme-ov-file#window-management), launching and switching between different applications, and snapping application windows to different locations on the screen
-
 
 Commands for enabling languages are defined in `[language_modes.talon](core/modes/language_modes.talon)`.

@@ -7,5 +7,3 @@ https://chaosparrot.github.io/talon_practice
 <img src="/img/talon_practice_homepage.png/"
      alt="screenshot of the talon practice website"
  />
-
- 

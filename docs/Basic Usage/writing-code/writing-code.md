@@ -18,4 +18,3 @@ Don't worry if it appears overwhelming, some were made by very experienced users
 highlighting how efficiently coding using Talon can be.
 
 :::
-

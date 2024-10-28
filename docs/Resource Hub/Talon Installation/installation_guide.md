@@ -16,12 +16,12 @@ Talon has various [system requirements](/docs/Resource%20Hub/Hardware/hardware.m
   - Install by **To be completed**
 :::note
 
-- Talon, like many tools for automation or accessibility, __does not support Wayland__
-     - You will have to select an X11 session from your login manager.
-    - This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
--  To install the speech engine, you must use Talon's tray icon:
-   * If you use stock Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) to see it
-   * If you use i3 or a system tray that doesn't support the `StatusNotifierItem` protocol, install [snixembed](https://git.sr.ht/~steef/snixembed) to add support.
+- Talon, like many tools for automation or accessibility, **does not support Wayland**
+  - You will have to select an X11 session from your login manager.
+  - This is supported by Gnome and Plasma and many others, but some environments like sway are explicitly Wayland-only.
+- To install the speech engine, you must use Talon's tray icon:
+  - If you use stock Gnome, you need to install [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) to see it
+  - If you use i3 or a system tray that doesn't support the `StatusNotifierItem` protocol, install [snixembed](https://git.sr.ht/~steef/snixembed) to add support.
 
 :::
 
@@ -75,10 +75,10 @@ for beginners, we strongly recommend that you use the [Talon Community](https://
 The whole wiki assumes this repository is used if not otherwise noted.
 :::
 
-A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory - 
+A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory -
 the [talon user directory](/docs/Resource%20Hub/terminology.md).
 
-This can be done one of two ways -  either as a `zip` file or by using `git`
+This can be done one of two ways - either as a `zip` file or by using `git`
 
 <details>
   <summary>`zip` versus `git`</summary>
@@ -88,7 +88,7 @@ you can expect the following:</p>
   <li>The community will update the `user file set` with bug fixes and new features, and you will want
 to update your local copy of it.</li>
   <li>You might make your own changes to some of these files.</li>
-</ul> 
+</ul>
 <p>The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime. </p>
 <p>If downloading `zip` files, you will manually need to keep track of any changes you may make to your copy of the files.</p>
 <p>If you are not particularly comfortable using a command terminal, and if you are just wanting to explore the suitability of Talon
@@ -102,7 +102,7 @@ you may wish to use the simpler method of downloading `zip` files. You will alwa
   <li>Download the [zip archive of community](https://github.com/talonhub/community/archive/refs/heads/main.zip)</li>
   <li>Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.</li>
   <li>Place these extracted files inside the `user` folder of the Talon Home directory. You can find this folder by right-clicking the Talon icon in the taskbar (Windows) or clicking the Talon icon in the menu bar (Mac), clicking Scripting > Open ~/talon, and navigating to `user`.</li>
-</ol> 
+</ol>
 </details>
 
 <details>
@@ -129,9 +129,8 @@ git clone https://github.com/talonhub/community community
 cd %AppData%\Talon\user
 git clone https://github.com/talonhub/community community
 ```
+
 </details>
-
-
 
 ## 5: Test your Talon Setup
 

@@ -4,14 +4,12 @@ See also [help](/docs/Help/help-commands.md) for displaying help using Talon's i
 
 ## Working with applications
 
-| Command             | Description                                                       |
-| ------------------- | ----------------------------------------------------------------- |
-| `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome |
-| `running list`      | see all active applications, and the and the spoken form of them                                    |
+| Command             | Description                                                                                                    |
+| ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome                                              |
+| `running list`      | see all active applications, and the and the spoken form of them                                               |
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
-| `window close`      | closes the currently active window                                |
-
-
+| `window close`      | closes the currently active window                                                                             |
 
 Sample output from the `running list` command:
 <img src="/img/running_list.png/"
@@ -21,7 +19,6 @@ Sample output from the `running list` command:
 :::info Application Spoken Form Customization
 To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
 :::
-
 
 ## Screenshot commands
 
@@ -36,19 +33,17 @@ On windows, the standard `snip` application is invoked for `grab selection`.
 It's options will determine where screenshots are saved.
 :::
 
-| Command                           | Destination |
-| --------------------------------- | ----------- |
-| `grab screen`                     | file            |
-| `grab screen <number_small>`      | file            |
-| `grab window`                     | file            |
-| `grab selection`                  | file (but may be application dependent)            |
-| `grab screen clip`                | clipboard            |
-| `grab screen <number_small> clip` | clipboard            |
-| `grab window clip`                | clipboard            |
-| `grab selection clip`             | clipboard            |
-| `grab settings`                   | Mac only            |
-
-
+| Command                           | Destination                             |
+| --------------------------------- | --------------------------------------- |
+| `grab screen`                     | file                                    |
+| `grab screen <number_small>`      | file                                    |
+| `grab window`                     | file                                    |
+| `grab selection`                  | file (but may be application dependent) |
+| `grab screen clip`                | clipboard                               |
+| `grab screen <number_small> clip` | clipboard                               |
+| `grab window clip`                | clipboard                               |
+| `grab selection clip`             | clipboard                               |
+| `grab settings`                   | Mac only                                |
 
 ## Working with tabs
 
@@ -80,7 +75,6 @@ It's options will determine where screenshots are saved.
 | `zoom mouse`      | Toggle Control Mouse (Zoom).         |
 | `control off`     | Turn the eye tracker off             |
 
-
 :::warning
 Should the `camera overlay` command be mentioned here? It calls `tracking.control_debug_toggle()`
 :::
@@ -102,40 +96,39 @@ Should the `camera overlay` command be mentioned here? It calls `tracking.contro
 
 Button Clicking
 
-| Command      | Mouse Button | Description                             |
-| ------------ | ------------ | --------------------------------------- |
-| `touch`      | left         | single click                            |
-| `duke` or `dub click`  | left         | double click                            |
-| `trip click` | left         | triple click                            |
-| `mid click`  | mid          | single click                            |
-| `righty`     | right        | single click                            |
+| Command               | Mouse Button | Description  |
+| --------------------- | ------------ | ------------ |
+| `touch`               | left         | single click |
+| `duke` or `dub click` | left         | double click |
+| `trip click`          | left         | triple click |
+| `mid click`           | mid          | single click |
+| `righty`              | right        | single click |
 
 :::note Using Modifier Keys
-Modifier keys can be used in combination with the `touch`, `righty` mouse operations. 
+Modifier keys can be used in combination with the `touch`, `righty` mouse operations.
 For example, `shift touch` will click the left mouse button
 with the `shift` key depressed.
 :::
 
 Mouse Dragging
 
-| Command      | Mouse Button | Description                             |
-| ------------ | ------------ | --------------------------------------- |
-| `drag`, `left drag` or `drag start`       | left         | starts dragging  |
-| `right drag` or `righty drag`     | right        | start dragging                         |
-| `end drag` or `drag end` | | ends dragging |
+| Command                             | Mouse Button | Description     |
+| ----------------------------------- | ------------ | --------------- |
+| `drag`, `left drag` or `drag start` | left         | starts dragging |
+| `right drag` or `righty drag`       | right        | start dragging  |
+| `end drag` or `drag end`            |              | ends dragging   |
 
 Miscellaneous
 
-| Command        | Description                            |
-| -------------- | -------------------------------------- |
-| `curse yes`  | hides the mouse cursor for eye tracking |
-| `curse no`   | shows the mouse cursor                  |
+| Command               | Description                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------- |
+| `curse yes`           | hides the mouse cursor for eye tracking                                                     |
+| `curse no`            | shows the mouse cursor                                                                      |
 | `copy mouse position` | copies the mouse position to the clipboard in the format `(x, y)`, for example `(1637, 15)` |
-| `mouse hiss up` | set the scroll direction to up for when a subsequent hiss sound is heard |
-| `mouse hiss down` | set the scroll direction to down for when a subsequent hiss sound is heard |
+| `mouse hiss up`       | set the scroll direction to up for when a subsequent hiss sound is heard                    |
+| `mouse hiss down`     | set the scroll direction to down for when a subsequent hiss sound is heard                  |
 
 To scroll with a hiss sound, set `mouse_enable_hiss_scroll` to true in settings.talon
-
 
 ## Scrolling
 
@@ -148,7 +141,7 @@ To scroll with a hiss sound, set `mouse_enable_hiss_scroll` to true in settings.
 | `wheel down`   | scroll down                            |
 | `wheel up`     | scroll up                              |
 | `wheel left`   | scroll left                            |
-| `wheel right`   | scroll right                            |
+| `wheel right`  | scroll right                           |
 | `wheel gaze`   | scroll according to the mouse position |
 | `wheel upper`  | continually scroll up                  |
 | `wheel downer` | continually scroll down                |
@@ -156,38 +149,37 @@ To scroll with a hiss sound, set `mouse_enable_hiss_scroll` to true in settings.
 
 There are two words that can be used to modify the behavior of some of the `wheel` commands:
 
-| Modifier Word        | Description                            | Example |
-| -------------- | -------------------------------------- | - |
-| `tiny`    | scrolls by a small amount | `wheel tiny left`             |
-| `here` | move the mouse cursor to the center of the currently active window | `wheel stop here` |
+| Modifier Word | Description                                                        | Example           |
+| ------------- | ------------------------------------------------------------------ | ----------------- |
+| `tiny`        | scrolls by a small amount                                          | `wheel tiny left` |
+| `here`        | move the mouse cursor to the center of the currently active window | `wheel stop here` |
 
 ## Mouse Grid
 
-| Command        | Description                            |
-| -------------- | -------------------------------------- |
-| `mouse grid`    | displays the mouse grid over the entire screen (screen one)                |
-| `grid win`    | displays the mouse grid over the currently active window                |
-| `grid <number_key>+`    | displays the mouse grid, and sets its initial position according to the specified numbers                |
-| `grid screen <number>`    | displays the mouse grid on the specified screen                |
+| Command                | Description                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| `mouse grid`           | displays the mouse grid over the entire screen (screen one)                               |
+| `grid win`             | displays the mouse grid over the currently active window                                  |
+| `grid <number_key>+`   | displays the mouse grid, and sets its initial position according to the specified numbers |
+| `grid screen <number>` | displays the mouse grid on the specified screen                                           |
 
 These commands are available when the mouse grid is showing:
 
-
-| Command        | Description                            |
-| -------------- | -------------------------------------- |
-| `<number_key>`    | narrows the mouse grid within the cell specified by the spoken number                |
-| `grid off`, `grid close` or `grid hide`    | closes the mouse grid                |
-| `grid reset`    | positions the grid to fill the entire screen                |
-| `grid back`    | repositions the grid to how it was prior to the last narrowing               |
+| Command                                 | Description                                                           |
+| --------------------------------------- | --------------------------------------------------------------------- |
+| `<number_key>`                          | narrows the mouse grid within the cell specified by the spoken number |
+| `grid off`, `grid close` or `grid hide` | closes the mouse grid                                                 |
+| `grid reset`                            | positions the grid to fill the entire screen                          |
+| `grid back`                             | repositions the grid to how it was prior to the last narrowing        |
 
 :::note Mouse Grid Alternatives
 
 There are a few [alternatives](/docs/Integrations/integrations.md#mouse-alternatives) to the mouse grid described in this section.
 
 # Save
+
 file save: edit.save()
 file save all: edit.save_all()
-
 
 ## Customize Talon
 
@@ -202,7 +194,7 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 ## Miscellaneous Talon Commands
 
-| Command                      | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
-| `command history`            | show the command history           |
-| `talon open log`             | open the talon log for debugging                                 |
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `command history` | show the command history         |
+| `talon open log`  | open the talon log for debugging |

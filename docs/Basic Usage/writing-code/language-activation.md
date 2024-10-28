@@ -1,6 +1,5 @@
 # Language Activation
 
-
 Specific programming languages may be activated by explicit voice commands, or automatically detected using a technique called title tracking.
 
 By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires plugin), and Notepad++.
@@ -10,7 +9,7 @@ By default, title tracking activates languages in supported applications such as
 Voice commands will activate the specified language globally across all applications. Simply say `force` prior to the language name, for example
 `force typescript`.
 
-This method might be useful if for example writing documentation in Microsoft Word  and  title tracking cannot be used.
+This method might be useful if for example writing documentation in Microsoft Word and title tracking cannot be used.
 
 Note that using voice commands to specify the language, disables the title tracking method until the `clear language modes` voice command is used.
 
@@ -30,4 +29,3 @@ It can also be optionally shown by the [Talon HUD](/docs/Integrations/Details/ta
 <img src="/img/talon_hud_cs.png/"
      alt="diagram showing the talon hud integration whilst ay sea sharp file is being edited"
  />
-

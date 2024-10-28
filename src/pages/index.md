@@ -12,13 +12,11 @@ Talon is free to use and ongoing development is made possible by [donations on P
      alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
  />
 
-
 ## Goal of this Wiki
 
 The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created.
 
 ## Wiki Navigation
-
 
 | If you are looking for:                                    | See:                                                                                                                       |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +29,7 @@ The goal of this wiki is to provide information and documentation for the users 
 
 :::tip Talon Slack
 
-Talon has a [Slack community](/Help/talon-slack) for users to get help, ask questions, and meet one another. This is the most efficient way to get questions answered if they are not covered in this wiki. 
+Talon has a [Slack community](/Help/talon-slack) for users to get help, ask questions, and meet one another. This is the most efficient way to get questions answered if they are not covered in this wiki.
 
 :::
 

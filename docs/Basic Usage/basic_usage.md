@@ -14,10 +14,11 @@ Once you have completed that and entered a few letters as a test, you are ready 
 Talon has three main [modes](./talon-modes.md), and when started it launches in command mode.
 
 It's recommended to first learn what can be said in [command mode](./Command%20Mode/command_mode.md):
-- starting with the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md), 
+
+- starting with the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md),
 - then get familiar with the keys, symbols
-- saying words and phrases (and how to format them), 
-- controlling the mouse, and 
+- saying words and phrases (and how to format them),
+- controlling the mouse, and
 - [text and navigation](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md) commands.
 
 Once you have the basics of text input down, try [copying some code](./writing-code/) from one window to another.
@@ -33,6 +34,3 @@ If you use vim, just start with the numbers and alphabet, otherwise look at gene
 ## Games
 
 - [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
-
-
-

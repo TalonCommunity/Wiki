@@ -3,8 +3,9 @@
 Writing code is possible in any application by activating the language using voice commands.
 
 The alternative of using [title tracking](language-activation.md#title-tracking) activates languages in supported applications such as:
+
 - VSCode
-- Visual Studio (requires plugin), and 
+- Visual Studio (requires plugin), and
 - Notepad++.
 
 ## Editor Requirements for Title Tracking
