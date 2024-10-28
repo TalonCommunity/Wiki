@@ -3,7 +3,8 @@
 TalonScript is designed to be a simple way for all users to create new voice commands, without having programming experience.
 
 However, if there is an issue with your `.talon` file, typically there would be useful clues about the reason in the Talon log file. 
-For non-programmers, don't be scared off by all the technical gibberish contained in the file.
+For non-programmers, try to ignore the technical gibberish also contained in the file, and if it is too confusing then
+reach out to the community on [slack](/docs/Help/talon-slack.md).
 
 To open the log file, right click on the Talon icon in your status bar, choose scripting, and then 'View log'. This will show a list of log messages from Talon, and in particular will be where Talon tells us if there far any problems.
 

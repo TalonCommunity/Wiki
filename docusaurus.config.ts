@@ -88,7 +88,7 @@ const config: Config = {
     },
     announcementBar: {
       content:
-        '<b> You are viewing the new refactor of the Talon community wiki! The previous site can still be accessed via <a href="https://old.talon.wiki">https://old.talon.wiki</a></b> ✨',
+        '<b> You are viewing an <a href="https://github.com/ronzulu/talon-community-wiki/tree/restructure">experimental refactor</a> of the Talon community wiki! The current site can still be accessed via <a href="https://talon.wiki">https://talon.wiki</a></b> ✨',
       isCloseable: true,
     },
 

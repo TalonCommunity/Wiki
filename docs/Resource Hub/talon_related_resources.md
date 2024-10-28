@@ -10,7 +10,7 @@ Some videos/channels demonstrate some of the possibilities of Talon without real
 
 :::tip Beginners
 
-Don't be put off by some of the advanced videos made by some very experienced users.
+Some of the advanced videos made by some very experienced users may seem overwhelming.
 With talon you can start slowly, and improve efficiency with practice and by learning more about the Talon feature set.
 
 :::
