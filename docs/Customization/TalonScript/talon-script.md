@@ -1,18 +1,19 @@
 ---
 sidebar_position: 1
 ---
+
 # TalonScript
 
-| Area | Description | 
-| ---------------- | ---------------------- |
-| [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) for existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. | 
-| [Settings](../settings.md) | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme. | 
-| [Tags](tag-activation.md)     | Activate [tags](tag-activation.md) |
-| [keyboard shortcuts](customize-kbd-shortcut.md) | Customize [keyboard shortcuts](customize-kbd-shortcut.md) |
+| Area                                                                 | Description                                                                                                                                                                                         |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) for existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. |
+| [Settings](../settings.md)                                           | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme.                                                                                         |
+| [Tags](tag-activation.md)                                            | Activate [tags](tag-activation.md)                                                                                                                                                                  |
+| [keyboard shortcuts](customize-kbd-shortcut.md)                      | Customize [keyboard shortcuts](customize-kbd-shortcut.md)                                                                                                                                           |
 
-TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory). 
+TalonScript are files with a `.talon` extension and stored somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
 
-In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. 
+In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change.
 
 ## .talon file syntax
 
@@ -47,8 +48,6 @@ In this example our context header says that the file is only active when the wo
 The body can have several kinds of content. Most often you'll be defining voice commands, so that's all we'll talk about here.
 
 Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
-
-
 
 ## Recipes
 

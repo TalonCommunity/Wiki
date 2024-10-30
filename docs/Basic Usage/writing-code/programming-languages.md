@@ -2,46 +2,43 @@
 
 Talon community includes specific support for the following programming languages:
 
-
-| Language          | File Extension | Note                                                                  |
-| ----------------- | -------------- | --------------------------------------------------------------------- |
-| `batch`           | `bat`          |                                                                       |
-| `c`               | `c` or `h`     |                                                                       |
-| `csharp`          | `cs`           |                                                                       |
-| `css`             | `css`          |                                                                       |
-| `gdb`             | `gdb`          |                                                                       |
-| `go`              | `go`           |                                                                       |
-| `java`            | `java`         |                                                                       |
-| `javascript`      | `js`           |                                                                       |
-| `javascriptreact` | `jsx`          |                                                                       |
-| `kotlin`          | `kt`           |                                                                       |
-| `lua`             | `lua`          |                                                                       |
-| `markdown`        | `md`           |                                                                       |
-| `php`             | `php`          |                                                                       |
-| `python`          | `py`           |                                                                       |
-| `r`               | `r`            |                                                                       |
-| `ruby`            | `rb`           |                                                                       |
-| `rust`            | `rs`           |                                                                       |
-| `scala`           | `scala`        |                                                                       |
-| `scss`            | `scss`         |                                                                       |
-| `sql`             | `sql`          |                                                                       |
-| `stata`           | `do` or `ado`  |                                                                       |
-| `talon`           | `talon`        |                                                                       |
-| `talonlist`       | `talon-list`   |                                                                       |
-| `terraform`       | `tf`           |                                                                       |
-| `tex`             | `tex`          |                                                                       |
-| `typescript`      | `ts`           |                                                                       |
-| `typescriptreact` | `tsx`          |                                                                       |
-| `vimscript`       | `vim vimrc`    |                                                                       |
-| `html`            | `html`         | html doesn't actually have a language mode but we do have snippets.   |
+| Language          | File Extension | Note                                                                |
+| ----------------- | -------------- | ------------------------------------------------------------------- |
+| `batch`           | `bat`          |                                                                     |
+| `c`               | `c` or `h`     |                                                                     |
+| `csharp`          | `cs`           |                                                                     |
+| `css`             | `css`          |                                                                     |
+| `gdb`             | `gdb`          |                                                                     |
+| `go`              | `go`           |                                                                     |
+| `java`            | `java`         |                                                                     |
+| `javascript`      | `js`           |                                                                     |
+| `javascriptreact` | `jsx`          |                                                                     |
+| `kotlin`          | `kt`           |                                                                     |
+| `lua`             | `lua`          |                                                                     |
+| `markdown`        | `md`           |                                                                     |
+| `php`             | `php`          |                                                                     |
+| `python`          | `py`           |                                                                     |
+| `r`               | `r`            |                                                                     |
+| `ruby`            | `rb`           |                                                                     |
+| `rust`            | `rs`           |                                                                     |
+| `scala`           | `scala`        |                                                                     |
+| `scss`            | `scss`         |                                                                     |
+| `sql`             | `sql`          |                                                                     |
+| `stata`           | `do` or `ado`  |                                                                     |
+| `talon`           | `talon`        |                                                                     |
+| `talonlist`       | `talon-list`   |                                                                     |
+| `terraform`       | `tf`           |                                                                     |
+| `tex`             | `tex`          |                                                                     |
+| `typescript`      | `ts`           |                                                                     |
+| `typescriptreact` | `tsx`          |                                                                     |
+| `vimscript`       | `vim vimrc`    |                                                                     |
+| `html`            | `html`         | html doesn't actually have a language mode but we do have snippets. |
 
 ## Supporting New Languages
 
-
-Python, C#, Talon and JavaScript language support is broken up into multiple tags in an attempt to standardize common voice commands for features available across languages. 
+Python, C#, Talon and JavaScript language support is broken up into multiple tags in an attempt to standardize common voice commands for features available across languages.
 
 Each tag is defined in a `.talon` file named after a `user.code_` tag (e.g., `user.code_functions` → `functions.talon`) containing voice commands and a Python file declaring the actions that should be implemented by each concrete language implementation to support the voice commands. These files include:
-
 
 | Tag                                          | Description                                                  |
 | -------------------------------------------- | ------------------------------------------------------------ |
@@ -63,8 +60,6 @@ Each tag is defined in a `.talon` file named after a `user.code_` tag (e.g., `us
 | `lang/tags/operators_math.{talon,py}`        | numeric, comparison, and logical operators                   |
 | `lang/tags/operators_pointer.{talon,py}`     | pointer operators (e.g., C's `&x`)                           |
 
-
-
 Language-specific implementations of the above features are in files named `lang/{your-language}/{your-language}.py`.
 
 To add support for a new language, ensure appropriate extension is added/uncommented in the `language_extensions` dictionary in language_modes.py `core/modes/language_modes.py#L9`. Then create the following files:
@@ -73,4 +68,3 @@ To add support for a new language, ensure appropriate extension is added/uncomme
 - `lang/{your-language}/{your-language}.talon`
 
 Activate the appropriate tags in `{your-language}.talon` and implement the corresponding actions in `{your-language}.py`, following existing language implementations. Put additional voice commands for your language (not shared with other languages) in `{your-language}.talon`.
-

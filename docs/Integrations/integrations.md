@@ -10,7 +10,7 @@ additional functionality that you might find useful.
 :::info Terminology
 
 You may be more familiar with the terms plugin, extension or add-on rather than integrations.
-It's the same idea. 
+It's the same idea.
 
 :::
 
@@ -39,18 +39,18 @@ The easiest way to control your mouse with Talon is to use an eye tracker togeth
 
 ## Browser Navigation
 
-| Software                                                                   | Cost | Platform       | Description                                                                                |
-| -------------------------------------------------------------------------- | ---- | -------------- | ------------------------------------------------------------------------------------------ |
-| [Rango](https://github.com/david-tejada/rango)               | | | Click on links and control your browser all through voice; Similar to Vimium but purpose built for Talon-use with better UX |
-| [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)        | Free | Firefox/Chrome | Vim style browser controls. Lets you see all links on page and click with 2 letter combos. |
-| [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/) | Free | Firefox/Chrome | More vim style control in browser                                                          |
-| [Vimari](https://github.com/televator-apps/vimari)                         | Free | Safari         | A port of Vimium for Safari.                                                               |
+| Software                                                                   | Cost | Platform       | Description                                                                                                                 |
+| -------------------------------------------------------------------------- | ---- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [Rango](https://github.com/david-tejada/rango)                             |      |                | Click on links and control your browser all through voice; Similar to Vimium but purpose built for Talon-use with better UX |
+| [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)        | Free | Firefox/Chrome | Vim style browser controls. Lets you see all links on page and click with 2 letter combos.                                  |
+| [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/) | Free | Firefox/Chrome | More vim style control in browser                                                                                           |
+| [Vimari](https://github.com/televator-apps/vimari)                         | Free | Safari         | A port of Vimium for Safari.                                                                                                |
 
 ## Talon Control
 
-| Software                                                                   | Cost | Platform       | Description                                                                                |
-| -------------------------------------------------------------------------- | ---- | -------------- | ------------------------------------------------------------------------------------------ |
-| [Parrot](https://github.com/chaosparrot/parrot.py)      | |     | Control Talon with noises and clicks (requires Talon beta)                                                                  |
+| Software                                           | Cost | Platform | Description                                                |
+| -------------------------------------------------- | ---- | -------- | ---------------------------------------------------------- |
+| [Parrot](https://github.com/chaosparrot/parrot.py) |      |          | Control Talon with noises and clicks (requires Talon beta) |
 
 ## OS Navigation Software
 
@@ -66,5 +66,5 @@ The easiest way to control your mouse with Talon is to use an eye tracker togeth
 
 | Software                                                                                                                                                       | Cost | Platform | Description                                                                                                                                                                                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Cursorless](https://www.cursorless.org/)                    | | | Rapid voice coding and text editing by intelligently manipulating the parse tree of your code                               |
+| [Cursorless](https://www.cursorless.org/)                                                                                                                      |      |          | Rapid voice coding and text editing by intelligently manipulating the parse tree of your code                                                                                                                                                                                                       |
 | [Jump Codes in CodeRush for Visual Studio](https://community.devexpress.com/blogs/markmiller/archive/2023/06/21/jump-codes-in-coderush-for-visual-studio.aspx) | Free | Windows  | Helps with navigation in Visual Studio. See [this video](https://www.youtube.com/watch?v=EVJOEQp9_cw) for an example. Also [drop/collect/swap marker](https://www.youtube.com/watch?v=_awmO-WZ_vw&list=PL8h4jt35t1wgawacCN9wmxq1EN36CNUGk&index=23) functionality which is useful for Voice Coding. |

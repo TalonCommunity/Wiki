@@ -1,13 +1,11 @@
-#  Text and Navigation
+# Text and Navigation
 
 ## Navigation
 
-
-
 | Command                                  | Description                                                                                            |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `go left`, `go right` | move the insertion point one character left or right                                              |
-| `go up`, `go down` | move the insertion point one line up or down                                             |
+| `go left`, `go right`                    | move the insertion point one character left or right                                                   |
+| `go up`, `go down`                       | move the insertion point one line up or down                                                           |
 | `go line start`, `go way left` or `head` | move the insertion point to the start of the current line                                              |
 | `go line end`, `go way right` or `tail`  | move the insertion point to the end of the current line                                                |
 | `go top` or `go way up`                  | move the insertion point to the beginning of the document                                              |
@@ -17,19 +15,18 @@
 
 As with all commands, the `go` commands can be [chained or repeated](./command_mode.md#chaining-and-repeating-commands).
 
-| Command                                 | Description                  |
-| --------------------------------------- | ------------------------------------------- |
-| `go top go down`           | move to the second line from the top of the document (an example of standard chaining) |
-| `go up five times`           | an example of standard command repetition|
+| Command            | Description                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| `go top go down`   | move to the second line from the top of the document (an example of standard chaining) |
+| `go up five times` | an example of standard command repetition                                              |
 
 Additionally, the `go` command supports its own more compact syntax.
 
-| Command                                 | Description                  |
-| --------------------------------------- | ------------------------------------------- |
+| Command                        | Description                                      |
+| ------------------------------ | ------------------------------------------------ |
 | `go down down right`           | move down two lines and then right one character |
-| `go two words left`           |  |
-| `go two down five words right`           |  |
-
+| `go two words left`            |                                                  |
+| `go two down five words right` |                                                  |
 
 <details>
   <summary>In some applications, 'go way left' can behave slightly differently to  'go line start' and 'head'.</summary>
@@ -40,13 +37,12 @@ Additionally, the `go` command supports its own more compact syntax.
         alt="screenshot of text within VSCode"
     />
 
-    <p>If the insertion point is at (3), saying 'go line start' will move the insertion point to (2), 
+    <p>If the insertion point is at (3), saying 'go line start' will move the insertion point to (2),
     whilst saying 'go way left' will move it to (1)</p>
+
 </details>
 
 ## Selecting
-
-
 
 | Command                                 | Extend the Text Selection                   |
 | --------------------------------------- | ------------------------------------------- |
@@ -62,7 +58,6 @@ As another example of using command repetition, saying `select up third` will pr
 
 ## Cut, Copy and Paste
 
-
 | Command                             | Description                                                                                                    |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `copy that`                         | copies the currently selected text to the clipboard                                                            |
@@ -73,10 +68,7 @@ As another example of using command repetition, saying `select up third` will pr
 | `paste enter`                       | paste the contents of the clipboard, and press the enter key                                                   |
 | `paste match`                       | (in supported applications) paste the contents of the clipboard matching the text style at the insertion point |
 
-
 ## Deleting and Duplicating Text
-
-
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
@@ -90,14 +82,12 @@ As another example of using command repetition, saying `select up third` will pr
 | `clone that`                          | replaces the currently selected text with two copies of it                  |
 | `clone line`                          | replaces the current line with two copies of it                             |
 
-
 ## Undo/Redo
 
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `undo that`                      | performs an undo                                   |
-| `redo that`            | performs a redo |
-
+| Command     | Description      |
+| ----------- | ---------------- |
+| `undo that` | performs an undo |
+| `redo that` | performs a redo  |
 
 ## Searching
 
@@ -106,21 +96,34 @@ As another example of using command repetition, saying `select up third` will pr
 | `find it`  | bring up the application's find dialog box                  |
 | `next one` | select the next occurrence that matches the search criteria |
 
+## Saying Individual Words
+
+Whilst in command mode, you are able to enter a single word at a time by prefixing the word as follows:
+
+
+| Command        | Capitalization           | Spacing                            | Example                                                                                                   |
+| -------------- | ------------------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `word <word>`  | lowercase                | none                               | saying `word application` inserts `application`                                                               |
+| `proud <word>` | first letter capitalized | none                               | saying `proud miscellaneous` inserts `Miscellaneous`                                                          |
+| `trot <word>`  | lowercase                | trailing space character | saying `trot hello` inserts `hello` ` ` (trailing space), `trot hello word world` for `hello world`               |
+| `leap <word>`  | first letter capitalized | trailing space character | saying `leap forward` inserts `Forward` ` ` (trailing space), `leap forward word thinking` for `Forward thinking` |
+
+
+
 ## Miscellaneous Text Commands
 
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `new line above`                      | inserts a new line above the current one                                    |
-| `new line below` or `slap`            | inserts a new line below the current one                                    |
-| `pad` or `padding`                    | inserts two spaces and moves the insertion point between them               |
-| (`pad` or `padding`) `<symbol_key>+`  | inserts the specified symbol keys, with a space character before and after, saying `pad colon` inserts ` ` `:` ` `  |
-| `indent` or `indent more`             | indents the current line                                                    |
-| `out dent` or `indent less`           | outdents the current line                                                   |
+| Command                              | Description                                                                                                        |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `new line above`                     | inserts a new line above the current one                                                                           |
+| `new line below` or `slap`           | inserts a new line below the current one                                                                           |
+| `pad` or `padding`                   | inserts two spaces and moves the insertion point between them                                                      |
+| (`pad` or `padding`) `<symbol_key>+` | inserts the specified symbol keys, with a space character before and after, saying `pad colon` inserts ` ` `:` ` ` |
+| `indent` or `indent more`            | indents the current line                                                                                           |
+| `out dent` or `indent less`          | outdents the current line                                                                                          |
 
 Insert a Pair of Delimiters
 
 These commands insert a pair of delimiters and places the insertion point between them.
-
 
 | Command                                                           | Delimiter   |
 | ----------------------------------------------------------------- | ----------- |
@@ -136,7 +139,6 @@ These commands insert a pair of delimiters and places the insertion point betwee
 
 Surround Selected Text With Delimiter
 
-
 | Command                                                | Delimiter   |
 | ------------------------------------------------------ | ----------- |
 | `quote that`                                           | `'`         |
@@ -150,8 +152,6 @@ Surround Selected Text With Delimiter
 | `braces that`, `curly brackets that`                   | `{` and `}` |
 | `percent that`                                         | `%`         |
 
-
-
 ## Abbreviations and Shortcuts
 
 | Command                 | Written Form                                  |
@@ -164,7 +164,6 @@ Surround Selected Text With Delimiter
 | `comma and` or `spamma` | `, ` (with a space character after the comma) |
 | `arrow`                 | `->`                                          |
 | `dub arrow`             | `=>`                                          |
-
 
 | Command                            | Description                                                                                   |
 | ---------------------------------- | --------------------------------------------------------------------------------------------- |

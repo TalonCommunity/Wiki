@@ -11,17 +11,16 @@ or by saying a phrase with the first word being `press`.
 
 For example, one could say either `pit` or `press pit` to enter the `p` character.
 
-| Section          | Example                 |
-| ---------------- | --------------------------- |
-| [Talon Alphabet](#talon-alphabet)        | `air` for `a` |
-| [Numbers](#numbers) | `press one` for `1` |
-| [Symbols](#symbols) | `dollar sign` for `$` |
-| [Function Keys](#function-keys) | `f2` |
-| [Modifier Keys](#modifier-keys) | `shift air` for `A` |
-| [Special Keys](#special-keys) | `home`, `escape` |
-| [Arrow Keys](#arrow-keys) | `press down` for the down arrow |
+| Section                                                       | Example                              |
+| ------------------------------------------------------------- | ------------------------------------ |
+| [Talon Alphabet](#talon-alphabet)                             | `air` for `a`                        |
+| [Numbers](#numbers)                                           | `press one` for `1`                  |
+| [Symbols](#symbols)                                           | `dollar sign` for `$`                |
+| [Function Keys](#function-keys)                               | `f2`                                 |
+| [Modifier Keys](#modifier-keys)                               | `shift air` for `A`                  |
+| [Special Keys](#special-keys)                                 | `home`, `escape`                     |
+| [Arrow Keys](#arrow-keys)                                     | `press down` for the down arrow      |
 | [Entering Multiple Characters](#entering-multiple-characters) | `press cap three pit odd` for `c3po` |
-
 
 ## Talon Alphabet
 
@@ -63,18 +62,16 @@ So you would need to say `numb one` for `1`.
 
 Alternatively, the number could be preceded by the word `press`. For example `press one` for `1`.
 
-| Prefix          | Note                 |
-| ---------------- | --------------------------- |
-| `numb`  | Large numbers, for example `numb two thousand and forty eight` will enter `2048` |
+| Prefix  | Note                                                                                               |
+| ------- | -------------------------------------------------------------------------------------------------- |
+| `numb`  | Large numbers, for example `numb two thousand and forty eight` will enter `2048`                   |
 | `press` | Numbers can be interspersed with other characters, for example `press red two drum two` for `r2d2` |
 
-
-
 ## Symbols
+
 Talon has a set of names for each of the punctuation and other symbols on the keyboard.
 
 This can be shown at any time by saying `help symbols`.
-
 
 <img src="/img/help_symbols.png/"
      alt="screenshot of the talon symbols, as shown by the `help symbols` command"
@@ -83,9 +80,6 @@ This can be shown at any time by saying `help symbols`.
 :::note Alternate Forms
 As shown above, for some characters, there are multiple ways the character can be said. For example, you can say either `hash sign` or `number sign` for the character `#`
 :::
-
-
-
 
 ## Function Keys
 
@@ -154,11 +148,12 @@ paren question mark exclamation mark l square air dash zip r square r paren
 
 :::tip It's Okay to Pause
 There is no need to say all of that in one breath. You can also say it as:
+
 - `paren question mark exclamation mark` (think, breathe)
 - `l square` (scratch head)
 - `air dash zip`
 - `r square r paren`
-:::
+  :::
 
 :::note
 The characters can be from different character classes, and the example above
@@ -169,8 +164,6 @@ However, if the sequence includes any numbers, then the first word said must be 
 For example, `press red two drum two` for `r2d2`
 :::
 
-
 ## Learning Tools
 
-[Talon Practice Website](/docs/Help/Items/talon-practice-website.md) 
-
+[Talon Practice Website](/docs/Help/Items/talon-practice-website.md)

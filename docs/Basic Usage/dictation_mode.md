@@ -11,55 +11,51 @@ But if you want your phrase to be treated literally, then prefix it with the wor
 
 For example, if you want to insert the words `new paragraph` (rather than pressing the `enter` key twice), say `escape new paragraph`.
 
-
 :::
-
-
 
 ## Capitalization and Spacing
 
-Whilst dictating, you might say a phrase few words, have a little pause, then say  another phrase.
+Whilst dictating, you might say a phrase few words, have a little pause, then say another phrase.
 
 In general, one wants a space before the words of the second phrase. For example, if you say:
+
 - `the quick brown fox` (pause) `jumps over the lazy dog`,
-you want:
+  you want:
 - `the quick brown fox jumps over the lazy dog`
-rather than:
+  rather than:
 - `the quick brown foxjumps over the lazy dog`
 
 To make dictating more efficient and natural, talon will automatically insert the space character before the second phrase without you having to say `spacebar`.
 
-Similarly, after saying `full stop` typically you would want the next  word spoken to be capitalized. And talon will typically do this as well.
+Similarly, after saying `full stop` typically you would want the next word spoken to be capitalized. And talon will typically do this as well.
 
 ### Prose Modifier Words
 
 However, if this is not wanted, then the following modifier words can be used:
 
-
 | Command               | Description                                         |
 | --------------------- | --------------------------------------------------- |
-| `no cap` or `no caps` | don't capitalize the  next word   spoken            |
+| `no cap` or `no caps` | don't capitalize the next word spoken               |
 | `no space`            | don't insert a space character before the next word |
-| `cap`                 | capitalize the  next word   spoken                  |
- 
+| `cap`                 | capitalize the next word spoken                     |
+
 ## Formatting Commands
 
 The following commands work on the text inserted by the previous phrase.
 
-| Command                         | Description                                      |
-| ------------------------------- | ------------------------------------------------ |
-| `no cap that` or `no caps that` | remove capitalization from the previous phrase   |
-| `cap that`                      | capitalize the first word of the previous phrase |
-| `no space that`                 | remove the space before the previous phrase      |
+| Command                     | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ |
+| `no cap that` or `no caps that`                  | remove capitalization from the previous phrase             |
+| `cap that`                 | capitalize the first word of the previous phrase             |
+| `no space that`                 | remove the space before the previous phrase             |
 
 
 The following commands work on the currently selected text.
 
-| Command                              | Description                                                                                                                                   |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `formatted <user.format_text>`       | what does this do?                                                                                                                            |
-| `format selection <user.formatters>` | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#), `format selection snake` |
-
+| Command                              | Description                                                                                                                           |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `formatted <user.format_text>`       | what does this do?                                                                                                                    |
+| `format selection <user.formatters>` | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/formatters.md), `format selection snake` |
 
 ## Special Words
 
@@ -75,11 +71,10 @@ There are some words that in dictation mode are not inserted literally, but rath
 
 As mentioned above, if you want to literally insert the text `new line` you would say `escape new line`.
 
-
 ## Entering Letters, Numbers and Times
 
-Whilst in dictation mode, saying `six colon forty five` will insert `six: forty five`.  
-To enter `6:45` simply prefix with `numb`, so say `numb six colon forty five`. 
+Whilst in dictation mode, saying `six colon forty five` will insert `six: forty five`.
+To enter `6:45` simply prefix with `numb`, so say `numb six colon forty five`.
 The following syntax is recognized:
 
 | Command                                                                | Action                  | Spoken Form                                                  |
@@ -91,24 +86,23 @@ The following syntax is recognized:
 | `(numb \| numeral) <user.number_string> (dot \| point) <digit_string>` | insert `3.1415`         | `numb three point one four one five`                         |
 | `(numb \| numeral) <user.number_string> colon <digit_string>`          | insert `10:25`          | `numb ten colon twenty five`                                 |
 
-
 :::note
 
-The `press` command functions in the same way as in command mode, but in dictation mode the `press` must be at the beginning of the utterance. 
+The `press` command functions in the same way as in command mode, but in dictation mode the `press` must be at the beginning of the utterance.
 
 :::
 
 ## Navigation Commands
 
 
-| Command                                   | Example                |
-| ----------------------------------------- | ---------------------- |
-| `go up <number_small> (line \| lines)`    | `go up five lines`     |
-| `go down <number_small> (line \| lines)`  | `go down three lines`  |
-| `go left <number_small> (word \| words)`  | `go left eight words`  |
-| `go right <number_small> (word \| words)` | `go right eight words` |
-| `go line start`                           |                        |
-| `go line end`                             |                        |
+| Command                                 | Example                  |
+| --------------------------------------- | ------------------------------------------- |
+| `go up <number_small> (line \| lines)`           | `go up five lines` |
+| `go down <number_small> (line \| lines)`           | `go down three lines` |
+| `go left <number_small> (word \| words)`           | `go left eight words` |
+| `go right <number_small> (word \| words)`           | `go right eight words` |
+| `go line start`           |  |
+| `go line end`           |  |
 
 
 ## Selection Commands
@@ -123,20 +117,20 @@ The `press` command functions in the same way as in command mode, but in dictati
 
 ## Deletion Commands
 
-| Command                                                | Example                             |
-| ------------------------------------------------------ | ----------------------------------- |
-| `clear left <number_small> (word \| words)`            | `clear left two words`              |
-| `clear right <number_small> (word \| words)`           | `clear right two words`             |
-| `clear left <number_small> (character \| characters)`  | `clear left seven characters`       |
-| `clear right <number_small> (character \| characters)` | `clear right three characters`      |
-| `nope selection` or `scratch selection`                | deletes the currently selected text |
-| `nope that` or `scratch that`                          | deletes the last phrase             |
+| Command                                 | Example                  |
+| --------------------------------------- | ------------------------------------------- |
+| `clear left <number_small> (word \| words)`           | `clear left two words` |
+| `clear right <number_small> (word \| words)`           | `clear right two words` |
+| `clear left <number_small> (character \| characters)`           | `clear left seven characters` |
+| `clear right <number_small> (character \| characters)`           | `clear right three characters` |
+| `nope selection` or `scratch selection`           | deletes the currently selected text |
+| `nope that` or `scratch that`           | deletes the last phrase |
 
 
 ## Undo/Redo
 
-| Command     | Description      |
-| ----------- | ---------------- |
-| `undo that` | performs an undo |
-| `redo that` | performs a redo  |
+| Command                               | Description                                                                 |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `undo that`                      | performs an undo                                   |
+| `redo that`            | performs a redo |
 

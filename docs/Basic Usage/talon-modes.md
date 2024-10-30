@@ -6,11 +6,11 @@ sidebar_position: 2
 
 Talon has three basic modes:
 
-| Mode          | Description                 |
-| ---------------- | --------------------------- |
-| [command mode](./Command%20Mode/command_mode.md)        | Your speech will be interpreted as commands by default.  |
-| [dictation mode](./dictation_mode.md)        | Your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems.  |
-| sleep mode | Talon will do nothing until it hears a commands that wakes it up.|
+| Mode                                             | Description                                                                                                                                                                   |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [command mode](./Command%20Mode/command_mode.md) | Your speech will be interpreted as commands by default.                                                                                                                       |
+| [dictation mode](./dictation_mode.md)            | Your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems. |
+| sleep mode                                       | Talon will do nothing until it hears a commands that wakes it up.                                                                                                             |
 
 :::info Terminology
 
@@ -20,11 +20,9 @@ whilst in dictation mode the words `go top` will be inserted literally into the 
 
 :::
 
-
 ## Mode Switching
 
-
-<!--- the source is in diagrams\basic_talon_modes.graphml ---> 
+<!--- the source is in diagrams\basic_talon_modes.graphml --->
 
 <img src="/img/basic_talon_modes.png/"
      alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
@@ -45,7 +43,7 @@ There are the following ways to keep track of what mode you are in with a visual
 
 1. Enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
 
-2. Install the [Talon HUD](/docs/Integrations/Details/talon-hud.md) 
+2. Install the [Talon HUD](/docs/Integrations/Details/talon-hud.md)
 
 :::warning
 Fix all references to `(https://github.com/talonhub/community/tree`
@@ -57,12 +55,14 @@ Although command and dictation are considered the main modes, there are secondar
 
 For example, the current code language mode effects how Talon translates the spoken form of coding elements
 into the written form. Saying `state case` whilst in `csharp` mode performs:
+
 ```talon
     actions.insert("case \nbreak;")
     actions.edit.up()
 ```
 
 Whilst in ruby mode:
+
 ```talon
     actions.insert("when ")
 ```

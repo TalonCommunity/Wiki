@@ -8,7 +8,6 @@ sidebar_position: 60
 
 ## Beta Version
 
-
 ## Community
 
 ## imgui
@@ -61,13 +60,11 @@ It can be opened by using the `Open Talon Home` menu item from the `Scripting` m
      alt="screenshot of the Talon scripting menu"
  />
 
+This is the directory in which you put the [Talon Community User File Set](#talon-community-user-file-set) during [installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md).
 
-This is the directory in which you put the [Talon Community User File Set](#talon-community-user-file-set) during [installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md). 
- 
 Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
 ## TalonScript
-
 
 ## User File Set
 

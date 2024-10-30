@@ -29,14 +29,14 @@ For example, if you have customized the alphabet then saying `help alphabet` wil
 
 Apart from the help commands shown above, there are the following commands as well:
 
-| Command                      | Description                                                      |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `help help`                  | show all the help commands available                          |
-| `help active`                | show all currently available commands (available in the frontmost application)                            |
-| `help context`               | shows all commands including context info  |
-| `help context <help_contexts>`  | shows help about the specified contexts - for example, `help context vscode` |
-| `help search <phrase>`       | shows help about all commands related to the specified phrase - for example, `help search tab` displays all tab-related commands  |
-| `help scope`                 | show the currently active modes, tags, and miscellaneous status info                |
+| Command                        | Description                                                                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `help help`                    | show all the help commands available                                                                                             |
+| `help active`                  | show all currently available commands (available in the frontmost application)                                                   |
+| `help context`                 | shows all commands including context info                                                                                        |
+| `help context <help_contexts>` | shows help about the specified contexts - for example, `help context vscode`                                                     |
+| `help search <phrase>`         | shows help about all commands related to the specified phrase - for example, `help search tab` displays all tab-related commands |
+| `help scope`                   | show the currently active modes, tags, and miscellaneous status info                                                             |
 
 ### Help Scope
 
@@ -64,9 +64,9 @@ Talon has recognized that the `win.file_ext` is `.cs`, and that the `code.langua
 
 Once say help window is open, the following commands are available:
 
-| Command                      | Description                                                      |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `help next`, `help previous` | go to the next or previous page of help items if there are a lot |
-| `help close`                 | hide any open help window again                                  |
-| `help <number>`                 | shows detailed help about the numbered item - for example `help eleven` to open the item numbered 11    |
-| `help return`                 | when showing detailed help, this returns to showing the main help page    |
+| Command                      | Description                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `help next`, `help previous` | go to the next or previous page of help items if there are a lot                                     |
+| `help close`                 | hide any open help window again                                                                      |
+| `help <number>`              | shows detailed help about the numbered item - for example `help eleven` to open the item numbered 11 |
+| `help return`                | when showing detailed help, this returns to showing the main help page                               |

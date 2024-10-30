@@ -4,9 +4,9 @@
 
 Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
 
-Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory). 
+Open up a text editor and save an empty file called `simple_test.talon` somewhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
 
-OK, let's get to defining the command. 
+OK, let's get to defining the command.
 
 :::note Spacing is Important
 Spacing is important in TalonScript. For example, ensure you have the spaces at the start of the 'key' line.
@@ -45,7 +45,8 @@ The general structure of a [TalonScript file](./talon-script.md) consists of an 
 (Separated by a `-` line if the context header is present).
 
 The file body consists of one or more voice commands, each with the format `RULE: BODY`, where:
-- `RULE` determines what words activate the command, and 
+
+- `RULE` determines what words activate the command, and
 - `BODY` defines what the command does when activated:
 
 ```talon
@@ -58,7 +59,7 @@ The term `body` refers to either the body of a TalonScript file, or the body of 
 Which applies, hopefully clear from context.
 :::
 
-This command, for example, will press the `ctrl-a` key whenever you say either  `select everything`.
+This command, for example, will press the `ctrl-a` key whenever you say either `select everything`.
 
 ## Rules
 
@@ -66,31 +67,32 @@ The rule specifies what word (or words) activate the command, and has a versatil
 
 For example, to have the `select everything` command also activate if `select all` is said,
 there is no need to have two separate commands. The following syntax can be used:
+
 ```
 select (everything | all): key(ctrl-a)
 ```
 
-:::note 
+:::note
 Non-technical users might find the syntax unintuitive and unfriendly. However it is very succinct and precise,
 and has been modeled after a common concept in the programming world of `regex`:
 :::
 
-| Example                  | Description                           | Matches                   |
-| ------------------------ | ------------------------------------- | ------------------------- |
-| `foo`                    | Word or words                                 | “foo”                     |
-| `foo [bar]`                 | Optional                              | “foo”, “foo bar”    |
-| `foo bar*`                   | Zero or more                          | “foo”, “foo bar”, “foo bar bar”, ... |
-| `foo+ bar`                   | One or more                           | “foo bar”, “foo bar bar”, ... |
-| `foo             \| bar` | Choice                                | “foo”, “bar”              |
-| `(foo)`                  | Precedence/grouping                   | “foo”                     |
-| `type email {user.address_book}`            | [List](#lists)    | email sally               |
-| `double letter <user.letter>`         | [Capture](#captures) | double letter plex                 |
-| `^foo`                   | Start anchor                          | See below                 |
-| `foo$`                   | End anchor                            | See below                 |
+| Example                          | Description          | Matches                              |
+| -------------------------------- | -------------------- | ------------------------------------ |
+| `foo`                            | Word or words        | “foo”                                |
+| `foo [bar]`                      | Optional             | “foo”, “foo bar”                     |
+| `foo bar*`                       | Zero or more         | “foo”, “foo bar”, “foo bar bar”, ... |
+| `foo+ bar`                       | One or more          | “foo bar”, “foo bar bar”, ...        |
+| `foo             \| bar`         | Choice               | “foo”, “bar”                         |
+| `(foo)`                          | Precedence/grouping  | “foo”                                |
+| `type email {user.address_book}` | [List](#lists)       | email sally                          |
+| `double letter <user.letter>`    | [Capture](#captures) | double letter plex                   |
+| `^foo`                           | Start anchor         | See below                            |
+| `foo$`                           | End anchor           | See below                            |
 
 ### Lists
 
-Using Talon's "list" functionality, it is possible to separate out simple tables of strings away from 
+Using Talon's "list" functionality, it is possible to separate out simple tables of strings away from
 the voice commands in `.talon` files, and into separate [.talon-list](../talon_lists.md) files.
 
 :::
@@ -100,7 +102,6 @@ Check if talon list files can be standalone or if they need the accompanying pyt
 Information for python programmers is available [here](/docs/Customization/Talon%20Framework/lists.md).
 
 ### Captures
-
 
 :::note Terminology
 The term `capture` comes from the programming world of `regex`.
@@ -124,54 +125,57 @@ and `x` is the written form.
 
 Here are some community defined captures:
 
-| Name                  | Description |
-| ------------------------ | ------------------------------------- |
-| `<letter>`                    | The [Talon alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md)   |
-| `<ordinal>`                    | `first`, `second`, `third`, ..., `twentieth` |
-| `<number_string>` | Entering [numbers](/docs/Basic%20Usage/Command%20Mode/single-characters.md) | 
-| `<numbers_small>` | A small number |
+| Name              | Description                                                                   |
+| ----------------- | ----------------------------------------------------------------------------- |
+| `<letter>`        | The [Talon alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md) |
+| `<ordinal>`       | `first`, `second`, `third`, ..., `twentieth`                                  |
+| `<number_string>` | Entering [numbers](/docs/Basic%20Usage/Command%20Mode/single-characters.md)   |
+| `<numbers_small>` | A small number                                                                |
 
 ### Anchoring
 
-Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. 
+Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'.
 
 So if you said:
+
 ```
 first bit ... other ... more complex bits and pieces
 ```
-(where '...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: `first bit`, `other` and `more complex bits and pieces`. 
+
+(where '...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: `first bit`, `other` and `more complex bits and pieces`.
 
 Anchoring a rule requires that it occur at the start or end (or both) of an utterance block, depending on the usage of the `^` and `$` characters.
 
 #### Start Anchor
 
 For example, using the start anchor symbol `^` with the voice command:
+
 ```
 ^my command: "first"
 ```
 
-| Spoken                  | Action |
-| ------------------------ | -------------------------------------|
-| `my command air bat cap`                    | Talon inserts `firstabc`  |
-| `air bat cap my command`                    | Talon ignores `my command` as it didn't appear at the start of the utterance  |
-
+| Spoken                   | Action                                                                       |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `my command air bat cap` | Talon inserts `firstabc`                                                     |
+| `air bat cap my command` | Talon ignores `my command` as it didn't appear at the start of the utterance |
 
 #### End Anchor
 
 Similarly, using the end anchor symbol `$` with the voice command:
+
 ```
 other command$: "second"
 ```
 
-| Spoken                  | Action |
-| ------------------------ | -------------------------------------|
-| `air bat cap other command`                    | Talon inserts `abcsecond`  |
-| `other command air bat cap`                    | Talon ignores `other command` as it didn't appear at the end of the utterance  |
+| Spoken                      | Action                                                                        |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| `air bat cap other command` | Talon inserts `abcsecond`                                                     |
+| `other command air bat cap` | Talon ignores `other command` as it didn't appear at the end of the utterance |
 
 #### Guideline
 
-In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands). 
-Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode), 
+In general you shouldn't anchor rules since it prevents the user from chaining them together (like we were doing with our examples and the air bat cap commands).
+Aside from special circumstances you really only consider anchoring when you have a command you wouldn't chain (e.g. switching from command to dictation mode),
 or you really want to prevent the command from being called by accident.
 
 ### Talonscript Body
@@ -294,14 +298,9 @@ settings():
     another.setting = 432
 ```
 
-
-
-
-
-
 ### Actions
 
-You might have noticed that we've been using the `key()` and `insert()` actions in the example files so far. 
+You might have noticed that we've been using the `key()` and `insert()` actions in the example files so far.
 
 Some of the more useful actions are:
 
@@ -317,6 +316,6 @@ See [complete action list](/docs/Resource%20Hub/Talon%20Library%20Reference/Acti
 :::
 
 :::info
-Some of the actions come with the [Base Talon Installation](/docs/Resource%20Hub/terminology.md#base-talon-installation), 
-and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set). 
+Some of the actions come with the [Base Talon Installation](/docs/Resource%20Hub/terminology.md#base-talon-installation),
+and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set).
 :::

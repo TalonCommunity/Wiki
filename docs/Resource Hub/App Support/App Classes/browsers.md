@@ -9,26 +9,25 @@ Note that if these commands don't work, you might find some useful info in the [
 
 ## Commands
 
-
-| Command                                                | Description                                 |
-| ------------------------------------------------------ | ------------------------------------------- |
-| `address bar \| go address \| go url`                  | places the focus within the address bar     |
-| `go page \| page focus`                                | places the focus within the webpage content |
-| `address copy \| url copy \| copy address \| copy url` | copies the content of the address bar       |
-| `go home`                                              |                                             |
-| `go to {user.website}`                                 | Navigates to the specified named website, for example `go to wikipedia`    |
-| `go private`                                           |                                             |
-| `bookmark it`                                          |                                             |
-| `bookmark tabs`                                        |                                             |
-| `bookmark show`                                        |                                             |
-| `bookmark bar [show]`                                  |                                             |
-| `downloads show`                                       |                                             |
-| `extensions show`                                      |                                             |
-| `history show`                                         |                                             |
-| `cache show`                                           |                                             |
-| `dev tools [show]`                                     |                                             |
-| `(refresh \| reload) it`                               |                                             |
-| `(refresh \| reload) it hard`                          |                                             |
+| Command                                                | Description                                                             |
+| ------------------------------------------------------ | ----------------------------------------------------------------------- |
+| `address bar \| go address \| go url`                  | places the focus within the address bar                                 |
+| `go page \| page focus`                                | places the focus within the webpage content                             |
+| `address copy \| url copy \| copy address \| copy url` | copies the content of the address bar                                   |
+| `go home`                                              |                                                                         |
+| `go to {user.website}`                                 | Navigates to the specified named website, for example `go to wikipedia` |
+| `go private`                                           |                                                                         |
+| `bookmark it`                                          |                                                                         |
+| `bookmark tabs`                                        |                                                                         |
+| `bookmark show`                                        |                                                                         |
+| `bookmark bar [show]`                                  |                                                                         |
+| `downloads show`                                       |                                                                         |
+| `extensions show`                                      |                                                                         |
+| `history show`                                         |                                                                         |
+| `cache show`                                           |                                                                         |
+| `dev tools [show]`                                     |                                                                         |
+| `(refresh \| reload) it`                               |                                                                         |
+| `(refresh \| reload) it hard`                          |                                                                         |
 
 ## Website List
 
@@ -55,7 +54,7 @@ youtube: https://www.youtube.com/
 
 ## Customizing the List
 
-Perhaps the cleanest way to customize the list, is to use the method described in 
+Perhaps the cleanest way to customize the list, is to use the method described in
 [Overriding Existing Voice Commands and Lists](/docs/Customization/managing-customizations.md#overriding-cleanly)
 
 ## Setup

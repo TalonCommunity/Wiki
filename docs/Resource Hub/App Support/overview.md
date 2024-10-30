@@ -11,7 +11,7 @@ A common set of commands applies to all applications within that class. For exam
 saying `go address` takes the focus to the address bar regardless of which browser application
 is running.
 
-| Class                      | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
-| [browser](./App%20Classes/browsers.md) | browsers, such as firefox, chrome, edge, safari  |
-| [file manager](./App%20Classes/file_manager.md) | example windows explorer and the mac finder |
+| Class                                           | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- |
+| [browser](./App%20Classes/browsers.md)          | browsers, such as firefox, chrome, edge, safari |
+| [file manager](./App%20Classes/file_manager.md) | example windows explorer and the mac finder     |

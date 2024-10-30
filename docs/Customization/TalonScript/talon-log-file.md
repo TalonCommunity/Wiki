@@ -2,7 +2,7 @@
 
 TalonScript is designed to be a simple way for all users to create new voice commands, without having programming experience.
 
-However, if there is an issue with your `.talon` file, typically there would be useful clues about the reason in the Talon log file. 
+However, if there is an issue with your `.talon` file, typically there would be useful clues about the reason in the Talon log file.
 For non-programmers, try to ignore the technical gibberish also contained in the file, and if it is too confusing then
 reach out to the community on [slack](/docs/Help/talon-slack.md).
 
@@ -10,21 +10,20 @@ To open the log file, right click on the Talon icon in your status bar, choose s
 
 ## Information messages
 
-When Talon notices changes to any of the `.talon` or `.py` files under the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory), 
+When Talon notices changes to any of the `.talon` or `.py` files under the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory),
 it automatically reloads then and includes an information message within the log file.
 
 For the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example) the file `simple_test.talon` was written.
 
-You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. 
+You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log.
 
-This indicates that Talon has picked up your new/updated file and has loaded it successfully. 
+This indicates that Talon has picked up your new/updated file and has loaded it successfully.
 
-If you don't see a line like that, there should be information in the log file that would help. The next section explains this further. 
-
+If you don't see a line like that, there should be information in the log file that would help. The next section explains this further.
 
 ## Error messages
 
-Following on from the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example), let's now deliberately introduce an error so we can see how Talon tells us about that. 
+Following on from the [simple TalonScript example](./voice-commands.md#a-simple-voice-command-example), let's now deliberately introduce an error so we can see how Talon tells us about that.
 
 Edit your file and remove the final `)` character so the last line is ` key(cmd-a` or ` key(ctrl-a`. Save the file and look at your Talon log. For me, Talon writes out the following:
 

@@ -31,6 +31,7 @@ With only a few specific exceptions, commands can be chained.
 This means that multiple commands can be said as a single utterance without a pause between them.
 
 For example, instead of saying (with a pause at the end of each line):
+
 ```
 go address (within a browser window moves to the address bar)
 copy that
@@ -39,6 +40,7 @@ paste that
 ```
 
 It could all be said as a single utterance:
+
 ```
 go address copy that focus code paste that
 ```
@@ -64,6 +66,5 @@ For example, even though one would not typically consider a letter or symbol as 
 And therefore they can be repeated - `asterisk ten times` produces `**********`.
 :::
 
-You might find the syntax that uses `<numbers_small>` more natural than the one that uses  `<ordinals>`.
+You might find the syntax that uses `<numbers_small>` more natural than the one that uses `<ordinals>`.
 Although slightly quicker to say, `asterisk tenth` takes more practice than the equivalent `asterisk ten times`
-

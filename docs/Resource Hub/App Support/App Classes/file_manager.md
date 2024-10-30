@@ -16,46 +16,43 @@ See the [setup](#system-setup) section below for details.
 
 The command descriptions below refer to the following screenshot:
 
-
 <img src="/img/file_manager_panels.png/"
     alt="screenshot of the file manager panels on windows"
 />
 
-
 ## Commands
 
-
-| Command                                                   | Description                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `title force`                                             | refresh the title                                                                                                              |
-| `manager show`                                            | shows the file manager panels                                                                                                  |
-| `manager close`                                           |                                                                                                                                |
-| `manager refresh`                                         |                                                                                                                                |
-| `properties show`                                         | shows the properties of the selected file or directory |
-| `terminal here`                                         | opens a terminal with the current directory set |
+| Command           | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| `title force`     | refresh the title                                      |
+| `manager show`    | shows the file manager panels                          |
+| `manager close`   |                                                        |
+| `manager refresh` |                                                        |
+| `properties show` | shows the properties of the selected file or directory |
+| `terminal here`   | opens a terminal with the current directory set        |
 
 ### Directory Related Commands
 
-| Command                                                   | Description                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `go <user.system_path>`                                   | sets the directory to that specified, for example `go talon home`                                                 |
-| `go parent` or `go daddy`                                 |                                                                                                                                |
-| `follow numb <number_small>`                              | sets the directory to that specified, for example `follow numb ten`,  would change to the mouse_grid subdirectory |
-| `follow {user.file_manager_directories}`                  | sets the directory to that specified, for example `follow file extensions`                                        |
-| `(select \| cell) folder {user.file_manager_directories}` | selects the specified named directory, for example `select folder modes`                                                             |
-| `folder numb <number_small>`                              | selects the directory to that specified, but does not enter it |
-| `folder new <user.text>`                              | creates a new directory with the specified name |
-| `folder next`, `folder last`                              | if there are many subdirectories, these commands will show the next or previous page |
+| Command                                                   | Description                                                                                                      |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `go <user.system_path>`                                   | sets the directory to that specified, for example `go talon home`                                                |
+| `go parent` or `go daddy`                                 |                                                                                                                  |
+| `follow numb <number_small>`                              | sets the directory to that specified, for example `follow numb ten`, would change to the mouse_grid subdirectory |
+| `follow {user.file_manager_directories}`                  | sets the directory to that specified, for example `follow file extensions`                                       |
+| `(select \| cell) folder {user.file_manager_directories}` | selects the specified named directory, for example `select folder modes`                                         |
+| `folder numb <number_small>`                              | selects the directory to that specified, but does not enter it                                                   |
+| `folder new <user.text>`                                  | creates a new directory with the specified name                                                                  |
+| `folder next`, `folder last`                              | if there are many subdirectories, these commands will show the next or previous page                             |
 
 ### File Related Commands
 
-| Command                                                   | Description                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `open <number_small>`                                     | opens the specified file, for example `open ten` would open the `README.md` file                                               |
-| `file numb <number_small>`                                | selects the specified file but does not open it, for example `file numb fourteen` would select `tags.py`                    |
-| `file {user.file_manager_files}`                          | selects the specified named file but does not open it, for example `file dragon engine` would select `dragon_engine.py`                    |
-| `(select \| cell) file {user.file_manager_files}` | selects the specified named file, for example `select file noise`                                                             |
-| `file next`, `file last`                              | if there are many files in the current directory, these commands will show the next or previous page |
+| Command                                           | Description                                                                                                             |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `open <number_small>`                             | opens the specified file, for example `open ten` would open the `README.md` file                                        |
+| `file numb <number_small>`                        | selects the specified file but does not open it, for example `file numb fourteen` would select `tags.py`                |
+| `file {user.file_manager_files}`                  | selects the specified named file but does not open it, for example `file dragon engine` would select `dragon_engine.py` |
+| `(select \| cell) file {user.file_manager_files}` | selects the specified named file, for example `select file noise`                                                       |
+| `file next`, `file last`                          | if there are many files in the current directory, these commands will show the next or previous page                    |
 
 ## user.system_path
 
@@ -105,4 +102,3 @@ Notes:
 - If there no hidden files or folders, and the items are displayed in alphabetical order, you can typically issue the `follow <number>`, `file <number>` and `open <number>` commands based on the displayed order.
 
 To implement support for a new program, implement the relevant file manager actions for your application and assert the `user.file_manager` tag. There are a number of example implementations in the repository. `[Finder](apps/finder/finder.py)` is a good example to copy and mdoify.
-
