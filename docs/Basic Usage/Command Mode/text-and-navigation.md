@@ -100,15 +100,12 @@ As another example of using command repetition, saying `select up third` will pr
 
 Whilst in command mode, you are able to enter a single word at a time by prefixing the word as follows:
 
-
-| Command        | Capitalization           | Spacing                            | Example                                                                                                   |
-| -------------- | ------------------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `word <word>`  | lowercase                | none                               | saying `word application` inserts `application`                                                               |
-| `proud <word>` | first letter capitalized | none                               | saying `proud miscellaneous` inserts `Miscellaneous`                                                          |
+| Command        | Capitalization           | Spacing                  | Example                                                                                                           |
+| -------------- | ------------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| `word <word>`  | lowercase                | none                     | saying `word application` inserts `application`                                                                   |
+| `proud <word>` | first letter capitalized | none                     | saying `proud miscellaneous` inserts `Miscellaneous`                                                              |
 | `trot <word>`  | lowercase                | trailing space character | saying `trot hello` inserts `hello` ` ` (trailing space), `trot hello word world` for `hello world`               |
 | `leap <word>`  | first letter capitalized | trailing space character | saying `leap forward` inserts `Forward` ` ` (trailing space), `leap forward word thinking` for `Forward thinking` |
-
-
 
 ## Miscellaneous Text Commands
 
@@ -185,7 +182,7 @@ For example, the `homophones.csv` file is contained under the core directory.
 
 ## Homophones
 
-> A homophone is a word that sounds the same as another word but has a different meaning and/or spelling. 
+> A homophone is a word that sounds the same as another word but has a different meaning and/or spelling.
 > “Flower” and “flour” are homophones because they are pronounced the same
 >
 > - https://www.vocabulary.com/dictionary/homophone
@@ -206,7 +203,6 @@ If there are more, then you will be presented with a selection to choose from.
 
 For example, if you said `console`, but Talon entered `consul`, saying `phones that` will display the following:
 
-
 <img src="/img/homophones-choice.png/"
      alt="screenshot of the homophone selection menu, after saying `console`"
  />
@@ -225,7 +221,6 @@ If there are more than two, then showing the homophone selection menu.
 | `phones word`                              | This performs the homophone action for the selected word                                                                                                |
 | `phones [<user.ordinals>] word left`       | This performs the homophone action for the nth word to the left of the current insertion point location                                                 |
 | `phones [<user.ordinals>] word right`      | This performs the homophone action for the nth word to the right of the current insertion point location                                                |
-
 
 ## Zoom
 

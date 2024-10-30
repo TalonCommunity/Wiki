@@ -4,19 +4,19 @@ Talon has an inbuilt help system to assist you knowing what to say instead of us
 
 Some of these display information that is readily understandable. These include:
 
-| Command                      | Description                                                      |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `help alphabet`              | show the spoken [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet) for pressing individual letters          |
-| `help arrows`              | show the spoken forms of the [arrow keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#arrow-keys)       |
-| `help function keys`              | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#function-keys)       |
-| `help formatters`, `help format`, `format help`  | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)       |
-| `help modifier`              | show the spoken forms of the [modifier keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)       |
-| `help numbers`              | best to read [here](/docs/Basic%20Usage/Command%20Mode/single-characters.md#numbers) for help on numbers         |
-| `help punctuation`              | show the spoken forms for the punctuation keys      |
-| `help re formatters`, `help re format`, `re format help`              | show help for reformatting the currently selected text      |
-| `help special keys`              | show the spoken forms for the [special keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#), such as `home`       |
-| `help snip`              | show the snippet related commands       |
-| `help symbols`              | show the spoken forms of [keyboard symbols](/docs/Basic%20Usage/Command%20Mode/single-characters.md#symbols), such as `dollar sign`       |
+| Command                                                  | Description                                                                                                                         |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `help alphabet`                                          | show the spoken [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet) for pressing individual letters  |
+| `help arrows`                                            | show the spoken forms of the [arrow keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#arrow-keys)                       |
+| `help function keys`                                     | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#function-keys)                 |
+| `help formatters`, `help format`, `format help`          | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)                |
+| `help modifier`                                          | show the spoken forms of the [modifier keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)                |
+| `help numbers`                                           | best to read [here](/docs/Basic%20Usage/Command%20Mode/single-characters.md#numbers) for help on numbers                            |
+| `help punctuation`                                       | show the spoken forms for the punctuation keys                                                                                      |
+| `help re formatters`, `help re format`, `re format help` | show help for reformatting the currently selected text                                                                              |
+| `help special keys`                                      | show the spoken forms for the [special keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#), such as `home`              |
+| `help snip`                                              | show the snippet related commands                                                                                                   |
+| `help symbols`                                           | show the spoken forms of [keyboard symbols](/docs/Basic%20Usage/Command%20Mode/single-characters.md#symbols), such as `dollar sign` |
 
 :::note
 
