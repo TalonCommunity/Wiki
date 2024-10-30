@@ -1,3 +1,7 @@
+---
+sidebar_position: 3.3
+---
+
 # Saying Words and Phrases
 
 Whilst in command mode, it's easy to enter a single word or phrase at a time.

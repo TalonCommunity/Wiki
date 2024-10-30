@@ -18,7 +18,7 @@ For example, if you want to insert the words `new paragraph` (rather than pressi
 
 ## Capitalization and Spacing
 
-Whilst dictating, you might say a  phrase few words, have a little pause, then say  another phrase.
+Whilst dictating, you might say a phrase few words, have a little pause, then say  another phrase.
 
 In general, one wants a space before the words of the second phrase. For example, if you say:
 - `the quick brown fox` (pause) `jumps over the lazy dog`,
@@ -35,29 +35,30 @@ Similarly, after saying `full stop` typically you would want the next  word spok
 
 However, if this is not wanted, then the following modifier words can be used:
 
-| Command                     | Description                                                  |
-| --------------------------- | ------------------------------------------------------------ |
-| `no cap` or `no caps`                  | don't capitalize the  next word   spoken                         |
-| `no space`                  | don't insert a space character before the next word                          |
-| `cap`                  | capitalize the  next word   spoken                          |
+
+| Command               | Description                                         |
+| --------------------- | --------------------------------------------------- |
+| `no cap` or `no caps` | don't capitalize the  next word   spoken            |
+| `no space`            | don't insert a space character before the next word |
+| `cap`                 | capitalize the  next word   spoken                  |
  
 ## Formatting Commands
 
 The following commands work on the text inserted by the previous phrase.
 
-| Command                     | Description                                                  |
-| --------------------------- | ------------------------------------------------------------ |
-| `no cap that` or `no caps that`                  | remove capitalization from the previous phrase             |
-| `cap that`                 | capitalize the first word of the previous phrase             |
-| `no space that`                 | remove the space before the previous phrase             |
+| Command                         | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| `no cap that` or `no caps that` | remove capitalization from the previous phrase   |
+| `cap that`                      | capitalize the first word of the previous phrase |
+| `no space that`                 | remove the space before the previous phrase      |
 
 
 The following commands work on the currently selected text.
 
-| Command                     | Description                                                  |
-| --------------------------- | ------------------------------------------------------------ |
-| `formatted <user.format_text>`                 | what does this do?             |
-| `format selection <user.formatters>`                 | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#), `format selection snake`            |
+| Command                              | Description                                                                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `formatted <user.format_text>`       | what does this do?                                                                                                                            |
+| `format selection <user.formatters>` | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#), `format selection snake` |
 
 
 ## Special Words
@@ -100,42 +101,42 @@ The `press` command functions in the same way as in command mode, but in dictati
 ## Navigation Commands
 
 
-| Command                                 | Example                  |
-| --------------------------------------- | ------------------------------------------- |
-| `go up <number_small> (line \| lines)`           | `go up five lines` |
-| `go down <number_small> (line \| lines)`           | `go down three lines` |
-| `go left <number_small> (word \| words)`           | `go left eight words` |
-| `go right <number_small> (word \| words)`           | `go right eight words` |
-| `go line start`           |  |
-| `go line end`           |  |
+| Command                                   | Example                |
+| ----------------------------------------- | ---------------------- |
+| `go up <number_small> (line \| lines)`    | `go up five lines`     |
+| `go down <number_small> (line \| lines)`  | `go down three lines`  |
+| `go left <number_small> (word \| words)`  | `go left eight words`  |
+| `go right <number_small> (word \| words)` | `go right eight words` |
+| `go line start`                           |                        |
+| `go line end`                             |                        |
 
 
 ## Selection Commands
 
-| Command                                 | Example                  |
-| --------------------------------------- | ------------------------------------------- |
-| `select left <number_small> (word \| words)`           | `select left two words` |
-| `select right <number_small> (word \| words)`           | `select right two words` |
-| `select left <number_small> (character \| characters)`           | `select left seven characters` |
-| `select right <number_small> (character \| characters)`           | `select right three characters` |
-| `select that`           | selects the last phrase |
+| Command                                                 | Example                         |
+| ------------------------------------------------------- | ------------------------------- |
+| `select left <number_small> (word \| words)`            | `select left two words`         |
+| `select right <number_small> (word \| words)`           | `select right two words`        |
+| `select left <number_small> (character \| characters)`  | `select left seven characters`  |
+| `select right <number_small> (character \| characters)` | `select right three characters` |
+| `select that`                                           | selects the last phrase         |
 
 ## Deletion Commands
 
-| Command                                 | Example                  |
-| --------------------------------------- | ------------------------------------------- |
-| `clear left <number_small> (word \| words)`           | `clear left two words` |
-| `clear right <number_small> (word \| words)`           | `clear right two words` |
-| `clear left <number_small> (character \| characters)`           | `clear left seven characters` |
-| `clear right <number_small> (character \| characters)`           | `clear right three characters` |
-| `nope selection` or `scratch selection`           | deletes the currently selected text |
-| `nope that` or `scratch that`           | deletes the last phrase |
+| Command                                                | Example                             |
+| ------------------------------------------------------ | ----------------------------------- |
+| `clear left <number_small> (word \| words)`            | `clear left two words`              |
+| `clear right <number_small> (word \| words)`           | `clear right two words`             |
+| `clear left <number_small> (character \| characters)`  | `clear left seven characters`       |
+| `clear right <number_small> (character \| characters)` | `clear right three characters`      |
+| `nope selection` or `scratch selection`                | deletes the currently selected text |
+| `nope that` or `scratch that`                          | deletes the last phrase             |
 
 
 ## Undo/Redo
 
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `undo that`                      | performs an undo                                   |
-| `redo that`            | performs a redo |
+| Command     | Description      |
+| ----------- | ---------------- |
+| `undo that` | performs an undo |
+| `redo that` | performs a redo  |
 
