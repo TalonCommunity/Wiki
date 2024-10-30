@@ -106,20 +106,6 @@ As another example of using command repetition, saying `select up third` will pr
 | `find it`  | bring up the application's find dialog box                  |
 | `next one` | select the next occurrence that matches the search criteria |
 
-## Saying Individual Words
-
-Whilst in command mode, you are able to enter a single word at a time by prefixing the word as follows:
-
-
-| Command        | Capitalization           | Spacing                            | Example                                                                                                   |
-| -------------- | ------------------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `word <word>`  | lowercase                | none                               | saying `word application` inserts `application`                                                               |
-| `proud <word>` | first letter capitalized | none                               | saying `proud miscellaneous` inserts `Miscellaneous`                                                          |
-| `trot <word>`  | lowercase                | trailing space character | saying `trot hello` inserts `hello` ` ` (trailing space), `trot hello word world` for `hello world`               |
-| `leap <word>`  | first letter capitalized | trailing space character | saying `leap forward` inserts `Forward` ` ` (trailing space), `leap forward word thinking` for `Forward thinking` |
-
-
-
 ## Miscellaneous Text Commands
 
 | Command                               | Description                                                                 |

@@ -9,7 +9,7 @@ Some of these display information that is readily understandable. These include:
 | `help alphabet`              | show the spoken [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet) for pressing individual letters          |
 | `help arrows`              | show the spoken forms of the [arrow keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#arrow-keys)       |
 | `help function keys`              | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#function-keys)       |
-| `help formatters`, `help format`, `format help`  | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/formatters.md)       |
+| `help formatters`, `help format`, `format help`  | show the spoken forms of the [function keys](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)       |
 | `help modifier`              | show the spoken forms of the [modifier keys](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)       |
 | `help numbers`              | best to read [here](/docs/Basic%20Usage/Command%20Mode/single-characters.md#numbers) for help on numbers         |
 | `help punctuation`              | show the spoken forms for the punctuation keys      |

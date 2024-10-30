@@ -1,15 +1,42 @@
-# Saying Phrases
+# Saying Words and Phrases
 
-Whilst in command mode, it's easy to enter a single phrase at a time.
+Whilst in command mode, it's easy to enter a single word or phrase at a time.
 
-For example, saying `say hello world` will insert the text `hello world`.
+## Saying Individual Words
+
+To enter a single word at a time by prefixing the word as follows:
+
+
+| Command        | Capitalization           | Spacing                  | Example                                                      |
+| -------------- | ------------------------ | ------------------------ | ------------------------------------------------------------ |
+| `word <word>`  | lowercase                | none                     | saying `word application` inserts `application`              |
+| `proud <word>` | first letter capitalized | none                     | saying `proud miscellaneous` inserts `Miscellaneous`         |
+| `trot <word>`  | lowercase                | trailing space character | saying `trot hello` inserts `hello` ` ` (trailing space)     |
+| `leap <word>`  | first letter capitalized | trailing space character | saying `leap forward` inserts `Forward` ` ` (trailing space) |
+
+:::note Interspersing Words and Voice Commands
+
+Words can be interspersed with other voice commands. For example, starting with the following line:
+```
+are two classes of formatters
+```
+Saying `end colon home leap there` would transform this to:
+```
+There are two classes of formatters:
+```
+
+:::
+
+## Saying Phrases
+
+To enter a phrase, say the word `say` followed by the phrase itself.
+
+For example, saying `say hello out there` will insert the text `hello out there`.
 
 The word `say` in the above example is known as the formatter name. To insert some text, say the name of the formatter followed by the text itself.
 
 Formatters allow you to insert a word or words with specific capitalization and punctuation. There are many different formatters as described below,
 some specifically crafted to make the entry of variable names etc more efficient.
-
-
 
 
 :::tip
@@ -18,17 +45,17 @@ When needing to dictate more than a few phrases, it might be more efficient to f
 
 :::
 
-## Formatter Classes
+### Formatter Classes
 
 There are two classes of formatters. Prose formatters preserve hyphens and apostrophes, whilst non-prose (code) formatters strip punctuation instead, for example:
 
-| Formatter Class | Phrase                  | Inserted Text    |
-| -------------- | ----------------------- | ---------------- |
-| Code           | `hammer how's it going` | `HowsItGoing`    |
-| Prose          | `title how's it going`  | `How's It Going` |
+| Formatter Class | Formater | Phrase                  | Inserted Text    |
+| -------------- | ----------- | ---------------------- | ---------------- |
+| Code           | hammer | `hammer how's it going` | `HowsItGoing`    |
+| Prose          | title | `title how's it going`  | `How's It Going` |
 
 
-## Code Formatters
+### Code Formatters
 
 | Formatter  | Capitalization                                              | Spacing                                      | Inserted Text     |
 | ---------- | ----------------------------------------------------------- | -------------------------------------------- | ----------------- |
@@ -60,7 +87,7 @@ Multiple formatters can be chained together — for example, `dubstring snake he
 
 
 
-## Prose Formatters
+### Prose Formatters
 
 These set of formatters are used for entering prose, and they all enter text with standard spacing.
 There is no equivalent to `snake` for example, with underscores between words.
@@ -73,7 +100,7 @@ There is no equivalent to `snake` for example, with underscores between words.
 | `title`          | Every word in title case (except for words such as `and` and `or`)   | `one two three`     |
 
 
-## Reformat Existing Text
+### Reformat Existing Text
 
 Reformat existing text with one or more formatters by selecting it, then saying the formatter name(s) followed by `that`. 
 
@@ -86,7 +113,7 @@ Select that text, and after saying `title that` Talon changes it:
 This Is the Name of My Heading
 ```
 
-## Help Formatters
+### Help Formatters
 
 `help formatters` displays available formatters with examples of their output when followed by `one two three`.
 
