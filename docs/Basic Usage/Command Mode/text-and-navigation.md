@@ -186,10 +186,46 @@ For example, the `homophones.csv` file is contained under the core directory.
 
 ## Homophones
 
-:::note To Be Completed
+> A homophone is a word that sounds the same as another word but has a different meaning and/or spelling. 
+> “Flower” and “flour” are homophones because they are pronounced the same
+>
+> - https://www.vocabulary.com/dictionary/homophone
 
-:::
+As the homophones are all pronounced the same, the speech recognition engine will not be able to consistently
+insert the correct word.
 
+For example, if the recognition engine hears the sound for the word `tail`, it cannot know if it should be entering the text `tail` or `tale`.
+
+### The `Phones That` Command
+
+Talon provides a feature for helping in these situations. Select the word, in this case `tale`, say `phones that`, and Talon will
+replace it with `tail`. Similarly, if you selected `tail` and said `phones that`, Talon will replace it with `tail`.
+
+The switch occurs automatically in the case where there are two words with the same sound.
+
+If there are more, then you will be presented with a selection to choose from.
+
+For example, if you said `console`, but Talon entered `consul`, saying `phones that` will display the following:
+
+
+<img src="/img/homophones-choice.png/"
+     alt="screenshot of the homophone selection menu, after saying `console`"
+ />
+
+### Command List
+
+In the following description, `homophone action` means automatically switching the word if there are only two homophones.
+If there are more than two, then showing the homophone selection menu.
+
+| Command                                    | Description                                                                                                                                             |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `phones that`                              | This performs the homophone action for the selected word                                                                                                |
+| `phones <user.homophones_canonical>`       | This shows the homophone selection menu for the spoken word. For example, saying `phones right` will display `rite`, `write`, `right`.                  |
+| `phones force <user.homophones_canonical>` | ronzulu: not sure how this is different to the phones command without `force`                                                                           |
+| `phones force`                             | Shows the homophone selection menu for the selected word. Unlike `phones that`, the selection menu always appears even if there are only two homophones |
+| `phones word`                              | This performs the homophone action for the selected word                                                                                                |
+| `phones [<user.ordinals>] word left`       | This performs the homophone action for the nth word to the left of the current insertion point location                                                 |
+| `phones [<user.ordinals>] word right`      | This performs the homophone action for the nth word to the right of the current insertion point location                                                |
 
 
 ## Zoom
