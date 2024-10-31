@@ -8,7 +8,7 @@ Whilst in command mode, it's easy to enter a single word or phrase at a time.
 
 ## Saying Individual Words
 
-To enter a single word at a time by prefixing the word as follows:
+To enter a single word, prefix the word as follows:
 
 
 | Command        | Capitalization           | Spacing                  | Example                                                      |
@@ -31,7 +31,7 @@ Needing to decide before starting to speak whether or not you will be saying a s
 Advantages:
 - Using one of the single word voice commands is beneficial in increasing accuracy when saying a word that could be recognized as
 multiple words. 
-    - For example, if I say `say formatters` then depending on exactly how I say it, can be recognized either correctly as
+    - For example, if I say the command `say formatters` then depending on exactly how I say it, it can be recognized either correctly as
 `formatters`, or alternatively as `form matters` or `four matters`. 
     - Saying `word formatters` is consistently recognized as `formatters`.
 - The ability to intersperse words and voice commands, as described below

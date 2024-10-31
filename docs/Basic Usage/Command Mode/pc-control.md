@@ -6,7 +6,7 @@ See also [help](/docs/Help/help-commands.md) for displaying help using Talon's i
 
 | Command             | Description                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome                                              |
+| `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome (where `app name` is the spoken form of the name) |
 | `running list`      | see all active applications, and the and the spoken form of them                                               |
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
 | `window close`      | closes the currently active window                                                                             |
@@ -16,9 +16,26 @@ Sample output from the `running list` command:
      alt="screenshot of the output of the running list command"
  />
 
-:::info Application Spoken Form Customization
+### Spoken Forms of Application Names
+
+In the above screenshot we see that there are many different automatically generated permutations of the spoken form of `Windows PowerShell ISE`.
+You can say `focus` followed by any of those spoken forms, and Talon will activate powershell.
+
+<img src="/img/running_list_annotated.png/"
+     alt="screenshot of the output of the running list command with some annotation"
+/>
+
 To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
-:::
+
+For example, the list of entries in the running list for `Windows PowerShell ISE` can be simplified by updating `app_name_overrides.windows.csv` and adding:
+```
+powershell, Windows PowerShell ISE
+```
+
+Now the running list only shows a single entry for Windows PowerShell ISE:
+<img src="/img/running_list2.png/"
+     alt="screenshot of the output of the running list command"
+/>
 
 ## Screenshot commands
 
@@ -175,6 +192,8 @@ These commands are available when the mouse grid is showing:
 :::note Mouse Grid Alternatives
 
 There are a few [alternatives](/docs/Integrations/integrations.md#mouse-alternatives) to the mouse grid described in this section.
+
+:::
 
 # Save
 
