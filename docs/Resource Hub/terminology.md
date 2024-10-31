@@ -8,6 +8,8 @@ sidebar_position: 60
 
 ## Beta Version
 
+## Cognitive Load
+
 ## Community
 
 ## imgui

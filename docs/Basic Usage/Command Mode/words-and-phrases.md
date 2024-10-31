@@ -18,18 +18,36 @@ To enter a single word at a time by prefixing the word as follows:
 | `trot <word>`  | lowercase                | trailing space character | saying `trot hello` inserts `hello` ` ` (trailing space)     |
 | `leap <word>`  | first letter capitalized | trailing space character | saying `leap forward` inserts `Forward` ` ` (trailing space) |
 
-:::note Interspersing Words and Voice Commands
+### Benefits of Saying Individual Words
+
+After reading the section below on phrases, you might be wondering what is the benefit of Talon having the above voice commands
+that only enable the user to enter a single word.
+
+And there are disadvantages:
+- The user needing to learn additional commands - `word` and `proud` for words and `say` and `sentence` for phrases
+- Additional [cognitive load](/docs/Resource%20Hub/terminology.md#cognitive-load).
+Needing to decide before starting to speak whether or not you will be saying a single word or multiple words
+
+Advantages:
+- Using one of the single word voice commands is beneficial in increasing accuracy when saying a word that could be recognized as
+multiple words. 
+    - For example, if I say `say formatters` then depending on exactly how I say it, can be recognized either correctly as
+`formatters`, or alternatively as `form matters` or `four matters`. 
+    - Saying `word formatters` is consistently recognized as `formatters`.
+- The ability to intersperse words and voice commands, as described below
+
+### Interspersing Words and Voice Commands
 
 Words can be interspersed with other voice commands. For example, starting with the following line:
 ```
-are two classes of formatters
+are two classes of aliens in science fiction
 ```
 Saying `end colon home leap there` would transform this to:
 ```
-There are two classes of formatters:
+There are two classes of aliens in science fiction:
 ```
 
-:::
+
 
 ## Saying Phrases
 
@@ -37,16 +55,18 @@ To enter a phrase, say the word `say` followed by the phrase itself.
 
 For example, saying `say hello out there` will insert the text `hello out there`.
 
-The word `say` in the above example is known as the formatter name. To insert some text, say the name of the formatter followed by the text itself.
-
-Formatters allow you to insert a word or words with specific capitalization and punctuation. There are many different formatters as described below,
-some specifically crafted to make the entry of variable names etc more efficient.
-
 :::tip
 
 When needing to dictate more than a few phrases, it might be more efficient to first switch to [dictation mode](../dictation_mode.md) described separately.
 
 :::
+
+### Formatters
+
+The word `say` in the above example is known as the formatter name. To insert some text, say the name of the formatter followed by the text itself.
+
+Formatters allow you to insert a word or words with specific capitalization and punctuation. There are many different formatters as described below,
+some specifically crafted to make the entry of variable names etc more efficient.
 
 ### Formatter Classes
 
