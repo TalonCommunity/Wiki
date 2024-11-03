@@ -4,14 +4,25 @@ Talon is built to be a flexible and customizable system. This means that in addi
 
 Given this flexibility there are two ways you could approach customizing your Talon setup:
 
-- Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
+## Options
+
+
+
+### Option A: Directly Edit Talon Community Files
+
+Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
   - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
   - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
-- Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
+
+### Option B: Maintain a Separate Directory With Your Customizations
+
+Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
   - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
   - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
 
 ![Screen shot of Talon user directory](/img/talon_user_folders.png)
+
+### Option C: Directly Edit Talon Community Files (Using Git)
 
 ## Refreshing Your Local Copy of the Community User File Set
 
@@ -134,3 +145,39 @@ You can also add words to the vocabulary or replacements (words_to_replace) by u
 Note however that the `customize` command always modifies your local copy of the talon community user file set files.
 
 Also note that some are in the `settings` folder and are not created until you launch Talon with `community` installed.
+
+
+## Notes
+
+### Note 1
+
+
+
+### Note 2 - `.talon-files` Under Directory `/core`
+
+
+
+### Note 3 - `.csv` Under Directory `/core`
+
+Customizations must be applied to the files within this directory.
+
+Care needs to be taken if updating to a new version of the Talon community user file set,
+as any changes you've made will be overwritten.
+
+### Note 4 - files Under Directory `/settings`
+
+Customizations must be applied to the files within this directory.
+
+Files here are not included with the user file set, and so there is no risk of losing
+customizations when updating to a new version of the user file set.
+
+
+All customization consists of files placed in the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
+
+Talon itself doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
+However, there are some guidelines about [managing your customizations](./managing-customizations.md), which could make this easier long term.
+
+:::note Additional Capabilities
+
+Aside from these, additional extra capabilities may be added from time to time. For example in the [beta version](/docs/Resource%20Hub/beta_talon.md) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
+:::

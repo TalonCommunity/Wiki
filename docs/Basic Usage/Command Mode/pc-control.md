@@ -1,8 +1,8 @@
 # General PC Control
 
-See also [help](/docs/Help/help-commands.md) for displaying help using Talon's inbuilt help system.
+See also [help](/docs/Help/help-commands.md) for displaying information using Talon's inbuilt help system.
 
-## Working with applications
+## Running applications
 
 | Command             | Description                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -10,6 +10,10 @@ See also [help](/docs/Help/help-commands.md) for displaying help using Talon's i
 | `running list`      | see all active applications, and the and the spoken form of them                                               |
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
 | `window close`      | closes the currently active window                                                                             |
+
+:::warning move the customization info to separate place
+
+:::
 
 Sample output from the `running list` command:
 <img src="/img/running_list.png/"

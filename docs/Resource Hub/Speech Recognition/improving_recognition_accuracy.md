@@ -36,7 +36,8 @@ Some important commands are specified in `.talon-list` files, like the alphabet.
 
 _Example:_ If the `close` in `tab close` does not work for you (but `tab open` etc. do), try out `tab wipe` or `tab quit` instead.
 
-_Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`.
+_Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`. 
+See the section below on [alphabet alternatives](#alternatives-to-the-default-alphabet) for more examples.
 
 ## Talon cuts me off mid-command or mid-sentence
 
@@ -69,7 +70,7 @@ This will not help you today, but instead help to improve the talon engine for a
 - [Talon Speech Collection](https://speech.talonvoice.com/)
 - [Talon Noise Collection](https://noise.talonvoice.com/)
 
-## Collected alternatives to the default alphabet
+## Alternatives to the default alphabet
 
 Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack. Say `customize alphabet` to edit spoken forms for the alphabet.
 
@@ -97,7 +98,7 @@ Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an
 | zip                                                      | zone        |
 | zip                                                      | zoo         |
 
-## Collected alternatives for modifier keys
+## Alternatives for modifier keys
 
 The default words for some modifier keys are designed to match the labels on the keys themselves, but are not always efficient to say or can be misrecognized depending on your dialect/speech pattern. The following is a list of alternatives other Talon users have used. Note that community contains one `modifier_key.talon-list` file for Windows/Linux and one for Mac, since the modifier key names differ.
 
