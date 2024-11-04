@@ -50,3 +50,10 @@ causing the insertion point to move up five lines.
 ## Learning Tools
 
 - [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
+
+## Additional Capabilities
+
+Aside from all the features described in this wiki, additional extra capabilities may be added from time to time. 
+
+For example in the [beta version](/docs/Resource%20Hub/beta_talon.md) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
+
