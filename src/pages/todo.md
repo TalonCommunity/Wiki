@@ -110,3 +110,33 @@ This folder contains `edit_settings.talon`, which has a command to open various 
 - `windows_and_tabs` has commands for tab and [window management](https://github.com/talonhub/community?tab=readme-ov-file#window-management), launching and switching between different applications, and snapping application windows to different locations on the screen
 
 Commands for enabling languages are defined in `[language_modes.talon](core/modes/language_modes.talon)`.
+
+# Directory Structure Diagrams
+
+https://tree.nathanfriend.com
+
+```
+talon
+	user
+		community
+			core
+				homophones
+					homophones.csv
+				app_switcher
+					app_name_overrides.linux.csv
+					app_name_overrides.mac.csv
+					app_name_overrides.windows.csv
+			settings
+				abbreviations.csv
+				file_extensions.csv
+				words_to_replace.csv
+```
+
+```
+talon
+	user
+		community
+		cursorless-talon
+		curserless-settings
+		my-talon
+```

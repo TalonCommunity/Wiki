@@ -7,20 +7,56 @@ Given this flexibility there are two ways you could approach customizing your Ta
 ## Options
 
 
-
 ### Option A: Directly Edit Talon Community Files
 
-Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
-  - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
+Edit the `.talon`, `.talon-lists` and `.py` files within the [Talon Community](https://github.com/talonhub/community) directly.
+  - Can be easier to begin with, but may be difficult to keep up-to-date with the latest version of the community user file set (aka `upstream`).
   - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
 
 ### Option B: Maintain a Separate Directory With Your Customizations
 
 Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
   - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
-  - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
+  - For example, `my_talon` contains personal customizations, and `cursorless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless) [integration](/docs/Integrations/integrations.md).
 
-![Screen shot of Talon user directory](/img/talon_user_folders.png)
+```
+talon/
+└── user/
+    ├── community
+    ├── cursorless-talon
+    ├── cursorless-settings
+    └── my-talon
+```
+
+#### Exceptions
+
+Note that there are certain files to which theres recommendation does not apply.
+The following files can only be modified within the community directory structure, and cannot be overridden outside of it.
+```
+talon/
+└── user/
+    └── community/
+        ├── core/
+        │   ├── homophones/
+        │   │   └── homophones.csv
+        │   └── app_switcher/
+        │       ├── app_name_overrides.linux.csv
+        │       ├── app_name_overrides.mac.csv
+        │       └── app_name_overrides.windows.csv
+        └── settings/
+            ├── abbreviations.csv
+            ├── file_extensions.csv
+            └── words_to_replace.csv	
+```
+:::note
+
+The files under core are present within the community user file set. This means that care needs to be taken
+when updating your local copy of the user file set.
+
+The files under settings are not present within the community user file set.  press Fineiles with default content
+are created dynamically when first needed.
+
+:::
 
 ### Option C: Directly Edit Talon Community Files (Using Git)
 

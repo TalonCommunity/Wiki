@@ -1,4 +1,8 @@
-# App Support
+---
+sidebar_position: 1
+---
+
+# Overview
 
 All applications on your PC can be controlled using speech when running talon.
 This is done by using the general mechanisms described under [command mode](/docs/Basic%20Usage/Command%20Mode/command_mode.md),
