@@ -4,6 +4,8 @@ In **dictation mode**, your speech will be transcribed as plain text (although w
 
 To switch to dictation mode from command mode, simply say `dictation mode`. Now if you say `plex yank zip` then `plex yank zip` will be inserted, rather than the `xyz` that would be inserted if you were in command mode.
 
+## Commands Available within Dictation Mode
+
 :::tip Insert Everything Literally
 
 The rest of this section describes the commands available within dictation mode.
@@ -13,7 +15,7 @@ For example, if you want to insert the words `new paragraph` (rather than pressi
 
 :::
 
-## Capitalization and Spacing
+### Capitalization and Spacing
 
 Whilst dictating, you might say a phrase few words, have a little pause, then say another phrase.
 
@@ -39,7 +41,7 @@ However, if this is not wanted, then the following modifier words can be used:
 | `no space`            | don't insert a space character before the next word |
 | `cap`                 | capitalize the next word spoken                     |
 
-## Formatting Commands
+### Formatting Commands
 
 The following commands work on the text inserted by the previous phrase.
 
@@ -57,7 +59,7 @@ The following commands work on the currently selected text.
 | `formatted <user.format_text>`       | what does this do?                                                                                                                    |
 | `format selection <user.formatters>` | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#formatters), `format selection snake` |
 
-## Special Words
+### Special Words
 
 There are some words that in dictation mode are not inserted literally, but rather insert the following:
 
@@ -71,7 +73,7 @@ There are some words that in dictation mode are not inserted literally, but rath
 
 As mentioned above, if you want to literally insert the text `new line` you would say `escape new line`.
 
-## Entering Letters, Numbers and Times
+### Entering Letters, Numbers and Times
 
 Whilst in dictation mode, saying `six colon forty five` will insert `six: forty five`.
 To enter `6:45` simply prefix with `numb`, so say `numb six colon forty five`.
@@ -92,7 +94,7 @@ The `press` command functions in the same way as in command mode, but in dictati
 
 :::
 
-## Navigation Commands
+### Navigation Commands
 
 
 | Command                                 | Example                  |
@@ -105,7 +107,7 @@ The `press` command functions in the same way as in command mode, but in dictati
 | `go line end`           |  |
 
 
-## Selection Commands
+### Selection Commands
 
 | Command                                                 | Example                         |
 | ------------------------------------------------------- | ------------------------------- |
@@ -115,7 +117,7 @@ The `press` command functions in the same way as in command mode, but in dictati
 | `select right <number_small> (character \| characters)` | `select right three characters` |
 | `select that`                                           | selects the last phrase         |
 
-## Deletion Commands
+### Deletion Commands
 
 | Command                                 | Example                  |
 | --------------------------------------- | ------------------------------------------- |
@@ -127,10 +129,57 @@ The `press` command functions in the same way as in command mode, but in dictati
 | `nope that` or `scratch that`           | deletes the last phrase |
 
 
-## Undo/Redo
+### Undo/Redo
 
 | Command                               | Description                                                                 |
 | ------------------------------------- | --------------------------------------------------------------------------- |
 | `undo that`                      | performs an undo                                   |
 | `redo that`            | performs a redo |
 
+
+## Vocabulary Customization
+
+The inbuilt vocabulary in the Conformer [speech recognition engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) can be supplemented by entries in 
+the `/core/vocabulary/vocabulary.talon-list` file.
+Each entry must appear on a separate line.
+
+:::warning Managing Customizations
+
+Before changing the vocabulary file, it is recommended to first read the notes on [managing customizations](/docs/Customization/managing-customizations.md)
+
+:::
+
+For example, for Talon to recognize the word "staycation", simply include a line in `vocabulary.talon-list` with the word:
+```
+staycation
+```
+
+This works as the spoken form and written form of the word are the same, and talon can cleverly infer how to recognize the word from its spelling.
+
+:::warning Fact Check
+
+Is this correct?
+Does this also happen with other recognition engines?
+
+:::
+
+Where the spoken and written forms of the word are different, the entry needs to include both.
+
+For example, Talon has difficulty recognizing the name "Woollahra" just from its spelling.
+However, when written out as follows, and with slight adjustment to the pronunciation, it is recognized accurately:
+```
+wool lara: Woollahra
+```
+
+Note that as per this example, the written form is plain text and not surrounded by quotes.
+
+:::tip Works in Dictation Mode
+
+:::
+
+Entries included in `vocabulary.talon-list` are recognized in: 
+- [dictation mode](/docs/Basic%20Usage/dictation_mode.md)
+- within a [word voice command](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-individual-words) 
+  (eg saying `proud staycation` causes Talon to insert `Staycation`)
+- within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases) 
+  (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)

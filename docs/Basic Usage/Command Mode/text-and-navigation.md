@@ -172,15 +172,9 @@ Surround Selected Text With Delimiter
 
 :::info Personalization File Locations
 
-The following personalization files are located within the [settings directory](/docs/Resource%20Hub/terminology.md).
+Here is information about customizing [abbreviations](/docs/Customization/Customizable%20Items/lexical-items.md#abbreviations) and 
+[file extensions](/docs/Customization/Customizable%20Items/aliases.md#file-extensions), as well as [managing customizations](/docs/Customization/managing-customizations.md) in general.
 
-| Item                                        | Filename              |
-| ------------------------------------------- | --------------------- |
-| spoken and written forms of abbreviations   | `abbreviation.csv`    |
-| spoken and written forms of file extensions | `fall_extensions.csv` |
-
-Note that not all csv files are stored in the settings directory.
-For example, the `homophones.csv` file is contained under the core directory.
 :::
 
 ## Homophones
@@ -226,6 +220,12 @@ If there are more than two, then showing the homophone selection menu.
 | `phones [<user.ordinals>] word left`       | This performs the homophone action for the nth word to the left of the current insertion point location                                                 |
 | `phones [<user.ordinals>] word right`      | This performs the homophone action for the nth word to the right of the current insertion point location                                                |
 
+:::note Customizing the Homophone Word List
+
+The homophone file is located within your local copy of Talon community user file set, and as described in 
+[directory structure - limitations](/docs/Customization/managing-customizations.md#limitations) can only be edited in that location.
+
+:::
 
 ## Zoom
 

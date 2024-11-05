@@ -70,6 +70,17 @@ This will not help you today, but instead help to improve the talon engine for a
 - [Talon Speech Collection](https://speech.talonvoice.com/)
 - [Talon Noise Collection](https://noise.talonvoice.com/)
 
+:::note Don't Say Punctuation
+
+When providing speech samples, don't  speak out the  punctuation. For example, one of the sample sentences is:
+```
+There is, according to legend, a boiling pot of gold at one end.
+```
+
+When reading it out, do not say the words "comma" or "full stop"
+
+:::
+
 ## Alternatives to the default alphabet
 
 Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack. Say `customize alphabet` to edit spoken forms for the alphabet.
