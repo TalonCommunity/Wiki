@@ -4,12 +4,12 @@ See also [help](/docs/Help/help-commands.md) for displaying information using Ta
 
 ## Running applications
 
-| Command             | Description                                                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Command             | Description                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome (where `app name` is the spoken form of the name) |
-| `running list`      | see all active applications, and the and the spoken form of them                                               |
-| `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only) |
-| `window close`      | closes the currently active window                                                                             |
+| `running list`      | see all active applications, and the and the spoken form of them                                                    |
+| `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only)      |
+| `window close`      | closes the currently active window                                                                                  |
 
 :::warning move the customization info to separate place
 
@@ -32,6 +32,7 @@ You can say `focus` followed by any of those spoken forms, and Talon will activa
 To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
 
 For example, the list of entries in the running list for `Windows PowerShell ISE` can be simplified by updating `app_name_overrides.windows.csv` and adding:
+
 ```
 powershell, Windows PowerShell ISE
 ```

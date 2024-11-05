@@ -1,8 +1,8 @@
 # Downloading the Talon User File Set
 
 After installing talon, and a speech recognition engine as described here,
-you will need to  download a user file set. This wiki is all about the talent community user file set
-and so this page is about downloading  that specific user file set.
+you will need to download a user file set. This wiki is all about the talent community user file set
+and so this page is about downloading that specific user file set.
 
 This can be done using two different methods, using zip and using git.
 
@@ -10,7 +10,7 @@ The background to this choice is that if you use Talon for any period of time,
 you can expect the following:
 
 - The community will update the `user file set` with bug fixes and new features, and you will want
-to update your local copy of it.
+  to update your local copy of it.
 - You might make your own changes to some of these files.
 
 ---
@@ -18,6 +18,7 @@ to update your local copy of it.
 ## Considerations
 
 ### About `zip`
+
 This is easier to get started with Talon as it involves only downloading a single file and using standard
 methods on your PC to extract all the files from it.
 
@@ -31,15 +32,17 @@ In many cases, this disadvantage can be mitigated by following the recommendatio
 :::
 
 ### About `git`
+
 The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime.
 This is a benefit when using talent longer term.
 
-If you haven't already heard of `git`, and if you are not particularly comfortable using a command terminal, 
+If you haven't already heard of `git`, and if you are not particularly comfortable using a command terminal,
 this will be harder to get started with Talon.
 
 ### Summary
+
 If you are not particularly comfortable using a command terminal, and if you are just wanting to explore the suitability of Talon
-you may wish to use the simpler method of downloading `zip` files. 
+you may wish to use the simpler method of downloading `zip` files.
 
 You will always be able to switch to using `git` down the track.
 
@@ -90,4 +93,3 @@ git clone https://github.com/talonhub/community community
 cd %AppData%\Talon\user
 git clone https://github.com/talonhub/community community
 ```
-

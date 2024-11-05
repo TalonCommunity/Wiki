@@ -27,10 +27,10 @@ It's recommended to first learn what can be said in [command mode](./Command%20M
 - [text and navigation](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md) commands.
 
 Once you have the basics of text input down:
+
 - try [copying some code](./writing-code/) from one window to another.
 - explore using ordinal repetition for easily [repeating a command](./Command%20Mode/command_mode.md#chaining-and-repeating-commands) without pausing (e.g., saying `go up fifth` will go up five lines)
 - window switching (`focus chrome`)
-
 
 :::warning Also look at controlling specific applications and application tags
 
@@ -54,7 +54,6 @@ causing the insertion point to move up five lines.
 
 ## Additional Capabilities
 
-Aside from all the features described in this wiki, additional extra capabilities may be added from time to time. 
+Aside from all the features described in this wiki, additional extra capabilities may be added from time to time.
 
 For example in the [beta version](/docs/Resource%20Hub/beta_talon.md) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
-

@@ -20,4 +20,3 @@ troll: control
 shift: shift
 alt: alt
 ```
-

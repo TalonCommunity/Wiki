@@ -53,9 +53,9 @@ The following commands work on the text inserted by the previous phrase.
 
 The following commands work on the currently selected text.
 
-| Command                              | Description                                                                                                                           |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `formatted <user.format_text>`       | what does this do?                                                                                                                    |
+| Command                              | Description                                                                                                                                             |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `formatted <user.format_text>`       | what does this do?                                                                                                                                      |
 | `format selection <user.formatters>` | formats the selected text with the specified [formatters](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#formatters), `format selection snake` |
 
 ### Special Words
@@ -134,7 +134,7 @@ The `press` command functions in the same way as in command mode, but in dictati
 
 ## Vocabulary Customization
 
-The inbuilt vocabulary in the Conformer [speech recognition engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) can be supplemented by entries in 
+The inbuilt vocabulary in the Conformer [speech recognition engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) can be supplemented by entries in
 the `/core/vocabulary/vocabulary.talon-list` file.
 Each entry must appear on a separate line.
 
@@ -145,6 +145,7 @@ Before changing the vocabulary file, it is recommended to first read the notes o
 :::
 
 For example, for Talon to recognize the word "staycation", simply include a line in `vocabulary.talon-list` with the word:
+
 ```
 staycation
 ```
@@ -162,6 +163,7 @@ Where the spoken and written forms of the word are different, the entry needs to
 
 For example, Talon has difficulty recognizing the name "Woollahra" just from its spelling.
 However, when written out as follows, and with slight adjustment to the pronunciation, it is recognized accurately:
+
 ```
 wool lara: Woollahra
 ```
@@ -172,10 +174,10 @@ Note that as per this example, the written form is plain text and not surrounded
 
 :::
 
-Entries included in `vocabulary.talon-list` are recognized in: 
-- [dictation mode](/docs/Basic%20Usage/dictation_mode.md)
-- within a [word voice command](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-individual-words) 
-  (eg saying `proud staycation` causes Talon to insert `Staycation`)
-- within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases) 
-  (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)
+Entries included in `vocabulary.talon-list` are recognized in:
 
+- [dictation mode](/docs/Basic%20Usage/dictation_mode.md)
+- within a [word voice command](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-individual-words)
+  (eg saying `proud staycation` causes Talon to insert `Staycation`)
+- within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)
+  (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)

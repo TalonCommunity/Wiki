@@ -45,6 +45,7 @@ The format of the displayed information is explained in detail in the section on
 Another method to discover what voice commands are available within an application, is by looking at its talon file.
 
 For example, the `apps\firefox\firefox.talon` file has the following content:
+
 ```
 app: firefox
 -
@@ -65,11 +66,13 @@ tab search <user.text>$:
 ```
 
 This shows the same information as through the help active command, and that firefox supports:
+
 - the `tab search` command (two variations one with the text to search for)
 - a command to toggle the visibility of the `bookmarks panel`
 - a command to toggle the visibility of the `history panel`
 
 However, the majority of available voice commands are specified by the presence of the two tag lines:
+
 ```talon
 tag(): browser
 tag(): user.tabs
@@ -94,7 +97,7 @@ address copy | url copy | copy address | copy url:
 go home: browser.go_home()
 go to {user.website}: browser.go(website)
 go private: browser.open_private_window()
-... 
+...
 (shortened for brevity)
 ```
 
@@ -112,6 +115,7 @@ tab (duplicate | clone): user.tab_duplicate()
 ```
 
 From the `browser.talon` file we see that there is another tagline:
+
 ```
 tag(): user.navigation
 ```
@@ -120,6 +124,7 @@ We can go through the same process to drill down and find out what voice command
 are available thanks to this tag.
 
 And from `core\navigation\navigation.talon` we find the following commands:
+
 ```
 tag: user.navigation
 -
@@ -139,7 +144,6 @@ Those actions can always be performed by controlling the mouse or using the appl
 keyboard shortcuts.
 
 :::
-
 
 | Application               |
 | ------------------------- |
@@ -214,4 +218,3 @@ keyboard shortcuts.
 | windows_explorer          |
 | windows_terminal          |
 | wsl                       |
-

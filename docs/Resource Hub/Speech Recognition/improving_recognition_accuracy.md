@@ -36,7 +36,7 @@ Some important commands are specified in `.talon-list` files, like the alphabet.
 
 _Example:_ If the `close` in `tab close` does not work for you (but `tab open` etc. do), try out `tab wipe` or `tab quit` instead.
 
-_Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`. 
+_Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`.
 See the section below on [alphabet alternatives](#alternatives-to-the-default-alphabet) for more examples.
 
 ## Talon cuts me off mid-command or mid-sentence
@@ -72,7 +72,8 @@ This will not help you today, but instead help to improve the talon engine for a
 
 :::note Don't Say Punctuation
 
-When providing speech samples, don't  speak out the  punctuation. For example, one of the sample sentences is:
+When providing speech samples, don't speak out the punctuation. For example, one of the sample sentences is:
+
 ```
 There is, according to legend, a boiling pot of gold at one end.
 ```

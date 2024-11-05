@@ -37,10 +37,11 @@ The Talon alphabet can be displayed at any time by saying `help alphabet`.
 Try saying `air bat cap` to insert abc.
 
 Saying letters is something that you may need to use fairly regularly, and so it should be something that is both:
+
 - recognized with a high degree of accuracy by Talon
 - easy for you to say
 
-If the defaults aren't suitable for you, then you may wish to try alternatives, 
+If the defaults aren't suitable for you, then you may wish to try alternatives,
 with some [suggestions here](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md#alternatives-to-the-default-alphabet).
 
 :::warning Managing Customizations

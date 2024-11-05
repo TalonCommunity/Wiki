@@ -11,21 +11,16 @@ and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_
 Talon supports customization of many of its behaviors. And although making changes does require some care and attention,
 this is intended to be achievable by users of all skill levels.
 
-
-
 :::info Creating New Talon Actions
 
-One area does require Python programming expertise, and that is in order to create new [talon actions](/docs/Resource%20Hub/terminology.md#talon-actions) 
+One area does require Python programming expertise, and that is in order to create new [talon actions](/docs/Resource%20Hub/terminology.md#talon-actions)
 for use within [voice commands](./TalonScript/voice-commands.md). For all of the customization cases shown above, this is not required.
 
 :::
 
-
 ## Notes
 
 ### Note 1
-
-
 
 ### Note 2 - `.talon-files` Under Directory `/core`
 
@@ -42,7 +37,6 @@ Customizations must be applied to the files within this directory.
 
 Files here are not included with the user file set, and so there is no risk of losing
 customizations when updating to a new version of the user file set.
-
 
 All customization consists of files placed in the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
 

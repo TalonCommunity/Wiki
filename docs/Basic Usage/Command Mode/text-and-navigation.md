@@ -169,7 +169,7 @@ Surround Selected Text With Delimiter
 
 :::info Personalization File Locations
 
-Here is information about customizing [abbreviations](/docs/Customization/Customizable%20Items/lexical-items.md#abbreviations) and 
+Here is information about customizing [abbreviations](/docs/Customization/Customizable%20Items/lexical-items.md#abbreviations) and
 [file extensions](/docs/Customization/Customizable%20Items/aliases.md#file-extensions), as well as [managing customizations](/docs/Customization/managing-customizations.md) in general.
 
 :::
@@ -218,7 +218,7 @@ If there are more than two, then showing the homophone selection menu.
 
 :::note Customizing the Homophone Word List
 
-The homophone file is located within your local copy of Talon community user file set, and as described in 
+The homophone file is located within your local copy of Talon community user file set, and as described in
 [directory structure - limitations](/docs/Customization/managing-customizations.md#limitations) can only be edited in that location.
 
 :::

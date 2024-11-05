@@ -27,11 +27,10 @@ For example, if you have customized the alphabet then saying `help alphabet` wil
 
 When a help panel is being displayed, then the following commands become available:
 
-| Command                      | Description                                                      |
-| ---------------------------- | ---------------------------------------------------------------- |
-| `help next`, `help previous`              | 	go to the next or previous page of help items (shown if there are a lot items)        |
-| `help close`              | 	hide any open help window       |
-
+| Command                      | Description                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| `help next`, `help previous` | go to the next or previous page of help items (shown if there are a lot items) |
+| `help close`                 | hide any open help window                                                      |
 
 ## Help Commands
 

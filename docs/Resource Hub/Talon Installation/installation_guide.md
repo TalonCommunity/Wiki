@@ -81,9 +81,6 @@ the [talon user directory](/docs/Resource%20Hub/terminology.md).
 This can be done one of two ways - either as a `zip` file or by using `git`.
 Considerations in choosing between the two methods, as well as instructions, are described [here](./downloading-community.md).
 
-
-
-
 ## 5: Test your Talon Setup
 
 - Try a few [basic commands](/docs/Basic%20Usage/basic_usage.md).

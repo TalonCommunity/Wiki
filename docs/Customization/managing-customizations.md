@@ -7,7 +7,6 @@ All customization consists of files placed somewhere under the [Talon user direc
 The Talon Platform itself doesn't care how you organize your files within this directory - any subdirectories or file names are just there to make things easier to understand for you and others.
 However, there are some guidelines on this page about managing your customizations, which could make this easier long term.
 
-
 ## Directory Structure Options
 
 There are two ways you could approach customizing your Talon setup:
@@ -15,8 +14,9 @@ There are two ways you could approach customizing your Talon setup:
 ### Option A: Directly Edit Talon Community Files
 
 Edit the `.talon`, `.talon-lists` and `.py` files within the `talon/user/community` directory directly.
-  - Can be easier to begin with, but may be fiddly to keep up-to-date with the latest version of the [community user file set](https://github.com/talonhub/community) (aka `upstream`).
-  - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
+
+- Can be easier to begin with, but may be fiddly to keep up-to-date with the latest version of the [community user file set](https://github.com/talonhub/community) (aka `upstream`).
+- You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
 
 This is only really an issue if you [downloaded](/docs/Resource%20Hub/Talon%20Installation/downloading-community.md) Talon community as a zip file.
 If you used `git` to perform the download, and are familiar with pulling and merging operations then using Option A should be reasonably straightforward.
@@ -32,7 +32,6 @@ talon/
 For brevity, only files and folders relevant to each point are shown in diagrams on this page.
 
 :::
-
 
 ### Option B: Have a Separate Directory With Your Customizations (**Recommended**)
 
@@ -53,11 +52,11 @@ That is, the content of your file will be used by Talon instead of the community
 
 :::
 
-
 #### Limitations
 
 Note that there are certain files to which this recommendation does not apply.
 The following files can only be modified within the community directory structure, and cannot be customized outside of it.
+
 ```
 talon/
 └── user/
@@ -72,9 +71,8 @@ talon/
         └── settings/
             ├── abbreviations.csv
             ├── file_extensions.csv
-            └── words_to_replace.csv	
+            └── words_to_replace.csv
 ```
-
 
 :::note
 
@@ -151,13 +149,14 @@ the above technique will not work.
 ## The Customize Command
 
 You can customize common `.talon-list` and `.csv` files with voice commands. Say the phrase `customize {file_type}` where `file_type` is one of the following:
-- `abbreviations`, 
-- `additional words`, 
-- `alphabet`, 
-- `homophones`, 
-- `search engines`, 
-- `Unix utilities`, 
-- `websites` or 
+
+- `abbreviations`,
+- `additional words`,
+- `alphabet`,
+- `homophones`,
+- `search engines`,
+- `Unix utilities`,
+- `websites` or
 - `words to replace`
 
 These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
