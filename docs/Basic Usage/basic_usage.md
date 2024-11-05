@@ -19,6 +19,7 @@ Specific commands are used to [switch](./talon-modes.md#mode-switching) between 
 ## Command Mode
 
 It's recommended to first learn what can be said in [command mode](./Command%20Mode/command_mode.md):
+
 - starting with the [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md),
 - then get familiar with the keys, [symbols](/docs/Basic%20Usage/Command%20Mode/single-characters.md#symbols),
 - saying [words and phrases](./Command%20Mode/words-and-phrases.md) (and how to format them),

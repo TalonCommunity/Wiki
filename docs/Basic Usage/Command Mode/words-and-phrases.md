@@ -10,7 +10,6 @@ Whilst in command mode, it's easy to enter a single word or phrase at a time.
 
 To enter a single word, prefix the word as follows:
 
-
 | Command        | Capitalization           | Spacing                  | Example                                                      |
 | -------------- | ------------------------ | ------------------------ | ------------------------------------------------------------ |
 | `word <word>`  | lowercase                | none                     | saying `word application` inserts `application`              |
@@ -39,10 +38,13 @@ multiple words.
 ### Interspersing Words and Voice Commands
 
 Words can be interspersed with other voice commands. For example, starting with the following line:
+
 ```
 are two classes of aliens in science fiction
 ```
+
 Saying `end colon home leap there` would transform this to:
+
 ```
 There are two classes of aliens in science fiction:
 ```
@@ -73,10 +75,9 @@ some specifically crafted to make the entry of variable names etc more efficient
 There are two classes of formatters. Prose formatters preserve hyphens and apostrophes, whilst non-prose (code) formatters strip punctuation instead, for example:
 
 | Formatter Class | Formater | Phrase                  | Inserted Text    |
-| -------------- | ----------- | ---------------------- | ---------------- |
-| Code           | hammer | `hammer how's it going` | `HowsItGoing`    |
-| Prose          | title | `title how's it going`  | `How's It Going` |
-
+| --------------- | -------- | ----------------------- | ---------------- |
+| Code            | hammer   | `hammer how's it going` | `HowsItGoing`    |
+| Prose           | title    | `title how's it going`  | `How's It Going` |
 
 ### Code Formatters
 
@@ -107,8 +108,6 @@ There are also formatters to simplify string entry:
 | `string`     | Normal         | `'one two three'` |
 
 Multiple formatters can be chained together — for example, `dubstring snake hello world` inserts "hello_world".
-
-
 
 ### Prose Formatters
 

@@ -45,12 +45,11 @@ However, if this is not wanted, then the following modifier words can be used:
 
 The following commands work on the text inserted by the previous phrase.
 
-| Command                     | Description                                                  |
-| --------------------------- | ------------------------------------------------------------ |
-| `no cap that` or `no caps that`                  | remove capitalization from the previous phrase             |
-| `cap that`                 | capitalize the first word of the previous phrase             |
-| `no space that`                 | remove the space before the previous phrase             |
-
+| Command                         | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| `no cap that` or `no caps that` | remove capitalization from the previous phrase   |
+| `cap that`                      | capitalize the first word of the previous phrase |
+| `no space that`                 | remove the space before the previous phrase      |
 
 The following commands work on the currently selected text.
 
@@ -96,16 +95,14 @@ The `press` command functions in the same way as in command mode, but in dictati
 
 ### Navigation Commands
 
-
-| Command                                 | Example                  |
-| --------------------------------------- | ------------------------------------------- |
-| `go up <number_small> (line \| lines)`           | `go up five lines` |
-| `go down <number_small> (line \| lines)`           | `go down three lines` |
-| `go left <number_small> (word \| words)`           | `go left eight words` |
-| `go right <number_small> (word \| words)`           | `go right eight words` |
-| `go line start`           |  |
-| `go line end`           |  |
-
+| Command                                   | Example                |
+| ----------------------------------------- | ---------------------- |
+| `go up <number_small> (line \| lines)`    | `go up five lines`     |
+| `go down <number_small> (line \| lines)`  | `go down three lines`  |
+| `go left <number_small> (word \| words)`  | `go left eight words`  |
+| `go right <number_small> (word \| words)` | `go right eight words` |
+| `go line start`                           |                        |
+| `go line end`                             |                        |
 
 ### Selection Commands
 
@@ -119,23 +116,21 @@ The `press` command functions in the same way as in command mode, but in dictati
 
 ### Deletion Commands
 
-| Command                                 | Example                  |
-| --------------------------------------- | ------------------------------------------- |
-| `clear left <number_small> (word \| words)`           | `clear left two words` |
-| `clear right <number_small> (word \| words)`           | `clear right two words` |
-| `clear left <number_small> (character \| characters)`           | `clear left seven characters` |
-| `clear right <number_small> (character \| characters)`           | `clear right three characters` |
-| `nope selection` or `scratch selection`           | deletes the currently selected text |
-| `nope that` or `scratch that`           | deletes the last phrase |
-
+| Command                                                | Example                             |
+| ------------------------------------------------------ | ----------------------------------- |
+| `clear left <number_small> (word \| words)`            | `clear left two words`              |
+| `clear right <number_small> (word \| words)`           | `clear right two words`             |
+| `clear left <number_small> (character \| characters)`  | `clear left seven characters`       |
+| `clear right <number_small> (character \| characters)` | `clear right three characters`      |
+| `nope selection` or `scratch selection`                | deletes the currently selected text |
+| `nope that` or `scratch that`                          | deletes the last phrase             |
 
 ### Undo/Redo
 
-| Command                               | Description                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------- |
-| `undo that`                      | performs an undo                                   |
-| `redo that`            | performs a redo |
-
+| Command     | Description      |
+| ----------- | ---------------- |
+| `undo that` | performs an undo |
+| `redo that` | performs a redo  |
 
 ## Vocabulary Customization
 
@@ -183,3 +178,4 @@ Entries included in `vocabulary.talon-list` are recognized in:
   (eg saying `proud staycation` causes Talon to insert `Staycation`)
 - within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases) 
   (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)
+
