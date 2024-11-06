@@ -169,8 +169,8 @@ Surround Selected Text With Delimiter
 
 :::info Personalization File Locations
 
-Here is information about customizing [abbreviations](/docs/Customization/Customizable%20Items/lexical-items.md#abbreviations) and
-[file extensions](/docs/Customization/Customizable%20Items/aliases.md#file-extensions), as well as [managing customizations](/docs/Customization/managing-customizations.md) in general.
+The list of abbreviations recognized are stored in the file `settings/abbreviations.csv` and can be customized.
+It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md)  prior to making changes to this file.
 
 :::
 

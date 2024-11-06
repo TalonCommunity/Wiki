@@ -181,3 +181,28 @@ Entries included in `vocabulary.talon-list` are recognized in:
   (eg saying `proud staycation` causes Talon to insert `Staycation`)
 - within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)
   (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)
+
+## Replacement Words
+
+:::warning 
+
+ronzulu: I am unclear about the purpose of `words_to_replace.csv` and how it differs to `vocabulary.talon-list`.
+The default file has the following entries:
+```
+January,january
+February,february
+April,april
+June,june
+July,july
+August,august
+September,september
+October,october
+November,november
+December,december
+```
+
+However if I delete the entries from `settings/words_to_replace.csv`, restart talon for good measure, and from dictation mode say
+any of those, the text is inserted correctly capitalized. For example when saying "I wonder what I'll be doing in December"
+the word December is correctly capitalized.
+
+:::

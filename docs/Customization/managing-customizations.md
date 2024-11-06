@@ -128,7 +128,7 @@ language: en
 
 :::info How This Works
 
-We take advantage of the way Talon determines priority - it chooses the implementation that is in the file with the most specific context header
+This takes advantage of the way Talon determines priority - it chooses the implementation that is in the file with the most specific context header
 (i.e. the one with the most rules in it).
 
 :::
@@ -150,19 +150,20 @@ the above technique will not work.
 
 You can customize common `.talon-list` and `.csv` files with voice commands. Say the phrase `customize {file_type}` where `file_type` is one of the following:
 
-- `abbreviations`,
-- `additional words`,
-- `alphabet`,
-- `homophones`,
-- `search engines`,
-- `Unix utilities`,
-- `websites` or
+- `abbreviations`
+- `additional words`
+- `alphabet`
+- `homophones`
+- `search engines`
+- `Unix utilities`
+- `websites`
 - `words to replace`
 
 These open the file in a text editor and move the insertion point to the bottom of the file so you can add to it.
 
 :::warning The Customize Command
 
-Note however that the `customize` command always modifies your local copy of the talon community user file set files.
+Note however that the `customize` command always opens your local copy of the talon community user file set files.
+It does not open your personal copy, and therefore shouldn't be used if you have the `Option B` directory structure.
 
 :::

@@ -136,6 +136,15 @@ talon
 talon
 	user
 		community
+			settings
+			settings.talon
+	talon.log
+```
+
+```
+talon
+	user
+		community
 		cursorless-talon
 		curserless-settings
 		my-talon
