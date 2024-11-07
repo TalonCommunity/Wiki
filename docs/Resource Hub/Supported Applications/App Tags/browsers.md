@@ -52,14 +52,18 @@ wikipedia: https://en.wikipedia.org/
 youtube: https://www.youtube.com/
 ```
 
-## Customizing the List
 
-Perhaps the cleanest way to customize the list, is to use the method described in
-[Overriding Existing Voice Commands and Lists](/docs/Customization/managing-customizations.md#overriding-cleanly)
+:::note
 
-## Setup
+Before changing this file, it is recommended to first read the notes on [managing customizations](/docs/Customization/managing-customizations.md#overriding-cleanly)
 
-Some of the Talon files for web apps (e.g. `apps/github/github_web.talon`) use a `browser.host` matcher. These talon files should work out of the box for Safari, Chrome, Brave, on Mac, but require additional configuration on other browsers/operating systems.
+:::
+
+## Unsupported Browsers
+
+Talon community should work out of the box for Safari, Chrome, Brave, on Mac, but require additional configuration on other browsers/operating systems.
+
+This is because some of the Talon files for web apps (e.g. `apps/github/github_web.talon`) use a `browser.host` matcher. 
 
 `community` is set up so that if a URL is found in the titlebar of an application matching the 'browser' tag it will be used to populate the browser.host matcher (see `code/browser.py`). This probably means that you will need an extension to make the browser.host based scripts work.
 

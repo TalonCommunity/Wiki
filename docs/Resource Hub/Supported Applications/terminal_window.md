@@ -13,4 +13,4 @@ tag(): user.tabs
 
 For instance, kubectl commands (kubernetes) aren't relevant to everyone.
 
-Note also that while some of the command sets associated with these tags are defined in talon files within [tags](/docs/Customization/Talon%20Framework/tags.md), others, like git, are defined within [apps](/docs/Customization/Talon%20Framework/apps.md). Commands for tabs are defined in `[tabs.talon](core/windows_and_tabs/tabs.talon)`.
+Note also that while some of the command sets associated with these tags are defined in talon files within [tags](/docs/Customization/Python%20Programming/Talon%20Framework/tags.md), others, like git, are defined within [apps](/docs/Customization/Python%20Programming/Talon%20Framework/apps.md). Commands for tabs are defined in `[tabs.talon](core/windows_and_tabs/tabs.talon)`.

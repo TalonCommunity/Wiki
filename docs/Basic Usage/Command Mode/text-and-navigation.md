@@ -118,7 +118,9 @@ Whilst in command mode, you are able to enter a single word at a time by prefixi
 | `indent` or `indent more`            | indents the current line                                                                                           |
 | `out dent` or `indent less`          | outdents the current line                                                                                          |
 
-Insert a Pair of Delimiters
+## Delimiters - Quotes and Brackets
+
+### Insert a Pair of Delimiters
 
 These commands insert a pair of delimiters and places the insertion point between them.
 
@@ -134,7 +136,7 @@ These commands insert a pair of delimiters and places the insertion point betwee
 | `inside braces`, `inside curly brackets`                          | `{` and `}` |
 | `inside percent`                                                  | `%`         |
 
-Surround Selected Text With Delimiter
+### Surround Selected Text With Delimiter
 
 | Command                                                | Delimiter   |
 | ------------------------------------------------------ | ----------- |
@@ -149,7 +151,7 @@ Surround Selected Text With Delimiter
 | `braces that`, `curly brackets that`                   | `{` and `}` |
 | `percent that`                                         | `%`         |
 
-## Abbreviations and Shortcuts
+## Multi Character Shortcuts
 
 | Command                 | Written Form                                  |
 | ----------------------- | --------------------------------------------- |
@@ -162,15 +164,22 @@ Surround Selected Text With Delimiter
 | `arrow`                 | `->`                                          |
 | `dub arrow`             | `=>`                                          |
 
+## Abbreviations
+
 | Command                            | Description                                                                                   |
 | ---------------------------------- | --------------------------------------------------------------------------------------------- |
 | `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik`     |
-| `<file_extension_spoke_in_form>`   | inserts the common form of the spoken file extension, saying `dot markdown` will insert `.md` |
 
 :::info Personalization File Locations
 
 The list of abbreviations recognized are stored in the file `settings/abbreviations.csv` and can be customized.
 It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md)  prior to making changes to this file.
+
+:::
+
+:::warning where to put this?
+
+| `<file_extension_spoke_in_form>`   | inserts the common form of the spoken file extension, saying `dot markdown` will insert `.md` |
 
 :::
 

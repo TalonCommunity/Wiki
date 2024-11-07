@@ -18,6 +18,42 @@ for use within [voice commands](./TalonScript/voice-commands.md). For all of the
 
 :::
 
+## Customizing Community Items
+
+The talon community user file set comes with default entries for various important items, such as the alphabet
+and the list of common websites.
+
+The default entries for the items listed below can all be customized.
+
+:::warning
+
+Before changing any of these files, it is recommended to first read the notes on [managing customizations](./managing-customizations.md)
+
+:::
+
+### Lexical Items
+
+| What                            | Format        | Community User File Set Location         |        |
+| ------------------------------- | ------------- | ---------------------------------------- | ------ |
+| [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)           | `.talon-list` | `/core/keys/letter.talon-list`           | Note 1 |
+| [vocabulary](/docs/Basic%20Usage/dictation_mode.md#vocabulary-customization)       | `.talon-list` | `/core/vocabulary/vocabulary.talon-list` | Note 2 |
+| [homophones](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#homophones)       | `.csv`        | `/core/homophones/homophones.csv`        | Note 3 |
+| [abbreviations](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#abbreviations) | `.csv`        | `/settings/abbreviations.csv`            | Note 4 |
+| [replacement words](/docs/Basic%20Usage/dictation_mode.md#replacement-words)              | `.csv`        | `/settings/words_to_replace.csv`         | Note 4 |
+
+
+
+
+### Aliases
+
+| What              | Format                                               | Community User File Set Location                             |        |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------ |
+| search engines    | talon lists                                          | `/core/websites_and_search_engines/search_engine.talon-list` | Note 2 |
+| [websites](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#website-list)          | talon lists    | `/core/websites_and_search_engines/website.talon-list`       | Note 2 |
+| application names | [csv](/docs/Resource%20Hub/terminology.md#csv-files) | `/core/app_switcher/app_name_overrides.<platform>.csv`       | Note 3 |
+| file extensions   | csv                                                  | `/settings/file_extensions.csv`                              | Note 4 |
+
+
 ## Notes
 
 ### Note 1

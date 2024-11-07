@@ -36,6 +36,14 @@ The Talon alphabet can be displayed at any time by saying `help alphabet`.
 
 Try saying `air bat cap` to insert abc.
 
+:::note Uppercase Letters
+
+For uppercase letters, you say the word `shift` before the word for the letter. For example, to get an uppercase `Z` you would say `shift zip`.
+
+:::
+
+### Alphabet Customization
+
 Saying letters is something that you may need to use fairly regularly, and so it should be something that is both:
 
 - recognized with a high degree of accuracy by Talon
@@ -51,9 +59,6 @@ Before changing this file, it is recommended to first read the notes on [managin
 
 :::
 
-:::note Uppercase Letters
-For uppercase letters, you say the word `shift` before the word for the letter. For example, to get an uppercase `Z` you would say `shift zip`.
-:::
 
 ## Numbers
 
