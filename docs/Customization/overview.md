@@ -33,53 +33,23 @@ Before changing any of these files, it is recommended to first read the notes on
 
 ### Lexical Items
 
-| What                            | Format        | Community User File Set Location         |        |
-| ------------------------------- | ------------- | ---------------------------------------- | ------ |
-| [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)           | `.talon-list` | `/core/keys/letter.talon-list`           | Note 1 |
-| [vocabulary](/docs/Basic%20Usage/dictation_mode.md#vocabulary-customization)       | `.talon-list` | `/core/vocabulary/vocabulary.talon-list` | Note 2 |
-| [homophones](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#homophones)       | `.csv`        | `/core/homophones/homophones.csv`        | Note 3 |
-| [abbreviations](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#abbreviations) | `.csv`        | `/settings/abbreviations.csv`            | Note 4 |
-| [replacement words](/docs/Basic%20Usage/dictation_mode.md#replacement-words)              | `.csv`        | `/settings/words_to_replace.csv`         | Note 4 |
+| What                                                                                     | Format        | Community User File Set Location         |
+| ---------------------------------------------------------------------------------------- | ------------- | ---------------------------------------- |
+| [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)       | `.talon-list` | `/core/keys/letter.talon-list`           |
+| [vocabulary](/docs/Basic%20Usage/dictation_mode.md#vocabulary-customization)             | `.talon-list` | `/core/vocabulary/vocabulary.talon-list` |
+| [homophones](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#homophones)       | `.csv`        | `/core/homophones/homophones.csv`        |
+| [abbreviations](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#abbreviations) | `.csv`        | `/settings/abbreviations.csv`            |
+| [replacement words](/docs/Basic%20Usage/dictation_mode.md#replacement-words)             | `.csv`        | `/settings/words_to_replace.csv`         |
 
 
 
 
 ### Aliases & Text Shortcuts
 
-| What              | Format                                               | Community User File Set Location                             |        |
-| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------ | ------ |
-| [search engines](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#search-engines)    | talon lists                                          | `/core/websites_and_search_engines/search_engine.talon-list` | Note 2 |
-| [websites](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#website-list)          | talon lists    | `/core/websites_and_search_engines/website.talon-list`       | Note 2 |
-| [application names](/docs/Basic%20Usage/Command%20Mode/pc-control.md#application-names) | [csv](/docs/Resource%20Hub/terminology.md#csv-files) | `/core/app_switcher/app_name_overrides.<platform>.csv`       | Note 3 |
-| [file extensions](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#file-extensions)   | csv                                                  | `/settings/file_extensions.csv`                              | Note 4 |
+| What                                                                                                  | Format                                               | Community User File Set Location                             |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| [search engines](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#search-engines) | talon lists                                          | `/core/websites_and_search_engines/search_engine.talon-list` |
+| [websites](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#website-list)         | talon lists                                          | `/core/websites_and_search_engines/website.talon-list`       |
+| [application names](/docs/Basic%20Usage/Command%20Mode/pc-control.md#application-names)               | [csv](/docs/Resource%20Hub/terminology.md#csv-files) | `/core/app_switcher/app_name_overrides.<platform>.csv`       |
+| [file extensions](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#file-extensions)               | csv                                                  | `/settings/file_extensions.csv`                              |
 
-
-## Notes
-
-### Note 1
-
-### Note 2 - `.talon-files` Under Directory `/core`
-
-### Note 3 - `.csv` Under Directory `/core`
-
-Customizations must be applied to the files within this directory.
-
-Care needs to be taken if updating to a new version of the Talon community user file set,
-as any changes you've made will be overwritten.
-
-### Note 4 - files Under Directory `/settings`
-
-Customizations must be applied to the files within this directory.
-
-Files here are not included with the user file set, and so there is no risk of losing
-customizations when updating to a new version of the user file set.
-
-All customization consists of files placed in the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).
-
-Talon itself doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
-However, there are some guidelines about [managing your customizations](./managing-customizations.md), which could make this easier long term.
-
-:::note Additional Capabilities
-
-Aside from these, additional extra capabilities may be added from time to time. For example in the [beta version](/docs/Resource%20Hub/beta_talon.md) you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
-:::
