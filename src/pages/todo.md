@@ -149,3 +149,7 @@ talon
 		curserless-settings
 		my-talon
 ```
+# Do we need to look at all of the files referenced
+
+supported_csv_files
+

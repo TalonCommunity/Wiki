@@ -5,9 +5,11 @@ The commands described here apply to all applications that are classified as a b
 
 This includes chrome, firefox, edge, safari.
 
-Note that if these commands don't work, you might find some useful info in the [setup](#) section below.
+Note that if these commands don't work, you might find some useful info in the [unsupported browsers](#unsupported-browsers) section below.
 
-## Commands
+## Basic Commands
+
+The following commands are only recognized when a browser window is active.
 
 | Command                                                | Description                                                             |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- |
@@ -15,7 +17,7 @@ Note that if these commands don't work, you might find some useful info in the [
 | `go page \| page focus`                                | places the focus within the webpage content                             |
 | `address copy \| url copy \| copy address \| copy url` | copies the content of the address bar                                   |
 | `go home`                                              |                                                                         |
-| `go to {user.website}`                                 | Navigates to the specified named website, for example `go to wikipedia` |
+| `go to {user.website}`                                 | navigates to the specified named website, for example `go to wikipedia` |
 | `go private`                                           |                                                                         |
 | `bookmark it`                                          |                                                                         |
 | `bookmark tabs`                                        |                                                                         |
@@ -29,7 +31,26 @@ Note that if these commands don't work, you might find some useful info in the [
 | `(refresh \| reload) it`                               |                                                                         |
 | `(refresh \| reload) it hard`                          |                                                                         |
 
-## Website List
+## Websites and Search Engines
+
+:::tip Globally Available
+
+These commands are recognized regardless of which application is front most.
+The default browser will be opened if not already running.
+
+:::
+
+| Command                                  | Description                                                                                                   |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `open {user.website}`                    | opens the specified named website, for example `open dropbox`                                                 |
+| `open that`                              | first select the text corresponding to the URL, and then say `open that`                                      |
+| `open paste`                             | opens the website specified by the URL on the clipboard                                                       |
+| `{user.search_engine} hunt <user.text>$` | using the specified website, search for the specified text, eg `google hunt have Romulans ever visited earth` |
+| `{user.search_engine} (that \| this)`    | using the specified website, search for the selected text                                                     |
+| `{user.search_engine} paste`             | using the specified website, search for the text on the clipboard                                             |
+
+
+### Website List
 
 The list of known websites is contained in the `core\websites_and_search_engines\website.talon-list` and includes the following entries:
 
@@ -58,6 +79,18 @@ youtube: https://www.youtube.com/
 Before changing this file, it is recommended to first read the notes on [managing customizations](/docs/Customization/managing-customizations.md#overriding-cleanly)
 
 :::
+
+### Search Engines List
+
+
+The list of known search engines is contained in the `core\websites_and_search_engines\search_engine.talon-list` and includes the following entries:
+```
+amazon: https://www.amazon.com/s/?field-keywords=%s
+google: https://www.google.com/search?q=%s
+map: https://maps.google.com/maps?q=%s
+scholar: https://scholar.google.com/scholar?q=%s
+wiki: https://en.wikipedia.org/w/index.php?search=%s
+```
 
 ## Unsupported Browsers
 
