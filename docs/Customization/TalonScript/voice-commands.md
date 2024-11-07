@@ -312,7 +312,7 @@ Some of the more useful actions are:
 - `mouse_click(0)` - Clicks the left mouse button at the cursor. `mouse_click(1)` right clicks.
 
 :::note
-See [complete action list](/docs/Customization/Python%20Programming/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
+See [complete action list](/docs/Customization/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
 :::
 
 :::info

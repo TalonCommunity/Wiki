@@ -1,3 +1,7 @@
+---
+sidebar_position: 30
+---
+
 # Managing Customizations
 
 Talon is built to be a flexible and customizable system. This means that in addition to being able to add new voice commands you can also override the behavior of existing commands reasonably easily.

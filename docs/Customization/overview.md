@@ -1,9 +1,8 @@
 ---
 sidebar_position: 1
-title: Customization Overview
 ---
 
-# Overview
+# Customization Overview
 
 Once you have successfully [set up Talon](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md)
 and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_usage.md), you may find that you would like to change some of how your Talon setup behaves.
@@ -11,11 +10,13 @@ and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_
 Talon supports customization of many of its behaviors. And although making changes does require some care and attention,
 this is intended to be achievable by users of all skill levels.
 
+## Customizable Items
+
 | Category                                           | User Skill  | Description                                                                          |
 | -------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------ |
 | [Community items](#customizing-community-items)    | All         | the talon alphabet, vocabulary, known websites etc                                   |
-| [Voice commands](../TalonScript/voice-commands.md) | All         | create new voice commands that when heard perform a set of actions                   |
-| [Settings](../settings.md)                         | All         | settings such as Talon dark mode, the mouse grid numbering orientation and many more |
+| [Voice commands](./TalonScript/voice-commands.md)  | All         | create new voice commands that when heard perform a set of actions                   |
+| [Settings](./settings.md)                          | All         | settings such as Talon dark mode, the mouse grid numbering orientation and many more |
 | Create new actions                                 | Programmers | create these building blocks that can be used within voice commands                  |
 
 

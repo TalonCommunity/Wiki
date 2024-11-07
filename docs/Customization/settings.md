@@ -1,3 +1,7 @@
+---
+sidebar_position: 35
+---
+
 # Settings
 
 Talon's behavior can be changed by changing the value of settings within a `.talon` file inside a `settings():` block.
@@ -51,6 +55,12 @@ If the same setting is defined multiple times, Talon will use the setting value 
 | user.mode_indicator_y                | 0             | Y Position for the mode indicator when it is enabled                                                                                                    |
 | user.listening_timeout_minutes       | 3             | Puts Talon into sleep mode if no commands are spoken for a defined period of time.                                                                      |
 
+:::note Python Programmers
+
+To add your own additional custom settings for changing Talon behavior, see [the settings customization page](./Python%20Programming/Talon%20Framework/custom_settings.md)
+
+:::
+
 ## Core Talon Settings
 
 | Setting         | Example Value | Description                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -62,5 +72,3 @@ If the same setting is defined multiple times, Talon will use the setting value 
 | key_wait        | 1             | Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the slowest overall keypress rate. Default is 1.0 in milliseconds.                                                                                                     |
 | speech.engine   |               | Determines which [speech engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'.                                                                                                                                                      |
 | speech.timeout  |               | This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the amount of time you can pause between saying 'phrase' and the following phrase. It is measured in seconds; the default is 0.300, i.e. 300 milliseconds. |
-
-To add your own additional custom settings for changing Talon behavior, see [the settings customization page](../Customization/Talon%20Framework/settings.md)
