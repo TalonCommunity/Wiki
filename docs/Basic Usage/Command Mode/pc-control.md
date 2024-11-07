@@ -207,7 +207,7 @@ file save all: edit.save_all()
 
 ## Customize Talon
 
-These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
+These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Files/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
 
 | Command                      | Description                                       |
 | ---------------------------- | ------------------------------------------------- |

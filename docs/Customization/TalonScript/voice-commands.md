@@ -93,13 +93,13 @@ and has been modeled after a common concept in the programming world of `regex`:
 ### Lists
 
 Using Talon's "list" functionality, it is possible to separate out simple tables of strings away from
-the voice commands in `.talon` files, and into separate [.talon-list](../talon_lists.md) files.
+the voice commands in `.talon` files, and into separate [.talon-list](../Data%20Files/talon_lists.md) files.
 
 :::
 Check if talon list files can be standalone or if they need the accompanying python file.
 :::
 
-Information for python programmers is available [here](/docs/Customization/Talon%20Framework/lists.md).
+Information for python programmers is available [here](/docs/Customization/Python%20Programming/Talon%20Framework/lists.md).
 
 ### Captures
 
@@ -312,7 +312,7 @@ Some of the more useful actions are:
 - `mouse_click(0)` - Clicks the left mouse button at the cursor. `mouse_click(1)` right clicks.
 
 :::note
-See [complete action list](/docs/Resource%20Hub/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
+See [complete action list](/docs/Customization/Python%20Programming/Talon%20Library%20Reference/Actions/list-all-actions.md) to obtain the complete list.
 :::
 
 :::info
