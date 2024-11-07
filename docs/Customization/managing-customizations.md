@@ -164,6 +164,6 @@ These open the file in a text editor and move the insertion point to the bottom 
 :::warning The Customize Command
 
 Note however that the `customize` command always opens your local copy of the talon community user file set files.
-It does not open your personal copy, and therefore shouldn't be used if you have the `Option B` directory structure.
+It does not open your personal copy, and therefore should not be used if you have the `Option B` directory structure.
 
 :::

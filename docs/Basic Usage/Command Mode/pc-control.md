@@ -11,36 +11,19 @@ See also [help](/docs/Help/help-commands.md) for displaying information using Ta
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only)      |
 | `window close`      | closes the currently active window                                                                                  |
 
-:::warning move the customization info to separate place
+Sample output from the `running list` command  shows:
+- the application name of each running application
+- the spoken form needed when using the `focus` or `launch` commands:
 
-:::
-
-Sample output from the `running list` command:
-<img src="/img/running_list.png/"
-     alt="screenshot of the output of the running list command"
- />
-
-### Spoken Forms of Application Names
-
-In the above screenshot we see that there are many different automatically generated permutations of the spoken form of `Windows PowerShell ISE`.
-You can say `focus` followed by any of those spoken forms, and Talon will activate powershell.
-
-<img src="/img/running_list_annotated.png/"
-     alt="screenshot of the output of the running list command with some annotation"
-/>
-
-To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
-
-For example, the list of entries in the running list for `Windows PowerShell ISE` can be simplified by updating `app_name_overrides.windows.csv` and adding:
-
-```
-powershell, Windows PowerShell ISE
-```
-
-Now the running list only shows a single entry for Windows PowerShell ISE:
-<img src="/img/running_list2.png/"
+<img src="/img/running_list3_annotated.png/"
      alt="screenshot of the output of the running list command"
 />
+
+The spoken forms of application names can be [customized](#application-names). By default, the output from `running list`
+might be quite messy, with many alternative spoken forms being displayed for some applications.
+
+Customization can be used to enable tidier output, by specifying spoken forms of your choosing.
+
 
 ## Screenshot commands
 
@@ -222,3 +205,26 @@ These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Fil
 | ----------------- | -------------------------------- |
 | `command history` | show the command history         |
 | `talon open log`  | open the talon log for debugging |
+
+
+## Application Names
+
+In the screenshot below we see that there are many different automatically generated permutations of the spoken form of `Windows PowerShell ISE`.
+You can say `focus` followed by any of those spoken forms, and Talon will activate powershell.
+
+<img src="/img/running_list_annotated.png/"
+     alt="screenshot of the output of the running list command with some annotation"
+/>
+
+To customize the spoken forms for an app (or hide an app entirely from the list), edit the `app_name_overrides_<platform>.csv` files in the `core/app_switcher` directory.
+
+For example, the list of entries in the running list for `Windows PowerShell ISE` can be simplified by updating `app_name_overrides.windows.csv` and adding:
+
+```
+powershell, Windows PowerShell ISE
+```
+
+Now the running list only shows a single entry for Windows PowerShell ISE:
+<img src="/img/running_list2.png/"
+     alt="screenshot of the output of the running list command"
+/>
