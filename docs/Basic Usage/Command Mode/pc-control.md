@@ -1,3 +1,7 @@
+---
+sidebar_position: 30
+---
+
 # General PC Control
 
 See also [help](/docs/Help/help-commands.md) for displaying information using Talon's inbuilt help system.
@@ -183,10 +187,22 @@ There are a few [alternatives](/docs/Integrations/integrations.md#mouse-alternat
 
 :::
 
+## Zoom
+
+Within certain applications, such as `vscode`, document zooming can be controlled with the following commands:
+
+| Command      | Description                       |
+| ------------ | --------------------------------- |
+| `zoom in`    | zoom in                           |
+| `zoom out`   | zoom out                          |
+| `zoom reset` | reset magnification level to 100% |
+
 # Save
 
-file save: edit.save()
-file save all: edit.save_all()
+| Command      |
+| ------------ |
+| file save |
+| file save all |
 
 ## Customize Talon
 

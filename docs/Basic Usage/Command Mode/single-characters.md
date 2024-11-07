@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3.2
+sidebar_position: 5
 ---
 
 # Letters, Numbers & Symbols
