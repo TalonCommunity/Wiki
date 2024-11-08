@@ -1,10 +1,14 @@
 # Context Header
 
-The context header of a [talon file](./talon-files.md) specifies when the body of the file will be activated. That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
+The context header of a [talon file](./talon-files.md) specifies when the body of the file will be activated. 
 
-The following requirements can be set:
+That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
 
-| Matcher         | Description                                                                                                                                                                         |
+The end of the context however is signified by a line comprising a single hyphen.
+
+The following requirements can be specified:
+
+| Requirement Type | Description                                                                                                                                                                         |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `os`            | require specific operating systems; currently either `linux`, `mac`, or `windows`                                                                                                   |
 | `tag`           | require a specific tag                                                                                                                                                              |
@@ -17,6 +21,60 @@ The following requirements can be set:
 | `code.language` | specify a currently active programming language                                                                                                                                     |
 | `language`      | specify the particular human language (e.g. `pt_BR`, `en`) for the file. Defaults to `en` if not specified. Currently only needed for multilingual webspeech.                       |
 | `hostname`      | match the 'hostname' of your machine (from the `hostname` CLI command on Linux/Mac). Useful if you want to have a single set of custom config but have some machine-specific parts. |
+
+## Header Line Syntax
+
+Each individual header line has the format:
+```
+[and] [not] (<requirement-type | <scope-name>): (<literal-match-value> | <regex-spec>)
+```
+
+Where:
+
+| Item                                       | Description                                                                                          |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `and`                                      | optional, described in the section below                                                             |
+| `not`                                      | optional, described in the section below                                                             |
+| `(<requirement> \| <scope name>)`          | either `<requirement type>` or `<scope name>`                                                        |
+| `<requirement-type>`                       | where the requirement type is one of those listed in the table, such as `os`                         |
+| `<scope-name>`                             | scope name described below                                                                           |
+| `(<literal-match-value> \| /<regex-spec>)` | either `<literal-match-value>` or `<regex-spec>`                                                     |
+| `<literal-match-value>`                    | a literal string (not surrounded by quotes)                                                          |
+| `<regex-spec>`                             | `/<regex-match-value>/<python-regex-flags>` (with the `/` being the standard python regex delimiter) |
+| `<regex-match-value>`                      | standard python regex string                                                                         |
+| `<python-regex-flags>`                     | optional python regex flags                                                                          |
+
+
+Examples:
+
+
+| Item                                       | Description                                                                                          |
+| ------------------| ---------------------------------------------------------------------------------------------------- |
+| `title: foo`     | the window title must literally be `foo`                                                      |
+| `title: /foo/i`  | the window title must match the regular expression `/foo/i`, ie contain the string `foo` (the `i` flag specifying a case insensitive match) |
+
+:::
+
+:::info Advanced: Scopes
+
+Additionally, you can create user `scope`s. `scope`s allow matching on additional arbitrary string information supplied by user scripts. For example you might write a `scope` called `slack_workspace_name`. You'd then be able to make `.talon` files that only matched a particular Slack workspace by putting a line like 'user.slack_workspace_name: Talon' in the header. See [the scope concept section](../Python%20Programming/Talon%20Framework/scopes.md) below for more information.
+
+:::
+
+### Regular Expressions
+
+Even simple regular expressions can look intimidating if you are not familiar with them.
+
+If you need precise control over what strings should be considered a match, 
+it is likely that a regular expression could be defined that would match in the manner you require.
+
+If you think that you may need to use a regular expression, but don't know where to start, a resource such as
+[Learn RegEx with Real Life Examples](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/)  may be helpful.
+
+Otherwise reach out on [talon slack](/docs/Help/talon-slack.md).
+
+The regular expression engine essentially uses the Python `re.search()` function to see if the value of the requirement or scope matches. For requirement types that have multiple values (tag and mode), Talon iterates through each active tag or mode and matches the header line if any of those match the regex or string literal.
+
 
 ## Multiple conditions
 
@@ -55,6 +113,10 @@ The `not` modifier just negates the condition.
 app: paint_app
 not os: windows
 ```
+
+## Empty Context Header
+
+The context header is optional. If it is not included then the file is always active (all operating systems, within all applications etc). 
 
 ## Examples
 
