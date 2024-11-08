@@ -16,8 +16,8 @@ this is intended to be achievable by users of all skill levels.
 | -------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------ |
 | [Community items](#customizing-community-items)    | All         | the talon alphabet, vocabulary, known websites etc                                   |
 | [Voice commands](./TalonScript/voice-commands.md)  | All         | create new voice commands that when heard perform a set of actions                   |
-| [Settings](./settings.md)                          | All         | settings such as Talon dark mode, the mouse grid numbering orientation and many more |
-| Create new actions                                 | Programmers | create these building blocks that can be used within voice commands                  |
+| [Settings](./settings.md)                          | All         | settings such as Talon dark mode, the mouse grid numbering orientation etc |
+| [Create new actions in Python](./Python%20Programming/index.md)  | Programmers | create these building blocks that can be used within voice commands                  |
 
 
 :::info Creating New Talon Actions
