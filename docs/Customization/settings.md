@@ -72,3 +72,11 @@ To add your own additional custom settings for changing Talon behavior, see [the
 | key_wait        | 1             | Increase this if modifier keys are getting dropped or if key presses are misbehaving even with the other two settings (`insert_wait` and `key_hold`) tuned. `key_wait` should be the last resort because it results in the slowest overall keypress rate. Default is 1.0 in milliseconds.                                                                                                     |
 | speech.engine   |               | Determines which [speech engine](/docs/Resource%20Hub/Speech%20Recognition/speech%20engines.md) talon uses to recognize input. This is useful for configuring dictation mode to use a different speech engine; for example, 'webspeech'.                                                                                                                                                      |
 | speech.timeout  |               | This determines how long a pause Talon waits for before deciding you've finished speaking and interpreting what you've just said as a sequence of commands. This parameter is generally very important; for example, it determines the amount of time you can pause between saying 'phrase' and the following phrase. It is measured in seconds; the default is 0.300, i.e. 300 milliseconds. |
+
+## Complete List of Settings
+
+You can paste the following code into the [REPL](/docs/Resource%20Hub/Troubleshooting/debugging.md#REPL) to see a full list of available settings: 
+
+```
+settings.list()
+```

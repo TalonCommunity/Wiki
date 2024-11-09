@@ -41,7 +41,7 @@ You may wish to become familiar with the log file now that the most basic TalonS
 
 ## Voice commands defined
 
-The general structure of a [TalonScript file](./talon-script.md) consists of an optional context header, and the file body
+The general structure of a [TalonScript file](./index.md) consists of an optional context header, and the file body
 (Separated by a `-` line if the context header is present).
 
 The file body consists of one or more voice commands, each with the format `RULE: BODY`, where:
@@ -298,7 +298,7 @@ settings():
     another.setting = 432
 ```
 
-### Actions
+## Actions
 
 You might have noticed that we've been using the `key()` and `insert()` actions in the example files so far.
 
@@ -319,3 +319,16 @@ See [complete action list](/docs/Customization/Talon%20Library%20Reference/Actio
 Some of the actions come with the [Base Talon Installation](/docs/Resource%20Hub/terminology.md#base-talon-installation),
 and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set).
 :::
+
+### Multiple Actions
+
+A single command can perform a sequence of actions.
+
+```
+insert code fragment:
+    insert("``````")
+    key(left left left)
+    # the number of times the key should be pressed can be specified after a colon
+    key(shift-enter:2)
+    key(up)
+```

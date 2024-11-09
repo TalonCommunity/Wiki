@@ -1,12 +1,19 @@
 # Context Header
 
-The context header of a [talon file](./talon-files.md) specifies when the body of the file will be activated. 
+The context header of a [talon file](../TalonScript/index.md#talon-file-syntax) specifies when the body of the file will be activated. 
 
 That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
 
-The end of the context however is signified by a line comprising a single hyphen.
+Some simple examples are:
+- `os: mac`
+- `code.language: csharp`
+- `mode: dictation`
 
-The following requirements can be specified:
+The end of the context however is signified by a line comprising a single hyphen: `-`.
+
+## Requirement Types
+
+The following requirement types can be specified:
 
 | Requirement Type | Description                                                                                                                                                                         |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +31,9 @@ The following requirements can be specified:
 
 ## Header Line Syntax
 
-Each individual header line has the format:
+As per the example above, often a context header line can be quite simple - eg `os: mac`.
+
+To support more complex context criteria, each individual header line has the format:
 ```
 [and] [not] (<requirement-type | <scope-name>): (<literal-match-value> | <regex-spec>)
 ```
@@ -36,8 +45,8 @@ Where:
 | `and`                                      | optional, described in the section below                                                             |
 | `not`                                      | optional, described in the section below                                                             |
 | `(<requirement> \| <scope name>)`          | either `<requirement type>` or `<scope name>`                                                        |
-| `<requirement-type>`                       | where the requirement type is one of those listed in the table, such as `os`                         |
-| `<scope-name>`                             | scope name described below                                                                           |
+| `<requirement-type>`                       | where the requirement type is one of those listed in the above table, such as `os`                   |
+| `<scope-name>`                             | scope name, described below                                                                          |
 | `(<literal-match-value> \| /<regex-spec>)` | either `<literal-match-value>` or `<regex-spec>`                                                     |
 | `<literal-match-value>`                    | a literal string (not surrounded by quotes)                                                          |
 | `<regex-spec>`                             | `/<regex-match-value>/<python-regex-flags>` (with the `/` being the standard python regex delimiter) |

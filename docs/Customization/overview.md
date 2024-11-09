@@ -7,8 +7,8 @@ sidebar_position: 1
 Once you have successfully [set up Talon](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md)
 and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_usage.md), you may find that you would like to change some of how your Talon setup behaves.
 
-Talon supports customization of many of its behaviors. And although making changes does require some care and attention,
-this is intended to be achievable by users of all skill levels.
+Talon supports customization of many of its behaviors. It is intended that most types of changes can be made
+by users of all skill levels.
 
 ## Customizable Items
 
@@ -17,15 +17,9 @@ this is intended to be achievable by users of all skill levels.
 | [Community items](#customizing-community-items)    | All         | the talon alphabet, vocabulary, known websites etc                                   |
 | [Voice commands](./TalonScript/voice-commands.md)  | All         | create new voice commands that when heard perform a set of actions                   |
 | [Settings](./settings.md)                          | All         | settings such as Talon dark mode, the mouse grid numbering orientation etc |
-| [Create new actions in Python](./Python%20Programming/index.md)  | Programmers | create these building blocks that can be used within voice commands                  |
+| [Create new actions in Python](./Python%20Programming/index.md)  | Programmers | create building blocks that can be used within voice commands                  |
 
 
-:::info Creating New Talon Actions
-
-One area does require Python programming expertise, and that is in order to create new [talon actions](/docs/Resource%20Hub/terminology.md#talon-actions)
-for use within [voice commands](./TalonScript/voice-commands.md). For all of the other customization cases shown above, this is not required.
-
-:::
 
 ## Customizing Community Items
 
