@@ -151,5 +151,44 @@ talon
 ```
 # Do we need to look at all of the files referenced
 
-supported_csv_files
+supported_csv_files = [
+    CSVData(
+        "user.git_argument",
+        os.path.join("apps", "git", "git_arguments.csv"),
+        os.path.join("apps", "git", "git_argument.talon-list"),
+    ),
+    CSVData(
+        "user.git_command",
+        os.path.join("apps", "git", "git_commands.csv"),
+        os.path.join("apps", "git", "git_command.talon-list"),
+    ),
+    CSVData(
+        "user.unix_utility",
+        os.path.join("settings", "unix_utilities.csv"),
+        os.path.join("tags", "terminal", "unix_utility.talon-list"),
+    ),
+    CSVData(
+        "user.emoji",
+        os.path.join("tags", "emoji", "emoji.csv"),
+        os.path.join("tags", "emoji", "emoji.talon-list"),
+        is_first_line_header=False,
+        is_spoken_form_first=True,
+    ),
+    CSVData(
+        "user.emoticon",
+        os.path.join("tags", "emoji", "emoticon.csv"),
+        os.path.join("tags", "emoji", "emoticon.talon-list"),
+        is_first_line_header=False,
+        is_spoken_form_first=True,
+    ),
+    CSVData(
+        "user.kaomoji",
+        os.path.join("tags", "emoji", "kaomoji.csv"),
+        os.path.join("tags", "emoji", "kaomoji.talon-list"),
+        is_first_line_header=False,
+        is_spoken_form_first=True,
+    ),
+]
+
+
 

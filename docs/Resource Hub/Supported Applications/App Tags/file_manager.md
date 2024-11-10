@@ -81,6 +81,19 @@ Otherwise, they are set as subdirectories of the user folder
 
 :::
 
+### Customizing the System Path List
+
+The list of system paths known to talon is kept in the file `/core/system_paths-{hostname}.talon-list`.
+
+This can be updated to include your frequently used directories, so that it can be used with the `go <user.system_path>` voice command.
+
+:::note
+
+Before changing this file, it is recommended to first read the notes on [managing customizations](/docs/Customization/managing-customizations.md#overriding-cleanly)
+
+:::
+
+
 ## System Setup
 
 For the file manager commands described in this section to work, your file manager must display the full folder path in the title bar. tags/file_manager/file_manager.talon
