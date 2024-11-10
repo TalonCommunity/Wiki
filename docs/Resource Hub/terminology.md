@@ -4,19 +4,47 @@ sidebar_position: 60
 
 # Terminology
 
-## Base Talon Installation
-
 ## Beta Version
+
+See [Talon beta version](./beta_talon.md).
 
 ## Cognitive Load
 
+In the context of using talon, "cognitive load" could be thought of as the additional brainpower
+required by the user on top of what would be needed if just using a keyboard.
+
+For example, if a programmer wanted to write the following in a C# file:
+```
+class TempStorage
+```
+
+For someone new to talon, there could be fair cognitive load whilst working out what to say, for example:
+- Should I say `word class space`, `trot class`, or the talon programming related command `state class`?
+- How do I write `Temp` with the correct capitalization? Should I first add it to my vocabulary? Or should I just spell it letter by letter?
+- Maybe I'll just say it letter by letter... `shift trap`, `edge made pit`
+- And finally `hammer storage`
+- (need a little rest now)
+
+And this becomes quite easy for an experienced user that has already added `temp` to the vocabulary:
+- `state class hammer t e m p storage`
+
 ## Community
+
+Depending on context:
+- The [talon community user file set](#talon-community-user-file-set)
+- The group of users that support [talon on slack](../Help/talon-slack.md)
 
 ## CSV Files
 
+Files with a `.csv` extension store data in a text format with "[Common Separated Values](/docs/Customization/Data%20Files/csv_files.md)". 
+
 ## imgui
 
+The name of the simple GUI system used by talon.
+
 ## Personal Talon Directory
+
+
 
 ## Settings Directory
 

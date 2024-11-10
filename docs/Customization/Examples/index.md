@@ -1,4 +1,4 @@
-# Customization Examples
+# Examples
 
 ## TalonScript Examples
 

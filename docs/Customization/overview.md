@@ -19,7 +19,11 @@ by users of all skill levels.
 | [Settings](./settings.md)                          | All         | settings such as Talon dark mode, the mouse grid numbering orientation etc |
 | [Create new actions in Python](./Python%20Programming/index.md)  | Programmers | create building blocks that can be used within voice commands                  |
 
+:::tip Examples
 
+Here are some [customization examples](./Examples/index.md)
+
+:::
 
 ## Customizing Community Items
 

@@ -316,8 +316,10 @@ See [complete action list](/docs/Customization/Talon%20Library%20Reference/Actio
 :::
 
 :::info
-Some of the actions come with the [Base Talon Installation](/docs/Resource%20Hub/terminology.md#base-talon-installation),
+
+Some of the actions come with the [talon platform](/docs/Resource%20Hub/terminology.md#talon-platform),
 and others are defined in the `.py` files that come with the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md#talon-community-user-file-set).
+
 :::
 
 ### Multiple Actions

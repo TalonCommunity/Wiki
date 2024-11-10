@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # `.talon-list` Files
 
 `.talon-list` files define lists of strings that can be used in voice commands (as well as Talon Python scripts).

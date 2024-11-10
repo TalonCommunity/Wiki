@@ -8,7 +8,7 @@ There are a number of ways of [customizing talon](../overview.md). A key method 
 
 | Area                                                                 | Description                                                                                                                                                                                         |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) for existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. |
+| [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) that makes use of existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. |
 | [Settings](../settings.md)                                           | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme.                                                                                         |
 | [Tags](tag-activation.md)                                            | Activate [tags](tag-activation.md)                                                                                                                                                                  |
 | [keyboard shortcuts](customize-kbd-shortcut.md)                      | Customize [keyboard shortcuts](customize-kbd-shortcut.md)                                                                                                                                           |
@@ -33,8 +33,10 @@ TalonScript `.talon` files consist of two parts:
 
 2. A body that implements various behaviors within that context. 
 
-As listed above, these can be to define [voice commands](./voice-commands.md), define [keyboard shortcuts](./customize-kbd-shortcut.md), 
+The body is where you can define [voice commands](./voice-commands.md) and [keyboard shortcuts](./customize-kbd-shortcut.md), 
 [activate registered tags](./tag-activation.md) and [change settings](../settings.md).
+
+A line with a single hyphen `-` separates the context header from the body.
 
 :::info Comments
 
@@ -42,7 +44,9 @@ As listed above, these can be to define [voice commands](./voice-commands.md), d
 
 :::
 
-Talon files look something like this:
+Here is a sample `.talon` file. The context header specifies that the body should only be considered active if the window's title contains the text `Gmail`.
+
+And the body defines three separate voice commands - `find on page`, `reload page` and `insert bold text`.
 
 ```talon
 title: /Gmail/
@@ -60,20 +64,13 @@ insert bold text:
     key(ctrl-b)
 ```
 
-The part above the '-' line is called the [context header](./context-header.md) and the part below is the [body](#body). The context header specifies under what circumstances the rest of the file will be active. The body defines voice commands and other behaviour.
-
-### Context header
-
-The [context header](./context-header.md) defines when the rest of the file will be active.
-
-In this example our context header says that the file is only active when the word 'Gmail' is in the window title. The context header is optional; if it is not included (as in our simple_test.talon example) then the file is always active.
-
 ### Body
 
 The body can have several kinds of content. Most often you'll be defining voice commands, so that's all we'll talk about here.
 
 Voice commands start with the actual words you want to speak followed by a ':' character. They then list out all the actions you want to perform as a result of that command. If you only want to perform a single action then you can put it on a single line as in the first 'find on page' command. If you have more than one action you must put each action on its own line. The actions associated with a command must be indented with spaces, but it doesn't matter how many you use. Separate voice commands with one or more blank lines.
 
-## Recipes
+## Examples
 
-If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. This section contains a recipe list of some common/instructive customizations you might like to make.
+If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. 
+This section contains a recipe list of some common/instructive customizations you might like to make.
