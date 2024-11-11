@@ -1,0 +1,36 @@
+https://tree.nathanfriend.com
+
+```
+talon
+	user
+		community
+			core
+				homophones
+					homophones.csv
+				app_switcher
+					app_name_overrides.linux.csv
+					app_name_overrides.mac.csv
+					app_name_overrides.windows.csv
+			settings
+				abbreviations.csv
+				file_extensions.csv
+				words_to_replace.csv
+```
+
+```
+talon
+	user
+		community
+			settings
+			settings.talon
+	talon.log
+```
+
+```
+talon
+	user
+		community
+		cursorless-talon
+		curserless-settings
+		my-talon
+```

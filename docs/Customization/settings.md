@@ -75,7 +75,7 @@ To add your own additional custom settings for changing Talon behavior, see [the
 
 ## Complete List of Settings
 
-You can paste the following code into the [REPL](/docs/Resource%20Hub/Troubleshooting/debugging.md#REPL) to see a full list of available settings: 
+You can paste the following code into the [REPL](/docs/Resource%20Hub/Troubleshooting/debugging.md#repl) to see a full list of available settings: 
 
 ```
 settings.list()

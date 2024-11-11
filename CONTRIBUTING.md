@@ -10,7 +10,28 @@ Join the [Talon Slack](https://talonvoice.com/chat) to find other folks interest
 
 This wiki belongs to the Talon Community, and contributions are welcome from anyone.
 
-## Build and view changes locally
+## Build Notes
+
+### Generating Images for Diagrams
+
+Diagrams are stored in `.graphml` files that were created using
+https://www.yworks.com/yed-live
+
+These files are stored within this repository for easy access under the `src/diagrams` directory.
+
+`.graphml` files can be uploaded to yed-live for free, and also modified and converted to an image file for free.
+
+As with all images, these are stored under the `static/img` directory.
+
+### Generating Directory Structure Diagrams
+
+The source for directory structure diagrams are also kept in the `src/diagrams` directory.
+
+These are simple text files that are made pretty by using the `https://tree.nathanfriend.com` website.
+
+This is how the diagrams in [Talon Directory Structure](/docs/Resource%20Hub/terminology.md) were generated.
+
+### Build and view changes locally
 
 Install `npm` then run the following
 

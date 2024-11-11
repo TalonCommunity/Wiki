@@ -29,7 +29,7 @@ might be quite messy, with many alternative spoken forms being displayed for som
 Customization can be used to enable tidier output, by specifying spoken forms of your choosing.
 
 
-## Screenshot commands
+## Screens and Screenshots
 
 Screenshots are either saved to a file or copied to the clipboard (`grab` commands that end in the word `clip`).
 
@@ -53,6 +53,14 @@ It's options will determine where screenshots are saved.
 | `grab window clip`                | clipboard                               |
 | `grab selection clip`             | clipboard                               |
 | `grab settings`                   | Mac only                                |
+
+In a couple of the above commands, the screen number is required, which can be found by using the following command:
+
+| Command                           | Description                             |
+| --------------------------------- | --------------------------------------- |
+| `screen numbers`                  | briefly shows a big number on each screen with its screen number   |
+
+
 
 ## Working with tabs
 

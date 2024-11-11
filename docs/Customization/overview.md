@@ -44,8 +44,8 @@ Before changing any of these files, it is recommended to first read the notes on
 | ---------------------------------------------------------------------------------------- | ------------- | ---------------------------------------- |
 | [alphabet](/docs/Basic%20Usage/Command%20Mode/single-characters.md#talon-alphabet)       | `.talon-list` | `/core/keys/letter.talon-list`           |
 | [vocabulary](/docs/Basic%20Usage/dictation_mode.md#vocabulary-customization)             | `.talon-list` | `/core/vocabulary/vocabulary.talon-list` |
-| [homophones](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#homophones)       | `.csv`        | `/core/homophones/homophones.csv`        |
-| [abbreviations](/docs/Basic%20Usage/Command%20Mode/text-and-navigation.md#abbreviations) | `.csv`        | `/settings/abbreviations.csv`            |
+| [homophones](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#homophones)       | `.csv`        | `/core/homophones/homophones.csv`        |
+| [abbreviations](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#abbreviations) | `.csv`        | `/settings/abbreviations.csv`            |
 | [replacement words](/docs/Basic%20Usage/dictation_mode.md#replacement-words)             | `.csv`        | `/settings/words_to_replace.csv`         |
 
 
@@ -55,7 +55,7 @@ Before changing any of these files, it is recommended to first read the notes on
 
 | What                                                                                                  | Format                                               | Community User File Set Location                             |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| [search engines](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#search-engines) | `.talon-list`                                          | `/core/websites_and_search_engines/search_engine.talon-list` |
+| [search engines](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#search-engines-list) | `.talon-list`                                          | `/core/websites_and_search_engines/search_engine.talon-list` |
 | [websites](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#website-list)         | `.talon-list`                                          | `/core/websites_and_search_engines/website.talon-list`       |
 | [application names](/docs/Basic%20Usage/Command%20Mode/pc-control.md#application-names)               | `.csv` | `/core/app_switcher/app_name_overrides.<platform>.csv`       |
 | [file extensions](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#file-extensions)               | `.csv`               | `/settings/file_extensions.csv`                              |
