@@ -24,7 +24,7 @@ The extensions recognized by talon are listed for each [programming language](pr
 
 The current language is shown in the output of the [help scope](/docs/Help/help-commands.md#help-scope) command.
 
-It can also be optionally shown by the [Talon HUD](/docs/Integrations/Details/talon-hud.md) integration.
+It can also be optionally shown by the [Talon HUD](/docs/Integrations/user-interface.md#talon-hud-heads-up-display) integration.
 
 <img src="/img/talon_hud_cs.png/"
      alt="diagram showing the talon hud integration whilst ay sea sharp file is being edited"

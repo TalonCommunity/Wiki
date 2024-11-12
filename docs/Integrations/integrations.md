@@ -31,20 +31,22 @@ It's the same idea.
 | Category                                                     | Description                                                                                                                 |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | [browser navigation](./browser-navigation.md) | Utilities for controlling browsers by voice, such as clicking on links |
-| [programming and text editing](./coding-and-editing.md) | Utilities for accelerating programming by voice, support for multiple clipboards |
+| [programming and text editing](./coding-and-editing.md) | Utilities for accelerating programming by voice, support for multiple clipboards etc |
 | [mouse alternatives](./mouse-alternatives.md) | Alternatives to the builtin voice commands for mouse positioning and button clicking |
-| [os navigation](./os-navigation-software.md) | 
+| [command and macro builders](./talon-customization-helpers.md) | Utilities for building voice commands |
+| [user interface](./user-interface.md) | Utilities for showing talon status, controlling talon as well as commands for window placement |
 
-## Talon Control
+## Miscellaneous
 
-| Software                                           | Cost | Platform | Description                                                |
-| -------------------------------------------------- | ---- | -------- | ---------------------------------------------------------- |
-| [Parrot](https://github.com/chaosparrot/parrot.py) |      |          | Control Talon with noises and clicks (requires Talon beta) |
 
-- [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4) A basic script for writing subtitles to a file for a screencapture.
-- [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
-- [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) Another cheatsheet generator which can output HTML or PDF.
-- [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
+
+| Software                                           | Description                                                |
+| -------------------------------------------------- | ---------------------------------------------------------- |
+| [Parrot](https://github.com/chaosparrot/parrot.py) | Control Talon with noises and clicks (requires Talon beta) |
+| [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4) | A basic script for writing subtitles to a file for a screencapture. |
+| [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) | How to generate a cheatsheet for your own repository |
+| [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) | Another cheatsheet generator which can output HTML or PDF. |
+| [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) | allows you to spell out letters using morse code and the hissing noise. |
 
 
 ## Comprehensive List

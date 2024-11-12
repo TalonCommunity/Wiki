@@ -1,7 +1,8 @@
 # Command builders and macros
 
-Talon user sets that allow you to build voice commands more easily or define commands in a quick ad-hoc way. 
-The Talon Community has an ephemeral [macro system](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#macro-recorder) built in, but these user file sets extend that further.
+The Talon Community has a basic ephemeral [macro system](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#macro-recorder) built in.
+
+These user file sets extend that further, and allow you to build voice commands with specific talon functionality. 
 
 | Software                                                        | Description                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
