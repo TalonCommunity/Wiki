@@ -152,7 +152,7 @@ Talon emits debug information to a log file in your Talon home directory, Window
 
 ## TODO
 
-:::note TODO
+:::docotodo
 
 Incorporate the following suggestions from https://github.com/TalonCommunity/Wiki/pull/312#issuecomment-2453041850
 
@@ -165,7 +165,7 @@ Probably the piece that I think is most important to include is a standard list 
 - Note that Talon is more sensitive to microphone volume/gain than other speech recognition systems and that many apps, particularly conferencing apps like Zoom, will adjust the system microphone gain themselves, which can cause your recognition performance to tank when you're not expecting it — usually there is a setting to turn this off but it may take some time to track down all the apps that do it.
 - Explain the general behavior of how Talon chops up audio into utterances, both the benefits (reduced CPU consumption, command chaining) and the downsides (if the voice activity detector doesn't work in your case it will seem like Talon is not responding at all)
 
-:::note TODO
+:::docotodo
 
 Is at worth considering consolidating some of the suggestions on this page together with
 [improving accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md).

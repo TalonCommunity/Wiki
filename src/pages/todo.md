@@ -26,6 +26,10 @@ Check the original version of that file as I deleted some of those references be
 
 # core
 
+:::docotodo
+
+:::
+
 This folder contains `edit_settings.talon`, which has a command to open various [settings](https://github.com/talonhub/community?tab=readme-ov-file#settings) files. As an overview of what commands the subfolders contain:
 
 - `text` has commands for inserting and reformatting text

@@ -1,6 +1,6 @@
 # Snippets
 
-:::note Feedback Sought
+:::docofeedback
 
 ronzulu: I haven't really explored snippets myself.
 

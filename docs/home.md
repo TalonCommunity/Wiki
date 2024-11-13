@@ -1,6 +1,6 @@
 # Home
 
-:::note
+:::docofeedback
 
 ronzulu: I don't think that everyone would automatically know that there was useful information only accessible
 through the Talon icon.
@@ -12,20 +12,8 @@ As that page contains links to the main areas of the wiki there is no need for a
 
 :::
 
-:::note todo
-
-Make the `home` item on the main menu point to the landing page
-
-:::
-
 :::docotodo
 
-It works!
-
-:::
-
-:::docofeedback
-
-Feedback requested
+Make the `home` item on the main menu point to the landing page
 
 :::
