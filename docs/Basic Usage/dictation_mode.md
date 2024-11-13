@@ -182,6 +182,15 @@ Entries included in `vocabulary.talon-list` are recognized in:
 - within a [phrase](/docs/Basic%20Usage/Command%20Mode/words-and-phrases.md#saying-phrases)
   (eg saying `say where is wool lara` causes Talon to insert `where is Woollahra`)
 
+:::docotodo
+
+There seems to be commands from here that still need to be documented:
+`core\vocabulary\edit_vocabulary.talon`
+
+for example `copy to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "")`
+
+:::
+
 ## Replacement Words
 
 :::docofeedback 

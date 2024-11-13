@@ -6,18 +6,14 @@ sidebar_position: 1
 
 All applications on your PC can be controlled using speech when running talon.
 This is done by using the general mechanisms described under [command mode](/docs/Basic%20Usage/Command%20Mode/command_mode.md),
-as well as perhaps [dictation mode](/docs/Basic%20Usage/dictation_mode.md) if useful.
+as well as [dictation mode](/docs/Basic%20Usage/dictation_mode.md) if useful.
 
-Additionally, Talon has support for certain specific popular applications.
+Additionally, Talon has support for certain [specific popular applications](./Apps/index.md).
 This can make it easier and more efficient to operate them by voice.
 
 For example, within firefox you could initiate a page reload by moving the cursor to over the reload icon and saying touch
-or remembering and saying `control r`. But as firefox is a supported application, then
+or remembering and saying the keyboard shortcut `control r`. But as firefox is a supported application, then
 you can simply say `reload it`, and talon will send the application a `control r` keypress.
-
-##
-
-- The apps folder has command sets for use within different applications
 
 ## Application Tags
 
@@ -32,3 +28,9 @@ is running.
 | -------------------------------------------- | ----------------------------------------------- |
 | [browser](./App%20Tags/browsers.md)          | browsers, such as firefox, chrome, edge, safari |
 | [file manager](./App%20Tags/file_manager.md) | example windows explorer and the mac finder     |
+
+:::docotodo
+
+Complete with all commands from under the tags directory
+
+:::

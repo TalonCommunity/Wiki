@@ -28,19 +28,9 @@ Check the original version of that file as I deleted some of those references be
 
 :::docotodo
 
-:::
+Look at all of the files referenced
 
-This folder contains `edit_settings.talon`, which has a command to open various [settings](https://github.com/talonhub/community?tab=readme-ov-file#settings) files. As an overview of what commands the subfolders contain:
-
-- `text` has commands for inserting and reformatting text
-- `vocabulary` has commands for adding new words to be recognized and for having certain words automatically by replaced by others
-- `websites_and_search_engines` has commands for opening websites, following links, and making browser searches
-- `windows_and_tabs` has commands for tab and [window management](https://github.com/talonhub/community?tab=readme-ov-file#window-management), launching and switching between different applications, and snapping application windows to different locations on the screen
-
-Commands for enabling languages are defined in `[language_modes.talon](core/modes/language_modes.talon)`.
-
-# Do we need to look at all of the files referenced
-
+```
 supported_csv_files = [
     CSVData(
         "user.git_argument",
@@ -79,6 +69,43 @@ supported_csv_files = [
         is_spoken_form_first=True,
     ),
 ]
+```
+
+:::
 
 
+# plugins
 
+:::docotodo
+
+Go through all of the talon files under the plugins directory:
+
+```
+are_you_sure
+cancel
+command_history
+datetimeinsert
+desktops
+draft_editor
+dropdown
+gamepad
+listening_timeout
+macro
+media
+microphone_selection
+mode_indicator
+mouse
+repeater
+screenshot
+subtitles
+symbols
+talon_draft_window
+talon_helpers
+text_navigation
+then
+eye_tracking_settings.py
+paste_to_insert.py
+README.md
+```
+
+:::
