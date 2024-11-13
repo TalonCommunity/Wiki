@@ -7,7 +7,7 @@
 | [Overriding the Names of the Modifier Keys](./modifier_key_names.md) |      |
 | [Overriding the Touch Command](./overriding_touch.md)                |      |
 | [Listen Only While a Key is Pressed](./push_to_talk.md)              |      |
-| [Add new keyboard shortcuts](add_new_keyboard_shortcuts.md) | |
+| [Add new keyboard shortcuts](add_new_keyboard_shortcuts.md)          |      |
 
 ## Python Examples
 

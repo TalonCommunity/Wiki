@@ -63,20 +63,20 @@ These commands insert a pair of delimiters and places the insertion point betwee
 
 ## Abbreviations
 
-| Command                            | Description                                                                                   |
-| ---------------------------------- | --------------------------------------------------------------------------------------------- |
-| `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik`     |
+| Command                            | Description                                                                               |
+| ---------------------------------- | ----------------------------------------------------------------------------------------- |
+| `brief <abbreviation_spoken_form>` | inserts the abbreviated form, for example saying `brief as far as I know` inserts `afaik` |
 
 :::info Personalization File Locations
 
 The list of abbreviations recognized are stored in the file `settings/abbreviations.csv` and can be customized.
-It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md)  prior to making changes to this file.
+It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md) prior to making changes to this file.
 
 :::
 
 ## Homophones
 
-> one of two or more words pronounced alike but different in meaning or derivation or spelling 
+> one of two or more words pronounced alike but different in meaning or derivation or spelling
 > (such as the words _to_, _too_, and _two_)
 >
 > - https://www.merriam-webster.com/dictionary/homophone
@@ -187,7 +187,7 @@ File extension,Name
 :::info Personalization File Locations
 
 The list of file extensions recognized are stored in the file `settings/file-extensions.csv` and can be customized.
-It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md)  prior to making changes to this file.
+It is recommended to first read [managing customizations](/docs/Customization/managing-customizations.md) prior to making changes to this file.
 
 :::
 
@@ -199,35 +199,39 @@ It records all voice commands and dictation said after `macro record` and until 
 :::warning Temporary Macros
 
 Macros recorded are only temporarily held by talon. They are not saved to permanent storage
-and will not reappear  after talon is restarted.
+and will not reappear after talon is restarted.
 
 :::
 
-| Command                                    | Description                                                                                                                                             |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `macro record` | starts recording |
-| `macro stop` | stops recording |
-| `macro play [{user.saved_macros}]` | plays the specified named macro, or the last one recorded if no name specified |
+| Command                            | Description                                                                                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `macro record`                     | starts recording                                                                                 |
+| `macro stop`                       | stops recording                                                                                  |
+| `macro play [{user.saved_macros}]` | plays the specified named macro, or the last one recorded if no name specified                   |
 | `macro copy [{user.saved_macros}]` | copies the specified named macro to the clipboard, or the last one recorded if no name specified |
-| `macro copy as <user.text>` | |
-| `macro save as <user.text>` | saves the last recorded macro with the specified name |
-| `macro list` | displays a panel that lists all recorded macros (since talon was started) |
-| `macro list close` | |
+| `macro copy as <user.text>`        |                                                                                                  |
+| `macro save as <user.text>`        | saves the last recorded macro with the specified name                                            |
+| `macro list`                       | displays a panel that lists all recorded macros (since talon was started)                        |
+| `macro list close`                 |                                                                                                  |
 
 For example, if the following was said (with a pause after every line):
+
 ```
 macro record
 go top
-tab previous 
-tab next 
+tab previous
+tab next
 macro stop
 ```
+
 and then:
-``` 
+
+```
 macro copy
 ```
 
 Then the following will be placed onto the clipboard:
+
 ```
 last macro command:
 	mimic("go top")
@@ -241,4 +245,3 @@ The macro recorder only records the spoken phrases that talon recognizes.
 It does not for example record any keystrokes or mouse movements performed.
 
 :::
-

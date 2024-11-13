@@ -15,7 +15,8 @@ See also [help](/docs/Help/help-commands.md) for displaying information using Ta
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only)      |
 | `window close`      | closes the currently active window                                                                                  |
 
-Sample output from the `running list` command  shows:
+Sample output from the `running list` command shows:
+
 - the application name of each running application
 - the spoken form needed when using the `focus` or `launch` commands:
 
@@ -57,7 +58,6 @@ snap <user.running_applications> [screen] <number>:
 
 :::
 
-
 ## Screens and Screenshots
 
 Screenshots are either saved to a file or copied to the clipboard (`grab` commands that end in the word `clip`).
@@ -85,11 +85,9 @@ It's options will determine where screenshots are saved.
 
 In a couple of the above commands, the screen number is required, which can be found by using the following command:
 
-| Command                           | Description                             |
-| --------------------------------- | --------------------------------------- |
-| `screen numbers`                  | briefly shows a big number on each screen with its screen number   |
-
-
+| Command          | Description                                                      |
+| ---------------- | ---------------------------------------------------------------- |
+| `screen numbers` | briefly shows a big number on each screen with its screen number |
 
 ## Working with tabs
 
@@ -236,9 +234,9 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 
 # Save
 
-| Command      |
-| ------------ |
-| file save |
+| Command       |
+| ------------- |
+| file save     |
 | file save all |
 
 ## Customize Talon
@@ -258,7 +256,6 @@ These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Fil
 | ----------------- | -------------------------------- |
 | `command history` | show the command history         |
 | `talon open log`  | open the talon log for debugging |
-
 
 ## Application Names
 

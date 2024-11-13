@@ -59,7 +59,6 @@ Before changing this file, it is recommended to first read the notes on [managin
 
 :::
 
-
 ## Numbers
 
 As one would expect, the following is displayed when `help numbers` is said:

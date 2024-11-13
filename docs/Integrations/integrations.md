@@ -28,13 +28,13 @@ It's the same idea.
 
 ## Categorized
 
-| Category                                                     | Description                                                                                                                 |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| [browser navigation](./browser-navigation.md) | Utilities for controlling browsers by voice, such as clicking on links |
-| [programming and text editing](./coding-and-editing.md) | Utilities for accelerating programming by voice, support for multiple clipboards etc |
-| [mouse alternatives](./mouse-alternatives.md) | Alternatives to the builtin voice commands for mouse positioning and button clicking |
-| [command and macro builders](./talon-customization-helpers.md) | Utilities for building voice commands |
-| [user interface](./user-interface.md) | Utilities for showing talon status, controlling talon as well as commands for window placement |
+| Category                                                       | Description                                                                                    |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [browser navigation](./browser-navigation.md)                  | Utilities for controlling browsers by voice, such as clicking on links                         |
+| [programming and text editing](./coding-and-editing.md)        | Utilities for accelerating programming by voice, support for multiple clipboards etc           |
+| [mouse alternatives](./mouse-alternatives.md)                  | Alternatives to the builtin voice commands for mouse positioning and button clicking           |
+| [command and macro builders](./talon-customization-helpers.md) | Utilities for building voice commands                                                          |
+| [user interface](./user-interface.md)                          | Utilities for showing talon status, controlling talon as well as commands for window placement |
 
 ## Miscellaneous
 
@@ -44,14 +44,13 @@ Categorize the following
 
 :::
 
-| Software                                           | Description                                                |
-| -------------------------------------------------- | ---------------------------------------------------------- |
-| [Parrot](https://github.com/chaosparrot/parrot.py) | Control Talon with noises and clicks (requires Talon beta) |
-| [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4) | A basic script for writing subtitles to a file for a screencapture. |
-| [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) | How to generate a cheatsheet for your own repository |
-| [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) | Another cheatsheet generator which can output HTML or PDF. |
-| [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) | allows you to spell out letters using morse code and the hissing noise. |
-
+| Software                                                                                                | Description                                                             |
+| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| [Parrot](https://github.com/chaosparrot/parrot.py)                                                      | Control Talon with noises and clicks (requires Talon beta)              |
+| [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)                       | A basic script for writing subtitles to a file for a screencapture.     |
+| [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) | How to generate a cheatsheet for your own repository                    |
+| [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/)            | Another cheatsheet generator which can output HTML or PDF.              |
+| [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b)                   | allows you to spell out letters using morse code and the hissing noise. |
 
 ## Comprehensive List
 
@@ -69,4 +68,3 @@ If intended for public consumption, these Talon user file sets are mostly annouc
 
 - You can make use of the [talon code search](https://search.talonvoice.com/search/). This aims to search all known github repositories containing Talon related code. If you're looking for integration with a particular application this is a good option.
 - You can browse the [github talonvoice topic](https://github.com/topics/talonvoice). Repositories can optionally tag themselves with this to aid discoverability.
-

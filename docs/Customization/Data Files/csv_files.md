@@ -1,6 +1,7 @@
 # `.csv` Files
 
 Files with a `.csv` extension store data in a text format with "Common Separated Values". For example, from [`abbreviations.csv`](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#abbreviations):
+
 ```csv
 Abbreviation,Spoken Form
 jpg,J peg

@@ -14,11 +14,13 @@ In the context of using talon, "cognitive load" could be thought of as the addit
 required by the user on top of what would be needed if just using a keyboard.
 
 For example, if a programmer wanted to write the following in a C# file:
+
 ```
 class TempStorage
 ```
 
 For someone new to talon, there could be fair cognitive load whilst working out what to say, for example:
+
 - Should I say `word class space`, `trot class`, or the talon programming related command `state class`?
 - How do I write `Temp` with the correct capitalization? Should I first add it to my vocabulary? Or should I just spell it letter by letter?
 - Maybe I'll just say it letter by letter... `shift trap`, `edge made pit`
@@ -26,25 +28,25 @@ For someone new to talon, there could be fair cognitive load whilst working out 
 - (need a little rest now)
 
 And this becomes quite easy for an experienced user that has already added `temp` to the vocabulary:
+
 - `state class hammer t e m p storage`
 
 ## Community
 
 Depending on context:
+
 - The [talon community user file set](#talon-community-user-file-set)
 - The group of users that support [talon on slack](../Help/talon-slack.md)
 
 ## CSV Files
 
-Files with a `.csv` extension store data in a text format with "[Common Separated Values](/docs/Customization/Data%20Files/csv_files.md)". 
+Files with a `.csv` extension store data in a text format with "[Common Separated Values](/docs/Customization/Data%20Files/csv_files.md)".
 
 ## imgui
 
 The name of the simple GUI system used by talon.
 
 ## Personal Talon Directory
-
-
 
 ## Settings Directory
 
@@ -116,12 +118,10 @@ The directory can be opened into the system's file explorer by using the `Open T
 
 The [talon log file](/docs/Customization/TalonScript/talon-log-file.md) resides under the [talon home directory](#talon-home-directory).
 
-It may contain useful information when [troubleshooting](/docs/Resource%20Hub/Troubleshooting/basic-issues.md) or 
+It may contain useful information when [troubleshooting](/docs/Resource%20Hub/Troubleshooting/basic-issues.md) or
 [debugging](/docs/Resource%20Hub/Troubleshooting/debugging.md).
 
 ## Talon Platform
-
-
 
 ## Talon User Directory
 
@@ -132,14 +132,13 @@ The Talon user directory is located at:
 | MacOS/Linux      | `~/.talon/user/`       |
 | Windows          | `%APPDATA%\Talon\user` |
 
-
 This is the directory in which you put the directory with the [Talon Community User File Set](#talon-community-user-file-set) during [installation](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md).
 
 Talon doesn't care how you organize your files within this directory, any subdirectories or file names are just there to make things easier to understand for you and others.
 
 ## TalonScript
 
-## 
+##
 
 ## User File Set
 
