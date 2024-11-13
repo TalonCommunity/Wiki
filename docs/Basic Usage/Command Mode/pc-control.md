@@ -92,7 +92,7 @@ In a couple of the above commands, the screen number is required, which can be f
 | `zoom mouse`      | Toggle Control Mouse (Zoom).         |
 | `control off`     | Turn the eye tracker off             |
 
-:::warning
+:::docofeedback
 Should the `camera overlay` command be mentioned here? It calls `tracking.control_debug_toggle()`
 :::
 

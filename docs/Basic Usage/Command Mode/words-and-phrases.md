@@ -2,6 +2,16 @@
 sidebar_position: 20
 ---
 
+:::docotodo
+
+There seems to be some commands missing from:
+`core\text\text.talon`
+
+For example `recent list`
+
+:::
+
+
 # Saying Words and Phrases
 
 Whilst in command mode, it's easy to enter a single word or phrase at a time.
@@ -37,7 +47,7 @@ Advantages:
 
 ### Interspersing Words and Voice Commands
 
-Words can be interspersed with other voice commands. For example, starting with the following line:
+Words can be interspersed with other voice commands. For example, with the following line already in a text editor:
 
 ```
 are two classes of aliens in science fiction

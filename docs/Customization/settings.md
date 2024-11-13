@@ -19,10 +19,13 @@ Talon settings can be applied from any `.talon` file in the user directory, rega
 
 :::
 
-:::warning need to fix
+:::docofeedback
 
-The community user file set read me says something different, that there is a single settings file...
-Several options are configurable via a `single settings file` out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc).
+The community user file set read me says something different:
+
+"Several options are configurable via a `single settings file` out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc)."
+
+Is that poorly worded? My understanding is that settings can be set from any `.talon` file.
 
 :::
 

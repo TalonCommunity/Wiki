@@ -152,7 +152,7 @@ staycation
 
 This works as the spoken form and written form of the word are the same, and talon can cleverly infer how to recognize the word from its spelling.
 
-:::warning Fact Check
+:::docofeedback Fact Check
 
 Is this correct?
 Does this also happen with other recognition engines?
@@ -184,7 +184,7 @@ Entries included in `vocabulary.talon-list` are recognized in:
 
 ## Replacement Words
 
-:::warning 
+:::docofeedback 
 
 ronzulu: I am unclear about the purpose of `words_to_replace.csv` and how it differs to `vocabulary.talon-list`.
 The default file has the following entries:

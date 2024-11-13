@@ -18,7 +18,7 @@ you may wish to keep them in a `my-talon` subdirectory as a way to [manage your 
 
 In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change.
 
-:::warning Fact Check
+:::docofeedback Fact Check
 
 The original wording only mentioned changes to `.talon` or `.py`.
 However, this seems to also apply to `.talon-list` and `.csv` files as well.

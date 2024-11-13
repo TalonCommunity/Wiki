@@ -214,7 +214,7 @@ and will not reappear  after talon is restarted.
 | `macro list` | displays a panel that lists all recorded macros (since talon was started) |
 | `macro list close` | |
 
-For example, if the following was said:
+For example, if the following was said (with a pause after every line):
 ```
 macro record
 go top

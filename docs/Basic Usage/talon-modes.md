@@ -45,7 +45,7 @@ There are the following ways to keep track of what mode you are in with a visual
 
 2. Install the [Talon HUD](/docs/Integrations/user-interface.md#talon-hud-heads-up-display)
 
-:::warning
+:::docotodo
 Fix all references to `(https://github.com/talonhub/community/tree`
 :::
 

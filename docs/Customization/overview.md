@@ -32,7 +32,7 @@ and the list of common websites.
 
 The default entries for the items listed below can all be customized.
 
-:::warning
+:::warning Managing Customizations
 
 Before changing any of these files, it is recommended to first read the notes on [managing customizations](./managing-customizations.md)
 
