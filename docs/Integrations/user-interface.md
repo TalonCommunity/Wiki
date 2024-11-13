@@ -34,4 +34,3 @@ Official site https://github.com/chaosparrot/talon_hud:
 <img src="https://github.com/chaosparrot/talon_hud/blob/master/docs/intro.png?raw=true"
      alt="Screenshot highlighting various features of the Talon HUD"
  />
-
