@@ -20,8 +20,19 @@
 
 This heads up display is awesome because it shows things like when Talon is awake, asleep, what language mode active, prints a pretty history, And a whole bunch of other things that right now you have to memorize.
 
+For example the following shows that the microphone is on, talon is in command mode and it is in C# language mode:
+<img src="/img/talon_hud_cs.png/"
+     alt="sample screenshot of the Talon HUD"
+/>
+
+And this shows the Talon HUD options:
+<img src="/img/talon_hud_options.png/"
+     alt="sample screenshot of the talon hud options"
+/>
+
+Official site https://github.com/chaosparrot/talon_hud:
+
 <img src="https://github.com/chaosparrot/talon_hud/blob/master/docs/intro.png?raw=true"
      alt="Screenshot highlighting various features of the Talon HUD"
  />
 
-See https://github.com/chaosparrot/talon_hud

@@ -12,15 +12,17 @@ Talon is free to use and ongoing development is made possible by [donations on P
      alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
  />
 
-:::note TODO
+:::note docotodo
 
 Worth mentioning that talon-gaze-ocr does not require an eye tracker (update text in diagram above)
+
+Another thing to keep in mind (from @knausj85 ) is to separate out core Talon behaviors from Talon community behaviors. A lot of the customization documentation would apply even if you didn't use the community file set, whereas most of the Basic Usage section is community-specific.
 
 :::
 
 ## Input Device Types
 
-:::note TODO
+:::note docotodo
 
 List all the different input devices and ways in which you can trigger commands, including those which are beta-only (Stream Deck/pedals, game controllers, facial expressions, keyboard commands)
 
