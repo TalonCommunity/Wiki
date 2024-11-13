@@ -38,7 +38,11 @@ It's the same idea.
 
 ## Miscellaneous
 
+:::docotodo
 
+Categorize the following
+
+:::
 
 | Software                                           | Description                                                |
 | -------------------------------------------------- | ---------------------------------------------------------- |
