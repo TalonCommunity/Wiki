@@ -40,7 +40,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/TalonCommunity/Wiki/edit/main/",
           admonitions: {
-            keywords: ['docotodo', 'docofeedback'],
+            keywords: ["docotodo", "docofeedback"],
             extendDefaults: true,
           },
         },

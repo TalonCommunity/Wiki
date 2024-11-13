@@ -13,5 +13,3 @@
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [Multidimensional clipboard](https://github.com/FireChickenProductivity/Talon-Voice-multidimensional-clipboard) | Lets you store and retrieve multiple text snippets from a Talon maintained clipboard. |
 | [Indexed clipboard](https://github.com/rntz/indexed_clipboard)                                                  | Lets you store and retrieve multiple text snippets from a Talon maintained clipboard. |
-
-

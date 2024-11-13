@@ -11,7 +11,6 @@ For example `recent list`
 
 :::
 
-
 # Saying Words and Phrases
 
 Whilst in command mode, it's easy to enter a single word or phrase at a time.

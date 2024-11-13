@@ -326,11 +326,11 @@ and others are defined in the `.py` files that come with the [Talon Community Us
 
 A single command can perform a sequence of actions.
 
-```
+```````
 insert code fragment:
     insert("``````")
     key(left left left)
     # the number of times the key should be pressed can be specified after a colon
     key(shift-enter:2)
     key(up)
-```
+```````

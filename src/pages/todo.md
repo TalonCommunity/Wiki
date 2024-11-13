@@ -73,7 +73,6 @@ supported_csv_files = [
 
 :::
 
-
 # plugins
 
 :::docotodo

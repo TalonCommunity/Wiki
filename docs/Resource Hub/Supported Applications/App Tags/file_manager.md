@@ -93,7 +93,6 @@ Before changing this file, it is recommended to first read the notes on [managin
 
 :::
 
-
 ## System Setup
 
 For the file manager commands described in this section to work, your file manager must display the full folder path in the title bar. tags/file_manager/file_manager.talon

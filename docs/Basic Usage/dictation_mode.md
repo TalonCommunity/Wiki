@@ -193,10 +193,11 @@ for example `copy to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phra
 
 ## Replacement Words
 
-:::docofeedback 
+:::docofeedback
 
 ronzulu: I am unclear about the purpose of `words_to_replace.csv` and how it differs to `vocabulary.talon-list`.
 The default file has the following entries:
+
 ```
 January,january
 February,february

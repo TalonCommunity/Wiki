@@ -49,7 +49,6 @@ The default browser will be opened if not already running.
 | `{user.search_engine} (that \| this)`    | using the specified website, search for the selected text                                                     |
 | `{user.search_engine} paste`             | using the specified website, search for the text on the clipboard                                             |
 
-
 ### Website List
 
 The list of known websites is contained in the `core\websites_and_search_engines\website.talon-list` and includes the following entries:
@@ -73,7 +72,6 @@ wikipedia: https://en.wikipedia.org/
 youtube: https://www.youtube.com/
 ```
 
-
 :::note
 
 Before changing this file, it is recommended to first read the notes on [managing customizations](/docs/Customization/managing-customizations.md#overriding-cleanly)
@@ -82,8 +80,8 @@ Before changing this file, it is recommended to first read the notes on [managin
 
 ### Search Engines List
 
-
 The list of known search engines is contained in the `core\websites_and_search_engines\search_engine.talon-list` and includes the following entries:
+
 ```
 amazon: https://www.amazon.com/s/?field-keywords=%s
 google: https://www.google.com/search?q=%s
@@ -96,7 +94,7 @@ wiki: https://en.wikipedia.org/w/index.php?search=%s
 
 Talon community should work out of the box for Safari, Chrome, Brave, on Mac, but require additional configuration on other browsers/operating systems.
 
-This is because some of the Talon files for web apps (e.g. `apps/github/github_web.talon`) use a `browser.host` matcher. 
+This is because some of the Talon files for web apps (e.g. `apps/github/github_web.talon`) use a `browser.host` matcher.
 
 `community` is set up so that if a URL is found in the titlebar of an application matching the 'browser' tag it will be used to populate the browser.host matcher (see `code/browser.py`). This probably means that you will need an extension to make the browser.host based scripts work.
 

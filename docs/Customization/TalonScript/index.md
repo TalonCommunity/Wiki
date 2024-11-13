@@ -6,12 +6,12 @@ sidebar_position: 1
 
 There are a number of ways of [customizing talon](../overview.md). A key method is by using TalonScript, which can be used for the following purposes:
 
-| Area                                                                 | Description                                                                                                                                                                                         |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Area                                                                 | Description                                                                                                                                                                                                       |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) | Create new [Voice Commands](/docs/Resource%20Hub/terminology.md#voice-commands) that makes use of existing [Talon Actions](/docs/Resource%20Hub/terminology.md#talon-actions), or modify existing voice commands. |
-| [Settings](../settings.md)                                           | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme.                                                                                         |
-| [Tags](tag-activation.md)                                            | Activate [tags](tag-activation.md)                                                                                                                                                                  |
-| [keyboard shortcuts](customize-kbd-shortcut.md)                      | Customize [keyboard shortcuts](customize-kbd-shortcut.md)                                                                                                                                           |
+| [Settings](../settings.md)                                           | Change [settings](../settings.md) such as whether Talon should display help info using the dark mode theme.                                                                                                       |
+| [Tags](tag-activation.md)                                            | Activate [tags](tag-activation.md)                                                                                                                                                                                |
+| [keyboard shortcuts](customize-kbd-shortcut.md)                      | Customize [keyboard shortcuts](customize-kbd-shortcut.md)                                                                                                                                                         |
 
 TalonScript are files with a `.talon` extension. And though they can be stored anywhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory),
 you may wish to keep them in a `my-talon` subdirectory as a way to [manage your customizations](../managing-customizations.md).
@@ -31,9 +31,9 @@ TalonScript `.talon` files consist of two parts:
 
 1. A [context header](./context-header.md) defining the circumstances in which the file is active.
 
-2. A body that implements various behaviors within that context. 
+2. A body that implements various behaviors within that context.
 
-The body is where you can define [voice commands](./voice-commands.md) and [keyboard shortcuts](./customize-kbd-shortcut.md), 
+The body is where you can define [voice commands](./voice-commands.md) and [keyboard shortcuts](./customize-kbd-shortcut.md),
 [activate registered tags](./tag-activation.md) and [change settings](../settings.md).
 
 A line with a single hyphen `-` separates the context header from the body.
@@ -72,5 +72,5 @@ Voice commands start with the actual words you want to speak followed by a ':' c
 
 ## Examples
 
-If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files. 
+If you've read the above you should have some idea of how to make customizations to Talon, particularly using `.talon` files.
 This section contains a recipe list of some common/instructive customizations you might like to make.
