@@ -91,12 +91,8 @@ gamepad
 listening_timeout
 macro
 media
-microphone_selection
-mode_indicator
 mouse
 repeater
-screenshot
-subtitles
 symbols
 talon_draft_window
 talon_helpers

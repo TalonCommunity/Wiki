@@ -239,24 +239,6 @@ Within certain applications, such as `vscode`, document zooming can be controlle
 | file save     |
 | file save all |
 
-## Customize Talon
-
-These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Files/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
-
-| Command                      | Description                                       |
-| ---------------------------- | ------------------------------------------------- |
-| `customize additional words` | add additional words that Talon will recognize    |
-| `customize words to replace` | remap or reformat words that Talon will recognize |
-| `customize alphabet`         | change the default Talon alphabet                 |
-| `customize websites`         | add websites that can be opened with Talon        |
-
-## Miscellaneous Talon Commands
-
-| Command           | Description                      |
-| ----------------- | -------------------------------- |
-| `command history` | show the command history         |
-| `talon open log`  | open the talon log for debugging |
-
 ## Application Names
 
 In the screenshot below we see that there are many different automatically generated permutations of the spoken form of `Windows PowerShell ISE`.

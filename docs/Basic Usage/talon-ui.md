@@ -47,6 +47,9 @@ Click on the talon tray icon to display the talon menu:
      alt="screenshot of the desktop on a mac showing the talon microphone menu"
  />
 
+If your system has multiple microphones, the active microphone can be changed by [voice](/docs/Basic%20Usage/Command%20Mode/talon-commands.md#changing-the-active-microphone) apart from
+through this menu.
+
 ### Scripting Menu
 
 <img src="/img/talon_ui/talon_menu_open_talon_home.png/"
