@@ -1,6 +1,6 @@
 # Tobii 5 Eye Tracker
 
-![Tobii 5 hardware](/img/tobii_5_hardware.png) <!-- .element height="50%" width="50%" -->
+![Tobii 5 hardware](/img/hardware/tobii_5_hardware.png) <!-- .element height="50%" width="50%" -->
 
 ### Setup
 

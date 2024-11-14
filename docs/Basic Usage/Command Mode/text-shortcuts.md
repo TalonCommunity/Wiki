@@ -97,7 +97,7 @@ If there are more, then you will be presented with a selection to choose from.
 
 For example, if you said `console`, but Talon entered `consul`, saying `phones that` will display the following:
 
-<img src="/img/homophones-choice.png/"
+<img src="/img/command_mode/homophones-choice.png/"
      alt="screenshot of the homophone selection menu, after saying `console`"
  />
 

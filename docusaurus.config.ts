@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
-  favicon: "img/talon-community-logo.png",
+  favicon: "img/logos/talon-community-logo.png",
 
   // Set the production url of your site here
   url: "https://talon.wiki",
@@ -68,7 +68,7 @@ const config: Config = {
   ],
   themeConfig: {
     // Replace with your project's social card
-    image: "img/talon-community-logo-social.png",
+    image: "img/logos/talon-community-logo-social.png",
 
     /*
     algolia is not working; we instead use local search.
@@ -99,7 +99,7 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "My Site Logo",
-        src: "img/talon-community-logo.png",
+        src: "img/logos/talon-community-logo.png",
       },
       hideOnScroll: true,
       items: [

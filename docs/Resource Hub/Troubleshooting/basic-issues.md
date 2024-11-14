@@ -19,7 +19,7 @@ Check that your computer is using the correct microphone and receiving sound inp
 <p>
 Open System Preferences > Sound > Input. Check that the correct input device is selected and speak into the microphone. Watch the Input level as you speak; you should see the level rising and falling.
 </p>
-<img src="/img/sound_input_mac.gif"
+<img src="/img/resource_hub/sound_input_mac.gif"
      alt="gif of sound input window in system preferences on a Mac with input level moving"
  />
 </details>
@@ -48,7 +48,7 @@ After you have started the Talon application, look for the Talon icon in the men
 <p>
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
-<img src="/img/talon_menubar_awake.png"
+<img src="/img/talon_ui/talon_menubar_awake.png"
      alt="screenshot of the desktop on a mac showing the talon icon in the top right menubar"
  />
 </details>
@@ -61,10 +61,11 @@ If you are trying to use Talon commands and Talon is not responding, make sure T
 
 <details>
 <summary role="button">Mac</summary>
-<img src="/img/talon_menubar_awake.png"
+<img src="/img/talon_ui/talon_menubar_awake.png"
      alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
  />
-<img src="/img/talon_menubar_asleep.png"
+<br/> 
+<img src="/img/talon_ui/talon_menubar_asleep.png"
      alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
  />
 </details>

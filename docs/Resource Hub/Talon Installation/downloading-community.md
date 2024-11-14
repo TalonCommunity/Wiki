@@ -56,12 +56,12 @@ In this method, the zip file is downloaded from:
 https://github.com/talonhub/community
 
 Click on the `Code` button:
-<img src="/img/talonhub_community_github.png/"
+<img src="/img/resource_hub/talonhub_community_github.png/"
      alt="screenshot of the talon hub community page on GitHub"
 />
 
 And download the zip file:
-<img src="/img/talonhub_community_download.png/"
+<img src="/img/resource_hub/talonhub_community_download.png/"
      alt="screenshot of the GitHub code panel"
 />
 

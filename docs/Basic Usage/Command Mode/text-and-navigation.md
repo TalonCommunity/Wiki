@@ -37,7 +37,7 @@ Additionally, the `go` command supports its own more compact syntax.
     <p>In some applications, 'go way left' can behave slightly differently to  'go line start' and 'head'.</p>
     <p>For example in 'vscode', with the following text:</p>
 
-    <img src="/img/insertion_points_on_line.png/"
+    <img src="/img/command_mode/insertion_points_on_line.png/"
         alt="screenshot of text within VSCode"
     />
 

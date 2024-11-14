@@ -20,7 +20,7 @@ Sample output from the `running list` command shows:
 - the application name of each running application
 - the spoken form needed when using the `focus` or `launch` commands:
 
-<img src="/img/running_list3_annotated.png/"
+<img src="/img/command_mode/running_list3_annotated.png/"
      alt="screenshot of the output of the running list command"
 />
 
@@ -262,7 +262,7 @@ These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Fil
 In the screenshot below we see that there are many different automatically generated permutations of the spoken form of `Windows PowerShell ISE`.
 You can say `focus` followed by any of those spoken forms, and Talon will activate powershell.
 
-<img src="/img/running_list_annotated.png/"
+<img src="/img/command_mode/running_list_annotated.png/"
      alt="screenshot of the output of the running list command with some annotation"
 />
 
@@ -275,6 +275,6 @@ powershell, Windows PowerShell ISE
 ```
 
 Now the running list only shows a single entry for Windows PowerShell ISE:
-<img src="/img/running_list2.png/"
+<img src="/img/command_mode/running_list2.png/"
      alt="screenshot of the output of the running list command"
 />

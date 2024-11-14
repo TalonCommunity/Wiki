@@ -16,7 +16,7 @@ See the [setup](#system-setup) section below for details.
 
 The command descriptions below refer to the following screenshot:
 
-<img src="/img/file_manager_panels.png/"
+<img src="/img/apps/file_manager/file_manager_panels.png/"
     alt="screenshot of the file manager panels on windows"
 />
 
