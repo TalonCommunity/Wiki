@@ -19,7 +19,7 @@ For example, if firefox is the front most window, something similar to the follo
 Initially the `Help: Active Context Onlys` panel will be displayed. Then selecting the numbered entries
 reveals the details of those voice commands.
 
-<img src="/img/help_context_firefox_annotated.png/"
+<img src="/img/help/help_context_firefox_annotated.png/"
      alt="screenshot of the help context panel with firefox active"
  />
 
@@ -30,7 +30,7 @@ The ones detailed below - `browser`, `navigation` and `tab` are directly linked 
 
 :::
 
-<img src="/img/help_context_firefox_annotated2.png/"
+<img src="/img/help/help_context_firefox_annotated2.png/"
      alt="screenshot of the help context panel with firefox active"
  />
 

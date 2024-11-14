@@ -82,7 +82,7 @@ You can check that Talon is using the correct microphone by clicking the Talon i
 <p>
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
-<img src="/img/talon_menu_microphone.png"
+<img src="/img/talon_ui/talon_menu_microphone.png"
      alt="screenshot of the desktop on a mac showing the talon microphone menu"
  />
 </details>

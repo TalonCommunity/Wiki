@@ -32,7 +32,9 @@ Once you have the basics of text input down:
 - explore using ordinal repetition for easily [repeating a command](./Command%20Mode/command_mode.md#chaining-and-repeating-commands) without pausing (e.g., saying `go up fifth` will go up five lines)
 - window switching (`focus chrome`)
 
-:::docotodo Also look at controlling specific applications and application tags
+:::docotodo
+
+Also look at controlling specific applications and application tags
 
 :::
 

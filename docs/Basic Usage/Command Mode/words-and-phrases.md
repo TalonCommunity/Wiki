@@ -2,6 +2,8 @@
 sidebar_position: 20
 ---
 
+# Saying Words and Phrases
+
 :::docotodo
 
 There seems to be some commands missing from:
@@ -10,8 +12,6 @@ There seems to be some commands missing from:
 For example `recent list`
 
 :::
-
-# Saying Words and Phrases
 
 Whilst in command mode, it's easy to enter a single word or phrase at a time.
 
@@ -147,7 +147,7 @@ This Is the Name of My Heading
 
 `help formatters` displays available formatters with examples of their output when followed by `one two three`.
 
-<img src="/img/help_formatters.png/"
+<img src="/img/help/help_formatters.png/"
      alt="screenshot of the output of the `help formatters` command"
  />
 

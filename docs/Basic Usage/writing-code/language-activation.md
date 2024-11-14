@@ -26,6 +26,6 @@ The current language is shown in the output of the [help scope](/docs/Help/help-
 
 It can also be optionally shown by the [Talon HUD](/docs/Integrations/user-interface.md#talon-hud-heads-up-display) integration.
 
-<img src="/img/talon_hud_cs.png/"
+<img src="/img/integrations/talon_hud/talon_hud_cs.png/"
      alt="diagram showing the talon hud integration whilst ay sea sharp file is being edited"
  />

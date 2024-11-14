@@ -54,7 +54,7 @@ One recognition engine that comes with Talon is known as `Conformer D`. To insta
 
 <details>
   <summary>Screenshot</summary>
-<img src="/img/talon_menu_speech_recognition.png"
+<img src="/img/talon_ui/talon_menu_speech_recognition_conformer.png"
      alt="screenshot of the Windows desktop showing the speech recognition menu"
  />
 </details>

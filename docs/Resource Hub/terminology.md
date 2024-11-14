@@ -110,7 +110,7 @@ where `{username}` is the username of the currently logged in user.
 
 The directory can be opened into the system's file explorer by using the `Open Talon Home` menu item from the `Scripting` menu.
 
-<img src="/img/talon_menu_open_talon_home.png/"
+<img src="/img/talon_ui/talon_menu_open_talon_home.png/"
      alt="screenshot of the Talon scripting menu"
 />
 

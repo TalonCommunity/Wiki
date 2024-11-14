@@ -30,7 +30,7 @@ For example, instead of saying `p` one would say the word `pit`.
 
 The Talon alphabet can be displayed at any time by saying `help alphabet`.
 
-<img src="/img/help_alphabet.png/"
+<img src="/img/help/help_alphabet.png/"
      alt="screenshot of the talon alphabet, as shown by the `help alphabet` command"
  />
 
@@ -62,7 +62,7 @@ Before changing this file, it is recommended to first read the notes on [managin
 ## Numbers
 
 As one would expect, the following is displayed when `help numbers` is said:
-<img src="/img/help_numbers.png/"
+<img src="/img/help/help_numbers.png/"
      alt="screenshot of the info provided by the `help numbers` command"
 />
 
@@ -87,7 +87,7 @@ Talon has a set of names for each of the punctuation and other symbols on the ke
 
 This can be shown at any time by saying `help symbols`.
 
-<img src="/img/help_symbols.png/"
+<img src="/img/help/help_symbols.png/"
      alt="screenshot of the talon symbols, as shown by the `help symbols` command"
  />
 
@@ -100,7 +100,7 @@ As shown above, for some characters, there are multiple ways the character can b
 To press a function key, simply say `f` followed by the function key number.
 
 The following is displayed by saying `help function key`:
-<img src="/img/help_function_key.png/"
+<img src="/img/help/help_function_key.png/"
      alt="screenshot of the info provided by the `help function key`"
  />
 
@@ -112,7 +112,7 @@ For example `shift zip` and `control air` (or `command air` on a Mac).
 
 To see the list of modifier keys available on your system, say `help modifiers`. These are the modifier keys on Windows.
 
-<img src="/img/help_modifier_key.png/"
+<img src="/img/help/help_modifier_key.png/"
      alt="screenshot of the info provided by the `help modifier key` command on windows"
  />
 
@@ -131,14 +131,14 @@ Modifier keys can be tapped using `press`, for example `press control` taps the 
 ## Special Keys
 
 The following is displayed by saying `help special keys`:
-<img src="/img/help_special_keys.png/"
+<img src="/img/help/help_special_keys.png/"
      alt="screenshot of the info provided by the `help special keys` command"
  />
 
 ## Arrow Keys
 
 The following is displayed by saying `help arrows`:
-<img src="/img/help_arrow_key.png/"
+<img src="/img/help/help_arrow_key.png/"
      alt="screenshot of the info provided by the `help arrows` command"
  />
 
