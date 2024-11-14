@@ -39,15 +39,13 @@ whilst in dictation mode the words `go top` will be inserted literally into the 
 
 ## Mode indicator
 
-There are the following ways to keep track of what mode you are in with a visual icon:
+A [visual indicator](./talon-ui.md#visual-status-indicator) of the current mode is also available.
 
-1. Enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
 
-2. Install the [Talon HUD](/docs/Integrations/user-interface.md#talon-hud-heads-up-display)
+## Automatic Sleeping
 
-:::docotodo
-Fix all references to `(https://github.com/talonhub/community/tree`
-:::
+It is possible to have Talon automatically go into sleep mode if no commands are spoken for a defined period of time.
+To enable this, set the `user.listening_timeout_minutes` [setting](/docs/Customization/settings.md).
 
 ## Secondary Modes
 

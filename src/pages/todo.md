@@ -88,10 +88,8 @@ desktops
 draft_editor
 dropdown
 gamepad
-listening_timeout
 macro
 media
-mouse
 repeater
 symbols
 talon_draft_window
@@ -103,4 +101,9 @@ paste_to_insert.py
 README.md
 ```
 
+:::
+
+
+:::docotodo
+Fix all references to `(https://github.com/talonhub/community/tree`
 :::
