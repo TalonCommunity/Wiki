@@ -82,7 +82,6 @@ Go through all of the talon files under the plugins directory:
 ```
 are_you_sure
 cancel
-command_history
 datetimeinsert
 desktops
 draft_editor
@@ -90,7 +89,6 @@ dropdown
 gamepad
 macro
 media
-repeater
 symbols
 talon_draft_window
 talon_helpers
