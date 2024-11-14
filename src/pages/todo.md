@@ -87,8 +87,6 @@ desktops
 draft_editor
 dropdown
 gamepad
-macro
-media
 symbols
 talon_draft_window
 talon_helpers
