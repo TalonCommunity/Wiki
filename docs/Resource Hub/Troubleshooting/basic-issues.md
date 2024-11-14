@@ -61,13 +61,11 @@ If you are trying to use Talon commands and Talon is not responding, make sure T
 
 <details>
 <summary role="button">Mac</summary>
-<img src="/img/talon_ui/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
- />
-<br/> 
-<img src="/img/talon_ui/talon_menubar_asleep.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
- />
+
+| Talon Is Listening | Talon Is Not Listening |
+| - | - |
+| <img src="/img/talon_ui/talon_menubar_awake.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> | <img src="/img/talon_ui/talon_menubar_asleep.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> |
+
 </details>
 
 **Note:** Depending on your version of Talon, this icon may use color to indicate awake/asleep (green=awake, red=asleep) instead of the slash as pictured above. The slash is used in newer versions.

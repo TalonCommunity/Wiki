@@ -18,6 +18,19 @@ Note that on windows, the Talon tray icon might not be immediately visible and i
      alt="screenshot of the talon tray icon"
  />
 
+### Visual Status Indicator
+
+The talon icon indicates whether talon is currently listening to speech or not.
+
+| Talon Is Listening | Talon Is Not Listening |
+| - | - |
+| <img src="/img/talon_ui/talon_menubar_awake.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> | <img src="/img/talon_ui/talon_menubar_asleep.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> |
+
+More comprehensive visual status indicators are also available:
+
+- [Talon Mode Indicator](/docs/Integrations/user-interface.md#talon-mode-indicator)
+- [Talon HUD](/docs/Integrations/user-interface.md#talon-hud-heads-up-display)
+
 ---
 
 ## Talon Menu
