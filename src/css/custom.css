@@ -32,3 +32,17 @@
 .hidden {
   display: none !important;
 }
+
+.alert--docotodo {
+  --ifm-alert-background-color: rgb(121, 68, 146);
+  --ifm-alert-background-color-highlight: rgb(121, 68, 146);
+  --ifm-alert-foreground-color: white;
+  --ifm-alert-border-color: rgb(58, 23, 73);
+}
+
+.alert--docofeedback {
+  --ifm-alert-background-color: rgb(92, 104, 61);
+  --ifm-alert-background-color-highlight: rgb(92, 104, 61);
+  --ifm-alert-foreground-color: white;
+  --ifm-alert-border-color: rgb(4, 43, 7);
+}

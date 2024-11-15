@@ -1,0 +1,2311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 2.6.0.4-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle2="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/2.0" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:Vue2jsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:Vue3jsNodeStyle="http://www.yworks.com/demos/yfiles-vue-node-style/3.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<key id="d0" for="node" attr.type="int" attr.name="zOrder" y:attr.uri="http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"/>
+	<key id="d1" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d2" for="node" attr.type="string" attr.name="url"/>
+	<key id="d3" for="node" attr.type="string" attr.name="description"/>
+	<key id="d4" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d5" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d6" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d7" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d8" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d9" for="edge" attr.type="string" attr.name="url"/>
+	<key id="d10" for="edge" attr.type="string" attr.name="description"/>
+	<key id="d11" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d12" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d13" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d14" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d15" for="port" attr.name="PortLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"/>
+	<key id="d16" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static Member="y:FreeNodePortLocationModel.NodeCenterAnchored"/>
+		</default>
+	</key>
+	<key id="d17" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static Member="y:VoidPortStyle.Instance"/>
+		</default>
+	</key>
+	<key id="d18" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d19" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d19">
+		<y:SharedData>
+			<y:InteriorLabelModel x:Key="1"/>
+			<y:CompositeLabelModelParameter x:Key="2" Model="{y:GraphMLReference 23}">
+				<y:CompositeLabelModelParameter.Parameter>
+					<y:InteriorLabelModelParameter Position="Center" Model="{y:GraphMLReference 1}"/>
+				</y:CompositeLabelModelParameter.Parameter>
+			</y:CompositeLabelModelParameter>
+			<yjs:SolidColorFill x:Key="3" color="#00D5EED2"/>
+			<yjs:Stroke x:Key="4" fill="#FF46D01B" thickness="2"/>
+			<y:FreeNodePortLocationModelParameter x:Key="5" Ratio="0.9927536231884058,0.5"/>
+			<y:FreeNodePortLocationModelParameter x:Key="6" Ratio="0.9927536231884058,0.5"/>
+			<y:InteriorLabelModel x:Key="7"/>
+			<y:FreeNodePortLocationModelParameter x:Key="8" Ratio="0.5,0.016129032258064502"/>
+			<y:InteriorLabelModel x:Key="9"/>
+			<y:FreeNodePortLocationModelParameter x:Key="10" Ratio="0.005979073243647215,0.5"/>
+			<y:FreeNodePortLocationModelParameter x:Key="11" Ratio="0.9940209267563528,0.5"/>
+			<yjs:Stroke x:Key="12" fill="#FF1B37D0" thickness="2"/>
+			<y:CompositeLabelModelParameter x:Key="13">
+				<y:CompositeLabelModelParameter.Parameter>
+					<y:InteriorLabelModelParameter Position="West" Model="{y:GraphMLReference 9}"/>
+				</y:CompositeLabelModelParameter.Parameter>
+				<y:CompositeLabelModelParameter.Model>
+					<y:CompositeLabelModel>
+						<y:CompositeLabelModel.LabelModels>
+							<y:ExteriorLabelModel Insets="5"/>
+							<y:GraphMLReference ResourceKey="9"/>
+							<x:Static Member="y:FreeNodeLabelModel.Instance"/>
+						</y:CompositeLabelModel.LabelModels>
+					</y:CompositeLabelModel>
+				</y:CompositeLabelModelParameter.Model>
+			</y:CompositeLabelModelParameter>
+			<yjs:Stroke x:Key="14" fill="#00FFFFFF" thickness="2"/>
+			<y:FreeNodePortLocationModelParameter x:Key="15" Ratio="0.5,0.9918864097363083"/>
+			<y:FreeNodePortLocationModelParameter x:Key="16" Ratio="0.5,0.9946524064171123"/>
+			<y:FreeNodePortLocationModelParameter x:Key="17" Ratio="0.5,0.004662004662004671"/>
+			<yjs:SolidColorFill x:Key="18" color="#00D2EEDD"/>
+			<yjs:Stroke x:Key="19" fill="BLACK" thickness="2"/>
+			<y:FreeNodePortLocationModelParameter x:Key="20" Ratio="0.5,0.9953379953379953"/>
+			<y:CompositeLabelModelParameter x:Key="21">
+				<y:CompositeLabelModelParameter.Parameter>
+					<y:InteriorLabelModelParameter Position="Center" Model="{y:GraphMLReference 7}"/>
+				</y:CompositeLabelModelParameter.Parameter>
+				<y:CompositeLabelModelParameter.Model>
+					<y:CompositeLabelModel>
+						<y:CompositeLabelModel.LabelModels>
+							<y:ExteriorLabelModel Insets="5"/>
+							<y:GraphMLReference ResourceKey="7"/>
+							<x:Static Member="y:FreeNodeLabelModel.Instance"/>
+						</y:CompositeLabelModel.LabelModels>
+					</y:CompositeLabelModel>
+				</y:CompositeLabelModelParameter.Model>
+			</y:CompositeLabelModelParameter>
+			<y:ExteriorLabelModel x:Key="22" Insets="5"/>
+			<y:CompositeLabelModel x:Key="23">
+				<y:CompositeLabelModel.LabelModels>
+					<y:GraphMLReference ResourceKey="22"/>
+					<y:GraphMLReference ResourceKey="1"/>
+					<x:Static Member="y:FreeNodeLabelModel.Instance"/>
+				</y:CompositeLabelModel.LabelModels>
+			</y:CompositeLabelModel>
+			<yjs:Font x:Key="24" fontSize="16" fontFamily="Courier"/>
+			<y:FreeNodePortLocationModelParameter x:Key="25" Ratio="0.5,0.008113590263691683"/>
+			<yjs:Font x:Key="26" fontSize="16" fontFamily="Courier"/>
+			<yjs:Stroke x:Key="27" fill="#FFFFFFFF" thickness="2"/>
+			<yjs:Stroke x:Key="28" fill="#FF8D1BD0" thickness="2"/>
+			<yjs:Font x:Key="29" fontSize="16" fontFamily="Courier"/>
+			<yjs:Stroke x:Key="30" fill="#FF000000"/>
+			<yjs:Arrow x:Key="31" stroke="{y:GraphMLReference 30}" fill="#FF000000"/>
+			<yjs:Arrow x:Key="32" stroke="#FF000000" fill="#FF000000" cropLength="1"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<data key="d6">
+			<y:Json>{"version":"2.0.0","origin":"yed-live","theme":{"name":"light","version":"1.0.0"}}</y:Json>
+		</data>
+		<node id="n0">
+			<data key="d0">10</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h3><strong><em>Talon Official</em></strong></h3><p>Conformer speech</p><p>recognition engine</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-529" Y="-311.375" Width="158" Height="93.15625"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-698,-300,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 26}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n1">
+			<data key="d0">-10</data>
+			<data key="d5">
+				<y:RectD X="-921.125" Y="-376.25" Width="353.59375" Height="174.75"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 19}" fill="{y:GraphMLReference 18}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-768.5,-420,697,300"/>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="16"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="17"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="20"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9940564635958395"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9940564635958395"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n2">
+			<data key="d0">-9</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h3><strong><em>Talon Platform</em></strong></h3>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="11">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="11" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-742.90625" Y="-300" Width="150.125" Height="60"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 4}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-683,-285,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="16">
+										<yjs:MarkupLabelStyle.font>
+											<yjs:Font fontSize="16" fontFamily="Courier"/>
+										</yjs:MarkupLabelStyle.font>
+									</yjs:MarkupLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.016129032258064502"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9934264585045194,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="1,0.55"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="1,0.55"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9838709677419355"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p10">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9838709677419355"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p11">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.006573541495480673,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p12">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9934264585045194,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n3">
+			<data key="d0">12</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 21}">
+						<y:Label.Text><![CDATA[<h2><strong><em>Talon Community User File Set</em></strong></h2><p>https://github.com/talonhub/community</p><p></p><p>Community developed and </p><p>supported set of<span class="ql-cursor">﻿﻿﻿﻿﻿﻿ ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿</span>voice commands.</p><p></p><p>This transforms what words the Talon </p><p>Platform determines you have said </p><p>into what is written (or what is actioned).</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-921.125" Y="-120" Width="351.125" Height="210"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 12}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-683,-285,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 24}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p10">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="25"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p11">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p12">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n4">
+			<data key="d0">18</data>
+			<data key="d5">
+				<y:RectD X="-689.40625" Y="-351.25" Width="60" Height="60"/>
+			</data>
+			<data key="d7">
+				<yjs:ShapeNodeStyle fill="#00FF8C00">
+					<yjs:ShapeNodeStyle.stroke>
+						<yjs:Stroke fill="#FF663800" thickness="0"/>
+					</yjs:ShapeNodeStyle.stroke>
+				</yjs:ShapeNodeStyle>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-255,-75,60,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA["go to sleep"]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="16">
+										<yjs:DefaultLabelStyle.font>
+											<yjs:Font fontSize="16" fontFamily="Courier"/>
+										</yjs:DefaultLabelStyle.font>
+									</yjs:DefaultLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9838709677419355,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9838709677419355,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n5">
+			<data key="d0">19</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 13}">
+						<y:Label.Text><![CDATA[<h2><strong><em>Talon Community Wiki</em></strong></h2><p>https://talon.wiki/</p><p></p><p>Documents the voice commands provided by </p><p>the user file set, and has info about hardware </p><p>such asmicrophones and eye trackers, and </p><p>references to other resources.</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-912.6875" Y="150.5" Width="205.375" Height="89"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 14}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-668,-270,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="16">
+										<yjs:MarkupLabelStyle.font>
+											<yjs:Font fontSize="16" fontFamily="Courier"/>
+										</yjs:MarkupLabelStyle.font>
+									</yjs:MarkupLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n6">
+			<data key="d0">-4</data>
+			<data key="d5">
+				<y:RectD X="-921.125" Y="120" Width="351.125" Height="150"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 12}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="16">
+										<yjs:MarkupLabelStyle.font>
+											<yjs:Font fontSize="16" fontFamily="Courier"/>
+										</yjs:MarkupLabelStyle.font>
+									</yjs:MarkupLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.008113590263691683"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n7">
+			<data key="d0">20</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 13}">
+						<y:Label.Text><![CDATA[<p><strong>you are here :-)</strong></p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle clipText="false" textWrappingShape="LABEL_SHAPE" textFill="#FFFF0101">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-695.5625" Y="145.6875" Width="131.125" Height="33.375"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 14}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="16">
+										<yjs:MarkupLabelStyle.font>
+											<yjs:Font fontSize="16" fontFamily="Courier"/>
+										</yjs:MarkupLabelStyle.font>
+									</yjs:MarkupLabelStyle>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n8">
+			<data key="d0">21</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h2><strong>gaze-ocr</strong></h2><p>Select any text and </p><p>move the mouse </p><p>using eye tracking </p><p>and text recognition </p><p>(OCR)</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD_ELLIPSIS" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-529" Y="0" Width="158" Height="133.25"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 28}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-668,-270,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 29}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n9">
+			<data key="d0">-12</data>
+			<data key="d5">
+				<y:RectD X="-544.5" Y="-118.625" Width="394.5" Height="388.625"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" fill="{y:GraphMLReference 3}">
+					<demostyle:FlowchartNodeStyle.stroke>
+						<yjs:Stroke fill="#FF8D1BD0" thickness="2"/>
+					</demostyle:FlowchartNodeStyle.stroke>
+				</demostyle:FlowchartNodeStyle>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-738.5,-390,697,300"/>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="16"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="17"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.00314218381775333"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n10">
+			<data key="d0">-11</data>
+			<data key="d5">
+				<y:RectD X="-540" Y="-376.25" Width="390" Height="174.75"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 19}" fill="{y:GraphMLReference 18}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-753.5,-405,697,300"/>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="16"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="17"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="20"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9952830188679245,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9952830188679245,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9952830188679245,0.5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n11">
+			<data key="d0">28</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 21}">
+						<y:Label.Text><![CDATA[<h2><strong><em>Talon Official</em></strong></h2><p><strong>https://talonvoic</strong><span class="ql-cursor">﻿﻿﻿﻿﻿</span><strong>e.com/</strong></p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-892.90625" Y="-365.5" Width="165.8125" Height="49.25"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 27}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-668,-270,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label>
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:CompositeLabelModelParameter Model="{y:GraphMLReference 23}">
+										<y:CompositeLabelModelParameter.Parameter>
+											<y:ExteriorLabelModelParameter Position="North" Model="{y:GraphMLReference 22}"/>
+										</y:CompositeLabelModelParameter.Parameter>
+									</y:CompositeLabelModelParameter>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 24}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p10">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="25"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p11">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p12">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n12">
+			<data key="d0">29</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 21}">
+						<y:Label.Text><![CDATA[<h2><strong><em>Supported Speech <span class="ql-cursor">﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿</span><span class="ql-cursor">﻿﻿﻿﻿﻿﻿﻿﻿﻿</span>Recognition Engines</em></strong></h2>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" font="Courier" textFill="BLACK" textSize="10"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-442.90625" Y="-367.125" Width="165.8125" Height="49.25"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" fill="{y:GraphMLReference 3}">
+					<demostyle:FlowchartNodeStyle.stroke>
+						<yjs:Stroke fill="#00FFFFFF" thickness="2"/>
+					</demostyle:FlowchartNodeStyle.stroke>
+				</demostyle:FlowchartNodeStyle>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label>
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:CompositeLabelModelParameter Model="{y:GraphMLReference 23}">
+										<y:CompositeLabelModelParameter.Parameter>
+											<y:ExteriorLabelModelParameter Position="North" Model="{y:GraphMLReference 22}"/>
+										</y:CompositeLabelModelParameter.Parameter>
+									</y:CompositeLabelModelParameter>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 24}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p10">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="25"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p11">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p12">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n13">
+			<data key="d0">30</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h3><strong><em>Dragon Speech Engine</em></strong></h3><p>(user responsible for </p><p>obtaining commercial </p><p>license)</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-352.09375" Y="-311.375" Width="185.40625" Height="93.15625"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" fill="{y:GraphMLReference 3}">
+					<demostyle:FlowchartNodeStyle.stroke>
+						<yjs:Stroke fill="#FF8D1BD0" thickness="2"/>
+					</demostyle:FlowchartNodeStyle.stroke>
+				</demostyle:FlowchartNodeStyle>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-683,-285,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label>
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:CompositeLabelModelParameter Model="{y:GraphMLReference 23}">
+										<y:CompositeLabelModelParameter.Parameter>
+											<y:ExteriorLabelModelParameter Position="North" Model="{y:GraphMLReference 22}"/>
+										</y:CompositeLabelModelParameter.Parameter>
+									</y:CompositeLabelModelParameter>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 26}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n14">
+			<data key="d0">31</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 21}">
+						<y:Label.Text><![CDATA[<h2><strong><em>Talon Integrations (Optional)</em></strong></h2><p><strong>Separately available software that provides </strong></p><p><strong>specific additional functionality.</strong></p><p></p><p><strong>Some popular examples listed below...</strong></p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-448.40625" Y="-84.625" Width="165.8125" Height="49.25"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 27}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label>
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:CompositeLabelModelParameter Model="{y:GraphMLReference 23}">
+										<y:CompositeLabelModelParameter.Parameter>
+											<y:ExteriorLabelModelParameter Position="North" Model="{y:GraphMLReference 22}"/>
+										</y:CompositeLabelModelParameter.Parameter>
+									</y:CompositeLabelModelParameter>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 24}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p10">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="25"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p11">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p12">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n15">
+			<data key="d0">32</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h2><strong>Cursorless</strong></h2><p>Rapid voice coding and </p><p>text editing by</p><p>intelligently </p><p>manipulating the parse </p><p>tree of your code</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-360" Y="0" Width="197" Height="138"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 28}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 29}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n16">
+			<data key="d0">33</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h2>Parrot</h2><p>Control Talon with </p><p>noises and clicks </p><p>(requires Talon beta)</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD_ELLIPSIS" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="12" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-529" Y="146.84375" Width="158" Height="93.15625"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 28}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-653,-255,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label>
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.LayoutParameter>
+									<y:CompositeLabelModelParameter Model="{y:GraphMLReference 23}">
+										<y:CompositeLabelModelParameter.Parameter>
+											<y:ExteriorLabelModelParameter Position="North" Model="{y:GraphMLReference 22}"/>
+										</y:CompositeLabelModelParameter.Parameter>
+									</y:CompositeLabelModelParameter>
+								</y:Label.LayoutParameter>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 29}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<node id="n17">
+			<data key="d0">34</data>
+			<data key="d4">
+				<x:List>
+					<y:Label LayoutParameter="{y:GraphMLReference 2}">
+						<y:Label.Text><![CDATA[<h2>Talon-HUD</h2><p>Show visual information </p><p>about the current state </p><p>of Talon.</p>]]></y:Label.Text>
+						<y:Label.Style>
+							<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" wrapping="WORD" clipText="false" textWrappingShape="LABEL_SHAPE" textFill="BLACK" textSize="11">
+								<yjs:MarkupLabelStyle.font>
+									<yjs:Font fontSize="11" fontFamily="Courier"/>
+								</yjs:MarkupLabelStyle.font>
+							</yjs:MarkupLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d5">
+				<y:RectD X="-355.875" Y="146.84375" Width="192.875" Height="93.15625"/>
+			</data>
+			<data key="d7">
+				<demostyle:FlowchartNodeStyle type="process" stroke="{y:GraphMLReference 28}" fill="{y:GraphMLReference 3}"/>
+			</data>
+			<data key="d8">
+				<y:ViewState>
+					<y:FolderNodeState x:Key="c|view" Layout="-638,-240,136,60">
+						<y:FolderNodeState.Labels>
+							<y:Label LayoutParameter="{y:GraphMLReference 2}">
+								<y:Label.Text><![CDATA[<p><strong><em>Command Mode</em></strong></p>]]></y:Label.Text>
+								<y:Label.Style>
+									<yjs:MarkupLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" clipText="false" textWrappingShape="LABEL_SHAPE" font="{y:GraphMLReference 29}" textFill="BLACK" textSize="16"/>
+								</y:Label.Style>
+							</y:Label>
+						</y:FolderNodeState.Labels>
+					</y:FolderNodeState>
+				</y:ViewState>
+			</data>
+			<port name="p0">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="5"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p1">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="6"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p3">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p4">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p5">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p6">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="8"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p7">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="10"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p8">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="11"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p9">
+				<data key="d16">
+					<y:GraphMLReference ResourceKey="15"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+		</node>
+		<edge id="e0" source="n3" target="n1" sourceport="p10" targetport="p6">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="0.5289319945003602" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n6" target="n3" sourceport="p9" targetport="p9">
+			<data key="d13">
+				<yjs:PolylineEdgeStyle smoothingLength="100">
+					<yjs:PolylineEdgeStyle.stroke>
+						<yjs:Stroke fill="#FF989595" miterLimit="1.45"/>
+					</yjs:PolylineEdgeStyle.stroke>
+					<yjs:PolylineEdgeStyle.targetArrow>
+						<yjs:Arrow stroke="#FF989595" fill="#FF989595" cropLength="1"/>
+					</yjs:PolylineEdgeStyle.targetArrow>
+					<yjs:PolylineEdgeStyle.sourceArrow>
+						<yjs:Arrow type="NONE" stroke="#FF989595" fill="#FF989595"/>
+					</yjs:PolylineEdgeStyle.sourceArrow>
+				</yjs:PolylineEdgeStyle>
+			</data>
+		</edge>
+		<edge id="e2" source="n9" target="n1" sourceport="p4" targetport="p5">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="1.2391068399855818" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n3" target="n3" sourceport="p11" targetport="p12">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e4" source="n10" target="n10" sourceport="p5" targetport="p6">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e5" source="n11" target="n11" sourceport="p11" targetport="p12">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e6" source="n12" target="n12" sourceport="p11" targetport="p12">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e7" source="n2" target="n10" sourceport="p11" targetport="p7">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-0.020582351604411624" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e8" source="n14" target="n14" sourceport="p11" targetport="p12">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+		<edge id="e9" source="n10" target="n10" sourceport="p8" targetport="p9">
+			<data key="d13">
+				<yjs:ArcEdgeStyle stroke="{y:GraphMLReference 30}" height="-25.839581286569647" targetArrow="{y:GraphMLReference 31}" sourceArrow="{y:GraphMLReference 32}"/>
+			</data>
+		</edge>
+	</graph>
+</graphml>
