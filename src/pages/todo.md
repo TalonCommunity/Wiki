@@ -77,7 +77,7 @@ supported_csv_files = [
 
 :::docotodo
 
-Go through all of the talon files under the plugins directory:
+Go through all remaining talon files under the plugins directory:
 
 ```
 are_you_sure
@@ -85,9 +85,7 @@ cancel
 datetimeinsert
 desktops
 draft_editor
-dropdown
 gamepad
-symbols
 talon_draft_window
 talon_helpers
 text_navigation
@@ -99,6 +97,27 @@ README.md
 
 :::
 
+
+# tags
+
+:::docotodo
+
+Go through all remaining talon files under the tags directory:
+
+```
+browser
+chapters
+debugger
+emoji
+line_commands
+messaging
+multiple_cursors
+pages
+splits
+terminal
+```
+
+:::
 
 :::docotodo
 Fix all references to `(https://github.com/talonhub/community/tree`

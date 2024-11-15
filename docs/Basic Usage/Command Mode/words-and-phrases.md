@@ -152,3 +152,21 @@ This Is the Name of My Heading
  />
 
 Note that prose formatters a marked with \* in the help window
+
+### Chaining Phrases
+
+Phrases can be chained together with other phrases or commands by using the word `over`.
+
+For example, the phrase `say hello everyone` can be chained together with the command `go top`
+by terminating the phrase with `over`:
+```
+say hello everyone over go top
+```
+
+By using the word `over`, there is no need to pause after saying the phrase before saying the command.
+
+:::docofeedback
+
+How does one include the literal word `over` within a phrase?
+
+:::

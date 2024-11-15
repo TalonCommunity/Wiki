@@ -27,7 +27,7 @@ These commands insert a pair of delimiters and places the insertion point betwee
 | `empty dub string`, `inside double quotes` or `inside dub quotes` | `"`         |
 | `empty escaped string`                                            | `\\'`       |
 | `empty escaped dub string`, `empty escaped dub quotes`            | `\\"`       |
-| `inside graves`, `inside back ticks`                              | `\``        |
+| `inside graves`, `inside back ticks`                              | `` ` ``     |
 | `inside parens`, `args`                                           | `(` and `)` |
 | `inside squares`, `inside brackets`, `square brackets` or `list`  | `[` and `]` |
 | `inside braces`, `inside curly brackets`                          | `{` and `}` |
@@ -41,7 +41,7 @@ These commands insert a pair of delimiters and places the insertion point betwee
 | `double quote that` or `dub quote that`                | `"`         |
 | `empty escaped string`                                 | `\\'`       |
 | `empty escaped dub string`, `empty escaped dub quotes` | `\\"`       |
-| `grave that`, `back tick that`                         | `\``        |
+| `grave that`, `back tick that`                         | `` ` ``     |
 | `parens that`, `args that`                             | `(` and `)` |
 | `angle that`                                           | `<` and `>` |
 | `square that`, `bracket that`, `square bracket that`   | `[` and `]` |
