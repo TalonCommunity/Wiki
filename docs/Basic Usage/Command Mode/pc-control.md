@@ -103,7 +103,6 @@ In a couple of the above commands, the screen number is required, which can be f
 
 ## Working with media
 
-
 | Command                  |
 | ------------------------ |
 | `volume up`              |
@@ -114,14 +113,12 @@ In a couple of the above commands, the screen number is required, which can be f
 | `[media] play previous`  |
 | `media (play \| pause)`  |
 
-
 :::docofeedback
 
 Regarding `set volume <number>: user.media_set_volume(number)`, I was trying to find the range of `number`,
 but I couldn't find any reference to `media_set_volume` apart from when it is called in `media.talon`
 
 :::
-
 
 ## Controlling the Tobii eye tracker
 
