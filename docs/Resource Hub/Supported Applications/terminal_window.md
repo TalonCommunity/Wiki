@@ -1,5 +1,9 @@
 # Terminal Windows
 
+:::docotodo Move this to appropriate location and check wording
+
+:::
+
 Many terminal applications are supported out of the box, but you may not want all the commands enabled.
 
 To use command sets in your terminal applications, enable/disable the corresponding tags in the terminal application-specific .talon file.

@@ -1,5 +1,9 @@
 # Unix utilities
 
+:::docotodo Move this to appropriate location and check wording
+
+:::
+
 If you have a Unix (e.g. macOS) or Linux computer, you can enable support for a number of
 common terminal utilities like `cat`, `tail`, or `grep` by uncommenting the following
 line in `[unix_shell.py](tags/terminal/unix_shell.py)`:
