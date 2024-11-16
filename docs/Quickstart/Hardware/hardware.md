@@ -13,6 +13,8 @@ These are models that Talon community members regularly recommend:
 **Blue Yeti Nano (USB 3)**: desktop, affordable and pretty good recognition. Can be attached to an arm. Useful if you're trying out speech recognition for the first time and don't want to spend a lot.
 
 **Samson Q9u**: a step up from the Blue Yeti, but still affodable desktop mic that can be operated as either USB and XLR.
+ 
+**Antlion Audio ModMic USB 2**: Affordable headset microphone with good audio quality and USB connection. https://antlionaudio.com/products/modmic-usb-2
 
 **DPA d:fine 4188 or 4288**: expensive, but highly recommended for full time use. It's likely the best in wearing comfort, audio quality and voice isolation (see this [impressive demo from the manufacturer](https://youtu.be/35GvWlRirxI)). The DPA mic can be paired with either (i) a **Shure X2U** + microdot to XLR adapter or (ii) a **DPA d:vice** interface. (i) will be cheaper, but a bit less portable, than the latter; (i) does however have a live monitor (you can plug in headphones and hear the computer audio mixed with your voice), whereas (ii) doesn't.
 
