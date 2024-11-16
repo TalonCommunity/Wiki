@@ -14,6 +14,8 @@ These are models that Talon community members regularly recommend:
 
 **Samson Q9u**: a step up from the Blue Yeti, but still affodable desktop mic that can be operated as either USB and XLR.
 
+**Antlion Audio ModMic USB 2**: Affordable headset microphone with good audio quality and USB connection. https://antlionaudio.com/products/modmic-usb-2
+
 **DPA d:fine 4188 or 4288**: expensive, but highly recommended for full time use. It's likely the best in wearing comfort, audio quality and voice isolation (see this [impressive demo from the manufacturer](https://youtu.be/35GvWlRirxI)). The DPA mic can be paired with either (i) a **Shure X2U** + microdot to XLR adapter or (ii) a **DPA d:vice** interface. (i) will be cheaper, but a bit less portable, than the latter; (i) does however have a live monitor (you can plug in headphones and hear the computer audio mixed with your voice), whereas (ii) doesn't.
 
 **Audio-Technica BP894**: a much more budget-friendly alternative to the DPA microcapsule microphones above, but still excellent comfort, quality, and voice isolation. This model has been discontinued in favor of the BP894x so there are some great deals to be had ($100-300 (depending if you want to make it wireless). Check out #BP894_fan_club on Slack for tips on picking the right termination and adapter for your needs.
