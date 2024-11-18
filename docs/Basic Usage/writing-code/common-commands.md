@@ -66,7 +66,7 @@ inserted. This can make it more efficient, in this case compared with `space equ
 ### Math & Bitwise
 
 | Command                                                   | Example           |
-| --------------------------------------------------------- | ----------------- | --- |
+| --------------------------------------------------------- | ----------------- |
 | `op (minus \| subtract)`                                  | typescript's `-`  |
 | `op (plus \| add)`                                        | typescript's `+`  |
 | `op (times \| multiply)`                                  | typescript's `*`  |
@@ -74,7 +74,7 @@ inserted. This can make it more efficient, in this case compared with `space equ
 | `op mod`                                                  | typescript's `%`  |
 | `(op (power \| exponent) \| to the power [of])`           | typescript's `**` |
 | `[op] bitwise and`                                        | C#'s `&`          |
-| `[op] bitwise or`                                         | C#'s `            | `   |
+| `[op] bitwise or`                                         | C#'s `\|`         |
 | `(op \| logical \| bitwise) (ex \| exclusive) or`         | C#'s `^`          |
 | `(op \| logical \| bitwise) (right shift \| shift right)` | C#'s `>>`         |
 
