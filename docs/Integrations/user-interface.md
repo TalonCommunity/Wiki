@@ -5,7 +5,7 @@
 | [Talon Mode Indicator](#talon-mode-indicator)                | Basic visual indicator of the current talon mode. --------------------------------------------------- |
 | [Talon Heads Up Display](#talon-hud-heads-up-display)        | Shows comprehensive visual information about your current state of Talon.                             |
 | [Talon Deck](https://github.com/AndreasArvidsson/talon-deck) | Stream deck inspired interactive dashboard for Talon. Turn your phone/tablet into a Talon control UI. |
-| [Customizable Subtitles](#customizable-subtitles)            | Subtitles that display as you speak, with customizable text size, placement on screen etc |
+| [Customizable Subtitles](#customizable-subtitles)            | Subtitles that display as you speak, with customizable text size, placement on screen etc             |
 
 ## Window Placement Software
 
@@ -19,7 +19,6 @@
 
 ### Talon Mode Indicator
 
-
 The [talon tray icon](/docs/Basic%20Usage/talon-ui.md#talon-tray-icon) indicates whether or not talon is listening.
 
 :::info This item Pertains to the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md)
@@ -28,13 +27,13 @@ The [talon tray icon](/docs/Basic%20Usage/talon-ui.md#talon-tray-icon) indicates
 
 The talon community user file set contains a more comprehensive yet still simple mode indicator.
 
-| Mode | |
-| - | - |
-| Command | <img src="/img/talon_ui/mode_indicator/command.png" alt="Command mode" /> |
+| Mode      |                                                                               |
+| --------- | ----------------------------------------------------------------------------- |
+| Command   | <img src="/img/talon_ui/mode_indicator/command.png" alt="Command mode" />     |
 | Dictation | <img src="/img/talon_ui/mode_indicator/dictation.png" alt="Dictation mode" /> |
-| Mixed | <img src="/img/talon_ui/mode_indicator/mixed.png" alt="Mixed mode" /> |
-| Sleep | <img src="/img/talon_ui/mode_indicator/sleep.png" alt="Sleep mode" /> |
-| Other | <img src="/img/talon_ui/mode_indicator/other.png" alt="Other mode" /> |
+| Mixed     | <img src="/img/talon_ui/mode_indicator/mixed.png" alt="Mixed mode" />         |
+| Sleep     | <img src="/img/talon_ui/mode_indicator/sleep.png" alt="Sleep mode" />         |
+| Other     | <img src="/img/talon_ui/mode_indicator/other.png" alt="Other mode" />         |
 
 [YouTube - Mode indicator demo](https://youtu.be/1lqtfM4vvH4)
 
@@ -46,8 +45,6 @@ This is enabled and configured with settings present in:
 Instead of changing this file directly, consider [overriding it instead](/docs/Customization/managing-customizations.md#overriding-cleanly)
 
 :::
-
-
 
 ### Talon HUD (Heads Up Display)
 
@@ -75,6 +72,7 @@ The talon platform displays [subtitles](/docs/Basic%20Usage/talon-ui.md#talon-su
 It can be enabled or disabled, but not customized.
 
 The talon community user file set it does provide a customizable subtitle facility with the following configurable items:
+
 - Onto which screens subtitles will be shown
 - Size and color of the subtitles
 - Duration for which the subtitles are shown
@@ -90,9 +88,8 @@ Instead of changing this file directly, consider [overriding it instead](/docs/C
 :::
 
 Note that as this feature works independently of the talon platform subtitle, you will need to
-disable that from the [speech recognition menu](/docs/Basic%20Usage/talon-ui.md#speech-recognition-menu) 
+disable that from the [speech recognition menu](/docs/Basic%20Usage/talon-ui.md#speech-recognition-menu)
 (otherwise two sets of subtitles will be displayed as you speak).
-
 
 :::info This item Pertains to the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md)
 

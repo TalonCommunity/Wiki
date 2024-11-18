@@ -21,7 +21,6 @@ Make the `home` item on the main menu point to the landing page
 
 :::
 
-
 ```
 src\pages\index.jsx
 

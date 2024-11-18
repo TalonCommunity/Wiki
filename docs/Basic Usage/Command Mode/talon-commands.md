@@ -13,11 +13,11 @@ These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Fil
 
 ## Changing the Active Microphone
 
-| Command           | Description                      |
-| ----------------- | -------------------------------- |
-| `^microphone show$` | shows a list of available microphones       |
-| `^microphone pick <number_small>$` | selects the active microphone as specified by the number    |
-| `^microphone close$`  |  |
+| Command                            | Description                                              |
+| ---------------------------------- | -------------------------------------------------------- |
+| `^microphone show$`                | shows a list of available microphones                    |
+| `^microphone pick <number_small>$` | selects the active microphone as specified by the number |
+| `^microphone close$`               |                                                          |
 
 <img src="/img/command_mode/microphone_selection.png/"
     alt="screenshot of the microphone selection panel"
@@ -25,13 +25,13 @@ These commands will open up a CSV or [Talon list](/docs/Customization/Data%20Fil
 
 ## Talon Command History
 
-| Command           | Description                      |
-| ----------------- | -------------------------------- |
-| `command history` | shows a panel with the recent commands recognized by talon      |
-| `command history close` |   |
-| `command history clear` |   |
-| `command history less` |   |
-| `command history more` |   |
+| Command                 | Description                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| `command history`       | shows a panel with the recent commands recognized by talon |
+| `command history close` |                                                            |
+| `command history clear` |                                                            |
+| `command history less`  |                                                            |
+| `command history more`  |                                                            |
 
 The maximum number of commands in the history is configured by the `user.command_history_size` [setting](/docs/Customization/settings.md).
 
@@ -53,7 +53,7 @@ A person using talon may not be familiar with the command history feature, and t
 would be viewable by someone else.
 
 Also to highlight the vulnerability caused by the talon platform's open nature and how it runs everything under the
-talon user folder.  for example, that there is nothing stopping someone from adding a python file that performs a
+talon user folder. for example, that there is nothing stopping someone from adding a python file that performs a
 `speech_system.register("phrase", on_phrase)` and logs everything or sends everything to the cloud...
 
 Is there any mechanism in talon beta to lock things down?
@@ -66,4 +66,3 @@ Is there any mechanism in talon beta to lock things down?
 | ----------------- | -------------------------------- |
 | `command history` | show the command history         |
 | `talon open log`  | open the talon log for debugging |
-

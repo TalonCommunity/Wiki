@@ -41,7 +41,6 @@ whilst in dictation mode the words `go top` will be inserted literally into the 
 
 A [visual indicator](./talon-ui.md#visual-status-indicator) of the current mode is also available.
 
-
 ## Automatic Sleeping
 
 It is possible to have Talon automatically go into sleep mode if no commands are spoken for a defined period of time.

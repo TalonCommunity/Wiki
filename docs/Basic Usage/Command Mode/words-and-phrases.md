@@ -159,6 +159,7 @@ Phrases can be chained together with other phrases or commands by using the word
 
 For example, the phrase `say hello everyone` can be chained together with the command `go top`
 by terminating the phrase with `over`:
+
 ```
 say hello everyone over go top
 ```

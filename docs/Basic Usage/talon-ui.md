@@ -22,8 +22,8 @@ Note that on windows, the Talon tray icon might not be immediately visible and i
 
 The talon icon indicates whether talon is currently listening to speech or not.
 
-| Talon Is Listening | Talon Is Not Listening |
-| - | - |
+| Talon Is Listening                                                                                                                          | Talon Is Not Listening                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="/img/talon_ui/talon_menubar_awake.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> | <img src="/img/talon_ui/talon_menubar_asleep.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> |
 
 More comprehensive visual status indicators are also available:
@@ -76,11 +76,7 @@ display a "subtitle" at the bottom of the screen as you speak.
 :::tip Customizable Subtitles
 
 The Talon Platform's subtitle feature described here can't be customized.
-However, the talon community user file set provides a [customizable subtitle](/docs/Integrations/user-interface.md#customizable-subtitles) 
+However, the talon community user file set provides a [customizable subtitle](/docs/Integrations/user-interface.md#customizable-subtitles)
 feature that can be used instead.
 
 :::
-
-
-
-

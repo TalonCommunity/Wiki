@@ -13,7 +13,6 @@ This includes eclipse and visual studio code.
 | replace this   | replace within the current file |
 | replace all    | replace within all files        |
 
-
 ## Find and Find All
 
 | Command                   | Type     | Description                  |
@@ -27,7 +26,6 @@ This includes eclipse and visual studio code.
 | hunt next                 |          |                              |
 | hunt previous             |          |                              |
 
-
 ## Change Search Parameters
 
 | Command         | Description             |
@@ -38,13 +36,13 @@ This includes eclipse and visual studio code.
 
 ## Find and Replace
 
-| Command                     | Type                 | Description                                                                              |
-| --------------------------- | -------------------- | ---------------------------------------------------------------------------------------- |
-| replace this [\<user.text>] | find-and-replaced    | show the find-and-replace dialog, with the find field populated with the spoken text     |
-| replace all                 | find-and-replace-all | show the find-and-replace-all dialog                                                     |
-| replace \<user.text> all    | find-and-replace-all | with the find field populated with the spoken text                                       |
-| replace confirm that        |                      |                                                                                          |
-| replace confirm all         |                      |                                                                                          |
+| Command                     | Type                 | Description                                                                          |
+| --------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
+| replace this [\<user.text>] | find-and-replaced    | show the find-and-replace dialog, with the find field populated with the spoken text |
+| replace all                 | find-and-replace-all | show the find-and-replace-all dialog                                                 |
+| replace \<user.text> all    | find-and-replace-all | with the find field populated with the spoken text                                   |
+| replace confirm that        |                      |                                                                                      |
+| replace confirm all         |                      |                                                                                      |
 
 :::docotodo
 
