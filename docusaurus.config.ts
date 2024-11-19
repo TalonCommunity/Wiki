@@ -2,6 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
 const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
@@ -97,18 +99,13 @@ const config: Config = {
     },
 
     navbar: {
+      title: "Home",
       logo: {
         alt: "My Site Logo",
         src: "img/logos/talon-community-logo.png",
       },
       hideOnScroll: true,
       items: [
-        {
-          type: "doc",
-          docId: "home",
-          position: "left",
-          label: "Home",
-        },
         {
           type: "docSidebar",
           sidebarId: "BasicUsageSidebar",
@@ -149,15 +146,6 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
-        // {
-        //   title: "Docs",
-        //   items: [
-        //     {
-        //       label: "Docs",
-        //       to: "/docs/",
-        //     },
-        //   ],
-        // },
         {
           title: "Talon Links",
           items: [
@@ -185,7 +173,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Talon Community`,
+      copyright: `Copyright © ${new Date().getFullYear()} Talon Community. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
