@@ -109,16 +109,9 @@ You need to indicate to Talon to make use of your definitions rather than the st
 
 ### Overriding Cleanly
 
-Start off by copying the community defined file to your [personal talon directory](/docs/Resource%20Hub/terminology.md#personal-talon-directory).
-Note that your personal file will need to be complete and include all entries from the community defined file relevant to you.
+For certain file types, such as `.talon-list` you will need to start off by copying the community defined file to your [personal talon directory](/docs/Resource%20Hub/terminology.md#personal-talon-directory).
+In these cases your personal file will need to be complete and include all entries from the community defined file relevant to you.
 That is, the content of your file will be used by Talon instead of the community defined file, and not as an extension to it.
-
-:::docofeedback
-
-It seems that individual settings (for example those in subtitles.talon) can be overridden without the need to copy the entire file first.
-Is that correct?
-
-:::
 
 Apart from making any customizations to the list, you will also need to add an extra rule into the [context header](/docs/Customization/TalonScript/context-header.md).
 

@@ -166,8 +166,19 @@ say hello everyone over go top
 
 By using the word `over`, there is no need to pause after saying the phrase before saying the command.
 
-:::docofeedback
+### Saying `Over` in a Phrase
 
-How does one include the literal word `over` within a phrase?
+Because `over` signifies the end of a phrase, the literal word `over`  cannot be inserted within a phrase.
 
-:::
+Whilst in command mode, to insert: 
+```
+I am really over the moon about this
+```
+
+You would need to say (with a pause after each line), for example:
+```
+say I am really spacebar
+trot over
+say the moon about this
+```
+

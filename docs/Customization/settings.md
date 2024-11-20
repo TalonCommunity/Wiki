@@ -15,17 +15,9 @@ settings():
 
 :::tip
 
-Talon settings can be applied from any `.talon` file in the user directory, regardless of the filename or location.
+Talon settings can be applied from any `.talon` file under the user directory, regardless of the filename or location.
 
 :::
-
-:::docofeedback
-
-The community user file set read me says something different:
-
-"Several options are configurable via a `single settings file` out of the box. Any setting can be made context specific as needed (e.g., per-OS, per-app, etc)."
-
-Is that poorly worded? My understanding is that settings can be set from any `.talon` file.
 
 :::
 

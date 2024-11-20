@@ -39,24 +39,10 @@ The maximum number of commands in the history is configured by the `user.command
     alt="screenshot of the command history panel"
 />
 
-:::docofeedback
+:::note More than Just Commands
 
-Is there a more accurate phrase then "...commands recognized by talon"?
-The history shown includes phrases said within dictation mode.
-
-:::
-
-:::docofeedback
-
-It may be beneficial to have a section on privacy.
-A person using talon may not be familiar with the command history feature, and therefore not realize that the last fifty commands
-would be viewable by someone else.
-
-Also to highlight the vulnerability caused by the talon platform's open nature and how it runs everything under the
-talon user folder. for example, that there is nothing stopping someone from adding a python file that performs a
-`speech_system.register("phrase", on_phrase)` and logs everything or sends everything to the cloud...
-
-Is there any mechanism in talon beta to lock things down?
+Although this he is called `command history`, it does include other talon items.
+For example, the history shown includes phrases said within dictation mode.
 
 :::
 
@@ -64,5 +50,4 @@ Is there any mechanism in talon beta to lock things down?
 
 | Command           | Description                      |
 | ----------------- | -------------------------------- |
-| `command history` | show the command history         |
 | `talon open log`  | open the talon log for debugging |

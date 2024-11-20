@@ -152,10 +152,9 @@ staycation
 
 This works as the spoken form and written form of the word are the same, and talon can cleverly infer how to recognize the word from its spelling.
 
-:::docofeedback Fact Check
+:::note
 
-Is this correct?
-Does this also happen with other recognition engines?
+This is the case with the conformer speech recognition engine, it may not be the case with others.
 
 :::
 
@@ -196,7 +195,14 @@ for example `copy to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phra
 :::docofeedback
 
 ronzulu: I am unclear about the purpose of `words_to_replace.csv` and how it differs to `vocabulary.talon-list`.
-The default file has the following entries:
+In `vocabulary`, I can specify words or phrases that can be replaced with other words or phrases.
+In `words_to_replace`, I can specify words there can be replaced with other words (or phrases) so
+seems to only provide a subset of the functionality.
+
+Is there some feature of `words_to_replace` that I'm missing? Is there anything that it can be used for that
+can't be done using `vocabulary`?
+
+Not as important, but I'm curious about the default entries in the file:
 
 ```
 January,january
@@ -214,5 +220,7 @@ December,december
 However if I delete the entries from `settings/words_to_replace.csv`, restart talon for good measure, and from dictation mode say
 any of those, the text is inserted correctly capitalized. For example when saying "I wonder what I'll be doing in December"
 the word December is correctly capitalized.
+
+https://talonvoice.slack.com/archives/C9LG0U0UQ/p1732093647088639
 
 :::

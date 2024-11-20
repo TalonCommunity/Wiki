@@ -16,14 +16,8 @@ There are a number of ways of [customizing talon](../overview.md). A key method 
 TalonScript are files with a `.talon` extension. And though they can be stored anywhere in your [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory),
 you may wish to keep them in a `my-talon` subdirectory as a way to [manage your customizations](../managing-customizations.md).
 
-In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change.
+In general Talon will automatically pick up and apply any changes to files in your Talon user directory, so you don't have to restart Talon each time you make a change.
 
-:::docofeedback Fact Check
-
-The original wording only mentioned changes to `.talon` or `.py`.
-However, this seems to also apply to `.talon-list` and `.csv` files as well.
-
-:::
 
 ## `.talon` File Syntax
 
