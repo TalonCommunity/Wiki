@@ -12,6 +12,10 @@ The beta version of Talon is available for Windows, Mac, and Linux, and provides
 
 ## Features of Talon Beta
 
+:::tip talon beta = "Talon Professional"
+
+:::
+
 1. New: Whisper hybrid speech recognition engine.
 1. New: Talon Menu -> Scripting -> Debug Window.
 1. New: deck() support for Elgato Stream Deck in .talon files.
