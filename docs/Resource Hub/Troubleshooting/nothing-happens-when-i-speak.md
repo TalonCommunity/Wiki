@@ -1,0 +1,140 @@
+# Nothing Happens When I Speak
+
+If you are testing your setup with one of the [basic commands](/docs/Basic%20Usage/basic_usage.md) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.
+
+## F1: Flowchart
+
+```mermaid
+graph TD;
+    start@{ shape: stadium, label: "F1: Flowchart"}
+
+    start-->S1
+    S1{S1: Is the talon platform running?}
+
+    S1-- No ---S2
+    S2[S2: Start Talon]
+
+    S1-- Yes ---S3
+    S3{S3: Is talon using the correct microphone?}
+
+    S3-- No ---S4
+    S4[S4: Select correct microphone]
+
+    S3-- Yes ---S5
+    S5{S5: Is talon awake?}
+
+    S5-- No ---S6
+    S6[S6: Set command mode]
+
+    S5-- Yes ---S7
+    S7{S7: Is PC recognizing sound input?}
+
+    S7-- No ---S8
+    S8[S8: Troubleshoot sound system]
+
+    S7-- Yes ---S9
+    S9{S9: Is talon community installed?}
+
+    S9-- No ---S10
+    S10[S10: Install talon community]
+
+    S9-- Yes ---check-sound-quality
+    check-sound-quality@{ shape: stadium, label: "Check Sound Quality"}
+
+    S2-->try-again
+    S4-->try-again
+    S6-->try-again
+    S8-->try-again
+    try-again@{ shape: stadium, label: "Try Again"}
+```
+
+
+## S1: Check that Talon is Running
+
+Look for the Talon icon in the menubar.
+
+<details>
+<summary role="button">Mac</summary>
+<p>
+Talon's icon should show up in the menu bar in the upper right corner of your screen:
+</p>
+<img src="/img/talon_ui/talon_menubar_awake.png"
+     alt="screenshot of the desktop on a mac showing the talon icon in the top right menubar"
+ />
+</details>
+
+## S2: Start Talon
+
+:::docotodo
+
+:::
+
+## S3: Check that Talon is using the Correct Microphone
+
+You can check that Talon is using the correct microphone by clicking the Talon icon in the menu bar.
+
+<details>
+<summary role="button">Mac</summary>
+<p>
+Talon's icon should show up in the menu bar in the upper right corner of your screen:
+</p>
+<img src="/img/talon_ui/talon_menu_microphone.png"
+     alt="screenshot of the desktop on a mac showing the talon microphone menu"
+ />
+</details>
+
+You can also check which which microphone is selected by looking in the talon logs, which are located in `~/.talon/talon.log`. Look for a log that looks like this:
+
+`2020-03-04 15:27:53  INFO Activating Microphone: "Yeti Nano Analogue Stereo"`
+
+If it's the wrong one, use the menu in the app tray to change it.
+
+## S5: Check that Talon is Awake
+
+When Talon is running, it will be in one of a few different [modes](/docs/Basic%20Usage/basic_usage.md). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
+
+If you are trying to use Talon commands and Talon is not responding, make sure Talon is not in sleep mode. The Talon icon in the menubar provides some visual cue as to what mode Talon is in:
+
+<details>
+<summary role="button">Mac</summary>
+
+| Talon Is Listening                                                                                                                          | Talon Is Not Listening                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="/img/talon_ui/talon_menubar_awake.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> | <img src="/img/talon_ui/talon_menubar_asleep.png" alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"/> |
+
+</details>
+
+
+## S7: Check that the PC Is Recognizing Sound Input
+
+Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (talon, talon configuration, speech engine, etc).
+
+Check that your computer is using the correct microphone and receiving sound input.
+
+<details>
+<summary role="button">Mac</summary>
+<p>
+Open System Preferences > Sound > Input. Check that the correct input device is selected and speak into the microphone. Watch the Input level as you speak; you should see the level rising and falling.
+</p>
+<img src="/img/resource_hub/sound_input_mac.gif"
+     alt="gif of sound input window in system preferences on a Mac with input level moving"
+ />
+</details>
+
+<details>
+<summary role="button">Windows</summary>
+<p>
+Select Start > Settings > System > Sound. In Sound settings, go to Input > Test your microphone. Verify that the correct input device is selected and speak into the microphone. Look for a blue bar that should rise and fall as you speak.
+</p>
+</details>
+
+## S8: Tips for Travel Shooting the Sound System
+
+If you are not receiving any sound input, check your ancillary microphone equipment (cables, interfaces, preamps, etc.).
+
+- Check your cables and connections.
+- Check your adapters and/or audio interfaces if you are using them. Examples: Shure X2U XLR-to-USB signal adapter or the DPA d:vice mobile audio interface. Check that they are connected properly and check any settings on the device, e.g., volume, gain, etc.
+- Ensure your microphone is not muted.
+- Ensure that the microphone is pointed at the mouth. This points the axis of maximum sensitivity toward your mouth for best voice isolation (reducing background noise). Some microphones require more careful placement than others.
+- Place the microphone at a consistent distance away from your mouth. For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic). A proper placement eliminates wind noises from breathing and loud sounds.
+
