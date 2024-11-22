@@ -121,3 +121,19 @@ terminal
 :::docotodo
 Fix all references to `(https://github.com/talonhub/community/tree`
 :::
+
+# Privacy
+
+
+It may be beneficial to have a section on privacy.
+A person using talon may not be familiar with the command history feature, and therefore not realize that the last fifty commands
+would be viewable by someone else.
+
+Also to highlight the vulnerability caused by the talon platform's open nature and how it runs everything under the
+talon user folder. for example, that there is nothing stopping someone from adding a python file that performs a
+`speech_system.register("phrase", on_phrase)` and logs everything or sends everything to the cloud...
+
+Is there any mechanism in talon beta to lock things down?
+
+
+

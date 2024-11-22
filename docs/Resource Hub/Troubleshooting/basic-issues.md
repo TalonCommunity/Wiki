@@ -10,103 +10,64 @@ graph TB
     start-->S1
 
     S1{S1: Does talon respond at all?}
-    S1-- No ---G1
-    S1-- Yes ---G4
+    S1-- No ---group_audio_presence
+    S1-- Yes ---group_audio_quality
 
-    subgraph G1["Audio Input Presence"]
+    subgraph group_audio_presence["Audio Input Presence"]
         direction LR
         F1A[Flowchart F1: Check audio input presence]
         F1A-->F1B
         F1B{Any relevant corrective action taken?}
-        F1B-- Yes ---recheck1
+        F1B-- Yes ---recheck1[Recheck talon]
         F1B-- No (not needed, audio input is present) ---next1
-        next1[Check: Talon Platform]
+        next1[Next: Check Talon Platform]
     end
-    G1-- (audio input is present) ---G2
+    group_audio_presence-->group_talon_platform
 
-    subgraph G2["Talon Platform"]
+    subgraph group_talon_platform["Check Talon Platform"]
         F2A[Flowchart F2: Check Talon platform running]
         F2A-->F2B
         F2B{Any relevant corrective action taken?}
-        F2B-- Yes ---recheck2
+        F2B-- Yes ---recheck2[Recheck talon]
         F2B-- No (not needed, talon platform running) ---next2
-        next2[Check: Talon Community]
+        next2[Next: Check Talon Community]
     end
-    G2-- (talon platform running) ---G3
+    group_talon_platform-->group_talon_community
 
-    subgraph G3["Talon Community"]
+    subgraph group_talon_community["Check Talon Community"]
         F3A[Flowchart F3: Check Talon community running]
         F3A-->F3B
         F3B{Any relevant corrective action taken?}
-        F3B-- Yes ---recheck3
-        F3B-- No (not needed, talon community running) ---next4
-        next3[Check: Audio Input Quality]
+        F3B-- Yes ---recheck3[Recheck talon]
+        F3B-- No (no solution offered) ---ask_for_help1
+        ask_for_help1[Asks for help]
     end
     %% the following link is "invisible" and is only present for improving the layout %%
-    G3 ~~~ G4
+    group_talon_community ~~~ group_audio_quality
 
-    subgraph G4["Audio Input Quality"]
+    subgraph group_audio_quality["Audio Input Quality"]
         F4A[Flowchart F4: Check audio input quality]
         F4A-->F4B
-        F4B{Any relevant corrective action taken?}
-        F4B-- Yes ---recheck4
+        F4B{Is audio high quality?}
+        F4C{Did flowchart F4 result in any corrective action?}
+        F4C-- Yes ---recheck4[Recheck talon]
+        F4C-- No (no solution offered) ---ask_for_help2
+        ask_for_help2[Asks for help]
+        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
+        F4B-- No ---F4C
     end
-    G4-->finish
+    group_audio_quality-->finish
+    group_audio_quality ~~~ group_recheck_talon
 
-    subgraph G5["Recheck"]
-        something
+    subgraph group_recheck_talon["Recheck Talon"]
+        test{Does talon now perform satisfactorily?}
+        test-- no ---restart
+        test-- yes ---happy_days
+        restart[Troubleshoot from top]
+        happy_days@{ shape: stadium, label: "Happy Days"}
     end
-    G5-->finish
 
     finish@{ shape: stadium, label: "Finish"}
-```
-
-``` 
-graph TD;
-    start@{ shape: stadium, label: "Start"}
-
-    start-->S1
-
-    S1{S1: Does talon respond at all?}
-    S1-- No ---F1A
-
-    subgraph one
-    F1A[Flowchart F1: Check audio input presence]
-    F1A-->F1B
-    F1B{Any relevant corrective action taken?}
-    F1B-- Yes ---check
-    F1B-- No (not needed, audio input is present) ---F2A
-    end
-
-    subgraph two
-    F2A[Flowchart F2: Check Talon platform running]
-    F2A-->F2B
-    F2B{Any relevant corrective action taken?}
-    F2B-- Yes ---check
-    F2B-- No (not needed, talon platform running) ---F3A
-    end
-
-    subgraph three
-    F3A[Flowchart F3: Check Talon community running]
-    F3A-->F3B
-    F3B{Any relevant corrective action taken?}
-    F3B-- Yes ---check
-    F3B-- No (not needed, talon community running) ---F4A
-    end
-
-    subgraph four
-    F4A[Flowchart F4: Check audio input quality]
-    F4A-->F4B
-    F4B{Any relevant corrective action taken?}
-    F4B-- Yes ---check
-    end
-
-    subgraph five
-    check{Is talon working properly now?}
-    check-- No ---start
-    check-- Yes ---finish
-    end
-
 ```
 
 

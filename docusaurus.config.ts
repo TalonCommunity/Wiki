@@ -53,6 +53,9 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  markdown: {
+    mermaid: true,
+  },
   themes: [
     [
       // https://github.com/easyops-cn/docusaurus-search-local
@@ -67,6 +70,7 @@ const config: Config = {
         removeDefaultStemmer: true,
       },
     ],
+    "@docusaurus/theme-mermaid"
   ],
   themeConfig: {
     // Replace with your project's social card
