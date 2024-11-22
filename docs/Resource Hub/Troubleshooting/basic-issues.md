@@ -13,51 +13,50 @@ graph TB
     S1-- No ---group_audio_presence
     S1-- Yes ---group_audio_quality
 
-    subgraph group_audio_presence["Audio Input Presence"]
+    subgraph group_audio_presence["Check Audio Input Presence"]
         direction LR
-        F1A[Flowchart F1: Check audio input presence]
-        F1A-->F1B
-        F1B{Any relevant corrective action taken?}
-        F1B-- Yes ---recheck1[Recheck talon]
-        F1B-- No (not needed, audio input is present) ---next1
+        F1A{S1: Is audio input present?}
+        F1A-- No ---F1B
+        F1A-- Yes ---next1
+        F1B[S2: Perform PC audio troubleshooting]
+        F1B-->F1C
+        F1C{Did this succeed?}
+        F1C-- No ---ask_for_help1
+        F1C-- Yes ---next1
+        ask_for_help1[Ask for help]
         next1[Next: Check Talon Platform]
     end
     group_audio_presence-->group_talon_platform
 
     subgraph group_talon_platform["Check Talon Platform"]
-        F2A[Flowchart F2: Check Talon platform running]
-        F2A-->F2B
-        F2B{Any relevant corrective action taken?}
-        F2B-- Yes ---recheck2[Recheck talon]
-        F2B-- No (not needed, talon platform running) ---next2
+        direction LR
+        F2A{S3: Is talon platform running?}
+        F2A-- No ---F2B
+        F2A-- Yes ---next2
+        F2B[S4: Start talon]
+        F2B-->F2C
+        F2C{Did this succeed?}
+        F2C-- No ---ask_for_help2
+        F2C-- Yes ---next2
+        ask_for_help2[Ask for help]
         next2[Next: Check Talon Community]
     end
     group_talon_platform-->group_talon_community
 
     subgraph group_talon_community["Check Talon Community"]
-        F3A[Flowchart F3: Check Talon community running]
-        F3A-->F3B
-        F3B{Any relevant corrective action taken?}
-        F3B-- Yes ---recheck3[Recheck talon]
-        F3B-- No (no solution offered) ---ask_for_help1
-        ask_for_help1[Asks for help]
+        direction LR
+        _F3A{S5: Is talon community running?}
+        _F3A-- No ---_F3B
+        _F3A-- Yes ---next3
+        _F3B[S4: Install talon community]
+        _F3B-->_F3C
+        _F3C{Did this succeed?}
+        _F3C-- No ---ask_for_help3
+        _F3C-- Yes ---next3
+        ask_for_help3[Ask for help]
+        next3[Next: Recheck Talon]
     end
-    %% the following link is "invisible" and is only present for improving the layout %%
-    group_talon_community ~~~ group_audio_quality
-
-    subgraph group_audio_quality["Audio Input Quality"]
-        F4A[Flowchart F4: Check audio input quality]
-        F4A-->F4B
-        F4B{Is audio high quality?}
-        F4C{Did flowchart F4 result in any corrective action?}
-        F4C-- Yes ---recheck4[Recheck talon]
-        F4C-- No (no solution offered) ---ask_for_help2
-        ask_for_help2[Asks for help]
-        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
-        F4B-- No ---F4C
-    end
-    group_audio_quality-->finish
-    group_audio_quality ~~~ group_recheck_talon
+    group_talon_community-->group_recheck_talon
 
     subgraph group_recheck_talon["Recheck Talon"]
         test{Does talon now perform satisfactorily?}
@@ -66,6 +65,22 @@ graph TB
         restart[Troubleshoot from top]
         happy_days@{ shape: stadium, label: "Happy Days"}
     end
+    %% the following link is "invisible" and is only present for improving the layout %%
+    group_recheck_talon ~~~ group_audio_quality
+
+    subgraph group_audio_quality["Audio Input Quality"]
+        F4A[Flowchart F4: Check audio input quality]
+        F4A-->F4B
+        F4B{Is audio high quality?}
+        F4C{Did flowchart F4 result in any corrective action?}
+        F4C-- Yes ---recheck4[Recheck talon]
+        F4C-- No (no solution offered) ---ask_for_help4
+        ask_for_help4[Asks for help]
+        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
+        F4B-- No ---F4C
+    end
+    group_audio_quality-->finish
+
 
     finish@{ shape: stadium, label: "Finish"}
 ```
