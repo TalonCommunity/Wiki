@@ -12,52 +12,70 @@ graph TB
     start-->S1
 
     S1{Does talon 
-    respond at all?}
-    S1-- No ---group_talon_functional
-    S1-- Yes ---group_audio_quality
+        respond at all?}
+    S1-- No ---g1_talon_functional
+    S1-- Yes ---g2_audio_quality
 
-    subgraph group_talon_functional["Talon Working Functionally"]
-        talon_working_functionally[F2: Get talon working functionally]
-        talon_working_functionally-->test
+    subgraph g1_talon_functional["Talon Working Functionally"]
+        g1_start@{ shape: stadium, label: "Start"}
+        g1_start-->g1_step1
 
-        test{Does talon now 
-        perform satisfactorily?}
-        test-- yes ---happy_days1
-        test-- no ---next_audio_quality
-        next_audio_quality[Next: Check 
-        audio input quality]
-        happy_days1@{ shape: stadium, label: "Happy Days"}
-        happy_days1-- Potentially happier days ---next_audio_quality
+        g1_step1[F2: Get talon working functionally]
+        g1_step1-->g1_test
+
+        g1_test{Does talon now 
+            perform satisfactorily?}
+        g1_test-- yes ---g1_happy_days
+        g1_test-- no ---g1_next
+
+        g1_next@{ shape: stadium, label: "Next: Check 
+            audio input quality"}
+
+        g1_happy_days@{ shape: flag, label: "Happy Days"}
+        g1_happy_days-- Potentially happier days ---g1_next
     end
 
-    subgraph group_audio_quality["Audio Input Quality"]
+    subgraph g2_audio_quality["Audio Input Quality"]
         direction TB
-        F4A[S7: Check 
+        g2_start@{ shape: stadium, label: "Start"}
+        g2_start-->g2_check
+
+        g2_check[S7: Check 
             audio input quality]
 
-        F4A-->F4B
+        g2_check-->g2_q1
 
-        F4B{Is audio 
+        g2_q1{Is audio 
             high quality?}
-        F4B-- No ---F4C
-        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
+        g2_q1-- No ---g2_q2
+        g2_q1-- Yes ---g2_next[Next: Explore Talon Accuracy Tips]
 
-        F4C[S8: Perform audio quality improvement tips]
-        F4C-->F4D
+        g2_q2[S8: Perform audio quality improvement tips]
+        g2_q2-->g2_q3
 
-        F4D{Does Talon now perform satisfactorily?}
-        F4D-- Yes ---happy_days4
-        F4D-- No ---talon_accuracy
-        happy_days4@{ shape: stadium, label: "Happy Days"}
-        happy_days4-- Potentially happier days ---talon_accuracy
+        g2_q3{Does Talon now perform satisfactorily?}
+        g2_q3-- Yes ---g2_happy_days
+        g2_q3-- No ---g2_next
+
+        g2_happy_days@{ shape: flag, label: "Happy Days"}
+        g2_happy_days-- Potentially happier days ---g2_next
+
+        g2_next@{ shape: stadium, label: "Next: Explore Talon Accuracy Tips"}
     end
     %% the following link is "invisible" and is only present for improving the layout %%
-    group_talon_functional ~~~ group_audio_quality
+    g1_talon_functional ~~~ g2_audio_quality
 
-    group_talon_functional-->group_audio_quality
+    g1_talon_functional-- Next ---g2_audio_quality
 
 
 ```
+
+:::tip
+
+Once you have completed the steps above and talon is working functionally, you can attempt to
+[improve the recognition accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy.md).
+
+:::
 
 ## Flowchart 2: Getting talon working functionally
 
@@ -65,138 +83,72 @@ graph TB
 ```mermaid
 graph TB
     start@{ shape: stadium, label: "Start"}
-    start-->group_audio_presence
+    start-->g1_audio_presence
 
-    subgraph group_audio_presence["Check Audio Input Presence"]
+    subgraph g1_audio_presence["Check Audio Input Presence"]
         direction LR
-        F1A{S1: Is audio input present?}
-        F1A-- No ---F1B
-        F1A-- Yes ---next1
-        F1B[S2: Perform PC audio troubleshooting]
-        F1B-->F1C
-        F1C{Did this succeed?}
-        F1C-- No ---ask_for_help1
-        F1C-- Yes ---next1
-        ask_for_help1[Ask for help]
-        next1[Next: Check Talon Platform]
+        g1_start@{ shape: stadium, label: "Start"}
+        g1_start-->g1_q1
+
+        g1_q1{S1: Is audio input present?}
+        g1_q1-- No ---g1_step1
+        g1_q1-- Yes ---g1_next
+
+        g1_step1[S2: Perform PC audio troubleshooting]
+        g1_step1-->g1_q2
+
+        g1_q2{Did this succeed?}
+        g1_q2-- No ---g1_ask_for_help
+        g1_q2-- Yes ---g1_next
+
+        g1_ask_for_help[Ask for help]
+        g1_next[Next: Check Talon Platform]
     end
-    group_audio_presence-->group_talon_platform
+    g1_audio_presence-->g2_talon_platform
 
-    subgraph group_talon_platform["Check Talon Platform"]
+    subgraph g2_talon_platform["Check Talon Platform"]
         direction LR
-        F2A{S3: Is talon platform running?}
-        F2A-- No ---F2B
-        F2A-- Yes ---next2
-        F2B[S4: Start talon]
-        F2B-->F2C
-        F2C{Did this succeed?}
-        F2C-- No ---ask_for_help2
-        F2C-- Yes ---next2
-        ask_for_help2[Ask for help]
-        next2[Next: Check Talon Community]
+        g2_start@{ shape: stadium, label: "Start"}
+        g2_start-->g2_q1
+
+        g2_q1{S3: Is talon platform running?}
+        g2_q1-- No ---g2_step1
+        g2_q1-- Yes ---g2_next
+
+        g2_step1[S4: Start talon]
+        g2_step1-->g2_q2
+
+        g2_q2{Did this succeed?}
+        g2_q2-- No ---g2_ask_for_help
+        g2_q2-- Yes ---g2_next
+        g2_ask_for_help[Ask for help]
+        g2_next[Next: Check Talon Community]
     end
-    group_talon_platform-->group_talon_community
+    g2_talon_platform-->g3_talon_community
 
-    subgraph group_talon_community["Check Talon Community"]
+    subgraph g3_talon_community["Check Talon Community"]
         direction LR
-        _F3A{S5: Is talon community running?}
-        _F3A-- No ---_F3B
-        _F3A-- Yes ---next3
-        _F3B[S4: Install talon community]
-        _F3B-->_F3C
-        _F3C{Did this succeed?}
-        _F3C-- No ---ask_for_help3
-        _F3C-- Yes ---next3
-        ask_for_help3[Ask for help]
+        g3_start@{ shape: stadium, label: "Start"}
+        g3_start-->g3_q1
+
+        g3_q1{S5: Is talon community running?}
+        g3_q1-- No ---g3_step1
+        g3_q1-- Yes ---next3
+
+        g3_step1[S4: Install talon community]
+        g3_step1-->g3_q2
+
+        g3_q2{Did this succeed?}
+        g3_q2-- No ---g3_ask_for_help
+        g3_q2-- Yes ---next3
+
+        g3_ask_for_help[Ask for help]
         next3@{ shape: stadium, label: "Continue"}
     end
-    group_talon_community-->continue
+
+    g3_talon_community-->continue
     continue@{ shape: stadium, label: "Continue on main flowchart"}
 ```
----
-
-
-```mermaid
-graph TB
-    start@{ shape: stadium, label: "Start"}
-    start-->S1
-
-    S1{S1: Does talon respond at all?}
-    S1-- No ---group_audio_presence
-    S1-- Yes ---group_audio_quality
-
-    subgraph group_audio_presence["Check Audio Input Presence"]
-        direction LR
-        F1A{S1: Is audio input present?}
-        F1A-- No ---F1B
-        F1A-- Yes ---next1
-        F1B[S2: Perform PC audio troubleshooting]
-        F1B-->F1C
-        F1C{Did this succeed?}
-        F1C-- No ---ask_for_help1
-        F1C-- Yes ---next1
-        ask_for_help1[Ask for help]
-        next1[Next: Check Talon Platform]
-    end
-    group_audio_presence-->group_talon_platform
-
-    subgraph group_talon_platform["Check Talon Platform"]
-        direction LR
-        F2A{S3: Is talon platform running?}
-        F2A-- No ---F2B
-        F2A-- Yes ---next2
-        F2B[S4: Start talon]
-        F2B-->F2C
-        F2C{Did this succeed?}
-        F2C-- No ---ask_for_help2
-        F2C-- Yes ---next2
-        ask_for_help2[Ask for help]
-        next2[Next: Check Talon Community]
-    end
-    group_talon_platform-->group_talon_community
-
-    subgraph group_talon_community["Check Talon Community"]
-        direction LR
-        _F3A{S5: Is talon community running?}
-        _F3A-- No ---_F3B
-        _F3A-- Yes ---next3
-        _F3B[S4: Install talon community]
-        _F3B-->_F3C
-        _F3C{Did this succeed?}
-        _F3C-- No ---ask_for_help3
-        _F3C-- Yes ---next3
-        ask_for_help3[Ask for help]
-        next3[Next: Recheck Talon]
-    end
-    group_talon_community-->group_talon_functional
-
-    subgraph group_talon_functional["Recheck Talon"]
-        test{Does talon now perform satisfactorily?}
-        test-- no ---restart
-        test-- yes ---happy_days
-        restart[Troubleshoot from top]
-        happy_days@{ shape: stadium, label: "Happy Days"}
-    end
-    %% the following link is "invisible" and is only present for improving the layout %%
-    group_talon_functional ~~~ group_audio_quality
-
-    subgraph group_audio_quality["Audio Input Quality"]
-        F4A[Flowchart F4: Check audio input quality]
-        F4A-->F4B
-        F4B{Is audio high quality?}
-        F4C{Did flowchart F4 result in any corrective action?}
-        F4C-- Yes ---recheck4[Recheck talon]
-        F4C-- No (no solution offered) ---ask_for_help4
-        ask_for_help4[Asks for help]
-        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
-        F4B-- No ---F4C
-    end
-    group_audio_quality-->finish
-
-
-    finish@{ shape: stadium, label: "Finish"}
-```
-
 
 ## Nothing Happens When I Speak
 
