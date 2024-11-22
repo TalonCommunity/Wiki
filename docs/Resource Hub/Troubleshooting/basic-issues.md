@@ -16,7 +16,7 @@ graph TB
     S1-- No ---group_talon_functional
     S1-- Yes ---group_audio_quality
 
-    subgraph group_talon_functional["Talon Functional"]
+    subgraph group_talon_functional["Talon Working Functionally"]
         talon_working_functionally[F2: Get talon working functionally]
         talon_working_functionally-->test
 
@@ -27,6 +27,7 @@ graph TB
         next_audio_quality[Next: Check 
         audio input quality]
         happy_days1@{ shape: stadium, label: "Happy Days"}
+        happy_days1-- Potentially happier days ---next_audio_quality
     end
 
     subgraph group_audio_quality["Audio Input Quality"]
@@ -64,11 +65,7 @@ graph TB
 ```mermaid
 graph TB
     start@{ shape: stadium, label: "Start"}
-    start-->S1
-
-    S1{S1: Does talon respond at all?}
-    S1-- No ---group_audio_presence
-    S1-- Yes ---group_audio_quality
+    start-->group_audio_presence
 
     subgraph group_audio_presence["Check Audio Input Presence"]
         direction LR
@@ -111,36 +108,13 @@ graph TB
         _F3C-- No ---ask_for_help3
         _F3C-- Yes ---next3
         ask_for_help3[Ask for help]
-        next3[Next: Recheck Talon]
+        next3@{ shape: stadium, label: "Continue"}
     end
-    group_talon_community-->group_talon_functional
-
-    subgraph group_talon_functional["Recheck Talon"]
-        test{Does talon now perform satisfactorily?}
-        test-- no ---restart
-        test-- yes ---happy_days
-        restart[Troubleshoot from top]
-        happy_days@{ shape: stadium, label: "Happy Days"}
-    end
-    %% the following link is "invisible" and is only present for improving the layout %%
-    group_talon_functional ~~~ group_audio_quality
-
-    subgraph group_audio_quality["Audio Input Quality"]
-        F4A[Flowchart F4: Check audio input quality]
-        F4A-->F4B
-        F4B{Is audio high quality?}
-        F4C{Did flowchart F4 result in any corrective action?}
-        F4C-- Yes ---recheck4[Recheck talon]
-        F4C-- No (no solution offered) ---ask_for_help4
-        ask_for_help4[Asks for help]
-        F4B-- Yes ---talon_accuracy[Next: Explore Talon Accuracy Tips]
-        F4B-- No ---F4C
-    end
-    group_audio_quality-->finish
-
-
-    finish@{ shape: stadium, label: "Finish"}
+    group_talon_community-->continue
+    continue@{ shape: stadium, label: "Continue on main flowchart"}
 ```
+---
+
 
 ```mermaid
 graph TB
