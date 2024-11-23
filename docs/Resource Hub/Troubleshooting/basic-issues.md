@@ -20,7 +20,7 @@ graph TB
         g1_start@{ shape: stadium, label: "Start"}
         g1_start-->g1_step1
 
-        g1_step1[F2: Get talon working functionally]
+        g1_step1[Flowchart 2: Get talon working functionally]
         g1_step1-->g1_test
 
         g1_test{Does talon now 
@@ -79,7 +79,6 @@ Once you have completed the steps above and talon is working functionally, you c
 
 ## Flowchart 2: Getting talon working functionally
 
-
 ```mermaid
 graph TB
     start@{ shape: stadium, label: "Start"}
@@ -90,7 +89,7 @@ graph TB
         g1_start@{ shape: stadium, label: "Start"}
         g1_start-->g1_q1
 
-        g1_q1{S1: Is audio input present?}
+        g1_q1{S1: Is the PC Is recognizing sound input?}
         g1_q1-- No ---g1_step1
         g1_q1-- Yes ---g1_next
 
@@ -111,18 +110,36 @@ graph TB
         g2_start@{ shape: stadium, label: "Start"}
         g2_start-->g2_q1
 
-        g2_q1{S3: Is talon platform running?}
+        g2_q1{S3: 
+            Talon 
+            platform 
+            running?}
         g2_q1-- No ---g2_step1
-        g2_q1-- Yes ---g2_next
+        g2_q1-- Yes ---g2_step2
 
-        g2_step1[S4: Start talon]
+        g2_step1[S4: 
+            Start 
+            talon]
         g2_step1-->g2_q2
 
-        g2_q2{Did this succeed?}
+        g2_q2{ok?}
+        g2_q2-- Yes ---g2_step2
+
+        g2_step2[S5: 
+            Enure correct 
+            microphone 
+            selected]
+        g2_step2-->g2_step3
+
+        g2_step3[S6: 
+            Enure talon awake]
+        g2_step3-->g2_next
+
         g2_q2-- No ---g2_ask_for_help
-        g2_q2-- Yes ---g2_next
         g2_ask_for_help[Ask for help]
-        g2_next[Next: Check Talon Community]
+        g2_next[Next: 
+            Check Talon 
+            Community]
     end
     g2_talon_platform-->g3_talon_community
 
@@ -150,9 +167,73 @@ graph TB
     continue@{ shape: stadium, label: "Continue on main flowchart"}
 ```
 
+
+
+## S1: Is the PC Is Recognizing Sound Input?
+
+Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (talon, talon configuration, speech engine, etc).
+
+Check that your computer is using the correct microphone and receiving sound input.
+
+<details>
+<summary role="button">Mac</summary>
+<p>
+Open System Preferences > Sound > Input. Check that the correct input device is selected and speak into the microphone. Watch the Input level as you speak; you should see the level rising and falling.
+</p>
+<img src="/img/resource_hub/sound_input_mac.gif"
+     alt="gif of sound input window in system preferences on a Mac with input level moving"
+ />
+</details>
+
+<details>
+<summary role="button">Windows</summary>
+<p>
+Select Start > Settings > System > Sound. In Sound settings, go to Input > Test your microphone. Verify that the correct input device is selected and speak into the microphone. Look for a blue bar that should rise and fall as you speak.
+</p>
+</details>
+
+
+## S2: Tips for PC audio troubleshooting
+
+If you are not receiving any sound input, check your ancillary microphone equipment (cables, interfaces, preamps, etc.).
+
+- Ensure your microphone is not muted.
+- Check your cables and connections.
+- Check your adapters and/or audio interfaces if you are using them. Examples: Shure X2U XLR-to-USB signal adapter or the DPA d:vice mobile audio interface. Check that they are connected properly and check any settings on the device, e.g., volume, gain, etc.
+- Ensure that the microphone is pointed at the mouth. This points the axis of maximum sensitivity toward your mouth for best voice isolation (reducing background noise). Some microphones require more careful placement than others.
+- Place the microphone at a consistent distance away from your mouth. For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic). A proper placement eliminates wind noises from breathing and loud sounds.
+
+
+## S3: Check that Talon Platform is Operational
+
+Look for the Talon icon in the menubar.
+
+<details>
+<summary role="button">Mac</summary>
+<p>
+Talon's icon should show up in the menu bar in the upper right corner of your screen:
+</p>
+<img src="/img/talon_ui/talon_menubar_awake.png"
+     alt="screenshot of the desktop on a mac showing the talon icon in the top right menubar"
+ />
+</details>
+
+## S4: Make the Talon Platform Operational
+
+### Start Talon
+
+:::docotodo
+
+:::
+
+
+
 ## Nothing Happens When I Speak
 
 If you are testing your setup with one of the [basic commands](/docs/Basic%20Usage/basic_usage.md) and getting no response at all, [follow this flow chart to start off with](./nothing-happens-when-i-speak.md).
+
+
+
 
 ## TODO
 

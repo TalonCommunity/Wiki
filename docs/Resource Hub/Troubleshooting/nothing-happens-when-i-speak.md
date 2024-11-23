@@ -49,25 +49,6 @@ graph TD;
 ```
 
 
-## S1: Check that Talon is Running
-
-Look for the Talon icon in the menubar.
-
-<details>
-<summary role="button">Mac</summary>
-<p>
-Talon's icon should show up in the menu bar in the upper right corner of your screen:
-</p>
-<img src="/img/talon_ui/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showing the talon icon in the top right menubar"
- />
-</details>
-
-## S2: Start Talon
-
-:::docotodo
-
-:::
 
 ## S3: Check that Talon is using the Correct Microphone
 
@@ -104,37 +85,4 @@ If you are trying to use Talon commands and Talon is not responding, make sure T
 
 </details>
 
-
-## S7: Check that the PC Is Recognizing Sound Input
-
-Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (talon, talon configuration, speech engine, etc).
-
-Check that your computer is using the correct microphone and receiving sound input.
-
-<details>
-<summary role="button">Mac</summary>
-<p>
-Open System Preferences > Sound > Input. Check that the correct input device is selected and speak into the microphone. Watch the Input level as you speak; you should see the level rising and falling.
-</p>
-<img src="/img/resource_hub/sound_input_mac.gif"
-     alt="gif of sound input window in system preferences on a Mac with input level moving"
- />
-</details>
-
-<details>
-<summary role="button">Windows</summary>
-<p>
-Select Start > Settings > System > Sound. In Sound settings, go to Input > Test your microphone. Verify that the correct input device is selected and speak into the microphone. Look for a blue bar that should rise and fall as you speak.
-</p>
-</details>
-
-## S8: Tips for Travel Shooting the Sound System
-
-If you are not receiving any sound input, check your ancillary microphone equipment (cables, interfaces, preamps, etc.).
-
-- Check your cables and connections.
-- Check your adapters and/or audio interfaces if you are using them. Examples: Shure X2U XLR-to-USB signal adapter or the DPA d:vice mobile audio interface. Check that they are connected properly and check any settings on the device, e.g., volume, gain, etc.
-- Ensure your microphone is not muted.
-- Ensure that the microphone is pointed at the mouth. This points the axis of maximum sensitivity toward your mouth for best voice isolation (reducing background noise). Some microphones require more careful placement than others.
-- Place the microphone at a consistent distance away from your mouth. For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic). A proper placement eliminates wind noises from breathing and loud sounds.
 

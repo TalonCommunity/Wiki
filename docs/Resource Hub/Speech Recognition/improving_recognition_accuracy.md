@@ -6,6 +6,126 @@ sidebar_position: 6
 
 Improving recognition accuracy never hurts. Many people even have to tweak something to get a good experience. Here we show you what you can do.
 
+```mermaid
+flowchart
+
+  subgraph Overall Process
+
+    audio_to_applications[On the PC, 
+      the digital audio sent
+      to applications]
+    audio_to_applications --> speech_recognition
+    
+    speech[Speech]
+    speech --> audio_microphone_hears
+
+    audio_microphone_hears[The sound the
+      microphone hears]
+    audio_microphone_hears --> audio_to_applications
+
+    speech_recognition[Speech Recognition]
+    speech_recognition --> utterance_interpretation
+
+    utterance_interpretation[Utterance Interpretation
+      and PC control]
+  end
+```
+
+## The sound the microphone hears
+
+
+```mermaid
+flowchart
+
+  subgraph " "
+    direction TB
+
+    accents[Accents]
+    accents --> speech
+
+    clear_pronunciation[Clear pronunciation]
+    clear_pronunciation --> speech
+
+    microphone_positioning[Microphone Positioning]
+    microphone_positioning --> audio_microphone_hears
+
+    posture[Posture]
+    posture --> audio_microphone_hears
+
+    speech[Speech]
+    speech --> audio_microphone_hears
+
+    background_noise[Background noise]
+    background_noise --> audio_microphone_hears
+
+    audio_microphone_hears[Audio microphone hears]
+  end
+```
+
+## Digital audio sent to the applications
+
+
+```mermaid
+flowchart
+  subgraph audio [" "]
+    direction TB
+    audio_microphone_hears["Audio microphone hears"]
+    audio_microphone_hears --> audio_microphone_outputs
+
+    noise_cancellation["Any noise 
+      cancellation features"]
+    noise_cancellation --> audio_microphone_outputs
+
+    microphone_quality["Microphone quality"]
+    microphone_quality --> audio_microphone_outputs
+
+    microphone_type["Microphone type
+      ~
+      (eg headset, earbud)"]
+    microphone_type --> audio_microphone_outputs
+
+    audio_microphone_outputs[The microphone output]
+    audio_microphone_outputs --> audio_pc_receives
+
+    microphone_pc_connection_type["Microphone/PC 
+      connection type
+      ~
+      (wired USB, wired analog, bluetooth)"]
+    microphone_pc_connection_type --> audio_pc_receives
+
+    audio_pc_receives[Audio PC receives]
+    audio_pc_receives --> app_audio
+
+    pc_audio_controls["PC audio controls
+      (eg gain control)"]
+    pc_audio_controls --> app_audio
+
+    app_audio["Digital audio sent to applications"]
+  end
+```
+
+## Speech recognition and PC control
+
+```mermaid
+flowchart
+  subgraph final_stage [" "]
+    direction TB
+    app_audio[audio sent 
+      to applications]
+    app_audio --> speech_engine
+    speech_engine["Speech Recognition Engine
+      (Conformer or Dragon)"]
+    speech_engine --> talon_platform
+
+    user_file_sets["User File Sets"]
+    user_file_sets --> talon_platform
+    talon_platform["Talon Platform"]
+    talon_platform --> talon_output
+    talon_output["Talon Platform Output"]
+  end
+```
+---
+
 ## Environment
 
 A quiet room will always be better than a noisy one. A good microphone can mitigate this, but sometimes a $0 job will do. Move fans and air filters, rotate your sitting position such that air conditioning is not pointing toward the mic, close a door (and subsitute by taking more breaks for health and ventilation). Move your PC from above desk to below desk, move your PC speakers behind your mic, etc.
