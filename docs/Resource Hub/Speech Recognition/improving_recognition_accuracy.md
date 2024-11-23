@@ -6,15 +6,18 @@ sidebar_position: 6
 
 Improving recognition accuracy never hurts. Many people even have to tweak something to get a good experience. Here we show you what you can do.
 
+## The Overall Process
+
+There are many steps on the way between you speaking and what words are recognized on a PC and
+what is done with those words. Improvements at any step in the process can improve your overall experience of
+using speech recognition as an alternative to a keyboard.
+
+Here is an overview of the process which is detailed in later diagrams.
+
 ```mermaid
 flowchart
 
   subgraph Overall Process
-
-    audio_to_applications[On the PC, 
-      the digital audio sent
-      to applications]
-    audio_to_applications --> speech_recognition
     
     speech[Speech]
     speech --> audio_microphone_hears
@@ -22,6 +25,11 @@ flowchart
     audio_microphone_hears[The sound the
       microphone hears]
     audio_microphone_hears --> audio_to_applications
+
+    audio_to_applications[On the PC, 
+      the digital audio sent
+      to applications]
+    audio_to_applications --> speech_recognition
 
     speech_recognition[Speech Recognition]
     speech_recognition --> utterance_interpretation
@@ -62,6 +70,33 @@ flowchart
   end
 ```
 
+### Environment
+
+A quiet room will always be better than a noisy one. A good microphone can mitigate this, but sometimes a $0 job will do. Move fans and air filters, rotate your sitting position such that air conditioning is not pointing toward the mic, close a door (and subsitute by taking more breaks for health and ventilation). Move your PC from above desk to below desk, move your PC speakers behind your mic, etc.
+
+### Keep a relaxed voice
+
+Ensure that your voice is not tired, which will lead to poorer pronunciation.
+
+- Drink some warm beverages throughout the day: warm water and tea are especially helpful.
+- Try to speak in a natural tone as if you are talking with someone else. At first this will feel a little weird, but speaking in an unatural voice will tire you out quicker.
+- Try to keep your speaking volume consistent and low, quality microphones can easily pick up any volume you talk at. Speaking with low volume should help keep you from getting tired out. You may need to increase the mic gain for optimal results.
+
+### Pronounciation, and/or (non-native) accents
+
+Controlling your computer by voice can be frustrating if your accent isn't recognized well; non-native speakers are especially prone to issues. While Talon's engine is improving with each version, in the meantime we can adapt our pronunciation.
+
+[https://rachelsenglish.com/](https://rachelsenglish.com/) is an excellent resource. It features detailed videos and discussion of the mechanics behind the various sounds. At the risk of saying the obvious: you shouldn't try to change your accent if you don't want to.
+
+### Microphone position
+
+Ensure that the microphone is pointed at the mouth. This points the axis of maximum sensitivity toward your mouth for best voice isolation (reducing background noise). Some microphones require more careful placement than others.
+
+Place the microphone at a consistent distance away from your mouth. 
+- For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. 
+- For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic). A proper placement eliminates wind noises from breathing and loud sounds.
+
+
 ## Digital audio sent to the applications
 
 
@@ -100,7 +135,12 @@ flowchart
       (eg gain control)"]
     pc_audio_controls --> app_audio
 
-    app_audio["Digital audio sent to applications"]
+    app_audio["Digital audio received by speech recognition engine"]
+
+    classDef mainInfoPath fill:#050,stroke-width:2px;
+    class audio_microphone_hears,audio_microphone_outputs,audio_pc_receives,app_audio mainInfoPath;
+
+    linkStyle 0,4,6 stroke:#050,stroke-width:2px,color:red;
   end
 ```
 
@@ -124,29 +164,9 @@ flowchart
     talon_output["Talon Platform Output"]
   end
 ```
----
-
-## Environment
-
-A quiet room will always be better than a noisy one. A good microphone can mitigate this, but sometimes a $0 job will do. Move fans and air filters, rotate your sitting position such that air conditioning is not pointing toward the mic, close a door (and subsitute by taking more breaks for health and ventilation). Move your PC from above desk to below desk, move your PC speakers behind your mic, etc.
-
-## Microphone
+### Microphone
 
 Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](/docs/Resource%20Hub/Hardware/hardware.md) for recommendations and correct setup.
-
-## Keep a relaxed voice
-
-Ensure that your voice is not tired, which will lead to poorer pronunciation.
-
-- Drink some warm beverages throughout the day: warm water and tea are especially helpful.
-- Try to speak in a natural tone as if you are talking with someone else. At first this will feel a little weird, but speaking in an unatural voice will tire you out quicker.
-- Try to keep your speaking volume consistent and low, quality microphones can easily pick up any volume you talk at. Speaking with low volume should help keep you from getting tired out. You may need to increase the mic gain for optimal results.
-
-## Pronounciation, and/or (non-native) accents
-
-Controlling your computer by voice can be frustrating if your accent isn't recognized well; non-native speakers are especially prone to issues. While Talon's engine is improving with each version, in the meantime we can adapt our pronunciation.
-
-[https://rachelsenglish.com/](https://rachelsenglish.com/) is an excellent resource. It features detailed videos and discussion of the mechanics behind the various sounds. At the risk of saying the obvious: you shouldn't try to change your accent if you don't want to.
 
 ## Some commands are barely ever recognized, or confused for another command
 
