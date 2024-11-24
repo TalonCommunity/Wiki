@@ -202,18 +202,6 @@ Talon's icon should show up in the menu bar in the upper right corner of your sc
 
 :::
 
-## TODO
-
-:::docotodo
-
-Incorporate the following suggestions from https://github.com/TalonCommunity/Wiki/pull/312#issuecomment-2453041850
-
-:::
-
-
-- Explain the general behavior of how Talon chops up audio into utterances, both the benefits (reduced CPU consumption, command chaining) and the downsides (if the voice activity detector doesn't work in your case it will seem like Talon is not responding at all)
-
-
 ## Talon Crashes During Use
 
 Talon should recover from most errors itself, but if it crashes please report it in the Talon Slack with the output log.

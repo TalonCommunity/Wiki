@@ -95,7 +95,7 @@ A quiet room will always be better than a noisy one. A good microphone can mitig
 
 For the conformer engine, the first step in speech recognition is detecting whether or not voice is present.
 
-Background noise can really confuse the voice activity detection mechanism.
+Background noise can really confuse the voice activity detection mechanism, it may seem like Talon is not responding at all or responding in a haphazard manner.
 
 :::
 
@@ -241,7 +241,8 @@ Usually there is a setting to turn this off but it may take some time to track d
 flowchart
   subgraph final_stage [" "]
     direction TB
-    app_audio[Digital audio]
+    app_audio[Digital audio
+      (from previous diagram)]
     app_audio --> text_output
 
     text_output["Recognition Engine's
