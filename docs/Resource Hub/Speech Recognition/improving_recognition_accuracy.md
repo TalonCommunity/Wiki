@@ -49,30 +49,56 @@ flowchart
     direction TB
 
     accents[Accents]
-    accents --> speech
+    accents --- speech
 
-    clear_pronunciation[Clear pronunciation]
-    clear_pronunciation --> speech
+    clear_pronunciation[Pronunciation]
+    clear_pronunciation --- speech
 
     microphone_positioning[Microphone Positioning]
-    microphone_positioning --> audio_microphone_hears
+    microphone_positioning --- audio_microphone_hears
 
     posture[Posture]
-    posture --> audio_microphone_hears
+    posture --- audio_microphone_hears
 
     speech[Speech]
     speech --> audio_microphone_hears
 
     background_noise[Background noise]
-    background_noise --> audio_microphone_hears
+    background_noise --- audio_microphone_hears
 
-    audio_microphone_hears[Audio microphone hears]
+    audio_microphone_hears[Sound the 
+      microphone hears]
+
+    classDef mainInfoPath fill:#050,stroke-width:2px;
+    class audio_microphone_hears,speech mainInfoPath;
+
+    linkStyle 4 stroke:#050,stroke-width:2px,color:red;
+    linkStyle 0,1,2,3,5 stroke:#fff,color:black,stroke-dasharray: 5 5;
   end
 ```
+
+:::note Green & White
+
+The green shows the main flow of information.
+The white dashed arrows show elements that affect the target.
+
+So in the above, we (ideally) want the microphone to only hear our speech.
+However it is impacted by the listed items such as background noise.
+
+:::
 
 ### Environment
 
 A quiet room will always be better than a noisy one. A good microphone can mitigate this, but sometimes a $0 job will do. Move fans and air filters, rotate your sitting position such that air conditioning is not pointing toward the mic, close a door (and subsitute by taking more breaks for health and ventilation). Move your PC from above desk to below desk, move your PC speakers behind your mic, etc.
+
+:::info Voice Activity Detection
+
+For the conformer engine, the first step in speech recognition is detecting whether or not voice is present.
+
+Background noise can really confuse the voice activity detection mechanism.
+
+:::
+
 
 ### Keep a relaxed voice
 
@@ -96,53 +122,89 @@ Place the microphone at a consistent distance away from your mouth.
 - For headset microphones, most speech recognition documentation recommends that you place the boom of the microphone approximately one inch from your face, pointed at a side corner of your mouth. 
 - For table microphones, somewhere between six and twelve inches works best (unlike a radio moderator, you do not need to eat the mic). A proper placement eliminates wind noises from breathing and loud sounds.
 
+### Posture
 
-## Digital audio sent to the applications
+Perhaps this goes without saying, but don't adopt the [thinker pose](https://en.wikipedia.org/wiki/The_Thinker).
+You might think that you sound the same, but this does effect recognition accuracy.
+
+## Digital audio sent to the speech recognition engine
 
 
 ```mermaid
 flowchart
   subgraph audio [" "]
     direction TB
-    audio_microphone_hears["Audio microphone hears"]
-    audio_microphone_hears --> audio_microphone_outputs
+    audio_microphone_hears["Sound the 
+      microphone hears"]
+    %% link id: 0
+    audio_microphone_hears --> audio_microphone_outputs 
 
     noise_cancellation["Any noise 
       cancellation features"]
-    noise_cancellation --> audio_microphone_outputs
+    %% link id: 1
+    noise_cancellation --- audio_microphone_outputs
 
     microphone_quality["Microphone quality"]
-    microphone_quality --> audio_microphone_outputs
+    %% link id: 2
+    microphone_quality --- audio_microphone_outputs
 
     microphone_type["Microphone type
       ~
-      (eg headset, earbud)"]
-    microphone_type --> audio_microphone_outputs
+      (eg headset, earbud, table)"]
+    %% link id: 3
+    microphone_type --- audio_microphone_outputs
 
-    audio_microphone_outputs[The microphone output]
-    audio_microphone_outputs --> audio_pc_receives
+    audio_microphone_outputs[The microphone's output]
+    %% link id: 4
+    audio_microphone_outputs-- (wired analog 
+      mics only) --> analog_to_digital_converter
+    %% link id: 5
+    audio_microphone_outputs-- (wired USB, 
+      bluetooth mics) --> digital_audio_pc_receives
+
+    analog_to_digital_converter[PC's analog audio 
+      to digital converter]
+    %% link id: 6
+    analog_to_digital_converter --> digital_audio_pc_receives
+
+    sound_card_quality["Sound card quality"]
+    %% link id: 7
+    sound_card_quality --- analog_to_digital_converter
 
     microphone_pc_connection_type["Microphone/PC 
       connection type
       ~
       (wired USB, wired analog, bluetooth)"]
-    microphone_pc_connection_type --> audio_pc_receives
+    %% link id: 8
+    microphone_pc_connection_type --- digital_audio_pc_receives
 
-    audio_pc_receives[Audio PC receives]
-    audio_pc_receives --> app_audio
+    digital_audio_pc_receives[Digital audio PC receives]
+    %% link id: 9
+    digital_audio_pc_receives --> app_audio
 
     pc_audio_controls["PC audio controls
       (eg gain control)"]
-    pc_audio_controls --> app_audio
+    %% link id: 10
+    pc_audio_controls --- app_audio
 
-    app_audio["Digital audio received by speech recognition engine"]
+    app_audio["Digital audio sent to speech recognition engine"]
 
     classDef mainInfoPath fill:#050,stroke-width:2px;
-    class audio_microphone_hears,audio_microphone_outputs,audio_pc_receives,app_audio mainInfoPath;
+    class audio_microphone_hears,audio_microphone_outputs,analog_to_digital_converter,digital_audio_pc_receives,app_audio mainInfoPath;
 
-    linkStyle 0,4,6 stroke:#050,stroke-width:2px,color:red;
+    linkStyle 0,4,5,6,9 stroke:#050,stroke-width:2px;
+    linkStyle 1,2,3,7,8,10 stroke:#fff,stroke-dasharray: 5 5;
+
   end
 ```
+
+### Microphone Quality
+
+Note that Talon is more sensitive to microphone quality than many other speech recognition systems so do not assume that just because, for example, Dragon works fine that Talon will.
+
+For full details on microphone hardware, see this [article](/docs/Resource%20Hub/Hardware/microphones.md).
+
+:::
 
 ## Speech recognition and PC control
 
@@ -150,18 +212,36 @@ flowchart
 flowchart
   subgraph final_stage [" "]
     direction TB
-    app_audio[audio sent 
-      to applications]
-    app_audio --> speech_engine
-    speech_engine["Speech Recognition Engine
-      (Conformer or Dragon)"]
-    speech_engine --> talon_platform
+    app_audio[Digital audio]
+    app_audio --> text_output
 
-    user_file_sets["User File Sets"]
-    user_file_sets --> talon_platform
-    talon_platform["Talon Platform"]
-    talon_platform --> talon_output
+    text_output["Recognition Engine's
+      Text Output"]
+    text_output --> talon_output
+    
+    engine_type["Speech Recognition 
+      Engine Type
+      ~
+      (Conformer, Conformer Beta or Dragon)"]
+    engine_type --- text_output
+
+    talon_platform_version["Talon Platform Version
+      ~
+      eg Standard or Beta"]
+    talon_platform_version --> talon_output
     talon_output["Talon Platform Output"]
+
+    user_file_sets["The Installed Set of
+      User File Sets
+      ~
+      eg Talon Community"]
+    user_file_sets --> talon_output
+
+    classDef mainInfoPath fill:#050,stroke-width:2px;
+    class app_audio,text_output,talon_output mainInfoPath;
+
+    linkStyle 0,1 stroke:#050,stroke-width:2px,color:red;
+    linkStyle 2,3,4 stroke:#fff,color:black,stroke-dasharray: 5 5;
   end
 ```
 ### Microphone

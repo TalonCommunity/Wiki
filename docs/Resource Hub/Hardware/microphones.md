@@ -4,6 +4,12 @@ If in doubt, check out the `#hardware` channel in Slack.
 
 Speech recognition will be vastly improved with a better microphone. Compared to webcams and cheap headsets, a good microphone for speech recognition picks up less background noise (improving your experience whenever you're not alone in a silent room) and will be better at recording a natural-sounding voice.
 
+:::info
+
+Note that Talon is more sensitive to microphone quality than many other speech recognition systems so do not assume that just because, for example, Dragon works fine that Talon will.
+
+:::
+
 ### Model Recommendations
 
 These are models that Talon community members regularly recommend:
