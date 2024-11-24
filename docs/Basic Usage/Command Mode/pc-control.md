@@ -35,10 +35,6 @@ There seems to be commands not described here that are present in:
 `core\windows_and_tabs\window_management.talon`
 
 ```
-window (new | open): app.window_open()
-window next: app.window_next()
-window last: app.window_previous()
-window hide: app.window_hide()
 focus <user.running_applications>: user.switcher_focus(running_applications)
 # following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
 focus$: user.switcher_menu()
@@ -89,6 +85,15 @@ In a couple of the above commands, the screen number is required, which can be f
 | ---------------- | ---------------------------------------------------------------- |
 | `screen numbers` | briefly shows a big number on each screen with its screen number |
 
+## Working with Windows
+
+| Command                           | Destination                             |
+| --------------------------------- | --------------------------------------- |
+| `window (new \| open)`            |                                     |
+| `window next`            |                                     |
+| `window last`            |                                     |
+| `window hide`            |                                     |
+
 ## Working with tabs
 
 | Command           |
@@ -107,18 +112,10 @@ In a couple of the above commands, the screen number is required, which can be f
 | ------------------------ |
 | `volume up`              |
 | `volume down`            |
-| `set volume <number>`    |
 | `(volume \| media) mute` |
 | `[media] play next`      |
 | `[media] play previous`  |
 | `media (play \| pause)`  |
-
-:::docofeedback
-
-Regarding `set volume <number>: user.media_set_volume(number)`, I was trying to find the range of `number`,
-but I couldn't find any reference to `media_set_volume` apart from when it is called in `media.talon`
-
-:::
 
 ## Controlling the Tobii eye tracker
 
@@ -128,10 +125,6 @@ but I couldn't find any reference to `media_set_volume` apart from when it is ca
 | `control mouse`   | toggle on/off Tobii moving the mouse |
 | `zoom mouse`      | Toggle Control Mouse (Zoom).         |
 | `control off`     | Turn the eye tracker off             |
-
-:::docofeedback
-Should the `camera overlay` command be mentioned here? It calls `tracking.control_debug_toggle()`
-:::
 
 ## Working with text
 
@@ -159,9 +152,11 @@ Button Clicking
 | `righty`              | right        | single click |
 
 :::note Using Modifier Keys
+
 Modifier keys can be used in combination with the `touch`, `righty` mouse operations.
 For example, `shift touch` will click the left mouse button
 with the `shift` key depressed.
+
 :::
 
 Mouse Dragging

@@ -241,8 +241,8 @@ Usually there is a setting to turn this off but it may take some time to track d
 flowchart
   subgraph final_stage [" "]
     direction TB
-    app_audio[Digital audio
-      (from previous diagram)]
+    app_audio["Digital audio
+      (from previous diagram)"]
     app_audio --> text_output
 
     text_output["Recognition Engine's
