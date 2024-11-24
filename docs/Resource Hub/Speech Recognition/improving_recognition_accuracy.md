@@ -200,11 +200,40 @@ flowchart
 
 ### Microphone Quality
 
+Make sure that you have a good microphone, as speech recognition software requires better hardware than is commonly built in to computers. 
+
+:::note
+
 Note that Talon is more sensitive to microphone quality than many other speech recognition systems so do not assume that just because, for example, Dragon works fine that Talon will.
 
-For full details on microphone hardware, see this [article](/docs/Resource%20Hub/Hardware/microphones.md).
+:::
+
+Have a look at the [hardware page](/docs/Resource%20Hub/Hardware/hardware.md) for recommendations and correct setup.
+
+### Sound Card Quality
+
+:::note Applies to Analog Microphones Only
+
+This section only applies if you are using an analog microphone (typically has a 3.5 mm plug)
 
 :::
+
+Make sure that you have a good sound card, as speech recognition software requires better hardware than is commonly built in to computers. 
+
+### PC Audio Controls
+
+Audio drivers on PCs can modify the incoming audio in real time before it sends it out two applications. This includes volume and gain control.
+
+Talon is more sensitive to microphone volume/gain than other speech recognition systems and that many apps, so you may need to adjust this carefully.
+
+:::warning
+
+Some applications, particularly conferencing apps like Zoom, will adjust the system microphone gain themselves, which can cause your recognition performance to tank when you're not expecting it.
+
+Usually there is a setting to turn this off but it may take some time to track down all the apps that do it.
+
+:::
+
 
 ## Speech recognition and PC control
 
@@ -244,11 +273,8 @@ flowchart
     linkStyle 2,3,4 stroke:#fff,color:black,stroke-dasharray: 5 5;
   end
 ```
-### Microphone
 
-Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](/docs/Resource%20Hub/Hardware/hardware.md) for recommendations and correct setup.
-
-## Some commands are barely ever recognized, or confused for another command
+### Some commands are barely ever recognized, or confused for another command
 
 If only a few specific commands give you trouble, change those command words! Commands are almost exclusively mapped in `.talon` files: search for all occurrences of those words, and replace them with a word of your choosing: select one that is easy to pronounce, is not too similar to anything else, and is recognized well for you.
 
@@ -259,7 +285,7 @@ _Example:_ If the `close` in `tab close` does not work for you (but `tab open` e
 _Example:_ Your `zip` (letter Z) is always understood as `sit` (letter I), change `sit` to `ivy`, or alternatively change `zip` to `zone`.
 See the section below on [alphabet alternatives](#alternatives-to-the-default-alphabet) for more examples.
 
-## Talon cuts me off mid-command or mid-sentence
+### Talon cuts me off mid-command or mid-sentence
 
 Talon lets you configure how long it will wait after you stop speaking before trying to interpret your command. As of March 2021, the default is 0.3 seconds; earlier versions had a default of 0.15 seconds. If you find that Talon is frequently cutting you off mid-command, you may want to try one or more of the following:
 
@@ -275,7 +301,7 @@ Talon lets you configure how long it will wait after you stop speaking before tr
   ```
   Start with the value of 0.4, just slightly higher than the default, and increase only if necessary.
 
-## Talon responds inconsistently or with a delay
+### Talon responds inconsistently or with a delay
 
 Talon only processes your speech after its voice activity detector (VAD) detects silence of the length specified by `speech.timeout` above.
 
@@ -283,7 +309,7 @@ This issue is sometimes caused by background noise or non-speech sounds (e.g. br
 
 If recordings appear to be the correct length, Talon may be stuck due to a long-running voice command or callback. Look in the [Talon log](/docs/Resource%20Hub/Troubleshooting/basic-issues.md#check-the-talon-logs) (Scripting > View Log from the Talon menu) for lines containing `[watchdog]` and `(stalled)`. If these don't make any sense to you, share your log on the Talon Slack.
 
-## Help improving the Talon recognition engine
+### Help improving the Talon recognition engine
 
 This will not help you today, but instead help to improve the talon engine for all of us in the future. You can do this by providing speech (and noise) samples:
 
@@ -302,7 +328,7 @@ When reading it out, do not say the words "comma" or "full stop"
 
 :::
 
-## Alternatives to the default alphabet
+### Alternatives to the default alphabet
 
 Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an American's) may find it helpful to change the alphabet. The following is a list of alternatives users mentioned on Slack. Say `customize alphabet` to edit spoken forms for the alphabet.
 
@@ -330,7 +356,7 @@ Speakers of non-rhotic dialectics of English (i.e. your 'r's don't sound like an
 | zip                                                      | zone        |
 | zip                                                      | zoo         |
 
-## Alternatives for modifier keys
+### Alternatives for modifier keys
 
 The default words for some modifier keys are designed to match the labels on the keys themselves, but are not always efficient to say or can be misrecognized depending on your dialect/speech pattern. The following is a list of alternatives other Talon users have used. Note that community contains one `modifier_key.talon-list` file for Windows/Linux and one for Mac, since the modifier key names differ.
 
