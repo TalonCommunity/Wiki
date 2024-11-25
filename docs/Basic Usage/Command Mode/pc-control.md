@@ -10,10 +10,20 @@ See also [help](/docs/Help/help-commands.md) for displaying information using Ta
 
 | Command             | Description                                                                                                         |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `running list`      | opens a panel to see all active applications, and the and the spoken form of them                                   |
+| `running close`     | closes the running list panel                                                                                       |
 | `focus "app name"`  | say "focus chrome" for example, to switch active window to chrome (where `app name` is the spoken form of the name) |
-| `running list`      | see all active applications, and the and the spoken form of them                                                    |
+| `focus$`            | open a menu of running apps to switch to                                                                            |
+| `focus last`        | makes the last active application (ie the one that was active prior to the current one) active again                |
 | `launch "app name"` | say "launch chrome" for example, to open chrome; `launch music` will launch the music application (macOS only)      |
 | `window close`      | closes the currently active window                                                                                  |
+
+:::note
+
+`focus` is used for switching to an already running application.
+`launch` is used for starting an application that isn't already running.
+
+:::
 
 Sample output from the `running list` command shows:
 
@@ -29,30 +39,6 @@ might be quite messy, with many alternative spoken forms being displayed for som
 
 Customization can be used to enable tidier output, by specifying spoken forms of your choosing.
 
-:::docotodo
-
-There seems to be commands not described here that are present in:
-`core\windows_and_tabs\window_management.talon`
-
-```
-focus <user.running_applications>: user.switcher_focus(running_applications)
-# following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
-focus$: user.switcher_menu()
-focus last: user.switcher_focus_last()
-running close: user.switcher_hide_running()
-launch <user.launch_applications>: user.switcher_launch(launch_applications)
-
-snap <user.window_snap_position>: user.snap_window(window_snap_position)
-snap next [screen]: user.move_window_next_screen()
-snap last [screen]: user.move_window_previous_screen()
-snap screen <number>: user.move_window_to_screen(number)
-snap <user.running_applications> <user.window_snap_position>:
-    user.snap_app(running_applications, window_snap_position)
-snap <user.running_applications> [screen] <number>:
-    user.move_app_to_screen(running_applications, number)
-```
-
-:::
 
 ## Screens and Screenshots
 
@@ -87,12 +73,136 @@ In a couple of the above commands, the screen number is required, which can be f
 
 ## Working with Windows
 
+### Switching between different application instances
+
+In this context a window is an instance of a running application.
+For example, if you had three separate instances of vscode running, then there would be three windows for it.
+Or if you had four documents open in Microsoft word, each would be a separate window.
+
 | Command                           | Destination                             |
 | --------------------------------- | --------------------------------------- |
 | `window (new \| open)`            |                                     |
 | `window next`            |                                     |
 | `window last`            |                                     |
 | `window hide`            |                                     |
+
+Note that the behavior is very application dependent. For example, in notepad++ saying `window new`
+simply opens a new tab within the application, and not a whole new application instance.
+
+### Easily positioning windows using snap
+
+Operates on the currently active window:
+
+| Command                           | Destination                             |
+| --------------------------------- | --------------------------------------- |
+| `snap <user.window_snap_position>`    | moves and resizes the active window according to the specified [snap position](#window-snap-position),<br/>eg `snap left`    |
+| `snap next [screen]`    | moves the active window to the next screen    |
+| `snap last [screen]`    | moves the active window to the previous screen    |
+| `snap screen <number>`    | moves the active window to the specified screen    |
+
+Operates on the specified applications:
+
+| Command                           | Destination                             |
+| --------------------------------- | --------------------------------------- |
+| `snap <user.running_applications> <user.window_snap_position>`    | moves and resizes the specified application according to the given snap position, eg `snap firefox right`    |
+| `snap <user.running_applications> [screen] <number>`    | moves the specified application to the specified screen    |
+| `snap <user.window_split_position> <user.running_applications>+`    | moves the specified applications to the specified [split position](#window-split-position)    |
+
+
+
+### Window Snap Position
+
+Halves:
+
+```
+.------.-------.     .--------.
+|      |       |     |  top   |
+| left | right |  &  |--------|
+|      |       |     | bottom |
+'------'-------'     '--------'
+```
+
+Thirds:
+
+```
+.-------------.--------------.-------------.
+| left third  | center third | right third |
+.-------------.--------------.-------------.
+```
+
+Two thirds:
+```
+.-------------.----------------------------.
+| left third  |    right two thirds        |
+.-------------.----------------------------.
+
+.----------------------------.-------------.
+|         left two third     | right third |
+.----------------------------.-------------.
+```
+
+Quarters:
+```
+'-------------'--------------'
+|  top left   |  top right   |
+|-------------|--------------|
+| bottom left | bottom right |
+'-------------'--------------'
+```
+
+Sixths:
+```
+'-------------------'---------------------'--------------------'
+|  top left third   |  top center third   |  top right third   |
+|-------------------|---------------------|--------------------|
+| bottom left third | bottom center third | bottom right third |
+'-------------------'---------------------'--------------------'
+
+'-----------------------------------------'--------------------'
+|          top left two thirds            |  top right third   |
+|-----------------------------------------|--------------------|
+|          bottom left two thirds         | bottom right third |
+'-----------------------------------------'--------------------'
+
+'-------------------'------------------------------------------'
+|  top left third   |          top right two thirds            |
+|-------------------|------------------------------------------|
+| bottom left third |        bottom right two thirds           |
+'-------------------'------------------------------------------'
+```
+
+Special descriptors:
+
+
+| Word                  | 
+| --------------------- | 
+| `center`              | 
+| `full`                | 
+| `fullscreen`          | 
+
+
+:::note Alternative Forms
+
+You might find these alternative spoken forms easier to say.
+
+| Word                  | Alternative Form                                                       |
+| --------------------- | ---------------------------------------------------------------------- |
+| `third`               | `small` (eg `top left small` instead of `top left third`)              |
+| `two thirds`          | `large` (eg `bottom right large` instead of `bottom right two thirds`) |
+
+
+:::
+
+
+### Window Split Position
+
+| Name           | Number of Applications Specified | Window Snap Positions                 |
+| -------------- | -------------------------------- | ------------------------------------- |
+| `split`        | 2                                | left, right                           |
+| `split`        | 3                                | left third, center third, right third |
+| `clock`        | 3                                | left, top right, bottom right         |
+| `counterclock` | 3                                | right, top left, bottom left          |
+
 
 ## Working with tabs
 

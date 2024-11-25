@@ -8,9 +8,36 @@ Talon is free to use and ongoing development is made possible by [donations on P
 
 ## Talon Landscape
 
-<img src="/img/talon-elements.png/"
-     alt="diagram showing the different Talon modes, and the voice commands used to switch between them"
- />
+
+```mermaid
+mindmap
+  root{{"Talon Platform<br/>talonvoice.com"}}
+    Talon Platform Type
+      Standard
+      Beta
+    Supported Speech Recognition Engines
+      Talon Conformer Standard
+      Talon Conformer Beta
+      Dragon
+    User File Sets
+      Talon Community
+    integrations["Integrations
+        (optional, some examples...)"]
+      gaze-ocr
+      Cursorless
+      Parrot
+      Talon-HUD
+    Supported Input Devices
+      Microphone
+      Eye Tracking
+      Game Controller
+      Foot Pedal
+      Joystick
+      Facial Expressions
+      Stream Deck
+
+```
+
 
 :::note docotodo
 
@@ -20,13 +47,6 @@ Another thing to keep in mind (from @knausj85 ) is to separate out core Talon be
 
 :::
 
-## Input Device Types
-
-:::note docotodo
-
-List all the different input devices and ways in which you can trigger commands, including those which are beta-only (Stream Deck/pedals, game controllers, facial expressions, keyboard commands)
-
-:::
 
 ## Goal of this Wiki
 
