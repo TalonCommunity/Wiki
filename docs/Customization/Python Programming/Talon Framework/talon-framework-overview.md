@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Talon Framework Overview
 
+:::docoscope Talon Platform
+
+All pages under "Talon Framework Overview" pertain to the talon platform.
+
+:::
+
 Talon is an accessibility platform that provides a scripting layer to connect a range of input hardware/methods to a cross-platform API for interacting with desktop applications. Let's start by talking about where your configuration/scripting files are stored.
 
 When setting up Talon to respond to voice commands, you should have installed a set of files in your Talon `user` directory (e.g. `~/.talon/user/` in Linux/MacOS). For example, the [Talon Community](https://github.com/talonhub/community) user file set is the most common starting point. All of your Talon configuration/scripts go in this `user` directory and are formatted as either Talon (`.talon`) or Python (`.py`) files.

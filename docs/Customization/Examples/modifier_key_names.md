@@ -1,5 +1,9 @@
 # Overriding the Names of the Modifier Keys
 
+:::docoscope Talon Community User File Set
+
+:::
+
 You can override Talon lists by creating a new `.talon-list` file of your own, rather than changing the existing file in the repository.
 
 This reduces how much manual `git merge`-ing you'll have to do in the future, when you go to merge new versions of this repository (colloquially called "upstream") with your local changes. This is because _new_ files you create will almost never conflict with upstream changes, whereas changing an existing file (especially hot spots, like commonly-customized lists) frequently do.

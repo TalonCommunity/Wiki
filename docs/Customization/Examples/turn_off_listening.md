@@ -1,5 +1,9 @@
 # Turn off listening on start up
 
+:::docoscope Talon Platform
+
+:::
+
 To put Talon in sleep mode when you start the app (and typically your computer), create a python file in your user directory (e.g. `sleep.py`) and put in the following contents:
 
 ```python

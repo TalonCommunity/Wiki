@@ -1,5 +1,9 @@
 # Link Talon and Python
 
+:::docoscope Talon Platform
+
+:::
+
 ## Talon
 
 ```talon

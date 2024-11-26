@@ -21,6 +21,11 @@ In general Talon will automatically pick up and apply any changes to files in yo
 
 ## `.talon` File Syntax
 
+:::docoscope Talon Platform
+
+:::
+
+
 TalonScript `.talon` files consist of two parts:
 
 1. A [context header](./context-header.md) defining the circumstances in which the file is active.

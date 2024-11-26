@@ -1,5 +1,9 @@
 # Slow down key presses
 
+:::docoscope Talon Platform
+
+:::
+
 A reasonably common problem that comes up when using Talon with computer games is that the application only recognizes key presses intermittently or not at all. This can be because Talon presses and releases the keys too quickly. The following `.talon` file makes Talon hold down each key for 32 milliseconds before releasing it. You could try increasing the key_hold value incrementally to find the smallest length of time you need to hold for the key to be recognized reliably:
 
 ```talon

@@ -1,5 +1,9 @@
 # Overriding the Touch Command
 
+:::docoscope Talon Community User File Set
+
+:::
+
 Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
 
 The community code is in a `.talon` file without a context header called `mouse.talon`:

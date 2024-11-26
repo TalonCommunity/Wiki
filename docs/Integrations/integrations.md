@@ -30,6 +30,7 @@ It's the same idea.
 
 | Category                                                       | Description                                                                                    |
 | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [accessibility](./accessibility.md)                            | Reduce friction when using talon alongside screen readers or other assistive technology.       |
 | [browser navigation](./browser-navigation.md)                  | Utilities for controlling browsers by voice, such as clicking on links                         |
 | [programming and text editing](./coding-and-editing.md)        | Utilities for accelerating programming by voice, support for multiple clipboards etc           |
 | [mouse alternatives](./mouse-alternatives.md)                  | Alternatives to the builtin voice commands for mouse positioning and button clicking           |

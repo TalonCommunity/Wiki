@@ -1,5 +1,9 @@
 # Display an Image on Screen
 
+:::docoscope Talon Platform
+
+:::
+
 You can use Talon's built in canvas library to display an image or text, or draw arbitrary shapes on the screen.
 
 The code below creates a transparent canvas over the entire screen and paints a rectangle over it.

@@ -1,5 +1,9 @@
 # key() action
 
+:::docoscope Talon Platform
+
+:::
+
 The Talon `key()` action allows you to press, hold, and release virtual keyboard keys. You can use it in `.talon` files directly, and most of the time don't need to quote the argument. For example `key(ctrl-f)` is equivalent to `key("ctrl-f")` in .talon files. In Python you do need to quote the argument and can use the action like this:
 
 ```python

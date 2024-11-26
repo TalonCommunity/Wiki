@@ -4,6 +4,10 @@ sidebar_position: 30
 
 # Managing Customizations
 
+:::docoscope Talon Community User File Set
+
+:::
+
 Talon is built to be a flexible and customizable system. This means that in addition to being able to add new voice commands you can also override the behavior of existing commands reasonably easily.
 
 All customization consists of files placed somewhere under the [Talon user directory](/docs/Resource%20Hub/terminology.md#talon-user-directory).

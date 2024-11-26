@@ -1,5 +1,9 @@
 # Add new keyboard shortcuts
 
+:::docoscope Talon Platform
+
+:::
+
 Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
 ```talon
