@@ -6,6 +6,7 @@
 | [Talon Heads Up Display](#talon-hud-heads-up-display)        | Shows comprehensive visual information about your current state of Talon.                             |
 | [Talon Deck](https://github.com/AndreasArvidsson/talon-deck) | Stream deck inspired interactive dashboard for Talon. Turn your phone/tablet into a Talon control UI. |
 | [Customizable Subtitles](#customizable-subtitles)            | Subtitles that display as you speak, with customizable text size, placement on screen etc             |
+| [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4)   | A basic script for writing subtitles to a file for a screencapture.     |
 
 ## Window Placement Software
 
