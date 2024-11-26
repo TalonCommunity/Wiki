@@ -1,4 +1,8 @@
-# Downloading the Talon User File Set
+# Downloading the Talon Community User File Set
+
+:::docoscope Talon Community User File Set
+
+:::
 
 After installing talon, and a speech recognition engine as described here,
 you will need to download a user file set. This wiki is all about the talent community user file set

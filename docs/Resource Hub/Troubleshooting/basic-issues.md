@@ -4,6 +4,13 @@ sidebar_position: 7
 
 # Basic Issues
 
+:::docoscope Talon Platform
+
+Although much of this page is pertinent to the talon platform itself,
+some steps are specific to the talon community user file set, and will be marked as such.
+
+:::
+
 ## Nothing Happens When I Speak
 
 If you are testing your setup with one of the [basic commands](/docs/Basic%20Usage/basic_usage.md) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.

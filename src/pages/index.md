@@ -38,15 +38,28 @@ mindmap
 
 ```
 
+## Documentation Scope
 
-:::note docotodo
+To use talon, then the talon platform needs to be installed.
+If you are a beginner then it is recommended that you additionally instabll the talon community user file set.
+If you do so, then everything in this wiki is relevant to you.
 
-Worth mentioning that talon-gaze-ocr does not require an eye tracker (update text in diagram above)
+If you are an advanced user and have decided to install a different user file set, then  not all parts
+of this wiki is relevant. Those that are will be highlighted as follows.
 
-Another thing to keep in mind (from @knausj85 ) is to separate out core Talon behaviors from Talon community behaviors. A lot of the customization documentation would apply even if you didn't use the community file set, whereas most of the Basic Usage section is community-specific.
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
+  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
+    DOCUMENTATION SCOPE: TALON PLATFORM
+  </div>
+</div>
 
-:::
+And those that aren't will be highlighted as follows:
 
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
+  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
+    DOCUMENTATION SCOPE: TALON COMMUNITY USER FILE SET
+  </div>
+</div>
 
 ## Goal of this Wiki
 

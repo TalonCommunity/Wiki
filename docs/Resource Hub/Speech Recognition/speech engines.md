@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Speech Engines
 
+:::docoscope Talon Platform
+
+:::
+
 Talon uses a speech recognition engine that translates voice audio to text. The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon and want to use Talon with Dragon or need a speech engine with language support other than English.
 
 | Engine        | OS            | Description                                                                                                                                                                           | Installation                                                                                                                | Price                                                                                             |

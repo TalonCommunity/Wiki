@@ -1,6 +1,6 @@
 # Talon User Interface
 
-:::note This page Pertain to the [Talon Platform](/docs/Resource%20Hub/terminology.md) (independent of the [Talon Community User File Set](/docs/Resource%20Hub/terminology.md))
+:::docoscope [Talon Platform](/docs/Resource%20Hub/terminology.md)
 
 :::
 
