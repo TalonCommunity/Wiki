@@ -10,6 +10,16 @@ and have at least some familiarity with [basic usage](/docs/Basic%20Usage/basic_
 Talon supports customization of many of its behaviors. It is intended that most types of changes can be made
 by users of all skill levels.
 
+
+:::docoscope
+
+Some pages under ""Customization" pertain to the talon platform itself, and is not dependent on the
+talon community user file set being installed. Some are only relevant if talon community is installed.
+See the individual pages for details.
+
+:::
+
+
 ## Customizable Items
 
 | Category                                                        | User Skill  | Description                                                                |
@@ -26,6 +36,10 @@ Here are some [customization examples](./Examples/index.md)
 :::
 
 ## Customizing Community Items
+
+:::docoscope Talon Community User Files Set
+
+:::
 
 The talon community user file set comes with default entries for various important items, such as the alphabet
 and the list of common websites.

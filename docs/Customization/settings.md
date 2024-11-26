@@ -29,6 +29,11 @@ If the same setting is defined multiple times, Talon will use the setting value 
 
 ## Community Settings
 
+
+:::docoscope Talon Community User File Set
+
+:::
+
 | Setting                              | Example Value | Description                                                                                                                                             |
 | ------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | user.file_manager_auto_show_pickers  | false         | If `true`, automatically show the picker GUI when the file manager has focus                                                                            |
@@ -57,6 +62,11 @@ To add your own additional custom settings for changing Talon behavior, see [the
 :::
 
 ## Core Talon Settings
+
+:::docoscope Talon Platform
+
+:::
+
 
 | Setting         | Example Value | Description                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

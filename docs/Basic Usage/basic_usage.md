@@ -11,6 +11,12 @@ Once you have completed that and entered a few letters as a test, you are ready 
 
 :::
 
+:::docoscope
+
+All pages under "Basic Usage" are specific to the talon community user file set.
+
+:::
+
 ## Talon Modes
 
 Talon has three main [modes](./talon-modes.md) (command, dictation and sleep), and when started it launches in command mode.

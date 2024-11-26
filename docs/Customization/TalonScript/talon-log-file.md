@@ -1,5 +1,9 @@
 # The Talon Log File
 
+:::docoscope Talon Platform
+
+:::
+
 TalonScript is designed to be a simple way for all users to create new voice commands, without having programming experience.
 
 However, if there is an issue with your `.talon` file, typically there would be useful clues about the reason in the Talon log file.

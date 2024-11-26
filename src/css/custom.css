@@ -46,3 +46,10 @@
   --ifm-alert-foreground-color: white;
   --ifm-alert-border-color: rgb(4, 43, 7);
 }
+
+.alert--docoscope {
+  --ifm-alert-background-color: rgb(154, 83, 161);
+  --ifm-alert-background-color-highlight: rgb(154, 83, 161);
+  --ifm-alert-foreground-color: white;
+  --ifm-alert-border-color: rgb(79, 36, 83);
+}

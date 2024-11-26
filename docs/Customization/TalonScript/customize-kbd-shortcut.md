@@ -1,5 +1,9 @@
 # Customize Keyboard Shortcuts
 
+:::docoscope Talon Platform
+
+:::
+
 Another feature is the ability to customize (or `bind`) keyboard shortcuts.
 
 :::note

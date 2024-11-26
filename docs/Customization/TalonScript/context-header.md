@@ -1,5 +1,12 @@
 # Context Header
 
+:::docoscope Talon Community User Files Set
+
+Although some aspect of the following example pertains to the talon platform itself, details within the example
+such as `<user.letter>` are specific to talon community.
+
+:::
+
 The context header of a [talon file](../TalonScript/index.md#talon-file-syntax) specifies when the body of the file will be activated.
 
 That is, only when the requirements of the header are met will the settings, tags, and commands in the body be available. This enables you to specify commands and behaviour that are only available for specific windows, applications, etc.
@@ -15,6 +22,12 @@ The end of the context however is signified by a line comprising a single hyphen
 ## Requirement Types
 
 The following requirement types can be specified:
+
+:::docotodo
+
+Does this list pertain to talon platform or does it require the talon community
+
+:::
 
 | Requirement Type | Description                                                                                                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

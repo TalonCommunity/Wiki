@@ -1,5 +1,11 @@
 # Voice Commands
 
+:::docoscope Talon Platform
+
+Unless specified otherwise, everything on this page pertains to the talon platform itself, and does not require that talon community is installed.
+
+:::
+
 ## A simple voice command example
 
 Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
@@ -181,6 +187,14 @@ or you really want to prevent the command from being called by accident.
 ### Talonscript Body
 
 The BODY part of a command is implemented in Talonscript, a simple statically typed language. We'll discuss Talonscript and how it interracts with the RULE part of the command with reference to the following `.talon` file:
+
+:::docoscope Talon Community User Files Set
+
+Although some aspect of the following example pertains to the talon platform itself, details within the example
+such as `<user.letter>` are specific to talon community.
+
+:::
+
 
 ```talon
 # The following captures are implemented in the https://github.com/talonhub/community user file set:
