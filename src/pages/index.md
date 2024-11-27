@@ -6,6 +6,8 @@
 
 Talon is free to use and ongoing development is made possible by [donations on Patreon](https://www.patreon.com/lunixbochs).
 
+---
+
 ## Talon Landscape
 
 
@@ -37,6 +39,7 @@ mindmap
       Stream Deck
 
 ```
+---
 
 ## Documentation Scope
 
@@ -61,9 +64,13 @@ And those that aren't will be highlighted as follows:
   </div>
 </div>
 
+---
+
 ## Goal of this Wiki
 
 The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created.
+
+---
 
 ## Wiki Navigation
 
@@ -81,6 +88,8 @@ The goal of this wiki is to provide information and documentation for the users 
 Talon has a [Slack community](/Help/talon-slack) for users to get help, ask questions, and meet one another. This is the most efficient way to get questions answered if they are not covered in this wiki.
 
 :::
+
+---
 
 # Contributing
 

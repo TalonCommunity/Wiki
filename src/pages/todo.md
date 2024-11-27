@@ -104,9 +104,6 @@ README.md
 Go through all remaining talon files under the tags directory:
 
 ```
-browser
-chapters
-debugger
 emoji
 line_commands
 messaging
@@ -120,6 +117,23 @@ terminal
 
 :::docotodo
 Fix all references to `(https://github.com/talonhub/community/tree`
+:::
+
+:::docotodo Important
+
+Check to see if there are any recent updates on GitHub for the community wiki then need to be
+incorporated into this branch
+
+:::
+
+:::docotodo
+
+https://talonvoice.slack.com/archives/C7ENXA7C4/p1732604856994179?thread_ts=1732589441.958129&cid=C7ENXA7C4
+
+```
+Two main reasons for misrecognitions: (1) Saying a command that doesn't exist (2) Pausing for too long mid-sentence | You can diagnose (1) with talon test last and talon open log, or help search <command>, or search for it on https://search.talonvoice.com/search/?repo=talonhub/community. You can mitigate (2) by setting speech.timeout to a longer value like 0.750.
+```
+
 :::
 
 # Privacy

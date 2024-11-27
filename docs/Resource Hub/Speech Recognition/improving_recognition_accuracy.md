@@ -40,6 +40,11 @@ flowchart
 
     utterance_interpretation[Utterance Interpretation
       and PC control]
+
+    classDef mainInfoPath fill:#050,stroke-width:2px;
+    class speech,audio_microphone_hears,audio_to_applications,speech_recognition,utterance_interpretation mainInfoPath;
+
+    linkStyle 0,1,2,3 stroke:#050,stroke-width:2px,color:red;
   end
 ```
 
