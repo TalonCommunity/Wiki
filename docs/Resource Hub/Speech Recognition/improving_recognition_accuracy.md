@@ -10,6 +10,14 @@ sidebar_position: 6
 
 Improving recognition accuracy never hurts. Many people even have to tweak something to get a good experience. Here we show you what you can do.
 
+Firstly here are some common reasons for issues faced by new users:
+
+- [Saying a command that doesn't exist](#saying-a-command-that-doesnt-exist)
+- [Talon cuts me off mid-command or mid-sentence](#talon-cuts-me-off-mid-command-or-mid-sentence)
+
+If those notes don't provide a solution, then there is more information on this page to help you
+diagnose recognition issues. So keep reading.
+
 ## The Overall Process
 
 There are many steps on the way between you speaking and what words are recognized on a PC and
@@ -284,6 +292,36 @@ flowchart
   end
 ```
 
+### Saying a command that doesn't exist
+
+When talon is in command mode, at all times there is a set of voice commands that it considers "active". The set of active commands depends, for example, on which is the active application.
+So If you are working in a text editor, clicking on a browser window would enable some commands, and disable others.
+When you speak, talon will attempt to match your spoken words only against those commands that are active. 
+
+Example 1:
+
+| You Say | Talon Recognizes |
+| - | - |
+| `window previous` | `window reload` |
+
+This is because there is no command `window previous`, and talon trying its best to find a match from they set of active commands,
+concludes that `window reload` is the closest.
+
+Example 2:
+
+| You Say | Talon Recognizes |
+| - | - |
+| `hunt this` | `caret then` |
+
+In some applications, saying `hunt this` will bring up the find panel, and place the insertion point within it.
+
+However, this is not universal, and if you were to say this within Microsoft word for example, it might be recognized as
+`caret then`.
+
+```
+You can diagnose (1) with talon test last and talon open log, or help search <command>, or search for it on https://search.talonvoice.com/search/?repo=talonhub/community.
+```
+
 ### Some commands are barely ever recognized, or confused for another command
 
 If only a few specific commands give you trouble, change those command words! Commands are almost exclusively mapped in `.talon` files: search for all occurrences of those words, and replace them with a word of your choosing: select one that is easy to pronounce, is not too similar to anything else, and is recognized well for you.
@@ -297,7 +335,8 @@ See the section below on [alphabet alternatives](#alternatives-to-the-default-al
 
 ### Talon cuts me off mid-command or mid-sentence
 
-Talon lets you configure how long it will wait after you stop speaking before trying to interpret your command. As of March 2021, the default is 0.3 seconds; earlier versions had a default of 0.15 seconds. If you find that Talon is frequently cutting you off mid-command, you may want to try one or more of the following:
+Talon lets you configure how long it will wait after you stop speaking before trying to interpret your command. As of November 2024, the default is 0.3 seconds; earlier versions had a default of 0.15 seconds. 
+If you find that Talon is frequently cutting you off mid-command, you may want to try one or more of the following:
 
 - Prepare your command in full before voicing it. This will help you speak fluently.
 

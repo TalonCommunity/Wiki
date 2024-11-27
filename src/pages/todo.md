@@ -101,17 +101,7 @@ README.md
 
 :::docotodo
 
-Go through all remaining talon files under the tags directory:
-
-```
-emoji
-line_commands
-messaging
-multiple_cursors
-pages
-splits
-terminal
-```
+Explain how some command groups specify other command groups
 
 :::
 
@@ -134,6 +124,7 @@ https://talonvoice.slack.com/archives/C7ENXA7C4/p1732604856994179?thread_ts=1732
 Two main reasons for misrecognitions: (1) Saying a command that doesn't exist (2) Pausing for too long mid-sentence | You can diagnose (1) with talon test last and talon open log, or help search <command>, or search for it on https://search.talonvoice.com/search/?repo=talonhub/community. You can mitigate (2) by setting speech.timeout to a longer value like 0.750.
 ```
 
+How to make recordings
 :::
 
 # Privacy

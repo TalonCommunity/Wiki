@@ -1,4 +1,4 @@
-# Emoji, Emoticon, Kaomoji
+# emoji, emoticon, kaomoji
 
 # Command
 
