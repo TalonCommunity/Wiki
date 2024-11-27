@@ -1,4 +1,4 @@
-# Chapters
+# chapters
 
 | Command         | Description             |
 | --------------- | ----------------------- |

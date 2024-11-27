@@ -1,4 +1,4 @@
-# Debugger
+# debugger
 
 You may wish to look at `debugger.talon` for the latest version.
 

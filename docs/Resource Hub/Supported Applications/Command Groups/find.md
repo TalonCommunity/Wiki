@@ -1,4 +1,4 @@
-# Find and Replace
+# find_and_replace
 
 The commands described here apply to all applications that are tagged with `tag: user.find_and_replace`.
 

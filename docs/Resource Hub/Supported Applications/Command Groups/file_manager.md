@@ -1,4 +1,4 @@
-# File Managers
+# file_manager
 
 The commands described here apply to all applications that are classified as a file manager
 (technically, those `.talon` files that have the line `tag: file_manager`).

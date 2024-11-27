@@ -1,4 +1,4 @@
-# Browsers
+# browser
 
 The commands described here apply to all applications that are classified as a browser
 (technically, those `.talon` files that have the line `tag: browser`).

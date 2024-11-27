@@ -1,4 +1,4 @@
-# Command Search
+# command_search
 
 
 | Command         | Description             |
