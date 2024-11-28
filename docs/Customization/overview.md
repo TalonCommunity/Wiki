@@ -66,8 +66,8 @@ Before changing any of these files, it is recommended to first read the notes on
 
 | What                                                                                                       | Format        | Community User File Set Location                             |
 | ---------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------ |
-| [search engines](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#search-engines-list) | `.talon-list` | `/core/websites_and_search_engines/search_engine.talon-list` |
-| [websites](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md#website-list)              | `.talon-list` | `/core/websites_and_search_engines/website.talon-list`       |
+| [search engines](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/browser.md#search-engines-list) | `.talon-list` | `/core/websites_and_search_engines/search_engine.talon-list` |
+| [websites](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/browser.md#website-list)              | `.talon-list` | `/core/websites_and_search_engines/website.talon-list`       |
 | [application names](/docs/Basic%20Usage/Command%20Mode/pc-control.md#application-names)                    | `.csv`        | `/core/app_switcher/app_name_overrides.<platform>.csv`       |
 | [file extensions](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#file-extensions)                    | `.csv`        | `/settings/file_extensions.csv`                              |
-| [system paths](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/file_manager.md#usersystem_path)   | `.talon-list` | `/core/system_paths-{hostname}.talon-list`                   |
+| [system paths](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/file_manager.md#usersystem_path)   | `.talon-list` | `/core/system_paths-{hostname}.talon-list`                   |

@@ -56,6 +56,8 @@ flowchart
   end
 ```
 
+---
+
 ## The sound the microphone hears
 
 
@@ -143,6 +145,8 @@ Place the microphone at a consistent distance away from your mouth.
 
 Perhaps this goes without saying, but don't adopt the [thinker pose](https://en.wikipedia.org/wiki/The_Thinker).
 You might think that you sound the same, but this does effect recognition accuracy.
+
+---
 
 ## Digital audio sent to the speech recognition engine
 
@@ -252,6 +256,8 @@ Usually there is a setting to turn this off but it may take some time to track d
 :::
 
 
+---
+
 ## Speech recognition and PC control
 
 ```mermaid
@@ -260,43 +266,60 @@ flowchart
     direction TB
     app_audio["Digital audio
       (from previous diagram)"]
+    %% link id: 0
     app_audio --> text_output
+
+    active_command_set["Active Command Set
+      (command mode)"]
+    %% link id: 1
+    active_command_set --> text_output
+
+    vocabulary["vocabulary.talon-list
+      (dictation mode)"]
+    %% link id: 2
+    vocabulary --> text_output
 
     text_output["Recognition Engine's
       Text Output"]
+    %% link id: 3
     text_output --> talon_output
     
     engine_type["Speech Recognition 
       Engine Type
       ~
       (Conformer, Conformer Beta or Dragon)"]
+    %% link id: 4
     engine_type --- text_output
-
-    talon_platform_version["Talon Platform Version
-      ~
-      eg Standard or Beta"]
-    talon_platform_version --> talon_output
-    talon_output["Talon Platform Output"]
 
     user_file_sets["The Installed Set of
       User File Sets
       ~
       eg Talon Community"]
+    %% link id: 5
     user_file_sets --> talon_output
+    
+    talon_output["Talon Platform Output"]
 
     classDef mainInfoPath fill:#050,stroke-width:2px;
     class app_audio,text_output,talon_output mainInfoPath;
 
-    linkStyle 0,1 stroke:#050,stroke-width:2px,color:red;
-    linkStyle 2,3,4 stroke:#fff,color:black,stroke-dasharray: 5 5;
+    linkStyle 0,3 stroke:#050,stroke-width:2px,color:red;
+    linkStyle 1,2,4,5 stroke:#fff,color:black,stroke-dasharray: 5 5;
   end
 ```
 
 ### Saying a command that doesn't exist
 
-When talon is in command mode, at all times there is a set of voice commands that it considers "active". The set of active commands depends, for example, on which is the active application.
+:::info Background
+
+When talon is in [command mode](/docs/Basic%20Usage/Command%20Mode/command_mode.md), at all times there is a set of voice commands that it considers "active". 
+
+The set of active commands depends, for example, on which is the active application.
 So If you are working in a text editor, clicking on a browser window would enable some commands, and disable others.
+
 When you speak, talon will attempt to match your spoken words only against those commands that are active. 
+
+:::
 
 Example 1:
 
@@ -319,7 +342,8 @@ However, this is not universal, and if you were to say this within Microsoft wor
 `caret then`.
 
 ```
-You can diagnose (1) with talon test last and talon open log, or help search <command>, or search for it on https://search.talonvoice.com/search/?repo=talonhub/community.
+You can diagnose (1) with talon test last and talon open log, or help search <command>, 
+or search for it on https://search.talonvoice.com/search/?repo=talonhub/community.
 ```
 
 ### Some commands are barely ever recognized, or confused for another command

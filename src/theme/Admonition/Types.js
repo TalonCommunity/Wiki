@@ -44,7 +44,7 @@ function FeedbackAdmonition(props) {
 }
 
 function ScopeAdmonition(props) {
-  var str = "DOCUMENTATION SCOPE" + (props.title ? ": " + props.title : "");
+  var str = "[SCOPE]" + (props.title ? " " + props.title : "");
   return (
     <div className={`${classList1} alert--docoscope`}>
       <div className={classList2}>

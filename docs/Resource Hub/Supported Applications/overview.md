@@ -19,7 +19,7 @@ For example, within firefox you could initiate a page reload by moving the curso
 or remembering and saying the keyboard shortcut `control r`. But as firefox is a supported application, then
 you can simply say `reload it`, and talon will send the application a `control r` keypress.
 
-## Application Tags
+## Command Groups
 
 Where appropriate common applications have been tagged as being part of an application class,
 for example firefox is tagged as a browser.
@@ -30,8 +30,8 @@ is running.
 
 | Class                                        | Description                                     |
 | -------------------------------------------- | ----------------------------------------------- |
-| [browser](./App%20Tags/browsers.md)          | browsers, such as firefox, chrome, edge, safari |
-| [file manager](./App%20Tags/file_manager.md) | example windows explorer and the mac finder     |
+| [browser](./Command%20Groups/browser.md)          | browsers, such as firefox, chrome, edge, safari |
+| [file manager](./Command%20Groups/file_manager.md) | example windows explorer and the mac finder     |
 
 :::docotodo
 

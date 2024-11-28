@@ -12,7 +12,7 @@ The beta version of Talon is available for Windows, Mac, and Linux, and provides
 
 ## Features of Talon Beta
 
-:::tip talon beta = "Talon Professional"
+:::tip talon beta = "Talon Better"
 
 :::
 

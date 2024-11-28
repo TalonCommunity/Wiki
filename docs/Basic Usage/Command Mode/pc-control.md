@@ -4,6 +4,12 @@ sidebar_position: 30
 
 # General PC Control
 
+:::docotodo
+
+Are any of the commands listed here only available within certain applications?
+
+:::
+
 See also [help](/docs/Help/help-commands.md) for displaying information using Talon's inbuilt help system.
 
 ## Running applications
@@ -206,15 +212,11 @@ You might find these alternative spoken forms easier to say.
 
 ## Working with tabs
 
-| Command           |
-| ----------------- |
-| `tab new`         |
-| `tab last`        |
-| `tab next`        |
-| `tab close`       |
-| `tab restore`     |
-| `go tab <number>` |
-| `go tab final`    |
+:::docotodo
+
+reference
+
+:::
 
 ## Working with media
 

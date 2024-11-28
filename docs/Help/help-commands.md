@@ -52,7 +52,7 @@ This shows the currently active modes, tags, and miscellaneous status info.
 For example, under `Modes` we see that `command` is listed. This shows that we are in [command mode](/docs/Basic%20Usage/Command%20Mode/command_mode.md),
 and if we were in [dictation mode](/docs/Basic%20Usage/dictation_mode.md) this would show `dictation` instead.
 
-Under Tags we see that [browser](/docs/Resource%20Hub/Supported%20Applications/App%20Tags/browsers.md) is listed. This shows that Talon has recognized that the active application
+Under Tags we see that [browser](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/browser.md) is listed. This shows that Talon has recognized that the active application
 (which we can see from further down is firefox), [supports](/docs/Resource%20Hub/Supported%20Applications/overview.md#application-tags) browser actions.
 
 <img src="/img/help/help_scope.png/"
