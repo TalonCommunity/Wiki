@@ -12,7 +12,7 @@ All applications on your PC can be controlled using speech when running talon.
 This is done by using the general mechanisms described under [command mode](/docs/Basic%20Usage/Command%20Mode/command_mode.md),
 as well as [dictation mode](/docs/Basic%20Usage/dictation_mode.md) if useful.
 
-Additionally, Talon has support for certain [specific popular applications](./Apps/index.md).
+Additionally, Talon has support for certain [specific popular applications](./application-list.md).
 This can make it easier and more efficient to operate them by voice.
 
 For example, within firefox you could initiate a page reload by moving the cursor to over the reload icon and saying touch

@@ -267,44 +267,46 @@ flowchart
     app_audio["Digital audio
       (from previous diagram)"]
     %% link id: 0
-    app_audio --> text_output
-
-    active_command_set["Active Command Set
-      (command mode)"]
-    %% link id: 1
-    active_command_set --> text_output
+    app_audio ---> text_output
 
     vocabulary["vocabulary.talon-list
       (dictation mode)"]
-    %% link id: 2
+    %% link id: 1
     vocabulary --> text_output
-
-    text_output["Recognition Engine's
-      Text Output"]
-    %% link id: 3
-    text_output --> talon_output
     
     engine_type["Speech Recognition 
       Engine Type
       ~
       (Conformer, Conformer Beta or Dragon)"]
-    %% link id: 4
+    %% link id: 2
     engine_type --- text_output
 
     user_file_sets["The Installed Set of
       User File Sets
       ~
       eg Talon Community"]
-    %% link id: 5
+    %% link id: 3
+    user_file_sets --> active_command_set
+    %% link id: 4
     user_file_sets --> talon_output
+
+    text_output["Recognition Engine's
+      Text Output"]
+    %% link id: 5
+    text_output --> talon_output
+
+    active_command_set["Active Command Set
+      (command mode)"]
+    %% link id: 6
+    active_command_set --> text_output
     
     talon_output["Talon Platform Output"]
 
     classDef mainInfoPath fill:#050,stroke-width:2px;
     class app_audio,text_output,talon_output mainInfoPath;
 
-    linkStyle 0,3 stroke:#050,stroke-width:2px,color:red;
-    linkStyle 1,2,4,5 stroke:#fff,color:black,stroke-dasharray: 5 5;
+    linkStyle 0,5 stroke:#050,stroke-width:2px,color:red;
+    linkStyle 1,2,3,4,6 stroke:#fff,color:black,stroke-dasharray: 5 5;
   end
 ```
 
