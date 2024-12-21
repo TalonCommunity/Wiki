@@ -1,6 +1,6 @@
 # Toggle listening
 
-If you want to completely prevent Talon from listening so not even the wake up commands are active you can do that by setting the microphone.
+If you want to completely prevent Talon from listening, so not even the wake up commands are active, you can do that by changing the microphone to `"None"`:
 
 ```talon
 key(f9):
