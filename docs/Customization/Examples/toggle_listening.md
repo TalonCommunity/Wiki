@@ -2,7 +2,7 @@
 
 If you want to completely prevent Talon from listening, so not even the wake up commands are active, you can do that by changing the microphone to `"None"`:
 
-To list available microphone names. Either used the voice command `"microphone show"` or click `Microphone` in the Talon menu.
+You can see available microphone names in the "Microphone" submenu in the Talon menu; or issue the voice command `"microphone show"`.
 
 ```talon
 key(f9):
