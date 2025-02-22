@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 
@@ -30,8 +30,8 @@ is running.
 
 | Class                                        | Description                                     |
 | -------------------------------------------- | ----------------------------------------------- |
-| [browser](./Command%20Groups/browser.md)          | browsers, such as firefox, chrome, edge, safari |
-| [file manager](./Command%20Groups/file_manager.md) | example windows explorer and the mac finder     |
+| [browser](./Command%20Groups%20GUI/browser.md)          | browsers, such as firefox, chrome, edge, safari |
+| [file manager](./Command%20Groups%20GUI/file_manager.md) | example windows explorer and the mac finder     |
 
 :::docotodo
 

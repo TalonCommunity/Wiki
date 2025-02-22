@@ -1,6 +1,6 @@
 # Link Talon and Python
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

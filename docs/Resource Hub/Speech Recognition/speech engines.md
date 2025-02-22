@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Speech Engines
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

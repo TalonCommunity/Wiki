@@ -1,6 +1,6 @@
 # Context Header
 
-:::docoscope Talon Community User Files Set
+:::docoscope community
 
 Although some aspect of the following example pertains to the talon platform itself, details within the example
 such as `<user.letter>` are specific to talon community.

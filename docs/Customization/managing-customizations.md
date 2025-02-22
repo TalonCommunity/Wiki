@@ -4,7 +4,7 @@ sidebar_position: 30
 
 # Managing Customizations
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

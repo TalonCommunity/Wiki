@@ -1,6 +1,6 @@
 # Overriding the Touch Command
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

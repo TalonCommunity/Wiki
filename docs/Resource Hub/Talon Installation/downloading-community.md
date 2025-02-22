@@ -1,6 +1,6 @@
 # Downloading the Talon Community User File Set
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

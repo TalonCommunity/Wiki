@@ -1,6 +1,6 @@
 # Listen Only While a Key is Pressed
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

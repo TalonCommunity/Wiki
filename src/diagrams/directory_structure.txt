@@ -21,8 +21,22 @@ talon
 talon
 	user
 		community
-			settings
+			apps
+                chrome
+                firefox
+                teams
+                ...
+```
+
+```
+talon
+	user
+		community
+			apps
+			settings/
 			settings.talon
+			...
+		my-talon
 	talon.log
 ```
 

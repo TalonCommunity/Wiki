@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Talon Framework Overview
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 All pages under "Talon Framework Overview" pertain to the talon platform.
 

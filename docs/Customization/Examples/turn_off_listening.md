@@ -1,6 +1,6 @@
 # Turn off listening on start up
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

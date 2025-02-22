@@ -44,7 +44,10 @@ function FeedbackAdmonition(props) {
 }
 
 function ScopeAdmonition(props) {
-  var str = "[SCOPE]" + (props.title ? " " + props.title : "");
+    const scope = props.title == "platform" ? "Talon Platform" : 
+        (props.title == "community" ? "Talon Community User File Set" : 
+        props.title ?? "TBD");
+  var str = `[SCOPE] ${scope}`;
   return (
     <div className={`${classList1} alert--docoscope`}>
       <div className={classList2}>
@@ -56,7 +59,7 @@ function ScopeAdmonition(props) {
         </span>
         {str}
       </div>
-      <div className={classList4}>{props.children}</div>
+      <div className={classList4}>{props.children}<br/>TO DO: Add links to appropriate topics</div>
     </div>
   );
 }

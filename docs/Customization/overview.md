@@ -11,7 +11,7 @@ Talon supports customization of many of its behaviors. It is intended that most 
 by users of all skill levels.
 
 
-:::docoscope
+:::docoscope Various
 
 Some pages under ""Customization" pertain to the talon platform itself, and is not dependent on the
 talon community user file set being installed. Some are only relevant if talon community is installed.
@@ -37,7 +37,7 @@ Here are some [customization examples](./Examples/index.md)
 
 ## Customizing Community Items
 
-:::docoscope Talon Community User Files Set
+:::docoscope community
 
 :::
 
@@ -66,8 +66,8 @@ Before changing any of these files, it is recommended to first read the notes on
 
 | What                                                                                                       | Format        | Community User File Set Location                             |
 | ---------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------ |
-| [search engines](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/browser.md#search-engines-list) | `.talon-list` | `/core/websites_and_search_engines/search_engine.talon-list` |
-| [websites](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/browser.md#website-list)              | `.talon-list` | `/core/websites_and_search_engines/website.talon-list`       |
+| [search engines](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups%20GUI/browser.md#search-engines-list) | `.talon-list` | `/core/websites_and_search_engines/search_engine.talon-list` |
+| [websites](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups%20GUI/browser.md#website-list)              | `.talon-list` | `/core/websites_and_search_engines/website.talon-list`       |
 | [application names](/docs/Basic%20Usage/Command%20Mode/pc-control.md#application-names)                    | `.csv`        | `/core/app_switcher/app_name_overrides.<platform>.csv`       |
 | [file extensions](/docs/Basic%20Usage/Command%20Mode/text-shortcuts.md#file-extensions)                    | `.csv`        | `/settings/file_extensions.csv`                              |
-| [system paths](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups/file_manager.md#usersystem_path)   | `.talon-list` | `/core/system_paths-{hostname}.talon-list`                   |
+| [system paths](/docs/Resource%20Hub/Supported%20Applications/Command%20Groups%20GUI/file_manager.md#usersystem_path)   | `.talon-list` | `/core/system_paths-{hostname}.talon-list`                   |

@@ -1,6 +1,6 @@
 # Complete Action List
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

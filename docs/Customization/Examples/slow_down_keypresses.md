@@ -1,6 +1,6 @@
 # Slow down key presses
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

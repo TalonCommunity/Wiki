@@ -1,6 +1,6 @@
 # The Talon Log File
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

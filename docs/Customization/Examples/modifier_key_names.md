@@ -1,6 +1,6 @@
 # Overriding the Names of the Modifier Keys
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

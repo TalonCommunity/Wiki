@@ -1,6 +1,6 @@
 # `.csv` Files
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

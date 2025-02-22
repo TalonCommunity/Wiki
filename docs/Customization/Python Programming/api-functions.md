@@ -1,6 +1,6 @@
 # API functions
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

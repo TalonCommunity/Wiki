@@ -30,7 +30,7 @@ If the same setting is defined multiple times, Talon will use the setting value 
 ## Community Settings
 
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 
@@ -63,7 +63,7 @@ To add your own additional custom settings for changing Talon behavior, see [the
 
 ## Core Talon Settings
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

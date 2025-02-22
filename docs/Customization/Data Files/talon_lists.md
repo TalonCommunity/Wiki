@@ -1,8 +1,10 @@
 # `.talon-list` Files
 
-:::docoscope Talon Platform
+```
+:::docoscope platform
 
 :::
+```
 
 `.talon-list` files define lists of strings that can be used in voice commands (as well as Talon Python scripts).
 

@@ -1,6 +1,6 @@
 # Customize Keyboard Shortcuts
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

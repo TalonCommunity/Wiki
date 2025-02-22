@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Improving Recognition Accuracy
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

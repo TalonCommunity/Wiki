@@ -11,9 +11,7 @@ Once you have completed that and entered a few letters as a test, you are ready 
 
 :::
 
-:::docoscope
-
-All pages under "Basic Usage" are specific to the talon community user file set.
+:::docoscope community
 
 :::
 

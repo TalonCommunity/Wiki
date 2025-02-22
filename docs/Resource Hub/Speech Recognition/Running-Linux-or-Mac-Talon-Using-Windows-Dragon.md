@@ -1,6 +1,6 @@
 # Running Mac or Linux Talon Using Windows Dragon
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

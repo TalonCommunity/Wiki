@@ -4,7 +4,7 @@ sidebar_position: 1.1
 
 # Installation Guide
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 Although much of this page is pertinent to the talon platform itself,
 some steps are specific to the talon community user file set, and will be marked as such.
@@ -89,7 +89,7 @@ These will be marked as such.
 A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory -
 the [talon user directory](/docs/Resource%20Hub/terminology.md).
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

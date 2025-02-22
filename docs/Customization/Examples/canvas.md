@@ -1,6 +1,6 @@
 # Display an Image on Screen
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 

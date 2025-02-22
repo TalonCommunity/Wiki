@@ -1,6 +1,6 @@
 # Talon User Interface
 
-:::docoscope [Talon Platform](/docs/Resource%20Hub/terminology.md)
+:::docoscope platform
 
 :::
 

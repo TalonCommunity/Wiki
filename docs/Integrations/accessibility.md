@@ -2,7 +2,7 @@
 
 ## Sight Free Talon
 
-:::docoscope Talon Community User File Set
+:::docoscope community
 
 :::
 

@@ -21,7 +21,7 @@ In general Talon will automatically pick up and apply any changes to files in yo
 
 ## `.talon` File Syntax
 
-:::docoscope Talon Platform
+:::docoscope platform
 
 :::
 
