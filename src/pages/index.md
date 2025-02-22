@@ -44,25 +44,28 @@ mindmap
 ## Documentation Scope
 
 To use talon, then the talon platform needs to be installed.
-If you are a beginner then it is recommended that you additionally instabll the talon community user file set.
+If you are a beginner then it is recommended that you additionally install the talon community user file set.
 If you do so, then everything in this wiki is relevant to you.
 
-If you are an advanced user and have decided to install a different user file set, then  not all parts
+These sections will be highlighted as:
+
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
+  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
+    [SCOPE]: TALON COMMUNITY USER FILE SET
+  </div>
+</div>
+
+### Advanced Users
+
+If you are an advanced user and have decided to install a different user file set, then not all parts
 of this wiki is relevant. Those that are will be highlighted as follows.
 
 <div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
   <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
-    DOCUMENTATION SCOPE: TALON PLATFORM
+    [SCOPE]: TALON PLATFORM
   </div>
 </div>
 
-And those that aren't will be highlighted as follows:
-
-<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
-  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
-    DOCUMENTATION SCOPE: TALON COMMUNITY USER FILE SET
-  </div>
-</div>
 
 ---
 

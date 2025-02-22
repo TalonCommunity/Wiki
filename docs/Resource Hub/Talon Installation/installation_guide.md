@@ -4,7 +4,7 @@ sidebar_position: 1.1
 
 # Installation Guide
 
-:::docoscope platform
+:::docoscope Talon Platform
 
 Although much of this page is pertinent to the talon platform itself,
 some steps are specific to the talon community user file set, and will be marked as such.

@@ -80,16 +80,38 @@ It is downloaded into the [talon community directory](#talon-community-directory
 
 _(Originally called `knausj_talon`, after [its original creator :superhero:](https://github.com/knausj85))_
 
-## Talon Directory Structure
+## Talon Community App Structure
+
+The following is not comprehensive, but can be indicative of the directory structure.
+
 
 ```
-talon/                          | Talon Home Directory
-├── user/                       | Talon User Directory
-│   ├── community/              | Talon Community Directory
-│   │   ├── settings/           | Community Settings Directory
-│   │   └── settings.talon      | Community Settings File
-│   └── my-talon                | Personal Customizations Directory
-└── talon.log                   | Talon Log File
+talon/
+└── user/
+    └── community/
+        └── apps/
+            ├── chrome
+            ├── firefox
+            ├── teams
+            └── ...
+```
+
+## Talon Directory Structure
+
+The following is not comprehensive, but can be indicative of the directory structure.
+
+The folder names `community` and `my-talon` are examples only.
+
+```
+talon/
+├── user/
+│   ├── community/
+│   │   ├── apps
+│   │   ├── settings/
+│   │   ├── settings.talon
+│   │   └── ...
+│   └── my-talon
+└── talon.log
 ```
 
 ## Talon Home Directory

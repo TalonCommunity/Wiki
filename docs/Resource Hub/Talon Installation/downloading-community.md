@@ -1,11 +1,7 @@
 # Downloading the Talon Community User File Set
 
-:::docoscope community
-
-:::
-
-After installing talon, and a speech recognition engine as described here,
-you will need to download a user file set. This wiki is all about the talent community user file set
+After installing talon and a speech recognition engine, as described here
+you will need to download a user file set. This wiki is all about the Talon community user file set
 and so this page is about downloading that specific user file set.
 
 This can be done using two different methods, using zip and using git.
@@ -38,7 +34,7 @@ In many cases, this disadvantage can be mitigated by following the recommendatio
 ### About `git`
 
 The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime.
-This is a benefit when using talent longer term.
+This is a benefit when using Talon longer term.
 
 If you haven't already heard of `git`, and if you are not particularly comfortable using a command terminal,
 this will be harder to get started with Talon.
