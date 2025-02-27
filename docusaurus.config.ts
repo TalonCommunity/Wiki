@@ -1,9 +1,10 @@
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
-import {ShikiTransformer} from "shiki";
-import talonLanguage from "./talon.tmLanguage.json" ;
+import {BundledLanguage, bundledLanguages, ShikiTransformer} from "shiki";
+// import talonLanguage from "./talon.tmLanguage.json" ;
 import { transformerColorizedBrackets } from '@shikijs/colorized-brackets'
+import {transformerNotationHighlight} from "@shikijs/transformers"
 
 
 const config: Config  = {
@@ -56,7 +57,7 @@ const config: Config  = {
                 transformers: [
                   transformerColorizedBrackets() as unknown as ShikiTransformer,
                 ],
-                langs: ["python", /* other languages */talonLanguage],
+                langs: Object.keys(bundledLanguages) as BundledLanguage[]
               } satisfies RehypeShikiOptions,
             ],
           ],
