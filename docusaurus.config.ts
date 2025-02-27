@@ -1,13 +1,12 @@
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
-import {BundledLanguage, bundledLanguages, ShikiTransformer} from "shiki";
+import { BundledLanguage, bundledLanguages, ShikiTransformer } from "shiki";
 // import talonLanguage from "./talon.tmLanguage.json" ;
-import { transformerColorizedBrackets } from '@shikijs/colorized-brackets'
-import {transformerNotationHighlight} from "@shikijs/transformers"
+import { transformerColorizedBrackets } from "@shikijs/colorized-brackets";
+import { transformerNotationHighlight } from "@shikijs/transformers";
 
-
-const config: Config  = {
+const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
   favicon: "img/talon-community-logo.png",
@@ -51,23 +50,21 @@ const config: Config  = {
               {
                 themes: {
                   light: "catppuccin-latte",
-                  dark: "catppuccin-macchiato"
+                  dark: "catppuccin-macchiato",
                 },
-                inline: 'tailing-curly-colon',
+                inline: "tailing-curly-colon",
                 transformers: [
                   transformerColorizedBrackets() as unknown as ShikiTransformer,
                 ],
-                langs: Object.keys(bundledLanguages) as BundledLanguage[]
+                langs: Object.keys(bundledLanguages) as BundledLanguage[],
               } satisfies RehypeShikiOptions,
             ],
           ],
-
         },
         theme: {
           customCss: "./src/css/custom.css",
         },
         blog: false,
-
       } satisfies Preset.Options,
     ],
   ],
