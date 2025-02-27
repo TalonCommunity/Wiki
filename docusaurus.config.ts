@@ -1,8 +1,12 @@
-import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
+import {ShikiTransformer} from "shiki";
+import talonLanguage from "./talon.tmLanguage.json" ;
+import { transformerColorizedBrackets } from '@shikijs/colorized-brackets'
 
-const config: Config = {
+
+const config: Config  = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
   favicon: "img/talon-community-logo.png",
@@ -39,11 +43,30 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/TalonCommunity/Wiki/edit/main/",
+          beforeDefaultRehypePlugins: [
+            [
+              // customRehypeShiki,
+              rehypeShiki,
+              {
+                themes: {
+                  light: "catppuccin-latte",
+                  dark: "catppuccin-macchiato"
+                },
+                inline: 'tailing-curly-colon',
+                transformers: [
+                  transformerColorizedBrackets() as unknown as ShikiTransformer,
+                ],
+                langs: ["python", /* other languages */talonLanguage],
+              } satisfies RehypeShikiOptions,
+            ],
+          ],
+
         },
         theme: {
           customCss: "./src/css/custom.css",
         },
         blog: false,
+
       } satisfies Preset.Options,
     ],
   ],
@@ -170,11 +193,6 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Talon Community`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-      additionalLanguages: ["talon"],
     },
     colorMode: {
       respectPrefersColorScheme: true,

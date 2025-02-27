@@ -14,7 +14,7 @@ The primary way to extend talon is using `.talon` files placed anywherein the `u
 
 An example `.talon` file might look like this:
 
-```````talon
+```talon
 # Comments start with a # sign, and they must always be on their own line.
 #
 # This part, the context header, defines under which circumstances this file applies.
@@ -43,7 +43,7 @@ tag(): user.tabs
 # This adjusts settings (within this file's context).
 settings():
     key_wait = 1.5
-```````
+```
 
 ## Context header
 
