@@ -54,7 +54,7 @@ const config: Config = {
                 },
                 inline: "tailing-curly-colon",
                 transformers: [
-                  transformerColorizedBrackets() as unknown as ShikiTransformer,
+                  // transformerColorizedBrackets() as unknown as ShikiTransformer,
                 ],
                 langs: Object.keys(bundledLanguages) as BundledLanguage[],
               } satisfies RehypeShikiOptions,
