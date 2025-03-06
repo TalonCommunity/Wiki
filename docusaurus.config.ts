@@ -1,3 +1,4 @@
+import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
@@ -9,7 +10,7 @@ import { transformerNotationHighlight } from "@shikijs/transformers";
 const config: Config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
-  favicon: "img/talon-community-logo.png",
+  favicon: "img/logos/talon-community-logo.png",
 
   // Set the production url of your site here
   url: "https://talon.wiki",
@@ -60,6 +61,10 @@ const config: Config = {
               } satisfies RehypeShikiOptions,
             ],
           ],
+          admonitions: {
+            keywords: ["docotodo", "docofeedback", "docoscope"],
+            extendDefaults: true,
+          },
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -68,6 +73,9 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  markdown: {
+    mermaid: true,
+  },
   themes: [
     [
       // https://github.com/easyops-cn/docusaurus-search-local
@@ -82,10 +90,11 @@ const config: Config = {
         removeDefaultStemmer: true,
       },
     ],
+    "@docusaurus/theme-mermaid"
   ],
   themeConfig: {
     // Replace with your project's social card
-    image: "img/talon-community-logo-social.png",
+    image: "img/logos/talon-community-logo-social.png",
 
     /*
     algolia is not working; we instead use local search.
@@ -109,23 +118,18 @@ const config: Config = {
     },
     announcementBar: {
       content:
-        '<b> You are viewing the new refactor of the Talon community wiki! The previous site can still be accessed via <a href="https://old.talon.wiki">https://old.talon.wiki</a></b> ✨',
+        '<b> You are viewing an <a href="https://github.com/ronzulu/talon-community-wiki/tree/restructure">experimental refactor</a> of the Talon community wiki! The current site can still be accessed via <a href="https://talon.wiki">https://talon.wiki</a></b> ✨',
       isCloseable: true,
     },
 
     navbar: {
+      title: "Home",
       logo: {
         alt: "My Site Logo",
-        src: "img/talon-community-logo.png",
+        src: "img/logos/talon-community-logo.png",
       },
       hideOnScroll: true,
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "QuickstartSidebar",
-          position: "left",
-          label: "Quickstart",
-        },
         {
           type: "docSidebar",
           sidebarId: "BasicUsageSidebar",
@@ -154,15 +158,6 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [
-        // {
-        //   title: "Docs",
-        //   items: [
-        //     {
-        //       label: "Docs",
-        //       to: "/docs/",
-        //     },
-        //   ],
-        // },
         {
           title: "Talon Links",
           items: [
@@ -190,7 +185,12 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Talon Community`,
+      copyright: `Copyright © ${new Date().getFullYear()} Talon Community. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ["talon"],
     },
     colorMode: {
       respectPrefersColorScheme: true,
