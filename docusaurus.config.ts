@@ -149,6 +149,12 @@ const config: Config = {
           label: "Integrations",
         },
         {
+          type: "docSidebar",
+          sidebarId: "HelpSidebar",
+          position: "left",
+          label: "Help",
+        },
+        {
           href: "https://github.com/TalonCommunity/Wiki/",
           label: "GitHub",
           position: "right",
