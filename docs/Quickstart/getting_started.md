@@ -120,4 +120,3 @@ If you have installed a different user file set, consult its documentation on us
 <!-- Update in later phase of https://github.com/TalonCommunity/Wiki/pull/312
 - In addition to [Talon Community](https://github.com/talonhub/community), you may want to consider installing any of the popular [Talon integrations](/docs/Integrations/integrations.md)
  -->
-
