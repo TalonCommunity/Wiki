@@ -41,6 +41,15 @@ mindmap
 ```
 ---
 
+## Jumping In
+
+Before installing talon, there is useful information on this page and on the linked pages for you to read.
+
+If you prefer jumping in, here is the [installation guide](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md) and 
+information about [basic usage](/docs/Basic%20Usage/basic_usage.md).
+
+---
+
 ## Documentation Scope
 
 To use talon, the talon platform needs to be installed.
@@ -81,7 +90,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Videos of Talon in use                                     | [Video Demos](/Resource%20Hub/talon_related_resources)                                                                     |
 | Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                       |
-| Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Getting Started](/Basic%20Usage/basic_usage) |
+| Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage) |
 | How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/overview), [Integrations](/Integrations)                                              |
 | Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Troubleshooting/basic-issues)                                                            |
 | Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                           |

@@ -132,12 +132,6 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "QuickstartSidebar",
-          position: "left",
-          label: "Quickstart",
-        },
-        {
-          type: "docSidebar",
           sidebarId: "BasicUsageSidebar",
           position: "left",
           label: "Basic Usage",
