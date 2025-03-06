@@ -12,7 +12,7 @@ A quiet room will always be better than a noisy one. A good microphone can mitig
 
 ## Microphone
 
-Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](./Hardware/hardware.md) for recommendations and correct setup.
+Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](../Hardware/hardware) for recommendations and correct setup.
 
 ## Keep a relaxed voice
 

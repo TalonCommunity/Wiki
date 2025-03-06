@@ -132,6 +132,12 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
+          sidebarId: "QuickstartSidebar",
+          position: "left",
+          label: "Quickstart",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "BasicUsageSidebar",
           position: "left",
           label: "Basic Usage",
@@ -147,6 +153,12 @@ const config: Config = {
           sidebarId: "IntegrationsSidebar",
           position: "left",
           label: "Integrations",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "ResourceHubSidebar",
+          position: "left",
+          label: "Resource Hub",
         },
         {
           type: "docSidebar",
