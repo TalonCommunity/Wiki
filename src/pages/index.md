@@ -10,7 +10,6 @@ Talon is free to use and ongoing development is made possible by [donations on P
 
 ## Talon Landscape
 
-
 ```mermaid
 mindmap
   root{{"Talon Platform<br/>talonvoice.com"}}
@@ -39,13 +38,14 @@ mindmap
       Stream Deck
 
 ```
+
 ---
 
 ## Jumping In
 
 Before installing talon, there is useful information on this page and on the linked pages for you to read.
 
-If you prefer jumping in, here is the [installation guide](/Resource%20Hub/Talon%20Installation/installation_guide) and 
+If you prefer jumping in, here is the [installation guide](/Resource%20Hub/Talon%20Installation/installation_guide) and
 information about [basic usage](/Basic%20Usage/basic_usage).
 
 ---
@@ -75,7 +75,6 @@ of this wiki is relevant. Those that are will be highlighted as follows.
   </div>
 </div>
 
-
 ---
 
 ## Goal of this Wiki
@@ -86,14 +85,14 @@ The goal of this wiki is to provide information and documentation for the users 
 
 ## Wiki Navigation
 
-| If you are looking for:                                    | See:                                                                                                                       |
-| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Videos of Talon in use                                     | [Video Demos](/Integrations/talon_related_resources)                                                                     |
-| Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                       |
+| If you are looking for:                                    | See:                                                                                                                   |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Videos of Talon in use                                     | [Video Demos](/Integrations/talon_related_resources)                                                                   |
+| Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                   |
 | Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage) |
-| How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/basic_customization), [Integrations](/Integrations/essential-tools)                                              |
-| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Speech%20Recognition/troubleshooting)                                                            |
-| Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                           |
+| How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/basic_customization), [Integrations](/Integrations/essential-tools)               |
+| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Speech%20Recognition/troubleshooting)                                                |
+| Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                       |
 
 :::tip Talon Slack
 

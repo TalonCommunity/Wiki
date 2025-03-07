@@ -86,7 +86,7 @@ const config: Config = {
         removeDefaultStemmer: true,
       },
     ],
-    "@docusaurus/theme-mermaid"
+    "@docusaurus/theme-mermaid",
   ],
   themeConfig: {
     // Replace with your project's social card
