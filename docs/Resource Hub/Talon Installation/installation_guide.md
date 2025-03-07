@@ -21,7 +21,8 @@ Talon has various [system requirements](../Hardware/os), covering the computer h
 <details>
   <summary>Linux Users</summary>
   - Download [Talon for Linux](https://talonvoice.com)
-  - Install by **To be completed**
+  - Install
+
 :::note
 
 - Talon, like many tools for automation or accessibility, **does not support Wayland**
@@ -38,17 +39,19 @@ Talon has various [system requirements](../Hardware/os), covering the computer h
 <details>
   <summary>Mac Users</summary>
   - Download [Talon for Mac](https://talonvoice.com)
-  - Install by **To be completed**
+  - Install
 </details>
 
 <details>
   <summary>Windows Users</summary>
   - Download [Talon for Windows](https://talonvoice.com)
   - Install Talon by running `talon-windows.exe`
+
 :::note
 It is recommended that Talon is installed as described above.
 However, please note that the application is also available as a [portable zip file](https://talonvoice.com/dl/latest/talon-windows.zip)
 :::
+
 </details>
 
 ## 3: Install a speech recognition engine
