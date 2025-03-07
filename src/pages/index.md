@@ -45,8 +45,8 @@ mindmap
 
 Before installing talon, there is useful information on this page and on the linked pages for you to read.
 
-If you prefer jumping in, here is the [installation guide](/docs/Resource%20Hub/Talon%20Installation/installation_guide.md) and 
-information about [basic usage](/docs/Basic%20Usage/basic_usage.md).
+If you prefer jumping in, here is the [installation guide](/Resource%20Hub/Talon%20Installation/installation_guide) and 
+information about [basic usage](/Basic%20Usage/basic_usage).
 
 ---
 
@@ -58,7 +58,7 @@ If you do so, then everything in this wiki is relevant to you.
 
 These sections will be highlighted as:
 
-<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert docoscope">
   <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
     [SCOPE]: TALON COMMUNITY USER FILE SET
   </div>
@@ -69,7 +69,7 @@ These sections will be highlighted as:
 If you are an advanced user and have decided to install a different user file set, then not all parts
 of this wiki is relevant. Those that are will be highlighted as follows.
 
-<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert alert--warning alert--docoscope">
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert docoscope">
   <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
     [SCOPE]: TALON PLATFORM
   </div>
@@ -88,11 +88,11 @@ The goal of this wiki is to provide information and documentation for the users 
 
 | If you are looking for:                                    | See:                                                                                                                       |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Videos of Talon in use                                     | [Video Demos](/Resource%20Hub/talon_related_resources)                                                                     |
+| Videos of Talon in use                                     | [Video Demos](/Integrations/talon_related_resources)                                                                     |
 | Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                       |
 | Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage) |
-| How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/overview), [Integrations](/Integrations)                                              |
-| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Troubleshooting/basic-issues)                                                            |
+| How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/basic_customization), [Integrations](/Integrations/essential-tools)                                              |
+| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Speech%20Recognition/troubleshooting)                                                            |
 | Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                           |
 
 :::tip Talon Slack
