@@ -4,16 +4,17 @@ sidebar_position: 1.1
 
 # Installation Guide
 
-:::docoscope Talon Platform
+:::info talon-scope-platform
 
 Although much of this page is pertinent to the talon platform itself,
 some steps are specific to the talon community user file set, and will be marked as such.
 
 :::
 
+
 ## 1: Check System Requirements
 
-Talon has various [system requirements](../Hardware/hardware.md), covering the computer hardware, operating system and microphone hardware.
+Talon has various [system requirements](../Hardware/os), covering the computer hardware, operating system and microphone hardware.
 
 ## 2: Download & Install Talon
 
@@ -92,12 +93,12 @@ the talon user directory.
 the [talon user directory](/docs/Resource%20Hub/terminology).
 -->
 
-:::docoscope community
+:::info talon-scope-community
 
 :::
 
 This can be done one of two ways - either as a `zip` file or by using `git`.
-Considerations in choosing between the two methods, as well as instructions, are described [here](../Resource%20Hub/Talon%20Installation/downloading-community).
+Considerations in choosing between the two methods, as well as instructions, are described [here](../Talon%20Installation/downloading-community).
 
 ## 5: Test your Talon Setup
 

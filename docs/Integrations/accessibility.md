@@ -8,9 +8,8 @@ Please note that Talon is in rapid development and is largely community supporte
 
 ### How to get started
 
-- Setup Talon according to the standard [quickstart](../Quickstart/getting_started.md)
-  - Install Talon
-  - Install a speech recognition engine
+- Setup Talon as per normal:
+  - [Install Talon](../Resource%20Hub/Talon%20Installation/installation_guide) and a speech recognition engine
   - Install the [community user file set](https://github.com/talonhub/community)
 - Once setup, install [sight-free-talon](https://github.com/C-Loftus/sight-free-talon). This repository provides text-to-speech integration for Talon. If you use a screen reader, this repo prevents Talon from interrupting the text-to-speech voice as it types characters during dictation.
   - See the documentation in that repo for specific setup instructions

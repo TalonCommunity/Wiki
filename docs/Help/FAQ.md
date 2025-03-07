@@ -14,7 +14,7 @@ Talon does not require special configuration for different programming languages
 
 ### What hardware should I have?
 
-Check out the [hardware](../Resource%20Hub/Hardware/hardware) page for microphone and eye tracker recommendations.
+Check out the [hardware](/docs/Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
 
 ### Are languages other than English supported?
 
@@ -22,7 +22,7 @@ They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and fin
 
 ### How can I make talon recognise me better?
 
-See the page [Improving Recognition Accuracy](improving_recognition_accuracy).
+See the page [Improving Recognition Accuracy](../Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
 
 ### How can I contribute?
 
@@ -35,4 +35,4 @@ While Talon is closed source, there's plenty you can do to help:
 
 ### Troubleshooting
 
-Checkout the [troubleshooting](troubleshooting) for solutions to common problems.
+Checkout the [troubleshooting](../Resource%20Hub/Speech%20Recognition/troubleshooting) for solutions to common problems.
