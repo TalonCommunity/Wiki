@@ -61,10 +61,6 @@ const config: Config = {
               } satisfies RehypeShikiOptions,
             ],
           ],
-          admonitions: {
-            keywords: ["docotodo", "docofeedback", "docoscope"],
-            extendDefaults: true,
-          },
         },
         theme: {
           customCss: "./src/css/custom.css",
