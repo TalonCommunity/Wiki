@@ -267,3 +267,25 @@ Notice that we've given it a context header. Because this context header is more
 In general, you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
 This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
+
+
+### Finding what a command does so that you can add a different voice command
+
+Remapping or adding new voice commands for actions like in the above only works if you know what the original command is doing. The easiest way to find that out is [using the repl introspection functions](https://talon.wiki/customization/misc-tips/#introspection-functions).
+
+Opened the repl from the talon menu or by saying "talon open rebel". This opens up a text console. Type in `events.tail()`, and press enter. Perform the speech command that you want to know about then look at the final line in the text output. You should see something like "[34911.282] user/community/core/windows_and_tabs/windows_and_tabs_linux.py | action **key('ctrl-tab')**" - the final part tells you the command that is being used. Sometimes the last line is too specific, and there may be a more generic line further up the list. For example, in the following list, the action "app.tab_previous()" is the generic command, and the others are more specific sub-commands called by the engine to enact that phrase. Figuring out which one is best may require some guesswork and trial and error.
+[35424.335] user/community/plugin/command_history/command_history.py | action user.history_transform_phrase_text(['tab', 'previous'])
+[35424.337] user/community/plugin/command_history/command_history.py | action speech.enabled()
+[35424.337] user/community/plugin/subtitles/on_phrase.py | action speech.enabled()
+[35424.338] user/community/core/windows_and_tabs/tabs.talon | action app.tab_previous()
+[35424.338] user/community/core/windows_and_tabs/windows_and_tabs_linux.py | action key('ctrl-shift-tab')
+```
+
+You can then add a mapping to that command in a talon file somewhere in your user folder, like
+
+```talon
+os: mac
+-
+tab left:  app.tab_previous()
+```
+
