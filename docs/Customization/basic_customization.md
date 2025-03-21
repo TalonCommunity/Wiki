@@ -268,7 +268,6 @@ In general, you can use this technique by just making a version of the `.talon` 
 
 This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
 
-
 ### Finding what a command does so that you can add a different voice command
 
 Remapping or adding new voice commands for actions like in the above only works if you know what the original command is doing. The easiest way to find that out is [using the repl introspection functions](https://talon.wiki/customization/misc-tips/#introspection-functions).
@@ -279,7 +278,8 @@ Opened the repl from the talon menu or by saying "talon open rebel". This opens 
 [35424.337] user/community/plugin/subtitles/on_phrase.py | action speech.enabled()
 [35424.338] user/community/core/windows_and_tabs/tabs.talon | action app.tab_previous()
 [35424.338] user/community/core/windows_and_tabs/windows_and_tabs_linux.py | action key('ctrl-shift-tab')
-```
+
+````
 
 You can then add a mapping to that command in a talon file somewhere in your user folder, like
 
@@ -287,5 +287,4 @@ You can then add a mapping to that command in a talon file somewhere in your use
 os: mac
 -
 tab left:  app.tab_previous()
-```
-
+````
