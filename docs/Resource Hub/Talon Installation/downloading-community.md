@@ -37,7 +37,7 @@ The benefit of `git`, is that it makes it easy to obtain the latest files withou
 This is a benefit when using Talon longer term.
 
 If you haven't already heard of `git`, you might find that this approach makes it a little harder to get started with Talon.
-`git` is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`. 
+`git` is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`.
 
 `git` is available as both a command line utility and as a GUI application.
 If you are not particularly comfortable usihellong a command terminal, you may prefer a GUI application such as [`GitHub Desktop`](https://docs.github.com/en/desktop/overview/about-github-desktop).

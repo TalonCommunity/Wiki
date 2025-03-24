@@ -88,6 +88,7 @@ These will be marked as such.
 
 A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory -
 the Talon user directory.
+
 <!-- Update in later phase of https://github.com/TalonCommunity/Wiki/pull/312
 the [Talon user directory](/docs/Resource%20Hub/terminology).
 -->
