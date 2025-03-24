@@ -11,7 +11,6 @@ some steps are specific to the Talon community user file set, and will be marked
 
 :::
 
-
 ## 1: Check System Requirements
 
 Talon has various [system requirements](../Hardware/os), covering the computer hardware, operating system and microphone hardware.
@@ -87,9 +86,6 @@ If you install a different user file set then portions of this wiki will not be 
 These will be marked as such.
 :::
 
-
-
-
 A `user file set` is simply a bunch of files that need to be downloaded and placed in the correct directory -
 the Talon user directory.
 <!-- Update in later phase of https://github.com/TalonCommunity/Wiki/pull/312
@@ -111,10 +107,9 @@ If you have installed a different user file set, consult its documentation on us
 
 ## 6: Next steps
 
-
 - If needed, try ways to [improve recognition accuracy](../Speech%20Recognition/improving_recognition_accuracy.md)
 - [Customize Talon](../../Customization/basic_customization): learn about how to configure Talon to your liking.
- - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
+- If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
 - For earlier access to new features, priority support, and access to additional [speech engines](../Speech%20Recognition/speech%20engines.md), install the [beta version](../../Help/beta_talon).
 
 <!-- Update in later phase of https://github.com/TalonCommunity/Wiki/pull/312
