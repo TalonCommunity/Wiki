@@ -27,7 +27,7 @@ and make sure those changes aren't lost during the update.
 
 :::tip
 
-In many cases, this disadvantage can be mitigated by following the recommendations SO BE COMPLETED
+Make a backup of the whole Talon user directory prior to replacing it with a fresh download of the community user file set.
 
 :::
 
