@@ -1,6 +1,6 @@
 # Downloading the Talon Community User File Set
 
-After installing talon and a speech recognition engine, as described here
+After installing Talon and a speech recognition engine, as described here
 you will need to download a user file set. This wiki is all about the Talon community user file set
 and so this page is about downloading that specific user file set.
 
@@ -36,7 +36,7 @@ Make a backup of the whole Talon user directory prior to replacing it with a fre
 The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime.
 This is a benefit when using Talon longer term.
 
-If you haven't already heard of `git`, you might find that this approach makes it a little harder to get started with talon.
+If you haven't already heard of `git`, you might find that this approach makes it a little harder to get started with Talon.
 `git` is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`. 
 
 `git` is available as both a command line utility and as a GUI application.
@@ -60,7 +60,7 @@ https://github.com/talonhub/community
 
 Click on the `Code` button:
 <img src="/img/resource_hub/talonhub_community_github.png/"
-     alt="screenshot of the talon hub community page on GitHub"
+     alt="screenshot of the Talon hub community page on GitHub"
 />
 
 And download the zip file:

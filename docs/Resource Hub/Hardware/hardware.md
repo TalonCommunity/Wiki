@@ -73,7 +73,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 - [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
 - [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mechanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
-With the talon beta, the elegato foot pedal can be used as follows:
+With the Talon beta, the elegato foot pedal can be used as follows:
 
 ```talon
 deck(pedal_left): print("left pedal")

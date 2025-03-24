@@ -43,7 +43,7 @@ mindmap
 
 ## Jumping In
 
-Before installing talon, there is useful information on this page and on the linked pages for you to read.
+Before installing Talon, there is useful information on this page and on the linked pages for you to read.
 
 If you prefer jumping in, here is the [installation guide](/Resource%20Hub/Talon%20Installation/installation_guide) and 
 information about [basic usage](/Basic%20Usage/basic_usage).
@@ -52,8 +52,8 @@ information about [basic usage](/Basic%20Usage/basic_usage).
 
 ## Documentation Scope
 
-To use talon, the talon platform needs to be installed.
-If you are a beginner then it is recommended that you additionally install the talon community user file set.
+To use Talon, the Talon platform needs to be installed.
+If you are a beginner then it is recommended that you additionally install the Talon community user file set.
 If you do so, then everything in this wiki is relevant to you.
 
 These sections will be highlighted as:

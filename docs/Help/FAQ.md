@@ -20,7 +20,7 @@ Check out the [hardware](/docs/Resource%20Hub/Hardware/hardware.md) page for mic
 
 They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and find a channel for your language to see how it's going. If you are in the beta program, you can configure the WebSpeech API for dictation in other languages.
 
-### How can I make talon recognise me better?
+### How can I make Talon recognise me better?
 
 See the page [Improving Recognition Accuracy](../Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
 
@@ -29,7 +29,7 @@ See the page [Improving Recognition Accuracy](../Resource%20Hub/Speech%20Recogni
 While Talon is closed source, there's plenty you can do to help:
 
 - https://speech.talonvoice.com/ Extend the voice data set used for speech recognition training.
-- Publish your talon commands on Github for others to share. Consider contributing back to the [Talon Community](https://github.com/talonhub/community) user file set. Publicly shared file sets are [searchable using this search engine](https://search.talonvoice.com/search/).
+- Publish your Talon commands on Github for others to share. Consider contributing back to the [Talon Community](https://github.com/talonhub/community) user file set. Publicly shared file sets are [searchable using this search engine](https://search.talonvoice.com/search/).
 - Report issues at https://github.com/talonvoice/talon/issues
 - Add more to these docs :)
 

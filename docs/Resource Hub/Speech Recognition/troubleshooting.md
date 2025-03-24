@@ -10,7 +10,7 @@ If you are testing your setup with one of the [basic commands](../../Basic%20Usa
 
 ### Check Your Microphone
 
-Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (talon, talon configuration, speech engine, etc).
+Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (Talon, Talon configuration, speech engine, etc).
 
 Check that your computer is using the correct microphone and receiving sound input.
 
@@ -49,7 +49,7 @@ After you have started the Talon application, look for the Talon icon in the men
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
 <img src="/img/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 </details>
 
@@ -62,10 +62,10 @@ If you are trying to use Talon commands and Talon is not responding, make sure T
 <details>
 <summary role="button">Mac</summary>
 <img src="/img/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 <img src="/img/talon_menubar_asleep.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 </details>
 
@@ -83,11 +83,11 @@ You can check that Talon is using the correct microphone by clicking the Talon i
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
 <img src="/img/talon_menu_microphone.png"
-     alt="screenshot of the desktop on a mac showing the talon microphone menu"
+     alt="screenshot of the desktop on a mac showing the Talon microphone menu"
  />
 </details>
 
-You can also check which which microphone is selected by looking in the talon logs, which are located in `~/.talon/talon.log`. Look for a log that looks like this:
+You can also check which which microphone is selected by looking in the Talon logs, which are located in `~/.talon/talon.log`. Look for a log that looks like this:
 
 `2020-03-04 15:27:53  INFO Activating Microphone: "Yeti Nano Analogue Stereo"`
 
