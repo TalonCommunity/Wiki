@@ -112,11 +112,6 @@ const config: Config = {
         hideable: true,
       },
     },
-    announcementBar: {
-      content:
-        '<b> You are viewing an <a href="https://github.com/ronzulu/talon-community-wiki/tree/restructure">experimental refactor</a> of the Talon community wiki! The current site can still be accessed via <a href="https://talon.wiki">https://talon.wiki</a></b> ✨',
-      isCloseable: true,
-    },
 
     navbar: {
       title: "Home",
