@@ -31,7 +31,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 | `help next`, `help previous` | go to the next or previous page of help items if there are a lot |
 | `help close`                 | hide any open help window again                                  |
 | `command history`            | show the command history                                         |
-| `talon open log`             | open the talon log for debugging                                 |
+| `talon open log`             | open the Talon log for debugging                                 |
 
 ## Dictating Text
 
@@ -102,9 +102,9 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | Command        | Description                                                               |
 | -------------- | ------------------------------------------------------------------------- |
 | `copy that`    |                                                                           |
-| `control cap`  | copy via the keyboard shortcut using the talon alphabet (`cap` for `c`)   |
+| `control cap`  | copy via the keyboard shortcut using the Talon alphabet (`cap` for `c`)   |
 | `paste that`   |                                                                           |
-| `control vest` | paste via the keyboard shortcut using the talon alphabet (`vest` for `v`) |
+| `control vest` | paste via the keyboard shortcut using the Talon alphabet (`vest` for `v`) |
 | `cut that`     |                                                                           |
 | `undo that`    |                                                                           |
 | `redo that`    |                                                                           |

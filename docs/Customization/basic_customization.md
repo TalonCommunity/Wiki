@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Basic customization
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves at a basic level.
+Once you have successfully [set up Talon](../Resource%20Hub/Talon%20Installation/installation_guide) you may find that you would like to change some of how it behaves at a basic level.
 
 ## Customization overview
 
@@ -164,7 +164,7 @@ You might have noticed that we've been using the key() and insert() actions in t
 
 1. Right click on the Talon icon in your status bar, choose scripting, and then 'Console (REPL)'. This will open a terminal window where you type Python commands and the results of those commands are printed out.
 2. Type `actions.list()` and press enter. This will list out all the available actions.
-3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the talon console and press enter:
+3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the Talon console and press enter:
 
 ```python
 import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old

@@ -20,12 +20,12 @@ These videos/channels demonstrate some of the possibilities of Talon without rea
 - [Ryan's Eye Tracking Demo](https://youtu.be/VMNsU7rrjRI) Demonstration of mouse control using eye tracking and Zoom mouse.
 - [2Shea's Emoji Searching Demo](https://youtu.be/RA0idiJkZOg) Experienced user of Talon dictating code
 - [2Shea's Mojolicious Perl App using Talon](https://youtu.be/X6rsA0Svh2M) More experienced code dictation
-- [talon rpi ether local w2l](https://youtu.be/PK6G1foW2Ao) Using Talon on a tablet. Channel has several videos.
+- [Talon rpi ether local w2l](https://youtu.be/PK6G1foW2Ao) Using Talon on a tablet. Channel has several videos.
 
 ## Text based educational resources
 
 - [Matt's Visual TalonScript Builder](https://visual-talonscript.pages.dev) This is a web application that helps you build custom Talon commands with a visual interface.
 - [Guenther Schmitz's Wiki of Talon configuations, issues, and solutions.](https://wiki.gpunktschmitz.com/index.php/Talon) This list contains a grab-bag of various configurations, answers to questioms, and solutions. Well worth looking at.
-- [chaosparrot's talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
+- [chaosparrot's Talon practice website:](https://chaosparrot.github.io/talon_practice) a website with games and lessions to help you practice basic Talon commands.
 - [Xevs web-based Talon Cheatsheet](https://talon-knausj-cheatsheet.netlify.app/) An online way to look up commands.
 - [Stolen Sugar](https://www.stolensugar.com/) Explore alternative keywords for commands in the [Talon Community](https://github.com/talonhub/community) user file set.

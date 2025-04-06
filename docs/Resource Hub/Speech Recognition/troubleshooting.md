@@ -6,11 +6,11 @@ sidebar_position: 7
 
 ## Nothing Happens When I Speak
 
-If you are testing your setup with one of the [basic commands](../Basic%20Usage/basic_usage) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.
+If you are testing your setup with one of the [basic commands](../../Basic%20Usage/basic_usage) and getting no response at all, first check a few fundamentals to help focus the troubleshooting. There are a number of issues at different layers of the setup that could be causing the problem. Your first few steps should help narrow the focus.
 
 ### Check Your Microphone
 
-Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (talon, talon configuration, speech engine, etc).
+Your microphone is critical to your setup. If your microphone isn't working, then none of your voice commands will either. Testing this piece early may save you some time and help narrow down your troubleshooting to either hardware (microphone, audio interface, cables, etc) or software (Talon, Talon configuration, speech engine, etc).
 
 Check that your computer is using the correct microphone and receiving sound input.
 
@@ -49,23 +49,23 @@ After you have started the Talon application, look for the Talon icon in the men
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
 <img src="/img/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 </details>
 
 ### Check that Talon is Awake
 
-When Talon is running, it will be in one of a few different [modes](../Basic%20Usage/basic_usage). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
+When Talon is running, it will be in one of a few different [modes](../../Basic%20Usage/basic_usage). One of these modes is a `sleep` mode, which will put Talon in a dormant state where it is listening but not responding to commands. While asleep, Talon will only respond to a minimal set of commands, such as `talon wake`, which will put Talon out of sleep and enable Talon to respond to commands.
 
 If you are trying to use Talon commands and Talon is not responding, make sure Talon is not in sleep mode. The Talon icon in the menubar provides some visual cue as to what mode Talon is in:
 
 <details>
 <summary role="button">Mac</summary>
 <img src="/img/talon_menubar_awake.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 <img src="/img/talon_menubar_asleep.png"
-     alt="screenshot of the desktop on a mac showint the talon icon in the top right menubar"
+     alt="screenshot of the desktop on a mac showint the Talon icon in the top right menubar"
  />
 </details>
 
@@ -83,11 +83,11 @@ You can check that Talon is using the correct microphone by clicking the Talon i
 Talon's icon should show up in the menu bar in the upper right corner of your screen:
 </p>
 <img src="/img/talon_menu_microphone.png"
-     alt="screenshot of the desktop on a mac showing the talon microphone menu"
+     alt="screenshot of the desktop on a mac showing the Talon microphone menu"
  />
 </details>
 
-You can also check which which microphone is selected by looking in the talon logs, which are located in `~/.talon/talon.log`. Look for a log that looks like this:
+You can also check which which microphone is selected by looking in the Talon logs, which are located in `~/.talon/talon.log`. Look for a log that looks like this:
 
 `2020-03-04 15:27:53  INFO Activating Microphone: "Yeti Nano Analogue Stereo"`
 
@@ -133,7 +133,7 @@ Check that your speech engine has been initialized by looking in the [talon log 
 
 ### Check your Talon user file sets
 
-Check you have some valid commands in `~/.talon/user`. If it's empty, install the [Talon Community](https://github.com/talonhub/community) user file set and test with some [basic commands](../Basic%20Usage/basic_usage). Install the entire repository, not just individual files. This user file set can be combined with other Talon user file sets, though it is common that most of the functionality will be provided by [Talon Community](https://github.com/talonhub/community). Additional file sets are commonly used to customize the default behavior provided by [Talon Community](https://github.com/talonhub/community) or add additional features not already included.
+Check you have some valid commands in `~/.talon/user`. If it's empty, install the [Talon Community](https://github.com/talonhub/community) user file set and test with some [basic commands](../../Basic%20Usage/basic_usage). Install the entire repository, not just individual files. This user file set can be combined with other Talon user file sets, though it is common that most of the functionality will be provided by [Talon Community](https://github.com/talonhub/community). Additional file sets are commonly used to customize the default behavior provided by [Talon Community](https://github.com/talonhub/community) or add additional features not already included.
 
 Talon automatically tracks changes to files in `~/.talon/user`, so that one can change scripts on the fly. This breaks if `~/.talon` (or any other part of the path) is a symlink.
 

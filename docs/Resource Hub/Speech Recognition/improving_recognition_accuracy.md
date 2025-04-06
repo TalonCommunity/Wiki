@@ -12,7 +12,7 @@ A quiet room will always be better than a noisy one. A good microphone can mitig
 
 ## Microphone
 
-Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](./Hardware/hardware.md) for recommendations and correct setup.
+Make sure that you have a good microphone and sound card, as speech recognition software requires better hardware than is commonly built in to computers. Have a look at the [hardware page](/docs/Resource%20Hub/Hardware/hardware.md) for recommendations and correct setup.
 
 ## Keep a relaxed voice
 
@@ -64,7 +64,7 @@ If recordings appear to be the correct length, Talon may be stuck due to a long-
 
 ## Help improving the Talon recognition engine
 
-This will not help you today, but instead help to improve the talon engine for all of us in the future. You can do this by providing speech (and noise) samples:
+This will not help you today, but instead help to improve the Talon engine for all of us in the future. You can do this by providing speech (and noise) samples:
 
 - [Talon Speech Collection](https://speech.talonvoice.com/)
 - [Talon Noise Collection](https://noise.talonvoice.com/)

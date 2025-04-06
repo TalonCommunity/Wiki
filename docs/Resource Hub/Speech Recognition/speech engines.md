@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Speech Engines
 
+:::info talon-scope-platform
+
+:::
+
 Talon uses a speech recognition engine that translates voice audio to text. The Conformer speech engine is recommended, but it is possible to use Talon with other speech engines, for example, if you already use Dragon and want to use Talon with Dragon or need a speech engine with language support other than English.
 
 | Engine        | OS            | Description                                                                                                                                                                           | Installation                                                                                                                | Price                                                                                             |
@@ -20,7 +24,7 @@ The Professional version of Dragon for Windows is recommended (but not strictly 
 
 ### Dictation Engines for Additional Language Support
 
-As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, the [Talon Beta](../beta_talon) supports the following options:
+As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, the [Talon Beta](../../Help/beta_talon) supports the following options:
 
 | Engine    | Platform      | Description                                                                                                                                       | Requirements                                                         |
 | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
