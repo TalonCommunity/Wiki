@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # `.talon` Files
 
-The primary way to extend Talon is using `.talon` files placed anywherein the `user` directory. A Talon file comes in two parts
+The primary way to extend Talon is using `.talon` files placed anywhere in the `user` directory. A Talon file comes in two parts:
 
 - A [context header](#context-header) defining the circumstances in which the file is active
 - A body that implements various behaviors within that context which can:
