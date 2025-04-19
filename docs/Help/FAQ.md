@@ -35,4 +35,4 @@ While Talon is closed source, there's plenty you can do to help:
 
 ### Troubleshooting
 
-Checkout the [troubleshooting](../Resource%20Hub/Speech%20Recognition/troubleshooting) for solutions to common problems.
+The [Troubleshooting](../Resource%20Hub/Speech%20Recognition/troubleshooting) page includes solutions to common problems.
