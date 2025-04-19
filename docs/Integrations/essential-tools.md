@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Essential Talon Integrations
 
 | Software                                                     | Description                                                                                                                 |

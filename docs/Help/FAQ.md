@@ -14,25 +14,25 @@ Talon does not require special configuration for different programming languages
 
 ### What hardware should I have?
 
-Check out the [hardware](./Hardware/hardware.md) page for microphone and eye tracker recommendations.
+Check out the [hardware](../Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
 
 ### Are languages other than English supported?
 
 They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and find a channel for your language to see how it's going. If you are in the beta program, you can configure the WebSpeech API for dictation in other languages.
 
-### How can I make talon recognise me better?
+### How can I make Talon recognise me better?
 
-See the page [Improving Recognition Accuracy](improving_recognition_accuracy).
+See the page [Improving Recognition Accuracy](../Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy).
 
 ### How can I contribute?
 
 While Talon is closed source, there's plenty you can do to help:
 
 - https://speech.talonvoice.com/ Extend the voice data set used for speech recognition training.
-- Publish your talon commands on Github for others to share. Consider contributing back to the [Talon Community](https://github.com/talonhub/community) user file set. Publicly shared file sets are [searchable using this search engine](https://search.talonvoice.com/search/).
+- Publish your Talon commands on Github for others to share. Consider contributing back to the [Talon Community](https://github.com/talonhub/community) user file set. Publicly shared file sets are [searchable using this search engine](https://search.talonvoice.com/search/).
 - Report issues at https://github.com/talonvoice/talon/issues
 - Add more to these docs :)
 
 ### Troubleshooting
 
-Checkout the [troubleshooting](troubleshooting) for solutions to common problems.
+The [Troubleshooting](../Resource%20Hub/Speech%20Recognition/troubleshooting) page includes solutions to common problems.

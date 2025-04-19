@@ -57,7 +57,7 @@ Windows default drivers have a limitation and that they _cannot_ record and play
 Check out the `#eye-tracking` channel in Slack, and the [Tobii 4c Tips](tobii_4c) page.
 
 - Tobii 4C is a commonly used and recommended eye tracker, but it is slowly being superceded as the default as more folks are starting to use the Tobii 5. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
-- [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) is the newer model and may be easier to find than the 4C. This one does require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](../Hardware/tobii_5.md).
+- [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) is the newer model and may be easier to find than the 4C. This one does require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](tobii_5).
 
 ### Windows Login plus Talon
 
@@ -73,7 +73,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 - [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
 - [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mechanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
-With the talon beta, the elegato foot pedal can be used as follows:
+With the Talon beta, the elegato foot pedal can be used as follows:
 
 ```talon
 deck(pedal_left): print("left pedal")

@@ -40,3 +40,21 @@
 [data-theme="dark"] pre span {
   color: var(--shiki-dark) !important;
 }
+
+.theme-admonition.docotodo {
+  background-color: rgb(121, 68, 146);
+  border-left: 4px solid rgb(58, 23, 73);
+  color: white;
+}
+
+.theme-admonition.docofeedback {
+  background-color: rgb(92, 104, 61);
+  border-left: 4px solid rgb(4, 43, 7);
+  color: white;
+}
+
+.theme-admonition.docoscope {
+  background-color: #373255;
+  border-left: 4px solid #651fff;
+  color: white;
+}

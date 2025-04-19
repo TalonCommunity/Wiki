@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # `.talon` Files
 
-The primary way to extend talon is using `.talon` files placed anywherein the `user` directory. A talon file comes in two parts
+The primary way to extend Talon is using `.talon` files placed anywhere in the `user` directory. A Talon file comes in two parts:
 
 - A [context header](#context-header) defining the circumstances in which the file is active
 - A body that implements various behaviors within that context which can:
@@ -55,7 +55,7 @@ The following requirements can be set:
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `os`            | require specific operating systems; currently either `linux`, `mac`, or `windows`                                                                                                   |
 | `tag`           | require a specific tag                                                                                                                                                              |
-| `mode`          | only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
+| `mode`          | only active for specific Talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
 | `app`           | match applications by explicitly declared, well-known name                                                                                                                          |
 | `app.name`      | match applications by name (TODO where does Talon read this out?)                                                                                                                   |
 | `app.exe`       | match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`                                                                                                  |
