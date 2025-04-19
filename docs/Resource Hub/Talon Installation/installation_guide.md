@@ -100,7 +100,7 @@ the [Talon user directory](/docs/Resource%20Hub/terminology).
 This can be done one of two ways - either as a `zip` file or by using `git`.
 Considerations in choosing between the two methods, as well as instructions, are described [here](../Talon%20Installation/downloading-community).
 
-## 5: Test your Talon Setup
+## 5: Test your Talon setup
 
 If you have installed Talon community, try a few [basic commands](/docs/Basic%20Usage/basic_usage.md).
 
