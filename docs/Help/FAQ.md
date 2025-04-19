@@ -14,7 +14,7 @@ Talon does not require special configuration for different programming languages
 
 ### What hardware should I have?
 
-Check out the [hardware](/docs/Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
+Check out the [hardware](../Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
 
 ### Are languages other than English supported?
 
