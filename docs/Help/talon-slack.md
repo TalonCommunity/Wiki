@@ -5,7 +5,7 @@ Talon has a Slack community for users to get help, ask questions, and meet one a
 A few notable channels:
 
 - `#help`: get help with Talon setup, usage, or ask questions about Talon
-- `#beta`: find beta download links and ask questions specific to the beta (this is a private channel that requires a patreon donation)
+- `#beta`: find beta download links and ask questions specific to the beta (this is a private channel that requires a [Patreon donation](https://www.patreon.com/join/lunixbochs))
 - `#health`: chat with others about computer health issues, share knowledge, find other folks who might be going through similar things
 - `#talon-docs`: chat about Talon documentation such as this wiki
 - `#hardware`: chat about hardware, e.g., microphones
