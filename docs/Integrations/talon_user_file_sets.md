@@ -50,6 +50,7 @@ Talon user sets that allow you to build voice commands more easily or define com
 - [knausj's clickless mouse](https://github.com/knausj85/clickless_mouse) Use the mouse for positioning, but hover an overlay to click.
 - [Subtitles.md](https://gist.github.com/tararoys/accf5506bea2c5c17e5bb31c7beac6e4) A basic script for writing subtitles to a file for a screencapture.
 - [Talon Cheatsheet Generation Script](https://gist.github.com/tararoys/c538b7ae8e1f21db9a794c2c0f5becf4) How to generate a cheatsheet for your own repository
+- [Talon Cheatsheet HTML With Page Breaks Repository](https://github.com/DashingDevelopers/talon-cheat-sheet) A Cheat Sheet generator that outputs HTML with line breaks & page breaks.
 - [wenkokke's cheatsheet and generation script](https://github.com/wenkokke/talon-cheatsheet/) Another cheatsheet generator which can output HTML or PDF.
 - [Morse Keypresses](https://gist.github.com/tararoys/7ef72526a825bb4c2253c961695d5e4b) allows you to spell out letters using morse code and the hissing noise.
 - [Window Tweak](https://github.com/codecat555/talon-window-tweak) A Talon module for moving and resizing windows using voice commands.
