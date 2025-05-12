@@ -125,7 +125,7 @@ Rules have a versatile syntax that is like a word based regex:
 | `foo             \| bar` | Choice                                | “foo”, “bar”              |
 | `(foo)`                  | Precedence/grouping                   | “foo”                     |
 | `{some_list}`            | [List](Talon%20Framework/lists.md)    | Depends on the list.      |
-| `<some_capture>`         | [Capture](Talon%20Framework/lists.md) | Depends on the capture.   |
+| `<some_capture>`         | [Capture](Talon%20Framework/captures.md) | Depends on the capture.   |
 | `^foo`                   | Start anchor                          | See below                 |
 | `foo$`                   | End anchor                            | See below                 |
 
