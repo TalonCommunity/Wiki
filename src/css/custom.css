@@ -48,18 +48,6 @@
   color: var(--shiki-dark) !important;
 }
 
-.theme-admonition.docotodo {
-  background-color: rgb(121, 68, 146);
-  border-left: 4px solid rgb(58, 23, 73);
-  color: white;
-}
-
-.theme-admonition.docofeedback {
-  background-color: rgb(92, 104, 61);
-  border-left: 4px solid rgb(4, 43, 7);
-  color: white;
-}
-
 .theme-admonition.docoscope {
   background-color: var(--talon-wiki-alert-alt-bg);
   border-left: 4px solid var(--talon-wiki-alert-alt-accent);
