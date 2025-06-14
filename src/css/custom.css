@@ -15,6 +15,12 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Alternative colour scheme for highlighting boxes */
+  --talon-wiki-alert-alt-dark: #373255;
+  --talon-wiki-alert-alt-light: #efedfd;
+  --talon-wiki-alert-alt-accent: #651fff;
+  --talon-wiki-alert-alt-bg: var(--talon-wiki-alert-alt-light);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,6 +33,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --talon-wiki-alert-alt-bg: var(--talon-wiki-alert-alt-dark);
 }
 
 .hidden {
@@ -41,20 +48,7 @@
   color: var(--shiki-dark) !important;
 }
 
-.theme-admonition.docotodo {
-  background-color: rgb(121, 68, 146);
-  border-left: 4px solid rgb(58, 23, 73);
-  color: white;
-}
-
-.theme-admonition.docofeedback {
-  background-color: rgb(92, 104, 61);
-  border-left: 4px solid rgb(4, 43, 7);
-  color: white;
-}
-
 .theme-admonition.docoscope {
-  background-color: #373255;
-  border-left: 4px solid #651fff;
-  color: white;
+  background-color: var(--talon-wiki-alert-alt-bg);
+  border-left: 4px solid var(--talon-wiki-alert-alt-accent);
 }
