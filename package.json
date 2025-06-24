@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build && cp _redirects build/_redirects",
+    "update-repos": "cross-env FETCH_REPOS=true npm run build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "deploy:ghpages": "docusaurus deploy --config docusaurus.ghpages.config.js",
@@ -25,6 +26,7 @@
     "clsx": "^2.0.0",
     "estree-util-value-to-estree": "^3.4.0",
     "mermaid": "^11.10.1",
+    "node-fetch": "^2.7.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -36,6 +38,7 @@
     "@docusaurus/types": "^3.7.0",
     "@shikijs/colorized-brackets": "^3.1.0",
     "@shikijs/transformers": "^3.1.0",
+    "cross-env": "^7.0.3",
     "typescript": "~5.2.2"
   },
   "browserslist": {

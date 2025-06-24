@@ -1,0 +1,6 @@
+{
+  "description": "List of repositories to exclude from the Repository Explorer. Add repository full names (e.g., 'owner/repo-name') to the omitRepos array.",
+  "omitRepos": [
+    "voqal/voqal"
+  ]
+}
