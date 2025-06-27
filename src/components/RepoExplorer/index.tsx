@@ -48,7 +48,7 @@ const RepoExplorer: React.FC = () => {
       } else {
         setRepos(data.repositories);
         console.log(
-          `Loaded ${data.repositories.length} repositories (generated at ${data.generated_at})`
+          `Loaded ${data.repositories.length} repositories (generated at ${data.generated_at})`,
         );
       }
     } catch (err) {
@@ -68,8 +68,9 @@ const RepoExplorer: React.FC = () => {
         repo.owner.login.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesLanguage =
         selectedLanguage === "all" || repo.language === selectedLanguage;
-      const matchesTags = selectedTags.length === 0 ||
-        selectedTags.some(tag => repo.topics.includes(tag));
+      const matchesTags =
+        selectedTags.length === 0 ||
+        selectedTags.some((tag) => repo.topics.includes(tag));
       return matchesSearch && matchesLanguage && matchesTags;
     }); // Sort repositories
     filtered.sort((a, b) => {
@@ -92,17 +93,17 @@ const RepoExplorer: React.FC = () => {
 
   const languages = React.useMemo(() => {
     return Array.from(
-      new Set(repos.map((repo) => repo.language).filter(Boolean))
+      new Set(repos.map((repo) => repo.language).filter(Boolean)),
     ).sort();
   }, [repos]);
 
   // Get all unique tags with counts, excluding 'talonvoice' and 'talon'
   const tagStats = React.useMemo(() => {
     const tagCounts = new Map<string, number>();
-    repos.forEach(repo => {
+    repos.forEach((repo) => {
       repo.topics
-        .filter(topic => topic !== 'talonvoice' && topic !== 'talon')
-        .forEach(topic => {
+        .filter((topic) => topic !== "talonvoice" && topic !== "talon")
+        .forEach((topic) => {
           tagCounts.set(topic, (tagCounts.get(topic) || 0) + 1);
         });
     });
@@ -113,10 +114,8 @@ const RepoExplorer: React.FC = () => {
   }, [repos]);
 
   const toggleTag = (tag: string) => {
-    setSelectedTags(prev =>
-      prev.includes(tag)
-        ? prev.filter(t => t !== tag)
-        : [...prev, tag]
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
     );
   };
 
@@ -221,7 +220,7 @@ const RepoExplorer: React.FC = () => {
             onClick={() => setViewMode("compact")}
             className={clsx(
               styles.viewButton,
-              viewMode === "compact" && styles.viewButtonActive
+              viewMode === "compact" && styles.viewButtonActive,
             )}
             title="Compact view"
           >
@@ -236,7 +235,7 @@ const RepoExplorer: React.FC = () => {
             onClick={() => setViewMode("expanded")}
             className={clsx(
               styles.viewButton,
-              viewMode === "expanded" && styles.viewButtonActive
+              viewMode === "expanded" && styles.viewButtonActive,
             )}
             title="Expanded view"
           >
@@ -249,41 +248,41 @@ const RepoExplorer: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Tag Filter Section */}
       <div className={styles.tagFilters}>
         <div className={styles.tagFiltersHeader}>
           <h2 className={styles.tagFiltersTitle}>Filter by Tags</h2>
-          {(selectedTags.length > 0 || searchTerm || selectedLanguage !== "all") && (
+          {(selectedTags.length > 0 ||
+            searchTerm ||
+            selectedLanguage !== "all") && (
             <button onClick={clearAllFilters} className={styles.clearFilters}>
               Clear all filters
             </button>
           )}
         </div>
         <div className={styles.tagContainer}>
-          {(showAllTags ? tagStats : tagStats.slice(0, 12)).map(({ tag, count }) => (
-            <button
-              key={tag}
-              onClick={() => toggleTag(tag)}
-              className={clsx(
-                styles.tagFilter,
-                styles.tagGeneric,
-                selectedTags.includes(tag) && styles.tagGenericActive,
-                selectedTags.includes(tag) && styles.tagFilterActive
-              )}
-            >
-              {tag} ({count})
-            </button>
-          ))}
+          {(showAllTags ? tagStats : tagStats.slice(0, 12)).map(
+            ({ tag, count }) => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={clsx(
+                  styles.tagFilter,
+                  styles.tagGeneric,
+                  selectedTags.includes(tag) && styles.tagGenericActive,
+                  selectedTags.includes(tag) && styles.tagFilterActive,
+                )}
+              >
+                {tag} ({count})
+              </button>
+            ),
+          )}
           {tagStats.length > 12 && (
             <button
               onClick={() => setShowAllTags(!showAllTags)}
               className={styles.expandTagsButton}
             >
-              {showAllTags
-                ? `Show less`
-                : `Show all ${tagStats.length} tags`
-              }
+              {showAllTags ? `Show less` : `Show all ${tagStats.length} tags`}
             </button>
           )}
         </div>
@@ -300,7 +299,7 @@ const RepoExplorer: React.FC = () => {
       <div
         className={clsx(
           styles.grid,
-          viewMode === "compact" && styles.gridCompact
+          viewMode === "compact" && styles.gridCompact,
         )}
       >
         {filteredAndSortedRepos.map((repo) => (
@@ -308,7 +307,7 @@ const RepoExplorer: React.FC = () => {
             key={repo.id}
             className={clsx(
               styles.card,
-              viewMode === "compact" && styles.cardCompact
+              viewMode === "compact" && styles.cardCompact,
             )}
           >
             {viewMode === "expanded" ? (
@@ -366,11 +365,15 @@ const RepoExplorer: React.FC = () => {
                       Updated {formatDate(repo.updated_at)}
                     </span>
                   </div>{" "}
-                  {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                    .length > 0 && (
+                  {repo.topics.filter(
+                    (topic) => topic !== "talonvoice" && topic !== "talon",
+                  ).length > 0 && (
                     <div className={styles.topics}>
                       {repo.topics
-                        .filter((topic) => topic !== "talonvoice" && topic !== "talon")
+                        .filter(
+                          (topic) =>
+                            topic !== "talonvoice" && topic !== "talon",
+                        )
                         .slice(0, 4)
                         .map((topic) => (
                           <button
@@ -378,8 +381,10 @@ const RepoExplorer: React.FC = () => {
                             className={clsx(
                               styles.topic,
                               styles.tagGeneric,
-                              selectedTags.includes(topic) && styles.tagGenericActive,
-                              selectedTags.includes(topic) && styles.topicActive
+                              selectedTags.includes(topic) &&
+                                styles.tagGenericActive,
+                              selectedTags.includes(topic) &&
+                                styles.topicActive,
                             )}
                             onClick={() => toggleTag(topic)}
                             title={`Filter by ${topic}`}
@@ -387,12 +392,15 @@ const RepoExplorer: React.FC = () => {
                             {topic}
                           </button>
                         ))}
-                      {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                        .length > 4 && (
+                      {repo.topics.filter(
+                        (topic) => topic !== "talonvoice" && topic !== "talon",
+                      ).length > 4 && (
                         <span className={styles.topicMore}>
                           +
-                          {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                            .length - 4}{" "}
+                          {repo.topics.filter(
+                            (topic) =>
+                              topic !== "talonvoice" && topic !== "talon",
+                          ).length - 4}{" "}
                           more
                         </span>
                       )}
@@ -454,11 +462,15 @@ const RepoExplorer: React.FC = () => {
                   <span className={styles.updatedCompact}>
                     {formatDate(repo.updated_at)}
                   </span>{" "}
-                  {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                    .length > 0 && (
+                  {repo.topics.filter(
+                    (topic) => topic !== "talonvoice" && topic !== "talon",
+                  ).length > 0 && (
                     <div className={styles.topicsCompact}>
                       {repo.topics
-                        .filter((topic) => topic !== "talonvoice" && topic !== "talon")
+                        .filter(
+                          (topic) =>
+                            topic !== "talonvoice" && topic !== "talon",
+                        )
                         .slice(0, 2)
                         .map((topic) => (
                           <button
@@ -466,8 +478,10 @@ const RepoExplorer: React.FC = () => {
                             className={clsx(
                               styles.topicCompact,
                               styles.tagGeneric,
-                              selectedTags.includes(topic) && styles.tagGenericActive,
-                              selectedTags.includes(topic) && styles.topicActiveCompact
+                              selectedTags.includes(topic) &&
+                                styles.tagGenericActive,
+                              selectedTags.includes(topic) &&
+                                styles.topicActiveCompact,
                             )}
                             onClick={() => toggleTag(topic)}
                             title={`Filter by ${topic}`}
@@ -475,12 +489,15 @@ const RepoExplorer: React.FC = () => {
                             {topic}
                           </button>
                         ))}
-                      {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                        .length > 2 && (
+                      {repo.topics.filter(
+                        (topic) => topic !== "talonvoice" && topic !== "talon",
+                      ).length > 2 && (
                         <span className={styles.topicMoreCompact}>
                           +
-                          {repo.topics.filter((topic) => topic !== "talonvoice" && topic !== "talon")
-                            .length - 2}
+                          {repo.topics.filter(
+                            (topic) =>
+                              topic !== "talonvoice" && topic !== "talon",
+                          ).length - 2}
                         </span>
                       )}
                     </div>

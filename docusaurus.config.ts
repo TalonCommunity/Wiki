@@ -69,9 +69,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: [
-    './plugins/repo-data-plugin.js'
-  ],
+  plugins: ["./plugins/repo-data-plugin.js"],
   markdown: {
     mermaid: true,
   },
