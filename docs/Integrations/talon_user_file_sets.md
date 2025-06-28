@@ -5,7 +5,7 @@ The main Talon user file set for Talon is [Talon Community](https://github.com/t
 If intended for public consumption, these Talon user file sets are mostly annouced via the [Slack channel](https://talonvoice.com/chat). Aside from that there are a few ways you can discover them:
 
 - You can make use of the [Talon code search](https://search.talonvoice.com/search/). This aims to search all known github repositories containing Talon related code. If you're looking for integration with a particular application this is a good option.
-- You can browse the [github talonvoice topic](https://github.com/topics/talonvoice). Repositories can optionally tag themselves with this to aid discoverability.
+- You can browse the [Repository Explorer](/explorer) for Talon user file sets tagged with `talonvoice`. Repositories can tag themselves with this to aid discoverability.
 - You can take a look at the manually curated list below.
 
 ## Voice controlled hands free mouse replacements
