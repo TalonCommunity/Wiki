@@ -15,9 +15,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 | Command          | Description                 |
 | ---------------- | --------------------------- |
 | `wake up`        | Enable speech recognition.  |
-| `talon wake`     | Enable speech recognition.  |
 | `go to sleep`    | Disable speech recognition. |
-| `talon sleep`    | Disable speech recognition. |
 | `dictation mode` | Switch to dictation mode.   |
 | `command mode`   | Switch to command mode.     |
 
