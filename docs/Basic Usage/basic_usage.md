@@ -81,10 +81,10 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 | Command         |
 | --------------- |
-| `media mute`          |
+| `media mute`    |
 | `play next`     |
 | `play previous` |
-| `media play`          |
+| `media play`    |
 
 ## Controlling the Tobii eye tracker
 
