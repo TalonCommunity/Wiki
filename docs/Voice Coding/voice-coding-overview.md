@@ -1,0 +1,2 @@
+# Voice Coding Overview
+Talon community offers commands for inserting code in numerous languages. Formatters make dictating formatted variable names easier. Operator commands support dictating things like variable assignment, mathematical operators, and comparison operators. Snippets allow efficiently dictating formulaic code patterns and are used for things like control flow statements, class definitions, return statements and more. Additional commands exist on a per language basis to make common tasks easier.
