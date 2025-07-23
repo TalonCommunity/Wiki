@@ -1,5 +1,5 @@
 # Snippets
-Snippets insert text with placeholders such that you can get the next placeholder using the `snip next` command. 
+Snippets insert text with placeholders such that you can get the next placeholder using the `snip next` command. You insert a snippet by saying `snip (snippet name)`.
 
 [This video](https://www.youtube.com/watch?v=icXH-o3mwTU) demonstrates snippets.
 
