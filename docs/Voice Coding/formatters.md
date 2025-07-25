@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Formatters
 
 Formatter commands are useful for formatting text including prose and variable names. You use a formatter by saying the name of the formatter and then the words you want formatted. You can the full list of formatters by saying `help formatters`. Each line of that help menu has the name of the formatter on the right and example text formatted by that formatter on the left.

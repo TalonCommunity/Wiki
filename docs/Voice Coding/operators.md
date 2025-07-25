@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Operators
 
 With supported languages, most operators can be dictated with `op (operator name)` and comparison operators can be dictated with `is (operator name)`.
