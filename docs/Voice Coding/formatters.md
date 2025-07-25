@@ -9,15 +9,15 @@ Example: saying `camel one two three` will type the text `oneTwoThree`.
 | `camel`                 | camel case                                     | oneTwoThree     |
 | `snake`                 | underscore (\_) between words                  | one_two_three   |
 | `kabob`                 | dash (-) between words                         | one-two-three   |
-| `constant`              | all caps with underscore between words         | ONE_TWO_THREE   |
+| `constant`              | all caps with underscore between words         | ONE\_TWO\_THREE   |
 | `hammer`                | pascal case: the start of each word is capital | OneTwoThree     |
 | `smash`                 | lowercase with no separator symbols            | onetwothree     |
-| `dunder`                | double underscore (\_\_) between words         | one**two**three |
+| `dunder`                | double underscore (\_\_) between words         | one\_\_two\_\_three |
 
 | Code Related Prose Formatter | Description                              | Example         |
 | ---------------------------- | ---------------------------------------- | --------------- |
 | `dotted`                     | period (.) between words                 | one.two.three   |
-| `packed`                     | double colon (::) between words          | one::two::three |
+| `packed`                     | double colon (::) between words          | one\:\:two\:\:three |
 | `string`                     | words surrounded by single quotes        | 'one two three' |
 | `dub string`                 | words surrounded by double codes         | "one to three"  |
 | `conga`                      | slash (/) between words                  | one/two/three   |
