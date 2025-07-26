@@ -18,11 +18,11 @@ Example: saying `camel one two three` will type the text `oneTwoThree`.
 | `smash`                 | lowercase with no separator symbols            | onetwothree         |
 | `dunder`                | double underscore (\_\_) between words         | one\_\_two\_\_three |
 
-| Code Related Prose Formatter | Description                              | Example            |
-| ---------------------------- | ---------------------------------------- | ------------------ |
-| `dotted`                     | period (.) between words                 | one.two.three      |
+| Code Related Prose Formatter | Description                              | Example          |
+| ---------------------------- | ---------------------------------------- | ---------------- |
+| `dotted`                     | period (.) between words                 | one.two.three    |
 | `packed`                     | double colon (::) between words          | one:\:two::three |
-| `string`                     | words surrounded by single quotes        | 'one two three'    |
-| `dub string`                 | words surrounded by double codes         | "one to three"     |
-| `conga`                      | slash (/) between words                  | one/two/three      |
-| `slasher`                    | slash (/) at the start and between words | /one/two/three     |
+| `string`                     | words surrounded by single quotes        | 'one two three'  |
+| `dub string`                 | words surrounded by double codes         | "one to three"   |
+| `conga`                      | slash (/) between words                  | one/two/three    |
+| `slasher`                    | slash (/) at the start and between words | /one/two/three   |
