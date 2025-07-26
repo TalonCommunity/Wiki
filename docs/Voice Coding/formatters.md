@@ -21,7 +21,7 @@ Example: saying `camel one two three` will type the text `oneTwoThree`.
 | Code Related Prose Formatter | Description                              | Example            |
 | ---------------------------- | ---------------------------------------- | ------------------ |
 | `dotted`                     | period (.) between words                 | one.two.three      |
-| `packed`                     | double colon (::) between words          | one\:\:two:\:three |
+| `packed`                     | double colon (::) between words          | one:\:two::three |
 | `string`                     | words surrounded by single quotes        | 'one two three'    |
 | `dub string`                 | words surrounded by double codes         | "one to three"     |
 | `conga`                      | slash (/) between words                  | one/two/three      |
