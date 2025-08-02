@@ -14,7 +14,7 @@ Example: saying `camel one two three` will type the text `oneTwoThree`.
 | `snake`                 | underscore (\_) between words                  | one_two_three       |
 | `kabob`                 | dash (-) between words                         | one-two-three       |
 | `constant`              | all caps with underscore between words         | ONE_TWO_THREE       |
-| `hammer`                | pascal case: the start of each word is capital | OneTwoThree         |
+| `hammer`                | Pascal case: the start of each word is capitalized | OneTwoThree         |
 | `smash`                 | lowercase with no separator symbols            | onetwothree         |
 | `dunder`                | double underscore (\_\_) between words         | one\_\_two\_\_three |
 
