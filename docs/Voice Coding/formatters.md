@@ -8,15 +8,15 @@ Formatter commands are useful for formatting text including prose and variable n
 
 Example: saying `camel one two three` will type the text `oneTwoThree`.
 
-| Variable Name Formatter | Description                                    | Example             |
-| ----------------------- | ---------------------------------------------- | ------------------- |
-| `camel`                 | camel case                                     | oneTwoThree         |
-| `snake`                 | underscore (\_) between words                  | one_two_three       |
-| `kabob`                 | dash (-) between words                         | one-two-three       |
-| `constant`              | all caps with underscore between words         | ONE_TWO_THREE       |
+| Variable Name Formatter | Description                                        | Example             |
+| ----------------------- | -------------------------------------------------- | ------------------- |
+| `camel`                 | camel case                                         | oneTwoThree         |
+| `snake`                 | underscore (\_) between words                      | one_two_three       |
+| `kabob`                 | dash (-) between words                             | one-two-three       |
+| `constant`              | all caps with underscore between words             | ONE_TWO_THREE       |
 | `hammer`                | Pascal case: the start of each word is capitalized | OneTwoThree         |
-| `smash`                 | lowercase with no separator symbols            | onetwothree         |
-| `dunder`                | double underscore (\_\_) between words         | one\_\_two\_\_three |
+| `smash`                 | lowercase with no separator symbols                | onetwothree         |
+| `dunder`                | double underscore (\_\_) between words             | one\_\_two\_\_three |
 
 | Code Related Prose Formatter | Description                              | Example                |
 | ---------------------------- | ---------------------------------------- | ---------------------- |
