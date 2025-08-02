@@ -16,7 +16,7 @@ Snippets are further documented in the community snippets folder [README.md](htt
 
 Snippets can be inserted directly through the VSCode snippet system if you have the [command server VSCode extension](https://marketplace.visualstudio.com/items?itemName=pokey.command-server) installed. This also lets `snip next` use VSCode's support for getting to the next snippet placeholder.
 
-Installing [cursorless](https://www.cursorless.org/docs/user/installation/) is need it if you want to wrap code in snippets (see the video or read me for details on wrapping with snippets).
+Installing [cursorless](https://www.cursorless.org/docs/user/installation/) is needed if you want to wrap code in snippets (see the video or read me for details on wrapping with snippets).
 
 ## Without Editor Support
 
