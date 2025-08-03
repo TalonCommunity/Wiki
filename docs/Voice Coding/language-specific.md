@@ -26,4 +26,4 @@ This activates commands for dealing with null/none. `state (no | none | nil | nu
 
 ## user.code_functions
 
-This activates commands related to types and functions. `type <user.code_type>` inserts the specified datatype. For instance, in python saying `type integer` inserts `int`. For languages where a type annotation goes after the variable, `is type <user.code_type>` inserts the type annotation for the specified data type. For languages where a return type annotation is put somewhere after the function name, `returns [type] <user.code_type>` inserts a function return type notation for the specified datatype.
+This activates commands related to types and functions. `type <user.code_type>` inserts the specified data type. For instance when editing Python, saying `type integer` inserts `int`. For languages where a type annotation goes after the variable, `is type <user.code_type>` inserts the type annotation for the specified data type. For languages where a return type annotation is put somewhere after the function name, `returns [type] <user.code_type>` inserts a function return type notation for the specified data type.
