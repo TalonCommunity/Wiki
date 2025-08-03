@@ -152,6 +152,12 @@ const config: Config = {
           label: "Help",
         },
         {
+          type: "docSidebar",
+          sidebarId: "VoiceCodeSidebar",
+          position: "left",
+          label: "Voice Coding",
+        },
+        {
           href: "https://github.com/TalonCommunity/Wiki/",
           label: "GitHub",
           position: "right",
