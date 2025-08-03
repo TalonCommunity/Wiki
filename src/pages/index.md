@@ -89,7 +89,7 @@ The goal of this wiki is to provide information and documentation for the users 
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Videos of Talon in use                                     | [Video Demos](/Integrations/talon_related_resources)                                                                   |
 | Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                   |
-| Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage) |
+| Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage), [Voice Coding](/Voice%20Coding/voice-coding-overview.md) |
 | How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/basic_customization), [Integrations](/Integrations/essential-tools)               |
 | Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Speech%20Recognition/troubleshooting)                                                |
 | Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                       |
