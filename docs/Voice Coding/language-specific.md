@@ -6,7 +6,7 @@ sidebar_position: 5
 
 If you look in the community lang directory, you will find folders containing support for specific programming languages. In the corresponding .talon file for a programming language, you will see several tags activated. These tags activate part of the general programming grammar. Descriptions of the commands activated by these tags are available below.
 
-This page leaves out functionality that is now better done with [snippets](snippets.md) than the tag based grammer. For many languages, you will find additional language specific functionality in the language .talon and .py files.
+This page leaves out functionality that is now better done with [snippets](snippets.md) than the tag based grammar. For many languages, you will find additional language specific functionality in the language .talon and .py files.
 
 ## user.code_data_bool
 
