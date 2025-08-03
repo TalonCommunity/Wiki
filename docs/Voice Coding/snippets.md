@@ -10,7 +10,7 @@ Snippets insert text with placeholders such that you can get the next placeholde
 
 You can find the snippets available for the active programming language with the `help snip` command.
 
-Snippets are further documented in the community snippets folder [README.md](https://github.com/talonhub/community/blob/main/core/snippets/README.md), which describes the snippet file syntax.
+Snippets are further documented in the community snippets folder [README](https://github.com/talonhub/community/blob/main/core/snippets/README.md), which describes the snippet file syntax and useful VSCode extensions for writing snippets.
 
 ## Editor Support
 
