@@ -9,20 +9,20 @@ Formatter commands are useful for formatting text including prose and identifier
 Example: saying `camel one two three` will type the text `oneTwoThree`.
 
 | Identifier Formatter | Description                                        | Example             |
-| ----------------------- | -------------------------------------------------- | ------------------- |
-| `camel`                 | camel case                                         | oneTwoThree         |
-| `snake`                 | underscore (\_) between words                      | one_two_three       |
-| `kabob`                 | hash (-) between words                             | one-two-three       |
-| `constant`              | all caps with underscore between words             | ONE_TWO_THREE       |
-| `hammer`                | Pascal case: the start of each word is capitalized | OneTwoThree         |
-| `smash`                 | lowercase with no separator symbols                | onetwothree         |
-| `dunder`                | double underscore (\_\_) between words             | one\_\_two\_\_three |
+| -------------------- | -------------------------------------------------- | ------------------- |
+| `camel`              | camel case                                         | oneTwoThree         |
+| `snake`              | underscore (\_) between words                      | one_two_three       |
+| `kabob`              | hash (-) between words                             | one-two-three       |
+| `constant`           | all caps with underscore between words             | ONE_TWO_THREE       |
+| `hammer`             | Pascal case: the start of each word is capitalized | OneTwoThree         |
+| `smash`              | lowercase with no separator symbols                | onetwothree         |
+| `dunder`             | double underscore (\_\_) between words             | one\_\_two\_\_three |
 
 | Other Code Formatter | Description                              | Example                |
-| ---------------------------- | ---------------------------------------- | ---------------------- |
-| `dotted`                     | period (.) between words                 | one.two.three          |
-| `packed`                     | double colon (::) between words          | one::&#8203;two::three |
-| `string`                     | words surrounded by single quotes        | 'one two three'        |
-| `dub string`                 | words surrounded by double quotes        | "one two three"        |
-| `conga`                      | slash (/) between words                  | one/two/three          |
-| `slasher`                    | slash (/) at the start and between words | /one/two/three         |
+| -------------------- | ---------------------------------------- | ---------------------- |
+| `dotted`             | period (.) between words                 | one.two.three          |
+| `packed`             | double colon (::) between words          | one::&#8203;two::three |
+| `string`             | words surrounded by single quotes        | 'one two three'        |
+| `dub string`         | words surrounded by double quotes        | "one two three"        |
+| `conga`              | slash (/) between words                  | one/two/three          |
+| `slasher`            | slash (/) at the start and between words | /one/two/three         |
