@@ -12,7 +12,6 @@ Talon support for specific programming languages may be activated by voice comma
 
 The command `force (language name)` will activate the commands for the specified language globally, e.g. they'll work in any application. This will also disable the title tracking method until the `clear language modes` voice command is used to return to using automatic language activation.
 
-
 By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires plugin), and Notepad++ by automatically using the extension of the active file to infer the active programming language.
 
 To enable title tracking for your application:
