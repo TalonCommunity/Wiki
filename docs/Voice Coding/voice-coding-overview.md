@@ -9,6 +9,7 @@ Talon community offers commands for inserting code in numerous languages. [Forma
 [Cursorless](https://www.cursorless.org/docs/user/installation/) offers the state of the art approach to editing code by voice.
 
 ## Activating Languages
+
 Talon support for specific programming languages may be activated by voice commands, or via title tracking.
 
 The command `force (language name)` will activate the commands for the specified language globally, e.g. they'll work in any application. This will also disable the title tracking method until the `clear language modes` voice command is used to return to using automatic language activation.
