@@ -19,4 +19,4 @@ By default, title tracking activates languages in supported applications such as
 To enable title tracking for your application:
 
 1. Ensure the active filename (including extension) is included in the window title.
-2. Implement the required Talon-defined `filename` action to correctly extract the filename from the window title. See the `filename` action implementation in the [Visual Studio Code python file](https://github.com/talonhub/community/blob/main/apps/vscode/vscode.py) for an example.
+2. Implement the required Talon-defined `win.filename` action to correctly extract the filename from the window title. See the `win.filename` action implementation in the [Visual Studio Code python file](https://github.com/talonhub/community/blob/7bab2d1e3a4548fafbd5a2a4612b021c3a10d926/apps/vscode/vscode.py#L186) for an example.
