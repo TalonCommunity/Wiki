@@ -10,4 +10,4 @@ For example, saying `op equals` while editing a Python file inserts `=`. Saying 
 
 You can find the spoken forms for the operators in the talon-list files with names that start with `operators` in the [lang/tags directory](https://github.com/talonhub/community/tree/main/lang/tags).
 
-To see which operators are supported for a given language or change how any operators are inserted, find the Python file for the language implementation in the [lang directory](https://github.com/talonhub/community/tree/main/lang) and look for the `Operators` object.
+To see which operators are supported for a given language, use the `help operators` command. To change how any operators are inserted, find the Python file for the language implementation in the [lang directory](https://github.com/talonhub/community/tree/main/lang) and edit the `Operators` object.
