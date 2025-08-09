@@ -30,4 +30,4 @@ This activates commands related to types and functions. `type <user.code_type>` 
 
 ## user.code_keywords
 
-This activates support for dictating language keywords. `put (keyword name)` inserts the specified keyword. Depending on the keyword, it may get inserted with spacing. Keywords in the `user.code_keyword_bare` list can be dictated without the put prefix. You can find the `user.code_keyword` and `user.code_keyword_bare` lists in their .talon-list files in directory for the supported language in the [lang directory](https://github.com/talonhub/community/tree/main/lang) to see the available keywords.
+This activates support for dictating language keywords. `put (keyword names)` inserts the specified keywords. Keywords in the `user.code_keyword_unprefixed` list can be dictated without the put prefix. You can see the contents of the prefixed and unprefixed keyword lists for the active language with the commands `help keywords` and `help keywords unprefixed` respectively. 
