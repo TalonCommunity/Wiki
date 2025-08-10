@@ -8,17 +8,17 @@ Symbol commands can be useful for situations not handled by operators and for gr
 
 Because inserting a pair of symbols around the cursor (such as braces, parentheses, and quotation marks) is so common, community offers support for inserting paired delimiters. You can edit these commands by changing the `user.delimiter_pair` list.
 
-| Name             | Pair      |
-| ---------------- | --------- |
-| `round`:         | ( )       |
-| `box`:           | [ ]       |
-| `diamond`:       | < >       |
-| `curly`:         | \{ \}       |
-| `twin`:          |' '|
-| `quad`:          |" "|
-| `skis`:          | \` \`       |
-| `percentages`:   | % %       |
-| `escaped quad`:  | \\" \\"|
-| `escaped twin`:  | \\' \\'|
-| `escaped round`: | \\( \\)   |
-| `escaped box`:   | \\[ \\]   |
+| Name             | Pair    |
+| ---------------- | ------- |
+| `round`:         | ( )     |
+| `box`:           | [ ]     |
+| `diamond`:       | < >     |
+| `curly`:         | \{ \}   |
+| `twin`:          | ' '     |
+| `quad`:          | " "     |
+| `skis`:          | \` \`   |
+| `percentages`:   | % %     |
+| `escaped quad`:  | \\" \\" |
+| `escaped twin`:  | \\' \\' |
+| `escaped round`: | \\( \\) |
+| `escaped box`:   | \\[ \\] |
