@@ -8,6 +8,7 @@
     "build": "docusaurus build && cp _redirects build/_redirects",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "deploy:ghpages": "docusaurus deploy --config docusaurus.ghpages.config.js",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
