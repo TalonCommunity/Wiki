@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktalon_wiki=self.webpackChunktalon_wiki||[]).push([[890],{890:(e,a,i)=>{i.d(a,{createInfoServices:()=>k.v});var k=i(7021);i(9369)}}]);
