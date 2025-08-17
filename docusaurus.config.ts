@@ -20,7 +20,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Talon Community", // Usually your GitHub org/user name.
+  organizationName: "TalonCommunity", // Usually your GitHub org/user name.
   projectName: "Wiki", // Usually your repo name.
   deploymentBranch: "gh-pages", // Specify gh-pages branch directly.
 
