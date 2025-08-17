@@ -74,7 +74,7 @@ Lower UAC (User Account Control) one step to: `Notify me only when apps try to m
 
 #### Mouse cursor is not visible after returning from hibernation/sleep
 
-You need to disable cursor suppression in the registry. Create a register file with the following content and run that.
+You need to disable cursor suppression in the registry. Create a .reg file with the following contents, open it and add it to the registry.
 
 ```
 Windows Registry Editor Version 5.00
