@@ -1,6 +1,6 @@
-const { themes: prismThemes } = require('prism-react-renderer');
-const rehypeShiki = require('@shikijs/rehype');
-const shiki = require('shiki');
+const { themes: prismThemes } = require("prism-react-renderer");
+const rehypeShiki = require("@shikijs/rehype");
+const shiki = require("shiki");
 
 const config = {
   title: "Talon Community Wiki",
