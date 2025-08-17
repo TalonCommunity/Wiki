@@ -13,7 +13,7 @@ const config: Config = {
   favicon: "img/logos/talon-community-logo.png",
 
   // Set the production url of your site here
-  url: "https://talon.wiki",
+  url: "https://talonwikitest.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -22,6 +22,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Talon Community", // Usually your GitHub org/user name.
   projectName: "Talon Community Wiki", // Usually your repo name.
+  deploymentBranch: "gh-pages", // Specify gh-pages branch directly.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
