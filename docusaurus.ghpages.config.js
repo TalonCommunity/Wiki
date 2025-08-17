@@ -1,13 +1,8 @@
-import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
-import type * as Preset from "@docusaurus/preset-classic";
-import rehypeShiki, { RehypeShikiOptions } from "@shikijs/rehype";
-import { BundledLanguage, bundledLanguages, ShikiTransformer } from "shiki";
-// import talonLanguage from "./talon.tmLanguage.json" ;
-import { transformerColorizedBrackets } from "@shikijs/colorized-brackets";
-import { transformerNotationHighlight } from "@shikijs/transformers";
+const { themes: prismThemes } = require('prism-react-renderer');
+const rehypeShiki = require('@shikijs/rehype');
+const shiki = require('shiki');
 
-const config: Config = {
+const config = {
   title: "Talon Community Wiki",
   tagline: "Documentation for using Talon Voice",
   favicon: "img/logos/talon-community-logo.png",
@@ -58,8 +53,8 @@ const config: Config = {
                 transformers: [
                   // transformerColorizedBrackets() as unknown as ShikiTransformer,
                 ],
-                langs: Object.keys(bundledLanguages) as BundledLanguage[],
-              } satisfies RehypeShikiOptions,
+                langs: Object.keys(shiki.bundledLanguages),
+              },
             ],
           ],
         },
@@ -67,7 +62,7 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         blog: false,
-      } satisfies Preset.Options,
+      },
     ],
   ],
   markdown: {
@@ -205,7 +200,7 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
-export default config;
+module.exports = config;
