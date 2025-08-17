@@ -26,7 +26,7 @@ See the page [Improving Recognition Accuracy](../Resource%20Hub/Speech%20Recogni
 
 ### I get voice fatigue when using Talon
 
-Talking to your computer the hole day can definitely have a strain on your voice. Here are a few suggestions.
+Talking to your computer the whole day can definitely strain your voice. Here are a few suggestions.
 
 - Listen to your body! Many of us need to use Talon just because we didn't do that before.
 - Take frequent pauses
