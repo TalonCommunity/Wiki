@@ -88,5 +88,5 @@ Windows Registry Editor Version 5.00
 <details>
 <summary role="button">Mac</summary>
 #### Zoom mouse only shows desktop when zoomed in
-Go to `system preferences => security & privacy => privacy` and enable screen recording permission for talon.
+Talon needs to be able to record your screen in order to display a zoomed version of it. Go to System Settings → Privacy & Security → Screen & System Audio Recording and turn on the switch for Talon. You may also see a message about "bypassing the system private window picker". This method is only really appropriate for apps like conferencing apps in which you're explicitly selecting a window/screen to share; Talon can't use it.
 </details>
