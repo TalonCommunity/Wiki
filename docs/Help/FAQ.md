@@ -68,7 +68,7 @@ Talon should recover from most errors itself, but if it crashes please report it
 #### Eye tracker option is disabled in the Talon menu
 Tobii runs three services by default that you will need to disable. Find the Services app by typing "services" in the start menu. Next scroll down until you find the three services that start with the word 'Tobii'. For each of these right click to view Properties and then change "Startup type" to "Disabled". Then either disable each of the services manually or restart your computer. If you'd want to use the Tobii app you can re-enable these at any time.
 
-#### Eye tracker doesn't work in application installation
+#### Eye tracker doesn't work during application installation
 
 Lower UAC (User Account Control) one step to: `Notify me only when apps try to make changes to my computer (do not dim my desktop)`
 
