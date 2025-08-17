@@ -50,7 +50,7 @@ While Talon is closed source, there's plenty you can do to help:
 <details>
 <summary role="button">Mac</summary>
 #### When I dictate text I get superfluous periods in my sentence
-Go to `system preferences => keyboard => text` and disable `Add full stop with double space`.
+In System Settings → Keyboard → Text Input → Input Sources, click Edit… and turn off “Add period (or full stop) with double-space”.
 </details>
 
 ### Problem with voice control
