@@ -149,7 +149,3 @@ Talon emits debug information to a log file in your Talon home directory, Window
 2021-04-10 17:56:28  INFO Activating Microphone: "d:vice MMA-A"
 2021-04-10 15:19:58 DEBUG Talon Version: 0.1.5
 ```
-
-## Talon Crashes During Use
-
-Talon should recover from most errors itself, but if it crashes please report it in the Talon Slack with the output log.
