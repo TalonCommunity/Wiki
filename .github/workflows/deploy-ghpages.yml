@@ -31,5 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy:ghpages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USE_SSH: true
           GIT_USER: "github-actions[bot]"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
