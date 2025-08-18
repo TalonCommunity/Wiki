@@ -23,14 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set up Git authentication
+      - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
       - name: Deploy to GitHub Pages
         run: npm run deploy:ghpages
         env:
-          USE_SSH: true
           GIT_USER: "github-actions[bot]"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
