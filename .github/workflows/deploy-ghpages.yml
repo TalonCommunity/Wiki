@@ -26,6 +26,9 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
+      - name: Create CNAME file
+        run: echo "talonwikitest.com" > ./build/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
