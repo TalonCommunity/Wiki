@@ -31,3 +31,28 @@ This activates commands related to types and functions. `type <user.code_type>` 
 ## user.code_keywords
 
 This activates support for dictating language keywords. `put <user.code_keyword>+` inserts the specified keywords. Keywords in the `user.code_keyword_unprefixed` list can be dictated without the put prefix. You can see the contents of the prefixed and unprefixed keyword lists for the active language with the commands `help keywords` and `help keywords unprefixed` respectively.
+
+# Navigating the Language Directory Structure
+While not strictly necessary for voice coding with community, understanding the directory structure is useful for discovering additional functionality and expanding support for languages. Programming language support is implemented under the `lang` directory. Voice commands intended to be used across multiple languages are defined under the `tags` subdirectory. Support for a specific language is defined under the `lang` subdirectory named after the language. To understand the talent concepts discussed in this section, please read the documentation of the [talon framework](/Customization/Talon%20Framework/talon-framework-overview).
+
+## the tags subdirectory
+The .talon files in this directory define commands that become available when the tag at the top of the file is activated. Languages can activate these tags in their .talon file to make these commands available. The .py files in this directory define the action signatures that need to be implemented in python on a per language basis to make these commands actually useful. The .py files additionally define things like lists that can also be implemented on a per language basis. 
+
+This structure allows defining generic commands, actions, and lists that can be relied on as long as the active programming language provides implementations. For instance, a user could use the following talon file to allow dictating a typename followed by a space:
+
+```talon
+tag: user.code_functions
+-
+strut <user.code_type>: '{code_type} '
+```
+
+If you look at the tags activated by your language's .talon file, you can find the corresponding commands activated by looking for that tag in the `tags` directory. You can find the corresponding actions there and see how they are implemented in the language's .py file.
+
+## understanding language specific .py files
+Languages differ in how much support they have implemented. The following describes things you may find there.
+
+There is usually an Operators object defining the operators that can be inserted.
+
+There might be language specific actions, lists, and captures defined on a Module object.
+
+Language specific implementations of generic functionality will be defined on a context object.
