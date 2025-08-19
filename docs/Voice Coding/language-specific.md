@@ -40,7 +40,7 @@ While not strictly necessary for voice coding with community, understanding the 
 
 The .talon files in this directory define commands that become available when the tag at the top of the file is activated. Languages can activate these tags in their .talon file to make these commands available. The .py files in this directory define the action signatures that need to be implemented in python on a per language basis to make these commands actually useful. The .py files additionally define things like lists that can also be implemented on a per language basis.
 
-This structure allows defining generic commands, actions, and lists that can be relied on as long as the active programming language provides implementations. For instance, a user could use the following talon file to allow dictating a typename followed by a space:
+This structure allows defining generic commands, actions, and lists that can be relied on as long as the active programming language provides implementations. For instance, a user could use the following talon file to allow dictating a type name followed by a space:
 
 ```talon
 tag: user.code_functions
