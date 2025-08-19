@@ -48,7 +48,7 @@ tag: user.code_functions
 strut <user.code_type>: '{code_type} '
 ```
 
-If you look at the tags activated by your language's .talon file, you can find the corresponding commands activated by looking for that tag in the `tags` directory. You can find the corresponding actions there and see how they are implemented in the language's .py file.
+If you look at the tags activated by a language's .talon file, you can find the corresponding commands activated by looking for that tag in the `tags` directory. You can find the corresponding action signatures there and see how they are implemented in the language's .py file.
 
 ## understanding language specific .py files
 
