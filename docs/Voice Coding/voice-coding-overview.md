@@ -12,7 +12,7 @@ Talon community offers commands for inserting code in numerous languages. [Forma
 
 Community support for specific programming languages may be activated by voice commands, or via title tracking.
 
-The command `force {user.language_mode}` will activate the commands for the specified language globally, e.g. they'll work in any application. This will also disable the title tracking method until the `clear language modes` voice command is used to return to using automatic language activation.
+The command `force {user.language_mode}` where a supported language name can be used in place of {user.language_mode} will activate the commands for the specified language in any application, e.g. `force python` to make python the active programming language. This will also disable the title tracking method until the `clear language modes` voice command is used to return to using automatic language activation.
 
 By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires plugin), and Notepad++ by automatically using the extension of the active file to infer the active programming language.
 
