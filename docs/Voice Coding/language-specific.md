@@ -18,7 +18,7 @@ This activates the commands `state self` for inserting the language equivalent o
 
 ## user.code_functions_common
 
-This activates support for quickly calling commonly used functions in the active language. `toggle funk` toggles showing the available common functions with associated numbers. `funk <user.code_common_function>` will insert the specified function call. `funk wrap <user.code_common_function>` wraps the currently selected text inside the function call. While the available common functions are being displayed, `funk cell <number>` and `funk wrap <number>` can be used for calling a function or wrapping the selected text with a function call using the function number from the graphical interface instead of the function name.
+This activates support for quickly inserting calls to commonly used functions in the syntax of the active language. `toggle funk` toggles showing available common functions with associated numbers. `funk <user.code_common_function>` will insert the specified function call. `funk wrap <user.code_common_function>` wraps the currently selected text inside the function call. While the available common functions are being displayed, `funk cell <number>` and `funk wrap <number>` can be used for calling a function or wrapping the selected text with a function call using the displayed function number instead of its name.
 
 ## user.code_data_null
 
