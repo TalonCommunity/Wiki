@@ -4,9 +4,11 @@ sidebar_position: 5
 
 # Miscellaneous Language Specific Commands
 
-The community [lang directory](https://github.com/talonhub/community/tree/main/lang) contains folders implementing support for specific programming languages. In the .talon file named after the programming language, you will see several tags activated. These tags activate programming commands whose behavior depends on the active programming language. Descriptions of the commands activated by these tags are available below.
+The community [lang directory](https://github.com/talonhub/community/tree/main/lang) contains folders implementing support for specific programming languages and programming language features.
 
-This page leaves out functionality that is now better done with [snippets](snippets.md) than the tag based grammar. For many languages, you will find additional language specific functionality in the language .talon and .py files.
+`<language>/<language>.talon` files activate one or more tags. These tags enable commands shared across languages with similar features, meaning you have fewer commands to memorize if you code in multiple languages. The behavior of these commands depends on the active programming language. Descriptions of the commands activated by these tags are below.
+
+This page leaves out functionality that is now better done with [snippets](snippets.md) than tag-based commands. For many languages, you will find additional language specific functionality in the `<language>/<language>.talon` and `<language>/<language>.py` files.
 
 ## user.code_data_bool
 
