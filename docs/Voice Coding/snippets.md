@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Snippets
 
-Snippets insert text with placeholders such that you can get the next placeholder using the `snip next` command. You insert a snippet by saying `snip (snippet name)`.
+Snippets insert text with placeholders. Jump to the next placeholder using the `snip next` command. Insert a snippet by saying `snip {user.snippet}`, where \{user.snippet\} is a snippet name.
 
 [This video](https://www.youtube.com/watch?v=icXH-o3mwTU) demonstrates snippets.
 
