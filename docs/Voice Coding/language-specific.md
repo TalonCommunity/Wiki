@@ -38,7 +38,7 @@ This activates support for dictating language keywords. `put <user.code_keyword>
 
 While not strictly necessary for voice coding with community, understanding the directory structure is useful to discover functionality and when expanding language support. Each subdirectory of the `lang` directory corresponds to a programming language, except for `tags`, which includes voice commands intended to be used across multiple languages. To understand the Talon concepts discussed in this section, please read the [Talon framework](/Customization/Talon%20Framework/talon-framework-overview) documentation.
 
-## the tags subdirectory
+## The `tags` Subdirectory
 
 The .talon files in this directory define commands that become available when the tag at the top of the file is activated. Languages can activate these tags in their .talon file to make these commands available. The .py files in this directory define the action signatures that need to be implemented in python on a per language basis to make these commands actually useful. The .py files additionally define things like lists that can also be implemented on a per language basis.
 
