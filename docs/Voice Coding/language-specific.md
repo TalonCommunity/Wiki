@@ -36,7 +36,7 @@ This activates support for dictating language keywords. `put <user.code_keyword>
 
 # Navigating the Language Directory Structure
 
-While not strictly necessary for voice coding with community, understanding the directory structure is useful to discover functionality and when expanding language support. Each subdirectory of the `lang` directory corresponds to a programming language, except for `tags`, which includes voice commands intended to be used across multiple languages. To understand the Talon concepts discussed in this section, please read the [Talon framework](/Customization/Talon%20Framework/talon-framework-overview) documentation.
+While not strictly necessary for voice coding with community, understanding the directory structure is useful to discover functionality and when extending language support. Each subdirectory of the `lang` directory corresponds to a programming language, except for `tags`, which includes voice commands intended to be used across multiple languages. To understand the Talon concepts discussed in this section, please read the [Talon framework](/Customization/Talon%20Framework/talon-framework-overview) documentation.
 
 ## The `tags` Subdirectory
 
