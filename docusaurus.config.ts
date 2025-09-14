@@ -93,7 +93,7 @@ const config: Config = {
     image: "img/logos/talon-community-logo-social.png",
 
     mermaid: {
-      theme: {light: 'neutral', dark: 'forest'},
+      theme: { light: "neutral", dark: "forest" },
     },
 
     /*
