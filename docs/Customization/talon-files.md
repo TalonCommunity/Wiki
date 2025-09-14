@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # `.talon` Files
 
-The primary way to extend talon is using `.talon` files placed anywherein the `user` directory. A talon file comes in two parts
+The primary way to extend Talon is using `.talon` files placed anywhere in the `user` directory. A Talon file comes in two parts:
 
 - A [context header](#context-header) defining the circumstances in which the file is active
 - A body that implements various behaviors within that context which can:
@@ -55,7 +55,7 @@ The following requirements can be set:
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `os`            | require specific operating systems; currently either `linux`, `mac`, or `windows`                                                                                                   |
 | `tag`           | require a specific tag                                                                                                                                                              |
-| `mode`          | only active for specific talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
+| `mode`          | only active for specific Talon modes (like `command`, `dictation`, `sleep` et al.)                                                                                                  |
 | `app`           | match applications by explicitly declared, well-known name                                                                                                                          |
 | `app.name`      | match applications by name (TODO where does Talon read this out?)                                                                                                                   |
 | `app.exe`       | match applications by executable, like `/usr/lib/firefox/firefox` or `firefox.exe`                                                                                                  |
@@ -116,18 +116,18 @@ This command, for example, will press the shortcut alt-shift-down whenever you s
 
 Rules have a versatile syntax that is like a word based regex:
 
-| Syntax                   | Description                           | Matches                   |
-| ------------------------ | ------------------------------------- | ------------------------- |
-| `foo`                    | Words                                 | “foo”                     |
-| `[foo]`                  | Optional                              | “foo” or null (nothing)   |
-| `foo*`                   | Zero or more                          | “”, “foo”, “foo foo”, ... |
-| `foo+`                   | One or more                           | “foo”, “foo foo”, ...     |
-| `foo             \| bar` | Choice                                | “foo”, “bar”              |
-| `(foo)`                  | Precedence/grouping                   | “foo”                     |
-| `{some_list}`            | [List](Talon%20Framework/lists.md)    | Depends on the list.      |
-| `<some_capture>`         | [Capture](Talon%20Framework/lists.md) | Depends on the capture.   |
-| `^foo`                   | Start anchor                          | See below                 |
-| `foo$`                   | End anchor                            | See below                 |
+| Syntax                   | Description                              | Matches                   |
+| ------------------------ | ---------------------------------------- | ------------------------- |
+| `foo`                    | Words                                    | “foo”                     |
+| `[foo]`                  | Optional                                 | “foo” or null (nothing)   |
+| `foo*`                   | Zero or more                             | “”, “foo”, “foo foo”, ... |
+| `foo+`                   | One or more                              | “foo”, “foo foo”, ...     |
+| `foo             \| bar` | Choice                                   | “foo”, “bar”              |
+| `(foo)`                  | Precedence/grouping                      | “foo”                     |
+| `{some_list}`            | [List](Talon%20Framework/lists.md)       | Depends on the list.      |
+| `<some_capture>`         | [Capture](Talon%20Framework/captures.md) | Depends on the capture.   |
+| `^foo`                   | Start anchor                             | See below                 |
+| `foo$`                   | End anchor                               | See below                 |
 
 Rules can be anchored or unanchored. Talon has a system that detects when a user is and isn't speaking which it uses to break up microphone input into a sequence of 'utterance blocks'. So if you said "first bit ... other ... bits" ('...' means a sufficiently long pause), then Talon might turn this into three utterance blocks: ["first bit", "other", "bits"]. Anchoring a rule requires that it occur at the start or end (or both) of an utterance block.
 

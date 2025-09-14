@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Basic customization
 
-Once you have successfully [set up Talon](../Quickstart/getting_started.md) you may find that you would like to change some of how it behaves at a basic level.
+Once you have successfully [set up Talon](../Resource%20Hub/Talon%20Installation/installation_guide) you may find that you would like to change some of how it behaves at a basic level.
 
 ## Customization overview
 
@@ -14,20 +14,20 @@ So why do we have two kinds of configuration/scripting files (`.py` and `.talon`
 
 - `.talon` files provide a succinct way of mapping spoken commands to behaviour. `.talon` files are written in a language that is only used by Talon.
   - `.talon` files are designed to be simple and to provide good feedback if you make mistakes.
-- `.py` files are Python scripts which provide the implementation of behaviour and other functionality used by `.talon` files.
+- `.py` files are Python scripts that provide the implementation of behaviour and other functionality used by `.talon` files.
   - You do not need to customize Python or know how to code to use Talon
 
 ## Managing your customizations
 
 Talon is built to be a flexible and customizable system. This means that in addition to being able to add new voice commands you can also override the behavior of existing commands reasonably easily.
 
-Given this flexibility there are two ways you could approach customizing your Talon setup:
+Given this flexibility, there are two ways you could approach customizing your Talon setup:
 
 - Option A: Edit the `.talon` and `.py` files from the [Talon Community](https://github.com/talonhub/community) directly.
   - Can be easier to begin with, but may be difficult to keep up-to-date with upstream.
   - You need to work out what you modified and how to re-apply it to the [Talon Community](https://github.com/talonhub/community) user file set every time you update it.
 - Option B: Maintain your own separate directory with your customizations that sits alongside the [Talon Community](https://github.com/talonhub/community). (**Recommended**)
-  - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on Github. The rest of the folders are other file sets that supplement the Talon Community file set.
+  - The screenshot below shows a Talon user directory with multiple user file sets. The `community` directory contains the [Talon Community](https://github.com/talonhub/community) unchanged from the version on GitHub. The rest of the folders are other file sets that supplement the Talon Community file set.
   - For example, `my_talon` contains personal customizations, and `curserless-talon` contains the [Cursorless](https://github.com/cursorless-dev/cursorless).
 
 ![Screen shot of Talon user directory](/img/talon_user_folders.png)
@@ -40,7 +40,7 @@ You will probably want to update your Talon Community user file set occasionally
 
 Let's make a new voice command that presses the key combination `cmd+a` or `control+a` when you say "select everything".
 
-Open up a text editor and save an empty file called `simple_test.talon` somewhere in your Talon user directory. Next, right click on the Talon icon in your status bar, choose scripting, and then 'View log'. This will show a list of log messages from Talon, and in particular will be where Talon tells us if there's a problem with what we write in `simple_test.talon`.
+Open up a text editor and save an empty file called `simple_test.talon` somewhere in your Talon user directory. Next, right-click on the Talon icon in your status bar, choose 'Scripting', and then 'View log'. This will show a list of log messages from Talon, and in particular, will be where Talon tells us if there's a problem with what we write in `simple_test.talon`.
 
 OK, let's get to defining the command. If you're running MacOS, copy/paste the following into your editor and save the file (ensure you have the spaces at the start of the 'key' line):
 
@@ -56,7 +56,7 @@ select everything:
     key(ctrl-a)
 ```
 
-You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](https://talonvoice.com/chat) in the #help channel.
+You should see a line like `2021-09-02 17:33:36 DEBUG [+] /home/normal/.talon/user/mystuff/simple_test.talon` printed in your Talon log. This indicates that Talon has picked up your new/updated file and has loaded it. In general, Talon will automatically pick up and apply any changes to `.talon` or `.py` files in your Talon user directory, so you don't have to restart Talon each time you make a change. If you don't see a line like that and can't figure it out, then you might want to ask for help on the [Talon slack](https://talonvoice.com/chat) in the #help channel.
 
 Your command should now be defined, so if you focus your text editor and say "select everything" it should indeed select everything.
 
@@ -150,7 +150,7 @@ The part above the '-' line is called the "context header" and the part below is
 
 The context header defines when the rest of the file will be active.
 
-In this example our context header says that the file is only active when the word 'Gmail' is in the window title. The context header is optional; if it is not included (as in our simple_test.talon example) then the file is always active.
+In this example, our context header says that the file is only active when the word 'Gmail' is in the window title. The context header is optional; if it is not included (as in our simple_test.talon example) then the file is always active.
 
 ### Body
 
@@ -162,9 +162,9 @@ Voice commands start with the actual words you want to speak followed by a ':' c
 
 You might have noticed that we've been using the key() and insert() actions in the example files so far. There are a number of built in actions, and extra actions can be defined in `.py` files. To get a complete list of defined actions you can do the following:
 
-1. Right click on the Talon icon in your status bar, choose scripting, and then 'Console (REPL)'. This will open a terminal window where you type Python commands and the result of those commands are printed out.
+1. Right click on the Talon icon in your status bar, choose scripting, and then 'Console (REPL)'. This will open a terminal window where you type Python commands and the results of those commands are printed out.
 2. Type `actions.list()` and press enter. This will list out all the available actions.
-3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the terminal window and press enter:
+3. You might like to look at this list of actions in your text editor (so you can search them, for example). To put the full list into your clipboard, copy and paste this code into the Talon console and press enter:
 
 ```python
 import io;old=sys.stdout;sys.stdout = io.StringIO();actions.list();clip.set_text(sys.stdout.getvalue());sys.stdout = old
@@ -185,7 +185,7 @@ If you've read the above you should have some idea of how to make customizations
 
 ### Add new keyboard shortcuts
 
-Often you will want to add a new voice command to press an application specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
+Often you will want to add a new voice command to press an application-specific keyboard shortcut. Let's choose the YouTube webpage as our example. The following `.talon` file defines two new voice commands:
 
 ```talon
 title: /YouTube/
@@ -220,7 +220,7 @@ Note the use of app.exe as the context matcher to match the filename of the acti
 
 settings() blocks can be put in any `.talon` file and are used to change the value of settings given a matching context header. You can have multiple settings by putting each on its own indented line underneath the "settings():" line. You can include voice commands in the same file as a settings block.
 
-You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones are [included here](../Customization/talon-files.md#tags-settings-and-other-capabilities). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
+You can paste the following code into the REPL to see a full list of available settings: `settings.list()`. A list of some of the more useful ones is [included here](../Customization/talon-files.md#tags-settings-and-other-capabilities). [Talon Community](https://github.com/talonhub/community) also has a list of some extra settings it defines in the `settings.talon` file.
 
 ### Keyboard shortcuts
 
@@ -234,21 +234,21 @@ The shortcut is global since there's no context matcher in this `.talon` file re
 
 One thing that may not be immediately obvious is that re-using voice commands is perfectly acceptable. You can just create a new `.talon` file with a new context header and redefine the command.
 
-This also provides a simple way of overriding the behaviour of existing voice commands from the [Talon Community](https://github.com/talonhub/community) user file set. Lets say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
+This also provides a simple way of overriding the behaviour of existing voice commands from the [Talon Community](https://github.com/talonhub/community) user file set. Let's say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
 
 The existing code is in a `.talon` file without a context header called `mouse.talon`:
 
 ```talon
 touch:
     mouse_click(0)
-    # close the mouse grid if open
+    # Close the mouse grid if open
     user.grid_close()
     # End any open drags
     # Touch automatically ends left drags so this is for right drags specifically
     user.mouse_drag_end()
 ```
 
-We can see the `user.grid_close()` action is called to close the grid after clicking the mouse. Also note the lines starting with '#' characters are called comments. They are just there for documentation and will not be otherwise processed by Talon.
+We can see the `user.grid_close()` action is called to close the grid after clicking the mouse. Also, note the lines starting with '#' characters are called comments. They are just there for documentation and will not be otherwise processed by Talon.
 
 If we wanted to stop the `user.grid_close()` behaviour we could just create a new `.talon` file and put in the following contents:
 
@@ -262,8 +262,30 @@ touch:
     user.mouse_drag_end()
 ```
 
-Notice that we've given it a context header. Because this context headar is more specific (i.e. it has more rules in it) this implementation of "touch" will take precedence over the original. The implementation just has the `user.grid_close()` line and associated comment removed.
+Notice that we've given it a context header. Because this context header is more specific (i.e. it has more rules in it) this implementation of "touch" will take precedence over the original. The implementation just has the `user.grid_close()` line and associated comment removed.
 
-In general you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
+In general, you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
 This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
+
+### Finding what a command does so that you can add a different voice command
+
+Remapping or adding new voice commands for actions like in the above only works if you know what the original command is doing. The easiest way to find that out is [using the repl introspection functions](https://talon.wiki/customization/misc-tips/#introspection-functions).
+
+Opened the repl from the talon menu or by saying "talon open rebel". This opens up a text console. Type in `events.tail()`, and press enter. Perform the speech command that you want to know about then look at the final line in the text output. You should see something like "[34911.282] user/community/core/windows_and_tabs/windows_and_tabs_linux.py | action **key('ctrl-tab')**" - the final part tells you the command that is being used. Sometimes the last line is too specific, and there may be a more generic line further up the list. For example, in the following list, the action "app.tab_previous()" is the generic command, and the others are more specific sub-commands called by the engine to enact that phrase. Figuring out which one is best may require some guesswork and trial and error.
+
+```
+[35424.335] user/community/plugin/command_history/command_history.py | action user.history_transform_phrase_text(['tab', 'previous'])
+[35424.337] user/community/plugin/command_history/command_history.py | action speech.enabled()
+[35424.337] user/community/plugin/subtitles/on_phrase.py | action speech.enabled()
+[35424.338] user/community/core/windows_and_tabs/tabs.talon | action app.tab_previous()
+[35424.338] user/community/core/windows_and_tabs/windows_and_tabs_linux.py | action key('ctrl-shift-tab')
+```
+
+You can then add a mapping to that command in a talon file somewhere in your user folder, like
+
+```talon
+os: mac
+-
+tab left:  app.tab_previous()
+```

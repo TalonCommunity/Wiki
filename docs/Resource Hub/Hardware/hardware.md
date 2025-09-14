@@ -14,6 +14,8 @@ These are models that Talon community members regularly recommend:
 
 **Samson Q9u**: a step up from the Blue Yeti, but still affodable desktop mic that can be operated as either USB and XLR.
 
+**Antlion Audio ModMic USB 2**: Affordable headset microphone with good audio quality and USB connection. https://antlionaudio.com/products/modmic-usb-2
+
 **DPA d:fine 4188 or 4288**: expensive, but highly recommended for full time use. It's likely the best in wearing comfort, audio quality and voice isolation (see this [impressive demo from the manufacturer](https://youtu.be/35GvWlRirxI)). The DPA mic can be paired with either (i) a **Shure X2U** + microdot to XLR adapter or (ii) a **DPA d:vice** interface. (i) will be cheaper, but a bit less portable, than the latter; (i) does however have a live monitor (you can plug in headphones and hear the computer audio mixed with your voice), whereas (ii) doesn't.
 
 **Audio-Technica BP894**: a much more budget-friendly alternative to the DPA microcapsule microphones above, but still excellent comfort, quality, and voice isolation. This model has been discontinued in favor of the BP894x so there are some great deals to be had ($100-300 (depending if you want to make it wireless). Check out #BP894_fan_club on Slack for tips on picking the right termination and adapter for your needs.
@@ -55,7 +57,7 @@ Windows default drivers have a limitation and that they _cannot_ record and play
 Check out the `#eye-tracking` channel in Slack, and the [Tobii 4c Tips](tobii_4c) page.
 
 - Tobii 4C is a commonly used and recommended eye tracker, but it is slowly being superceded as the default as more folks are starting to use the Tobii 5. Talon also supports the Tobii PCEye Mini. Support for most 4th gen Tobii devices can be trivially added.
-- [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) is the newer model and may be easier to find than the 4C. This one does require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](../Hardware/tobii_5.md).
+- [Tobii 5](https://gaming.tobii.com/product/eye-tracker-5/) is the newer model and may be easier to find than the 4C. This one does require a one-time initialization on a Windows PC with the Tobii software installed. Check out the dedicated [Tobii 5 page](tobii_5).
 
 ### Windows Login plus Talon
 
@@ -71,7 +73,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 - [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
 - [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mechanical and pedals can remap keys at the hardware level. It has 3 buttons.
 
-With the talon beta, the elegato foot pedal can be used as follows:
+With the Talon beta, the elegato foot pedal can be used as follows:
 
 ```talon
 deck(pedal_left): print("left pedal")

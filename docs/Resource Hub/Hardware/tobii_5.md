@@ -22,4 +22,4 @@ Regardless of which OS you will be using when you use your eye tracker, the init
 
 ### Next steps
 
-The [Tobii 4c tips](../Hardware/tobii_4c.md) page has detailed instructions on how to adjust your environment and behaviour to get a better eye tracking experience.
+The [Tobii 4c tips](../Hardware/tobii_4c) page has detailed instructions on how to adjust your environment and behaviour to get a better eye tracking experience.

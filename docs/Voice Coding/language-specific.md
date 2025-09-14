@@ -1,0 +1,33 @@
+---
+sidebar_position: 5
+---
+
+# Miscellaneous Language Specific Commands
+
+The community [lang directory](https://github.com/talonhub/community/tree/main/lang) contains folders implementing support for specific programming languages. In the .talon file named after the programming language, you will see several tags activated. These tags activate programming commands whose behavior depends on the active programming language. Descriptions of the commands activated by these tags are available below.
+
+This page leaves out functionality that is now better done with [snippets](snippets.md) than the tag based grammar. For many languages, you will find additional language specific functionality in the language .talon and .py files.
+
+## user.code_data_bool
+
+This activates the commands `state true` and `state false` for inserting true and false boolean literals respectively.
+
+## user.code_object_oriented
+
+This activates the commands `state self` for inserting the language equivalent of the keyword for referring to the containing class and `self dot`, which does the equivalent of `state self` and inserting the object accessor operator (which is a dot in most languages).
+
+## user.code_functions_common
+
+This activates support for quickly inserting calls to commonly used functions in the syntax of the active language. `toggle funk` toggles showing available common functions with associated numbers. `funk <user.code_common_function>` will insert the specified function call. `funk wrap <user.code_common_function>` wraps the currently selected text inside the function call. While the available common functions are being displayed, `funk cell <number>` and `funk wrap <number>` can be used for calling a function or wrapping the selected text with a function call using the displayed function number instead of its name.
+
+## user.code_data_null
+
+This activates commands for dealing with null/none. `state (no | none | nil | null)` inserts the language specific representation of null/none. `is not (none | null)` inserts the language specific inequality comparison operator followed by the representation of null/none. `is (none | null)` inserts the language specific equality comparison operator followed by the representation of null/none.
+
+## user.code_functions
+
+This activates commands related to types and functions. `type <user.code_type>` inserts the specified data type. For instance when editing Python, saying `type integer` inserts `int`. For languages where a type annotation goes after the variable, `is type <user.code_type>` inserts the type annotation for the specified data type. For languages where a return type annotation is put somewhere after the function name, `returns [type] <user.code_type>` inserts a function return type notation for the specified data type.
+
+## user.code_keywords
+
+This activates support for dictating language keywords. `put <user.code_keyword>+` inserts the specified keywords. Keywords in the `user.code_keyword_unprefixed` list can be dictated without the put prefix. You can see the contents of the prefixed and unprefixed keyword lists for the active language with the commands `help keywords` and `help keywords unprefixed` respectively.

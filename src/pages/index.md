@@ -6,32 +6,101 @@
 
 Talon is free to use and ongoing development is made possible by [donations on Patreon](https://www.patreon.com/lunixbochs).
 
+---
+
+## Talon Landscape
+
+```mermaid
+mindmap
+  root{{"Talon Platform<br/>talonvoice.com"}}
+    Talon Platform Type
+      Standard
+      Beta
+    Supported Speech Recognition Engines
+      Talon Conformer Standard
+      Talon Conformer Beta
+      Dragon
+    User File Sets
+      Talon Community
+    integrations["Integrations
+        (optional, some examples...)"]
+      gaze-ocr
+      Cursorless
+      Parrot
+      Talon-HUD
+    Supported Input Devices
+      Microphone
+      Eye Tracking
+      Game Controller
+      Foot Pedal
+      Joystick
+      Facial Expressions
+      Stream Deck
+
+```
+
+---
+
+## Jumping In
+
+Before installing Talon, there is useful information on this page and on the linked pages for you to read.
+
+If you prefer jumping in, here is the [installation guide](/Resource%20Hub/Talon%20Installation/installation_guide) and
+information about [basic usage](/Basic%20Usage/basic_usage).
+
+---
+
+## Documentation Scope
+
+To use Talon, the Talon platform needs to be installed.
+If you are a beginner then it is recommended that you additionally install the Talon community user file set.
+If you do so, then everything in this wiki is relevant to you.
+
+These sections will be highlighted as:
+
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert docoscope">
+  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
+    [SCOPE]: TALON COMMUNITY USER FILE SET
+  </div>
+</div>
+
+### Advanced Users
+
+If you are an advanced user and have decided to install a different user file set, then not all parts
+of this wiki is relevant. Those that are will be highlighted as follows.
+
+<div className="theme-admonition theme-admonition-note admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonition_xJq3 alert docoscope">
+  <div className="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module admonitionHeading_Gvgb">
+    [SCOPE]: TALON PLATFORM
+  </div>
+</div>
+
+---
+
 ## Goal of this Wiki
 
 The goal of this wiki is to provide information and documentation for the users of Talon. As the software is under rapid development, this wiki is in a constant state of "work in progress". Some of this content exists temporarily until the official Talon Docs are created.
 
+---
+
 ## Wiki Navigation
 
-| If you are looking for:                           | See:                                                      |
-| ------------------------------------------------- | --------------------------------------------------------- |
-| Information on getting started with Talon         | [Getting Started](/Quickstart/getting_started)            |
-| How to customize Talon                            | [Basic Customization](/Customization/basic_customization) |
-| Troubleshooting help                              | [Troubleshooting](/Quickstart/troubleshooting)            |
-| Help with deciding on a microphone or eye tracker | [Hardware](/Quickstart/Hardware)                          |
-| Videos of Talon in use                            | [Video Demos](/Integrations/talon_related_resources)      |
-| Answers to frequently asked questions             | [FAQ](/Quickstart/FAQ)                                    |
+| If you are looking for:                                    | See:                                                                                                                                                                          |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Videos of Talon in use                                     | [Video Demos](/Integrations/talon_related_resources)                                                                                                                          |
+| Help with deciding on a microphone or eye tracker          | [Hardware](/Resource%20Hub/Hardware)                                                                                                                                          |
+| Installing and getting started with Talon                  | [Installing Talon](/Resource%20Hub/Talon%20Installation/installation_guide), [Basic Usage](/Basic%20Usage/basic_usage), [Voice Coding](/Voice%20Coding/voice-coding-overview) |
+| How to customize Talon, obtaining additional functionality | [Basic Customization](/Customization/basic_customization), [Integrations](/Integrations/essential-tools)                                                                      |
+| Troubleshooting help                                       | [Troubleshooting](/Resource%20Hub/Speech%20Recognition/troubleshooting)                                                                                                       |
+| Answers to frequently asked questions                      | [FAQ](/Help/FAQ)                                                                                                                                                              |
 
-## Talon Slack
+:::tip Talon Slack
 
-Talon has a Slack community for users to get help, ask questions, and meet one another. If you are starting to use Talon, join the [Talon Slack](https://talonvoice.com/chat). This is the most efficient way to get questions answered if they are not covered in this wiki. There are also a few general channels, like `#health`, for those looking for resources and other folks who might be navigating complex injuries like RSI (Repetitive Strain Injuries) from typing.
+Talon has a [Slack community](/Help/talon-slack) for users to get help, ask questions, and meet one another. This is the most efficient way to get questions answered if they are not covered in this wiki.
 
-A few notable channels:
+:::
 
-- `#help`: get help with Talon setup, usage, or ask questions about Talon
-- `#beta`: find beta download links and ask questions specific to the beta (this is a private channel that requires a patreon donation)
-- `#health`: chat with others about computer health issues, share knowledge, find other folks who might be going through similar things
-- `#talon-docs`: chat about Talon documentation such as this wiki
-- `#hardware`: chat about hardware, e.g., microphones
+---
 
 # Contributing
 
