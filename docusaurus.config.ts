@@ -92,6 +92,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/logos/talon-community-logo-social.png",
 
+    mermaid: {
+      theme: {light: 'neutral', dark: 'forest'},
+    },
+
     /*
     algolia is not working; we instead use local search.
     The local api key is here for reference if someone tries to get it working
