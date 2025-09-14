@@ -14,7 +14,7 @@ Community support for specific programming languages may be activated by voice c
 
 The command `force {user.language_mode}`, where \{user.language_mode\} is a supported language name, activates support for the specified language. For example, `force python` makes Python the active programming language. This disables language detection through title tracking until you say `clear language modes`.
 
-By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires plugin), and Notepad++ by automatically using the extension of the active file to infer the active programming language.
+By default, title tracking activates languages in supported applications such as VSCode, Visual Studio (requires a [plugin](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)), and Notepad++ by automatically using the extension of the active file to infer the active programming language.
 
 To enable title tracking for your application:
 
