@@ -14,7 +14,7 @@ This activates the commands `state true` and `state false` for inserting true an
 
 ## user.code_object_oriented
 
-This activates the commands `state self` for inserting the language equivalent of the keyword for referring to the containing class and `self dot`, which does the equivalent of `state self` and inserting the object accessor operator (which is a dot in most languages).
+This activates the commands `state self` for inserting the language equivalent of the keyword for referring to the "self" or "this" object and `self dot`, which does the equivalent of `state self` followed by inserting the object accessor operator (a dot in most languages).
 
 ## user.code_functions_common
 
