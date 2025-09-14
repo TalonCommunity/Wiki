@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktalon_wiki=self.webpackChunktalon_wiki||[]).push([[9720],{9720:(e,c,i)=>{i.d(c,{createArchitectureServices:()=>t.S});var t=i(9936);i(9369)}}]);

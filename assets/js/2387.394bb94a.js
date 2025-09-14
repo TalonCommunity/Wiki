@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktalon_wiki=self.webpackChunktalon_wiki||[]).push([[2387],{2387:(e,a,i)=>{i.d(a,{createGitGraphServices:()=>k.b});var k=i(2785);i(9369)}}]);
