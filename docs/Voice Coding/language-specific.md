@@ -60,4 +60,4 @@ There is usually an `Operators` object defining the operators that can be insert
 
 There might be language specific actions, lists, and captures defined on a `Module` object.
 
-Language specific implementations of generic functionality will be defined on a Context object.
+Language specific implementations of generic functionality will be defined on a `Context` object.
