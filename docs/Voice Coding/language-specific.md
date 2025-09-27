@@ -56,7 +56,7 @@ If you look at the tags activated by a language's .talon file, you can find the 
 
 Languages differ in how much support they have implemented. The following describes things you may find there.
 
-There is usually an Operators object defining the operators that can be inserted.
+There is usually an `Operators` object defining the operators that can be inserted.
 
 There might be language specific actions, lists, and captures defined on a Module object.
 
