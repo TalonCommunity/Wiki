@@ -58,6 +58,6 @@ Languages differ in how much support they have implemented. The following descri
 
 There is usually an `Operators` object defining the operators that can be inserted.
 
-There might be language specific actions, lists, and captures defined on a Module object.
+There might be language specific actions, lists, and captures defined on a `Module` object.
 
 Language specific implementations of generic functionality will be defined on a Context object.
