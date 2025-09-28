@@ -240,7 +240,7 @@ Re-using a voice phrase (the **spoken form**, i.e. the text before the `:` in a 
 * **If both variants load, Talon uses undocumented tie-breakers.** When two non-identical spoken forms are present, **both** commands load, and Talon applies **internal, undocumented rules** to decide which one runs when you speak the phrase. **Context headers do not affect this tie-break.**
 * **Upstream changes can silently break your override.** Even if the words you say haven't changed, any tweak to the spoken form you copied (whitespace, punctuation, or how optionals/captures are structured) can stop your override from applying or create competing definitions with unpredictable selection.
 
-> **Note:** Context headers control **when** a file is active; they do **not** determine priority if the spoken forms differ. To truly replace a command, the spoken form must be **identical**, and the upstream definition should be **disabled** so only one variant is loaded.
+> **Note:** Context headers control **when** a file is active; they do **not** determine priority if the spoken forms differ. To truly replace a command, the spoken form must be **identical** to the upstream definition to replace it.
 
 #### Example: changing `touch` to not close the mouse grid
 
@@ -285,14 +285,12 @@ In general, you can use this technique by just making a version of the `.talon` 
 2. **Add a new phrase instead of replacing the old one.** Map your preferred behavior to a new, clearly named spoken form. This avoids collisions entirely.
 3. **Vendor and disable the original.** If you must replace the original phrase, copy the upstream file into your custom fileset, make your edits there, and **ensure the upstream copy does not load** in your environment. With only one definition, there are no tie-breakers.
 
-#### Practical checklist
+#### If you still choose a phrase-level override:
 
-* If you still choose a phrase-level override:
-
-  * Copy the upstream **spoken form exactly** (including whitespace/punctuation and any captures/optionals).
-  * Keep the override in a separate fileset so you can track upstream changes.
-  * After updates, **diff spoken forms** before pulling in changes.
-  * Use the REPL/introspection tools to verify which command actually fired.
+* Copy the upstream **spoken form exactly** (including whitespace/punctuation and any captures/optionals).
+* Keep the override in a separate fileset so you can track upstream changes.
+* After updates, **diff spoken forms** before pulling in changes.
+* Use the REPL/introspection tools to verify which command actually fired.
 
 
 ### Finding what a command does so that you can add a different voice command
