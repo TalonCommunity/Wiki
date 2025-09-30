@@ -25,6 +25,7 @@ Without editor support, `snip next` assumes that the cursor is on the same line 
 Community will try to insert snippets manually without editor support. Depending on your editor's settings, inserting a snippet may insert extra delimiters and disrupt indentation. You can set the `user.snippet_raw_text_paste` setting to true to always insert snippets (in contexts without editor support) through pasting, which will get correct formatting in some editors. You can also change the `user.snippet_raw_text_spaces_per_tab` setting to determine how many spaces to use per tab; in most cases, you should set this to -1 to use tabs instead of spaces. Most code editors will automatically expand tabs to spaces when pasting code, if so configured. Note that you should probably adjust these settings on a per-editor basis in a separate [.talon file](../Customization/talon-files.md) for each editor. You might be able to further address some formatting issues from your editor not supporting snippets by using an automatic code formatting extension.
 
 ## Snippet Actions
+
 The community snippet actions can be useful for custom commands.
 
 `user.insert_snippet` takes the body of a snippet as its argument and inserts the snippet. The following example uses this action to insert a c++ static cast operation. This does not require defining a snippet inside a snippet file. Example:
@@ -49,4 +50,4 @@ The substitution dictionary for the second argument can be used to replace snipp
         actions.user.insert_snippet_by_name("functionCall", substitutions)
 ```
 
-The `user.insert_snippet_by_name_with_stop_at_end` action is the same as the `user.insert_snippet_by_name` action but adds a final snippet stop at the end of the snippet before insertion unless the snippet already ends with a final stop. This is the default action used by community for inserting snippets by name with the `snip {user.snippet}` command. Note that when defining snippets, spaces at the end of a line gets removed, which means that if you want a final stop to get added after spaces at the end of a line, that will not happen. 
+The `user.insert_snippet_by_name_with_stop_at_end` action is the same as the `user.insert_snippet_by_name` action but adds a final snippet stop at the end of the snippet before insertion unless the snippet already ends with a final stop. This is the default action used by community for inserting snippets by name with the `snip {user.snippet}` command. Note that when defining snippets, spaces at the end of a line gets removed, which means that if you want a final stop to get added after spaces at the end of a line, that will not happen.
