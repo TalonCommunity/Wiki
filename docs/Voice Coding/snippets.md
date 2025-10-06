@@ -50,7 +50,7 @@ The substitution dictionary for the second argument can be used to replace snipp
         actions.user.insert_snippet_by_name("functionCall", substitutions)
 ```
 
-The `user.insert_snippet_by_name_with_stop_at_end` action is the same as the `user.insert_snippet_by_name` action but adds a final snippet stop at the end of the snippet before insertion unless the snippet already ends with a final stop. This is the default action used by community for inserting snippets by name with the `snip {user.snippet}` command. Note that when defining snippets, spaces at the end of a line gets removed, which means that if you want a final stop to get added after spaces at the end of a line, that will not work.
+The `user.insert_snippet_by_name_with_stop_at_end` action is the same as the `user.insert_snippet_by_name` action but adds a final snippet stop at the end of the snippet before insertion unless the snippet already ends with a final stop. This is the default action used by community for inserting snippets by name with the `snip {user.snippet}` command. Note that when defining snippets, spaces at the end of a line get removed, which means that if you want a final stop to get added after spaces at the end of a line, that will not work.
 
 The `user.insert_snippet_by_name_with_phrase` action takes 2 arguments: the name of the snippet to insert and then a phrase. This inserts the snippet and then replaces the snippet stop that has an associated formatter with the result of applying the formatter to the phrase. For instance, when used with the `functionDeclaration` snippet, the phrase formatted with the appropriate formatter gets used as the function name.
 
