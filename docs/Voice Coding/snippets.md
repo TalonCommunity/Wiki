@@ -28,7 +28,7 @@ Community will try to insert snippets manually without editor support. Depending
 
 The community snippet actions can be useful for custom commands.
 
-`user.insert_snippet` takes the body of a snippet as its argument and inserts the snippet. The following example uses this action to insert a c++ static cast operation. This does not require defining a snippet inside a snippet file. Example:
+`user.insert_snippet` takes the body of a snippet as its argument and inserts the snippet. The following example uses this action to insert a C++ static cast operation. This does not require defining a snippet inside a snippet file. Example:
 
 ```talon
 static cast: user.insert_snippet("static_cast<$1>($0)")
