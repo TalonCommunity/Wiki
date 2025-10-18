@@ -26,14 +26,14 @@ commands:
 
 ```python
 def add_even_values():
-    
+
 ```
 
 "word values snip next"
 
 ```python
 def add_even_values(values):
-    
+
 ```
 
 "word total op equals numb zero"
@@ -49,7 +49,7 @@ def add_even_values(values):
 def add_even_values(values):
     total = 0
     for v in :
-        
+
 ```
 
 "snip next word values snip next"
@@ -58,7 +58,7 @@ def add_even_values(values):
 def add_even_values(values):
     total = 0
     for v in values:
-        
+
 ```
 
 "snip if vest op mod numb two"
@@ -68,7 +68,7 @@ def add_even_values(values):
     total = 0
     for v in values:
         if v % 2:
-            
+
 ```
 
 "is equal numb zero snip next"
@@ -78,7 +78,7 @@ def add_even_values(values):
     total = 0
     for v in values:
         if v % 2 == 0:
-            
+
 ```
 
 "word total op plus equals vest"
