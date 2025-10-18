@@ -22,7 +22,7 @@ print(even_total)
 
 commands:
 
-"snip funk add even values"
+"<u>snip funk add even values</u>"
 
 ```python
 def add_even_values():
