@@ -7,6 +7,7 @@ sidebar_position: 7
 The following are examples of code and the Community commands used to dictate them. These examples could have been made shorter using some cursorless commands, but they only use Community commands for the sake of example.
 
 ## Adding Even Values
+
 ```python
 def add_even_values(values):
 	total = 0
@@ -19,7 +20,6 @@ even_total = add_even_values(example_values)
 print(even_total)
 ```
 
-			
 commands:
 
 "snip funk add even values"
