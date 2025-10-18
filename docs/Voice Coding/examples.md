@@ -10,11 +10,11 @@ The following are examples of code and the Community commands used to dictate th
 
 ```python
 def add_even_values(values):
-	total = 0
-	for v in values:
-		if v % 2 == 0:
-			total += v
-	return total
+    total = 0
+    for v in values:
+        if v % 2 == 0:
+            total += v
+    return total
 example_values = [1, 3, 2, 4]
 even_total = add_even_values(example_values)
 print(even_total)
