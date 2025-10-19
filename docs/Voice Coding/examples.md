@@ -6,6 +6,8 @@ sidebar_position: 7
 
 The following are examples of code and the Community commands used to dictate them. These examples could have been made shorter using some cursorless commands, but they only use Community commands for the sake of example.
 
+Within every utterance, each individual command is underlined. A command argument constrained to a limited list is in bold. A command argument that can be any word is an italics, and a command argument that is any arbitrary phrase is in bold italics. 
+
 ## Adding Even Values
 
 ```python
@@ -22,7 +24,7 @@ print(even_total)
 
 commands:
 
-"<u>snip <b>funk</b> <i>add even values</i></u>"
+"<u>snip <b>funk</b> <b><i>add even values</i></b></u>"
 
 ```python
 def add_even_values():
@@ -102,7 +104,7 @@ def add_even_values(values):
     return total
 ```
 
-"<u>slap</u> <u>wipe</u> <u>snake <i>example values</i></u>"
+"<u>slap</u> <u>wipe</u> <u>snake <b><i>example values</i></b></u>"
 
 ```python
 def add_even_values(values):
@@ -138,7 +140,7 @@ def add_even_values(values):
 example_values = [1, 3, 2, 4]
 ```
 
-"<u>slap</u> <u>snake <i>even total</i></u>"
+"<u>slap</u> <u>snake <b><i>even total</i></b></u>"
 
 ```python
 def add_even_values(values):
@@ -151,7 +153,7 @@ example_values = [1, 3, 2, 4]
 even_total
 ```
 
-"<u>op <b>equals</b></u> <u>snake <i>add even values</i></u>"
+"<u>op <b>equals</b></u> <u>snake <b><i>add even values</i></b></u>"
 
 ```python
 def add_even_values(values):
@@ -164,7 +166,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values
 ```
 
-"<u>round</u> <u>snake <i>example values</i></u>"
+"<u>round</u> <u>snake <b><i>example values</i></b></u>"
 
 ```python
 def add_even_values(values):
@@ -177,7 +179,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values(example_values)
 ```
 
-"<u>funk <b>print</b></u> <u>snake <i>even total</i></u>"
+"<u>funk <b>print</b></u> <u>snake <b><i>even total</i></b></u>"
 
 ```python
 def add_even_values(values):
