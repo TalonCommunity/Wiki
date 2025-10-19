@@ -29,21 +29,21 @@ def add_even_values():
 
 ```
 
-"<u>word <i>values</i></u> <u>snip next</u>"
+"<u>word <i>values</i></u>   <u>snip next</u>"
 
 ```python
 def add_even_values(values):
 
 ```
 
-"<u>word <i>total</i></u> <u>op <b>equals</b></u> <u>numb <b>zero</b></u>"
+"<u>word <i>total</i></u>   <u>op <b>equals</b></u>   <u>numb <b>zero</b></u>"
 
 ```python
 def add_even_values(values):
     total = 0
 ```
 
-"<u>slap</u> <u>snip <b>for each</b></u> <u>vest</u>"
+"<u>slap</u>   <u>snip <b>for each</b></u>   <u>vest</u>"
 
 ```python
 def add_even_values(values):
@@ -52,7 +52,7 @@ def add_even_values(values):
 
 ```
 
-"<u>snip next</u> <u>word <i>values</i></u> <u>snip next</u>"
+"<u>snip next</u>   <u>word <i>values</i></u>   <u>snip next</u>"
 
 ```python
 def add_even_values(values):
@@ -61,7 +61,7 @@ def add_even_values(values):
 
 ```
 
-"<u>snip <b>if</b></u> <u>vest</u> <u>op <b>mod</b></u> <u>numb <b>two</b></u>"
+"<u>snip <b>if</b></u>   <u>vest</u>   <u>op <b>mod</b></u>   <u>numb <b>two</b></u>"
 
 ```python
 def add_even_values(values):
@@ -71,7 +71,7 @@ def add_even_values(values):
 
 ```
 
-"<u>is <b>equal</b></u> <u>numb <b>zero</b></u> <u>snip next</u>"
+"<u>is <b>equal</b></u>   <u>numb <b>zero</b></u>   <u>snip next</u>"
 
 ```python
 def add_even_values(values):
@@ -81,7 +81,7 @@ def add_even_values(values):
 
 ```
 
-"<u>word <i>total</i></u> <u>op <b>plus equals</b></u> <u>vest</u>"
+"<u>word <i>total</i></u>   <u>op <b>plus equals</b></u>   <u>vest</u>"
 
 ```python
 def add_even_values(values):
@@ -91,7 +91,7 @@ def add_even_values(values):
             total += v
 ```
 
-"<u>slap</u> <u>wipe</u> <u>twice</u> <u>snip <b>return</b></u> <u>word <i>total</i></u>"
+"<u>slap</u>   <u>wipe</u>   <u>twice</u>   <u>snip <b>return</b></u>   <u>word <i>total</i></u>"
 
 ```python
 def add_even_values(values):
@@ -102,7 +102,7 @@ def add_even_values(values):
     return total
 ```
 
-"<u>slap</u> <u>wipe</u> <u>snake <i>example values</i></u>"
+"<u>slap</u>   <u>wipe</u>   <u>snake <i>example values</i></u>"
 
 ```python
 def add_even_values(values):
@@ -114,7 +114,7 @@ def add_even_values(values):
 example_values
 ```
 
-"<u>op <b>equals</b></u> <u>box</u> <u>numb <b>one</b></u> <u>comma</u> <u>space</u>"
+"<u>op <b>equals</b></u>   <u>box</u>   <u>numb <b>one</b></u>   <u>comma</u>   <u>space</u>"
 
 ```python
 def add_even_values(values):
@@ -126,7 +126,7 @@ def add_even_values(values):
 example_values = [1, ]
 ```
 
-"<u>numb <b>three</b></u> <u>comma</u> <u>space</u> <u>numb <b>two</b></u> <u>comma</u> <u>space</u> <u>numb <b>four</b></u>"
+"<u>numb <b>three</b></u>   <u>comma</u>   <u>space</u>   <u>numb <b>two</b></u>   <u>comma</u>   <u>space</u>   <u>numb <b>four</b></u>"
 
 ```python
 def add_even_values(values):
@@ -138,7 +138,7 @@ def add_even_values(values):
 example_values = [1, 3, 2, 4]
 ```
 
-"<u>slap</u> <u>snake <i>even total</i></u>"
+"<u>slap</u>   <u>snake <i>even total</i></u>"
 
 ```python
 def add_even_values(values):
@@ -151,7 +151,7 @@ example_values = [1, 3, 2, 4]
 even_total
 ```
 
-"<u>op <b>equals</b></u> <u>snake <i>add even values</i></u>"
+"<u>op <b>equals</b></u>   <u>snake <i>add even values</i></u>"
 
 ```python
 def add_even_values(values):
@@ -164,7 +164,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values
 ```
 
-"<u>round</u> <u>snake <i>example values</i></u>"
+"<u>round</u>   <u>snake <i>example values</i></u>"
 
 ```python
 def add_even_values(values):
@@ -177,7 +177,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values(example_values)
 ```
 
-"<u>funk <b>print</b></u> <u>snake <i>even total</i></u>"
+"<u>funk <b>print</b></u>   <u>snake <i>even total</i></u>"
 
 ```python
 def add_even_values(values):
