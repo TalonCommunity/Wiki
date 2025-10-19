@@ -6,7 +6,7 @@ sidebar_position: 7
 
 The following are examples of code and the Community commands used to dictate them. These examples could have been made shorter using some cursorless commands, but they only use Community commands for the sake of example.
 
-Within every utterance, each individual command is underlined. A command argument constrained to a limited list is in bold. A command argument that can be any word is an italics, and a command argument that is any arbitrary phrase is in bold italics.
+Within every utterance, each individual command is underlined. A command argument constrained to a limited list is in bold. A command argument that can be any word is an italics, and a command argument that can be any arbitrary phrase is in bold italics.
 
 ## Adding Even Values
 
