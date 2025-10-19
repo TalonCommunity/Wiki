@@ -22,14 +22,14 @@ print(even_total)
 
 commands:
 
-"<u>snip funk add even values</u>"
+"<u>snip <b>funk</b> <i>add even values</i></u>"
 
 ```python
 def add_even_values():
 
 ```
 
-"word values snip next"
+"<u>word <i>values</i></u> <u>snip <b>next</b></u>"
 
 ```python
 def add_even_values(values):
