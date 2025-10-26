@@ -24,7 +24,7 @@ print(even_total)
 
 commands:
 
-"snip <b>funk</b> <b><i>add even values</i></b>"
+"snip <b>funk</b> <u>add even values</u>"
 
 ```python
 def add_even_values():
@@ -104,7 +104,7 @@ def add_even_values(values):
     return total
 ```
 
-"slap" "wipe" "snake <b><i>example values</i></b>"
+"slap" "wipe" "snake <u>example values</u>"
 
 ```python
 def add_even_values(values):
@@ -140,7 +140,7 @@ def add_even_values(values):
 example_values = [1, 3, 2, 4]
 ```
 
-"slap" "snake <b><i>even total</i></b>"
+"slap" "snake <u>even total</u>"
 
 ```python
 def add_even_values(values):
@@ -153,7 +153,7 @@ example_values = [1, 3, 2, 4]
 even_total
 ```
 
-"op <b>equals</b>" "snake <b><i>add even values</i></b>"
+"op <b>equals</b>" "snake <u>add even values</u>"
 
 ```python
 def add_even_values(values):
@@ -166,7 +166,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values
 ```
 
-"round" "snake <b><i>example values</i></b>"
+"round" "snake <u>example values</u>"
 
 ```python
 def add_even_values(values):
@@ -179,7 +179,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values(example_values)
 ```
 
-"funk <b>print</b>" "snake <b><i>even total</i></b>"
+"funk <b>print</b>" "snake <u>even total</u>"
 
 ```python
 def add_even_values(values):
