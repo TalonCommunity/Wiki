@@ -179,7 +179,7 @@ example_values = [1, 3, 2, 4]
 even_total = add_even_values(example_values)
 ```
 
-"funk <b>print</b>" "snake <u>even total</u>"
+"slap" "funk <b>print</b>" "snake <u>even total</u>"
 
 ```python
 def add_even_values(values):
