@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Voice Coding Examples
 
-The following are examples of dictating code with Community commands. Cursorless could have simplified some these examples, but was not used so the examples stay simple and for those users who don't use an editor that supports Cursorless.
+The following are examples of dictating code with Community commands. Cursorless could have shortened some of the commands, but was not used for ease of learning and for those who don't use an editor supporting Cursorless.
 
 Within every utterance, each voice command is surrounded by “double quotes”. **Bold** indicates an argument constrained to a list of options (e.g., available snippets). _Italics_ indicates any word and <u>underlining</u> indicates any phrase can be substituted.
 
