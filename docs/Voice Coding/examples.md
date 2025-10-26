@@ -6,7 +6,9 @@ sidebar_position: 7
 
 The following are examples of dictating code with Community commands. Cursorless could have simplified some these examples, but was not used so the examples stay simple and for those users who don't use an editor that supports Cursorless.
 
-Within every utterance, each individual command is surrounded with double quotes. A command argument constrained to a limited list is in bold. A command argument that can be any word is an italics, and a command argument that can be any arbitrary phrase is underlined.
+Within every utterance, each voice command is surrounded by “double quotes”. **Bold** indicates an argument constrained to a list of options (e.g., available snippets). _Italics_ indicates any word and  <u>underlining</u> indicates any phrase can be substituted.
+
+Note that you do not have to pause between voice commands when using Talon (“continuous command recognition”).
 
 ## Adding Even Values
 
