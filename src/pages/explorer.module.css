@@ -19,7 +19,7 @@
   font-weight: bold;
 }
 
-[data-theme='dark'] .warning a {
+[data-theme="dark"] .warning a {
   color: var(--ifm-color-warning);
 }
 
@@ -32,8 +32,12 @@
   text-align: left;
 }
 
-[data-theme='dark'] .pageTitle {
-  background: linear-gradient(45deg, var(--ifm-color-primary-dark), var(--ifm-color-secondary-dark));
+[data-theme="dark"] .pageTitle {
+  background: linear-gradient(
+    45deg,
+    var(--ifm-color-primary-dark),
+    var(--ifm-color-secondary-dark)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

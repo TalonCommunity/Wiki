@@ -36,23 +36,18 @@ export default function Explorer(): JSX.Element {
           >
             {/* Title and Description */}
             <div style={{ flex: "1", minWidth: "0" }}>
-              <h1 className={styles.pageTitle}>
-                Repository Explorer
-              </h1>
+              <h1 className={styles.pageTitle}>Repository Explorer</h1>
               <p className={styles.pageDescription}>
                 Discover Talon-related repositories from GitHub tagged with{" "}
-                <code className={styles.codeHighlight}>
-                  talonvoice
-                </code>
+                <code className={styles.codeHighlight}>talonvoice</code>
               </p>
               <p className={styles.warning}>
-                ⚠️ <strong>Use at your own risk:</strong> These repositories may not be curated or tested.
-                For curated packages, visit{" "}
-                <a
-                  href="/integrations/talon_user_file_sets"
-                >
+                ⚠️ <strong>Use at your own risk:</strong> These repositories may
+                not be curated or tested. For curated packages, visit{" "}
+                <a href="/integrations/talon_user_file_sets">
                   talon_user_file_sets
-                </a>.
+                </a>
+                .
               </p>
             </div>
           </div>
