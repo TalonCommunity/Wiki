@@ -73,29 +73,55 @@ module.exports = function(context, options) {
 
       try {
         console.log('Fetching fresh Talon repositories from GitHub...');
-        const response = await fetch(
-          'https://api.github.com/search/repositories?q=topic:talonvoice&sort=stars&order=desc&per_page=100',
-          {
-            headers: {
-              'Accept': 'application/vnd.github.v3+json',
-              'User-Agent': 'TalonWiki/1.0',
-              // Add GitHub token if available for higher rate limits
-              ...(process.env.GITHUB_TOKEN && {
-                'Authorization': `token ${process.env.GITHUB_TOKEN}`
-              })
-            }
-          }
-        );
 
-        if (!response.ok) {
-          throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+        // Fetch all repositories with pagination
+        let allRepos = [];
+        let page = 1;
+        const perPage = 100; // GitHub's max per page
+        const maxPages = 10; // Safety limit: max 1000 repositories
+        let totalCount = 0;
+
+        while (page <= maxPages) {
+          const response = await fetch(
+            `https://api.github.com/search/repositories?q=topic:talonvoice&sort=stars&order=desc&per_page=${perPage}&page=${page}`,
+            {
+              headers: {
+                'Accept': 'application/vnd.github.v3+json',
+                'User-Agent': 'TalonWiki/1.0',
+                // Add GitHub token if available for higher rate limits
+                ...(process.env.GITHUB_TOKEN && {
+                  'Authorization': `token ${process.env.GITHUB_TOKEN}`
+                })
+              }
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+          }
+
+          const data = await response.json();
+          totalCount = data.total_count;
+
+          if (data.items.length === 0) {
+            break; // No more results
+          }
+
+          allRepos = allRepos.concat(data.items);
+          console.log(`Fetched page ${page}: ${data.items.length} repositories (${allRepos.length}/${totalCount} total)`);
+
+          // Break if we've fetched all repositories or reached the last page
+          if (data.items.length < perPage || allRepos.length >= totalCount) {
+            break;
+          }
+
+          page++;
         }
 
-        const data = await response.json();
-        console.log(`Successfully fetched ${data.items.length} repositories`);
+        console.log(`Successfully fetched all ${allRepos.length} repositories`);
 
         // Filter out omitted repositories
-        const filteredRepos = data.items.filter(repo => {
+        const filteredRepos = allRepos.filter(repo => {
           const fullName = repo.full_name.toLowerCase();
           const isOmitted = omitRepos.includes(fullName);
           if (isOmitted) {
@@ -104,13 +130,13 @@ module.exports = function(context, options) {
           return !isOmitted;
         });
 
-        console.log(`After filtering: ${filteredRepos.length} repositories (${data.items.length - filteredRepos.length} omitted)`);
+        console.log(`After filtering: ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} omitted)`);
 
         return {
           repositories: filteredRepos,
-          total_count: data.total_count,
+          total_count: totalCount,
           filtered_count: filteredRepos.length,
-          omitted_count: data.items.length - filteredRepos.length,
+          omitted_count: allRepos.length - filteredRepos.length,
           generated_at: new Date().toISOString()
         };
       } catch (error) {
