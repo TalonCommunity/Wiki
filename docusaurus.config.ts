@@ -69,6 +69,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: ["./plugins/repo-data-plugin.js"],
   markdown: {
     mermaid: true,
   },
@@ -144,6 +145,11 @@ const config: Config = {
           sidebarId: "ResourceHubSidebar",
           position: "left",
           label: "Resource Hub",
+        },
+        {
+          to: "/explorer",
+          position: "left",
+          label: "Repository Explorer",
         },
         {
           type: "docSidebar",
