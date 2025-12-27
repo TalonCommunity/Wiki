@@ -12,7 +12,7 @@ Example: saying `camel one two three` will insert the text `oneTwoThree`.
 | -------------------- | -------------------------------------------------- | ------------------- |
 | `camel`              | camel case                                         | oneTwoThree         |
 | `snake`              | underscore (\_) between words                      | one_two_three       |
-| `kabob`              | hash (-) between words                             | one-two-three       |
+| `kebab`              | hash (-) between words                             | one-two-three       |
 | `constant`           | all caps with underscore between words             | ONE_TWO_THREE       |
 | `hammer`             | Pascal case: the start of each word is capitalized | OneTwoThree         |
 | `smash`              | lowercase with no separator symbols                | onetwothree         |
