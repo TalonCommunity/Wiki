@@ -33,6 +33,8 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 
 ## Dictating Text
 
+###  Formatters
+
 Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in command mode
 
 | Formatter         | Description                             |
@@ -44,6 +46,12 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 | `smash`           | no spaces between words                 |
 | `kebab`           | dashes instead of spaces                |
 | `help formatters` | show all available formatters           |
+
+### Dictating Individual Characters
+
+`help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate `2000`. Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate `A`. Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate `ABC`. 
+
+In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. 
 
 ## Customize Talon
 
