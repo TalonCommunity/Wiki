@@ -49,9 +49,14 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 ### Dictating Individual Characters
 
+#### Dictating Characters in Command Mode
+
 `help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate `2000`. Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate `A`. Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate `ABC`. 
 
-In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. 
+#### Dictating Characters in Dictation Mode
+In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix. 
+
+The commands for dictating upper case letters and numbers are the same as in command mode and are documented in the previous section.
 
 ## Customize Talon
 
