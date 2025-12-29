@@ -110,6 +110,8 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 ## Mouse Commands
 
+### Clicking
+
 | Command      | Description                             |
 | ------------ | --------------------------------------- |
 | `touch`      | single click                            |
@@ -119,6 +121,17 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `curse yes`  | hides the mouse cursor for eye tracking |
 | `curse no`   | shows the mouse cursor                  |
 | `righty`     | right click                             |
+
+### Mouse Grid
+
+The mouse grid lets you move the mouse by dictating numbers. You use one of the below commands to open the grid. This divides the area you made the grid around into 9 rectangles. Picking one of the numbers recreates the grid within that rectangle and moves the mouse to the center of that rectangle. The clicking commands and  `grid close` close the mouse grid.
+
+| Command                   | Description                                                                       |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| `mouse grid`              | open the mouse grid                                                               |
+| `grid win`                | open the mouse grid on the window                                                 |
+| `grid screen <number>`    | open the mouse grid on the specified screen                                       |
+| `grid <user.number_key>+` | open the mouse grid and narrow it using the numbers from the dictated number keys |
 
 ## Scrolling
 
