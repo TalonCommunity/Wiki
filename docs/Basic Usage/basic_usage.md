@@ -58,6 +58,22 @@ In dication mode, lower case letters can be dictated by saying `spell` and then 
 
 The commands for dictating upper case letters and numbers are the same as in command mode and are documented in the previous section.
 
+### Dictating Words in Dictation Mode
+In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text `press air`. 
+
+The following commands are available for overwriting the default formatting
+
+| Command                                   | Description                                               |
+| ----------------------------------------- | --------------------------------------------------------- |
+| `cap`                                     | capitalize the next word                                  |
+| `no cap` or `no caps`                     | make the next word lowercase                              |
+| `no space`                                | do not put a space before the next word                   |
+| `cap that`                                | make the first word of the last dictated text capitalized |
+| `no cap that` or `no caps that`           | make the first word of the last dictated text lowercase   |
+| `formatted <user.formatters> <user.text>` | apply formatter to the dictated text                      |
+
+The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`. 
+
 ## Customize Talon
 
 These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
