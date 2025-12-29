@@ -74,6 +74,15 @@ The following commands are available for overwriting the default formatting
 
 The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`. 
 
+## Pressing Keys
+Letter keys are referred to using the Talon alphabet. Saying `help alphabet` shows the command for each letter. 
+
+Saying `help symbols` shows the command for each symbol key.
+
+Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the command for each modifier key. 
+
+In a keystroke, number keys can be dictated without prefix. For instance, saying `control-1` presses the control and 1 keys at the same time.
+
 ## Customize Talon
 
 These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
