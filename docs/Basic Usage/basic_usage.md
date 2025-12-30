@@ -91,6 +91,30 @@ Saying `help special keys` shows the commands for other keys you can press, such
 
 Function keys, like `f1`, can be dictated by saying `f` and then the key number. 
 
+### Dictation Mode Editing
+Dictation mode provides some convenience commands for editing text. 
+
+| Command                                                 |             Description                                                              |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `scratch that`                                          | delete the last dictated phrase assuming the cursor has not moved after dictating it |
+| `select that`                                           | select the last dictated phrase assuming the cursor has not moved after dictating it |
+| `go line start`                                         | move the cursor to the start of the line                                             |
+| `go line end`                                           | move the cursor to the end of the line                                               |
+| `go up <number_small> (line or lines)`                  | move the cursor up the specified number of lines                                     |
+| `go down <number_small> (line or lines)`                | move the cursor down the specified number of lines                                   |
+| `go left <number_small> (word or words)`                | move the cursor left the specified number of words                                   |
+| `go right <number_small> (word or words)`               | move the cursor right the specified number of words                                  |
+| `select left <number_small> (word or words)`            | select the specified number of words to the left                                     |
+| `select right <number_small> (word or words)`           | select the specified number of words to the right                                    |
+| `select left <number_small> (character or characters)`  | select the specified number of characters to the left                                |
+| `select right <number_small> (character or characters)` | select the specified number of characters to the right                               |
+| `clear left <number_small> (word or words)`             | delete the specified number of words to the left                                     |
+| `clear right <number_small> (word or words)`            | delete the specified number of words to the right                                    |
+| `clear left <number_small> (character or characters)`   | delete the specified number of characters to the left                                |
+| `clear right <number_small> (character or characters)`  | delete the specified number of characters to the right                               |
+
+For example, saying `go up 10 lines` moves the cursor up 10 lines.
+
 ## Customize Talon
 
 These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
