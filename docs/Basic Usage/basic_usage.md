@@ -117,6 +117,8 @@ For example, saying `go up 10 lines` moves the cursor up 10 lines.
 
 ### Command Mode Editing and Navigation
 
+#### Edit/Navigation Actions and Modifiers
+
 Command mode provides flexible editing and navigation commands where an editing/navigation command can be followed by a modifier to apply it to.
 
 Saying the name of one of these actions followed by the name of a modifier applies the action to the target referred to by the modifier. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor. 
@@ -154,6 +156,52 @@ Saying the name of one of these actions followed by the name of a modifier appli
 | left       | characters to the left of the cursor |
 | right      | characters to the right of the cursor |
 
+#### Scrolling
+
+| Command        | Description                            |
+| -------------- | -------------------------------------- |
+| `page down`    | press the page down key                |
+| `page up`      | press the page up key                  |
+| `scroll down`  | scroll down                            |
+| `scroll up`    | scroll up                              |
+| `wheel down`   | scroll down                            |
+| `wheel up`     | scroll up with the mouse               |
+| `wheel left`   | scroll left with the mouse             |
+| `wheel gaze`   | scroll according to the mouse position |
+| `wheel upper`  | continually scroll up with the mouse   |
+| `wheel downer` | continually scroll down with the mouse |
+| `wheel stop`   | stop scrolling                         |
+
+#### Working with text
+
+| Command        | Description                                                               |
+| -------------- | ------------------------------------------------------------------------- |
+| `copy that`    | copy selection                                                            |
+| `paste that`   | paste                                                                     |
+| `cut that`     | cut selection                                                             |
+| `undo that`    | undo                                                                      |
+| `redo that`    | redo                                                                      |
+
+#### Working With Tabs
+
+| Command           |
+| ----------------- |
+| `tab new`         |
+| `tab last`        |
+| `tab next`        |
+| `tab close`       |
+| `tab restore`     |
+| `go tab <number>` |
+| `go tab final`    |
+
+#### Working With Media
+
+| Command         |
+| --------------- |
+| `media mute`    |
+| `play next`     |
+| `play previous` |
+| `media play`    |
 
 ## Customize Talon
 
@@ -175,28 +223,9 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `launch "app name"` | say "launch chrome" for example, to open chrome                   |
 | `window close`      | closes the currently active window                                |
 
-## Working with tabs
+## Mouse Commands
 
-| Command           |
-| ----------------- |
-| `tab new`         |
-| `tab last`        |
-| `tab next`        |
-| `tab close`       |
-| `tab restore`     |
-| `go tab <number>` |
-| `go tab final`    |
-
-## Working with media
-
-| Command         |
-| --------------- |
-| `media mute`    |
-| `play next`     |
-| `play previous` |
-| `media play`    |
-
-## Controlling the Tobii eye tracker
+### Controlling the Tobii eye tracker
 
 | Commands          | Description                          |
 | ----------------- | ------------------------------------ |
@@ -204,21 +233,6 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `control mouse`   | toggle on/off Tobii moving the mouse |
 | `zoom mouse`      | Toggle Control Mouse (Zoom).         |
 | `control off`     | Turn the eye tracker off             |
-
-## Working with text
-
-| Command        | Description                                                               |
-| -------------- | ------------------------------------------------------------------------- |
-| `copy that`    |                                                                           |
-| `control cap`  | copy via the keyboard shortcut using the Talon alphabet (`cap` for `c`)   |
-| `paste that`   |                                                                           |
-| `control vest` | paste via the keyboard shortcut using the Talon alphabet (`vest` for `v`) |
-| `cut that`     |                                                                           |
-| `undo that`    |                                                                           |
-| `redo that`    |                                                                           |
-| `scratch that` | undo Talon dictation                                                      |
-
-## Mouse Commands
 
 ### Clicking
 
@@ -242,19 +256,3 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 | `grid win`                | open the mouse grid on the window                                                 |
 | `grid screen <number>`    | open the mouse grid on the specified screen                                       |
 | `grid <user.number_key>+` | open the mouse grid and narrow it using the numbers from the dictated number keys |
-
-## Scrolling
-
-| Command        | Description                            |
-| -------------- | -------------------------------------- |
-| `page down`    | press the page down key                |
-| `page up`      | press the page up key                  |
-| `scroll down`  | scroll down                            |
-| `scroll up`    | scroll up                              |
-| `wheel down`   | scroll down                            |
-| `wheel up`     | scroll up                              |
-| `wheel left`   | scroll left                            |
-| `wheel gaze`   | scroll according to the mouse position |
-| `wheel upper`  | continually scroll up                  |
-| `wheel downer` | continually scroll down                |
-| `wheel stop`   | stop scrolling                         |
