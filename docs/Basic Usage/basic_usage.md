@@ -119,6 +119,8 @@ For example, saying `go up 10 lines` moves the cursor up 10 lines.
 
 Command mode provides flexible editing and navigation commands where an editing/navigation command can be followed by a modifier to apply it to.
 
+Saying the name of one of these actions followed by the name of a modifier applies the action to the target referred to by the modifier. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor. 
+
 | Action                      | Description                                       |
 | --------------------------- | ------------------------------------------------- |
 | select                      | select the target                                 |
@@ -128,29 +130,29 @@ Command mode provides flexible editing and navigation commands where an editing/
 | paste                       | paste the contents of the clipboard to the target |
 | clear                       | delete the target                                 |
 
-| Modifier                      | Description                                       |
+| Modifier                      | What the action gets applied to                   |
 | ----------------------------- | ------------------------------------------------- |
-| all                           | apply the action to the document                  |
-| paragraph                     | apply the action to the paragraph                 |
-| line                          | apply the action to the line                      |
-| line start                    | apply the action to the start of line             |
-| way left                      | apply the action to the start of line             |
-| line end                      | apply the action to the end of line               |
-| way right                     | apply the action to the end of line               |
-| file start                    | apply the action to the start of file             |
-| way up                        | apply the action to the start of file             |
-| file end                      | apply the action to the end of file               |
-| way down                      | apply the action to the end of file               |
+| all                           | the document                     |
+| paragraph                     | the paragraph                    |
+| line                          | the line                         |
+| line start                    | the start of line                |
+| way left                      | the start of line                |
+| line end                      | the end of line                  |
+| way right                     | the end of line                  |
+| file start                    | the start of file                |
+| way up                        | the start of file                |
+| file end                      | the end of file                  |
+| way down                      | the end of file                  |
 
-| Repeatable Modifier           | Description                            |
+| Repeatable Modifier           | The action gets applied to the specified number of                  |
 | ----------------------------- | -------------------------------------- |
-| word | apply the action to the specified number of words
-| word left | apply the action to the specified number of words left
-| word right | apply the action to the specified number of words right
-| up | apply the action to the specified number of lines up |
-| down | apply the action to the specified number of lines down |
-| left | apply the action to the specified number of characters to the left |
-| right | apply the action to the specified number of characters to the right |
+| word left  | words to the left of the cursor |
+| word right | words to the right of the cursor |
+| word       | words to the right of the cursor |
+| up         | lines up starting at the cursor |
+| down       | lines down starting at the cursor |
+| left       | characters to the left of the cursor |
+| right      | characters to the right of the cursor |
 
 
 ## Customize Talon
