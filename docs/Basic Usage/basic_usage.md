@@ -253,10 +253,10 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 
 ### Cursor Hide/Show Commands
 
-| Command      | Description                             |
-| ------------ | --------------------------------------- |
-| `curse yes`  | hides the mouse cursor for eye tracking |
-| `curse no`   | shows the mouse cursor                  |
+| Command     | Description                             |
+| ----------- | --------------------------------------- |
+| `curse yes` | hides the mouse cursor for eye tracking |
+| `curse no`  | shows the mouse cursor                  |
 
 These commands require activating the `user.mouse_cursor_commands_enable` tag (see community settings.talon).
 
