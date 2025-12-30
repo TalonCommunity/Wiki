@@ -33,7 +33,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 
 ## Dictating Text
 
-###  Formatters
+### Formatters
 
 Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in command mode
 
@@ -51,15 +51,17 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 #### Dictating Characters in Command Mode
 
-`help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate `2000`. Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate `A`. Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate `ABC`. 
+`help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate `2000`. Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate `A`. Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate `ABC`.
 
 #### Dictating Characters in Dictation Mode
-In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix. 
+
+In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
 
 The commands for dictating upper case letters and numbers are the same as in command mode and are documented in the previous section.
 
 ### Dictating Words in Dictation Mode
-In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text `press air`. 
+
+In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text `press air`.
 
 The following commands are available for overwriting the default formatting
 
@@ -72,29 +74,31 @@ The following commands are available for overwriting the default formatting
 | `no cap that` or `no caps that`           | make the first word of the last dictated text lowercase   |
 | `formatted <user.formatters> <user.text>` | apply formatter to the dictated text                      |
 
-The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`. 
+The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`.
 
 ## Pressing Keys
-Saying `help alphabet` shows the command for each letter key. 
+
+Saying `help alphabet` shows the command for each letter key.
 
 Saying `help symbols` shows the command for each symbol key.
 
-Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the `windows` key on Windows and offers one way to refer to the `command` key on MacOS. 
+Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the `windows` key on Windows and offers one way to refer to the `command` key on MacOS.
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control-1` presses the control and 1 keys at the same time.
 
 Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press shift and up. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the control key.
 
-Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves. 
+Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
 Saying `help special keys` shows the commands for other keys you can press, such as pageup and escape.
 
-Function keys, like `f1`, can be dictated by saying `f` and then the key number. 
+Function keys, like `f1`, can be dictated by saying `f` and then the key number.
 
 ### Dictation Mode Editing and Navigation
-Dictation mode provides some convenience commands for editing and navigating text. 
 
-| Command                                                 |             Description                                                              |
+Dictation mode provides some convenience commands for editing and navigating text.
+
+| Command                                                 | Description                                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `scratch that`                                          | delete the last dictated phrase assuming the cursor has not moved after dictating it |
 | `select that`                                           | select the last dictated phrase assuming the cursor has not moved after dictating it |
@@ -121,40 +125,40 @@ For example, saying `go up 10 lines` moves the cursor up 10 lines.
 
 Command mode provides flexible editing and navigation commands where an editing/navigation command can be followed by a modifier to apply it to.
 
-Saying the name of one of these actions followed by the name of a modifier applies the action to the target referred to by the modifier. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor. 
+Saying the name of one of these actions followed by the name of a modifier applies the action to the target referred to by the modifier. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor.
 
-| Action                      | Description                                       |
-| --------------------------- | ------------------------------------------------- |
-| select                      | select the target                                 |
-| go before                   | go before the target                              |
-| go after                    | go after the target                               |
-| copy                        | copy the text at the target                       |
-| paste                       | paste the contents of the clipboard to the target |
-| clear                       | delete the target                                 |
+| Action    | Description                                       |
+| --------- | ------------------------------------------------- |
+| select    | select the target                                 |
+| go before | go before the target                              |
+| go after  | go after the target                               |
+| copy      | copy the text at the target                       |
+| paste     | paste the contents of the clipboard to the target |
+| clear     | delete the target                                 |
 
-| Modifier                      | What the action gets applied to                   |
-| ----------------------------- | ------------------------------------------------- |
-| all                           | the document                     |
-| paragraph                     | the paragraph                    |
-| line                          | the line                         |
-| line start                    | the start of line                |
-| way left                      | the start of line                |
-| line end                      | the end of line                  |
-| way right                     | the end of line                  |
-| file start                    | the start of file                |
-| way up                        | the start of file                |
-| file end                      | the end of file                  |
-| way down                      | the end of file                  |
+| Modifier   | What the action gets applied to |
+| ---------- | ------------------------------- |
+| all        | the document                    |
+| paragraph  | the paragraph                   |
+| line       | the line                        |
+| line start | the start of line               |
+| way left   | the start of line               |
+| line end   | the end of line                 |
+| way right  | the end of line                 |
+| file start | the start of file               |
+| way up     | the start of file               |
+| file end   | the end of file                 |
+| way down   | the end of file                 |
 
-| Repeatable Modifier           | The action gets applied to the specified number of                  |
-| ----------------------------- | -------------------------------------- |
-| word left  | words to the left of the cursor |
-| word right | words to the right of the cursor |
-| word       | words to the right of the cursor |
-| up         | lines up starting at the cursor |
-| down       | lines down starting at the cursor |
-| left       | characters to the left of the cursor |
-| right      | characters to the right of the cursor |
+| Repeatable Modifier | The action gets applied to the specified number of |
+| ------------------- | -------------------------------------------------- |
+| word left           | words to the left of the cursor                    |
+| word right          | words to the right of the cursor                   |
+| word                | words to the right of the cursor                   |
+| up                  | lines up starting at the cursor                    |
+| down                | lines down starting at the cursor                  |
+| left                | characters to the left of the cursor               |
+| right               | characters to the right of the cursor              |
 
 #### Scrolling
 
@@ -174,13 +178,13 @@ Saying the name of one of these actions followed by the name of a modifier appli
 
 #### Working with text
 
-| Command        | Description                                                               |
-| -------------- | ------------------------------------------------------------------------- |
-| `copy that`    | copy selection                                                            |
-| `paste that`   | paste                                                                     |
-| `cut that`     | cut selection                                                             |
-| `undo that`    | undo                                                                      |
-| `redo that`    | redo                                                                      |
+| Command      | Description    |
+| ------------ | -------------- |
+| `copy that`  | copy selection |
+| `paste that` | paste          |
+| `cut that`   | cut selection  |
+| `undo that`  | undo           |
+| `redo that`  | redo           |
 
 #### Working With Tabs
 
@@ -248,7 +252,7 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 ### Mouse Grid
 
-The mouse grid lets you move the mouse by dictating numbers. You use one of the below commands to open the grid. This divides the area you made the grid around into 9 rectangles. Picking one of the numbers recreates the grid within that rectangle and moves the mouse to the center of that rectangle. The clicking commands and  `grid close` close the mouse grid.
+The mouse grid lets you move the mouse by dictating numbers. You use one of the below commands to open the grid. This divides the area you made the grid around into 9 rectangles. Picking one of the numbers recreates the grid within that rectangle and moves the mouse to the center of that rectangle. The clicking commands and `grid close` close the mouse grid.
 
 | Command                   | Description                                                                       |
 | ------------------------- | --------------------------------------------------------------------------------- |
