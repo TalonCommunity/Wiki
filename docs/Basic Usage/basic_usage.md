@@ -115,6 +115,44 @@ Dictation mode provides some convenience commands for editing and navigating tex
 
 For example, saying `go up 10 lines` moves the cursor up 10 lines.
 
+### Command Mode Editing and Navigation
+
+Command mode provides flexible editing and navigation commands where an editing/navigation command can be followed by a modifier to apply it to.
+
+| Action                      | Description                                       |
+| --------------------------- | ------------------------------------------------- |
+| select                      | select the target                                 |
+| go before                   | go before the target                              |
+| go after                    | go after the target                               |
+| copy                        | copy the text at the target                       |
+| paste                       | paste the contents of the clipboard to the target |
+| clear                       | delete the target                                 |
+
+| Modifier                      | Description                                       |
+| ----------------------------- | ------------------------------------------------- |
+| all                           | apply the action to the document                  |
+| paragraph                     | apply the action to the paragraph                 |
+| line                          | apply the action to the line                      |
+| line start                    | apply the action to the start of line             |
+| way left                      | apply the action to the start of line             |
+| line end                      | apply the action to the end of line               |
+| way right                     | apply the action to the end of line               |
+| file start                    | apply the action to the start of file             |
+| way up                        | apply the action to the start of file             |
+| file end                      | apply the action to the end of file               |
+| way down                      | apply the action to the end of file               |
+
+| Repeatable Modifier           | Description                            |
+| ----------------------------- | -------------------------------------- |
+| word | apply the action to the specified number of words
+| word left | apply the action to the specified number of words left
+| word right | apply the action to the specified number of words right
+| up | apply the action to the specified number of lines up |
+| down | apply the action to the specified number of lines down |
+| left | apply the action to the specified number of characters to the left |
+| right | apply the action to the specified number of characters to the right |
+
+
 ## Customize Talon
 
 These commands will open up a CSV or [Talon list](Customization/talon_lists.md) file in your default text editor that you can edit to customize voice commands without needing to write Talon scripts.
