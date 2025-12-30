@@ -75,13 +75,21 @@ The following commands are available for overwriting the default formatting
 The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`. 
 
 ## Pressing Keys
-Letter keys are referred to using the Talon alphabet. Saying `help alphabet` shows the command for each letter. 
+Saying `help alphabet` shows the command for each letter key. 
 
 Saying `help symbols` shows the command for each symbol key.
 
-Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the command for each modifier key. 
+Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the `windows` key on Windows and offers one way to refer to the `command` key on MacOS. 
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control-1` presses the control and 1 keys at the same time.
+
+Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press shift and up. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the control key.
+
+Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves. 
+
+Saying `help special keys` shows the commands for other keys you can press, such as pageup and escape.
+
+Function keys, like `f1`, can be dictated by saying `f` and then the key number. 
 
 ## Customize Talon
 
