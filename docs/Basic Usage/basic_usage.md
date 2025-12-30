@@ -232,15 +232,13 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 ### Clicking
 
-| Command      | Description                             |
-| ------------ | --------------------------------------- |
-| `touch`      | single click                            |
-| `duke`       | double click                            |
-| `trip click` | triple click                            |
-| `drag`       | hold down the mouse. Repeat to release  |
-| `curse yes`  | hides the mouse cursor for eye tracking |
-| `curse no`   | shows the mouse cursor                  |
-| `righty`     | right click                             |
+| Command      | Description                            |
+| ------------ | -------------------------------------- |
+| `touch`      | single click                           |
+| `duke`       | double click                           |
+| `trip click` | triple click                           |
+| `drag`       | hold down the mouse. Repeat to release |
+| `righty`     | right click                            |
 
 ### Mouse Grid
 
@@ -252,6 +250,15 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 | `grid win`                | open the mouse grid on the window                                                 |
 | `grid screen <number>`    | open the mouse grid on the specified screen                                       |
 | `grid <user.number_key>+` | open the mouse grid and narrow it using the numbers from the dictated number keys |
+
+### Cursor Hide/Show Commands
+
+| Command      | Description                             |
+| ------------ | --------------------------------------- |
+| `curse yes`  | hides the mouse cursor for eye tracking |
+| `curse no`   | shows the mouse cursor                  |
+
+These commands require activating the `user.mouse_cursor_commands_enable` tag (see community settings.talon).
 
 ## Working With Media
 
