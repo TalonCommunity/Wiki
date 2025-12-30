@@ -91,8 +91,8 @@ Saying `help special keys` shows the commands for other keys you can press, such
 
 Function keys, like `f1`, can be dictated by saying `f` and then the key number. 
 
-### Dictation Mode Editing
-Dictation mode provides some convenience commands for editing text. 
+### Dictation Mode Editing and Navigation
+Dictation mode provides some convenience commands for editing and navigating text. 
 
 | Command                                                 |             Description                                                              |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------ |
