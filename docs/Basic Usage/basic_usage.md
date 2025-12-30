@@ -168,9 +168,10 @@ Saying the name of one of these actions followed by the name of a modifier appli
 | `page up`      | press the page up key                  |
 | `scroll down`  | scroll down                            |
 | `scroll up`    | scroll up                              |
-| `wheel down`   | scroll down                            |
+| `wheel down`   | scroll down with the mouse             |
 | `wheel up`     | scroll up with the mouse               |
 | `wheel left`   | scroll left with the mouse             |
+| `wheel right`  | scroll right with the mouse            |
 | `wheel gaze`   | scroll according to the mouse position |
 | `wheel upper`  | continually scroll up with the mouse   |
 | `wheel downer` | continually scroll down with the mouse |
@@ -197,15 +198,6 @@ Saying the name of one of these actions followed by the name of a modifier appli
 | `tab restore`     |
 | `go tab <number>` |
 | `go tab final`    |
-
-#### Working With Media
-
-| Command         |
-| --------------- |
-| `media mute`    |
-| `play next`     |
-| `play previous` |
-| `media play`    |
 
 ## Customize Talon
 
@@ -260,3 +252,12 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 | `grid win`                | open the mouse grid on the window                                                 |
 | `grid screen <number>`    | open the mouse grid on the specified screen                                       |
 | `grid <user.number_key>+` | open the mouse grid and narrow it using the numbers from the dictated number keys |
+
+## Working With Media
+
+| Command         |
+| --------------- |
+| `media mute`    |
+| `play next`     |
+| `play previous` |
+| `media play`    |
