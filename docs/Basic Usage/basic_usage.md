@@ -82,17 +82,17 @@ Saying `help alphabet` shows the command for each letter key.
 
 Saying `help symbols` shows the command for each symbol key.
 
-Keys can be combined with modifier keys, i.e., saying `shift up` presses Shift and the up arrow key. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the<kbd>Command</kbd> key on MacOS.
+Keys can be combined with modifier keys, i.e., saying `shift up` presses Shift and the up arrow key. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the<kbd>command</kbd> key on MacOS.
 
-In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the control and 1 keys at the same time.
+In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the <kbd>control</kbd> and <kbd>1</kbd> keys at the same time.
 
-Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press Shift and the up arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
+Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the <kbd>up</kbd> arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>control</kbd> key.
 
 Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
 Saying `help special keys` shows the commands for other keys you can press, such as <kbd>Page Up</kbd> and <kbd>Escape</kbd>.
 
-Function keys, like "f1", can be dictated by saying `f` and then the key number.
+Function keys, like <kbd>f1</kbd>, can be dictated by saying `f` and then the key number.
 
 ### Dictation Mode Editing and Navigation
 
@@ -189,15 +189,15 @@ Saying the name of one of these actions followed by the name of a modifier appli
 
 #### Working With Tabs
 
-| Command           |
-| ----------------- |
-| `tab new`         |
-| `tab last`        |
-| `tab next`        |
-| `tab close`       |
-| `tab restore`     |
-| `go tab <number>` |
-| `go tab final`    |
+| Command           | Description    |
+| ----------------- | -------------- |
+| `tab new`         | open a new tab |
+| `tab last`        | go to the previous tab |
+| `tab next`        | go to the next tab |
+| `tab close`       | close the current tab |
+| `tab restore`     | reopen the most recently closed tab |
+| `go tab <number>` | go to the tab specified by the dictated number |
+| `go tab final`    | go to the final tab |
 
 ## Customize Talon
 
@@ -263,9 +263,11 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 
 ## Working With Media
 
-| Command         |
-| --------------- |
-| `media mute`    |
-| `play next`     |
-| `play previous` |
-| `media play`    |
+| Command         | Description                             |
+| --------------- | --------------------------------------- |
+| `volume mute`   | toggle muting sound |
+| `volume up`     | increase volume |
+| `volume down`   | decrease volume |
+| `play next`     | press the <kbd>next</kbd> key |
+| `play previous` | press the <kbd>prev</kbd> key |
+| `media play`    | play or pause media |
