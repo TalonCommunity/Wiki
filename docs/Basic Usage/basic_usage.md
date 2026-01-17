@@ -82,7 +82,7 @@ Saying `help alphabet` shows the command for each letter key.
 
 Saying `help symbols` shows the command for each symbol key.
 
-Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the `windows` key on Windows and offers one way to refer to the `command` key on MacOS.
+Keys can be combined with modifier keys, i.e., saying `shift up` presses Shift and the up arrow key. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the Command key on MacOS.
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the control and 1 keys at the same time.
 
