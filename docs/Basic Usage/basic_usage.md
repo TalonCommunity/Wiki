@@ -55,7 +55,7 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 #### Dictating Characters in Dictation Mode
 
-In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
+In dictation mode, lowercase letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
 
 The commands for dictating uppercase letters and numbers are the same as in command mode and are documented in the previous section.
 
