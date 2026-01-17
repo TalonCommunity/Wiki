@@ -57,13 +57,13 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 In dication mode, lower case letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
 
-The commands for dictating upper case letters and numbers are the same as in command mode and are documented in the previous section.
+The commands for dictating uppercase letters and numbers are the same as in command mode and are documented in the previous section.
 
 ### Dictating Words in Dictation Mode
 
 In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text `press air`.
 
-The following commands are available for overwriting the default formatting
+The following commands are available for overriding the default formatting:
 
 | Command                                   | Description                                               |
 | ----------------------------------------- | --------------------------------------------------------- |
@@ -84,9 +84,9 @@ Saying `help symbols` shows the command for each symbol key.
 
 Keys can be combined with modifier keys, i.e saying `shift up` presses shift and up. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the `windows` key on Windows and offers one way to refer to the `command` key on MacOS.
 
-In a keystroke, number keys can be dictated without prefix. For instance, saying `control-1` presses the control and 1 keys at the same time.
+In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the control and 1 keys at the same time.
 
-Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press shift and up. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the control key.
+Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press Shift and the up arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the Control key.
 
 Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
@@ -164,8 +164,8 @@ Saying the name of one of these actions followed by the name of a modifier appli
 
 | Command        | Description                            |
 | -------------- | -------------------------------------- |
-| `page down`    | press the page down key                |
-| `page up`      | press the page up key                  |
+| `page down`    | press the Page Down key                |
+| `page up`      | press the Page Up key                  |
 | `scroll down`  | scroll down                            |
 | `scroll up`    | scroll up                              |
 | `wheel down`   | scroll down with the mouse             |
