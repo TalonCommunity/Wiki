@@ -250,6 +250,7 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 | `grid win`                | open the mouse grid on the window                                                 |
 | `grid screen <number>`    | open the mouse grid on the specified screen                                       |
 | `grid <user.number_key>+` | open the mouse grid and narrow it using the numbers from the dictated number keys |
+| `grid close`    | close the mouse grid |
 
 ### Cursor Hide/Show Commands
 
