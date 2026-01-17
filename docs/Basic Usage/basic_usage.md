@@ -189,15 +189,15 @@ Saying the name of one of these actions followed by the name of a modifier appli
 
 #### Working With Tabs
 
-| Command           | Description    |
-| ----------------- | -------------- |
-| `tab new`         | open a new tab |
-| `tab last`        | go to the previous tab |
-| `tab next`        | go to the next tab |
-| `tab close`       | close the current tab |
-| `tab restore`     | reopen the most recently closed tab |
+| Command           | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| `tab new`         | open a new tab                                 |
+| `tab last`        | go to the previous tab                         |
+| `tab next`        | go to the next tab                             |
+| `tab close`       | close the current tab                          |
+| `tab restore`     | reopen the most recently closed tab            |
 | `go tab <number>` | go to the tab specified by the dictated number |
-| `go tab final`    | go to the final tab |
+| `go tab final`    | go to the final tab                            |
 
 ## Customize Talon
 
@@ -263,11 +263,11 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 
 ## Working With Media
 
-| Command         | Description                             |
-| --------------- | --------------------------------------- |
-| `volume mute`   | toggle muting sound |
-| `volume up`     | increase volume |
-| `volume down`   | decrease volume |
+| Command         | Description                   |
+| --------------- | ----------------------------- |
+| `volume mute`   | toggle muting sound           |
+| `volume up`     | increase volume               |
+| `volume down`   | decrease volume               |
 | `play next`     | press the <kbd>next</kbd> key |
 | `play previous` | press the <kbd>prev</kbd> key |
-| `media play`    | play or pause media |
+| `media play`    | play or pause media           |
