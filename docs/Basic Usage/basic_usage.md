@@ -55,13 +55,13 @@ Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in co
 
 #### Dictating Characters in Dictation Mode
 
-In dictation mode, lowercase letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate `abc`. Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate `~`. `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
+In dictation mode, lowercase letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate "abc". Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate "~". `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
 
 The commands for dictating uppercase letters and numbers are the same as in command mode and are documented in the previous section.
 
 ### Dictating Words in Dictation Mode
 
-In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text `press air`.
+In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text "press air".
 
 The following commands are available for overriding the default formatting:
 
@@ -74,7 +74,7 @@ The following commands are available for overriding the default formatting:
 | `no cap that` or `no caps that`           | make the first word of the last dictated text lowercase   |
 | `formatted <user.formatters> <user.text>` | apply formatter to the dictated text                      |
 
-The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text `This Is Dictation`.
+The formatted command works with the formatters documented above. To give an example, saying `formatted title this is dictation` inserts the text "This Is Dictation".
 
 ## Pressing Keys
 
@@ -82,17 +82,17 @@ Saying `help alphabet` shows the command for each letter key.
 
 Saying `help symbols` shows the command for each symbol key.
 
-Keys can be combined with modifier keys, i.e., saying `shift up` presses Shift and the up arrow key. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the Command key on MacOS.
+Keys can be combined with modifier keys, i.e., saying `shift up` presses Shift and the up arrow key. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the<kbd>Command</kbd> key on MacOS.
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the control and 1 keys at the same time.
 
-Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press Shift and the up arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the Control key.
+Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press Shift and the up arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
 
 Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
-Saying `help special keys` shows the commands for other keys you can press, such as Page Up and Escape.
+Saying `help special keys` shows the commands for other keys you can press, such as <kbd>Page Up</kbd> and <kbd>Escape</kbd>.
 
-Function keys, like `f1`, can be dictated by saying `f` and then the key number.
+Function keys, like "f1", can be dictated by saying `f` and then the key number.
 
 ### Dictation Mode Editing and Navigation
 
