@@ -88,7 +88,7 @@ Keys can be combined with modifier keys, i.e., saying `shift up` presses <kbd>Sh
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the <kbd>control</kbd> and <kbd>1</kbd> keys at the same time.
 
-Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the up arrow key <kbd>⇧</kbd>. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
+Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the up arrow key. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
 
 Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
