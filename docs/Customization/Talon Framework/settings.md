@@ -7,19 +7,29 @@ Settings are defined on Modules. Each setting has a name, type, default value, a
 `setting.py`
 
 ```python
-from talon import Module, settings
+from talon import Module, settings, actions
 
 mod = Module()
 
 mod.setting(
-    "my_user_file_set_horizontal_position",
+    "my_user_file_set_sleep_amount",
     type=int,
-    default=0,
-    desc="Set the horizontal display position of some UI element",
+    default=200,
+    desc="Set the amount of time to sleep in milliseconds",
 )
 
-value = settings.get("user.my_user_file_set_horizontal_position")
-print("The current value of the setting is " + value)
+@mod.action_class
+class Actions:
+    def my_user_file_set_paste_file_to_next_window():
+        """Copy the text from the current file to the next window"""
+        actions.edit.select_all()
+        text: str = actions.edit.selected_text()
+        actions.app.window_next()
+        # Sleep to avoid accidentally pasting during the window switching process
+        setting_value: int = settings.get("user.my_user_file_set_sleep_amount")
+        print(f"The current value of the setting is {setting_value}")
+        actions.sleep(f"{setting_value}ms")
+        actions.user.paste(text)
 ```
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
@@ -31,7 +41,7 @@ The following example shows how you would change the value for that setting in a
 ```talon
 -
 settings():
-    user.my_user_file_set_horizontal_position = 50
+    user.my_user_file_set_sleep_amount = 50
     # Any number of other settings could be defined here
 ```
 
@@ -44,5 +54,5 @@ from talon import Context
 
 ctx = Context()
 
-ctx.settings["user.my_user_file_set_horizontal_position"] = 50
+ctx.settings["user.my_user_file_set_sleep_amount"] = 50
 ```
