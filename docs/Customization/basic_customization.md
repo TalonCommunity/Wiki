@@ -232,11 +232,19 @@ The shortcut is global since there's no context matcher in this `.talon` file re
 
 ### Overriding existing voice commands
 
-One thing that may not be immediately obvious is that re-using voice commands is perfectly acceptable. You can just create a new `.talon` file with a new context header and redefine the command.
+Re-using a voice phrase (the **spoken form**, i.e. the text before the `:` in a `.talon` file) to change behavior is possible, but **it's a brittle technique** and should be used cautiously.
 
-This also provides a simple way of overriding the behaviour of existing voice commands from the [Talon Community](https://github.com/talonhub/community) user file set. Let's say you wanted to change the behaviour of the `touch` command so that it didn't hide the mouse grid if it was open.
+#### Why it's brittle
 
-The existing code is in a `.talon` file without a context header called `mouse.talon`:
+- **Exact spoken form match required (including whitespace).** To reliably replace an existing command, your override must use **the exact same spoken form** as upstream, character-for-character, including spaces and punctuation. Any deviation (extra/missing space, different optional tokens, captures, etc.) does **not** replace the upstream command; it defines a **second** command.
+- **If both variants load, Talon uses undocumented tie-breakers.** When two non-identical spoken forms are present, **both** commands load, and Talon applies **internal, undocumented rules** to decide which one runs when you speak the phrase. **Context headers do not affect this tie-break.**
+- **Upstream changes can silently break your override.** Even if the words you say haven't changed, any tweak to the spoken form you copied (whitespace, punctuation, or how optionals/captures are structured) can stop your override from applying or create competing definitions with unpredictable selection.
+
+> **Note:** Context headers control **when** a file is active; they do **not** determine priority if the spoken forms differ. To truly replace a command, the spoken form must be **identical** to the upstream definition to replace it.
+
+#### Example: changing `touch` to not close the mouse grid
+
+Suppose the [Talon Community](https://github.com/talonhub/community) file defines `mouse.talon` without a context header:
 
 ```talon
 touch:
@@ -250,9 +258,12 @@ touch:
 
 We can see the `user.grid_close()` action is called to close the grid after clicking the mouse. Also, note the lines starting with '#' characters are called comments. They are just there for documentation and will not be otherwise processed by Talon.
 
-If we wanted to stop the `user.grid_close()` behaviour we could just create a new `.talon` file and put in the following contents:
+If we wanted to stop the `user.grid_close()` behaviour we could create a new `.talon` file and put in the following contents:
 
 ```talon
+# macOS-only variant. This only replaces upstream if the spoken form "touch:" is
+# *identical* (including whitespace). Otherwise both load and Talon chooses via
+# undocumented rules, ignoring the context header.
 os: mac
 -
 touch:
@@ -266,7 +277,20 @@ Notice that we've given it a context header. Because this context header is more
 
 In general, you can use this technique by just making a version of the `.talon` file you want to override and putting in more redundant rules to make it the more specific version. In addition to "os: " some other redundant filters you can add are "mode: command" (assuming you want to define the command in the default 'command' mode) and "speech.engine: wav2letter" (assuming you're not using Dragon).
 
-This is a simple way of overriding voice commands using `.talon` files. Many other parts of the system (such as the behaviour of actions) can also be overridden, but this requires editing `.py` files.
+**Important:** This replaces the original only if the line `touch:` is **exactly** the same as upstream. If upstream later changes that line you may end up with two competing definitions.
+
+#### Safer patterns (recommended)
+
+1. **Override actions instead of phrases.** Find the action the phrase ultimately calls (see [Finding what a command does](#finding-what-a-command-does-so-that-you-can-add-a-different-voice-command)) and implement your own version in your user files. This decouples you from upstream spoken forms.
+2. **Add a new phrase instead of replacing the old one.** Map your preferred behavior to a new, clearly named spoken form. This avoids collisions entirely.
+3. **Vendor and disable the original.** If you must replace the original phrase, copy the upstream file into your custom fileset, make your edits there, and **ensure the upstream copy does not load** in your environment. With only one definition, there are no tie-breakers.
+
+#### If you still choose a phrase-level override:
+
+- Copy the upstream **spoken form exactly** (including whitespace/punctuation and any captures/optionals).
+- Keep the override in a separate fileset so you can track upstream changes.
+- After updates, **diff spoken forms** before pulling in changes.
+- Use the REPL/introspection tools to verify which command actually fired.
 
 ### Finding what a command does so that you can add a different voice command
 
