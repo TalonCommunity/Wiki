@@ -35,7 +35,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 
 ### Formatters
 
-Say a formatter then the text. (i.e. `say "hello world"`) to dictate while in command mode
+Say a formatter then the text. (i.e. `say hello world`) to dictate while in command mode
 
 | Formatter         | Description                             |
 | ----------------- | --------------------------------------- |
@@ -61,7 +61,7 @@ The commands for dictating uppercase letters and numbers are the same as in comm
 
 ### Dictating Words in Dictation Mode
 
-In dictation mode, words that are not commands are typed as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text "press air".
+In dictation mode, words that are not commands are inserted as text. To dictate words that would otherwise get interpreted as dictation mode commands, you can say `escape` followed by the words you want transcribed, such as saying `escape press air` to dictate the text "press air".
 
 The following commands are available for overriding the default formatting:
 
@@ -80,15 +80,13 @@ To improve automatic spacing and capitalization in dictation mode, you can enabl
 
 ## Pressing Keys
 
-Saying `help alphabet` shows the command for each letter key.
+In command mode, saying `help alphabet` shows spoken forms for letter keys. Saying `help symbols` shows spoken forms for symbol keys.
 
-Saying `help symbols` shows the command for each symbol key.
+Keys can be combined with modifier keys, i.e., saying `shift up` presses <kbd>Shift</kbd> and the up arrow key <kbd>↑</kbd>. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system-specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the <kbd>Command</kbd> key on MacOS.
 
-Keys can be combined with modifier keys, i.e., saying `shift up` presses <kbd>Shift</kbd> and the up arrow key <kbd>⇧</kbd>. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system specific modifier. This is used for the Windows logo key <kbd>⌘</kbd> on Windows and offers one way to refer to the<kbd>Command</kbd> key on MacOS.
+In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the <kbd>Control</kbd> and <kbd>1</kbd> keys at the same time.
 
-In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the <kbd>control</kbd> and <kbd>1</kbd> keys at the same time.
-
-Keys can be pressed in dictation mode by saying `press` followed by the key stroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the up arrow key <kbd>⇧</kbd>. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
+Keys can be pressed in dictation mode by saying `press` followed by the keystroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the up arrow key <kbd>↑</kbd>. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
 
 Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
