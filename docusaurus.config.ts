@@ -73,7 +73,7 @@ const config: Config = {
     mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: "throw",
-    }
+    },
   },
   themes: [
     [
