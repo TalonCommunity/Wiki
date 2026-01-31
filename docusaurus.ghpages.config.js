@@ -68,7 +68,7 @@ const config = {
     mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: "throw",
-    }
+    },
   },
   themes: [
     [
