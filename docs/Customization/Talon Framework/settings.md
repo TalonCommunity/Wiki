@@ -23,13 +23,13 @@ class Actions:
     def my_user_file_set_paste_file_to_next_window():
         """Copy the text from the current file to the next window"""
         actions.edit.select_all()
-        text: str = actions.edit.selected_text()
+        actions.edit.copy()
         actions.app.window_next()
         # Sleep to avoid accidentally pasting during the window switching process
         setting_value: int = settings.get("user.my_user_file_set_sleep_amount")
         print(f"The current value of the setting is {setting_value}")
         actions.sleep(f"{setting_value}ms")
-        actions.user.paste(text)
+        actions.edit.paste()
 ```
 
 Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
