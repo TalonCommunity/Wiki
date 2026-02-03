@@ -47,16 +47,16 @@ Say a formatter then the text. (i.e. `say hello world`) to dictate while in comm
 | `kebab`           | dashes instead of spaces                |
 | `help formatters` | show all available formatters           |
 
-`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a * after them. When dictating text with a prose formatter, you can say the following in the middle of dictation.
+`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a \* after them. When dictating text with a prose formatter, you can say the following in the middle of dictation.
 
-| Prose formatting options | Description                             |
-| ----------------- | --------------------------------------- |
-| `cap`             | capitalize the next word |
-| `no cap` or `no caps`        | the next word is in lowercase           |
-| `no space`           | no space is inserted before the next word |
-| `numb <number>`        | insert the specified number           |
+| Prose formatting options | Description                               |
+| ------------------------ | ----------------------------------------- |
+| `cap`                    | capitalize the next word                  |
+| `no cap` or `no caps`    | the next word is in lowercase             |
+| `no space`               | no space is inserted before the next word |
+| `numb <number>`          | insert the specified number               |
 
-These formatting options are also available in dictation mode with the same effects. 
+These formatting options are also available in dictation mode with the same effects.
 
 ### Dictating Individual Characters
 
@@ -64,7 +64,7 @@ These formatting options are also available in dictation mode with the same effe
 
 `help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate "2000". Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate "A". Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate "ABC".
 
-If you want to insert numbers in command mode without needing to say `numb` before every number, you can enable the user.unprefixed_numbers tag. To do this, first open settings.talon by saying `customize settings`. Look for the line with the text "# tag(): user.unprefixed_numbers" and remove the "#" and space at the start of the line. Now save the file by saying `file save`. You can read more about tags in the [the tags customization page](../Customization/Talon%20Framework/tags.md). 
+If you want to insert numbers in command mode without needing to say `numb` before every number, you can enable the user.unprefixed_numbers tag. To do this, first open settings.talon by saying `customize settings`. Look for the line with the text "# tag(): user.unprefixed_numbers" and remove the "#" and space at the start of the line. Now save the file by saying `file save`. You can read more about tags in the [the tags customization page](../Customization/Talon%20Framework/tags.md).
 
 #### Dictating Characters in Dictation Mode
 
