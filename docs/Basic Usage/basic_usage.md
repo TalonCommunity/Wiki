@@ -53,6 +53,8 @@ Say a formatter then the text. (i.e. `say hello world`) to dictate while in comm
 
 `help symbols` shows the commands for dictating symbols. Numbers can be dictated in command or dictation mode by saying `numb <number>`, i.e. `numb 2000` to dictate "2000". Individual letters can be dictated with the alphabet commands, which can be seen by saying `help alphabet`. A single capital letter can be dictated by saying `shift <user.letter>`, such as saying `shift air` to dictate "A". Multiple capital letters can be dictated in command or dictation mode by saying `ship` before the letters, such as saying `ship air bat cap` to dictate "ABC".
 
+If you want to insert numbers in command mode without needing to say `numb` before every number, you can enable the user.unprefixed_numbers tag. To do this, first open settings.talon by saying `customize settings`. Look for the line with the text "# tag(): user.unprefixed_numbers" and remove the "#" and space at the start of the line. Now save the file by saying `file save`. You can read more about tags in the [the tags customization page](../Customization/Talon%20Framework/tags.md). 
+
 #### Dictating Characters in Dictation Mode
 
 In dictation mode, lowercase letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate "abc". Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate "~". `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
