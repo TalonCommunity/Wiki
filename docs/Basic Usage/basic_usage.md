@@ -47,6 +47,17 @@ Say a formatter then the text. (i.e. `say hello world`) to dictate while in comm
 | `kebab`           | dashes instead of spaces                |
 | `help formatters` | show all available formatters           |
 
+`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a * after them. When dictating text with a prose formatter, you can say the following in the middle of dictation.
+
+| Prose formatting options | Description                             |
+| ----------------- | --------------------------------------- |
+| `cap`             | capitalize the next word |
+| `no cap` or `no caps`        | the next word is in lowercase           |
+| `no space`           | no space is inserted before the next word |
+| `numb <number>`        | insert the specified number           |
+
+These formatting options are also available in dictation mode with the same effects. 
+
 ### Dictating Individual Characters
 
 #### Dictating Characters in Command Mode
