@@ -2,7 +2,9 @@
 
 Settings allow you to control behavior of your Python code by editing a .talon file. This can be used to make a Talon user file set easier to customize for end users, such as exposing the background color of a UI element. It can also be useful to have certain settings change when the context changes, by setting them to different values in different .talon files.
 
-Settings are defined on Modules by calling a Module's `.setting()` method. Each setting has a name, type, default value, and description. A setting's value can be obtained from Python by calling `settings.get()` with the setting name as the argument. The following example shows how to define a setting in Python and get its context-dependent value. If you are using Community and Python is the active programming language, you can use the command `snip module setting` to define a setting. Because settings are undefined during startup, only obtain setting values in a function registered to be called by Talon or an action. Do not use top level (unindented) Python code to run any instructions that obtain setting values.
+Declare a setting on a Module by calling its`.setting()` method. Each setting has a name, type, default value, and description. A setting's value can be obtained from Python by calling `settings.get()` with the setting name as the argument.
+
+The following example shows how to define a setting in Python and get its context-dependent value. If you are using Community and Python is the active programming language, you can use the command `snip module setting` to define a setting. Because settings are undefined during Talon startup, only obtain setting values in a function registered to be called by Talon (e.g., `ready` callback) or an action.
 
 `setting.py`
 
