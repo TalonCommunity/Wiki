@@ -34,7 +34,7 @@ class Actions:
         actions.edit.paste()
 ```
 
-Note that the name of the setting (the first argument to mod.setting) in the example included the prefix "my_user_file_set". All user defined settings names share the same namespace so it's important to avoid overly generic setting names that may conflict.
+Note that the name of the setting (the first argument to `mod.setting`) in the example included the prefix "my_prefix". All user-defined settings names share the same namespace, so it's important to avoid overly generic setting names that may conflict.
 
 The following example shows how you would change the value for that setting in a .talon file. Any number of settings can be defined in a single settings block, but any invalid syntax will prevent the entire block from applying.
 
