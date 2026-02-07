@@ -14,7 +14,7 @@ from talon import Module, settings, actions
 mod = Module()
 
 mod.setting(
-    "my_user_file_set_sleep_amount",
+    "my_prefix_sleep_amount",
     type=int,
     default=200,
     desc="Set the amount of time to sleep in milliseconds",
