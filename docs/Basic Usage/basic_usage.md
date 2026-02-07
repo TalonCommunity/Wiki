@@ -101,7 +101,7 @@ In a keystroke, number keys can be dictated without prefix. For instance, saying
 
 Keys can be pressed in dictation mode by saying `press` followed by the keystroke, such as saying `press shift up` to press <kbd>Shift</kbd> and the up arrow key <kbd>↑</kbd>. The `press` command can also be used in command or dictation mode to press modifier keys by themselves, such as `press control` to press the <kbd>Control</kbd> key.
 
-Saying `help arrows` shows the names for referring to the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
+Saying `help arrows` shows spoken forms for the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
 Saying `help special keys` shows the commands for other keys you can press, such as <kbd>Page Up</kbd> and <kbd>Escape</kbd>.
 
