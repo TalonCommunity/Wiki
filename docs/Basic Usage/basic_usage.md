@@ -103,7 +103,7 @@ Keys can be pressed in dictation mode by saying `press` followed by the keystrok
 
 Saying `help arrows` shows spoken forms for the arrow keys, which are just the direction names up, down, left, right. These can be used with a modifier or the `press` command but not by themselves.
 
-Saying `help special keys` shows the commands for other keys you can press, such as <kbd>Page Up</kbd> and <kbd>Escape</kbd>.
+Saying `help special keys` shows spoken forms for other keys you can `press`, such as <kbd>Page Up</kbd> and <kbd>Escape</kbd>.
 
 Function keys, like <kbd>f1</kbd>, can be dictated by saying `f` and then the key number.
 
