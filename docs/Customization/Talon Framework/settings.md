@@ -28,7 +28,7 @@ class Actions:
         actions.edit.copy()
         actions.app.window_next()
         # Sleep to avoid pasting during the window switching process
-        value = settings.get("user.my_prefix_set_sleep_amount")
+        value = settings.get("user.my_prefix_sleep_amount")
         print(f"The current value of the setting is {value}")
         actions.sleep(f"{value}ms")
         actions.edit.paste()
