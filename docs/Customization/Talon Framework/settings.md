@@ -22,7 +22,7 @@ mod.setting(
 
 @mod.action_class
 class Actions:
-    def my_user_file_set_paste_file_to_next_window():
+    def my_prefix_paste_file_to_next_window():
         """Copy the text from the current file to the next window"""
         actions.edit.select_all()
         actions.edit.copy()
