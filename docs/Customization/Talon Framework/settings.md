@@ -56,5 +56,5 @@ from talon import Context
 
 ctx = Context()
 
-ctx.settings["user.my_user_file_set_sleep_amount"] = 50
+ctx.settings["user.my_prefix_sleep_amount"] = 50
 ```
