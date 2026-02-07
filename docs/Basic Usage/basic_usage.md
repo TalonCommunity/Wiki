@@ -35,7 +35,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 
 ### Formatters
 
-Say a formatter then the text. (i.e. `say hello world`) to dictate while in command mode
+Say a formatter then the text. (e.g., `say hello world`) to dictate while in command mode
 
 | Formatter         | Description                             |
 | ----------------- | --------------------------------------- |
