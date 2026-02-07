@@ -138,7 +138,7 @@ For example, saying `go up 10 lines` moves the cursor up 10 lines.
 
 Command mode provides flexible editing and navigation commands.
 
-Saying the name of one of these actions followed by the name of a modifier applies the action to the target referred to by the modifier. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor.
+Saying an action name followed by a modifier applies the action to the modifier's target. For instance, saying `select line` selects the current line. A number between 1 and 99 can be dictated between the name of an action and a repeatable modifier to apply that modifier the specified number of times. For instance, saying `copy 3 right` copies the three characters to the right of the cursor.
 
 | Action    | Description                                       |
 | --------- | ------------------------------------------------- |
