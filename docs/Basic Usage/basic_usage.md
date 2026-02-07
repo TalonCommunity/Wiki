@@ -274,7 +274,7 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 
 These commands require activating the `user.mouse_cursor_commands_enable` tag (see Community settings.talon).
 
-## Working With Media
+## Media and Volume Control
 
 | Command         | Description                   |
 | --------------- | ----------------------------- |
