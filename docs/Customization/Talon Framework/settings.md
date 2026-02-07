@@ -43,7 +43,7 @@ The following example shows how you would change the value for that setting in a
 ```talon
 -
 settings():
-    user.my_user_file_set_sleep_amount = 50
+    user.my_prefix_sleep_amount = 50
     # Any number of other settings could be defined here
 ```
 
