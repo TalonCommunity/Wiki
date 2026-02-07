@@ -95,7 +95,7 @@ To improve automatic spacing and capitalization in dictation mode, you can enabl
 
 In command mode, saying `help alphabet` shows spoken forms for letter keys. Saying `help symbols` shows spoken forms for symbol keys.
 
-Keys can be combined with modifier keys, i.e., saying `shift up` presses <kbd>Shift</kbd> and the up arrow key <kbd>↑</kbd>. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system-specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the <kbd>Command</kbd> key on MacOS.
+Keys can be combined with modifier keys, i.e., saying `shift up` presses <kbd>Shift</kbd> and the up arrow key <kbd>↑</kbd>. Saying `help modifiers` shows the word to refer to each modifier key. The `super` key refers to the operating system-specific modifier. This is used for the Windows logo key on Windows and offers one way to refer to the <kbd>Command</kbd> key on macOS.
 
 In a keystroke, number keys can be dictated without prefix. For instance, saying `control one` presses the <kbd>Control</kbd> and <kbd>1</kbd> keys at the same time.
 
