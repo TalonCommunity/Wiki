@@ -27,7 +27,7 @@ class Actions:
         actions.edit.select_all()
         actions.edit.copy()
         actions.app.window_next()
-        # Sleep to avoid  pasting during the window switching process
+        # Sleep to avoid pasting during the window switching process
         value = settings.get("user.my_user_file_set_sleep_amount")
         print(f"The current value of the setting is {value}")
         actions.sleep(f"{value}ms")
