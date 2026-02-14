@@ -58,6 +58,8 @@ Say a formatter then the text. (e.g., `say hello world`) to dictate while in com
 
 These formatting options are also available in dictation mode with the same effects.
 
+Prose formatters also allow punctuation in the middle of dictation. For example, say `say it helps comma so go ahead period` to insert "it helps, so go ahead.". Say `help punctuation` to see the punctuation commands. Prose formatters offer additional features, which we plan on documenting in the near future.
+
 ### Dictating Individual Characters
 
 #### Dictating Characters in Command Mode
