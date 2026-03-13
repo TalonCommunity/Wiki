@@ -280,6 +280,6 @@ key(f9:passive): app.notify("f9 pressed, and we won't stop any other apps from r
 key(f9:up): app.notify("show this balloon when the f9 key is released")
 ```
 
-The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [key() action](Talon Library Reference/key_action.md) wiki page.
+The list of available keys you can listen to isn't well defined, but it is likely a subset of the names on the [`key()` action](./Talon%20Library%20Reference/key_action.md) wiki page.
 
 Aside from these, additional extra capabilities may be added from time to time. For example in the beta version you can currently define rules for matching facial expressions on OSX and user supplied noises (e.g. a whistle sound) via integration with parrot.py.
