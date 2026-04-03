@@ -41,6 +41,7 @@ const RepoExplorer: React.FC = () => {
   const [showAllTags, setShowAllTags] = useState(false);
   const [implicitTags, setOmitTags] = useState<string[]>(["talonvoice", "talon"]);
   const [tagAliases, setTagAliases] = useState<Record<string, string>>({});
+  const [generatedAt, setGeneratedAt] = useState<string | null>(null);
 
   useEffect(() => {
     // Load data from build-time generated JSON
@@ -53,6 +54,7 @@ const RepoExplorer: React.FC = () => {
         setRepos(data.repositories);
         if (data.implicitTags) setOmitTags(data.implicitTags);
         if (data.tagAliases) setTagAliases(data.tagAliases);
+        if (data.generated_at) setGeneratedAt(data.generated_at);
         console.log(
           `Loaded ${data.repositories.length} repositories (generated at ${data.generated_at})`,
         );
@@ -331,6 +333,9 @@ const RepoExplorer: React.FC = () => {
           {searchTerm && ` matching "${searchTerm}"`}
           {selectedLanguage !== "all" && ` in ${selectedLanguage}`}
           {selectedTags.length > 0 && ` with tags: ${selectedTags.join(", ")}`}
+          {generatedAt && (
+            <> · Data updated {formatDate(generatedAt)}</>
+          )}
         </p>
       </div>{" "}
       <div
