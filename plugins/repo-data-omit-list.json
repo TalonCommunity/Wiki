@@ -1,4 +1,18 @@
 {
-  "description": "List of repositories to exclude from the Repository Explorer. Add repository full names (e.g., 'owner/repo-name') to the omitRepos array.",
-  "omitRepos": ["voqal/voqal"]
+  "description": "Configuration for Repository Explorer exclusions and tag normalization.",
+  "omitRepos": ["voqal/voqal", "Jailsonfs/community"],
+  "implicitTags": ["talonvoice", "talon", "voice", "voice-recognition", "speech-recognition", "voice-commands", "voice-control", "voice-dictation", "dictation"],
+  "tagAliases": {
+    "a11y": "accessibility",
+    "macos-accessibility": "accessibility",
+    "maths": "math",
+    "python3": "python",
+    "hci": "human-computer-interaction",
+    "games": "game",
+    "gpt": "ai",
+    "openai": "ai",
+    "chatgpt": "ai",
+    "llm": "ai",
+    "copilot": "ai"
+  }
 }

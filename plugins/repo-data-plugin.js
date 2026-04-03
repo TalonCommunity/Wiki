@@ -11,8 +11,10 @@ module.exports = function (context, options) {
         "../.docusaurus/repo-data-plugin/default/repos.json",
       );
 
-      // Load omit configuration from repo-explorer-omit-list.json
+      // Load omit configuration from repo-data-omit-list.json
       let omitRepos = [];
+      let implicitTags = [];
+      let tagAliases = {};
 
       try {
         const omitListFile = path.join(__dirname, "repo-data-omit-list.json");
@@ -20,6 +22,12 @@ module.exports = function (context, options) {
           const omitConfig = JSON.parse(fs.readFileSync(omitListFile, "utf8"));
           if (omitConfig.omitRepos && Array.isArray(omitConfig.omitRepos)) {
             omitRepos = omitConfig.omitRepos;
+          }
+          if (omitConfig.implicitTags && Array.isArray(omitConfig.implicitTags)) {
+            implicitTags = omitConfig.implicitTags;
+          }
+          if (omitConfig.tagAliases && typeof omitConfig.tagAliases === "object") {
+            tagAliases = omitConfig.tagAliases;
           }
         }
       } catch (error) {
@@ -80,6 +88,8 @@ module.exports = function (context, options) {
               filtered_count: filteredRepos.length,
               omitted_count:
                 (cachedData.repositories.length || 0) - filteredRepos.length,
+              implicitTags,
+              tagAliases,
             };
           }
         } catch (error) {
@@ -163,6 +173,8 @@ module.exports = function (context, options) {
           filtered_count: filteredRepos.length,
           omitted_count: allRepos.length - filteredRepos.length,
           generated_at: new Date().toISOString(),
+          implicitTags,
+          tagAliases,
         };
       } catch (error) {
         console.error("Failed to fetch repository data:", error);
@@ -186,6 +198,8 @@ module.exports = function (context, options) {
               omitted_count:
                 (cachedData.repositories.length || 0) - filteredRepos.length,
               error: `Build-time fetch failed: ${error.message}. Using cached data.`,
+              implicitTags,
+              tagAliases,
             };
           }
         } catch (cacheError) {
@@ -198,6 +212,8 @@ module.exports = function (context, options) {
           total_count: 0,
           generated_at: new Date().toISOString(),
           error: error.message,
+          implicitTags,
+          tagAliases,
         };
       }
     },

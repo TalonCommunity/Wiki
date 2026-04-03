@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - emily/gh-pages-deploy
+  schedule:
+    # Rebuild weekly (Saturday night / Sunday 00:00 UTC)
+    - cron: "0 0 * * 0"
+  workflow_dispatch: # Allow manual trigger
 
 jobs:
   build_and_deploy:
