@@ -23,10 +23,16 @@ module.exports = function (context, options) {
           if (omitConfig.omitRepos && Array.isArray(omitConfig.omitRepos)) {
             omitRepos = omitConfig.omitRepos;
           }
-          if (omitConfig.implicitTags && Array.isArray(omitConfig.implicitTags)) {
+          if (
+            omitConfig.implicitTags &&
+            Array.isArray(omitConfig.implicitTags)
+          ) {
             implicitTags = omitConfig.implicitTags;
           }
-          if (omitConfig.tagAliases && typeof omitConfig.tagAliases === "object") {
+          if (
+            omitConfig.tagAliases &&
+            typeof omitConfig.tagAliases === "object"
+          ) {
             tagAliases = omitConfig.tagAliases;
           }
         }

@@ -43,9 +43,9 @@ export default function Explorer(): JSX.Element {
               </p>
               <p className={styles.warning}>
                 ⚠️ <strong>Use at your own risk:</strong> These repositories may
-                not be curated or tested. Do not download or run anything
-                from unvetted repositories without careful review.{" "}
-                For curated packages, visit{" "}
+                not be curated or tested. Do not download or run anything from
+                unvetted repositories without careful review. For curated
+                packages, visit{" "}
                 <a href="/integrations/talon_user_file_sets">
                   talon_user_file_sets
                 </a>
