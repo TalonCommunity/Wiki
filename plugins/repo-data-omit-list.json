@@ -17,10 +17,21 @@
     "python3": "python",
     "hci": "human-computer-interaction",
     "games": "game",
+    "garrysmod": "game",
+    "gmod": "game",
+    "slaythespire": "game",
+    "slaythespire-mod": "game",
+    "gameboyadvance": "game",
+    "mgba": "game",
+    "blazor-server": "blazor",
+    "blazor-components": "blazor",
+    "awesome": "list",
+    "awesome-list": "list",
     "gpt": "ai",
     "openai": "ai",
     "chatgpt": "ai",
     "llm": "ai",
     "copilot": "ai"
-  }
+  },
+  "matchNamesToExistingTags": true
 }

@@ -15,6 +15,7 @@ module.exports = function (context, options) {
       let omitRepos = [];
       let implicitTags = [];
       let tagAliases = {};
+      let matchNamesToExistingTags = false;
 
       try {
         const omitListFile = path.join(__dirname, "repo-data-omit-list.json");
@@ -35,6 +36,9 @@ module.exports = function (context, options) {
           ) {
             tagAliases = omitConfig.tagAliases;
           }
+          if (omitConfig.matchNamesToExistingTags === true) {
+            matchNamesToExistingTags = true;
+          }
         }
       } catch (error) {
         console.warn("Failed to load repo-data-omit-list.json:", error.message);
@@ -47,7 +51,64 @@ module.exports = function (context, options) {
         console.log(
           `Repository omit list loaded: ${omitRepos.length} repositories will be excluded`,
         );
-      } // Determine if we should fetch fresh data
+      }
+
+      // canonicalTags is built after repos are loaded, since we need
+      // to include tags that actually exist across repos.
+      let canonicalTags = null;
+
+      function buildCanonicalTags(repos) {
+        const tags = new Set(Object.values(tagAliases));
+        repos.forEach((repo) => {
+          repo.topics.forEach((t) => {
+            const canonical = tagAliases[t] || t;
+            if (!implicitTags.includes(canonical)) {
+              tags.add(canonical);
+            }
+          });
+        });
+        return tags;
+      }
+
+      /**
+       * Split a repo name into words, handling kebab-case, snake_case,
+       * camelCase, PascalCase, and mixed conventions.
+       * e.g. "VoiceLauncherBlazor" -> ["voice", "launcher", "blazor"]
+       *      "talon-mouse-rig"     -> ["talon", "mouse", "rig"]
+       *      "talon_mgba_http"     -> ["talon", "mgba", "http"]
+       */
+      function splitRepoName(name) {
+        return name
+          // Insert boundary before uppercase runs: "VoiceLauncher" -> "Voice Launcher"
+          .replace(/([a-z])([A-Z])/g, "$1 $2")
+          // Split acronym from next word: "HTTPServer" -> "HTTP Server"
+          .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+          .split(/[-_.\s]+/)
+          .map((w) => w.toLowerCase())
+          .filter((w) => w.length > 2);
+      }
+
+      /**
+       * Infer tags from a repo's name by matching words against known
+       * canonical tags. Only adds tags the repo doesn't already have
+       * (after alias resolution).
+       */
+      function inferTags(repo) {
+        if (!matchNamesToExistingTags || !canonicalTags) return;
+        const words = splitRepoName(repo.name);
+        const existingCanonical = new Set(
+          repo.topics.map((t) => tagAliases[t] || t),
+        );
+        for (const word of words) {
+          const canonical = tagAliases[word] || word;
+          if (canonicalTags.has(canonical) && !existingCanonical.has(canonical) && !implicitTags.includes(canonical)) {
+            repo.topics.push(word);
+            existingCanonical.add(canonical);
+          }
+        }
+      }
+
+      // Determine if we should fetch fresh data
       const isUpdateRepos =
         (process.env.npm_config_argv &&
           JSON.parse(process.env.npm_config_argv).original.includes(
@@ -87,6 +148,9 @@ module.exports = function (context, options) {
                 `Applied current omit list: ${cachedData.repositories.length - filteredRepos.length} repositories filtered out`,
               );
             }
+
+            canonicalTags = buildCanonicalTags(filteredRepos);
+            filteredRepos.forEach(inferTags);
 
             return {
               ...cachedData,
@@ -173,6 +237,9 @@ module.exports = function (context, options) {
           `After filtering: ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} omitted)`,
         );
 
+        canonicalTags = buildCanonicalTags(filteredRepos);
+        filteredRepos.forEach(inferTags);
+
         return {
           repositories: filteredRepos,
           total_count: totalCount,
@@ -196,6 +263,9 @@ module.exports = function (context, options) {
               const fullName = repo.full_name.toLowerCase();
               return !omitRepos.includes(fullName);
             });
+
+            canonicalTags = buildCanonicalTags(filteredRepos);
+            filteredRepos.forEach(inferTags);
 
             return {
               ...cachedData,

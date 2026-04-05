@@ -29,6 +29,71 @@ interface RepoData {
   tagAliases?: Record<string, string>;
 }
 
+interface CardTagsProps {
+  topics: string[];
+  implicitTags: string[];
+  resolveTag: (tag: string) => string;
+  selectedTags: string[];
+  toggleTag: (tag: string) => void;
+  maxTags: number;
+  compact?: boolean;
+}
+
+const CardTags: React.FC<CardTagsProps> = ({
+  topics,
+  implicitTags,
+  resolveTag,
+  selectedTags,
+  toggleTag,
+  maxTags,
+  compact = false,
+}) => {
+  // Keep original tag names but deduplicate by canonical form,
+  // picking the first occurrence per canonical group.
+  const seenCanonical = new Set<string>();
+  const tags: { label: string; canonical: string }[] = [];
+  for (const topic of topics) {
+    if (implicitTags.includes(topic)) continue;
+    const canonical = resolveTag(topic);
+    if (!seenCanonical.has(canonical)) {
+      seenCanonical.add(canonical);
+      tags.push({ label: topic, canonical });
+    }
+  }
+
+  if (tags.length === 0) return null;
+
+  const containerClass = compact ? styles.topicsCompact : styles.topics;
+  const tagClass = compact ? styles.topicCompact : styles.topic;
+  const activeClass = compact ? styles.topicActiveCompact : styles.topicActive;
+  const moreClass = compact ? styles.topicMoreCompact : styles.topicMore;
+
+  return (
+    <div className={containerClass}>
+      {tags.slice(0, maxTags).map(({ label, canonical }) => (
+        <button
+          key={label}
+          className={clsx(
+            tagClass,
+            styles.tagGeneric,
+            selectedTags.includes(canonical) && styles.tagGenericActive,
+            selectedTags.includes(canonical) && activeClass,
+          )}
+          onClick={() => toggleTag(canonical)}
+          title={`Filter by ${canonical}`}
+        >
+          {label}
+        </button>
+      ))}
+      {tags.length > maxTags && (
+        <span className={moreClass}>
+          +{tags.length - maxTags} more
+        </span>
+      )}
+    </div>
+  );
+};
+
 const RepoExplorer: React.FC = () => {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   const [loading, setLoading] = useState(true);
@@ -415,45 +480,14 @@ const RepoExplorer: React.FC = () => {
                       Updated {formatDate(repo.updated_at)}
                     </span>
                   </div>{" "}
-                  {repo.topics.filter((topic) => !implicitTags.includes(topic))
-                    .length > 0 && (
-                    <div className={styles.topics}>
-                      {repo.topics
-                        .filter((topic) => !implicitTags.includes(topic))
-                        .slice(0, 4)
-                        .map((topic) => {
-                          const canonical = resolveTag(topic);
-                          return (
-                            <button
-                              key={topic}
-                              className={clsx(
-                                styles.topic,
-                                styles.tagGeneric,
-                                selectedTags.includes(canonical) &&
-                                  styles.tagGenericActive,
-                                selectedTags.includes(canonical) &&
-                                  styles.topicActive,
-                              )}
-                              onClick={() => toggleTag(canonical)}
-                              title={`Filter by ${canonical}`}
-                            >
-                              {topic}
-                            </button>
-                          );
-                        })}
-                      {repo.topics.filter(
-                        (topic) => !implicitTags.includes(topic),
-                      ).length > 4 && (
-                        <span className={styles.topicMore}>
-                          +
-                          {repo.topics.filter(
-                            (topic) => !implicitTags.includes(topic),
-                          ).length - 4}{" "}
-                          more
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <CardTags
+                    topics={repo.topics}
+                    implicitTags={implicitTags}
+                    resolveTag={resolveTag}
+                    selectedTags={selectedTags}
+                    toggleTag={toggleTag}
+                    maxTags={4}
+                  />
                 </div>
               </>
             ) : (
@@ -510,44 +544,15 @@ const RepoExplorer: React.FC = () => {
                   <span className={styles.updatedCompact}>
                     {formatDate(repo.updated_at)}
                   </span>{" "}
-                  {repo.topics.filter((topic) => !implicitTags.includes(topic))
-                    .length > 0 && (
-                    <div className={styles.topicsCompact}>
-                      {repo.topics
-                        .filter((topic) => !implicitTags.includes(topic))
-                        .slice(0, 2)
-                        .map((topic) => {
-                          const canonical = resolveTag(topic);
-                          return (
-                            <button
-                              key={topic}
-                              className={clsx(
-                                styles.topicCompact,
-                                styles.tagGeneric,
-                                selectedTags.includes(canonical) &&
-                                  styles.tagGenericActive,
-                                selectedTags.includes(canonical) &&
-                                  styles.topicActiveCompact,
-                              )}
-                              onClick={() => toggleTag(canonical)}
-                              title={`Filter by ${canonical}`}
-                            >
-                              {topic}
-                            </button>
-                          );
-                        })}
-                      {repo.topics.filter(
-                        (topic) => !implicitTags.includes(topic),
-                      ).length > 2 && (
-                        <span className={styles.topicMoreCompact}>
-                          +
-                          {repo.topics.filter(
-                            (topic) => !implicitTags.includes(topic),
-                          ).length - 2}
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <CardTags
+                    topics={repo.topics}
+                    implicitTags={implicitTags}
+                    resolveTag={resolveTag}
+                    selectedTags={selectedTags}
+                    toggleTag={toggleTag}
+                    maxTags={2}
+                    compact
+                  />
                 </div>
               </>
             )}
