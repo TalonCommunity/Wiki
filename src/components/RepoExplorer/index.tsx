@@ -86,9 +86,7 @@ const CardTags: React.FC<CardTagsProps> = ({
         </button>
       ))}
       {tags.length > maxTags && (
-        <span className={moreClass}>
-          +{tags.length - maxTags} more
-        </span>
+        <span className={moreClass}>+{tags.length - maxTags} more</span>
       )}
     </div>
   );

@@ -78,14 +78,16 @@ module.exports = function (context, options) {
        *      "talon_mgba_http"     -> ["talon", "mgba", "http"]
        */
       function splitRepoName(name) {
-        return name
-          // Insert boundary before uppercase runs: "VoiceLauncher" -> "Voice Launcher"
-          .replace(/([a-z])([A-Z])/g, "$1 $2")
-          // Split acronym from next word: "HTTPServer" -> "HTTP Server"
-          .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
-          .split(/[-_.\s]+/)
-          .map((w) => w.toLowerCase())
-          .filter((w) => w.length > 2);
+        return (
+          name
+            // Insert boundary before uppercase runs: "VoiceLauncher" -> "Voice Launcher"
+            .replace(/([a-z])([A-Z])/g, "$1 $2")
+            // Split acronym from next word: "HTTPServer" -> "HTTP Server"
+            .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+            .split(/[-_.\s]+/)
+            .map((w) => w.toLowerCase())
+            .filter((w) => w.length > 2)
+        );
       }
 
       /**
@@ -101,7 +103,11 @@ module.exports = function (context, options) {
         );
         for (const word of words) {
           const canonical = tagAliases[word] || word;
-          if (canonicalTags.has(canonical) && !existingCanonical.has(canonical) && !implicitTags.includes(canonical)) {
+          if (
+            canonicalTags.has(canonical) &&
+            !existingCanonical.has(canonical) &&
+            !implicitTags.includes(canonical)
+          ) {
             repo.topics.push(word);
             existingCanonical.add(canonical);
           }
