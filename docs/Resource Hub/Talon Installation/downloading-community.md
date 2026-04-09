@@ -99,9 +99,9 @@ git clone https://github.com/talonhub/community community
 
 ### Managing Custom Changes and Contributing to the Main Repository Using Git
 
-If you continue to use Talon for an extended period, you will most likely want to make changes to your configuration. In order to facilitate the integration of changes in the community repository with your own changes, it is strongly recommended to use Git for managing your changes. However, doing so requires more knowledge about Git than can be reasonably explained in a short guide like this. The [Pro Git](https://git-scm.com/book/en/v2) book is an excellent resource to learn about intermediate and advanced Git usage.
+If you continue to use Talon for an extended period, you will most likely want to make changes to your configuration. In order to facilitate the integration of changes in the community repository with your own changes, it is strongly recommended to use Git for managing your changes. However, doing so requires more knowledge about Git than can be reasonably explained in a short guide like this. The [Pro Git](https://git-scm.com/book/en/v2) site is an excellent resource to learn about intermediate and advanced Git usage.
 
-#### Putting Custom Changes Onto Is Their Own Branch
+#### Putting Custom Changes Onto Their Own Branch
 
 To manage your custom changes while keeping up with upstream updates, it is advisable to create a personal branch for your modifications:
 
