@@ -107,7 +107,7 @@ To manage your custom changes while keeping up with upstream updates, it is advi
 
 1. After cloning the repository, create and switch to a new branch (e.g. `git checkout -b custom`).
 2. If you make changes, commit them to this branch. Try to avoid creating commits that bunch together unrelated changes.
-3. In regular intervals, fetch changes from the upstream repository and merge the main branch into your custom branch. This may result in merge conflicts that then need to be resolved.
+3. In regular intervals, fetch changes from the upstream repository and merge the main branch into your custom branch. This may result in merge conflicts that then need to be resolved. The [upgrade-knausj script](https://github.com/pokey/upgrade-knausj) may help facilitate the process of merging changes.
 4. If you do not mind other people looking at your local changes, create a fork of the community repository on GitHub, add it as a second remote to your local working copy, and push your custom branch there.
 
 #### Using Git Worktrees and Cherry-Picking to Contribute to the Upstream Repository
