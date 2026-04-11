@@ -42,10 +42,20 @@ export default function Explorer(): JSX.Element {
                 <code className={styles.codeHighlight}>talonvoice</code>
               </p>
               <p className={styles.warning}>
-                ⚠️ <strong>Use at your own risk:</strong> These repositories may
-                not be curated or tested. For curated packages, visit{" "}
+                ⚠️ <strong>Use at your own risk:</strong> This compilation
+                wasn't reviewed. For a curated list, visit{" "}
                 <a href="/integrations/talon_user_file_sets">
-                  talon_user_file_sets
+                  Talon user file sets
+                </a>
+                . Do not download or run anything from unvetted repositories
+                without careful review. To report a suspicious repository,
+                please{" "}
+                <a
+                  href="https://github.com/TalonCommunity/Wiki/issues/new?title=Suspicious+repository+report&labels=explorer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  open an issue
                 </a>
                 .
               </p>

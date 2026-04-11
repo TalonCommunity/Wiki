@@ -25,7 +25,72 @@ interface RepoData {
   total_count: number;
   generated_at: string;
   error?: string;
+  implicitTags?: string[];
+  tagAliases?: Record<string, string>;
 }
+
+interface CardTagsProps {
+  topics: string[];
+  implicitTags: string[];
+  resolveTag: (tag: string) => string;
+  selectedTags: string[];
+  toggleTag: (tag: string) => void;
+  maxTags: number;
+  compact?: boolean;
+}
+
+const CardTags: React.FC<CardTagsProps> = ({
+  topics,
+  implicitTags,
+  resolveTag,
+  selectedTags,
+  toggleTag,
+  maxTags,
+  compact = false,
+}) => {
+  // Keep original tag names but deduplicate by canonical form,
+  // picking the first occurrence per canonical group.
+  const seenCanonical = new Set<string>();
+  const tags: { label: string; canonical: string }[] = [];
+  for (const topic of topics) {
+    if (implicitTags.includes(topic)) continue;
+    const canonical = resolveTag(topic);
+    if (!seenCanonical.has(canonical)) {
+      seenCanonical.add(canonical);
+      tags.push({ label: topic, canonical });
+    }
+  }
+
+  if (tags.length === 0) return null;
+
+  const containerClass = compact ? styles.topicsCompact : styles.topics;
+  const tagClass = compact ? styles.topicCompact : styles.topic;
+  const activeClass = compact ? styles.topicActiveCompact : styles.topicActive;
+  const moreClass = compact ? styles.topicMoreCompact : styles.topicMore;
+
+  return (
+    <div className={containerClass}>
+      {tags.slice(0, maxTags).map(({ label, canonical }) => (
+        <button
+          key={label}
+          className={clsx(
+            tagClass,
+            styles.tagGeneric,
+            selectedTags.includes(canonical) && styles.tagGenericActive,
+            selectedTags.includes(canonical) && activeClass,
+          )}
+          onClick={() => toggleTag(canonical)}
+          title={`Filter by ${canonical}`}
+        >
+          {label}
+        </button>
+      ))}
+      {tags.length > maxTags && (
+        <span className={moreClass}>+{tags.length - maxTags} more</span>
+      )}
+    </div>
+  );
+};
 
 const RepoExplorer: React.FC = () => {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
@@ -37,6 +102,12 @@ const RepoExplorer: React.FC = () => {
   const [sortBy, setSortBy] = useState<"stars" | "updated" | "name">("stars");
   const [viewMode, setViewMode] = useState<"compact" | "expanded">("compact");
   const [showAllTags, setShowAllTags] = useState(false);
+  const [implicitTags, setOmitTags] = useState<string[]>([
+    "talonvoice",
+    "talon",
+  ]);
+  const [tagAliases, setTagAliases] = useState<Record<string, string>>({});
+  const [generatedAt, setGeneratedAt] = useState<string | null>(null);
 
   useEffect(() => {
     // Load data from build-time generated JSON
@@ -47,6 +118,9 @@ const RepoExplorer: React.FC = () => {
         setError(`Build-time data fetch failed: ${data.error}`);
       } else {
         setRepos(data.repositories);
+        if (data.implicitTags) setOmitTags(data.implicitTags);
+        if (data.tagAliases) setTagAliases(data.tagAliases);
+        if (data.generated_at) setGeneratedAt(data.generated_at);
         console.log(
           `Loaded ${data.repositories.length} repositories (generated at ${data.generated_at})`,
         );
@@ -59,6 +133,27 @@ const RepoExplorer: React.FC = () => {
     }
   }, []);
 
+  // Resolve a tag to its canonical form using tagAliases
+  const resolveTag = React.useCallback(
+    (tag: string): string => tagAliases[tag] || tag,
+    [tagAliases],
+  );
+
+  // Build a reverse map: canonical tag -> all original tags that map to it
+  const canonicalToOriginals = React.useMemo(() => {
+    const map = new Map<string, Set<string>>();
+    repos.forEach((repo) => {
+      repo.topics
+        .filter((topic) => !implicitTags.includes(topic))
+        .forEach((topic) => {
+          const canonical = resolveTag(topic);
+          if (!map.has(canonical)) map.set(canonical, new Set());
+          map.get(canonical)!.add(topic);
+        });
+    });
+    return map;
+  }, [repos, implicitTags, resolveTag]);
+
   const filteredAndSortedRepos = React.useMemo(() => {
     let filtered = repos.filter((repo) => {
       const matchesSearch =
@@ -70,7 +165,12 @@ const RepoExplorer: React.FC = () => {
         selectedLanguage === "all" || repo.language === selectedLanguage;
       const matchesTags =
         selectedTags.length === 0 ||
-        selectedTags.some((tag) => repo.topics.includes(tag));
+        selectedTags.some((tag) => {
+          const originals = canonicalToOriginals.get(tag);
+          return originals
+            ? repo.topics.some((t) => originals.has(t))
+            : repo.topics.includes(tag);
+        });
       return matchesSearch && matchesLanguage && matchesTags;
     }); // Sort repositories
     filtered.sort((a, b) => {
@@ -89,7 +189,14 @@ const RepoExplorer: React.FC = () => {
     });
 
     return filtered;
-  }, [repos, searchTerm, selectedLanguage, selectedTags, sortBy]);
+  }, [
+    repos,
+    searchTerm,
+    selectedLanguage,
+    selectedTags,
+    sortBy,
+    canonicalToOriginals,
+  ]);
 
   const languages = React.useMemo(() => {
     return Array.from(
@@ -97,21 +204,26 @@ const RepoExplorer: React.FC = () => {
     ).sort();
   }, [repos]);
 
-  // Get all unique tags with counts, excluding 'talonvoice' and 'talon'
+  // Get all unique tags with counts, using canonical names
   const tagStats = React.useMemo(() => {
     const tagCounts = new Map<string, number>();
     repos.forEach((repo) => {
+      const seen = new Set<string>();
       repo.topics
-        .filter((topic) => topic !== "talonvoice" && topic !== "talon")
+        .filter((topic) => !implicitTags.includes(topic))
         .forEach((topic) => {
-          tagCounts.set(topic, (tagCounts.get(topic) || 0) + 1);
+          const canonical = resolveTag(topic);
+          if (!seen.has(canonical)) {
+            seen.add(canonical);
+            tagCounts.set(canonical, (tagCounts.get(canonical) || 0) + 1);
+          }
         });
     });
 
     return Array.from(tagCounts.entries())
       .map(([tag, count]) => ({ tag, count }))
-      .sort((a, b) => b.count - a.count); // Sort by count descending
-  }, [repos]);
+      .sort((a, b) => b.count - a.count);
+  }, [repos, implicitTags, resolveTag]);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
@@ -294,6 +406,7 @@ const RepoExplorer: React.FC = () => {
           {searchTerm && ` matching "${searchTerm}"`}
           {selectedLanguage !== "all" && ` in ${selectedLanguage}`}
           {selectedTags.length > 0 && ` with tags: ${selectedTags.join(", ")}`}
+          {generatedAt && <> · Data updated {formatDate(generatedAt)}</>}
         </p>
       </div>{" "}
       <div
@@ -365,47 +478,14 @@ const RepoExplorer: React.FC = () => {
                       Updated {formatDate(repo.updated_at)}
                     </span>
                   </div>{" "}
-                  {repo.topics.filter(
-                    (topic) => topic !== "talonvoice" && topic !== "talon",
-                  ).length > 0 && (
-                    <div className={styles.topics}>
-                      {repo.topics
-                        .filter(
-                          (topic) =>
-                            topic !== "talonvoice" && topic !== "talon",
-                        )
-                        .slice(0, 4)
-                        .map((topic) => (
-                          <button
-                            key={topic}
-                            className={clsx(
-                              styles.topic,
-                              styles.tagGeneric,
-                              selectedTags.includes(topic) &&
-                                styles.tagGenericActive,
-                              selectedTags.includes(topic) &&
-                                styles.topicActive,
-                            )}
-                            onClick={() => toggleTag(topic)}
-                            title={`Filter by ${topic}`}
-                          >
-                            {topic}
-                          </button>
-                        ))}
-                      {repo.topics.filter(
-                        (topic) => topic !== "talonvoice" && topic !== "talon",
-                      ).length > 4 && (
-                        <span className={styles.topicMore}>
-                          +
-                          {repo.topics.filter(
-                            (topic) =>
-                              topic !== "talonvoice" && topic !== "talon",
-                          ).length - 4}{" "}
-                          more
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <CardTags
+                    topics={repo.topics}
+                    implicitTags={implicitTags}
+                    resolveTag={resolveTag}
+                    selectedTags={selectedTags}
+                    toggleTag={toggleTag}
+                    maxTags={4}
+                  />
                 </div>
               </>
             ) : (
@@ -462,46 +542,15 @@ const RepoExplorer: React.FC = () => {
                   <span className={styles.updatedCompact}>
                     {formatDate(repo.updated_at)}
                   </span>{" "}
-                  {repo.topics.filter(
-                    (topic) => topic !== "talonvoice" && topic !== "talon",
-                  ).length > 0 && (
-                    <div className={styles.topicsCompact}>
-                      {repo.topics
-                        .filter(
-                          (topic) =>
-                            topic !== "talonvoice" && topic !== "talon",
-                        )
-                        .slice(0, 2)
-                        .map((topic) => (
-                          <button
-                            key={topic}
-                            className={clsx(
-                              styles.topicCompact,
-                              styles.tagGeneric,
-                              selectedTags.includes(topic) &&
-                                styles.tagGenericActive,
-                              selectedTags.includes(topic) &&
-                                styles.topicActiveCompact,
-                            )}
-                            onClick={() => toggleTag(topic)}
-                            title={`Filter by ${topic}`}
-                          >
-                            {topic}
-                          </button>
-                        ))}
-                      {repo.topics.filter(
-                        (topic) => topic !== "talonvoice" && topic !== "talon",
-                      ).length > 2 && (
-                        <span className={styles.topicMoreCompact}>
-                          +
-                          {repo.topics.filter(
-                            (topic) =>
-                              topic !== "talonvoice" && topic !== "talon",
-                          ).length - 2}
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <CardTags
+                    topics={repo.topics}
+                    implicitTags={implicitTags}
+                    resolveTag={resolveTag}
+                    selectedTags={selectedTags}
+                    toggleTag={toggleTag}
+                    maxTags={2}
+                    compact
+                  />
                 </div>
               </>
             )}
