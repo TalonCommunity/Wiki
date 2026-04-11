@@ -96,3 +96,27 @@ git clone https://github.com/talonhub/community community
 cd %AppData%\Talon\user
 git clone https://github.com/talonhub/community community
 ```
+
+### Managing Custom Changes and Contributing to the Main Repository Using Git
+
+If you continue to use Talon for an extended period, you will most likely want to make changes to your configuration. In order to facilitate the integration of changes in the community repository with your own changes, it is strongly recommended to use Git for managing your changes. However, doing so requires more knowledge about Git than can be reasonably explained in a short guide like this. The [Pro Git](https://git-scm.com/book/en/v2) site is an excellent resource to learn about intermediate and advanced Git usage.
+
+#### Putting Custom Changes Onto Their Own Branch
+
+To manage your custom changes while keeping up with upstream updates, it is advisable to create a personal branch for your modifications:
+
+1. After cloning the repository, create and switch to a new branch (e.g. `git checkout -b custom`).
+2. If you make changes, commit them to this branch. Try to avoid creating commits that bunch together unrelated changes.
+3. At regular intervals, fetch changes from the upstream repository and merge the main branch into your custom branch. This may result in merge conflicts that then need to be resolved. The [upgrade-knausj script](https://github.com/pokey/upgrade-knausj) may help facilitate the process of merging changes.
+4. If you do not mind other people looking at your local changes, create a fork of the community repository on GitHub, add it as a second remote to your local working copy, and push your custom branch there.
+
+#### Using Git Worktrees and Cherry-Picking to Contribute to the Upstream Repository
+
+If you have made changes to your setup that could improve the experience for a wide range of users, you may want to share these changes with the wider community. If you have followed the recipe in the preceding section, Git makes it easy to create pull requests for your changes. One solution that is used by several regular contributors to `community` relies on Git worktrees and cherry-picking:
+
+1. Create a worktree for the upstream repository: `git worktree add <some folder outside the talon user directory>/talonhub-community origin/main`.
+2. In the worktree, create a new branch for your PR: `git checkout -b feature-branch`.
+3. Cherry-pick your desired commits from your custom branch: `git cherry-pick <commit-hash>`.
+4. Push the branch to your fork on GitHub and create a pull request to the upstream repository.
+
+The reason why this setup works so well is that the worktree setup above and the primary worktree in the Talon user directory are part of the same local repository and share all of the references.
