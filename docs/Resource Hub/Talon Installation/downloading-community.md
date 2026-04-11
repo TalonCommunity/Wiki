@@ -119,4 +119,4 @@ If you have made changes to your setup that could improve the experience for a w
 3. Cherry-pick your desired commits from your custom branch: `git cherry-pick <commit-hash>`.
 4. Push the branch to your fork on GitHub and create a pull request to the upstream repository.
 
-The reason why this setup works so well is that the worktree set up above and the primary worktree in the Talon user directory are part of the same local repository and share all of the references.
+The reason why this setup works so well is that the worktree setup above and the primary worktree in the Talon user directory are part of the same local repository and share all of the references.
