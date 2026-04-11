@@ -72,6 +72,7 @@ The customization for foot pedals is more involved than editing Talon files, and
 - [Olympus RS31H](https://dictation.omsystem.com/product/rs-31h-footswitch/) is used by a few Talon Community members. It has 4 buttons (whereas other options only have 3). Check out this [video demo](https://youtu.be/eysWOhPldFQ) and [blog post](https://liannaee.blogspot.com/2023/03/olympus-rs31h-hardware-with-talon-voice.html)
 - [Elgato Stream Deck Pedal](https://www.elgato.com/en/stream-deck-pedal) is natively supported in Talon beta and has 3 buttons.
 - [Kinesis Savant Elite 2](https://kinesis-ergo.com/shop/savant-elite2-triple-pedal/) is mechanical and pedals can remap keys at the hardware level. It has 3 buttons.
+- [Xkeys Foot Pedals](https://piengineering.com/collections/footswitches) Several models with customizable mapping to mouse clicks, macros.
 
 With the Talon beta, the elegato foot pedal can be used as follows:
 
