@@ -22,7 +22,14 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 ## Programming and editor integrations
 
 - [Cursorless](https://www.cursorless.org/) Structural code editing in VSCode. This with [Talon Community](https://github.com/talonhub/community) is the state of the art for voice coding with Talon currently.
+
+### VSCode (and derivatives, e.g. Cursor, VSCodium, Positron)
+- See the community [VSCode integration page](https://github.com/talonhub/community/blob/main/apps/vscode/README.md).
+- See also [talon-filetree](https://github.com/paul-schaaf/talon-filetree), four voice driven file manipulation and tree viewing within VSCode.
+
+### (N)Vim
 - [Fidgetingbit's Talon Community fork](https://github.com/fidgetingbits/fidgetingbits-talon) Fork of [Talon Community](https://github.com/talonhub/community) most famous for its integration with the (N)Vim code editor.
+
 
 ## User Interface
 
