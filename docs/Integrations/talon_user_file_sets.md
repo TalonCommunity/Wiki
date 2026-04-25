@@ -26,7 +26,7 @@ The easiest way to control your mouse with Talon is to use an eye tracker. But t
 ### VSCode (and derivatives, e.g. Cursor, VSCodium, Positron)
 
 - See the community [VSCode integration page](https://github.com/talonhub/community/blob/main/apps/vscode/README.md).
-- See also [talon-filetree](https://github.com/paul-schaaf/talon-filetree), four voice driven file manipulation and tree viewing within VSCode.
+- See also [talon-filetree](https://github.com/paul-schaaf/talon-filetree) for voice-driven file manipulation and tree viewing within VSCode.
 
 ### (N)Vim
 
