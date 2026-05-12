@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktalon_wiki=globalThis.webpackChunktalon_wiki||[]).push([[2555],{2555(a,e,i){i.d(e,{createWardleyServices:()=>l.J});var l=i(4837);i(9302)}}]);
