@@ -29,9 +29,19 @@ The <user.prose_currency> capture allows inserting an amount of money by saying 
 ## <user.abbreviation>
 The <user.abbreviation> capture allows inserting an abbreviation by saying `brief {user.abbreviation}`. For instance, saying `brief statistic` inserts "stat". You can read and edit the list of abbreviations by saying `customize abbreviations`.
 
+## <user.prose_modifier>
+You can use the following prose modifiers in the <user.prose> capture to change the formatting. 
+
+| Prose formatting options | Description                               |
+| ------------------------ | ----------------------------------------- |
+| `cap`                    | capitalize the next word                  |
+| `no cap` or `no caps`    | the next word is in lowercase             |
+| `no space`               | no space is inserted before the next word |
+
+For instance, saying `this is an cap example of no space formatting` inserts "This is an Example offormatting".
+
 ## The remaining parts of the capture I have not documented yet
         "| {user.prose_snippets}"
-        "| <user.prose_modifier>"
         "| <user.prose_contact>"
         "| <user.prose_clipboard>"
 
