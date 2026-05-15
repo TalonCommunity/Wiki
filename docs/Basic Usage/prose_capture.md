@@ -17,11 +17,15 @@ The <user.number_prose_prefixed> capture allows inserting a number by saying `nu
 | `numb three comma four` | 3,4   |
 | `numb three colon twenty`   | 3:20     |
 
+## <user.prose_percent>
+The <user.prose_percent> capture allows inserting a number followed by a percent sign by dictating a number and then `sign`. For instance, saying `thirty fives point nine percent` inserts "35.9%".
+
+## <user.prose_time>
+The <user.prose_time> capture allows inserting a time of day. For instance, saying `twelve thirty` inserts "12:30". Saying `two pm` inserts "2pm" and saying `five thirty am` inserts "5:30am". 
+
 ## The remaining parts of the capture I have not documented yet
         "| {user.prose_snippets}"
         "| <user.prose_currency>"
-        "| <user.prose_time>"
-        "| <user.prose_percent>"
         "| <user.prose_modifier>"
         "| <user.abbreviation>"
         "| <user.prose_contact>"
