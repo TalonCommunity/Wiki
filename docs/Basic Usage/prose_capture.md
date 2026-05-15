@@ -23,9 +23,13 @@ The <user.prose_percent> capture allows inserting a number followed by a percent
 ## <user.prose_time>
 The <user.prose_time> capture allows inserting a time of day. For instance, saying `twelve thirty` inserts "12:30". Saying `two pm` inserts "2pm" and saying `five thirty am` inserts "5:30am". 
 
+## <user.prose_currency>
+The <user.prose_currency> capture allows inserting an amount of money by saying a number followed by a currency, such as by saying `twelve dollars` to insert "$12". Saying a number after the currency puts the second number after a decimal point, such as saying `twelve dollars fifty` to insert "$12.50". You can optionally say `and` after the currency and `cents` or `pence` at the end, such as saying `twelve dollars and fifty cents` to insert "$12.50".
+
+
+
 ## The remaining parts of the capture I have not documented yet
         "| {user.prose_snippets}"
-        "| <user.prose_currency>"
         "| <user.prose_modifier>"
         "| <user.abbreviation>"
         "| <user.prose_contact>"
