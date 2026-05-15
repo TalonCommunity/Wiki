@@ -26,12 +26,12 @@ The <user.prose_time> capture allows inserting a time of day. For instance, sayi
 ## <user.prose_currency>
 The <user.prose_currency> capture allows inserting an amount of money by saying a number followed by a currency, such as by saying `twelve dollars` to insert "$12". Saying a number after the currency puts the second number after a decimal point, such as saying `twelve dollars fifty` to insert "$12.50". You can optionally say `and` after the currency and `cents` or `pence` at the end, such as saying `twelve dollars and fifty cents` to insert "$12.50".
 
-
+## <user.abbreviation>
+The <user.abbreviation> capture allows inserting an abbreviation by saying `brief {user.abbreviation}`. For instance, saying `brief statistic` inserts "stat". You can read and edit the list of abbreviations by saying `customize abbreviations`.
 
 ## The remaining parts of the capture I have not documented yet
         "| {user.prose_snippets}"
         "| <user.prose_modifier>"
-        "| <user.abbreviation>"
         "| <user.prose_contact>"
         "| <user.prose_clipboard>"
 
