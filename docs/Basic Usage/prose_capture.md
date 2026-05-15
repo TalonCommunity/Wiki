@@ -8,12 +8,19 @@ The {user.punctuation} list allows inserting punctuation symbols. You can see th
 The <user.prose_spell> capture allows inserting letters by saying `spell <user.letters>`. You can see the spoken forms for letters by saying `help alphabet`. With base Community, you could say `spell abc` to insert "abc" when using the prose capture. The <user.prose_ship> capture allows inserting capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC". 
 
 ## <user.number_prose_prefixed>
+The <user.number_prose_prefixed> capture allows inserting a number by saying `numb` or `numeral` and then a number. Saying `numb five` inserts "5". The following table has more examples.
+
+| Spoken Form          | Inserted Text                 |
+| ---------------- | --------------------------- |
+| `numb three point five`        | 3.5  |
+| `numb negative five`    | -5 |
+| `numb three comma four` | 3,4   |
+| `numb three colon twenty`   | 3:20     |
 
 ## The remaining parts of the capture I have not documented yet
         "| {user.prose_snippets}"
         "| <user.prose_currency>"
         "| <user.prose_time>"
-        "|"
         "| <user.prose_percent>"
         "| <user.prose_modifier>"
         "| <user.abbreviation>"
