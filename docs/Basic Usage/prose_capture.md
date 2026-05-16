@@ -40,8 +40,21 @@ You can use the following prose modifiers in the <user.prose> capture to change 
 
 For instance, saying `this is an cap example of no space formatting` inserts "This is an Example offormatting".
 
+## {user.prose_snippets}
+The {user.prose_snippets} list supports inserting some symbols and performing some key presses.
+
+| Spoken Form | Text/Keystroke |
+| ----------- | -------------- |
+| `spacebar`  | presses the spacebar |
+| `new line`  | presses enter |
+| `new paragraph`  | presses enter twice |
+| `open quote` | inserts a space and then " |
+| `close quote` | inserts " |
+| `smiley` | inserts ':-)' |
+| `winky` | inserts ';-)' |
+| `frowny` | inserts ';-)' |
+
 ## The remaining parts of the capture I have not documented yet
-        "| {user.prose_snippets}"
         "| <user.prose_contact>"
         "| <user.prose_clipboard>"
 
