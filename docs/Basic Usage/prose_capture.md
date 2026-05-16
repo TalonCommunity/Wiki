@@ -54,7 +54,9 @@ The {user.prose_snippets} list supports inserting some symbols and performing so
 | `winky` | inserts ';-)' |
 | `frowny` | inserts ';-)' |
 
+## <user.prose_contact>
+The <user.prose_contact> capture supports inserting information about your contacts such as name and email. This is documented [in the contacts README.md](https://github.com/talonhub/community/blob/main/core/contacts/README.md).
+
 ## The remaining parts of the capture I have not documented yet
-        "| <user.prose_contact>"
         "| <user.prose_clipboard>"
 
