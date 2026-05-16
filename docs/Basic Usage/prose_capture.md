@@ -1,5 +1,5 @@
 # The <user.prose> Capture
-Community uses the <user.prose> capure to let the user dictate prose. This is used by dictation mode and commands that let the user dictate prose as part of them like the formatter commands. The <user.prose> capture allows dictating words and uses the following lists and captures to allow inserting other things.
+Community uses the <user.prose> capure to let the user dictate prose. This is used by dictation mode and commands that take prose input like the formatter commands. The <user.prose> capture allows dictating words and uses the following lists and captures to offer more functionality.
 
 ## {user.punctuation}
 The {user.punctuation} list allows inserting punctuation symbols. You can see the spoken forms for the symbols by saying `help punctuation`. 
@@ -18,7 +18,7 @@ The <user.number_prose_prefixed> capture allows inserting a number by saying `nu
 | `numb three colon twenty`   | 3:20     |
 
 ## <user.prose_percent>
-The <user.prose_percent> capture allows inserting a number followed by a percent sign by dictating a number and then `sign`. For instance, saying `thirty fives point nine percent` inserts "35.9%".
+The <user.prose_percent> capture allows inserting a number followed by a percent sign by dictating a number and then `sign`. For instance, saying `thirty five point nine percent` inserts "35.9%".
 
 ## <user.prose_time>
 The <user.prose_time> capture allows inserting a time of day. For instance, saying `twelve thirty` inserts "12:30". Saying `two pm` inserts "2pm" and saying `five thirty am` inserts "5:30am". 
@@ -41,7 +41,7 @@ You can use the following prose modifiers in the <user.prose> capture to change 
 For instance, saying `this is an cap example of no space formatting` inserts "This is an Example offormatting".
 
 ## {user.prose_snippets}
-The {user.prose_snippets} list supports inserting some symbols and performing some key presses.
+The {user.prose_snippets} list supports inserting the symbols and performing the key presses shown in the following table.
 
 | Spoken Form | Text/Keystroke |
 | ----------- | -------------- |
@@ -56,7 +56,3 @@ The {user.prose_snippets} list supports inserting some symbols and performing so
 
 ## <user.prose_contact>
 The <user.prose_contact> capture supports inserting information about your contacts such as name and email. This is documented [in the contacts README.md](https://github.com/talonhub/community/blob/main/core/contacts/README.md).
-
-## The remaining parts of the capture I have not documented yet
-        "| <user.prose_clipboard>"
-
