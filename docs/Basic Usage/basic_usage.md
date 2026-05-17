@@ -47,18 +47,7 @@ Say a formatter then the text. (e.g., `say hello world`) to dictate while in com
 | `kebab`           | dashes instead of spaces                |
 | `help formatters` | show all available formatters           |
 
-`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a \* after them. When dictating text with a prose formatter, you can say the following in the middle of dictation.
-
-| Prose formatting options | Description                               |
-| ------------------------ | ----------------------------------------- |
-| `cap`                    | capitalize the next word                  |
-| `no cap` or `no caps`    | the next word is in lowercase             |
-| `no space`               | no space is inserted before the next word |
-| `numb <number>`          | insert the specified number               |
-
-These formatting options are also available in dictation mode with the same effects.
-
-Prose formatters also allow punctuation in the middle of dictation. For example, say `say it helps comma so go ahead period` to insert "it helps, so go ahead.". Say `help punctuation` to see the punctuation commands. Prose formatters offer additional features, which we plan on documenting in the near future.
+`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a \* after them. Prose formatters use the [`<user.prose>` capture]( ./prose_captures.md), which allows inserting things like punctuation, numbers, and times of day in the middle of dictation. 
 
 ### Dictating Individual Characters
 
@@ -73,6 +62,8 @@ If you want to insert numbers in command mode without needing to say `numb` befo
 In dictation mode, lowercase letters can be dictated by saying `spell` and then the letters, such as `spell air bat cap` to dictate "abc". Keys can be pressed in dictation mode by saying `press` and then the key stroke. This can allow dictating symbols, such as `press tilde` to dictate "~". `help punctuation` shows how to dictate punctuation symbols in dictation mode without the press prefix.
 
 The commands for dictating uppercase letters and numbers are the same as in command mode and are documented in the previous section.
+
+See the documentation on the [`<user.raw_prose>` capture](./prose_captures.md) for some convenience features for dictating symbols in dictation mode.
 
 ### Dictating Words in Dictation Mode
 
