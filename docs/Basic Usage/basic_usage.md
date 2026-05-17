@@ -47,7 +47,7 @@ Say a formatter then the text. (e.g., `say hello world`) to dictate while in com
 | `kebab`           | dashes instead of spaces                |
 | `help formatters` | show all available formatters           |
 
-`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a \* after them. Prose formatters use the [`<user.prose>` capture]( ./prose_captures.md), which allows inserting things like punctuation, numbers, and times of day in the middle of dictation. 
+`help formatters` shows 2 types of formatters: prose formatters and code formatters. Code formatters are primarily for formatting identifiers and values in computer code. Prose formatters are primarily for ordinary text and are shown with a \* after them. Prose formatters use the [`<user.prose>` capture](./prose_captures.md), which allows inserting things like punctuation, numbers, and times of day in the middle of dictation.
 
 ### Dictating Individual Characters
 
