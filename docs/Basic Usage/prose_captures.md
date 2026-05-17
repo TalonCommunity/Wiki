@@ -14,13 +14,13 @@ The `<user.prose_spell>` capture allows inserting letters by saying `spell <user
 
 The `<user.number_prose_prefixed>` capture allows inserting a number by saying `numb` or `numeral` and then a number. Saying `numb five` inserts "5". The following table has more examples.
 
-| Spoken Form               | Inserted Text |
-| ------------------------- | ------------- |
-| `numb three point five`   | 3.5           |
-| `numb nineteen seventy five`   | 1975           |
-| `numb negative five`      | -5            |
-| `numb three comma four`   | 3,4           |
-| `numb three colon twenty` | 3:20          |
+| Spoken Form                  | Inserted Text |
+| ---------------------------- | ------------- |
+| `numb three point five`      | 3.5           |
+| `numb nineteen seventy five` | 1975          |
+| `numb negative five`         | -5            |
+| `numb three comma four`      | 3,4           |
+| `numb three colon twenty`    | 3:20          |
 
 ## `<user.prose_percent>`
 
@@ -70,4 +70,5 @@ The `{user.prose_snippets}` list supports inserting the symbols and performing t
 The `<user.prose_contact>` capture supports inserting information about your contacts such as name and email. This is documented [in the contacts README.md](https://github.com/talonhub/community/blob/main/core/contacts/README.md).
 
 ## `<user.prose_clipboard>`
+
 The `<user.prose_clipboard>` capture lets you say `clip clip` to insert the contents of the clipboard. For instance, if you have copied the text "hello there", saying `he sent me the message clip clip period` inserts "he sent me the message hello there.".
