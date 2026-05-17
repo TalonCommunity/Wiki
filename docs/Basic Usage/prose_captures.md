@@ -1,4 +1,4 @@
-# The `<user.prose>` and `<user.raw_prose>` Capture
+# The `<user.prose>` and `<user.raw_prose>` Captures
 
 Community uses the `<user.prose>` and `<user.raw_prose>` capures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input like the formatter commands. These captures allow dictating words and use the following lists and captures to offer more functionality.
 
