@@ -103,7 +103,13 @@ If your computer is receiving sound input, that doesn't necessarily mean the sou
 
 If you are new to using microphone equipment and are not familiar with microphone gain, check out this podcasting blog [What is microphone gain?](https://podcastarticles.com/what-is-microphone-gain/). In simple terms, gain is the _input_ volume of your audio. If the gain is too low, the audio will sound very quiet and Talon may cut you off or hear you at all. If the gain is too high, then sound may get distorted by [clipping](https://youtu.be/8Px0UReBI60) and Talon may not understand your commands.
 
-One way to test your gain settings is to make an audio recording and listen to how it sounds. The sound should not be overly quiet nor should it sound like you are shouting. Listen for clipping distortions and reduce the gain until there are no distortions.
+The preferred way to check your gain and recoding quality is via recordings created by Talon itself.
+
+1.  Enable recordings: Talon menu > Speech Recognition > Save Recordings
+2.  Speak a few different commands. Each utterance is saved to a separate FLAC file in the recordings folder inside the Talon home folder (Talon menu > Scripting > Open ~/.talon).
+3.  Analyze the recorded file for level and clipping, e.g., with [MasvisOnline](https://andreasarvidsson.github.io/MasvisOnline)
+
+Another way to test your gain settings is to make an audio recording and listen to how it sounds. The sound should not be overly quiet nor should it sound like you are shouting. Listen for clipping distortions and reduce the gain until there are no distortions.
 
 One tool to make a recording is [Audacity](https://www.audacityteam.org), a free and open-source audio editor and recorder that supports Windows, macOS, GNU/Linux. To make a recording with Audacity:
 
