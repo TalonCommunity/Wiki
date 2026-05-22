@@ -107,7 +107,7 @@ The preferred way is to enable recordings in Talon and then check the level of t
 
 1.  Enable recordings: Talon menu > Speech Recognition > Save Recordings
 2.  Try a few different commands. Each utterance is saved to a separate FLAC file in the recordings folder inside the Talon home folder (Scripting > Open ~/.talon from the Talon menu).
-3.  Analyze recorded file for level and clipping. eg use [MasvisOnline](https://andreasarvidsson.github.io/MasvisOnline)
+3.  Analyze the recorded file for level and clipping, e.g., with [MasvisOnline](https://andreasarvidsson.github.io/MasvisOnline)
 
 Another way to test your gain settings is to make an audio recording and listen to how it sounds. The sound should not be overly quiet nor should it sound like you are shouting. Listen for clipping distortions and reduce the gain until there are no distortions.
 
