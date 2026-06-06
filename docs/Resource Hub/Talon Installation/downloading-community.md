@@ -58,8 +58,9 @@ You will always be able to switch to using `git` down the track.
 In this method, the zip file is downloaded from:
 https://github.com/talonhub/community
 
-Click on the `Code` button and then click the `Download ZIP` button.
-
+and then click the
+- Click on the `Code` button on the GitHub page.
+- Click the `Download ZIP` button.
 - Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.
 - Place these extracted files inside the `user` folder of the Talon Home directory. You can find this folder by right-clicking the Talon icon in the taskbar (Windows) or clicking the Talon icon in the menu bar (Mac), clicking Scripting > Open ~/talon, and navigating to `user`.
 
