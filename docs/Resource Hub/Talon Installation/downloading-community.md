@@ -1,6 +1,6 @@
 # Downloading the Talon Community User File Set
 
-After installing Talon and a speech recognition engine, as described here you will need to download a user file set. This wiki discusses the Talon community user file set, so this page discusses  downloading that specific user file set.
+After installing Talon and a speech recognition engine, as described here you will need to download a user file set. This wiki discusses the Talon community user file set, so this page discusses downloading that specific user file set.
 
 This can be done using two different methods, zip and Git.
 
