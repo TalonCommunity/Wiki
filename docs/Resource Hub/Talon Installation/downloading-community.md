@@ -1,15 +1,12 @@
 # Downloading the Talon Community User File Set
 
-After installing Talon and a speech recognition engine, as described here
-you will need to download a user file set. This wiki is all about the Talon community user file set
-and so this page is about downloading that specific user file set.
+After installing Talon and a speech recognition engine, as described here you will need to download a user file set. This wiki discusses the Talon community user file set, so this page discusses  downloading that specific user file set.
 
-This can be done using two different methods, using zip and using git.
+This can be done using two different methods, zip and Git.
 
-The background to this choice is that if you use Talon for any period of time,
-you can expect the following:
+The background to this choice is that if you use Talon for any period of time, you can expect the following:
 
-- The community will update the `user file set` with bug fixes and new features, and you will want
+- The community will update the user file set with bug fixes and new features, and you will want
   to update your local copy of it.
 - You might make your own changes to some of these files.
 
@@ -31,23 +28,18 @@ Make a backup of the whole Talon user directory prior to replacing it with a fre
 
 :::
 
-### About `git`
+### About Git
 
-The benefit of `git`, is that it makes it easy to obtain the latest files without losing any changes you've made in the meantime.
-This is a benefit when using Talon longer term.
+The benefit of Git, is that it makes it easy to obtain the latest updates to community without losing any changes you've made in the meantime. This is a benefit when using Talon longer term.
 
-If you haven't already heard of `git`, you might find that this approach makes it a little harder to get started with Talon.
-`git` is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`.
+If you haven't already heard of Git, you might find that this approach makes it a little harder to get started with Talon.
+Git is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`.
 
-`git` is available as both a command line utility and as a GUI application.
-If you are not particularly comfortable usihellong a command terminal, you may prefer a GUI application such as [`GitHub Desktop`](https://docs.github.com/en/desktop/overview/about-github-desktop).
+Git is available as both a command line utility and as a GUI application. If you are not comfortable using the terminal, you may prefer a GUI application such as [`GitHub Desktop`](https://docs.github.com/en/desktop/overview/about-github-desktop).
 
 ### Summary
 
-If you are not particularly comfortable using a command terminal, and if you are just wanting to explore the suitability of Talon
-you may wish to use the simpler method of downloading `zip` files.
-
-You will always be able to switch to using `git` down the track.
+If you are not comfortable using Git, and if you are just wanting to explore the suitability of Talon you may wish to download a `zip` file. You will always be able to switch to using Git later.
 
 ---
 
@@ -58,37 +50,37 @@ You will always be able to switch to using `git` down the track.
 In this method, the zip file is downloaded from:
 https://github.com/talonhub/community
 
-Click on the `Code` button:
-<img src="/img/resource_hub/talonhub_community_github.png/"
+Click the Code button:
+<img src="/img/resource_hub/talonhub_community_github.png"
      alt="screenshot of the Talon hub community page on GitHub"
 />
 
 And download the zip file:
-<img src="/img/resource_hub/talonhub_community_download.png/"
+<img src="/img/resource_hub/talonhub_community_download.png"
      alt="screenshot of the GitHub code panel"
 />
 
-- Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.
+- Extract the files. If you don’t know how to extract zip files, a quick Google search for "extract zip files" may be helpful.
 - Place these extracted files inside the `user` folder of the Talon Home directory. You can find this folder by right-clicking the Talon icon in the taskbar (Windows) or clicking the Talon icon in the menu bar (Mac), clicking Scripting > Open ~/talon, and navigating to `user`.
 
 ### Installing Using Git
 
-If you wish to install `community` by using git, proceed as follows:
+If you wish to install `community` by using Git, proceed as follows:
 
 #### Linux & Mac
 
-1. Install [`git`](https://git-scm.com/)
+1. Install [Git](https://git-scm.com/)
 1. Open a terminal ([Mac](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) / [Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal))
 1. Paste the following into the terminal window then press Enter/Return:
 
 ```bash
 cd ~/.talon/user
-git clone https://github.com/talonhub/community community
+git clone https://github.com/talonhub/community
 ```
 
 #### Windows
 
-1. Install [`git`](https://git-scm.com/)
+1. Install [Git](https://git-scm.com/)
 2. Open a [command prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows)
 3. Paste the following into the command prompt window then press Enter:
 
