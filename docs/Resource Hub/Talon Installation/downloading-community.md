@@ -59,6 +59,7 @@ In this method, the zip file is downloaded from:
 https://github.com/talonhub/community
 
 and then click the
+
 - Click on the `Code` button on the GitHub page.
 - Click the `Download ZIP` button.
 - Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.
