@@ -40,7 +40,7 @@ If you haven't already heard of `git`, you might find that this approach makes i
 `git` is a very extensive tool, but you will only need to use it in a minimal way. Even still, there will be terms that you will come across such as `repository`, `branch` and `working directory`.
 
 `git` is available as both a command line utility and as a GUI application.
-If you are not particularly comfortable usihellong a command terminal, you may prefer a GUI application such as [`GitHub Desktop`](https://docs.github.com/en/desktop/overview/about-github-desktop).
+If you are not particularly comfortable using a command terminal, you may prefer a GUI application such as [`GitHub Desktop`](https://docs.github.com/en/desktop/overview/about-github-desktop).
 
 ### Summary
 
@@ -58,16 +58,8 @@ You will always be able to switch to using `git` down the track.
 In this method, the zip file is downloaded from:
 https://github.com/talonhub/community
 
-Click on the `Code` button:
-<img src="/img/resource_hub/talonhub_community_github.png/"
-     alt="screenshot of the Talon hub community page on GitHub"
-/>
-
-And download the zip file:
-<img src="/img/resource_hub/talonhub_community_download.png/"
-     alt="screenshot of the GitHub code panel"
-/>
-
+- Click on the `Code` button on the GitHub page.
+- Click the `Download ZIP` button.
 - Extract the files. If you don’t know how to extract zip files, a quick google search for "extract zip files" may be helpful.
 - Place these extracted files inside the `user` folder of the Talon Home directory. You can find this folder by right-clicking the Talon icon in the taskbar (Windows) or clicking the Talon icon in the menu bar (Mac), clicking Scripting > Open ~/talon, and navigating to `user`.
 
