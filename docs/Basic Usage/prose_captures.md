@@ -1,6 +1,6 @@
 # The `<user.prose>` and `<user.raw_prose>` Captures
 
-Community uses the `<user.prose>` and `<user.raw_prose>` capures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input like the formatter commands. These captures allow dictating words and use the following lists and captures to offer more functionality.
+Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input like the formatter commands. These captures allow dictating words and use the following lists and captures to offer more functionality.
 
 ## `{user.punctuation}`
 
@@ -24,7 +24,7 @@ The `<user.number_prose_prefixed>` capture allows inserting a number by saying `
 
 ## `<user.prose_percent>`
 
-The `<user.prose_percent>` capture allows inserting a number followed by a percent sign by dictating a number and then `sign`. For instance, saying `thirty five point nine percent` inserts "35.9%".
+The `<user.prose_percent>` capture allows inserting a number followed by a percent sign by dictating a number and then `percent`. For instance, saying `thirty five point nine percent` inserts "35.9%".
 
 ## `<user.prose_time>`
 
