@@ -42,10 +42,10 @@ The `<user.abbreviation>` capture allows inserting an abbreviation by saying `br
 
 The following prose modifiers are available in the `<user.prose>` capture and are available in dictation mode as commands.
 
-| Prose formatting options | Description                               |
-| ------------------------ | ----------------------------------------- |
-| `cap`                    | capitalize the next word                  |
-| `no cap` or `no caps`    | the next word is in lowercase             |
+| Prose formatting options | Description                                         |
+| ------------------------ | --------------------------------------------------- |
+| `cap`                    | capitalize the next word                            |
+| `no cap` or `no caps`    | the next word is in lowercase                       |
 | `no space`               | the next word is inserted without a space before it |
 
 For instance, saying `this is an cap example of no space formatting` inserts "This is an Example offormatting".
