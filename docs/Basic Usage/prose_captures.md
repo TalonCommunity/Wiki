@@ -71,7 +71,7 @@ You can insert information about your contacts such as name and email. This is d
 
 ## Pasting
 
-You can say `clip clip` to insert the contents of the clipboard. For instance, if you have copied the text "hello there", saying `he sent me the message clip clip period` inserts "he sent me the message hello there.".
+You can say `clip clip` to insert the contents of the clipboard. For instance, if you have copied the text "hello there", saying `he sent me the message clip clip period` inserts "he sent me the message hello there."
 
 ## Notes for Technical Users
 
