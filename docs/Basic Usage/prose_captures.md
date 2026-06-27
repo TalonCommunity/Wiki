@@ -8,7 +8,7 @@ You can see the spoken forms for inserting punctuation characters by saying `hel
 
 ## Spelling
 
-You can see the spoken forms for letters by saying `help alphabet`. You can insert lowercase letters by saying `spell <user.letters>`, such as by saying `spell abc` to insert "abc". You can insert capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
+You can see the spoken forms for letters by saying `help alphabet`. You can insert lowercase letters by saying `spell <user.letters>`, such as by saying `spell air bat cap` to insert "abc". You can insert capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
 
 ## Numbers
 
