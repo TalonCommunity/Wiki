@@ -1,6 +1,6 @@
 # Dictating prose
 
-You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words, and the following features are available for inserting symbols. Note that some of the features described here are only available when you can dictate prose.
+You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and use the following features for inserting symbols.
 
 ## Punctuation
 
@@ -40,7 +40,7 @@ You can insert an abbreviation by saying `brief {user.abbreviation}`. For instan
 
 ## Modifiers
 
-You can use the following prose modifiers for manual formatting formatting.
+You can use the following prose modifiers for manual formatting.
 
 | Prose formatting options | Description                                         |
 | ------------------------ | --------------------------------------------------- |
