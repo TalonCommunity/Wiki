@@ -1,4 +1,4 @@
-# Dictating prose
+# Dictating Prose
 
 You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and use the following features for inserting characters.
 
