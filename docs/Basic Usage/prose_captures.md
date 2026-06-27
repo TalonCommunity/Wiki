@@ -74,22 +74,22 @@ You can insert information about your contacts such as name and email. This is d
 You can say `clip clip` to insert the contents of the clipboard. For instance, if you have copied the text "hello there", saying `he sent me the message clip clip period` inserts "he sent me the message hello there.".
 
 ## Notes for Technical Users
+
 Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input. These captures allow dictating words and use the following lists and captures to offer more functionality.
 
-| Capture/List | Purpose      |
-| --------------------------- |
-| `{user.punctuation}` | punctuation characters |
-| `<user.prose_spell>` | spelling with lowercase letters |
-| `<user.prose_ship>` | spelling with upper case letters |
-| `<user.number_prose_prefixed>` | numbers |
-| `<user.prose_percent>` | percentages |
-| `<user.prose_time>` | times of day |
-| `<user.prose_currency>` | currency amounts |
-| `<user.abbreviation>` | abbreviations |
-| `<user.prose_modifier>` | prose modifiers |
-| `{user.prose_snippets}` | miscellaneous prose snippets |
-| `<user.prose_contact>` | contact information |
-| `<user.prose_clipboard>` | the clipboard contents |
-
+| Capture/List                   | Purpose                          |
+| ------------------------------ | -------------------------------- |
+| `{user.punctuation}`           | punctuation characters           |
+| `<user.prose_spell>`           | spelling with lowercase letters  |
+| `<user.prose_ship>`            | spelling with upper case letters |
+| `<user.number_prose_prefixed>` | numbers                          |
+| `<user.prose_percent>`         | percentages                      |
+| `<user.prose_time>`            | times of day                     |
+| `<user.prose_currency>`        | currency amounts                 |
+| `<user.abbreviation>`          | abbreviations                    |
+| `<user.prose_modifier>`        | prose modifiers                  |
+| `{user.prose_snippets}`        | miscellaneous prose snippets     |
+| `<user.prose_contact>`         | contact information              |
+| `<user.prose_clipboard>`       | the clipboard contents           |
 
 Note that the prose modifiers are available in the `<user.prose>` capture and are available in dictation mode as commands.
