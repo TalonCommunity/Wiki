@@ -1,10 +1,10 @@
 # Dictating prose
 
-You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and use the following features for inserting symbols.
+You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and use the following features for inserting characters.
 
 ## Punctuation
 
-You can insert punctuation symbols using the spoken forms you can see by saying `help punctuation`.
+You can insert punctuation characters using the spoken forms you can see by saying `help punctuation`.
 
 ## Spelling
 
@@ -78,7 +78,7 @@ Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the use
 
 | Capture/List | Purpose      |
 | --------------------------- |
-| `{user.punctuation}` | punctuation symbols |
+| `{user.punctuation}` | punctuation characters |
 | `<user.prose_spell>` | spelling with lowercase letters |
 | `<user.prose_ship>` | spelling with upper case letters |
 | `<user.number_prose_prefixed>` | numbers |
