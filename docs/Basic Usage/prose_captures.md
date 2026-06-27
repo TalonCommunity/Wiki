@@ -4,11 +4,11 @@ You can dictate prose in dictation mode and when using commands that take prose 
 
 ## Punctuation
 
-You can insert punctuation characters using the spoken forms you can see by saying `help punctuation`.
+You can see the spoken forms for inserting punctuation characters by saying `help punctuation`.
 
 ## Spelling
 
-You can see the spoken forms for letters by saying `help alphabet`. With base Community, you can insert lowercase letters by saying `spell <user.letters>`, such as by saying `spell abc` to insert "abc". You can insert capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
+You can see the spoken forms for letters by saying `help alphabet`. You can insert lowercase letters by saying `spell <user.letters>`, such as by saying `spell abc` to insert "abc". You can insert capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
 
 ## Numbers
 
