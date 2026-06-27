@@ -1,6 +1,6 @@
 # Dictating prose
 
-You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and the following features are available for inserting symbols. Note that some of the features described here are only available when you can dictate prose.
+You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words, and the following features are available for inserting symbols. Note that some of the features described here are only available when you can dictate prose.
 
 ## Punctuation
 
