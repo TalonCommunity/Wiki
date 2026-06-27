@@ -1,18 +1,18 @@
-# The `<user.prose>` and `<user.raw_prose>` Captures
+# Dictating prose
 
-Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input like the formatter commands. These captures allow dictating words and use the following lists and captures to offer more functionality.
+You can dictate prose in dictation mode and when using commands that take prose input like the formatter commands. This lets you dictate words and the following features are available for inserting symbols. Note that some of the features described here are only available when you can dictate prose.
 
-## `{user.punctuation}`
+## Punctuation
 
-The `{user.punctuation}` list allows inserting punctuation symbols. You can see the spoken forms for the symbols by saying `help punctuation`.
+You can insert punctuation symbols using the spoken forms you can see by saying `help punctuation`.
 
-## `<user.prose_spell>` and `<user.prose_ship>`
+## Spelling
 
-The `<user.prose_spell>` capture allows inserting letters by saying `spell <user.letters>`. You can see the spoken forms for letters by saying `help alphabet`. With base Community, you could say `spell abc` to insert "abc". The `<user.prose_ship>` capture allows inserting capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
+You can see the spoken forms for letters by saying `help alphabet`. With base Community, you can insert lowercase letters by saying `spell <user.letters>`, such as by saying `spell abc` to insert "abc". You can insert capital letters by saying `ship <user.letters>`, such as by saying `ship air bat cap` to insert "ABC".
 
-## `<user.number_prose_prefixed>`
+## Numbers
 
-The `<user.number_prose_prefixed>` capture allows inserting a number by saying `numb` or `numeral` and then a number. Saying `numb five` inserts "5". The following table has more examples.
+You can insert a number by saying `numb` or `numeral` and then a number. Saying `numb five` inserts "5". The following table has more examples.
 
 | Spoken Form                  | Inserted Text |
 | ---------------------------- | ------------- |
@@ -72,3 +72,14 @@ The `<user.prose_contact>` capture supports inserting information about your con
 ## `<user.prose_clipboard>`
 
 The `<user.prose_clipboard>` capture lets you say `clip clip` to insert the contents of the clipboard. For instance, if you have copied the text "hello there", saying `he sent me the message clip clip period` inserts "he sent me the message hello there.".
+
+## Notes for Technical Users
+Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the user dictate prose. `<user.raw_prose>` is used by dictation mode, and the `<user.prose>` capture is used by commands that take prose input. These captures allow dictating words and use the following lists and captures to offer more functionality.
+
+| Capture/List | Purpose      |
+| --------------------------- |
+| `{user.punctuation}` | punctuation symbols |
+| `<user.prose_spell>` | spelling with lowercase letters |
+| `<user.prose_ship>` | spelling with upper case letters |
+| `<user.number_prose_prefixed>` | numbers |
+
