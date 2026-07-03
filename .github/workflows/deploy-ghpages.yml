@@ -29,6 +29,8 @@ jobs:
 
       - name: Build Docusaurus
         run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create CNAME file
         run: echo "talon.wiki" > ./build/CNAME
