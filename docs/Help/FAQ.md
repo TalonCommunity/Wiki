@@ -12,8 +12,6 @@ Checkout the [common commands](../Basic%20Usage/basic_usage) to get started usin
 
 Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout our documentation for [Community's Programming Support](../Voice%20Coding/voice-coding-overview.md) for more information on how to use different language modes.
 
-
-
 ### What hardware should I have?
 
 Check out the [hardware](../Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
