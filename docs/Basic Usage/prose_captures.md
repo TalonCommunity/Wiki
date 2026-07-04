@@ -8,11 +8,11 @@ You can see the spoken forms for inserting punctuation characters by saying `hel
 
 ## Spelling
 
-You can see the spoken forms for letters by saying `help alphabet`. You can insert lowercase letters by saying `spell` followed by letters' spoken forms. For example, `spell air bat cap` inserts "abc". You can insert capital letters by saying `ship` — for example, `ship air bat cap` inserts "ABC".
+You can see the spoken forms for letters by saying `help alphabet`. You can insert lowercase letters by saying `spell` followed by the spoken forms of letters. For example, `spell air bat cap` inserts "abc". Similarly, you can insert capital letters using `ship` — for example, `ship air bat cap` inserts "ABC".
 
 ## Numbers
 
-You can insert a number by saying `numb` or `numeral` then the number. For example, saying `numb five` inserts "5". You can also include "negative", "point", "dot", "comma" or "colon" as in the additional examples below.
+You can insert a number by saying `numb` or `numeral` followed by the number. For example, saying `numb five` inserts "5". You can also include `negative`, `point`, `dot`, `comma` or `colon` as in the additional examples below.
 
 | Spoken Form                  | Inserted Text |
 | ---------------------------- | ------------- |
@@ -28,11 +28,11 @@ You can insert a number followed by a percent sign by dictating the number then 
 
 ## Times of Day
 
-You can insert times of day. For instance, saying `twelve thirty` inserts "12:30". Saying `two P M` inserts "2pm"; saying `five thirty am` inserts "5:30am".
+You can insert times of day. For instance, saying `twelve thirty` inserts "12:30". Saying `two P M` inserts "2pm"; saying `five thirty A M` inserts "5:30am".
 
 ## Currency
 
-You can insert a monetary amount by saying a number followed by a currency, such as `twelve dollars` to insert "$12". Saying a number after the currency puts it after a decimal point, for example saying `twelve dollars fifty` inserts "$12.50". You can optionally say `and` after the currency and/or `cents` or `pence` at the end, for example `twelve dollars and fifty cents` inserts "$12.50".
+You can insert a monetary amount by saying a number followed by a currency name, such as `twelve dollars` to insert "$12". Saying a number after the currency puts it after a decimal point, for example saying `twelve dollars fifty` inserts "$12.50". You can optionally say `and` after the currency and/or `cents` or `pence` at the end, for example `twelve dollars and fifty cents` inserts "$12.50".
 
 ## Abbreviations
 
@@ -57,8 +57,8 @@ You can use the following miscellaneous prose snippets when dictating prose.
 | Spoken Form     | Text/Keystroke             |
 | --------------- | -------------------------- |
 | `spacebar`      | presses the space bar      |
-| `new line`      | presses enter              |
-| `new paragraph` | presses enter twice        |
+| `new line`      | presses Enter              |
+| `new paragraph` | presses Enter twice        |
 | `open quote`    | inserts a space and then " |
 | `close quote`   | inserts "                  |
 | `smiley`        | inserts ':-)'              |
@@ -81,7 +81,7 @@ Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the use
 | ------------------------------ | -------------------------------- |
 | `{user.punctuation}`           | punctuation characters           |
 | `<user.prose_spell>`           | spelling with lowercase letters  |
-| `<user.prose_ship>`            | spelling with upper case letters |
+| `<user.prose_ship>`            | spelling with uppercase letters  |
 | `<user.number_prose_prefixed>` | numbers                          |
 | `<user.prose_percent>`         | percentages                      |
 | `<user.prose_time>`            | times of day                     |
@@ -90,6 +90,6 @@ Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the use
 | `<user.prose_modifier>`        | prose modifiers                  |
 | `{user.prose_snippets}`        | miscellaneous prose snippets     |
 | `<user.prose_contact>`         | contact information              |
-| `<user.prose_clipboard>`       | the clipboard contents           |
+| `<user.prose_clipboard>`       | clipboard contents               |
 
-Note that the prose modifiers are available in the `<user.prose>` capture and are available in dictation mode as commands.
+Note that the prose modifiers are available in the `<user.prose>` capture and in dictation mode as commands.
