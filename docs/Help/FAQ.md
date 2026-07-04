@@ -10,7 +10,9 @@ Checkout the [common commands](../Basic%20Usage/basic_usage) to get started usin
 
 ### How can I code in different languages with Talon
 
-Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout the section on [Programming Languages](https://github.com/talonhub/community#programming-languages) in the Community Talon user file set README for more information on how to use different language modes.
+Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Checkout our documentation for [Community's Programming Support](../Voice%20Coding/voice-coding-overview.md) for more information on how to use different language modes.
+
+
 
 ### What hardware should I have?
 
