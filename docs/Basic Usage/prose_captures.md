@@ -92,4 +92,4 @@ Community uses the `<user.prose>` and `<user.raw_prose>` captures to let the use
 | `<user.prose_contact>`         | contact information             |
 | `<user.prose_clipboard>`       | clipboard contents              |
 
-Note that the prose modifiers are available in the `<user.prose>` capture and in dictation mode as commands.
+Note that the prose modifiers are implemented twice — in the `<user.prose>` capture and as commands in dictation mode.
