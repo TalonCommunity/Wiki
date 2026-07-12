@@ -114,8 +114,8 @@ Dictation mode provides some convenience commands for editing and navigating tex
 | `go down <number_small> (line or lines)`                | move the cursor down the specified number of lines                                   |
 | `go left <number_small> (word or words)`                | move the cursor left the specified number of words                                   |
 | `go right <number_small> (word or words)`               | move the cursor right the specified number of words                                  |
-| `go left <number_small> (character or characters)` | move the cursor left the specified number of characters                                   |
-| `go right <number_small> (character or characters)` | move the cursor right the specified number of characters                                   |
+| `go left <number_small> (character or characters)`      | move the cursor left the specified number of characters                              |
+| `go right <number_small> (character or characters)`     | move the cursor right the specified number of characters                             |
 | `select left <number_small> (word or words)`            | select the specified number of words to the left                                     |
 | `select right <number_small> (word or words)`           | select the specified number of words to the right                                    |
 | `select left <number_small> (character or characters)`  | select the specified number of characters to the left                                |
