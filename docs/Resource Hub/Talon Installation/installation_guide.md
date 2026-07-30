@@ -98,7 +98,7 @@ the [Talon user directory](/docs/Resource%20Hub/terminology).
 :::
 
 This can be done one of two ways - either as a `zip` file or by using `git`.
-Considerations in choosing between the two methods, as well as instructions, are described [here](../Talon%20Installation/downloading-community).
+Considerations in choosing between the two methods, as well as instructions, are described [here](./downloading-community).
 
 ## 5: Test your Talon setup
 
