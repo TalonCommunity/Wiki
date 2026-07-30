@@ -33,7 +33,7 @@ export default function InfoWrapper(props: Props): ReactNode {
     body = (
       <span>
         This section is only relevant to users who have installed the
-        <a href="Resource Hub/Talon Installation/downloading-community">
+        <a href="/Resource%20Hub/Talon%20Installation/downloading-community">
           Talon community user file set
         </a>
       </span>
