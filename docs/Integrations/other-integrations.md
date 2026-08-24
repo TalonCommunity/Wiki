@@ -26,7 +26,7 @@
 
 ## Head tracking
 
-| Software                                                                                   | Cost | Platform | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------ | ---- | -------- | ------------------------------------------------------------------------------------------------------------ |
-| [Sensepilot](https://sensepilot.tech)                                                      | Paid | Windows  | Control your mouse using head movements and/ or facial expressions. Works via your standard computer camera. |
-| [Head pointer](https://support.apple.com/guide/mac-help/use-head-pointer-mchlb2d4782b/mac) | Free | Mac      | Control your mouse using head movements and facial expressions. Uses a built-in or attached camera.          |
+| Software                                                                                   | Cost | Platform | Description                                                                                                 |
+| ------------------------------------------------------------------------------------------ | ---- | -------- | ----------------------------------------------------------------------------------------------------------- |
+| [Sensepilot](https://sensepilot.tech)                                                      | Paid | Windows  | Control your mouse using head movements and/or facial expressions. Works via your standard computer camera. |
+| [Head pointer](https://support.apple.com/guide/mac-help/use-head-pointer-mchlb2d4782b/mac) | Free | Mac      | Control your mouse using head movements and facial expressions. Uses a built-in or attached camera.         |
