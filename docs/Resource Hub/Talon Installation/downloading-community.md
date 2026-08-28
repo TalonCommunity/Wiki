@@ -7,6 +7,7 @@ There are two file options for downloading the user file set: a ZIP file and a G
 The difference between the two options relates to how you want to update and personalize Talon.
 
 Possible updates you could make include:
+
 - Updates the community makes to the user file set to fix bugs and to add new features.
 - Changes you might want to make to these files.
 
