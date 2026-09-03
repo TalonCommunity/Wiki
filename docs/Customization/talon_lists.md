@@ -8,6 +8,10 @@ sidebar_position: 3
 
 A `.talon-list` doesn't require a `:` if the key is the same as the value. The right hand side of the key value pair is a string with or without quotes. It uses the same parser as `.talon` files and the syntax is a strict subset of the `.talon` file syntax, except for the ability to skip the colon and just have a word by itself. You can use tags and scopes in `.talon-list` files just like normal `.talon` files. In the context header, you should declare the name by which the list will be referred to in voice commands or Python by typing `list:` followed by the name within the `user` namespace. Everything declared in a particular `.talon-list` ends up in a single list.
 
+:::warning
+Do not give a `.talon-list` file the same basename as a `.talon` file in the same directory. Talon keys loaded files by their path without the extension, so `foo.talon` shadows `foo.talon-list`: the list file is skipped, the list registers with zero entries, and any capture referencing it silently stops matching. There is no warning — the only trace is `DEBUG [ ]` instead of `DEBUG [+]` for the skipped file in the Talon log. Name the two files differently, for example `insert_foo.talon` alongside `foo.talon-list`.
+:::
+
 The following example shows a `.talon-list` file that defines a few special characters. Note how the string doesn't need to be wrapped in quotations and can either be just itself or a mapping to a different string.
 
 ```talon
