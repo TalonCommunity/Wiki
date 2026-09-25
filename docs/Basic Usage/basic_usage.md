@@ -245,8 +245,8 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `touch`      | single click                           |
 | `duke`       | double click                           |
 | `trip click` | triple click                           |
-| `drag`       | hold down the mouse. Repeat to release |
-| `drag end`       | stop holding the mouse down |
+| `drag`       | hold the left mouse button |
+| `drag end`       | stop holding the left mouse button |
 | `righty`     | right click                            |
 
 ### Mouse Grid
