@@ -240,14 +240,14 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 
 ### Clicking
 
-| Command      | Description                            |
-| ------------ | -------------------------------------- |
-| `touch`      | single click                           |
-| `duke`       | double click                           |
-| `trip click` | triple click                           |
-| `drag`       | hold down the left mouse button |
-| `drag end`       | stop holding down the left mouse button |
-| `righty`     | right click                            |
+| Command      | Description                             |
+| ------------ | --------------------------------------- |
+| `touch`      | single click                            |
+| `duke`       | double click                            |
+| `trip click` | triple click                            |
+| `drag`       | hold down the left mouse button         |
+| `drag end`   | stop holding down the left mouse button |
+| `righty`     | right click                             |
 
 ### Mouse Grid
 
