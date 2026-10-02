@@ -8,7 +8,7 @@ Talon has three basic modes by default:
 
 - In **command mode**, your speech will be interpreted as commands by default.
 - In **dictation mode**, your speech will be transcribed as plain text by default (although with some commands, like "comma" etc. for punctuation), similar to traditional speech recognition systems.
-- In **mixed mode**, anything you say that is not a command or chain of commands will be transcribed as plaintext, just like in dictation mode, and you can also use commands from command mode.
+- In **mixed mode**, anything you say that is not a command or chain of commands will be transcribed as plain text, just like in dictation mode, and you can also use commands from command mode.
 - In **sleep mode**, Talon will do nothing until it hears a commands that wakes it up.
 
 To keep track of what mode you are in with a visual icon, enable the [mode indicator feature](https://github.com/talonhub/community/tree/main/plugin/mode_indicator) in the community repository.
