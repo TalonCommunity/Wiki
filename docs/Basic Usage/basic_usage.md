@@ -19,7 +19,7 @@ To keep track of what mode you are in with a visual icon, enable the [mode indic
 | `go to sleep`    | Disable speech recognition. |
 | `dictation mode` | Switch to dictation mode.   |
 | `command mode`   | Switch to command mode.     |
-| `mixed mode` | Switch to mixed mode. |
+| `mixed mode`     | Switch to mixed mode.       |
 
 ## Help Commands
 
