@@ -219,7 +219,7 @@ These commands will open up a CSV or [Talon list](Customization/talon_lists.md) 
 | `customize words to replace` | remap or reformat words that Talon will recognize |
 | `customize alphabet`         | change the default Talon alphabet                 |
 | `customize websites`         | add websites that can be opened with Talon        |
-| `customize symbols`          | change the spoken forms for symbols. The first column has the symbol. The second column has the mode that line applies to, such as "command", "dictation", or "both" to apply to both modes. The third column has what you say to dictate the symbol. You can provide multiple options separated by commas |
+| `customize symbols`          | customize how you dictate symbols. The first column has the symbol. The second column has the mode that line applies to, such as "command", "dictation", or "both" to apply to both modes. The third column has what you say to dictate the symbol. You can provide multiple options separated by commas |
 
 ## Working with applications
 
