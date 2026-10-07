@@ -327,6 +327,9 @@ Defined commands are available in supported web browsers and some other applicat
 
 Community has many application specific commands. Commands are available for some web applications when they are detected. Community relies on the browser.host value to detect which web application you are using. You need to do some configuration for this to work on some browsers. See the setup instructions in [the Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) for more details if you want this. 
 
+### Rango
+
+[Rango](https://github.com/david-tejada/rango) is a browser extension with a corresponding Talon voice command set for stronger browser control including clicking webpage ui elements.
 
 ## Media and Volume Control
 
