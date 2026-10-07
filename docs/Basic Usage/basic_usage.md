@@ -282,3 +282,6 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 | `play next`     | press the <kbd>next</kbd> key |
 | `play previous` | press the <kbd>prev</kbd> key |
 | `media play`    | play or pause media           |
+
+## Where Do I Go From Here?
+[See the Frequently Asked Questions page for more resources](../help/FAQ.md).
