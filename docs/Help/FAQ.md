@@ -18,6 +18,9 @@ The wiki discusses how to customize Talon's behavior using Talonscript and Pytho
 
 To understand good practices, consider looking at [Community's contributing guidelines](https://github.com/talonhub/community/blob/main/CONTRIBUTING.md) and [Community's more extensive practices document](https://github.com/talonhub/community/blob/main/PRACTICES.md). [Community's source code](https://github.com/talonhub/community) can itself serve as a useful example.
 
+### Where can I get helpful Talon extensions and integrations?
+[The integrations section of the wiki](https://talon.wiki/Integrations/essential-tools) describes useful Talon extensions and integrations. [The Talon user file set list](https://talon.wiki/Integrations/talon_user_file_sets) provides a long list of useful extensions.
+
 ### What hardware should I have?
 
 Check out the [hardware](../Resource%20Hub/Hardware/hardware.md) page for microphone and eye tracker recommendations.
