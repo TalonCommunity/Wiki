@@ -8,9 +8,19 @@ sidebar_position: 2
 
 Checkout the [common commands](../Basic%20Usage/basic_usage) to get started using Talon.
 
-### How can I code in different languages with Talon
+### How can I code in different languages with Talon?
 
 Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Check out our documentation for [Community's Programming Support](../Voice%20Coding/voice-coding-overview.md) for more information on how to use different language modes.
+
+### How do I write code to customize Talon?
+
+The wiki discusses how to customize Talon's behavior using Talonscript and Python [in the customization section](../Customization/basic_customization.md). For more advanced customization, [see our overview of the Talon framework](../Customization/Talon%20Framework/talon-framework-overview.md). [Talon's official documentation](https://talonvoice.com/docs/reference/talon.html) also includes [the python API](https://talonvoice.com/docs/reference/python.html) and [how to define and override behavior](https://talonvoice.com/docs/reference/guide.extending.html).
+
+To understand good practices, consider looking at [Community's contributing guidelines](https://github.com/talonhub/community/blob/main/CONTRIBUTING.md) and [Community's more extensive practices document](https://github.com/talonhub/community/blob/main/PRACTICES.md). Consider looking at [Community's source code](https://github.com/talonhub/community) for examples.
+
+### Where can I get helpful Talon extensions and integrations?
+
+[The integrations section of the wiki](../Integrations/essential-tools.md) describes useful Talon extensions and integrations including for mouse and browser control. [The Talon user file set list](../Integrations/talon_user_file_sets.md) provides a long list of useful extensions. You can use [the Talon repository explorer](/explorer) to explore the Talon extensions posted on GitHub, but you should review the code of any extension you find there to make sure it is safe before using it.
 
 ### What hardware should I have?
 
@@ -62,6 +72,8 @@ The [Speech recognition - Troubleshooting](../Resource%20Hub/Speech%20Recognitio
 Talon should recover from most errors itself, but if it crashes please report it in the Talon Slack with the output log.
 
 ### Eye tracking
+
+See our documentation on using the [Tobii5 Eye Tracker](../Resource%20Hub/Hardware/tobii_5.md) or our documentation on using the [Tobii4c Eye Tracker](../Resource%20Hub/Hardware/tobii_4c.md) for more information on eye tracking.
 
 <details>
 <summary role="button">Windows</summary>
