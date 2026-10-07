@@ -272,19 +272,19 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 
 These commands require activating the `user.mouse_cursor_commands_enable` tag (see Community settings.talon).
 
-## Browser Commands
+## Web Browser Commands
 
 Not all of these commands are implemented for every supported browser.
 
 | Command | Description |
 |---|---|
-| `go page` | Focus the browser page |
+| `go page` | Focus the browser page* |
 | `go home` | Go to your homepage |
 | `go private` | Open a private browsing window |
 | `bookmark it` | Create a bookmark for the current page |
 | `bookmark tabs` | Bookmark the open browser tabs |
 | `refresh it` | Refresh the page |
-| `refresh it hard` | Refresh the page harder |
+| `refresh it hard` | Hard refresh the page |
 | `bookmark show` | Open your bookmarks |
 | `bookmark bar` | Toggle the bookmark bar |
 | `downloads show` | Open downloads |
@@ -295,7 +295,7 @@ Not all of these commands are implemented for every supported browser.
 
 ### Address Commands
 
-The address commands are available in supported web browsers and some other applications such as windows explorer and macOS finder.
+The address commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
 
 | Command | Description |
 |---|---|
@@ -304,20 +304,20 @@ The address commands are available in supported web browsers and some other appl
 
 ### Navigation Commands
 
-The address commands are available in supported web browsers and some other applications such as windows explorer and macOS finder.
+The navigation commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
 
 | Command | Description |
 |---|---|
 | `go back` | Go back to the previous page |
-| `go forward` | Return to the page he went back from |
+| `go forward` | Return to the page that you went back from |
 
 ### Find Commands
 
-Defined commands are available in supported web browsers and some other applications supporting text searching. 
+The find commands are available in supported web browsers and some other applications supporting text searching. 
 
-| Command Spoken Form | Description |
+| Command | Description |
 |---|---|
-| `hunt this` | open search |
+| `hunt this` | open text search |
 | `hunt this paste` | search for the copied text |
 | `hunt this (text to search for)` | search for the dictated text |
 | `hunt next` | go to the next search result |
