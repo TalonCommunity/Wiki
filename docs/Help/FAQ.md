@@ -72,6 +72,8 @@ Talon should recover from most errors itself, but if it crashes please report it
 
 ### Eye tracking
 
+See our documentation on using the [Tobii5 Eye Tracker](../Resource%20Hub/Hardware/tobii_5.md) or our documentation on using the [Tobii4c Eye Tracker](../Resource%20Hub/Hardware/tobii_4c.md) for more information on eye tracking.
+
 <details>
 <summary role="button">Windows</summary>
 #### Eye tracker option is disabled in the Talon menu
