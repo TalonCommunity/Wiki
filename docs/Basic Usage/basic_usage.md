@@ -315,13 +315,13 @@ The navigation commands are available in supported web browsers and some other a
 
 The find commands are available in supported web browsers and some other applications supporting text searching.
 
-| Command                          | Description                      |
-| -------------------------------- | -------------------------------- |
-| `hunt this`                      | open text search                 |
-| `hunt this paste`                | search for the text in the clipboard       |
-| `hunt this (text to search for)` | search for the dictated text     |
-| `hunt next`                      | go to the next search result     |
-| `hunt previous`                  | go to the previous search result |
+| Command                          | Description                          |
+| -------------------------------- | ------------------------------------ |
+| `hunt this`                      | open text search                     |
+| `hunt this paste`                | search for the text in the clipboard |
+| `hunt this (text to search for)` | search for the dictated text         |
+| `hunt next`                      | go to the next search result         |
+| `hunt previous`                  | go to the previous search result     |
 
 ### Detecting Web Applications
 
