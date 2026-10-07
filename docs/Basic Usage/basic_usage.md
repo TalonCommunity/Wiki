@@ -318,7 +318,7 @@ The find commands are available in supported web browsers and some other applica
 | Command                          | Description                      |
 | -------------------------------- | -------------------------------- |
 | `hunt this`                      | open text search                 |
-| `hunt this paste`                | search for the copied text       |
+| `hunt this paste`                | search for the text in the clipboard       |
 | `hunt this (text to search for)` | search for the dictated text     |
 | `hunt next`                      | go to the next search result     |
 | `hunt previous`                  | go to the previous search result |
