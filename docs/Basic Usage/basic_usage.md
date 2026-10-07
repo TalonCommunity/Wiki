@@ -283,15 +283,15 @@ Not all of these commands are implemented for every supported browser.
 | `go private` | Open a private browsing window |
 | `bookmark it` | Create a bookmark for the current page |
 | `bookmark tabs` | Bookmark the open browser tabs |
-| `(refresh \| reload) it` | Refresh the page |
-| `(refresh \| reload) it hard` | Refresh the page harder |
+| `refresh it` | Refresh the page |
+| `refresh it hard` | Refresh the page harder |
 | `bookmark show` | Open your bookmarks |
-| `bookmark bar [show]` | Toggle the bookmark bar |
+| `bookmark bar` | Toggle the bookmark bar |
 | `downloads show` | Open downloads |
 | `extensions show` | Open extensions |
 | `history show` | Open browsing history |
 | `cache show` | Open the interface for clearing your browser cache |
-| `dev tools [show]` | Open developer tools |
+| `dev tools` | Open developer tools |
 
 ## Media and Volume Control
 
