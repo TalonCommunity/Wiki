@@ -295,7 +295,7 @@ Not all of these commands are implemented for every supported browser.
 
 ### Address Commands
 
-The address commands are available and supported web browsers and some other applications such as windows explorer and macOS finder.
+The address commands are available in supported web browsers and some other applications such as windows explorer and macOS finder.
 
 | Command | Description |
 |---|---|
@@ -304,7 +304,7 @@ The address commands are available and supported web browsers and some other app
 
 ### Navigation Commands
 
-The address commands are available and supported web browsers and some other applications such as windows explorer and macOS finder.
+The address commands are available in supported web browsers and some other applications such as windows explorer and macOS finder.
 
 | Command | Description |
 |---|---|
@@ -313,7 +313,15 @@ The address commands are available and supported web browsers and some other app
 
 ### Find Commands
 
+Defined commands are available in supported web browsers and some other applications supporting text searching. 
 
+| Command Spoken Form | Description |
+|---|---|
+| `hunt this` | open search |
+| `hunt this paste` | search for the copied text |
+| `hunt this (text to search for)` | search for the dictated text |
+| `hunt next` | go to the next search result |
+| `hunt previous` | go to the previous search result |
 
 ## Media and Volume Control
 
