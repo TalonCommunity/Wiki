@@ -276,52 +276,52 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 
 Not all of these commands are implemented for every supported browser.
 
-| Command | Description |
-|---|---|
-| `go home` | Go to your homepage |
-| `go private` | Open a private browsing window |
-| `bookmark it` | Create a bookmark for the current page |
-| `bookmark tabs` | Bookmark the open browser tabs |
-| `refresh it` | Refresh the page |
-| `refresh it hard` | Hard refresh the page |
-| `bookmark show` | Open your bookmarks |
-| `bookmark bar` | Toggle the bookmark bar |
-| `downloads show` | Open downloads |
-| `extensions show` | Open extensions |
-| `history show` | Open browsing history |
-| `cache show` | Open the interface for clearing your browser cache |
-| `dev tools` | Open developer tools |
-| `go page` | Focus the current browser page |
+| Command           | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| `go home`         | Go to your homepage                                |
+| `go private`      | Open a private browsing window                     |
+| `bookmark it`     | Create a bookmark for the current page             |
+| `bookmark tabs`   | Bookmark the open browser tabs                     |
+| `refresh it`      | Refresh the page                                   |
+| `refresh it hard` | Hard refresh the page                              |
+| `bookmark show`   | Open your bookmarks                                |
+| `bookmark bar`    | Toggle the bookmark bar                            |
+| `downloads show`  | Open downloads                                     |
+| `extensions show` | Open extensions                                    |
+| `history show`    | Open browsing history                              |
+| `cache show`      | Open the interface for clearing your browser cache |
+| `dev tools`       | Open developer tools                               |
+| `go page`         | Focus the current browser page                     |
 
 ### Address Commands
 
 The address commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
 
-| Command | Description |
-|---|---|
-| `go address` | Focus the address bar |
-| `address copy` | Copy the address |
+| Command        | Description           |
+| -------------- | --------------------- |
+| `go address`   | Focus the address bar |
+| `address copy` | Copy the address      |
 
 ### Navigation Commands
 
 The navigation commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
 
-| Command | Description |
-|---|---|
-| `go back` | Go back to the previous page |
+| Command      | Description                                |
+| ------------ | ------------------------------------------ |
+| `go back`    | Go back to the previous page               |
 | `go forward` | Return to the page that you went back from |
 
 ### Find Commands
 
-The find commands are available in supported web browsers and some other applications supporting text searching. 
+The find commands are available in supported web browsers and some other applications supporting text searching.
 
-| Command | Description |
-|---|---|
-| `hunt this` | open text search |
-| `hunt this paste` | search for the copied text |
-| `hunt this (text to search for)` | search for the dictated text |
-| `hunt next` | go to the next search result |
-| `hunt previous` | go to the previous search result |
+| Command                          | Description                      |
+| -------------------------------- | -------------------------------- |
+| `hunt this`                      | open text search                 |
+| `hunt this paste`                | search for the copied text       |
+| `hunt this (text to search for)` | search for the dictated text     |
+| `hunt next`                      | go to the next search result     |
+| `hunt previous`                  | go to the previous search result |
 
 ### Detecting Web Applications
 
