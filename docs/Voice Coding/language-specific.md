@@ -16,7 +16,7 @@ This activates the commands `state true` and `state false` for inserting true an
 
 ## user.code_object_oriented
 
-This activates the commands `state self` for inserting the language equivalent of the keyword for referring to the "self" or "this" object and `self dot`, which does the equivalent of `state self` followed by inserting the object accessor operator (a dot in most languages). This tag also lets you dictate class names with the `<user.code_type>` capture by saying `class` followed by the class name, such as by saying `returns type class class name` in python to insert " -> ClassName". The user.code_class_formatter setting decides the formatter for the class types.
+This activates the commands `state self` for inserting the language equivalent of the keyword for referring to the "self" or "this" object and `self dot`, which does the equivalent of `state self` followed by inserting the object accessor operator (a dot in most languages). This tag also lets you dictate class names with the `<user.code_type>` capture by saying `class` followed by the class name, such as by saying `returns type class class name` with Python as the active language to insert " -> ClassName" or `is type class class name` to insert ": ClassName". The user.code_class_formatter setting decides how class names are formatted.
 
 ## user.code_functions_common
 
