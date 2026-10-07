@@ -293,6 +293,28 @@ Not all of these commands are implemented for every supported browser.
 | `cache show` | Open the interface for clearing your browser cache |
 | `dev tools` | Open developer tools |
 
+### Address Commands
+
+The address commands are available and supported web browsers and some other applications such as windows explorer and macOS finder.
+
+| Command | Description |
+|---|---|
+| `go address` | Focus the address bar |
+| `address copy` | Copy the address |
+
+### Navigation Commands
+
+The address commands are available and supported web browsers and some other applications such as windows explorer and macOS finder.
+
+| Command | Description |
+|---|---|
+| `go back` | Go back to the previous page |
+| `go forward` | Return to the page he went back from |
+
+### Find Commands
+
+
+
 ## Media and Volume Control
 
 | Command         | Description                   |
