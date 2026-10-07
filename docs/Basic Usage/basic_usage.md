@@ -272,6 +272,27 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 
 These commands require activating the `user.mouse_cursor_commands_enable` tag (see Community settings.talon).
 
+## Browser Commands
+
+Not all of these commands are implemented for every supported browser.
+
+| Command | Description |
+|---|---|
+| `go page` | Focus the browser page |
+| `go home` | Go to your homepage |
+| `go private` | Open a private browsing window |
+| `bookmark it` | Create a bookmark for the current page |
+| `bookmark tabs` | Bookmark the open browser tabs |
+| `(refresh \| reload) it` | Refresh the page |
+| `(refresh \| reload) it hard` | Refresh the page harder |
+| `bookmark show` | Open your bookmarks |
+| `bookmark bar [show]` | Toggle the bookmark bar |
+| `downloads show` | Open downloads |
+| `extensions show` | Open extensions |
+| `history show` | Open browsing history |
+| `cache show` | Open the interface for clearing your browser cache |
+| `dev tools [show]` | Open developer tools |
+
 ## Media and Volume Control
 
 | Command         | Description                   |
