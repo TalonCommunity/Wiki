@@ -14,11 +14,12 @@ Talon does not require special configuration for different programming languages
 
 ### How do I write code to customize Talon?
 
-The wiki discusses how to customize Talon's behavior using Talonscript and Python [in the customization section](../Customization/basic_customization.md). For more advanced customization, [see our overview of the Talon framework](../Customization/Talon%20Framework/talon-framework-overview.md). [Talon's official documentation](https://talonvoice.com/docs/reference/talon.html) also includes [the python API](https://talonvoice.com/docs/reference/python.html) and [how to define and override behavior](https://talonvoice.com/docs/reference/guide.extending.html). 
+The wiki discusses how to customize Talon's behavior using Talonscript and Python [in the customization section](../Customization/basic_customization.md). For more advanced customization, [see our overview of the Talon framework](../Customization/Talon%20Framework/talon-framework-overview.md). [Talon's official documentation](https://talonvoice.com/docs/reference/talon.html) also includes [the python API](https://talonvoice.com/docs/reference/python.html) and [how to define and override behavior](https://talonvoice.com/docs/reference/guide.extending.html).
 
 To understand good practices, consider looking at [Community's contributing guidelines](https://github.com/talonhub/community/blob/main/CONTRIBUTING.md) and [Community's more extensive practices document](https://github.com/talonhub/community/blob/main/PRACTICES.md). Consider looking at [Community's source code](https://github.com/talonhub/community) for examples.
 
 ### Where can I get helpful Talon extensions and integrations?
+
 [The integrations section of the wiki](../Integrations/essential-tools.md) describes useful Talon extensions and integrations including for mouse and browser control. [The Talon user file set list](../Integrations/talon_user_file_sets.md) provides a long list of useful extensions. You can use [the Talon repository explorer](/explorer) to explore the Talon extensions posted on GitHub, but you should review the code of any extension you find there to make sure it is safe before using it.
 
 ### What hardware should I have?

@@ -284,4 +284,5 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 | `media play`    | play or pause media           |
 
 ## Where Do I Go From Here?
+
 See the [Frequently Asked Questions page](../help/FAQ.md) for more resources.
