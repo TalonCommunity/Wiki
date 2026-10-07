@@ -325,7 +325,7 @@ The find commands are available in supported web browsers and some other applica
 
 ### Detecting Web Applications
 
-If you want Community to enable website specific commands, you may need to configure your browser so that Community can detect which website you are using. [The Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) explains how to configure your browser for this.
+If you want to use Community's website-specific commands, you may need to configure your browser so that Community can detect which site you are on. [The Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) explains how to do this.
 
 ### Rango
 
