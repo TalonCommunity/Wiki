@@ -285,4 +285,4 @@ These commands require activating the `user.mouse_cursor_commands_enable` tag (s
 
 ## Where Do I Go From Here?
 
-See the [Frequently Asked Questions page](../help/FAQ.md) for more resources.
+See the [Frequently Asked Questions page](/docs/Help/FAQ.md) for more resources.
