@@ -8,9 +8,15 @@ sidebar_position: 2
 
 Checkout the [common commands](../Basic%20Usage/basic_usage) to get started using Talon.
 
-### How can I code in different languages with Talon
+### How can I code in different languages with Talon?
 
 Talon does not require special configuration for different programming languages, but many users have per-language customizations to improve efficiency. Check out our documentation for [Community's Programming Support](../Voice%20Coding/voice-coding-overview.md) for more information on how to use different language modes.
+
+### How do I write code to customize Talon?
+
+The wiki discusses how to customize Talon's behavior using Talonscript and Python [in the customization section](https://talon.wiki/Customization/basic_customization). For more advanced customization, [see our overview of the Talon framework](https://talon.wiki/Customization/Talon%20Framework/talon-framework-overview). [Talon's official documentation](https://talonvoice.com/docs/reference/talon.html) also includes [the python API](https://talonvoice.com/docs/reference/python.html) and [how to define and override behavior](https://talonvoice.com/docs/reference/guide.extending.html). 
+
+To understand good practices, consider looking at [Community's contributing guidelines](https://github.com/talonhub/community/blob/main/CONTRIBUTING.md) and [Community's more extensive practices document](https://github.com/talonhub/community/blob/main/PRACTICES.md). [Community's source code](https://github.com/talonhub/community) can itself serve as a useful example.
 
 ### What hardware should I have?
 
