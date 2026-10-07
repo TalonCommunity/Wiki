@@ -278,7 +278,6 @@ Not all of these commands are implemented for every supported browser.
 
 | Command | Description |
 |---|---|
-| `go page` | Focus the browser page* |
 | `go home` | Go to your homepage |
 | `go private` | Open a private browsing window |
 | `bookmark it` | Create a bookmark for the current page |
@@ -292,6 +291,7 @@ Not all of these commands are implemented for every supported browser.
 | `history show` | Open browsing history |
 | `cache show` | Open the interface for clearing your browser cache |
 | `dev tools` | Open developer tools |
+| `go page` | Focus the current browser page |
 
 ### Address Commands
 
@@ -325,11 +325,11 @@ The find commands are available in supported web browsers and some other applica
 
 ### Detecting Web Applications
 
-Community has many application specific commands. Commands are available for some web applications when they are detected. Community relies on the browser.host value to detect which web application you are using. You need to do some configuration for this to work on some browsers. See the setup instructions in [the Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) for more details if you want this. 
+If you want Community to enable website specific commands, you may need to configure your browser so that Community can detect which website you are using. [The Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) explains how to configure your browser for this.
 
 ### Rango
 
-[Rango](https://github.com/david-tejada/rango) is a browser extension with a corresponding Talon voice command set for stronger browser control including clicking webpage ui elements.
+[Rango](https://github.com/david-tejada/rango) is a browser extension with a corresponding voice command set for stronger browser control including clicking webpage ui elements.
 
 ## Media and Volume Control
 
