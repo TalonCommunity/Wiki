@@ -17,11 +17,10 @@ mindmap
       Standard
       Talon+
     Supported Speech Recognition Engines
-      Talon
-        Conformer
-        Song
-        Hum
-        Conformer+Whisper
+      Talon Conformer
+      Talon Song
+      Talon Hum
+      Talon Conformer+Whisper
       Webspeech
       Dragon
     User File Sets
