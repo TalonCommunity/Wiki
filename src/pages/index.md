@@ -15,10 +15,14 @@ mindmap
   root{{"Talon Platform<br/>talonvoice.com"}}
     Talon Platform Type
       Standard
-      Beta
+      Talon+
     Supported Speech Recognition Engines
-      Talon Conformer Standard
-      Talon Conformer Beta
+      Talon
+        Conformer
+        Song
+        Hum
+        Conformer+Whisper
+      Webspeech
       Dragon
     User File Sets
       Talon Community
