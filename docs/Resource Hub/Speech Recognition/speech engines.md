@@ -24,7 +24,7 @@ The Professional version of Dragon for Windows is recommended (but not strictly 
 
 ### Dictation Engines for Additional Language Support
 
-As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, [Talon+](../../Help/beta_talon) supports the following options:
+As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, [Talon+](../../Help/talon_plus) supports the following options:
 
 | Engine    | Platform      | Description                                                                                                                                       | Requirements                                                         |
 | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
