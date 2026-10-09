@@ -56,7 +56,7 @@ Because list contents can only be replaced in their entirety, end users can have
 
 ### Dynamic Lists
 
-Dynamic lists are an advanced Talon feature that as of Talon 0.4 are currently **beta-only**. They are used for generating lists of items for voice commands at runtime. For example, you can use dynamic lists to create voice commands specific to the names of elements currently on the screen. Without dynamic lists you would otherwise have to poll and constantly update a normal Talon list. Dynamic lists can also return [selection lists](#selection-lists) to dynamically match voice commands to substrings.
+Dynamic lists are an advanced Talon feature. They are used for generating lists of items for voice commands at runtime. For example, you can use dynamic lists to create voice commands specific to the names of elements currently on the screen. Without dynamic lists you would otherwise have to poll and constantly update a normal Talon list. Dynamic lists can also return [selection lists](#selection-lists) to dynamically match voice commands to substrings.
 
 If you do not need the list to be constructed during the voice command, you should use a regular Talon list instead.
 
@@ -84,7 +84,7 @@ ctx.lists["user.dynamic"] = {"hello": "world"}
 
 ### Selection Lists
 
-Selection lists are another feature that as of Talon 0.4 are currently **beta-only**. They are used for matching substrings instead of a key value mapping like a normal talon list. For instance:
+Selection lists are another advanced feature. They are used for matching substrings instead of a key value mapping like a normal talon list. For instance:
 
 ```python
 ctx.selections["user.sample_selection"] = """

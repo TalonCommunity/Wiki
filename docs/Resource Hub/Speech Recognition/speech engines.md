@@ -12,7 +12,7 @@ Talon uses a speech recognition engine that translates voice audio to text. The 
 
 | Engine        | OS            | Description                                                                                                                                                                           | Installation                                                                                                                | Price                                                                                             |
 | ------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| W2L Conformer | Win/Mac/Linux | Best option for new users. Excellent accuracy and speed for both commands and dictation. Even lower latency for Talon beta users due to ongoing performance optimisations.            | Install from Talon tray icon                                                                                                | Free                                                                                              |
+| W2L Conformer | Win/Mac/Linux | Best option for new users. Excellent accuracy and speed for both commands and dictation. Even lower latency for Talon+ users due to ongoing performance optimisations.                | Install from Talon tray icon                                                                                                | Free                                                                                              |
 | W2L Gen2      | Win/Mac/Linux | Speech engine used prior to Conformer. Decent command accuracy. Dictation accuracy is lacking.                                                                                        | Install from Talon tray icon                                                                                                | Free                                                                                              |
 | Dragon        | Win           | Good accuracy for both commands and dictation. Has quirks which can't be fixed by us. Professional version is recommended over home version (home version doesn't have command mode). | [Buy and Install Dragon Professional](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html) | [$300-$500](https://www.nuance.com/dragon/business-solutions/dragon-professional-individual.html) |
 
@@ -24,7 +24,7 @@ The Professional version of Dragon for Windows is recommended (but not strictly 
 
 ### Dictation Engines for Additional Language Support
 
-As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, the [Talon Beta](../../Help/beta_talon) supports the following options:
+As of April 2024, Talon's main conformer model only supports English. If you need to dictate text in another language, [Talon+](/docs/Help/talon_plus.md) supports the following options:
 
 | Engine    | Platform      | Description                                                                                                                                       | Requirements                                                         |
 | --------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -35,6 +35,6 @@ As of April 2024, Talon's main conformer model only supports English. If you nee
 
 You cannot use Webspeech or Vosk standalone; they don't handle commands well, only dictation, so you need a command-mode speech recognition engine to use with them.
 
-The Mac Voice Control engine is technically supported for dictation in beta, but it's not recommended over Conformer.
+The Mac Voice Control engine is technically supported for dictation in Talon+, but it's not recommended over Conformer.
 
 :::
