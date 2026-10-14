@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktalon_wiki=globalThis.webpackChunktalon_wiki||[]).push([[6236],{6236(i,a,e){e.d(a,{createCynefinServices:()=>k.t});var k=e(9760);e(184)}}]);

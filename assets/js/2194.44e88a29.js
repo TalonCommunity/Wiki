@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktalon_wiki=globalThis.webpackChunktalon_wiki||[]).push([[2194],{2194(a,e,i){i.d(e,{createTreemapServices:()=>k.d});var k=i(1048);i(184)}}]);

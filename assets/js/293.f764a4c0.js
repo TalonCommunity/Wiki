@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktalon_wiki=globalThis.webpackChunktalon_wiki||[]).push([[293],{293(e,i,a){a.d(i,{createEventModelingServices:()=>l.g});var l=a(4607);a(184)}}]);
