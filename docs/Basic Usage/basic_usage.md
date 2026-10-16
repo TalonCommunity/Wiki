@@ -272,6 +272,65 @@ The mouse grid lets you move the mouse by dictating numbers. You use one of the 
 
 These commands require activating the `user.mouse_cursor_commands_enable` tag (see Community settings.talon).
 
+## Web Browser Commands
+
+Not all of these commands are implemented for every supported browser.
+
+| Command           | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| `go home`         | Go to your homepage                                |
+| `go private`      | Open a private browsing window                     |
+| `bookmark it`     | Create a bookmark for the current page             |
+| `bookmark tabs`   | Bookmark the open browser tabs                     |
+| `refresh it`      | Refresh the page                                   |
+| `refresh it hard` | Hard refresh the page                              |
+| `bookmark show`   | Open your bookmarks                                |
+| `bookmark bar`    | Toggle the bookmark bar                            |
+| `downloads show`  | Open downloads                                     |
+| `extensions show` | Open extensions                                    |
+| `history show`    | Open browsing history                              |
+| `cache show`      | Open the interface for clearing your browser cache |
+| `dev tools`       | Open developer tools                               |
+| `go page`         | Focus the current browser page                     |
+
+### Address Commands
+
+The address commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
+
+| Command        | Description           |
+| -------------- | --------------------- |
+| `go address`   | Focus the address bar |
+| `address copy` | Copy the address      |
+
+### Navigation Commands
+
+The navigation commands are available in supported web browsers and some other applications such as Windows Explorer and macOS Finder.
+
+| Command      | Description                                |
+| ------------ | ------------------------------------------ |
+| `go back`    | Go back to the previous page               |
+| `go forward` | Return to the page that you went back from |
+
+### Find Commands
+
+The find commands are available in supported web browsers and some other applications supporting text searching.
+
+| Command                          | Description                          |
+| -------------------------------- | ------------------------------------ |
+| `hunt this`                      | open text search                     |
+| `hunt this paste`                | search for the text in the clipboard |
+| `hunt this (text to search for)` | search for the dictated text         |
+| `hunt next`                      | go to the next search result         |
+| `hunt previous`                  | go to the previous search result     |
+
+### Detecting Web Applications
+
+If you want to use Community's website-specific commands, you may need to configure your browser so that Community can detect which site you are on. [The Community apps folder README](https://github.com/talonhub/community/blob/main/apps/README.md) explains how to do this.
+
+### Rango
+
+[Rango](https://github.com/david-tejada/rango) is a browser extension with a corresponding voice command set for stronger browser control including clicking webpage ui elements.
+
 ## Media and Volume Control
 
 | Command         | Description                   |
