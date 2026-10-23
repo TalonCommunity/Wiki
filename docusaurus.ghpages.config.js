@@ -186,7 +186,7 @@ const config = {
               href: "https://github.com/TalonCommunity/Wiki/",
             },
             {
-              label: "Donations/Beta Access",
+              label: "Donations/Talon+ Access",
               href: "https://www.patreon.com/join/lunixbochs",
             },
           ],
