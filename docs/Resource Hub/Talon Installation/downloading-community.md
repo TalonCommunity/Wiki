@@ -6,7 +6,6 @@ You have two options for downloading Community: you can download it as a ZIP fil
 
 The difference between the two options relates to how you want to update and personalize Community. Downloading Community as a ZIP file is easier in the short term but complicates customizing and updating Community. Using Git is more technical but makes it easier to resolve conflicts between Community updates and changes you have made to customize Community.
 
-
 ---
 
 ## Considerations
