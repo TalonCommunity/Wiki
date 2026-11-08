@@ -1,14 +1,10 @@
 # Downloading the Talon Community User File Set
 
-After installing Talon and a speech recognition engine, as described here you will need to download a user file set. This wiki discusses the Talon community user file set, so this page discusses downloading that specific user file set.
+After installing Talon and a speech recognition engine, you will need to download a user file set. A user file set provides Talon with commands. Community is a community maintained user file set supporting full computer use, programming, and much more.
 
-This can be done using two different methods, zip and Git.
+You have two options for downloading Community: you can download it as a ZIP file or you can download it through Git, a program for tracking file changes.
 
-The background to this choice is that if you use Talon for any period of time, you can expect the following:
-
-- The community will update the user file set with bug fixes and new features, and you will want
-  to update your local copy of it.
-- You might make your own changes to some of these files.
+The difference between the two options relates to how you want to update and personalize Community. Downloading Community as a ZIP file is easier in the short term but complicates customizing and updating Community. Using Git is more technical but makes it easier to resolve conflicts between Community updates and changes you have made to customize Community.
 
 ---
 
