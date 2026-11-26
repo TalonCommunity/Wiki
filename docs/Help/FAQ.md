@@ -18,7 +18,7 @@ Check out the [hardware](../Resource%20Hub/Hardware/hardware.md) page for microp
 
 ### Are languages other than English supported?
 
-They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and find a channel for your language to see how it's going. If you are in the beta program, you can configure the WebSpeech API for dictation in other languages.
+They're being worked on, join [Talon Slack](https://talonvoice.com/chat) and find a channel for your language to see how it's going. If you are in the Talon+ program, you can configure the WebSpeech API for dictation in other languages.
 
 ### How can I make Talon recognise me better?
 

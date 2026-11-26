@@ -111,7 +111,7 @@ If you have installed a different user file set, consult its documentation on us
 - If needed, try ways to [improve recognition accuracy](../Speech%20Recognition/improving_recognition_accuracy.md)
 - [Customize Talon](../../Customization/basic_customization): learn about how to configure Talon to your liking.
 - If at any point you need help with your Talon setup, join the [Talon Voice Slack](https://talonvoice.com/chat) and ask in the `#help` channel.
-- For earlier access to new features, priority support, and access to additional [speech engines](../Speech%20Recognition/speech%20engines.md), install the [beta version](../../Help/beta_talon).
+- For earlier access to new features, priority support, and access to additional [speech engines](../Speech%20Recognition/speech%20engines.md), install [Talon+](/docs/Help/talon_plus.md).
 
 <!-- Update in later phase of https://github.com/TalonCommunity/Wiki/pull/312
 - If needed, try ways to [improve recognition accuracy](/docs/Resource%20Hub/Speech%20Recognition/improving_recognition_accuracy)
